@@ -1,0 +1,1299 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CommandList
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CommandList
+   ">
+    <meta name="generator" content="docfx 2.26.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Veldrid.CommandList">
+  
+  
+  <h1 id="Veldrid_CommandList" data-uid="Veldrid.CommandList" class="text-break">Class CommandList
+  </h1>
+  <div class="markdown level0 summary"><p>A device resource which allows the recording of graphics commands, which can later be executed by a
+<a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>.
+Before graphics commands can be issued, the <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_Begin">Begin()</a> method must be invoked.
+When the <a class="xref" href="Veldrid.CommandList.html">CommandList</a> is ready to be executed, <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> must be invoked, and then
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_">ExecuteCommands(CommandList)</a> should be used.
+NOTE: The use of <a class="xref" href="Veldrid.CommandList.html">CommandList</a> is not thread-safe. Access to the <a class="xref" href="Veldrid.CommandList.html">CommandList</a> must be
+externally synchronized.
+There are some limitations dictating proper usage and ordering of graphics commands. For example, a
+<a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>, and <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a> must all be
+bound before a call to <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">Draw(UInt32, UInt32, UInt32, Int32, UInt32)</a> will succeed.
+These limitations are described in each function, where applicable.
+<a class="xref" href="Veldrid.CommandList.html">CommandList</a> instances cannot be executed multiple times per-recording. When executed by a
+<a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>, they must be reset and commands must be issued again.
+See <a class="xref" href="Veldrid.CommandListDescription.html">CommandListDescription</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">CommandList</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a></div>
+    <div><span class="xref">IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Veldrid_CommandList_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class CommandList : DeviceResource, IDisposable</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Veldrid_CommandList__framebuffer" data-uid="Veldrid.CommandList._framebuffer">_framebuffer</h4>
+  <div class="markdown level1 summary"><p>The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Framebuffer _framebuffer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Veldrid_CommandList_Begin_" data-uid="Veldrid.CommandList.Begin*"></a>
+  <h4 id="Veldrid_CommandList_Begin" data-uid="Veldrid.CommandList.Begin">Begin()</h4>
+  <div class="markdown level1 summary"><p>Puts this <a class="xref" href="Veldrid.CommandList.html">CommandList</a> into the initial state.
+This function must be called before other graphics commands can be issued.
+Begin must only be called if it has not been previously called, if <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> has been called,
+or if <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_">ExecuteCommands(CommandList)</a> has been called on this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Begin()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_CommandList_ClearColorTarget_" data-uid="Veldrid.CommandList.ClearColorTarget*"></a>
+  <h4 id="Veldrid_CommandList_ClearColorTarget_System_UInt32_Veldrid_RgbaFloat_" data-uid="Veldrid.CommandList.ClearColorTarget(System.UInt32,Veldrid.RgbaFloat)">ClearColorTarget(UInt32, RgbaFloat)</h4>
+  <div class="markdown level1 summary"><p>Clears the color target at the given index of the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.
+The index given must be less than the number of color attachments in the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void ClearColorTarget(uint index, RgbaFloat clearColor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The color target index.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaFloat.html">RgbaFloat</a></td>
+        <td><span class="parametername">clearColor</span></td>
+        <td><p>The value to clear the target to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_ClearDepthTarget_" data-uid="Veldrid.CommandList.ClearDepthTarget*"></a>
+  <h4 id="Veldrid_CommandList_ClearDepthTarget_System_Single_" data-uid="Veldrid.CommandList.ClearDepthTarget(System.Single)">ClearDepthTarget(Single)</h4>
+  <div class="markdown level1 summary"><p>Clears the depth target of the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.
+The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must have a depth attachment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void ClearDepthTarget(float depth)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The value to clear the depth target to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_Dispose_" data-uid="Veldrid.CommandList.Dispose*"></a>
+  <h4 id="Veldrid_CommandList_Dispose" data-uid="Veldrid.CommandList.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Frees unmanaged device resources controlled by this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_CommandList_Draw_" data-uid="Veldrid.CommandList.Draw*"></a>
+  <h4 id="Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_" data-uid="Veldrid.CommandList.Draw(System.UInt32,System.UInt32,System.UInt32,System.Int32,System.UInt32)">Draw(UInt32, UInt32, UInt32, Int32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Draws primitives from the currently-bound state in this <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Draw(uint indexCount, uint instanceCount, uint indexStart, int vertexOffset, uint instanceStart)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">indexCount</span></td>
+        <td><p>The number of indices.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">instanceCount</span></td>
+        <td><p>The number of instances.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">indexStart</span></td>
+        <td><p>The number of indices to skip in the active <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">vertexOffset</span></td>
+        <td><p>The base vertex value, which is added to each index value read from the <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">instanceStart</span></td>
+        <td><p>The starting instance value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_End_" data-uid="Veldrid.CommandList.End*"></a>
+  <h4 id="Veldrid_CommandList_End" data-uid="Veldrid.CommandList.End">End()</h4>
+  <div class="markdown level1 summary"><p>Completes this list of graphics commands, putting it into an executable state for a <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>.
+This function must only be called after <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_Begin">Begin()</a> has been called.
+It is an error to call this function in succession, unless <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_Begin">Begin()</a> has been called in between invocations.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void End()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_CommandList_ResolveTexture_" data-uid="Veldrid.CommandList.ResolveTexture*"></a>
+  <h4 id="Veldrid_CommandList_ResolveTexture_Veldrid_Texture_Veldrid_Texture_" data-uid="Veldrid.CommandList.ResolveTexture(Veldrid.Texture,Veldrid.Texture)">ResolveTexture(Texture, Texture)</h4>
+  <div class="markdown level1 summary"><p>Resolves a multisampled source <a class="xref" href="Veldrid.Texture.html">Texture</a> into a non-multisampled destination <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void ResolveTexture(Texture source, Texture destination)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The source of the resolve operation. Must be a multisampled <a class="xref" href="Veldrid.Texture.html">Texture</a>
+(<a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_SampleCount">SampleCount</a> &gt; 1).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The destination of the resolve operation. Must be a non-multisampled <a class="xref" href="Veldrid.Texture.html">Texture</a>
+(<a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_SampleCount">SampleCount</a> == 1).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_ResolveTextureCore_" data-uid="Veldrid.CommandList.ResolveTextureCore*"></a>
+  <h4 id="Veldrid_CommandList_ResolveTextureCore_Veldrid_Texture_Veldrid_Texture_" data-uid="Veldrid.CommandList.ResolveTextureCore(Veldrid.Texture,Veldrid.Texture)">ResolveTextureCore(Texture, Texture)</h4>
+  <div class="markdown level1 summary"><p>Resolves a multisampled source <a class="xref" href="Veldrid.Texture.html">Texture</a> into a non-multisampled destination <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void ResolveTextureCore(Texture source, Texture destination)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The source of the resolve operation. Must be a multisampled <a class="xref" href="Veldrid.Texture.html">Texture</a>
+(<a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_SampleCount">SampleCount</a> &gt; 1).</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The destination of the resolve operation. Must be a non-multisampled <a class="xref" href="Veldrid.Texture.html">Texture</a>
+(<a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_SampleCount">SampleCount</a> == 1).</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetFramebuffer_" data-uid="Veldrid.CommandList.SetFramebuffer*"></a>
+  <h4 id="Veldrid_CommandList_SetFramebuffer_Veldrid_Framebuffer_" data-uid="Veldrid.CommandList.SetFramebuffer(Veldrid.Framebuffer)">SetFramebuffer(Framebuffer)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> which will be rendered to.
+When drawing, the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must be compatible with the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.
+A compatible <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> has the same number of output attachments with matching formats.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFramebuffer(Framebuffer fb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a></td>
+        <td><span class="parametername">fb</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetFramebufferCore_" data-uid="Veldrid.CommandList.SetFramebufferCore*"></a>
+  <h4 id="Veldrid_CommandList_SetFramebufferCore_Veldrid_Framebuffer_" data-uid="Veldrid.CommandList.SetFramebufferCore(Veldrid.Framebuffer)">SetFramebufferCore(Framebuffer)</h4>
+  <div class="markdown level1 summary"><p>Performs API-specific handling of the <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetFramebufferCore(Framebuffer fb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a></td>
+        <td><span class="parametername">fb</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetFullScissorRect_" data-uid="Veldrid.CommandList.SetFullScissorRect*"></a>
+  <h4 id="Veldrid_CommandList_SetFullScissorRect_System_UInt32_" data-uid="Veldrid.CommandList.SetFullScissorRect(System.UInt32)">SetFullScissorRect(UInt32)</h4>
+  <div class="markdown level1 summary"><p>Sets the active scissor rectangle at the given index to cover the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFullScissorRect(uint index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The color target index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetFullScissorRects_" data-uid="Veldrid.CommandList.SetFullScissorRects*"></a>
+  <h4 id="Veldrid_CommandList_SetFullScissorRects" data-uid="Veldrid.CommandList.SetFullScissorRects">SetFullScissorRects()</h4>
+  <div class="markdown level1 summary"><p>Sets all active scissor rectangles to cover the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFullScissorRects()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_CommandList_SetFullViewport_" data-uid="Veldrid.CommandList.SetFullViewport*"></a>
+  <h4 id="Veldrid_CommandList_SetFullViewport_System_UInt32_" data-uid="Veldrid.CommandList.SetFullViewport(System.UInt32)">SetFullViewport(UInt32)</h4>
+  <div class="markdown level1 summary"><p>Sets the active viewport at the given index to cover the entire active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFullViewport(uint index)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The color target index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetFullViewports_" data-uid="Veldrid.CommandList.SetFullViewports*"></a>
+  <h4 id="Veldrid_CommandList_SetFullViewports" data-uid="Veldrid.CommandList.SetFullViewports">SetFullViewports()</h4>
+  <div class="markdown level1 summary"><p>Sets all active viewports to cover the entire active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetFullViewports()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_CommandList_SetIndexBuffer_" data-uid="Veldrid.CommandList.SetIndexBuffer*"></a>
+  <h4 id="Veldrid_CommandList_SetIndexBuffer_Veldrid_IndexBuffer_" data-uid="Veldrid.CommandList.SetIndexBuffer(Veldrid.IndexBuffer)">SetIndexBuffer(IndexBuffer)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.
+When drawing, an <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a> must be bound.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SetIndexBuffer(IndexBuffer ib)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a></td>
+        <td><span class="parametername">ib</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetPipeline_" data-uid="Veldrid.CommandList.SetPipeline*"></a>
+  <h4 id="Veldrid_CommandList_SetPipeline_Veldrid_Pipeline_" data-uid="Veldrid.CommandList.SetPipeline(Veldrid.Pipeline)">SetPipeline(Pipeline)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> used for rendering.
+When drawing, the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> must be compatible with the bound <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>,
+<a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>, and <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a> objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SetPipeline(Pipeline pipeline)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
+        <td><span class="parametername">pipeline</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetResourceSet_" data-uid="Veldrid.CommandList.SetResourceSet*"></a>
+  <h4 id="Veldrid_CommandList_SetResourceSet_System_UInt32_Veldrid_ResourceSet_" data-uid="Veldrid.CommandList.SetResourceSet(System.UInt32,Veldrid.ResourceSet)">SetResourceSet(UInt32, ResourceSet)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> for the given index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SetResourceSet(uint slot, ResourceSet rs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>The resource slot.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
+        <td><span class="parametername">rs</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetScissorRect_" data-uid="Veldrid.CommandList.SetScissorRect*"></a>
+  <h4 id="Veldrid_CommandList_SetScissorRect_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.SetScissorRect(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">SetScissorRect(UInt32, UInt32, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Sets the active scissor rectangle at the given index.
+The index given must be less than the number of color attachments in the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SetScissorRect(uint index, uint x, uint y, uint width, uint height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The color target index.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The X value of the scissor rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The Y value of the scissor rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the scissor rectangle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the scissor rectangle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetVertexBuffer_" data-uid="Veldrid.CommandList.SetVertexBuffer*"></a>
+  <h4 id="Veldrid_CommandList_SetVertexBuffer_System_UInt32_Veldrid_VertexBuffer_" data-uid="Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.VertexBuffer)">SetVertexBuffer(UInt32, VertexBuffer)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a> for the given index.
+When drawing, the bound <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a> objects must be compatible with the bound <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SetVertexBuffer(uint index, VertexBuffer vb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The buffer slot.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a></td>
+        <td><span class="parametername">vb</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetViewport_" data-uid="Veldrid.CommandList.SetViewport*"></a>
+  <h4 id="Veldrid_CommandList_SetViewport_System_UInt32_Veldrid_Viewport_" data-uid="Veldrid.CommandList.SetViewport(System.UInt32,Veldrid.Viewport)">SetViewport(UInt32, Viewport)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Viewport.html">Viewport</a> at the given index.
+The index given must be less than the number of color attachments in the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetViewport(uint index, Viewport viewport)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The color target index.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Viewport.html">Viewport</a></td>
+        <td><span class="parametername">viewport</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.Viewport.html">Viewport</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetViewport_" data-uid="Veldrid.CommandList.SetViewport*"></a>
+  <h4 id="Veldrid_CommandList_SetViewport_System_UInt32_Veldrid_Viewport__" data-uid="Veldrid.CommandList.SetViewport(System.UInt32,Veldrid.Viewport@)">SetViewport(UInt32, ref Viewport)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Viewport.html">Viewport</a> at the given index.
+The index given must be less than the number of color attachments in the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SetViewport(uint index, ref Viewport viewport)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The color target index.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Viewport.html">Viewport</a></td>
+        <td><span class="parametername">viewport</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.Viewport.html">Viewport</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_UpdateBuffer_" data-uid="Veldrid.CommandList.UpdateBuffer*"></a>
+  <h4 id="Veldrid_CommandList_UpdateBuffer_Veldrid_Buffer_System_UInt32_IntPtr_System_UInt32_" data-uid="Veldrid.CommandList.UpdateBuffer(Veldrid.Buffer,System.UInt32,IntPtr,System.UInt32)">UpdateBuffer(Buffer, UInt32, IntPtr, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void UpdateBuffer(Buffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The resource to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">bufferOffsetInBytes</span></td>
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+which new data will be uploaded.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IntPtr</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A pointer to the start of the data to upload.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">sizeInBytes</span></td>
+        <td><p>The total size of the uploaded data, in bytes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_UpdateBuffer_" data-uid="Veldrid.CommandList.UpdateBuffer*"></a>
+  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0_" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0)">UpdateBuffer&lt;T&gt;(Buffer, UInt32, T)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, T source)where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The resource to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">bufferOffsetInBytes</span></td>
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a> storage, at
+which new data will be uploaded.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The value to upload.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of data to upload.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_UpdateBuffer_" data-uid="Veldrid.CommandList.UpdateBuffer*"></a>
+  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0__" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0@)">UpdateBuffer&lt;T&gt;(Buffer, UInt32, ref T)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, ref T source)where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The resource to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">bufferOffsetInBytes</span></td>
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+which new data will be uploaded.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A reference to the single value to upload.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of data to upload.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_UpdateBuffer_" data-uid="Veldrid.CommandList.UpdateBuffer*"></a>
+  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0__System_UInt32_" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0@,System.UInt32)">UpdateBuffer&lt;T&gt;(Buffer, UInt32, ref T, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, ref T source, uint sizeInBytes)where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The resource to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">bufferOffsetInBytes</span></td>
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+which new data will be uploaded.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A reference to the first of a series of values to upload.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">sizeInBytes</span></td>
+        <td><p>The total size of the uploaded data, in bytes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of data to upload.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_UpdateBuffer_" data-uid="Veldrid.CommandList.UpdateBuffer*"></a>
+  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0[])">UpdateBuffer&lt;T&gt;(Buffer, UInt32, T[])</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, T[] source)where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The resource to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">bufferOffsetInBytes</span></td>
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+which new data will be uploaded.</p>
+</td>
+      </tr>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>An array containing the data to upload.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td><p>The type of data to upload.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_UpdateTexture_" data-uid="Veldrid.CommandList.UpdateTexture*"></a>
+  <h4 id="Veldrid_CommandList_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.UpdateTexture(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">UpdateTexture(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Updates a portion of a <a class="xref" href="Veldrid.Texture.html">Texture</a> resource with new data.
+Cube textures should instead use 
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_UpdateTextureCube_Veldrid_Texture_IntPtr_System_UInt32_Veldrid_CubeFace_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_">UpdateTextureCube(Texture, IntPtr, UInt32, CubeFace, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void UpdateTexture(Texture texture, IntPtr source, uint sizeInBytes, uint x, uint y, uint z, uint width, uint height, uint depth, uint mipLevel, uint arrayLayer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">texture</span></td>
+        <td><p>The resource to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IntPtr</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A pointer to the start of the data to upload.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">sizeInBytes</span></td>
+        <td><p>The number of bytes to upload. This value must match the total size of the texture region specified.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The minimum X value of the updated region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The minimum Y value of the updated region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">z</span></td>
+        <td><p>The minimum Z value of the updated region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the updated region, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the updated region, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth of the updated region, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">mipLevel</span></td>
+        <td><p>The mipmap level to update. Must be less than the total number of mipmaps contained in the
+<a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">arrayLayer</span></td>
+        <td><p>The array layer to update. Must be less than the total array layer count contained in the
+<a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_UpdateTextureCube_" data-uid="Veldrid.CommandList.UpdateTextureCube*"></a>
+  <h4 id="Veldrid_CommandList_UpdateTextureCube_Veldrid_Texture_IntPtr_System_UInt32_Veldrid_CubeFace_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.UpdateTextureCube(Veldrid.Texture,IntPtr,System.UInt32,Veldrid.CubeFace,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">UpdateTextureCube(Texture, IntPtr, UInt32, CubeFace, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Updates a portion of a <a class="xref" href="Veldrid.Texture.html">Texture</a> resource with new data. This function operates on cubemap textures.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void UpdateTextureCube(Texture texture, IntPtr source, uint sizeInBytes, CubeFace face, uint x, uint y, uint width, uint height, uint mipLevel, uint arrayLayer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">texture</span></td>
+        <td><p>The resource to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IntPtr</span></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>A pointer to the start of the data to upload.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">sizeInBytes</span></td>
+        <td><p>The number of bytes to upload. This value must match the total size of the texture region specified.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.CubeFace.html">CubeFace</a></td>
+        <td><span class="parametername">face</span></td>
+        <td><p>The <a class="xref" href="Veldrid.CubeFace.html">CubeFace</a> into which the texture data is uploaded.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The minimum X value of the updated region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The minimum Y value of the updated region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the updated region, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the updated region, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">mipLevel</span></td>
+        <td><p>The mipmap level to update. Must be less than the total number of mipmaps contained in the
+<a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">arrayLayer</span></td>
+        <td><p>The array layer to update. Must be less than the total array layer count contained in the
+<a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,576 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Struct TextureDescription
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Struct TextureDescription
+   ">
+    <meta name="generator" content="docfx 2.26.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Veldrid.TextureDescription">
+  
+  
+  <h1 id="Veldrid_TextureDescription" data-uid="Veldrid.TextureDescription" class="text-break">Struct TextureDescription
+  </h1>
+  <div class="markdown level0 summary"><p>Describes a <a class="xref" href="Veldrid.Texture.html">Texture</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a>&gt;</div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Veldrid_TextureDescription_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public struct TextureDescription : IEquatable&lt;TextureDescription&gt;</code></pre>
+  </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Veldrid_TextureDescription__ctor_" data-uid="Veldrid.TextureDescription.#ctor*"></a>
+  <h4 id="Veldrid_TextureDescription__ctor_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_PixelFormat_Veldrid_TextureUsage_" data-uid="Veldrid.TextureDescription.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage)">TextureDescription(UInt32, UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage)</h4>
+  <div class="markdown level1 summary"><p>Contsructs a new TextureDescription describing a non-multisampled <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureDescription(uint width, uint height, uint depth, uint mipLevels, uint arrayLayers, PixelFormat format, TextureUsage usage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The total width, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The total height, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The total depth, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">mipLevels</span></td>
+        <td><p>The number of mipmap levels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">arrayLayers</span></td>
+        <td><p>The number of array layers.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format of individual texture elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a></td>
+        <td><span class="parametername">usage</span></td>
+        <td><p>Controls how the Texture is permitted to be used. If the Texture will be sampled from a shader,
+then <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_Sampled">Sampled</a> must be included. If the Texture will be used as a depth target in a
+<a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, then <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_DepthStencil">DepthStencil</a> must be included. If the Texture will be used
+as a color target in a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, then <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_RenderTarget">RenderTarget</a> must be included.
+If the Texture will be used as a 2D cubemap, then <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_Cubemap">Cubemap</a> must be included.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_TextureDescription__ctor_" data-uid="Veldrid.TextureDescription.#ctor*"></a>
+  <h4 id="Veldrid_TextureDescription__ctor_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_PixelFormat_Veldrid_TextureUsage_Veldrid_TextureSampleCount_" data-uid="Veldrid.TextureDescription.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage,Veldrid.TextureSampleCount)">TextureDescription(UInt32, UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage, TextureSampleCount)</h4>
+  <div class="markdown level1 summary"><p>Contsructs a new TextureDescription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureDescription(uint width, uint height, uint depth, uint mipLevels, uint arrayLayers, PixelFormat format, TextureUsage usage, TextureSampleCount sampleCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The total width, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The total height, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The total depth, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">mipLevels</span></td>
+        <td><p>The number of mipmap levels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">arrayLayers</span></td>
+        <td><p>The number of array layers.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format of individual texture elements.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a></td>
+        <td><span class="parametername">usage</span></td>
+        <td><p>Controls how the Texture is permitted to be used. If the Texture will be sampled from a shader,
+then <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_Sampled">Sampled</a> must be included. If the Texture will be used as a depth target in a
+<a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, then <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_DepthStencil">DepthStencil</a> must be included. If the Texture will be used
+as a color target in a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, then <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_RenderTarget">RenderTarget</a> must be included.
+If the Texture will be used as a 2D cubemap, then <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_Cubemap">Cubemap</a> must be included.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureSampleCount.html">TextureSampleCount</a></td>
+        <td><span class="parametername">sampleCount</span></td>
+        <td><p>The number of samples. If any other value than <a class="xref" href="Veldrid.TextureSampleCount.html#Veldrid_TextureSampleCount_Count1">Count1</a> is
+provided, then this describes a multisample texture.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Veldrid_TextureDescription_ArrayLayers" data-uid="Veldrid.TextureDescription.ArrayLayers">ArrayLayers</h4>
+  <div class="markdown level1 summary"><p>The number of array layers.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ArrayLayers</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_TextureDescription_Depth" data-uid="Veldrid.TextureDescription.Depth">Depth</h4>
+  <div class="markdown level1 summary"><p>The total depth, in texels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint Depth</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_TextureDescription_Format" data-uid="Veldrid.TextureDescription.Format">Format</h4>
+  <div class="markdown level1 summary"><p>The format of individual texture elements.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public PixelFormat Format</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_TextureDescription_Height" data-uid="Veldrid.TextureDescription.Height">Height</h4>
+  <div class="markdown level1 summary"><p>The total height, in texels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint Height</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_TextureDescription_MipLevels" data-uid="Veldrid.TextureDescription.MipLevels">MipLevels</h4>
+  <div class="markdown level1 summary"><p>The number of mipmap levels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MipLevels</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_TextureDescription_SampleCount" data-uid="Veldrid.TextureDescription.SampleCount">SampleCount</h4>
+  <div class="markdown level1 summary"><p>The number of samples. If equal to <a class="xref" href="Veldrid.TextureSampleCount.html#Veldrid_TextureSampleCount_Count1">Count1</a>, this instance does not describe a
+multisample <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureSampleCount SampleCount</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureSampleCount.html">TextureSampleCount</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_TextureDescription_Usage" data-uid="Veldrid.TextureDescription.Usage">Usage</h4>
+  <div class="markdown level1 summary"><p>Controls how the Texture is permitted to be used. If the Texture will be sampled from a shader, then
+<a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_Sampled">Sampled</a> must be included. If the Texture will be used as a depth target in a
+<a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, then <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_DepthStencil">DepthStencil</a> must be included. If the Texture will be used
+as a color target in a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, then <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_RenderTarget">RenderTarget</a> must be included.
+If the Texture will be used as a 2D cubemap, then <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_Cubemap">Cubemap</a> must be included.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public TextureUsage Usage</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_TextureDescription_Width" data-uid="Veldrid.TextureDescription.Width">Width</h4>
+  <div class="markdown level1 summary"><p>The total width, in texels.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint Width</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Veldrid_TextureDescription_Equals_" data-uid="Veldrid.TextureDescription.Equals*"></a>
+  <h4 id="Veldrid_TextureDescription_Equals_Veldrid_TextureDescription_" data-uid="Veldrid.TextureDescription.Equals(Veldrid.TextureDescription)">Equals(TextureDescription)</h4>
+  <div class="markdown level1 summary"><p>Element-wise equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(TextureDescription other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The instance to compare to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if all elements are equal; false otherswise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_TextureDescription_GetHashCode_" data-uid="Veldrid.TextureDescription.GetHashCode*"></a>
+  <h4 id="Veldrid_TextureDescription_GetHashCode" data-uid="Veldrid.TextureDescription.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,687 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class GraphicsDevice
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class GraphicsDevice
+   ">
+    <meta name="generator" content="docfx 2.26.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Veldrid.GraphicsDevice">
+  
+  
+  <h1 id="Veldrid_GraphicsDevice" data-uid="Veldrid.GraphicsDevice" class="text-break">Class GraphicsDevice
+  </h1>
+  <div class="markdown level0 summary"><p>Represents an abstract graphics device, capable of creating device resources and executing commands.</p>
+</div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">GraphicsDevice</span></div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
+  <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
+  <h5 id="Veldrid_GraphicsDevice_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract class GraphicsDevice : IDisposable</code></pre>
+  </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Veldrid_GraphicsDevice_Aniso4xSampler_" data-uid="Veldrid.GraphicsDevice.Aniso4xSampler*"></a>
+  <h4 id="Veldrid_GraphicsDevice_Aniso4xSampler" data-uid="Veldrid.GraphicsDevice.Aniso4xSampler">Aniso4xSampler</h4>
+  <div class="markdown level1 summary"><p>Gets a simple 4x anisotropic-filtered <a class="xref" href="Veldrid.Sampler.html">Sampler</a> object owned by this instance.
+This object is created with <a class="xref" href="Veldrid.SamplerDescription.html#Veldrid_SamplerDescription_Aniso4x">Aniso4x</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sampler Aniso4xSampler { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Sampler.html">Sampler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_BackendType_" data-uid="Veldrid.GraphicsDevice.BackendType*"></a>
+  <h4 id="Veldrid_GraphicsDevice_BackendType" data-uid="Veldrid.GraphicsDevice.BackendType">BackendType</h4>
+  <div class="markdown level1 summary"><p>Gets a value identifying the specific graphics API used by this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract GraphicsBackend BackendType { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsBackend.html">GraphicsBackend</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_LinearSampler_" data-uid="Veldrid.GraphicsDevice.LinearSampler*"></a>
+  <h4 id="Veldrid_GraphicsDevice_LinearSampler" data-uid="Veldrid.GraphicsDevice.LinearSampler">LinearSampler</h4>
+  <div class="markdown level1 summary"><p>Gets a simple linear-filtered <a class="xref" href="Veldrid.Sampler.html">Sampler</a> object owned by this instance.
+This object is created with <a class="xref" href="Veldrid.SamplerDescription.html#Veldrid_SamplerDescription_Linear">Linear</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sampler LinearSampler { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Sampler.html">Sampler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_PointSampler_" data-uid="Veldrid.GraphicsDevice.PointSampler*"></a>
+  <h4 id="Veldrid_GraphicsDevice_PointSampler" data-uid="Veldrid.GraphicsDevice.PointSampler">PointSampler</h4>
+  <div class="markdown level1 summary"><p>Gets a simple point-filtered <a class="xref" href="Veldrid.Sampler.html">Sampler</a> object owned by this instance.
+This object is created with <a class="xref" href="Veldrid.SamplerDescription.html#Veldrid_SamplerDescription_Point">Point</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Sampler PointSampler { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Sampler.html">Sampler</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_ResourceFactory_" data-uid="Veldrid.GraphicsDevice.ResourceFactory*"></a>
+  <h4 id="Veldrid_GraphicsDevice_ResourceFactory" data-uid="Veldrid.GraphicsDevice.ResourceFactory">ResourceFactory</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ResourceFactory">ResourceFactory</a> controlled by this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract ResourceFactory ResourceFactory { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_SwapchainFramebuffer_" data-uid="Veldrid.GraphicsDevice.SwapchainFramebuffer*"></a>
+  <h4 id="Veldrid_GraphicsDevice_SwapchainFramebuffer" data-uid="Veldrid.GraphicsDevice.SwapchainFramebuffer">SwapchainFramebuffer</h4>
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> object representing the render targets of the main swapchain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Framebuffer SwapchainFramebuffer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="methods">Methods
+  </h3>
+  
+  
+  <a id="Veldrid_GraphicsDevice_CreateD3D11_" data-uid="Veldrid.GraphicsDevice.CreateD3D11*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateD3D11_IntPtr_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.CreateD3D11(IntPtr,System.UInt32,System.UInt32)">CreateD3D11(IntPtr, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Direct3D 11.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateD3D11(IntPtr hwnd, uint width, uint height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IntPtr</span></td>
+        <td><span class="parametername">hwnd</span></td>
+        <td><p>The Win32 window handle to render into.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The initial width of the window.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The initial height of the window.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the Direct3D 11 API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_CreateOpenGL_" data-uid="Veldrid.GraphicsDevice.CreateOpenGL*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateOpenGL_Veldrid_OpenGL_OpenGLPlatformInfo_System_UInt32_System_UInt32_System_Boolean_" data-uid="Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.OpenGL.OpenGLPlatformInfo,System.UInt32,System.UInt32,System.Boolean)">CreateOpenGL(OpenGLPlatformInfo, UInt32, UInt32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using OpenGL.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateOpenGL(OpenGLPlatformInfo platformInfo, uint width, uint height, bool debugDevice)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.OpenGL.OpenGLPlatformInfo.html">OpenGLPlatformInfo</a></td>
+        <td><span class="parametername">platformInfo</span></td>
+        <td><p>An <a class="xref" href="Veldrid.OpenGL.OpenGLPlatformInfo.html">OpenGLPlatformInfo</a> object encapsulating necessary OpenGL context
+information.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The initial width of the window.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The initial height of the window.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">debugDevice</span></td>
+        <td><p>Indicates whether the OpenGL device will support debug features, provided they are
+supported by the host system.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the OpenGL API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_CreateVulkan_" data-uid="Veldrid.GraphicsDevice.CreateVulkan*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateVulkan_Veldrid_Vk_VkSurfaceSource_System_UInt32_System_UInt32_System_Boolean_" data-uid="Veldrid.GraphicsDevice.CreateVulkan(Veldrid.Vk.VkSurfaceSource,System.UInt32,System.UInt32,System.Boolean)">CreateVulkan(VkSurfaceSource, UInt32, UInt32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Vulkan.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateVulkan(VkSurfaceSource surfaceSource, uint width, uint height, bool debugDevice)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Vk.VkSurfaceSource.html">VkSurfaceSource</a></td>
+        <td><span class="parametername">surfaceSource</span></td>
+        <td><p>The source from which a Vulkan surface can be created.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The initial width of the window.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The initial height of the window.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">debugDevice</span></td>
+        <td><p>Indicates whether the Vulkan device will support debug features, provided they are
+supported by the host system.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the Vulkan API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_Dispose_" data-uid="Veldrid.GraphicsDevice.Dispose*"></a>
+  <h4 id="Veldrid_GraphicsDevice_Dispose" data-uid="Veldrid.GraphicsDevice.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"><p>Frees unmanaged resources controlled by this device.
+All created child resources must be Disposed prior to calling this method.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_GraphicsDevice_ExecuteCommands_" data-uid="Veldrid.GraphicsDevice.ExecuteCommands*"></a>
+  <h4 id="Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_" data-uid="Veldrid.GraphicsDevice.ExecuteCommands(Veldrid.CommandList)">ExecuteCommands(CommandList)</h4>
+  <div class="markdown level1 summary"><p>Submits the given <a class="xref" href="Veldrid.CommandList.html">CommandList</a> for execution by this device.
+Commands submitted in this way may not be completed when this method returns.
+Use <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_WaitForIdle">WaitForIdle()</a> to wait for all submitted commands to complete.
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> must have been called on <code data-dev-comment-type="paramref" class="paramref">commandList</code> for this method to succeed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void ExecuteCommands(CommandList commandList)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.CommandList.html">CommandList</a></td>
+        <td><span class="parametername">commandList</span></td>
+        <td><p>The completed <a class="xref" href="Veldrid.CommandList.html">CommandList</a> to execute. <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> must have
+been previously called on this object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_GetSampleCountLimit_" data-uid="Veldrid.GraphicsDevice.GetSampleCountLimit*"></a>
+  <h4 id="Veldrid_GraphicsDevice_GetSampleCountLimit_Veldrid_PixelFormat_System_Boolean_" data-uid="Veldrid.GraphicsDevice.GetSampleCountLimit(Veldrid.PixelFormat,System.Boolean)">GetSampleCountLimit(PixelFormat, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Gets the maximum sample count supported by the given <a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract TextureSampleCount GetSampleCountLimit(PixelFormat format, bool depthFormat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format to query.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">depthFormat</span></td>
+        <td><p>Whether the format will be used in a depth texture.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureSampleCount.html">TextureSampleCount</a></td>
+        <td><p>A <a class="xref" href="Veldrid.TextureSampleCount.html">TextureSampleCount</a> value representing the maximum count that a <a class="xref" href="Veldrid.Texture.html">Texture</a> of that
+format can be created with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_PlatformDispose_" data-uid="Veldrid.GraphicsDevice.PlatformDispose*"></a>
+  <h4 id="Veldrid_GraphicsDevice_PlatformDispose" data-uid="Veldrid.GraphicsDevice.PlatformDispose">PlatformDispose()</h4>
+  <div class="markdown level1 summary"><p>Performs API-specific disposal of resources controlled by this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void PlatformDispose()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_GraphicsDevice_PostDeviceCreated_" data-uid="Veldrid.GraphicsDevice.PostDeviceCreated*"></a>
+  <h4 id="Veldrid_GraphicsDevice_PostDeviceCreated" data-uid="Veldrid.GraphicsDevice.PostDeviceCreated">PostDeviceCreated()</h4>
+  <div class="markdown level1 summary"><p>Creates and caches common device resources after device creation completes.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected void PostDeviceCreated()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_GraphicsDevice_ResizeMainWindow_" data-uid="Veldrid.GraphicsDevice.ResizeMainWindow*"></a>
+  <h4 id="Veldrid_GraphicsDevice_ResizeMainWindow_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.ResizeMainWindow(System.UInt32,System.UInt32)">ResizeMainWindow(UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Notifies this instance that the main window has been resized. This causes the <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">SwapchainFramebuffer</a> to
+be appropriately resized and recreated.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void ResizeMainWindow(uint width, uint height)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The new width of the main window.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The new height of the main window.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_SetResourceName_" data-uid="Veldrid.GraphicsDevice.SetResourceName*"></a>
+  <h4 id="Veldrid_GraphicsDevice_SetResourceName_Veldrid_DeviceResource_System_String_" data-uid="Veldrid.GraphicsDevice.SetResourceName(Veldrid.DeviceResource,System.String)">SetResourceName(DeviceResource, String)</h4>
+  <div class="markdown level1 summary"><p>Associates an arbitrary name with a resource. On some systems, this functionality requires special device creation
+options. Can be used to overwrite or remove a previously-assigned name.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SetResourceName(DeviceResource resource, string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a></td>
+        <td><span class="parametername">resource</span></td>
+        <td><p>The target resource.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_SwapBuffers_" data-uid="Veldrid.GraphicsDevice.SwapBuffers*"></a>
+  <h4 id="Veldrid_GraphicsDevice_SwapBuffers" data-uid="Veldrid.GraphicsDevice.SwapBuffers">SwapBuffers()</h4>
+  <div class="markdown level1 summary"><p>Swaps the buffers of the swapchain and presents the rendered image to the screen.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SwapBuffers()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_GraphicsDevice_WaitForIdle_" data-uid="Veldrid.GraphicsDevice.WaitForIdle*"></a>
+  <h4 id="Veldrid_GraphicsDevice_WaitForIdle" data-uid="Veldrid.GraphicsDevice.WaitForIdle">WaitForIdle()</h4>
+  <div class="markdown level1 summary"><p>A blocking method that returns when all submitted <a class="xref" href="Veldrid.CommandList.html">CommandList</a> objects have fully completed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void WaitForIdle()</code></pre>
+  </div>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

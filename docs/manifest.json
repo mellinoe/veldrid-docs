@@ -1,0 +1,967 @@
+{
+  "homepages": [],
+  "source_base_path": "E:/projects/veldrid-docs",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.BindableResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.BindableResource.html",
+          "hash": "72BganqLWeOxGGROiraUUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.BlendAttachmentDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.BlendAttachmentDescription.html",
+          "hash": "+xR9RQBgCXD1iNANgpwTYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.BlendFactor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.BlendFactor.html",
+          "hash": "gCYcSaWtavnByhEY4BuTQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.BlendFunction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.BlendFunction.html",
+          "hash": "ucyd25fW0PWti291PSq1Yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.BlendStateDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.BlendStateDescription.html",
+          "hash": "UOikgPP+oEv1LrQWRG/2rA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.Buffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.Buffer.html",
+          "hash": "+hyNiKDa4OnHR7Ic1vSWBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.BufferDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.BufferDescription.html",
+          "hash": "gR1IC9EZHPa7VfW8TWbrRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.CommandList.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.CommandList.html",
+          "hash": "s2PLA3gsvtk4io7F4ptTnw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.CommandListDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.CommandListDescription.html",
+          "hash": "WKZ3aZstSlr7+iYg+/42ew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.CubeFace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.CubeFace.html",
+          "hash": "fw+T1rOyHsiY/54RDH46rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.DepthComparisonKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.DepthComparisonKind.html",
+          "hash": "kyCRYourpLFK2NIiPiwOnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.DepthStencilStateDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.DepthStencilStateDescription.html",
+          "hash": "XZCudGZ6qNUzxim+8lAALg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.DeviceResource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.DeviceResource.html",
+          "hash": "pE3rylAFEsP/sxZOjMb+5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.FaceCullMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.FaceCullMode.html",
+          "hash": "mtusTOYP5cm4atl1r/un8w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.Framebuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.Framebuffer.html",
+          "hash": "J8V0BCBDkTeWh279UGxJpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.FramebufferAttachment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.FramebufferAttachment.html",
+          "hash": "tWPJKSZYRHrO8+v9n2ANXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.FramebufferAttachmentDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.FramebufferAttachmentDescription.html",
+          "hash": "1Ckp4fe2QpzuwXrli1C55w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.FramebufferDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.FramebufferDescription.html",
+          "hash": "kN6IpV9ln8IGskFzzFTkNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.FrontFace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.FrontFace.html",
+          "hash": "Ttgf5wCXR2MTV5w6zX63iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.GraphicsBackend.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.GraphicsBackend.html",
+          "hash": "GWOlCrm0if/Tcyry6YG7Og=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.GraphicsDevice.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.GraphicsDevice.html",
+          "hash": "cKxTWVxx/kJa/cJU0dorOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.IndexBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.IndexBuffer.html",
+          "hash": "Fl7YrVKo0fzwZqAE2/NNRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.IndexBufferDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.IndexBufferDescription.html",
+          "hash": "huwWS9WBJxxP1WiCwPv7ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.IndexFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.IndexFormat.html",
+          "hash": "ckNl3fC2h0B+/Psy7Yuz9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.OpenGL.OpenGLPlatformInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.OpenGL.OpenGLPlatformInfo.html",
+          "hash": "T1spM8EUg92f3vMKI7/z6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.OpenGL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.OpenGL.html",
+          "hash": "XvjMTMRTDbcb8K+KzoRP+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.OutputAttachmentDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.OutputAttachmentDescription.html",
+          "hash": "AM1wPTZzf1nnZWrxYCtT3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.OutputDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.OutputDescription.html",
+          "hash": "7VfrxajhaAjCt3E1sxKp/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.Pipeline.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.Pipeline.html",
+          "hash": "Yv3DElFK1SolP+ovykWxtQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.PipelineDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.PipelineDescription.html",
+          "hash": "FiHtnIPjdj+FxyvuRYbt5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.PixelFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.PixelFormat.html",
+          "hash": "Pz7SW1lWXLhbyQAcd7Sh5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.PolygonFillMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.PolygonFillMode.html",
+          "hash": "Ihq0QJSYRRh/uFx3GipF/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.PrimitiveTopology.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.PrimitiveTopology.html",
+          "hash": "1tLyUiefjD9LrCRIUqE6xw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.RasterizerStateDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.RasterizerStateDescription.html",
+          "hash": "gX6BlNGb9vjDWTsIEbNzzQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ResourceFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ResourceFactory.html",
+          "hash": "x1bOxygTuy3kdOIqHBzGrA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ResourceKind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ResourceKind.html",
+          "hash": "ZiOmRGVTOfxTwrkoQD4lYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ResourceLayout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ResourceLayout.html",
+          "hash": "caAZhzCbzWjpW4SE1hSZzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ResourceLayoutDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ResourceLayoutDescription.html",
+          "hash": "PiWKSuiHDLX0pHZ2PyC22g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ResourceLayoutElementDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ResourceLayoutElementDescription.html",
+          "hash": "jPiHpug1kJ0p8svYMPeKIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ResourceSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ResourceSet.html",
+          "hash": "znNu1/gOmwBIKnZU6FTVQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ResourceSetDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ResourceSetDescription.html",
+          "hash": "AKeN3eFHHKMNKPHU7aMGLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.RgbaByte.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.RgbaByte.html",
+          "hash": "b3oSPJMQTCiM0ATl0MeoSQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.RgbaFloat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.RgbaFloat.html",
+          "hash": "mY4K6i3WOsp6RyOTcko74Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.Sampler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.Sampler.html",
+          "hash": "HAF69/XhYeCnAr4g2Babsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.SamplerAddressMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.SamplerAddressMode.html",
+          "hash": "FavigUIQb8Zw7eeYHkIh0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.SamplerBorderColor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.SamplerBorderColor.html",
+          "hash": "KDq0KvwisH3Eo5hR2QxUFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.SamplerDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.SamplerDescription.html",
+          "hash": "wdTEAMvrbq4Nfcofh167lQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.SamplerFilter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.SamplerFilter.html",
+          "hash": "WTvDshPCA7coTrwBOJUlLw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.Shader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.Shader.html",
+          "hash": "AS1BImrXFDhXqbVCEfIAHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ShaderDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ShaderDescription.html",
+          "hash": "nqJT2ESz8R+XmxG0CkxfvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ShaderSetDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ShaderSetDescription.html",
+          "hash": "mnYE/q0V9mKUHFTRJxh6iQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ShaderStageDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ShaderStageDescription.html",
+          "hash": "NUoyqTvPLPCogGtbWRzPNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ShaderStages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ShaderStages.html",
+          "hash": "cTORJilMRTVygMmvcrcSug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.Texture.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.Texture.html",
+          "hash": "O8j9XW1TgRvJK3+nRvu6Xw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.TextureDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.TextureDescription.html",
+          "hash": "Kzs3wBbOp7tlPlsHiNL75Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.TextureSampleCount.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.TextureSampleCount.html",
+          "hash": "g/bBH+Chs/ZWpD6g8NvU/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.TextureUsage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.TextureUsage.html",
+          "hash": "GfKzoMezBurh2iXVeMjC+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.TextureView.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.TextureView.html",
+          "hash": "5WSrPNW7wOXYMyPnBA1xJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.TextureViewDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.TextureViewDescription.html",
+          "hash": "SPqjq1xGS2FVF87xv8rFjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.UniformBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.UniformBuffer.html",
+          "hash": "jUud2kfV/MuLTFFxLweSrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.VeldridException.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.VeldridException.html",
+          "hash": "2ENTncTvkyIRK38LP9nuOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.VertexBuffer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.VertexBuffer.html",
+          "hash": "PYh4wFOaTHeSBB1+tsp13w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.VertexElementDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.VertexElementDescription.html",
+          "hash": "LAecoYquedKoP/8GyAT40w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.VertexElementFormat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.VertexElementFormat.html",
+          "hash": "0FXwwU0HOevHj9GNS0Oj0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.VertexElementSemantic.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.VertexElementSemantic.html",
+          "hash": "vDOy8IUKAVnmPWuGR3f4eg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.VertexLayoutDescription.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.VertexLayoutDescription.html",
+          "hash": "QcFcTfRfSza8dBp317SXaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.Viewport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.Viewport.html",
+          "hash": "1Ui7hMnDV9lxEgJgZN6LEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.Vk.VkSurfaceSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.Vk.VkSurfaceSource.html",
+          "hash": "Ou/yWovpeJ6VoyV9nmGIZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.Vk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.Vk.html",
+          "hash": "WKXr3Wo2LbLvC1nyoKd8LA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.html",
+          "hash": "dPYF6/jZqTCBHg1skK9wtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "gBXbE9/QwA4/7f6vxnS8FA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "Tf880stS2u18zcnXUf+XkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/intro.html",
+          "hash": "qI5OSZ5SQE4L329hwwOo4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "articles/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "articles/toc.html",
+          "hash": "xVlQaX7Tk85omoiWv3O+Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "emsYqUqN78aMuoOmpGtYZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "zUEcqxeC8MmPdFio0fKEQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Disable incremental build by force rebuild option.",
+        "incrementalPhase": "build"
+      },
+      "processors": {
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build"
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "incrementalPhase": "postProcessing"
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

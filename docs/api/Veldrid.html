@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Namespace Veldrid
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Namespace Veldrid
+   ">
+    <meta name="generator" content="docfx 2.26.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="Veldrid">
+  
+  <h1 id="Veldrid" data-uid="Veldrid" class="text-break">Namespace Veldrid
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="markdown level0 remarks"></div>
+    <h3 id="classes">Classes
+  </h3>
+      <h4><a class="xref" href="Veldrid.CommandList.html">CommandList</a></h4>
+      <section><p>A device resource which allows the recording of graphics commands, which can later be executed by a
+<a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>.
+Before graphics commands can be issued, the <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_Begin">Begin()</a> method must be invoked.
+When the <a class="xref" href="Veldrid.CommandList.html">CommandList</a> is ready to be executed, <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> must be invoked, and then
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_">ExecuteCommands(CommandList)</a> should be used.
+NOTE: The use of <a class="xref" href="Veldrid.CommandList.html">CommandList</a> is not thread-safe. Access to the <a class="xref" href="Veldrid.CommandList.html">CommandList</a> must be
+externally synchronized.
+There are some limitations dictating proper usage and ordering of graphics commands. For example, a
+<a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>, and <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a> must all be
+bound before a call to <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">Draw(UInt32, UInt32, UInt32, Int32, UInt32)</a> will succeed.
+These limitations are described in each function, where applicable.
+<a class="xref" href="Veldrid.CommandList.html">CommandList</a> instances cannot be executed multiple times per-recording. When executed by a
+<a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>, they must be reset and commands must be issued again.
+See <a class="xref" href="Veldrid.CommandListDescription.html">CommandListDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a></h4>
+      <section><p>A device resource used to control which color and depth textures are rendered to.
+See <a class="xref" href="Veldrid.FramebufferDescription.html">FramebufferDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></h4>
+      <section><p>Represents an abstract graphics device, capable of creating device resources and executing commands.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></h4>
+      <section><p>A device resource encapsulating all state in a graphics pipeline. Used in 
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_SetPipeline_Veldrid_Pipeline_">SetPipeline(Pipeline)</a> to prepare a <a class="xref" href="Veldrid.CommandList.html">CommandList</a> for draw commands.
+See <a class="xref" href="Veldrid.PipelineDescription.html">PipelineDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a></h4>
+      <section><p>A device object responsible for the creation of graphics resources.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a></h4>
+      <section><p>A device resource which describes the layout and kind of <a class="xref" href="Veldrid.BindableResource.html">BindableResource</a> objects available
+to a shader set.
+See <a class="xref" href="Veldrid.ResourceLayoutDescription.html">ResourceLayoutDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></h4>
+      <section><p>A device resource used to bind a particular set of <a class="xref" href="Veldrid.BindableResource.html">BindableResource</a> objects to a <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.
+See <a class="xref" href="Veldrid.ResourceSetDescription.html">ResourceSetDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.Sampler.html">Sampler</a></h4>
+      <section><p>A bindable device resource which controls how texture values are sampled within a shader.
+See <a class="xref" href="Veldrid.SamplerDescription.html">SamplerDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.Shader.html">Shader</a></h4>
+      <section><p>A device resource encapsulating a single shader module.
+See <a class="xref" href="Veldrid.ShaderDescription.html">ShaderDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.Texture.html">Texture</a></h4>
+      <section><p>A device resource used to store arbitrary image data in a specific format.
+See <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.TextureView.html">TextureView</a></h4>
+      <section><p>A bindable device resource which provides a shader with access to a sampled <a class="xref" href="Veldrid.Texture.html">Texture</a> object.
+See <a class="xref" href="Veldrid.TextureViewDescription.html">TextureViewDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.VeldridException.html">VeldridException</a></h4>
+      <section><p>Represents errors that occur in the Veldrid library.</p>
+</section>
+    <h3 id="structs">Structs
+  </h3>
+      <h4><a class="xref" href="Veldrid.BlendAttachmentDescription.html">BlendAttachmentDescription</a></h4>
+      <section><p>A <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> component describing the blend behavior for an indiviaul color attachment.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.BlendStateDescription.html">BlendStateDescription</a></h4>
+      <section><p>A <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> component describing how values are blended into each individual color target.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a></h4>
+      <section><p>Describes a <a class="xref" href="Veldrid.Buffer.html">Buffer</a>, used in the creation of <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a> and <a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a>
+objects by a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.CommandListDescription.html">CommandListDescription</a></h4>
+      <section><p>Describes a <a class="xref" href="Veldrid.CommandList.html">CommandList</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.DepthStencilStateDescription.html">DepthStencilStateDescription</a></h4>
+      <section><p>A <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> component describing the properties of the depth stencil state.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.FramebufferAttachment.html">FramebufferAttachment</a></h4>
+      <section><p>Represents a single output of a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>. May be a color or depth attachment.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.FramebufferAttachmentDescription.html">FramebufferAttachmentDescription</a></h4>
+      <section><p>Describes a single attachment (color or depth) for a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.FramebufferDescription.html">FramebufferDescription</a></h4>
+      <section><p>Describes a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.IndexBufferDescription.html">IndexBufferDescription</a></h4>
+      <section><p>Describes an <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.OutputAttachmentDescription.html">OutputAttachmentDescription</a></h4>
+      <section><p>Describes an individual output attachment and its format.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.OutputDescription.html">OutputDescription</a></h4>
+      <section><p>Describes a set of output attachments and their formats.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.PipelineDescription.html">PipelineDescription</a></h4>
+      <section><p>Describes a <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.RasterizerStateDescription.html">RasterizerStateDescription</a></h4>
+      <section><p>A <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> component describing the properties of the rasterizer.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ResourceLayoutDescription.html">ResourceLayoutDescription</a></h4>
+      <section><p>Describes the layout of <a class="xref" href="Veldrid.BindableResource.html">BindableResource</a> objects for a <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ResourceLayoutElementDescription.html">ResourceLayoutElementDescription</a></h4>
+      <section><p>Describes an individual resource element in a <a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ResourceSetDescription.html">ResourceSetDescription</a></h4>
+      <section><p>Describes a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></h4>
+      <section><p>A color stored in four 8-bit unsigned normalized integer values, in RGBA component order.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.RgbaFloat.html">RgbaFloat</a></h4>
+      <section><p>A color stored in four 32-bit floating-point values, in RGBA component order.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.SamplerDescription.html">SamplerDescription</a></h4>
+      <section><p>Describes a <a class="xref" href="Veldrid.Sampler.html">Sampler</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ShaderDescription.html">ShaderDescription</a></h4>
+      <section><p>Describes a <a class="xref" href="Veldrid.Shader.html">Shader</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ShaderSetDescription.html">ShaderSetDescription</a></h4>
+      <section><p>A <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> component describing a full set of shader stages and vertex layouts.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ShaderStageDescription.html">ShaderStageDescription</a></h4>
+      <section><p>Describes a single shader stage.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a></h4>
+      <section><p>Describes a <a class="xref" href="Veldrid.Texture.html">Texture</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.TextureViewDescription.html">TextureViewDescription</a></h4>
+      <section><p>Describes a <a class="xref" href="Veldrid.TextureView.html">TextureView</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.VertexElementDescription.html">VertexElementDescription</a></h4>
+      <section><p>Describes a single element of a vertex.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.VertexLayoutDescription.html">VertexLayoutDescription</a></h4>
+      <section><p>Describes the layout of vertex data in a single <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.Viewport.html">Viewport</a></h4>
+      <section><p>Describes a 3-dimensional region.</p>
+</section>
+    <h3 id="interfaces">Interfaces
+  </h3>
+      <h4><a class="xref" href="Veldrid.BindableResource.html">BindableResource</a></h4>
+      <section><p>A resource which can be bound in a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> and used in a shader.
+See <a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a>, <a class="xref" href="Veldrid.TextureView.html">TextureView</a> and <a class="xref" href="Veldrid.Sampler.html">Sampler</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.Buffer.html">Buffer</a></h4>
+      <section><p>A device resource used to store arbitrary graphics data in various formats.
+The size of a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> is fixed upon creation, and resizing is not possible.
+See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a></h4>
+      <section><p>A resource owned by a <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>.
+<a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a> instances can be given unique names using
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SetResourceName_Veldrid_DeviceResource_System_String_">SetResourceName(DeviceResource, String)</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a></h4>
+      <section><p>A <a class="xref" href="Veldrid.Buffer.html">Buffer</a> object which can be used to store index data.
+See <a class="xref" href="Veldrid.IndexBufferDescription.html">IndexBufferDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a></h4>
+      <section><p>A bindable device resources storing arbitrary graphics data. When bound to a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>, gives a shader
+access to the data stored in the Buffer.
+See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a></h4>
+      <section><p>A <a class="xref" href="Veldrid.Buffer.html">Buffer</a> resource which can be used as the source of vertex data for a <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.
+See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.</p>
+</section>
+    <h3 id="enums">Enums
+  </h3>
+      <h4><a class="xref" href="Veldrid.BlendFactor.html">BlendFactor</a></h4>
+      <section><p>Controls the influence of components in a blend operation.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.BlendFunction.html">BlendFunction</a></h4>
+      <section><p>Controls how the source and destination factors are combined in a blend operation.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.CubeFace.html">CubeFace</a></h4>
+      <section><p>Identifies a unique face of a cubemap <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.DepthComparisonKind.html">DepthComparisonKind</a></h4>
+      <section><p>Describes how new values are compared with existing values in a depth comparison.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.FaceCullMode.html">FaceCullMode</a></h4>
+      <section><p>Indicates which face will be culled.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.FrontFace.html">FrontFace</a></h4>
+      <section><p>The winding order used to determine the front face of a primitive.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.GraphicsBackend.html">GraphicsBackend</a></h4>
+      <section><p>The specific graphics API used by the <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.IndexFormat.html">IndexFormat</a></h4>
+      <section><p>The format of index data used in an <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></h4>
+      <section><p>The format of data stored in a <a class="xref" href="Veldrid.Texture.html">Texture</a>.
+Each name is a compound identifier, where each component denotes a name and a number of bits used to store that
+component. The final component identifies the storage type of each component. &quot;Float&quot; identifies a signed, floating-point
+type, UNorm identifies an unsigned integer type which is normalized, meaning it occupies the full space of the integer
+type.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.PolygonFillMode.html">PolygonFillMode</a></h4>
+      <section><p>Indicates how the rasterizer will fill polygons.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.PrimitiveTopology.html">PrimitiveTopology</a></h4>
+      <section><p>Determines how a sequence of vertices is interepreted by the rasterizer.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ResourceKind.html">ResourceKind</a></h4>
+      <section><p>The kind of a <a class="xref" href="Veldrid.BindableResource.html">BindableResource</a> object.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.SamplerAddressMode.html">SamplerAddressMode</a></h4>
+      <section><p>An addressing mode for texture coordinates.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.SamplerBorderColor.html">SamplerBorderColor</a></h4>
+      <section><p>A constant color that is sampled when <a class="xref" href="Veldrid.SamplerAddressMode.html#Veldrid_SamplerAddressMode_Border">Border</a> is used.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.SamplerFilter.html">SamplerFilter</a></h4>
+      <section><p>Determines how texture values are sampled from a texture.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ShaderStages.html">ShaderStages</a></h4>
+      <section><p>A bitmask representing a set of shader stages.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.TextureSampleCount.html">TextureSampleCount</a></h4>
+      <section><p>Describes the number of samples to use in a <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a></h4>
+      <section><p>A bitmask indicating how a <a class="xref" href="Veldrid.Texture.html">Texture</a> is permitted to be used.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.VertexElementFormat.html">VertexElementFormat</a></h4>
+      <section><p>The format of an individual vertex element.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.VertexElementSemantic.html">VertexElementSemantic</a></h4>
+      <section><p>The type of a vertex element, describing how the element is interpreted.</p>
+</section>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2017 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
