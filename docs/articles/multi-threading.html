@@ -1,0 +1,119 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Multi-Threading in Veldrid </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Multi-Threading in Veldrid ">
+    <meta name="generator" content="docfx 2.26.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="multi-threading">
+<h1 id="multi-threading-in-veldrid">Multi-Threading in Veldrid</h1>
+
+<p>Modern graphics APIs encourage the full utilization of CPU resources, and allow rendering commands to be submitted from many different application threads. Veldrid is similarly flexible, and most objects created by Veldrid can be utilized in a multi-threaded application.</p>
+<h1 id="graphicsdevice">GraphicsDevice</h1>
+<p>All properties and methods of a <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a> can be safely invoked from any thread at any time.</p>
+<p>Note that graphics commands do not complete synchronously with the method <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_">GraphicsDevice.ExecuteCommands</a>. They are merely submitted to the graphics device and may complete later, but submission order is respected. <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_WaitForIdle">GraphicsDevice.WaitForIdle</a> can be called from any thread to block until all submitted graphics commands have completed.</p>
+<h1 id="resourcefactory">ResourceFactory</h1>
+<p>The <a class="xref" href="../api/Veldrid.ResourceFactory.html">ResourceFactory</a> object is responsible for the creation of all resources owned by the graphics device, and all of its methods can be safely invoked from any thread at any time. Device resources created this way can be used from multiple threads, but care must be taken when issuing resource update commands to them (see the notes on CommandList).</p>
+<h1 id="commandlist">CommandList</h1>
+<p>The usage of a <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a> is not thread-safe, but multiple CommandList objects can be created and used in parallel. Applications can leverage this to execute separate, independent render passes in parallel. For example, several cascaded shadow map passes, along with a 2D UI overlay, could be executed in parallel and then utilized in the scene&#39;s final output.</p>
+<p>In general, CommandLists can execute commands in parallel which read from the same graphics resources, but not update them. For example, <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_">CommandList.UpdateTexture</a> cannot be executed on the same <a class="xref" href="../api/Veldrid.Texture.html">Texture</a> resource by multiple command lists in parallel, but several CommandLists could issue draw commands which read from that same Texture in parallel.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/articles/multi-threading.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

@@ -1,6 +1,18 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: getting-started
+  name: Getting Started
+  href: articles/getting-started.html
+- uid: intro
+  name: Introduction
+  href: articles/intro.html
+- uid: multi-threading
+  name: Multi-Threading in Veldrid
+  href: articles/multi-threading.html
+- uid: shaders
+  name: Shaders
+  href: articles/shaders.html
 - uid: Veldrid
   name: Veldrid
   href: api/Veldrid.html
