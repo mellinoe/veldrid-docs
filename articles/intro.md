@@ -35,7 +35,7 @@ A [CommandList](xref:Veldrid.CommandList) is a device resource capable of record
 
 A variety of device resources can be created by a GraphicsDevice in order to control rendering operations. Veldrid resources are owned by their creator, and they must be disposed explicitly to avoid leaking device memory.
 
-### Textures, Buffers
+### Textures and Buffers
 
 [Textures](xref:Veldrid.Texture) and [Buffers](xref:Veldrid.Buffer) are staple device resources used to store various kinds of information on the GPU. They can act as the source or destination of data for rendering operations.
 
@@ -47,11 +47,11 @@ Textures can be sampled in shader programs using a [TextureView](xref:Veldrid.Te
 
 ### Shaders
 
-[Shaders](xref:Veldrid.Shader) are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry). They are created from pieces of API-specific data (see [Shaders](xref:shaders) for more information). Multiple shader modules can be combined to produce a set of shaders usable in a Pipeline.
+[Shaders](xref:Veldrid.Shader) are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry). They are created from graphics-API-specific data chunks (see [Shaders](xref:shaders) for more information). Multiple shader modules are combined into a "shader set", used to construct a Pipeline.
 
 ### Pipelines
 
-A [Pipeline](xref:Veldrid.Pipeline) is a device resource which encapsulates a large amount of graphics pipeline information. In other graphics libraries, a Pipeline is split into several unrelated objects or function calls which can be combined in confusing and unpredictable ways. Veldrid pipelines represent a combined set of all of these pieces of information, and are immutable. This avoids a huge amount of complexity related to the mutable state machine paradigm of OpenGL and similar APIs. Pipeline information includes:
+A [Pipeline](xref:Veldrid.Pipeline) is a device resource which encapsulates a large amount of graphics pipeline information. In other graphics libraries, a Pipeline is split into several unrelated objects or function calls which can be combined in confusing and unpredictable ways. Veldrid pipelines represent the combined set of all of these pieces of information, and are immutable. This avoids a huge amount of complexity inherent in the mutable state machine paradigm of OpenGL and similar APIs. Pipeline information encompasses:
 
 * Blend state: how color values are blended into the Framebuffer.
 * Depth stencil state: How depth testing, writing, comparing are performed.
