@@ -60,7 +60,6 @@
       }
     ],
     "dest": "docs",
-    "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
       "default"
@@ -68,6 +67,9 @@
     "postProcessors": [],
     "noLangKeyword": false,
     "keepFileLink": false,
-    "cleanupCacheHistory": false
+    "cleanupCacheHistory": false,
+    "globalMetadata": {
+      "_appFooter": " "
+    }
   }
 }
