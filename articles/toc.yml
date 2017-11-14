@@ -2,6 +2,8 @@
   items:
   - name: Introduction
     href: intro.md
+  - name: API Concepts
+    href: api-concepts.md
   - name: Shaders
     href: shaders.md
   - name: Multi-Threading in Veldrid

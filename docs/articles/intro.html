@@ -73,52 +73,26 @@
 <p>A basic understanding of graphics APIs and hardware is helpful for understanding and best utilizing Veldrid, which is designed in the vein current-gen graphics APIs like Vulkan, Direct3D 12, and Metal. As a low-level library, it is powerful and flexible, but verbose -- it is best used as the robust foundation of a high-performance game engine or application framework.</p>
 <h1 id="features">Features</h1>
 <ul>
-<li>Full customization of graphics pipeline state, with support for current-gen features and optimizations.<ul>
+<li>Full customization of graphics resources and pipeline state, with support for current-gen features and optimizations.<ul>
 <li>Blend, depth-stencil, and rasterizer states.</li>
 <li>Programmable vertex, fragment, tessellation, and geometry shaders.</li>
 <li>Simplified resource layout and binding model.</li>
+<li>Simple, unified resource creation and update mechanisms.</li>
 </ul>
 </li>
-<li>Simple, unified resource creation and update mechanisms.</li>
 <li>High-performance: Veldrid is built on a thin, low-cost abstraction that is close to current-gen graphics API&#39;s.</li>
 <li>Allocation-less: The core rendering loop (outside of resource creation and initialization) can be used without allocating any garbage-collected memory. If application code follows suit, then completely GC-less rendering can be achieved.</li>
 <li>.NET-friendly: Unlike native graphics API&#39;s, Veldrid was designed with .NET in mind, and integrates cleanly with regular .NET code.</li>
 <li>Multi-threaded: Veldrid objects can be used from multiple threads, with some restrictions. See <a class="xref" href="multi-threading.html">Multi-threading in Veldrid</a> for specifics.</li>
 <li>Dependency-less: With the exception of bindings for native graphics APIs, Veldrid is implemented without any third-party dependencies.</li>
 </ul>
-<h1 id="api-concepts">API Concepts</h1>
-<h2 id="graphicsdevice">GraphicsDevice</h2>
-<p>A <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a> is the entry point into Veldrid. It represents a GPU device capable of creating and managing graphics resources, as well as executing commands. GraphicsDevices are created explicity by the application, and a particular backing API (Vulkan, Direct3D, OpenGL) is selected at that time. The GraphicsDevice is also responsible for presenting rendered images to the application&#39;s main swapchain.</p>
-<h2 id="commandlist">CommandList</h2>
-<p>A <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a> is a device resource capable of recording graphics commands, which can then be executed by a GraphicsDevice. All rendering commands, like drawing primitives, updating textures, and clearing framebuffers, are submitted to a CommandList. Optionally, multiple CommandList objects can be used in parallel to record independent graphics commands on separate threads.</p>
-<h2 id="resources">Resources</h2>
-<p>A variety of device resources can be created by a GraphicsDevice in order to control rendering operations. Veldrid resources are owned by their creator, and they must be disposed explicitly to avoid leaking device memory.</p>
-<h3 id="textures-and-buffers">Textures and Buffers</h3>
-<p><a class="xref" href="../api/Veldrid.Texture.html">Textures</a> and <a class="xref" href="../api/Veldrid.Buffer.html">Buffers</a> are staple device resources used to store various kinds of information on the GPU. They can act as the source or destination of data for rendering operations.</p>
-<p>Textures can be sampled in shader programs using a <a class="xref" href="../api/Veldrid.TextureView.html">TextureView</a>. They can also be used as the destination of drawing operations when used to create a <a class="xref" href="../api/Veldrid.Framebuffer.html">Framebuffer</a> object.</p>
-<p><a class="xref" href="../api/Veldrid.VertexBuffer.html">VertexBuffers</a> and <a class="xref" href="../api/Veldrid.IndexBuffer.html">IndexBuffers</a> are specific kinds of Buffers which are used to store vertex and index information. These are used as a data source for drawing operations.</p>
-<p><a class="xref" href="../api/Veldrid.UniformBuffer.html">UniformBuffers</a> are Buffers which can be read from shader programs. These are commonly used to store object transformations, camera transformations, and other arbitrary pieces of data encoding some information about the scene being rendered.</p>
-<h3 id="shaders">Shaders</h3>
-<p><a class="xref" href="../api/Veldrid.Shader.html">Shaders</a> are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry). They are created from graphics-API-specific data chunks (see <a class="xref" href="shaders.html">Shaders</a> for more information). Multiple shader modules are combined into a &quot;shader set&quot;, used to construct a Pipeline.</p>
-<h3 id="pipelines">Pipelines</h3>
-<p>A <a class="xref" href="../api/Veldrid.Pipeline.html">Pipeline</a> is a device resource which encapsulates a large amount of graphics pipeline information. In other graphics libraries, a Pipeline is split into several unrelated objects or function calls which can be combined in confusing and unpredictable ways. Veldrid pipelines represent the combined set of all of these pieces of information, and are immutable. This avoids a huge amount of complexity inherent in the mutable state machine paradigm of OpenGL and similar APIs. Pipeline information encompasses:</p>
-<ul>
-<li>Blend state: how color values are blended into the Framebuffer.</li>
-<li>Depth stencil state: How depth testing, writing, comparing are performed.</li>
-<li>Rasterizer state: How culling, clipping, scissor tests, etc. are performed.</li>
-<li>Primitive topology: How a series of input vertices are interpreted.</li>
-<li>Shader set: the full set of shader programs in use.</li>
-<li>Resource layout: The types and layout of all shader resources being used.</li>
-<li>Outputs: The depth and color outputs of the Framebuffer that are written to.</li>
-</ul>
-<h3 id="resourcelayouts-and-resourcesets">ResourceLayouts and ResourceSets</h3>
-<p>A <a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSet</a> is another fundamental device resource which is necessary, along with a VertexBuffer, IndexBuffer, and Pipeline, for all Drawing commands. ResourceSets are the mechanism by which BindableResource objects (<a class="xref" href="../api/Veldrid.UniformBuffer.html">UniformBuffers</a>, <a class="xref" href="../api/Veldrid.TextureView.html">TextureViews</a>, and <a class="xref" href="../api/Veldrid.Sampler.html">Samplers</a>) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a <a class="xref" href="../api/Veldrid.ResourceLayout.html">ResourceLayout</a> object, used to create both a ResourceSet and a Pipeline.</p>
-<h3 id="framebuffer">Framebuffer</h3>
-<p>A <a class="xref" href="../api/Veldrid.Framebuffer.html">Framebuffer</a> controls the set of textures that are drawn into when rendering commands are executed. The application&#39;s swapchain Framebuffer is also accessible via the <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">GraphicsDevice.SwapchainFramebuffer</a> property. The swapchain Framebuffer is used to present an image to the application window or view.</p>
 <h1 id="getting-started">Getting Started</h1>
 <p>See <a class="xref" href="getting-started.html">Getting Started</a> for a basic startup guide.</p>
+<h1 id="api-concepts">API Concepts</h1>
+<p>See <a class="xref" href="api-concepts.html">API Concepts</a> for an overview of the common object types in Veldrid.</p>
 <h1 id="samples">Samples</h1>
 <p><a href="https://github.com/mellinoe/veldrid/tree/master/src/NeoDemo">NeoDemo</a> is a sample application being built in tandem with Veldrid.</p>
+<p>A more comprehensive set of example projects is planned as the project matures.</p>
 <h1 id="nuget-packages">NuGet Packages</h1>
 <p>Pre-release packages are available from MyGet: <a href="https://www.myget.org/feed/mellinoe/package/nuget/Veldrid">https://www.myget.org/feed/mellinoe/package/nuget/Veldrid</a>.</p>
 </article>

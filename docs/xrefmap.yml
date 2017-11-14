@@ -1,6 +1,9 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: api-concepts
+  name: API Concepts
+  href: articles/api-concepts.html
 - uid: getting-started
   name: Getting Started
   href: articles/getting-started.html
