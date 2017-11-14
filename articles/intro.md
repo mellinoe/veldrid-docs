@@ -25,7 +25,7 @@ A basic understanding of graphics APIs and hardware is helpful for understanding
 
 ## GraphicsDevice
 
-A [GraphicsDevice](xref:Veldrid.GraphicsDevice) is the entry point into Veldrid. It represents a GPU device capable of creating and managing graphics resources, as well as executing commands. GraphicsDevices are created explicity by the application, and a particular backing API (Vulkan, Direct3D, OpenGL) is selected at that time.
+A [GraphicsDevice](xref:Veldrid.GraphicsDevice) is the entry point into Veldrid. It represents a GPU device capable of creating and managing graphics resources, as well as executing commands. GraphicsDevices are created explicity by the application, and a particular backing API (Vulkan, Direct3D, OpenGL) is selected at that time. The GraphicsDevice is also responsible for presenting rendered images to the application's main swapchain.
 
 ## CommandList
 
@@ -44,7 +44,6 @@ Textures can be sampled in shader programs using a [TextureView](xref:Veldrid.Te
 [VertexBuffers](xref:Veldrid.VertexBuffer) and [IndexBuffers](xref:Veldrid.IndexBuffer) are specific kinds of Buffers which are used to store vertex and index information. These are used as a data source for drawing operations.
 
 [UniformBuffers](xref:Veldrid.UniformBuffer) are Buffers which can be read from shader programs. These are commonly used to store object transformations, camera transformations, and other arbitrary pieces of data encoding some information about the scene being rendered.
-
 
 ### Shaders
 
@@ -66,14 +65,17 @@ A [Pipeline](xref:Veldrid.Pipeline) is a device resource which encapsulates a la
 
 A [ResourceSet](xref:Veldrid.ResourceSet) is another fundamental device resource which is necessary, along with a VertexBuffer, IndexBuffer, and Pipeline, for all Drawing commands. ResourceSets are the mechanism by which BindableResource objects ([UniformBuffers](xref:Veldrid.UniformBuffer), [TextureViews](xref:Veldrid.TextureView), and [Samplers](xref:Veldrid.Sampler)) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a [ResourceLayout](xref:Veldrid.ResourceLayout) object, used to create both a ResourceSet and a Pipeline.
 
+### Framebuffer
+
+A [Framebuffer](xref:Veldrid.Framebuffer) controls the set of textures that are drawn into when rendering commands are executed. The application's swapchain Framebuffer is also accessible via the [GraphicsDevice.SwapchainFramebuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) property. The swapchain Framebuffer is used to present an image to the application window or view.
+
 # Getting Started
 
 See [Getting Started](xref:getting-started) for a basic startup guide.
 
 # Samples
 
-The [NeoDemo](https://github.com/mellinoe/veldrid/tree/master/src/NeoDemo) project is a demo application being built in tandem with Veldrid.
-
+[NeoDemo](https://github.com/mellinoe/veldrid/tree/master/src/NeoDemo) is a sample application being built in tandem with Veldrid.
 
 # NuGet Packages
 
