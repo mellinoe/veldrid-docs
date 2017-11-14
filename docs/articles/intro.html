@@ -88,7 +88,7 @@
 </ul>
 <h1 id="api-concepts">API Concepts</h1>
 <h2 id="graphicsdevice">GraphicsDevice</h2>
-<p>A <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a> is the entry point into Veldrid. It represents a GPU device capable of creating and managing graphics resources, as well as executing commands. GraphicsDevices are created explicity by the application, and a particular backing API (Vulkan, Direct3D, OpenGL) is selected at that time.</p>
+<p>A <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a> is the entry point into Veldrid. It represents a GPU device capable of creating and managing graphics resources, as well as executing commands. GraphicsDevices are created explicity by the application, and a particular backing API (Vulkan, Direct3D, OpenGL) is selected at that time. The GraphicsDevice is also responsible for presenting rendered images to the application&#39;s main swapchain.</p>
 <h2 id="commandlist">CommandList</h2>
 <p>A <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a> is a device resource capable of recording graphics commands, which can then be executed by a GraphicsDevice. All rendering commands, like drawing primitives, updating textures, and clearing framebuffers, are submitted to a CommandList. Optionally, multiple CommandList objects can be used in parallel to record independent graphics commands on separate threads.</p>
 <h2 id="resources">Resources</h2>
@@ -113,10 +113,12 @@
 </ul>
 <h3 id="resourcelayouts-and-resourcesets">ResourceLayouts and ResourceSets</h3>
 <p>A <a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSet</a> is another fundamental device resource which is necessary, along with a VertexBuffer, IndexBuffer, and Pipeline, for all Drawing commands. ResourceSets are the mechanism by which BindableResource objects (<a class="xref" href="../api/Veldrid.UniformBuffer.html">UniformBuffers</a>, <a class="xref" href="../api/Veldrid.TextureView.html">TextureViews</a>, and <a class="xref" href="../api/Veldrid.Sampler.html">Samplers</a>) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a <a class="xref" href="../api/Veldrid.ResourceLayout.html">ResourceLayout</a> object, used to create both a ResourceSet and a Pipeline.</p>
+<h3 id="framebuffer">Framebuffer</h3>
+<p>A <a class="xref" href="../api/Veldrid.Framebuffer.html">Framebuffer</a> controls the set of textures that are drawn into when rendering commands are executed. The application&#39;s swapchain Framebuffer is also accessible via the <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">GraphicsDevice.SwapchainFramebuffer</a> property. The swapchain Framebuffer is used to present an image to the application window or view.</p>
 <h1 id="getting-started">Getting Started</h1>
 <p>See <a class="xref" href="getting-started.html">Getting Started</a> for a basic startup guide.</p>
 <h1 id="samples">Samples</h1>
-<p>The <a href="https://github.com/mellinoe/veldrid/tree/master/src/NeoDemo">NeoDemo</a> project is a demo application being built in tandem with Veldrid.</p>
+<p><a href="https://github.com/mellinoe/veldrid/tree/master/src/NeoDemo">NeoDemo</a> is a sample application being built in tandem with Veldrid.</p>
 <h1 id="nuget-packages">NuGet Packages</h1>
 <p>Pre-release packages are available from MyGet: <a href="https://www.myget.org/feed/mellinoe/package/nuget/Veldrid">https://www.myget.org/feed/mellinoe/package/nuget/Veldrid</a>.</p>
 </article>
