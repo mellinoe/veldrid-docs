@@ -4,7 +4,9 @@
     href: intro.md
   - name: API Concepts
     href: api-concepts.md
-  - name: Shaders
+  - name: Command Lists
+    href: command-lists.md
+  - name: Shaders and Resources
     href: shaders.md
   - name: Multi-Threading in Veldrid
     href: multi-threading.md

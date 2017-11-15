@@ -4,6 +4,9 @@ references:
 - uid: api-concepts
   name: API Concepts
   href: articles/api-concepts.html
+- uid: command-lists
+  name: Command Lists
+  href: articles/command-lists.html
 - uid: getting-started
   name: Getting Started
   href: articles/getting-started.html
@@ -13,8 +16,8 @@ references:
 - uid: multi-threading
   name: Multi-Threading in Veldrid
   href: articles/multi-threading.html
-- uid: shaders
-  name: Shaders
+- uid: shaders-and-resources
+  name: Shaders and Resources
   href: articles/shaders.html
 - uid: Veldrid
   name: Veldrid

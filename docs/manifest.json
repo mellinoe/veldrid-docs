@@ -873,7 +873,19 @@
       "output": {
         ".html": {
           "relative_path": "articles/api-concepts.html",
-          "hash": "lZNNlC7yjPQtGT0MmeAJWw=="
+          "hash": "19Q48XZSt3QQo6wlp1W3gw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/command-lists.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/command-lists.html",
+          "hash": "iNNCjx1xGrEwSsd/wy+JwQ=="
         }
       },
       "is_incremental": false,
@@ -921,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shaders.html",
-          "hash": "B2ERfksICcLjbCdbc/9Zxw=="
+          "hash": "zgpW1cOJhjLgh3JQ0jvqxQ=="
         }
       },
       "is_incremental": false,
@@ -933,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "UvYog1Lqw0+xZknU+Qg/Hg=="
+          "hash": "U0VoBaDR+4kI8geWH2Qe/A=="
         }
       },
       "is_incremental": false,

@@ -14,6 +14,8 @@ A [GraphicsDevice](xref:Veldrid.GraphicsDevice) is the entry point into Veldrid.
 
 A [CommandList](xref:Veldrid.CommandList) is a device resource capable of recording graphics commands, which can then be executed by a GraphicsDevice. All rendering commands, like drawing primitives, updating textures, and clearing framebuffers, are submitted to a CommandList. Optionally, multiple CommandList objects can be used in parallel to record independent graphics commands on separate threads.
 
+See the [CommandList overview](xref:command-lists) for more information.
+
 ## Resources
 
 A variety of device resources can be created by a GraphicsDevice in order to control rendering operations. Veldrid resources are owned by their creator, and they must be disposed explicitly to avoid leaking device memory.
@@ -36,7 +38,7 @@ Textures can be sampled in shader programs using a [TextureView](xref:Veldrid.Te
 
 ### Shaders
 
-[Shaders](xref:Veldrid.Shader) are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry). They are created from graphics-API-specific data chunks (see [Shaders](xref:shaders) for more information). Multiple shader modules are combined into a "shader set", used to construct a Pipeline.
+[Shaders](xref:Veldrid.Shader) are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry). They are created from graphics-API-specific data chunks. Multiple shader modules are combined into a "shader set", used to construct a Pipeline. See the [Shaders and Resources overview](xref:shaders-and-resources) for more information.
 
 ### Pipelines
 
