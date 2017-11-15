@@ -4,11 +4,11 @@ uid: command-lists
 
 # Command Lists
 
-Using Veldrid, no graphics commands can be executed without the use of a [CommandList](xref:Veldrid.CommandList). A CommandList is a special device resource (created by a [GraphicsDevice](xref:Veldrid.GraphicsDevice)) that records a variety of commands. These commands can then be submitted for execution on the device using the [GraphicsDevice.ExecuteCommands](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_) method.
+Using Veldrid, all graphics commands must be executed using a [CommandList](xref:Veldrid.CommandList). A CommandList is a special device resource (created by a [GraphicsDevice](xref:Veldrid.GraphicsDevice)) that records a variety of commands. These commands can then be submitted for execution on the device using the [GraphicsDevice.ExecuteCommands](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_) method.
 
 Several types of commands are available, depending on what work is being done.
 
-## Resource Update
+## Resource Updates
 
 [Texture](xref:Veldrid.Texture) and [Buffer](xref:Veldrid.Buffer) objects can be updated directly in a CommandList, using the UpdateBuffer and UpdateTexture methods.
 

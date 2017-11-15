@@ -69,9 +69,9 @@
             <article class="content wrap" id="_content" data-uid="command-lists">
 <h1 id="command-lists">Command Lists</h1>
 
-<p>Using Veldrid, no graphics commands can be executed without the use of a <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a>. A CommandList is a special device resource (created by a <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a>) that records a variety of commands. These commands can then be submitted for execution on the device using the <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_">GraphicsDevice.ExecuteCommands</a> method.</p>
+<p>Using Veldrid, all graphics commands must be executed using a <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a>. A CommandList is a special device resource (created by a <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a>) that records a variety of commands. These commands can then be submitted for execution on the device using the <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_">GraphicsDevice.ExecuteCommands</a> method.</p>
 <p>Several types of commands are available, depending on what work is being done.</p>
-<h2 id="resource-update">Resource Update</h2>
+<h2 id="resource-updates">Resource Updates</h2>
 <p><a class="xref" href="../api/Veldrid.Texture.html">Texture</a> and <a class="xref" href="../api/Veldrid.Buffer.html">Buffer</a> objects can be updated directly in a CommandList, using the UpdateBuffer and UpdateTexture methods.</p>
 <p>The color and depth targets of the active <a class="xref" href="../api/Veldrid.Framebuffer.html">Framebuffer</a> can be cleared.</p>
 <p>Multisampled Textures can be resolved down into a regular non-multisampled Texture using the ResolveTexture method.</p>
