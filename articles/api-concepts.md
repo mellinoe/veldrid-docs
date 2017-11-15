@@ -4,7 +4,7 @@ uid: api-concepts
 
 # API Concepts
 
-Veldrid is a flexible library exposing a large number of types granting access to various pieces of graphics functionality. The following are the most important concepts in the API which are used for most common rendering techniques. See the [API Documentation](xref:Veldrid) page for a full listing of available Veldrid types.
+Veldrid is a flexible library exposing a large number of types granting access to various pieces of graphics functionality. The following are the most important concepts in the API which are needed for most common rendering techniques. See the [API Documentation](xref:Veldrid) page for a full listing of available Veldrid types.
 
 ## GraphicsDevice
 
