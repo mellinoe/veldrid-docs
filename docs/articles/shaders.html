@@ -90,18 +90,76 @@
 </code></pre><p>defines a uniform belonging to binding 1 (of the <a class="xref" href="../api/Veldrid.ResourceLayoutDescription.html#Veldrid_ResourceLayoutDescription_Elements">ResourceLayoutElementDescription</a> array), of set 0 (of the <a class="xref" href="../api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_ResourceLayouts">ResourceLayouts</a> array).</p>
 </li>
 <li><p>Direct3D 11: Resources are assigned HLSL registers based on their positions in the <a class="xref" href="../api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_ResourceLayouts">ResourceLayouts</a> array first, and then by their position in the <a class="xref" href="../api/Veldrid.ResourceLayoutDescription.html#Veldrid_ResourceLayoutDescription_Elements">ResourceLayoutElementDescriptions</a> array. Each resource type (texture, sampler, uniform) is assigned an increasing integer value for its register number. For example, given these two ResourceLayouts:</p>
-<pre><code>// Layout 0
-[0] UniformBuffer UB0
-[1] TextureView Tex0
-[2] Sampler Sampler0
-[3] Sampler Sampler1
-[4] TextureView Tex1
-[5] UniformBuffer UB3
-// Layout 1
-[0] TextureView Tex2
-[1] UniformBuffer UB1
-[2] UniformBuffer UB2
-</code></pre><p>the HLSL resources must be specified as follows:</p>
+<p>  <strong>Layout 0</strong></p>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Type</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>UniformBuffer</td>
+<td>UB0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>TextureView</td>
+<td>Tex0</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Sampler</td>
+<td>Sampler0</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sampler</td>
+<td>Sampler1</td>
+</tr>
+<tr>
+<td>4</td>
+<td>TextureView</td>
+<td>Tex1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>UniformBuffer</td>
+<td>UB3</td>
+</tr>
+</tbody>
+</table>
+<p>  <strong>Layout 1</strong></p>
+<table>
+<thead>
+<tr>
+<th>Index</th>
+<th>Type</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>TextureView</td>
+<td>Tex2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>UniformBuffer</td>
+<td>UB1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>UniformBuffer</td>
+<td>UB2</td>
+</tr>
+</tbody>
+</table>
+<p>  the HLSL resources must be specified as follows:</p>
 <pre><code>cbuffer UB0 : register(b0) { ... }
 cbuffer UB3 : register(b1) { ... }
 cbuffer UB1 : register(b2) { ... }
@@ -111,7 +169,7 @@ Texture2D Tex1 : register(t1);
 Texture2D Tex2 : register(t2);
 SamplerState Sampler0 : register(s0);
 SamplerState Sampler1 : register(s1);
-</code></pre><p>(the declaration order is unimportant -- only the register indices matter).</p>
+</code></pre><p>  (the declaration order is unimportant -- only the register indices matter).</p>
 </li>
 <li><p>OpenGL: Resources are matched strictly by-name. Each resource must correspond to a uniform or uniform block in the shader program, and the names must be identical. Numerical indices are ignored when matching resources to GLSL uniforms.</p>
 </li>

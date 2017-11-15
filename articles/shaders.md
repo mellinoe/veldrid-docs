@@ -35,31 +35,36 @@ layout(set = 0, binding = 1) uniform View
 defines a uniform belonging to binding 1 (of the [ResourceLayoutElementDescription](xref:Veldrid.ResourceLayoutDescription#Veldrid_ResourceLayoutDescription_Elements) array), of set 0 (of the [ResourceLayouts](xref:Veldrid.PipelineDescription#Veldrid_PipelineDescription_ResourceLayouts) array).
 
 * Direct3D 11: Resources are assigned HLSL registers based on their positions in the [ResourceLayouts](xref:Veldrid.PipelineDescription#Veldrid_PipelineDescription_ResourceLayouts) array first, and then by their position in the [ResourceLayoutElementDescriptions](xref:Veldrid.ResourceLayoutDescription#Veldrid_ResourceLayoutDescription_Elements) array. Each resource type (texture, sampler, uniform) is assigned an increasing integer value for its register number. For example, given these two ResourceLayouts:
-```
-// Layout 0
-[0] UniformBuffer UB0
-[1] TextureView Tex0
-[2] Sampler Sampler0
-[3] Sampler Sampler1
-[4] TextureView Tex1
-[5] UniformBuffer UB3
-// Layout 1
-[0] TextureView Tex2
-[1] UniformBuffer UB1
-[2] UniformBuffer UB2
-```
-the HLSL resources must be specified as follows:
-```
-cbuffer UB0 : register(b0) { ... }
-cbuffer UB3 : register(b1) { ... }
-cbuffer UB1 : register(b2) { ... }
-cbuffer UB2 : register(b3) { ... }
-Texture2D Tex0 : register(t0);
-Texture2D Tex1 : register(t1);
-Texture2D Tex2 : register(t2);
-SamplerState Sampler0 : register(s0);
-SamplerState Sampler1 : register(s1);
-```
-(the declaration order is unimportant -- only the register indices matter).
+
+    **Layout 0**
+    | Element | Type | Name |
+    |------ |------|------|
+    | 0 | UniformBuffer | UB0 |
+    | 1 | TextureView | Tex0 |
+    | 2 | Sampler | Sampler0 |
+    | 3 | Sampler | Sampler1 |
+    | 4 | TextureView | Tex1 |
+    | 5 | UniformBuffer | UB3 |
+
+    **Layout 1**
+    | Element | Type | Name |
+    |------ |------|------|
+    | 0 | TextureView | Tex2 |
+    | 1 | UniformBuffer | UB1 |
+    | 2 | UniformBuffer | UB2 |
+
+    the HLSL resources must be specified as follows:
+    ```
+    cbuffer UB0 : register(b0) { ... }
+    cbuffer UB3 : register(b1) { ... }
+    cbuffer UB1 : register(b2) { ... }
+    cbuffer UB2 : register(b3) { ... }
+    Texture2D Tex0 : register(t0);
+    Texture2D Tex1 : register(t1);
+    Texture2D Tex2 : register(t2);
+    SamplerState Sampler0 : register(s0);
+    SamplerState Sampler1 : register(s1);
+    ```
+    (the declaration order is unimportant -- only the register indices matter).
 
 * OpenGL: Resources are matched strictly by-name. Each resource must correspond to a uniform or uniform block in the shader program, and the names must be identical. Numerical indices are ignored when matching resources to GLSL uniforms.
