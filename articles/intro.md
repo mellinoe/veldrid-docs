@@ -23,7 +23,7 @@ A basic understanding of graphics APIs and hardware is helpful for understanding
 
 # Getting Started
 
-See [Getting Started](xref:getting-started) for a basic startup guide.
+See [Getting Started](xref:getting-started-intro) for a basic startup guide.
 
 # API Concepts
 

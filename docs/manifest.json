@@ -893,11 +893,47 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/getting-started.md",
+      "source_relative_path": "articles/getting-started/getting-started-part1.md",
       "output": {
         ".html": {
-          "relative_path": "articles/getting-started.html",
-          "hash": "Y9ByZe3fKxRBzTs6nyQ6YQ=="
+          "relative_path": "articles/getting-started/getting-started-part1.html",
+          "hash": "Fntr60OLCnhg7woLL73hYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/getting-started-part2.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/getting-started-part2.html",
+          "hash": "9xocBo9xEXjEFbDKaEkN9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/getting-started-part3.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/getting-started-part3.html",
+          "hash": "Bo2xCyBLV4JAUggD9yV7Og=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/getting-started/intro.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/getting-started/intro.html",
+          "hash": "CaMOGJHav9AeSgtQlj4B8w=="
         }
       },
       "is_incremental": false,
@@ -909,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "od7sh0zoeq+gOoU9qIRp+w=="
+          "hash": "3TFZWnRr0XWbhJSIp5DO1g=="
         }
       },
       "is_incremental": false,
@@ -933,7 +969,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/shaders.html",
-          "hash": "rmJ7zAvaAdmJpx3IDcMYnQ=="
+          "hash": "41NOCXB8oGu9I3CTXFVIew=="
         }
       },
       "is_incremental": false,
@@ -945,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "U0VoBaDR+4kI8geWH2Qe/A=="
+          "hash": "ZLbI4xPOm+rgYznr9HYsGg=="
         }
       },
       "is_incremental": false,
@@ -957,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "JBfNpuEzZNwOZpEOy/LXTQ=="
+          "hash": "WYM1gIEPyQ3k2xGuzy4aTg=="
         }
       },
       "is_incremental": false,
@@ -984,19 +1020,9 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "RestApiDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
@@ -1005,6 +1031,16 @@
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

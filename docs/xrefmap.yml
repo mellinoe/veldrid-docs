@@ -7,9 +7,18 @@ references:
 - uid: command-lists
   name: Command Lists
   href: articles/command-lists.html
-- uid: getting-started
+- uid: getting-started-intro
   name: Getting Started
-  href: articles/getting-started.html
+  href: articles/getting-started/intro.html
+- uid: getting-started-part1
+  name: Part 1
+  href: articles/getting-started/getting-started-part1.html
+- uid: getting-started-part2
+  name: Part 2
+  href: articles/getting-started/getting-started-part2.html
+- uid: getting-started-part3
+  name: Part 3
+  href: articles/getting-started/getting-started-part3.html
 - uid: intro
   name: Introduction
   href: articles/intro.html

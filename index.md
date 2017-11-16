@@ -4,4 +4,6 @@ Veldrid is a cross-platform, graphics API-agnostic rendering library for .NET. I
 
 [Introduction to Veldrid](xref:intro)
 
+[Getting Started Tutorial](xref:getting-started-intro)
+
 [API Documentation](xref:Veldrid)

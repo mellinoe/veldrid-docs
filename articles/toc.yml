@@ -11,4 +11,12 @@
   - name: Multi-Threading in Veldrid
     href: multi-threading.md
 - name: Getting Started
-  href: getting-started.md
+  items:
+  - name: Introduction
+    href: getting-started/intro.md
+  - name: "Part 1 Creating a Window and GraphicsDevice, and setting up a main loop"
+    href: getting-started/getting-started-part1.md
+  - name: "Part 2: Creating graphics resources"
+    href: getting-started/getting-started-part2.md
+  - name: "Part 3: Drawing a quad, and resource cleanup"
+    href: getting-started/getting-started-part3.md

@@ -1,0 +1,177 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Part 3 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Part 3 ">
+    <meta name="generator" content="docfx 2.26.4.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="getting-started-part3">
+<h1 id="part-3">Part 3</h1>
+
+<h2 id="drawing-a-quad">Drawing a Quad</h2>
+<p>Let&#39;s call a new method Draw() from our main application loop:</p>
+<pre><code class="lang-C#">while (window.Exists)
+{
+    window.PumpEvents();
+    Draw();
+}
+</code></pre><p>The Draw() method will include all of our per-frame commands for drawing our multi-colored quad using the resources we created in the last section.</p>
+<p>The first thing we need to do is call Begin() on our CommandList again.</p>
+<pre><code class="lang-C#">_commandList.Begin();
+</code></pre><p>Before we can issue a Draw command, we need to set a <a class="xref" href="../../api/Veldrid.Framebuffer.html">Framebuffer</a> and <a class="xref" href="../../api/Veldrid.Viewport.html">Viewport</a>.</p>
+<pre><code class="lang-C#">_commandList.SetFramebuffer(_graphicsDevice.SwapchainFramebuffer);
+_commandList.SetFullViewports();
+</code></pre><p>A Framebuffer is a device resource which controls where the rendered outputs go. The <a class="xref" href="../../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">SwapchainFramebuffer</a> is application&#39;s main Framebuffer. It can be used to draw directly into the application&#39;s view.</p>
+<p>Viewports control the target area in the Framebuffer that is actually rendered to. Pixels outside of that area are discarded. In our case, we want to render to the entire window, so we use the helper method <a class="xref" href="../../api/Veldrid.CommandList.html#Veldrid_CommandList_SetFullViewports">SetFullViewports</a>, which simply sets all Viewports to the full size of the Framebuffer.</p>
+<p>At the beginning of every frame, we clear the screen to black and the depth buffer to the max value. In a static scene, this is not really necessary, but I will do it anyway for demonstration.</p>
+<pre><code class="lang-C#">_commandList.ClearColorTarget(0, RgbaFloat.Black);
+_commandList.ClearDepthTarget(1);
+</code></pre><p>Now that we have done that, we need to bind the resources that we created in the last section, and issue a draw call.</p>
+<pre><code class="lang-C#">_commandList.SetVertexBuffer(0, _vertexBuffer);
+_commandList.SetIndexBuffer(_indexBuffer);
+_commandList.SetPipeline(_pipeline);
+_commandList.Draw(
+    indexCount: 4,
+    instanceCount: 1,
+    indexStart: 0,
+    vertexOffset: 0,
+    instanceStart: 0);
+</code></pre><p>The VertexBuffer is bound to slot 0. In our case, we only have one slot, but it is possible for multiple slots and multiple VertexBuffers to be used. We issue a Draw command with four indices, one instance, and no offsets.</p>
+<p>We are almost ready to see our colored quad. All that remains is to execute our commands, and swap the buffers of the main swapchain.</p>
+<pre><code class="lang-C#">_commandList.End();
+_graphicsDevice.ExecuteCommands(_commandList);
+_graphicsDevice.SwapBuffers();
+</code></pre><p>If you run the application now, you should see a quad being rendered, with a different color mixing from each corner.</p>
+<h2 id="resource-cleanup">Resource Cleanup</h2>
+<p>After our application&#39;s main loop, let&#39;s call a new method DisposeResources.</p>
+<pre><code class="lang-C#">while (window.Exists)
+{
+    window.PumpEvents();
+    Draw();
+}
+
+DisposeResources();
+</code></pre><p>In that method, we will simply dispose of everything we have created, ending with the GraphicsDevice itself.</p>
+<pre><code class="lang-C#">private static void DisposeResources()
+{
+    _pipeline.Dispose();
+    _vertexShader.Dispose();
+    _fragmentShader.Dispose();
+    _commandList.Dispose();
+    _vertexBuffer.Dispose();
+    _indexBuffer.Dispose();
+    _graphicsDevice.Dispose();
+}
+</code></pre><h2 id="wrapping-up">Wrapping Up</h2>
+<p>The completed project of this tutorial is available <a href="https://github.com/mellinoe/veldrid-samples/blob/master/src/GettingStarted/Program.cs">here</a>. This is a simple example intended to demonstrate some of the core concepts in Veldrid. More advanced rendering techniques are possible using these and other features available in the library.</p>
+<p>See the [NeoDemo] project in the Veldrid repository for a more complex application built on Veldrid. It uses the following techniques:</p>
+<ul>
+<li>Real-time dynamic shadows with three cascades</li>
+<li>Point lighting with configurable diffuse and specular components</li>
+<li>2D Shadowmap previews</li>
+<li>ImGui integration</li>
+<li>Multiple framebuffer outputs and full-screen effects</li>
+<li>Configurable MSAA</li>
+<li>Multi-threaded rendering</li>
+<li>Live switching of graphics APIs</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/articles/getting-started/getting-started-part3.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>
