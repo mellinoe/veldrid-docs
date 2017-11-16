@@ -7,6 +7,9 @@ references:
 - uid: command-lists
   name: Command Lists
   href: articles/command-lists.html
+- uid: framebuffers
+  name: Framebuffers
+  href: articles/framebuffers.html
 - uid: getting-started-intro
   name: Getting Started
   href: articles/getting-started/intro.html
@@ -28,6 +31,9 @@ references:
 - uid: shaders-and-resources
   name: Shaders and Resources
   href: articles/shaders.html
+- uid: textures
+  name: Textures
+  href: articles/textures.html
 - uid: Veldrid
   name: Veldrid
   href: api/Veldrid.html

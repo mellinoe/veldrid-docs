@@ -32,6 +32,8 @@ All device resources can be uniformly created with an appropriate Description ob
 
 Textures can be sampled in shader programs using a [TextureView](xref:Veldrid.TextureView). They can also be used as the destination of drawing operations when used to create a [Framebuffer](xref:Veldrid.Framebuffer) object.
 
+See the [Textures overview](xref:textures) for more information about Textures.
+
 [VertexBuffers](xref:Veldrid.VertexBuffer) and [IndexBuffers](xref:Veldrid.IndexBuffer) are specific kinds of Buffers which are used to store vertex and index information. These are used as a data source for drawing operations.
 
 [UniformBuffers](xref:Veldrid.UniformBuffer) are Buffers which can be read from shader programs. These are commonly used to store object transformations, camera transformations, and other arbitrary pieces of data encoding some information about the scene being rendered.
@@ -58,4 +60,4 @@ A [ResourceSet](xref:Veldrid.ResourceSet) is another fundamental device resource
 
 ### Framebuffer
 
-A [Framebuffer](xref:Veldrid.Framebuffer) controls the set of textures that are drawn into when rendering commands are executed. The application's swapchain Framebuffer is also accessible via the [GraphicsDevice.SwapchainFramebuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) property. The swapchain Framebuffer is used to present an image to the application window or view.
+A [Framebuffer](xref:Veldrid.Framebuffer) controls the set of textures that are drawn into when rendering commands are executed. The application's swapchain Framebuffer is also accessible via the [GraphicsDevice.SwapchainFramebuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) property. The swapchain Framebuffer is used to present an image to the application window or view. See the [Framebuffers overview](xref:framebuffers) for more information.

@@ -8,6 +8,10 @@
     href: command-lists.md
   - name: Shaders and Resources
     href: shaders.md
+  - name: Textures
+    href: textures.md
+  - name: Framebuffers
+    href: framebuffers.md
   - name: Multi-Threading in Veldrid
     href: multi-threading.md
 - name: Getting Started
