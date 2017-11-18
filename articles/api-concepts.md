@@ -22,7 +22,12 @@ A variety of device resources can be created by a GraphicsDevice in order to con
 
 ### "Descriptions"
 
-Veldrid exposes a number of Description types, which are plain data structures used by a [ResourceFactory](xref:Veldrid.ResourceFactory) in order to create new graphics resources. These are simple, transient objects which contain a small number of fields describing the properties of a single type of resource. For example, an [IndexBufferDescription](xref:Veldrid.IndexBufferDescription) contains the two pieces of information necessary for creating an [IndexBuffer](xref:Veldrid.IndexBuffer): the total capacity and format of the index data to be stored.
+Veldrid exposes a number of Description types, which are plain data structures used by a [ResourceFactory](xref:Veldrid.ResourceFactory) in order to create new graphics resources. These are simple, transient objects which contain a small number of fields describing the properties of a single type of resource. For example, a [BufferDescription](xref:Veldrid.BufferDescription) contains a few pieces of information necessary to create a [Buffer](xref:Veldrid.Buffer):
+
+* The total size of the Buffer in bytes.
+* How the Buffer will be used ([Veldrid.BufferUsage](xref:Veldrid.BufferUsage)).
+* Whether the Buffer will be updated dynamically (often).
+* If the Buffer is a structured Buffer, then the size of each structure element.
 
 All device resources can be uniformly created with an appropriate Description object. Additionally, there are some convenience methods that allow the creation of some resource objects with a small set of common parameters, rather than a full Description object.
 
@@ -34,9 +39,15 @@ Textures can be sampled in shader programs using a [TextureView](xref:Veldrid.Te
 
 See the [Textures overview](xref:textures) for more information about Textures.
 
-[VertexBuffers](xref:Veldrid.VertexBuffer) and [IndexBuffers](xref:Veldrid.IndexBuffer) are specific kinds of Buffers which are used to store vertex and index information. These are used as a data source for drawing operations.
+Buffers can be created for a variety of applications. The [BufferUsage](xref:Veldrid.BufferUsage) type enumerates all options.
 
-[UniformBuffers](xref:Veldrid.UniformBuffer) are Buffers which can be read from shader programs. These are commonly used to store object transformations, camera transformations, and other arbitrary pieces of data encoding some information about the scene being rendered.
+Vertex Buffers (BufferUsage.VertexBuffer) contain vertex data which is bound to a CommandList before issuing render commands. Vertex data is pulled from the bound vertex Buffers.
+
+Index Buffers (BufferUsage.IndexBuffer) contain index data which controls how vertices are selected during indexed drawing [CommandList.DrawIndexed](xref:Veldrid.CommandList#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_).
+
+Uniform Buffers (BufferUsage.UniformBuffer) are Buffers which can be read from shader programs. These are commonly used to store object transformations, camera transformations, and other arbitrary pieces of data encoding some information about the scene being rendered.
+
+Structured Buffers (BufferUsage.StructuredBufferReadOnly and BufferUsage.StructuredBufferReadWrite) are Buffers containing an array of a single data type, whose size is specified upon Buffer creation. Shaders can get read-only or read-write access to these resources, depending on the needs of the technique being used.
 
 ### Shaders
 
@@ -44,19 +55,30 @@ See the [Textures overview](xref:textures) for more information about Textures.
 
 ### Pipelines
 
-A [Pipeline](xref:Veldrid.Pipeline) is a device resource which encapsulates a large amount of graphics pipeline information. In other graphics libraries, a Pipeline is split into several unrelated objects or function calls which can be combined in confusing and unpredictable ways. Veldrid pipelines represent the combined set of all of these pieces of information, and are immutable. This avoids a huge amount of complexity inherent in the mutable state machine paradigm of OpenGL and similar APIs. Pipeline information encompasses:
+In Veldrid, there are two types of [Pipelines](xref:Veldrid.Pipeline): graphics and compute.
+
+A graphics Pipeline is a device resource which encapsulates a large amount of information. In other graphics libraries, a Pipeline is split into several unrelated objects or function calls which can be combined in confusing and unpredictable ways. Veldrid pipelines represent the combined set of all of these pieces of information, and are immutable. This avoids a huge amount of complexity inherent in the mutable state machine paradigm of OpenGL and similar APIs. Pipeline information encompasses:
 
 * Blend state: how color values are blended into the Framebuffer.
 * Depth stencil state: How depth testing, writing, comparing are performed.
 * Rasterizer state: How culling, clipping, scissor tests, etc. are performed.
 * Primitive topology: How a series of input vertices are interpreted.
 * Shader set: the full set of shader programs in use.
-* Resource layout: The types and layout of all shader resources being used.
+* Resource layouts: The types and layout of all shader resources being used.
 * Outputs: The depth and color outputs of the Framebuffer that are written to.
+
+A compute Pipeline is another kind of resource which encapsulates the necessary state for a compute shader dispatch. A compute Pipeline does not include any graphics-specific information, like blend state, depth stencil state, etc. The only information contained is:
+
+* The compute shader module used
+* Resource layouts
+
+Compute Pipelines do not have explicit outputs like graphics Pipelines do. Instead, they make use of read-write shader resources to output information.
+
+Graphics and compute pipelines are tracked separately in a CommandList. This means that setting a compute Pipeline, or attaching ResourceSets to a compute Pipeline, do not disturb the previously-set graphics Pipeline state.
 
 ### ResourceLayouts and ResourceSets
 
-A [ResourceSet](xref:Veldrid.ResourceSet) is another fundamental device resource which is necessary, along with a VertexBuffer, IndexBuffer, and Pipeline, for all Drawing commands. ResourceSets are the mechanism by which BindableResource objects ([UniformBuffers](xref:Veldrid.UniformBuffer), [TextureViews](xref:Veldrid.TextureView), and [Samplers](xref:Veldrid.Sampler)) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a [ResourceLayout](xref:Veldrid.ResourceLayout) object, used to create both a ResourceSet and a Pipeline.
+A [ResourceSet](xref:Veldrid.ResourceSet) is another fundamental device resource which is necessary, along with a Pipeline, for all Drawing commands. ResourceSets are the mechanism by which BindableResource objects ([Buffers](xref:Veldrid.Buffer)(uniform and structured), [TextureViews](xref:Veldrid.TextureView), and [Samplers](xref:Veldrid.Sampler)) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a [ResourceLayout](xref:Veldrid.ResourceLayout) object, used to create both a ResourceSet and a Pipeline.
 
 ### Framebuffer
 

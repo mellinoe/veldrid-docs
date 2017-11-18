@@ -77,6 +77,11 @@
   <div class="markdown level0 remarks"></div>
     <h3 id="classes">Classes
   </h3>
+      <h4><a class="xref" href="Veldrid.Buffer.html">Buffer</a></h4>
+      <section><p>A device resource used to store arbitrary graphics data in various formats.
+The size of a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> is fixed upon creation, and resizing is not possible.
+See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.</p>
+</section>
       <h4><a class="xref" href="Veldrid.CommandList.html">CommandList</a></h4>
       <section><p>A device resource which allows the recording of graphics commands, which can later be executed by a
 <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>.
@@ -86,8 +91,8 @@ When the <a class="xref" href="Veldrid.CommandList.html">CommandList</a> is read
 NOTE: The use of <a class="xref" href="Veldrid.CommandList.html">CommandList</a> is not thread-safe. Access to the <a class="xref" href="Veldrid.CommandList.html">CommandList</a> must be
 externally synchronized.
 There are some limitations dictating proper usage and ordering of graphics commands. For example, a
-<a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>, and <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a> must all be
-bound before a call to <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">Draw(UInt32, UInt32, UInt32, Int32, UInt32)</a> will succeed.
+<a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, vertex buffer, and index buffer must all be
+bound before a call to <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">DrawIndexed(UInt32, UInt32, UInt32, Int32, UInt32)</a> will succeed.
 These limitations are described in each function, where applicable.
 <a class="xref" href="Veldrid.CommandList.html">CommandList</a> instances cannot be executed multiple times per-recording. When executed by a
 <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>, they must be reset and commands must be issued again.
@@ -103,7 +108,7 @@ See <a class="xref" href="Veldrid.FramebufferDescription.html">FramebufferDescri
       <h4><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></h4>
       <section><p>A device resource encapsulating all state in a graphics pipeline. Used in 
 <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_SetPipeline_Veldrid_Pipeline_">SetPipeline(Pipeline)</a> to prepare a <a class="xref" href="Veldrid.CommandList.html">CommandList</a> for draw commands.
-See <a class="xref" href="Veldrid.PipelineDescription.html">PipelineDescription</a>.</p>
+See <a class="xref" href="Veldrid.GraphicsPipelineDescription.html">GraphicsPipelineDescription</a>.</p>
 </section>
       <h4><a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a></h4>
       <section><p>A device object responsible for the creation of graphics resources.</p>
@@ -145,11 +150,14 @@ See <a class="xref" href="Veldrid.TextureViewDescription.html">TextureViewDescri
       <section><p>A <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> component describing how values are blended into each individual color target.</p>
 </section>
       <h4><a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a></h4>
-      <section><p>Describes a <a class="xref" href="Veldrid.Buffer.html">Buffer</a>, used in the creation of <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a> and <a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a>
-objects by a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+      <section><p>Describes a <a class="xref" href="Veldrid.Buffer.html">Buffer</a>, used in the creation of <a class="xref" href="Veldrid.Buffer.html">Buffer</a> objects by a
+<a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
 </section>
       <h4><a class="xref" href="Veldrid.CommandListDescription.html">CommandListDescription</a></h4>
       <section><p>Describes a <a class="xref" href="Veldrid.CommandList.html">CommandList</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.ComputePipelineDescription.html">ComputePipelineDescription</a></h4>
+      <section><p>Describes a compute <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
 </section>
       <h4><a class="xref" href="Veldrid.DepthStencilStateDescription.html">DepthStencilStateDescription</a></h4>
       <section><p>A <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> component describing the properties of the depth stencil state.</p>
@@ -163,17 +171,14 @@ objects by a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory
       <h4><a class="xref" href="Veldrid.FramebufferDescription.html">FramebufferDescription</a></h4>
       <section><p>Describes a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
 </section>
-      <h4><a class="xref" href="Veldrid.IndexBufferDescription.html">IndexBufferDescription</a></h4>
-      <section><p>Describes an <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+      <h4><a class="xref" href="Veldrid.GraphicsPipelineDescription.html">GraphicsPipelineDescription</a></h4>
+      <section><p>Describes a graphics <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
 </section>
       <h4><a class="xref" href="Veldrid.OutputAttachmentDescription.html">OutputAttachmentDescription</a></h4>
       <section><p>Describes an individual output attachment and its format.</p>
 </section>
       <h4><a class="xref" href="Veldrid.OutputDescription.html">OutputDescription</a></h4>
       <section><p>Describes a set of output attachments and their formats.</p>
-</section>
-      <h4><a class="xref" href="Veldrid.PipelineDescription.html">PipelineDescription</a></h4>
-      <section><p>Describes a <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
 </section>
       <h4><a class="xref" href="Veldrid.RasterizerStateDescription.html">RasterizerStateDescription</a></h4>
       <section><p>A <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> component describing the properties of the rasterizer.</p>
@@ -215,7 +220,7 @@ objects by a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory
       <section><p>Describes a single element of a vertex.</p>
 </section>
       <h4><a class="xref" href="Veldrid.VertexLayoutDescription.html">VertexLayoutDescription</a></h4>
-      <section><p>Describes the layout of vertex data in a single <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>.</p>
+      <section><p>Describes the layout of vertex data in a single <a class="xref" href="Veldrid.Buffer.html">Buffer</a> used as a vertex buffer.</p>
 </section>
       <h4><a class="xref" href="Veldrid.Viewport.html">Viewport</a></h4>
       <section><p>Describes a 3-dimensional region.</p>
@@ -224,30 +229,12 @@ objects by a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory
   </h3>
       <h4><a class="xref" href="Veldrid.BindableResource.html">BindableResource</a></h4>
       <section><p>A resource which can be bound in a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> and used in a shader.
-See <a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a>, <a class="xref" href="Veldrid.TextureView.html">TextureView</a> and <a class="xref" href="Veldrid.Sampler.html">Sampler</a>.</p>
-</section>
-      <h4><a class="xref" href="Veldrid.Buffer.html">Buffer</a></h4>
-      <section><p>A device resource used to store arbitrary graphics data in various formats.
-The size of a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> is fixed upon creation, and resizing is not possible.
-See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.</p>
+See <a class="xref" href="Veldrid.Buffer.html">Buffer</a>, <a class="xref" href="Veldrid.TextureView.html">TextureView</a> and <a class="xref" href="Veldrid.Sampler.html">Sampler</a>.</p>
 </section>
       <h4><a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a></h4>
       <section><p>A resource owned by a <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>.
 <a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a> instances can be given unique names using
 <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SetResourceName_Veldrid_DeviceResource_System_String_">SetResourceName(DeviceResource, String)</a>.</p>
-</section>
-      <h4><a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a></h4>
-      <section><p>A <a class="xref" href="Veldrid.Buffer.html">Buffer</a> object which can be used to store index data.
-See <a class="xref" href="Veldrid.IndexBufferDescription.html">IndexBufferDescription</a>.</p>
-</section>
-      <h4><a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a></h4>
-      <section><p>A bindable device resources storing arbitrary graphics data. When bound to a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>, gives a shader
-access to the data stored in the Buffer.
-See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.</p>
-</section>
-      <h4><a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a></h4>
-      <section><p>A <a class="xref" href="Veldrid.Buffer.html">Buffer</a> resource which can be used as the source of vertex data for a <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.
-See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.</p>
 </section>
     <h3 id="enums">Enums
   </h3>
@@ -257,6 +244,8 @@ See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.
       <h4><a class="xref" href="Veldrid.BlendFunction.html">BlendFunction</a></h4>
       <section><p>Controls how the source and destination factors are combined in a blend operation.</p>
 </section>
+      <h4><a class="xref" href="Veldrid.BufferUsage.html">BufferUsage</a></h4>
+      <section></section>
       <h4><a class="xref" href="Veldrid.CubeFace.html">CubeFace</a></h4>
       <section><p>Identifies a unique face of a cubemap <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
 </section>
@@ -273,7 +262,7 @@ See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.
       <section><p>The specific graphics API used by the <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>.</p>
 </section>
       <h4><a class="xref" href="Veldrid.IndexFormat.html">IndexFormat</a></h4>
-      <section><p>The format of index data used in an <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
+      <section><p>The format of index data used in a <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
 </section>
       <h4><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></h4>
       <section><p>The format of data stored in a <a class="xref" href="Veldrid.Texture.html">Texture</a>.

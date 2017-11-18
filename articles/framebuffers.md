@@ -16,7 +16,7 @@ All target textures used to create a Framebuffer must have the same dimensions a
 
 Before any Draw command can be issued, there must be an active Framebuffer set using the [CommandList.SetFramebuffer](xref:Veldrid.CommandList#Veldrid_CommandList_SetFramebuffer_Veldrid_Framebuffer_) method. In order to issue a Draw command to a CommandList, the current Pipeline and Framebuffer also must be compatible. A Pipeline is compatible with a Framebuffer if it has the same number of outputs, and the format of those outputs all match.
 
-A Framebuffer exposes an [OutputDescription](xref:Veldrid.Framebuffer#Veldrid_Framebuffer_OutputDescription) property, which can be used to create a Pipeline object (see [PipelineDescription.Outputs](xref:Veldrid.PipelineDescription#Veldrid_PipelineDescription_Outputs)), ensuring that its outputs are compatible.
+A Framebuffer exposes an [OutputDescription](xref:Veldrid.Framebuffer#Veldrid_Framebuffer_OutputDescription) property, which can be used to create a graphics Pipeline object (see [PipelineDescription.Outputs](xref:Veldrid.GraphicsPipelineDescription#Veldrid_GraphicsPipelineDescription_Outputs)), ensuring that its outputs are compatible.
 
 ## Multisampled Framebuffers
 

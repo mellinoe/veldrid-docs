@@ -16,11 +16,11 @@ A [ShaderDescription](xref:Veldrid.ShaderDescription) takes two pieces of inform
 
 ## Shader Resources
 
-Shader objects have a unique relationship with [ResourceLayouts](xref:Veldrid.ResourceLayout) and [ResourceSets](xref:Veldrid.ResourceSet). When creating a Pipeline, the provided [ResourceLayouts](xref:Veldrid.PipelineDescription#Veldrid_PipelineDescription_ResourceLayouts) must match the actual resource types that are specified in the shader code.
+Shader objects have a unique relationship with [ResourceLayouts](xref:Veldrid.ResourceLayout) and [ResourceSets](xref:Veldrid.ResourceSet). When creating a Pipeline, the provided [ResourceLayouts](xref:Veldrid.GraphicsPipelineDescription#Veldrid_GraphicsPipelineDescription_ResourceLayouts) must match the actual resource types that are specified in the shader code.
 
 ResourceLayouts merely define the layout of resources expected by a set of shaders. When draw commands are executed, the actual shader resources (Buffers, TextureViews, and Samplers) are determined based on the CommandList's currently-bound [ResourceSets](xref:Veldrid.ResourceSet).
 
-ResourceLayouts themselves contain a set of one-or-more resource elements. Additionally, multiple ResourceLayout objects can be used to define the inputs of a shader set. When this is done, each ResourceLayout must be matched by a corresponding ResourceSet containing the appropriate resource types. ResourceSet objects are bound to a particular slot. The slot corresponds to the index of the matching ResourceLayout given in the [ResourceLayouts](xref:Veldrid.PipelineDescription#Veldrid_PipelineDescription_ResourceLayouts) field of the PipelineDescription.
+ResourceLayouts themselves contain a set of one-or-more resource elements. Additionally, multiple ResourceLayout objects can be used to define the inputs of a shader set. When this is done, each ResourceLayout must be matched by a corresponding ResourceSet containing the appropriate resource types. ResourceSet objects are bound to a particular slot. The slot corresponds to the index of the matching ResourceLayout given in the [ResourceLayouts](xref:Veldrid.GraphicsPipelineDescription#Veldrid_GraphicsPipelineDescription_ResourceLayouts) field of the GraphicsPipelineDescription or [ComputePipelineDescription](xref:Veldrid.ComputePipelineDescription).
 
 Generally, it is advisable to group resources into sets and layouts which are common or shared. For example, it is a good idea to group the camera's view and projection matrix, and other scene-level information, into a single ResourceLayout and shared ResourceSet. This allows many objects to be rendered using the same bound ResourceSet. Specific object Pipelines can utilize extra ResourceLayouts and ResourceSets to accomodate their specific rendering requirements while still utilizing shared resources when it makes sense. Changing ResourceSets can be a costly operation, so re-using them as much as possible can help performance.
 
@@ -28,13 +28,13 @@ Generally, it is advisable to group resources into sets and layouts which are co
 
 The layout system is convention-based, and relies on shader code being authored in a particular way for resource slots to match.
 
-* Vulkan: ResourceLayouts match very closely with regular Vulkan conventions. In a Vulkan shader, a uniform's "set" layout specifies the ResourceLayout index in the overall [ResourceLayouts](xref:Veldrid.PipelineDescription#Veldrid_PipelineDescription_ResourceLayouts) array. The "binding" layout specifies the specific resource within that ResourceLayout identified by the "set". For example:
+* Vulkan: ResourceLayouts match very closely with regular Vulkan conventions. In a Vulkan shader, a uniform's "set" layout specifies the ResourceLayout index in the overall [ResourceLayouts](xref:Veldrid.GraphicsPipelineDescription#Veldrid_GraphicsPipelineDescription_ResourceLayouts) array. The "binding" layout specifies the specific resource within that ResourceLayout identified by the "set". For example:
 ```
 layout(set = 0, binding = 1) uniform View
 ```
-defines a uniform belonging to binding 1 (of the [ResourceLayoutElementDescription](xref:Veldrid.ResourceLayoutDescription#Veldrid_ResourceLayoutDescription_Elements) array), of set 0 (of the [ResourceLayouts](xref:Veldrid.PipelineDescription#Veldrid_PipelineDescription_ResourceLayouts) array).
+defines a uniform belonging to binding 1 (of the [ResourceLayoutElementDescription](xref:Veldrid.ResourceLayoutDescription#Veldrid_ResourceLayoutDescription_Elements) array), of set 0 (of the [ResourceLayouts](xref:Veldrid.GraphicsPipelineDescription#Veldrid_GraphicsPipelineDescription_ResourceLayouts) array).
 
-* Direct3D 11: Resources are assigned HLSL registers based on their positions in the [ResourceLayouts](xref:Veldrid.PipelineDescription#Veldrid_PipelineDescription_ResourceLayouts) array first, and then by their position in the [ResourceLayoutElementDescriptions](xref:Veldrid.ResourceLayoutDescription#Veldrid_ResourceLayoutDescription_Elements) array. Each resource type (texture, sampler, uniform) is assigned an increasing integer value for its register number. For example, given these two ResourceLayouts:
+* Direct3D 11: Resources are assigned HLSL registers based on their positions in the [ResourceLayouts](xref:Veldrid.GraphicsPipelineDescription#Veldrid_GraphicsPipelineDescription_ResourceLayouts) array first, and then by their position in the [ResourceLayoutElementDescriptions](xref:Veldrid.ResourceLayoutDescription#Veldrid_ResourceLayoutDescription_Elements) array. Each resource type (texture, sampler, uniform) is assigned an increasing integer value for its register number. For example, given these two ResourceLayouts:
 
     **Layout 0**
     | Element | Type | Name |

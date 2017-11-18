@@ -22,11 +22,13 @@ There are several state-change methods available, which control various pieces o
 * [Framebuffer](xref:Veldrid.Framebuffer)
 * [Viewports](xref:Veldrid.Viewport)
 * Scissor rectangles
-* [VertexBuffers](xref:Veldrid.VertexBuffer)
-* [IndexBuffer](xref:Veldrid.IndexBuffer)
+* [Vertex Buffers](xref:Veldrid.Buffer)
+* [Index Buffer](xref:Veldrid.Buffer)
 * [Pipeline](xref:Veldrid.Pipeline)
 * [ResourceSets](xref:Veldrid.ResourceSet)
 
 ## Drawing
 
-There is a single [Draw](xref:Veldrid.CommandList#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_) method which can be invoked to record a draw command into the CommandList. The effect of this Draw is controlled by the active state of the CommandList -- which Pipeline, ResourceSets, and Framebuffer are bound, and what Viewport and scissor rectangles are set. Regular indexed and instanced draw commands are both supported by this method.
+The [DrawIndexed](xref:Veldrid.CommandList#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_) method can be invoked to record an indexed draw command into the CommandList. The effect of this Draw is controlled by the active state of the CommandList -- which vertex Buffer, index Buffer, Pipeline, ResourceSets, and Framebuffer are bound, and what Viewport and scissor rectangles are set. Regular indexed and instanced draw commands are both supported by this method.
+
+The [Draw](xref:Veldrid.CommandList#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_UInt32_) method can be invoked to record a non-indexed draw command into the CommandList. This method can be used without an index Buffer bound, and simply selects sequential vertices from the bound vertex Buffer, if it exists.

@@ -72,8 +72,8 @@
 <h2 id="creating-graphics-resources">Creating Graphics Resources</h2>
 <p>It&#39;s time to create some Veldrid objects which we will need to render our multi-colored quad. Let&#39;s set up some fields in our Program class.</p>
 <pre><code class="lang-C#">private static CommandList _commandList;
-private static VertexBuffer _vertexBuffer;
-private static IndexBuffer _indexBuffer;
+private static Buffer _vertexBuffer;
+private static Buffer _indexBuffer;
 private static Shader _vertexShader;
 private static Shader _fragmentShader;
 private static Pipeline _pipeline;
@@ -112,12 +112,11 @@ while (window.Exists)
 };
 </code></pre><p>We will render these vertices as a Triangle Strip, so we need four indices as well. We will use 16-bit indices:</p>
 <pre><code class="lang-C#">ushort[] indexData = { 0, 1, 2, 3 };
-</code></pre><p>We need somewhere to store this vertex and index data that the GraphicsDevice can use for rendering. This is accomplished with a <a class="xref" href="../../api/Veldrid.VertexBuffer.html">VertexBuffer</a> and an <a class="xref" href="../../api/Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
-<p>A VertexBuffer is created with a <a class="xref" href="../../api/Veldrid.BufferDescription.html">BufferDescription</a> object. The only info we need to provide is the size of our buffer. We have four vertices, and each are 24 bytes in size.</p>
-<pre><code class="lang-C#">_vertexBuffer = factory.CreateVertexBuffer(new BufferDescription(4 * VertexPositionColor.SizeInBytes));
-</code></pre><p>An IndexBuffer is created with an <a class="xref" href="../../api/Veldrid.IndexBuffer.html">IndexBufferDescription</a> object, which is identical to a BufferDescription, except it also needs to know what the format of the index data is. In our case, the data is 16-bit unsigned integers.</p>
-<pre><code class="lang-C#">_indexBuffer = factory.CreateIndexBuffer(new IndexBufferDescription(4 * sizeof(ushort), IndexFormat.UInt16));
-</code></pre><p>We&#39;ve created our buffers, but they are empty at the moment. We need to fill them with the data contained in our <code>quadVertices</code> and <code>indexData</code> arrays. Resource updates are done through our <code>CommandList</code>. Before we can do that, we need to call <a class="xref" href="../../api/Veldrid.CommandList.html#Veldrid_CommandList_Begin">Begin</a>:</p>
+</code></pre><p>We need somewhere to store this vertex and index data that the GraphicsDevice can use for rendering. This is accomplished with two <a class="xref" href="../../api/Veldrid.Buffer.html">Buffer</a> objects, which can be used to store many different types of data.</p>
+<p>A Buffer is created with a <a class="xref" href="../../api/Veldrid.BufferDescription.html">BufferDescription</a> object. For each Buffer, we need to provide the total size that it will contain, as well as how the Buffer object will be used. In our case, we want to use one as a vertex Buffer, and one as an index Buffer.</p>
+<pre><code class="lang-C#">_vertexBuffer = factory.CreateBuffer(new BufferDescription(4 * VertexPositionColor.SizeInBytes, BufferUsage.VertexBuffer));
+_indexBuffer = factory.CreateBuffer(new BufferDescription(4 * sizeof(ushort), BufferUsage.IndexBuffer));
+</code></pre><p>We&#39;ve created our Buffers, but they are empty at the moment. We need to fill them with the data contained in our <code>quadVertices</code> and <code>indexData</code> arrays. Resource updates are done through our <code>CommandList</code>. Before we can do that, we need to call <a class="xref" href="../../api/Veldrid.CommandList.html#Veldrid_CommandList_Begin">Begin</a>:</p>
 <pre><code class="lang-C#">_commandList.Begin();
 </code></pre><p>We will use the <a class="xref" href="../../api/Veldrid.CommandList.html#Veldrid_CommandList_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___">UpdateBuffer</a> method to upload our data:</p>
 <pre><code class="lang-C#">_commandList.UpdateBuffer(_vertexBuffer, 0, quadVertices);
@@ -149,7 +148,7 @@ _graphicsDevice.ExecuteCommands(_commandList);
         default: throw new InvalidOperationException();
     }
 
-    string path = Path.Combine(AppContext.BaseDirectory, &quot;Shaders&quot;, $&quot;{stage.ToString()}.{extension}&quot;);
+    string path = Path.Combine(System.AppContext.BaseDirectory, &quot;Shaders&quot;, $&quot;{stage.ToString()}.{extension}&quot;);
     byte[] shaderBytes = File.ReadAllBytes(path);
     return _graphicsDevice.ResourceFactory.CreateShader(new ShaderDescription(stage, shaderBytes));
 }
@@ -166,8 +165,8 @@ ShaderSetDescription shaderSet = new ShaderSetDescription();
 shaderSet.VertexLayouts = new VertexLayoutDescription[] { vertexLayout };
 shaderSet.ShaderStages = shaderStages;
 </code></pre><h3 id="pipeline">Pipeline</h3>
-<p>The last object we need is a <a class="xref" href="../../api/Veldrid.Pipeline.html">Pipeline</a>. This is an object which encapsulates all of the necessary graphics state for drawing primitives. One piece of information is the set of shaders that will be used -- we have that already. There are several other pieces of information we need.</p>
-<pre><code class="lang-C#">PipelineDescription pipelineDescription = new PipelineDescription();
+<p>The last object we need is a <a class="xref" href="../../api/Veldrid.Pipeline.html">Pipeline</a>. There are two types of Pipelines in Veldrid: graphics and compute. In this tutorial, we are going to be creating a graphics Pipeline. This is an object which encapsulates all of the necessary graphics state for drawing primitives. One piece of information is the set of shaders that will be used -- we have that already. There are several other pieces of information we need.</p>
+<pre><code class="lang-C#">GraphicsPipelineDescription pipelineDescription = new GraphicsPipelineDescription();
 pipelineDescription.BlendState = BlendStateDescription.SingleOverrideBlend;
 </code></pre><p>The <code>BlendState</code> controls how the results from rendering are blended into the output textures. This is a simple example -- we only have a single output texture, and we want our new results to completely overwrite the existing data in our output.</p>
 <pre><code class="lang-C#">pipelineDescription.DepthStencilState = new DepthStencilStateDescription(
@@ -184,7 +183,7 @@ pipelineDescription.BlendState = BlendStateDescription.SingleOverrideBlend;
 </code></pre><p>The rasterizer state lets you control various properties of the fixed-function rasterizer: which face gets culled, how that face is determined, how polygons are filled, and whether depth clipping and scissor testing are enabled. For this example, we&#39;ve chosen the regular default values for everything.</p>
 <pre><code class="lang-C#">pipelineDescription.PrimitiveTopology = PrimitiveTopology.TriangleStrip;
 </code></pre><p>We are rendering our quad as a triangle strip. If we wanted to use a different topology, we would need to modify our index data. Index data of <code>{ 0, 1, 2, 0, 2, 3 }</code> would work for a triangle list.</p>
-<pre><code class="lang-C#">pipelineDescription.ResourceLayouts = Array.Empty&lt;ResourceLayout&gt;();
+<pre><code class="lang-C#">pipelineDescription.ResourceLayouts = System.Array.Empty&lt;ResourceLayout&gt;();
 </code></pre><p>Our shaders do not read from any resources, so we use an empty array here.</p>
 <pre><code class="lang-C#">pipelineDescription.ShaderSet = new ShaderSetDescription(
     vertexLayouts: new VertexLayoutDescription[] { vertexLayout },
@@ -193,7 +192,7 @@ pipelineDescription.BlendState = BlendStateDescription.SingleOverrideBlend;
 <pre><code class="lang-C#">pipelineDescription.Outputs = _graphicsDevice.SwapchainFramebuffer.OutputDescription;
 </code></pre><p>Every <code>Pipeline</code> in Veldrid needs to know how many outputs it has, and what the format of each is. Since we are going to be rendering directly to the application&#39;s swapchain, we will use the swapchain&#39;s <a class="xref" href="../../api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_OutputDescription">OutputDescription</a>.</p>
 <p>Finally, we can create the Pipeline.</p>
-<pre><code class="lang-C#">_pipeline = factory.CreatePipeline(ref pipelineDescription);
+<pre><code class="lang-C#">_pipeline = factory.CreateGraphicsPipeline(ref pipelineDescription);
 </code></pre><p>We have successfully created all of the device resources that we need. In the next section, we will draw our quad, and then do some cleanup.</p>
 <p><a class="xref" href="getting-started-part3.html">Next: Part 3</a></p>
 </article>

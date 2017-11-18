@@ -89,15 +89,15 @@ _commandList.SetFullViewports();
 _commandList.ClearDepthTarget(1);
 </code></pre><p>Now that we have done that, we need to bind the resources that we created in the last section, and issue a draw call.</p>
 <pre><code class="lang-C#">_commandList.SetVertexBuffer(0, _vertexBuffer);
-_commandList.SetIndexBuffer(_indexBuffer);
+_commandList.SetIndexBuffer(_indexBuffer, IndexFormat.UInt16);
 _commandList.SetPipeline(_pipeline);
-_commandList.Draw(
+_commandList.DrawIndexed(
     indexCount: 4,
     instanceCount: 1,
     indexStart: 0,
     vertexOffset: 0,
     instanceStart: 0);
-</code></pre><p>The VertexBuffer is bound to slot 0. In our case, we only have one slot, but it is possible for multiple slots and multiple VertexBuffers to be used. We issue a Draw command with four indices, one instance, and no offsets.</p>
+</code></pre><p>The vertex Buffer is bound to slot 0. In our case, we only have one slot, but it is possible for multiple slots and multiple vertex Buffers to be used. When we bind our index Buffer, we need to communicate the format of data inside of it. Ours contains 16-bit unsigned integers (<a class="xref" href="../../api/Veldrid.IndexFormat.html">IndexFormat.UInt16</a>) We issue a DrawIndexed command with four indices, one instance, and no offsets.</p>
 <p>We are almost ready to see our colored quad. All that remains is to execute our commands, and swap the buffers of the main swapchain.</p>
 <pre><code class="lang-C#">_commandList.End();
 _graphicsDevice.ExecuteCommands(_commandList);

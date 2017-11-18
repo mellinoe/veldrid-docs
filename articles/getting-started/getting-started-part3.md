@@ -46,9 +46,9 @@ Now that we have done that, we need to bind the resources that we created in the
 
 ```C#
 _commandList.SetVertexBuffer(0, _vertexBuffer);
-_commandList.SetIndexBuffer(_indexBuffer);
+_commandList.SetIndexBuffer(_indexBuffer, IndexFormat.UInt16);
 _commandList.SetPipeline(_pipeline);
-_commandList.Draw(
+_commandList.DrawIndexed(
     indexCount: 4,
     instanceCount: 1,
     indexStart: 0,
@@ -56,7 +56,7 @@ _commandList.Draw(
     instanceStart: 0);
 ```
 
-The VertexBuffer is bound to slot 0. In our case, we only have one slot, but it is possible for multiple slots and multiple VertexBuffers to be used. We issue a Draw command with four indices, one instance, and no offsets.
+The vertex Buffer is bound to slot 0. In our case, we only have one slot, but it is possible for multiple slots and multiple vertex Buffers to be used. When we bind our index Buffer, we need to communicate the format of data inside of it. Ours contains 16-bit unsigned integers ([IndexFormat.UInt16](xref:Veldrid.IndexFormat)) We issue a DrawIndexed command with four indices, one instance, and no offsets.
 
 We are almost ready to see our colored quad. All that remains is to execute our commands, and swap the buffers of the main swapchain.
 

@@ -343,6 +343,18 @@ references:
   commentId: T:Veldrid.Buffer
   fullName: Veldrid.Buffer
   nameWithType: Buffer
+- uid: Veldrid.Buffer.Dispose
+  name: Dispose()
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_Dispose
+  commentId: M:Veldrid.Buffer.Dispose
+  fullName: Veldrid.Buffer.Dispose()
+  nameWithType: Buffer.Dispose()
+- uid: Veldrid.Buffer.Dispose*
+  name: Dispose
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_Dispose_
+  commentId: Overload:Veldrid.Buffer.Dispose
+  fullName: Veldrid.Buffer.Dispose
+  nameWithType: Buffer.Dispose
 - uid: Veldrid.Buffer.SizeInBytes
   name: SizeInBytes
   href: api/Veldrid.Buffer.html#Veldrid_Buffer_SizeInBytes
@@ -355,24 +367,42 @@ references:
   commentId: Overload:Veldrid.Buffer.SizeInBytes
   fullName: Veldrid.Buffer.SizeInBytes
   nameWithType: Buffer.SizeInBytes
+- uid: Veldrid.Buffer.Usage
+  name: Usage
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_Usage
+  commentId: P:Veldrid.Buffer.Usage
+  fullName: Veldrid.Buffer.Usage
+  nameWithType: Buffer.Usage
+- uid: Veldrid.Buffer.Usage*
+  name: Usage
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_Usage_
+  commentId: Overload:Veldrid.Buffer.Usage
+  fullName: Veldrid.Buffer.Usage
+  nameWithType: Buffer.Usage
 - uid: Veldrid.BufferDescription
   name: BufferDescription
   href: api/Veldrid.BufferDescription.html
   commentId: T:Veldrid.BufferDescription
   fullName: Veldrid.BufferDescription
   nameWithType: BufferDescription
-- uid: Veldrid.BufferDescription.#ctor(System.UInt64)
-  name: BufferDescription(UInt64)
-  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_System_UInt64_
-  commentId: M:Veldrid.BufferDescription.#ctor(System.UInt64)
-  fullName: Veldrid.BufferDescription.BufferDescription(System.UInt64)
-  nameWithType: BufferDescription.BufferDescription(UInt64)
-- uid: Veldrid.BufferDescription.#ctor(System.UInt64,System.Boolean)
-  name: BufferDescription(UInt64, Boolean)
-  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_System_UInt64_System_Boolean_
-  commentId: M:Veldrid.BufferDescription.#ctor(System.UInt64,System.Boolean)
-  fullName: Veldrid.BufferDescription.BufferDescription(System.UInt64, System.Boolean)
-  nameWithType: BufferDescription.BufferDescription(UInt64, Boolean)
+- uid: Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage)
+  name: BufferDescription(UInt64, BufferUsage)
+  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_System_UInt64_Veldrid_BufferUsage_
+  commentId: M:Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage)
+  fullName: Veldrid.BufferDescription.BufferDescription(System.UInt64, Veldrid.BufferUsage)
+  nameWithType: BufferDescription.BufferDescription(UInt64, BufferUsage)
+- uid: Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage,System.Boolean)
+  name: BufferDescription(UInt64, BufferUsage, Boolean)
+  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_System_UInt64_Veldrid_BufferUsage_System_Boolean_
+  commentId: M:Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage,System.Boolean)
+  fullName: Veldrid.BufferDescription.BufferDescription(System.UInt64, Veldrid.BufferUsage, System.Boolean)
+  nameWithType: BufferDescription.BufferDescription(UInt64, BufferUsage, Boolean)
+- uid: Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage,System.Boolean,System.UInt32)
+  name: BufferDescription(UInt64, BufferUsage, Boolean, UInt32)
+  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_System_UInt64_Veldrid_BufferUsage_System_Boolean_System_UInt32_
+  commentId: M:Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage,System.Boolean,System.UInt32)
+  fullName: Veldrid.BufferDescription.BufferDescription(System.UInt64, Veldrid.BufferUsage, System.Boolean, System.UInt32)
+  nameWithType: BufferDescription.BufferDescription(UInt64, BufferUsage, Boolean, UInt32)
 - uid: Veldrid.BufferDescription.#ctor*
   name: BufferDescription
   href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_
@@ -415,6 +445,54 @@ references:
   commentId: F:Veldrid.BufferDescription.SizeInBytes
   fullName: Veldrid.BufferDescription.SizeInBytes
   nameWithType: BufferDescription.SizeInBytes
+- uid: Veldrid.BufferDescription.StructureByteStride
+  name: StructureByteStride
+  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription_StructureByteStride
+  commentId: F:Veldrid.BufferDescription.StructureByteStride
+  fullName: Veldrid.BufferDescription.StructureByteStride
+  nameWithType: BufferDescription.StructureByteStride
+- uid: Veldrid.BufferDescription.Usage
+  name: Usage
+  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription_Usage
+  commentId: F:Veldrid.BufferDescription.Usage
+  fullName: Veldrid.BufferDescription.Usage
+  nameWithType: BufferDescription.Usage
+- uid: Veldrid.BufferUsage
+  name: BufferUsage
+  href: api/Veldrid.BufferUsage.html
+  commentId: T:Veldrid.BufferUsage
+  fullName: Veldrid.BufferUsage
+  nameWithType: BufferUsage
+- uid: Veldrid.BufferUsage.IndexBuffer
+  name: IndexBuffer
+  href: api/Veldrid.BufferUsage.html#Veldrid_BufferUsage_IndexBuffer
+  commentId: F:Veldrid.BufferUsage.IndexBuffer
+  fullName: Veldrid.BufferUsage.IndexBuffer
+  nameWithType: BufferUsage.IndexBuffer
+- uid: Veldrid.BufferUsage.StructuredBufferReadOnly
+  name: StructuredBufferReadOnly
+  href: api/Veldrid.BufferUsage.html#Veldrid_BufferUsage_StructuredBufferReadOnly
+  commentId: F:Veldrid.BufferUsage.StructuredBufferReadOnly
+  fullName: Veldrid.BufferUsage.StructuredBufferReadOnly
+  nameWithType: BufferUsage.StructuredBufferReadOnly
+- uid: Veldrid.BufferUsage.StructuredBufferReadWrite
+  name: StructuredBufferReadWrite
+  href: api/Veldrid.BufferUsage.html#Veldrid_BufferUsage_StructuredBufferReadWrite
+  commentId: F:Veldrid.BufferUsage.StructuredBufferReadWrite
+  fullName: Veldrid.BufferUsage.StructuredBufferReadWrite
+  nameWithType: BufferUsage.StructuredBufferReadWrite
+- uid: Veldrid.BufferUsage.UniformBuffer
+  name: UniformBuffer
+  href: api/Veldrid.BufferUsage.html#Veldrid_BufferUsage_UniformBuffer
+  commentId: F:Veldrid.BufferUsage.UniformBuffer
+  fullName: Veldrid.BufferUsage.UniformBuffer
+  nameWithType: BufferUsage.UniformBuffer
+- uid: Veldrid.BufferUsage.VertexBuffer
+  name: VertexBuffer
+  href: api/Veldrid.BufferUsage.html#Veldrid_BufferUsage_VertexBuffer
+  commentId: F:Veldrid.BufferUsage.VertexBuffer
+  fullName: Veldrid.BufferUsage.VertexBuffer
+  nameWithType: BufferUsage.VertexBuffer
 - uid: Veldrid.CommandList
   name: CommandList
   href: api/Veldrid.CommandList.html
@@ -463,6 +541,18 @@ references:
   commentId: Overload:Veldrid.CommandList.ClearDepthTarget
   fullName: Veldrid.CommandList.ClearDepthTarget
   nameWithType: CommandList.ClearDepthTarget
+- uid: Veldrid.CommandList.Dispatch(System.UInt32,System.UInt32,System.UInt32)
+  name: Dispatch(UInt32, UInt32, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_Dispatch_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.CommandList.Dispatch(System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.CommandList.Dispatch(System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: CommandList.Dispatch(UInt32, UInt32, UInt32)
+- uid: Veldrid.CommandList.Dispatch*
+  name: Dispatch
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_Dispatch_
+  commentId: Overload:Veldrid.CommandList.Dispatch
+  fullName: Veldrid.CommandList.Dispatch
+  nameWithType: CommandList.Dispatch
 - uid: Veldrid.CommandList.Dispose
   name: Dispose()
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_Dispose
@@ -475,18 +565,30 @@ references:
   commentId: Overload:Veldrid.CommandList.Dispose
   fullName: Veldrid.CommandList.Dispose
   nameWithType: CommandList.Dispose
-- uid: Veldrid.CommandList.Draw(System.UInt32,System.UInt32,System.UInt32,System.Int32,System.UInt32)
-  name: Draw(UInt32, UInt32, UInt32, Int32, UInt32)
-  href: api/Veldrid.CommandList.html#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_
-  commentId: M:Veldrid.CommandList.Draw(System.UInt32,System.UInt32,System.UInt32,System.Int32,System.UInt32)
-  fullName: Veldrid.CommandList.Draw(System.UInt32, System.UInt32, System.UInt32, System.Int32, System.UInt32)
-  nameWithType: CommandList.Draw(UInt32, UInt32, UInt32, Int32, UInt32)
+- uid: Veldrid.CommandList.Draw(System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  name: Draw(UInt32, UInt32, UInt32, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.CommandList.Draw(System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.CommandList.Draw(System.UInt32, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: CommandList.Draw(UInt32, UInt32, UInt32, UInt32)
 - uid: Veldrid.CommandList.Draw*
   name: Draw
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_Draw_
   commentId: Overload:Veldrid.CommandList.Draw
   fullName: Veldrid.CommandList.Draw
   nameWithType: CommandList.Draw
+- uid: Veldrid.CommandList.DrawIndexed(System.UInt32,System.UInt32,System.UInt32,System.Int32,System.UInt32)
+  name: DrawIndexed(UInt32, UInt32, UInt32, Int32, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_
+  commentId: M:Veldrid.CommandList.DrawIndexed(System.UInt32,System.UInt32,System.UInt32,System.Int32,System.UInt32)
+  fullName: Veldrid.CommandList.DrawIndexed(System.UInt32, System.UInt32, System.UInt32, System.Int32, System.UInt32)
+  nameWithType: CommandList.DrawIndexed(UInt32, UInt32, UInt32, Int32, UInt32)
+- uid: Veldrid.CommandList.DrawIndexed*
+  name: DrawIndexed
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_
+  commentId: Overload:Veldrid.CommandList.DrawIndexed
+  fullName: Veldrid.CommandList.DrawIndexed
+  nameWithType: CommandList.DrawIndexed
 - uid: Veldrid.CommandList.End
   name: End()
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_End
@@ -523,6 +625,30 @@ references:
   commentId: Overload:Veldrid.CommandList.ResolveTextureCore
   fullName: Veldrid.CommandList.ResolveTextureCore
   nameWithType: CommandList.ResolveTextureCore
+- uid: Veldrid.CommandList.SetComputeResourceSet(System.UInt32,Veldrid.ResourceSet)
+  name: SetComputeResourceSet(UInt32, ResourceSet)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetComputeResourceSet_System_UInt32_Veldrid_ResourceSet_
+  commentId: M:Veldrid.CommandList.SetComputeResourceSet(System.UInt32,Veldrid.ResourceSet)
+  fullName: Veldrid.CommandList.SetComputeResourceSet(System.UInt32, Veldrid.ResourceSet)
+  nameWithType: CommandList.SetComputeResourceSet(UInt32, ResourceSet)
+- uid: Veldrid.CommandList.SetComputeResourceSet*
+  name: SetComputeResourceSet
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetComputeResourceSet_
+  commentId: Overload:Veldrid.CommandList.SetComputeResourceSet
+  fullName: Veldrid.CommandList.SetComputeResourceSet
+  nameWithType: CommandList.SetComputeResourceSet
+- uid: Veldrid.CommandList.SetComputeResourceSetCore(System.UInt32,Veldrid.ResourceSet)
+  name: SetComputeResourceSetCore(UInt32, ResourceSet)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetComputeResourceSetCore_System_UInt32_Veldrid_ResourceSet_
+  commentId: M:Veldrid.CommandList.SetComputeResourceSetCore(System.UInt32,Veldrid.ResourceSet)
+  fullName: Veldrid.CommandList.SetComputeResourceSetCore(System.UInt32, Veldrid.ResourceSet)
+  nameWithType: CommandList.SetComputeResourceSetCore(UInt32, ResourceSet)
+- uid: Veldrid.CommandList.SetComputeResourceSetCore*
+  name: SetComputeResourceSetCore
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetComputeResourceSetCore_
+  commentId: Overload:Veldrid.CommandList.SetComputeResourceSetCore
+  fullName: Veldrid.CommandList.SetComputeResourceSetCore
+  nameWithType: CommandList.SetComputeResourceSetCore
 - uid: Veldrid.CommandList.SetFramebuffer(Veldrid.Framebuffer)
   name: SetFramebuffer(Framebuffer)
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetFramebuffer_Veldrid_Framebuffer_
@@ -595,18 +721,54 @@ references:
   commentId: Overload:Veldrid.CommandList.SetFullViewports
   fullName: Veldrid.CommandList.SetFullViewports
   nameWithType: CommandList.SetFullViewports
-- uid: Veldrid.CommandList.SetIndexBuffer(Veldrid.IndexBuffer)
-  name: SetIndexBuffer(IndexBuffer)
-  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBuffer_Veldrid_IndexBuffer_
-  commentId: M:Veldrid.CommandList.SetIndexBuffer(Veldrid.IndexBuffer)
-  fullName: Veldrid.CommandList.SetIndexBuffer(Veldrid.IndexBuffer)
-  nameWithType: CommandList.SetIndexBuffer(IndexBuffer)
+- uid: Veldrid.CommandList.SetGraphicsResourceSet(System.UInt32,Veldrid.ResourceSet)
+  name: SetGraphicsResourceSet(UInt32, ResourceSet)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetGraphicsResourceSet_System_UInt32_Veldrid_ResourceSet_
+  commentId: M:Veldrid.CommandList.SetGraphicsResourceSet(System.UInt32,Veldrid.ResourceSet)
+  fullName: Veldrid.CommandList.SetGraphicsResourceSet(System.UInt32, Veldrid.ResourceSet)
+  nameWithType: CommandList.SetGraphicsResourceSet(UInt32, ResourceSet)
+- uid: Veldrid.CommandList.SetGraphicsResourceSet*
+  name: SetGraphicsResourceSet
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetGraphicsResourceSet_
+  commentId: Overload:Veldrid.CommandList.SetGraphicsResourceSet
+  fullName: Veldrid.CommandList.SetGraphicsResourceSet
+  nameWithType: CommandList.SetGraphicsResourceSet
+- uid: Veldrid.CommandList.SetGraphicsResourceSetCore(System.UInt32,Veldrid.ResourceSet)
+  name: SetGraphicsResourceSetCore(UInt32, ResourceSet)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetGraphicsResourceSetCore_System_UInt32_Veldrid_ResourceSet_
+  commentId: M:Veldrid.CommandList.SetGraphicsResourceSetCore(System.UInt32,Veldrid.ResourceSet)
+  fullName: Veldrid.CommandList.SetGraphicsResourceSetCore(System.UInt32, Veldrid.ResourceSet)
+  nameWithType: CommandList.SetGraphicsResourceSetCore(UInt32, ResourceSet)
+- uid: Veldrid.CommandList.SetGraphicsResourceSetCore*
+  name: SetGraphicsResourceSetCore
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetGraphicsResourceSetCore_
+  commentId: Overload:Veldrid.CommandList.SetGraphicsResourceSetCore
+  fullName: Veldrid.CommandList.SetGraphicsResourceSetCore
+  nameWithType: CommandList.SetGraphicsResourceSetCore
+- uid: Veldrid.CommandList.SetIndexBuffer(Veldrid.Buffer,Veldrid.IndexFormat)
+  name: SetIndexBuffer(Buffer, IndexFormat)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBuffer_Veldrid_Buffer_Veldrid_IndexFormat_
+  commentId: M:Veldrid.CommandList.SetIndexBuffer(Veldrid.Buffer,Veldrid.IndexFormat)
+  fullName: Veldrid.CommandList.SetIndexBuffer(Veldrid.Buffer, Veldrid.IndexFormat)
+  nameWithType: CommandList.SetIndexBuffer(Buffer, IndexFormat)
 - uid: Veldrid.CommandList.SetIndexBuffer*
   name: SetIndexBuffer
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBuffer_
   commentId: Overload:Veldrid.CommandList.SetIndexBuffer
   fullName: Veldrid.CommandList.SetIndexBuffer
   nameWithType: CommandList.SetIndexBuffer
+- uid: Veldrid.CommandList.SetIndexBufferCore(Veldrid.Buffer,Veldrid.IndexFormat)
+  name: SetIndexBufferCore(Buffer, IndexFormat)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBufferCore_Veldrid_Buffer_Veldrid_IndexFormat_
+  commentId: M:Veldrid.CommandList.SetIndexBufferCore(Veldrid.Buffer,Veldrid.IndexFormat)
+  fullName: Veldrid.CommandList.SetIndexBufferCore(Veldrid.Buffer, Veldrid.IndexFormat)
+  nameWithType: CommandList.SetIndexBufferCore(Buffer, IndexFormat)
+- uid: Veldrid.CommandList.SetIndexBufferCore*
+  name: SetIndexBufferCore
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBufferCore_
+  commentId: Overload:Veldrid.CommandList.SetIndexBufferCore
+  fullName: Veldrid.CommandList.SetIndexBufferCore
+  nameWithType: CommandList.SetIndexBufferCore
 - uid: Veldrid.CommandList.SetPipeline(Veldrid.Pipeline)
   name: SetPipeline(Pipeline)
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetPipeline_Veldrid_Pipeline_
@@ -619,18 +781,6 @@ references:
   commentId: Overload:Veldrid.CommandList.SetPipeline
   fullName: Veldrid.CommandList.SetPipeline
   nameWithType: CommandList.SetPipeline
-- uid: Veldrid.CommandList.SetResourceSet(System.UInt32,Veldrid.ResourceSet)
-  name: SetResourceSet(UInt32, ResourceSet)
-  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetResourceSet_System_UInt32_Veldrid_ResourceSet_
-  commentId: M:Veldrid.CommandList.SetResourceSet(System.UInt32,Veldrid.ResourceSet)
-  fullName: Veldrid.CommandList.SetResourceSet(System.UInt32, Veldrid.ResourceSet)
-  nameWithType: CommandList.SetResourceSet(UInt32, ResourceSet)
-- uid: Veldrid.CommandList.SetResourceSet*
-  name: SetResourceSet
-  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetResourceSet_
-  commentId: Overload:Veldrid.CommandList.SetResourceSet
-  fullName: Veldrid.CommandList.SetResourceSet
-  nameWithType: CommandList.SetResourceSet
 - uid: Veldrid.CommandList.SetScissorRect(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
   name: SetScissorRect(UInt32, UInt32, UInt32, UInt32, UInt32)
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetScissorRect_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
@@ -643,18 +793,30 @@ references:
   commentId: Overload:Veldrid.CommandList.SetScissorRect
   fullName: Veldrid.CommandList.SetScissorRect
   nameWithType: CommandList.SetScissorRect
-- uid: Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.VertexBuffer)
-  name: SetVertexBuffer(UInt32, VertexBuffer)
-  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBuffer_System_UInt32_Veldrid_VertexBuffer_
-  commentId: M:Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.VertexBuffer)
-  fullName: Veldrid.CommandList.SetVertexBuffer(System.UInt32, Veldrid.VertexBuffer)
-  nameWithType: CommandList.SetVertexBuffer(UInt32, VertexBuffer)
+- uid: Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.Buffer)
+  name: SetVertexBuffer(UInt32, Buffer)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBuffer_System_UInt32_Veldrid_Buffer_
+  commentId: M:Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.Buffer)
+  fullName: Veldrid.CommandList.SetVertexBuffer(System.UInt32, Veldrid.Buffer)
+  nameWithType: CommandList.SetVertexBuffer(UInt32, Buffer)
 - uid: Veldrid.CommandList.SetVertexBuffer*
   name: SetVertexBuffer
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBuffer_
   commentId: Overload:Veldrid.CommandList.SetVertexBuffer
   fullName: Veldrid.CommandList.SetVertexBuffer
   nameWithType: CommandList.SetVertexBuffer
+- uid: Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.Buffer)
+  name: SetVertexBufferCore(UInt32, Buffer)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBufferCore_System_UInt32_Veldrid_Buffer_
+  commentId: M:Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.Buffer)
+  fullName: Veldrid.CommandList.SetVertexBufferCore(System.UInt32, Veldrid.Buffer)
+  nameWithType: CommandList.SetVertexBufferCore(UInt32, Buffer)
+- uid: Veldrid.CommandList.SetVertexBufferCore*
+  name: SetVertexBufferCore
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBufferCore_
+  commentId: Overload:Veldrid.CommandList.SetVertexBufferCore
+  fullName: Veldrid.CommandList.SetVertexBufferCore
+  nameWithType: CommandList.SetVertexBufferCore
 - uid: Veldrid.CommandList.SetViewport(System.UInt32,Veldrid.Viewport)
   name: SetViewport(UInt32, Viewport)
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetViewport_System_UInt32_Veldrid_Viewport_
@@ -778,6 +940,63 @@ references:
   commentId: Overload:Veldrid.CommandListDescription.GetHashCode
   fullName: Veldrid.CommandListDescription.GetHashCode
   nameWithType: CommandListDescription.GetHashCode
+- uid: Veldrid.ComputePipelineDescription
+  name: ComputePipelineDescription
+  href: api/Veldrid.ComputePipelineDescription.html
+  commentId: T:Veldrid.ComputePipelineDescription
+  fullName: Veldrid.ComputePipelineDescription
+  nameWithType: ComputePipelineDescription
+- uid: Veldrid.ComputePipelineDescription.#ctor(Veldrid.ShaderStageDescription,Veldrid.ResourceLayout[])
+  name: ComputePipelineDescription(ShaderStageDescription, ResourceLayout[])
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription__ctor_Veldrid_ShaderStageDescription_Veldrid_ResourceLayout___
+  commentId: M:Veldrid.ComputePipelineDescription.#ctor(Veldrid.ShaderStageDescription,Veldrid.ResourceLayout[])
+  name.vb: ComputePipelineDescription(ShaderStageDescription, ResourceLayout())
+  fullName: Veldrid.ComputePipelineDescription.ComputePipelineDescription(Veldrid.ShaderStageDescription, Veldrid.ResourceLayout[])
+  fullName.vb: Veldrid.ComputePipelineDescription.ComputePipelineDescription(Veldrid.ShaderStageDescription, Veldrid.ResourceLayout())
+  nameWithType: ComputePipelineDescription.ComputePipelineDescription(ShaderStageDescription, ResourceLayout[])
+  nameWithType.vb: ComputePipelineDescription.ComputePipelineDescription(ShaderStageDescription, ResourceLayout())
+- uid: Veldrid.ComputePipelineDescription.#ctor*
+  name: ComputePipelineDescription
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription__ctor_
+  commentId: Overload:Veldrid.ComputePipelineDescription.#ctor
+  fullName: Veldrid.ComputePipelineDescription.ComputePipelineDescription
+  nameWithType: ComputePipelineDescription.ComputePipelineDescription
+- uid: Veldrid.ComputePipelineDescription.Equals(Veldrid.ComputePipelineDescription)
+  name: Equals(ComputePipelineDescription)
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_Equals_Veldrid_ComputePipelineDescription_
+  commentId: M:Veldrid.ComputePipelineDescription.Equals(Veldrid.ComputePipelineDescription)
+  fullName: Veldrid.ComputePipelineDescription.Equals(Veldrid.ComputePipelineDescription)
+  nameWithType: ComputePipelineDescription.Equals(ComputePipelineDescription)
+- uid: Veldrid.ComputePipelineDescription.Equals*
+  name: Equals
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_Equals_
+  commentId: Overload:Veldrid.ComputePipelineDescription.Equals
+  fullName: Veldrid.ComputePipelineDescription.Equals
+  nameWithType: ComputePipelineDescription.Equals
+- uid: Veldrid.ComputePipelineDescription.GetHashCode
+  name: GetHashCode()
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_GetHashCode
+  commentId: M:Veldrid.ComputePipelineDescription.GetHashCode
+  fullName: Veldrid.ComputePipelineDescription.GetHashCode()
+  nameWithType: ComputePipelineDescription.GetHashCode()
+- uid: Veldrid.ComputePipelineDescription.GetHashCode*
+  name: GetHashCode
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_GetHashCode_
+  commentId: Overload:Veldrid.ComputePipelineDescription.GetHashCode
+  fullName: Veldrid.ComputePipelineDescription.GetHashCode
+  nameWithType: ComputePipelineDescription.GetHashCode
+- uid: Veldrid.ComputePipelineDescription.ResourceLayouts
+  name: ResourceLayouts
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_ResourceLayouts
+  commentId: F:Veldrid.ComputePipelineDescription.ResourceLayouts
+  fullName: Veldrid.ComputePipelineDescription.ResourceLayouts
+  nameWithType: ComputePipelineDescription.ResourceLayouts
+- uid: Veldrid.ComputePipelineDescription.ShaderStage
+  name: ShaderStage
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_ShaderStage
+  commentId: F:Veldrid.ComputePipelineDescription.ShaderStage
+  fullName: Veldrid.ComputePipelineDescription.ShaderStage
+  nameWithType: ComputePipelineDescription.ShaderStage
 - uid: Veldrid.CubeFace
   name: CubeFace
   href: api/Veldrid.CubeFace.html
@@ -1486,90 +1705,93 @@ references:
   commentId: Overload:Veldrid.GraphicsDevice.WaitForIdle
   fullName: Veldrid.GraphicsDevice.WaitForIdle
   nameWithType: GraphicsDevice.WaitForIdle
-- uid: Veldrid.IndexBuffer
-  name: IndexBuffer
-  href: api/Veldrid.IndexBuffer.html
-  commentId: T:Veldrid.IndexBuffer
-  fullName: Veldrid.IndexBuffer
-  nameWithType: IndexBuffer
-- uid: Veldrid.IndexBuffer.Format
-  name: Format
-  href: api/Veldrid.IndexBuffer.html#Veldrid_IndexBuffer_Format
-  commentId: P:Veldrid.IndexBuffer.Format
-  fullName: Veldrid.IndexBuffer.Format
-  nameWithType: IndexBuffer.Format
-- uid: Veldrid.IndexBuffer.Format*
-  name: Format
-  href: api/Veldrid.IndexBuffer.html#Veldrid_IndexBuffer_Format_
-  commentId: Overload:Veldrid.IndexBuffer.Format
-  fullName: Veldrid.IndexBuffer.Format
-  nameWithType: IndexBuffer.Format
-- uid: Veldrid.IndexBufferDescription
-  name: IndexBufferDescription
-  href: api/Veldrid.IndexBufferDescription.html
-  commentId: T:Veldrid.IndexBufferDescription
-  fullName: Veldrid.IndexBufferDescription
-  nameWithType: IndexBufferDescription
-- uid: Veldrid.IndexBufferDescription.#ctor(System.UInt64,Veldrid.IndexFormat)
-  name: IndexBufferDescription(UInt64, IndexFormat)
-  href: api/Veldrid.IndexBufferDescription.html#Veldrid_IndexBufferDescription__ctor_System_UInt64_Veldrid_IndexFormat_
-  commentId: M:Veldrid.IndexBufferDescription.#ctor(System.UInt64,Veldrid.IndexFormat)
-  fullName: Veldrid.IndexBufferDescription.IndexBufferDescription(System.UInt64, Veldrid.IndexFormat)
-  nameWithType: IndexBufferDescription.IndexBufferDescription(UInt64, IndexFormat)
-- uid: Veldrid.IndexBufferDescription.#ctor(System.UInt64,Veldrid.IndexFormat,System.Boolean)
-  name: IndexBufferDescription(UInt64, IndexFormat, Boolean)
-  href: api/Veldrid.IndexBufferDescription.html#Veldrid_IndexBufferDescription__ctor_System_UInt64_Veldrid_IndexFormat_System_Boolean_
-  commentId: M:Veldrid.IndexBufferDescription.#ctor(System.UInt64,Veldrid.IndexFormat,System.Boolean)
-  fullName: Veldrid.IndexBufferDescription.IndexBufferDescription(System.UInt64, Veldrid.IndexFormat, System.Boolean)
-  nameWithType: IndexBufferDescription.IndexBufferDescription(UInt64, IndexFormat, Boolean)
-- uid: Veldrid.IndexBufferDescription.#ctor*
-  name: IndexBufferDescription
-  href: api/Veldrid.IndexBufferDescription.html#Veldrid_IndexBufferDescription__ctor_
-  commentId: Overload:Veldrid.IndexBufferDescription.#ctor
-  fullName: Veldrid.IndexBufferDescription.IndexBufferDescription
-  nameWithType: IndexBufferDescription.IndexBufferDescription
-- uid: Veldrid.IndexBufferDescription.Dynamic
-  name: Dynamic
-  href: api/Veldrid.IndexBufferDescription.html#Veldrid_IndexBufferDescription_Dynamic
-  commentId: F:Veldrid.IndexBufferDescription.Dynamic
-  fullName: Veldrid.IndexBufferDescription.Dynamic
-  nameWithType: IndexBufferDescription.Dynamic
-- uid: Veldrid.IndexBufferDescription.Equals(Veldrid.IndexBufferDescription)
-  name: Equals(IndexBufferDescription)
-  href: api/Veldrid.IndexBufferDescription.html#Veldrid_IndexBufferDescription_Equals_Veldrid_IndexBufferDescription_
-  commentId: M:Veldrid.IndexBufferDescription.Equals(Veldrid.IndexBufferDescription)
-  fullName: Veldrid.IndexBufferDescription.Equals(Veldrid.IndexBufferDescription)
-  nameWithType: IndexBufferDescription.Equals(IndexBufferDescription)
-- uid: Veldrid.IndexBufferDescription.Equals*
+- uid: Veldrid.GraphicsPipelineDescription
+  name: GraphicsPipelineDescription
+  href: api/Veldrid.GraphicsPipelineDescription.html
+  commentId: T:Veldrid.GraphicsPipelineDescription
+  fullName: Veldrid.GraphicsPipelineDescription
+  nameWithType: GraphicsPipelineDescription
+- uid: Veldrid.GraphicsPipelineDescription.#ctor(Veldrid.BlendStateDescription,Veldrid.DepthStencilStateDescription,Veldrid.RasterizerStateDescription,Veldrid.PrimitiveTopology,Veldrid.ShaderSetDescription,Veldrid.ResourceLayout[],Veldrid.OutputDescription)
+  name: GraphicsPipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout[], OutputDescription)
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription__ctor_Veldrid_BlendStateDescription_Veldrid_DepthStencilStateDescription_Veldrid_RasterizerStateDescription_Veldrid_PrimitiveTopology_Veldrid_ShaderSetDescription_Veldrid_ResourceLayout___Veldrid_OutputDescription_
+  commentId: M:Veldrid.GraphicsPipelineDescription.#ctor(Veldrid.BlendStateDescription,Veldrid.DepthStencilStateDescription,Veldrid.RasterizerStateDescription,Veldrid.PrimitiveTopology,Veldrid.ShaderSetDescription,Veldrid.ResourceLayout[],Veldrid.OutputDescription)
+  name.vb: GraphicsPipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout(), OutputDescription)
+  fullName: Veldrid.GraphicsPipelineDescription.GraphicsPipelineDescription(Veldrid.BlendStateDescription, Veldrid.DepthStencilStateDescription, Veldrid.RasterizerStateDescription, Veldrid.PrimitiveTopology, Veldrid.ShaderSetDescription, Veldrid.ResourceLayout[], Veldrid.OutputDescription)
+  fullName.vb: Veldrid.GraphicsPipelineDescription.GraphicsPipelineDescription(Veldrid.BlendStateDescription, Veldrid.DepthStencilStateDescription, Veldrid.RasterizerStateDescription, Veldrid.PrimitiveTopology, Veldrid.ShaderSetDescription, Veldrid.ResourceLayout(), Veldrid.OutputDescription)
+  nameWithType: GraphicsPipelineDescription.GraphicsPipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout[], OutputDescription)
+  nameWithType.vb: GraphicsPipelineDescription.GraphicsPipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout(), OutputDescription)
+- uid: Veldrid.GraphicsPipelineDescription.#ctor*
+  name: GraphicsPipelineDescription
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription__ctor_
+  commentId: Overload:Veldrid.GraphicsPipelineDescription.#ctor
+  fullName: Veldrid.GraphicsPipelineDescription.GraphicsPipelineDescription
+  nameWithType: GraphicsPipelineDescription.GraphicsPipelineDescription
+- uid: Veldrid.GraphicsPipelineDescription.BlendState
+  name: BlendState
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_BlendState
+  commentId: F:Veldrid.GraphicsPipelineDescription.BlendState
+  fullName: Veldrid.GraphicsPipelineDescription.BlendState
+  nameWithType: GraphicsPipelineDescription.BlendState
+- uid: Veldrid.GraphicsPipelineDescription.DepthStencilState
+  name: DepthStencilState
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_DepthStencilState
+  commentId: F:Veldrid.GraphicsPipelineDescription.DepthStencilState
+  fullName: Veldrid.GraphicsPipelineDescription.DepthStencilState
+  nameWithType: GraphicsPipelineDescription.DepthStencilState
+- uid: Veldrid.GraphicsPipelineDescription.Equals(Veldrid.GraphicsPipelineDescription)
+  name: Equals(GraphicsPipelineDescription)
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_Equals_Veldrid_GraphicsPipelineDescription_
+  commentId: M:Veldrid.GraphicsPipelineDescription.Equals(Veldrid.GraphicsPipelineDescription)
+  fullName: Veldrid.GraphicsPipelineDescription.Equals(Veldrid.GraphicsPipelineDescription)
+  nameWithType: GraphicsPipelineDescription.Equals(GraphicsPipelineDescription)
+- uid: Veldrid.GraphicsPipelineDescription.Equals*
   name: Equals
-  href: api/Veldrid.IndexBufferDescription.html#Veldrid_IndexBufferDescription_Equals_
-  commentId: Overload:Veldrid.IndexBufferDescription.Equals
-  fullName: Veldrid.IndexBufferDescription.Equals
-  nameWithType: IndexBufferDescription.Equals
-- uid: Veldrid.IndexBufferDescription.Format
-  name: Format
-  href: api/Veldrid.IndexBufferDescription.html#Veldrid_IndexBufferDescription_Format
-  commentId: F:Veldrid.IndexBufferDescription.Format
-  fullName: Veldrid.IndexBufferDescription.Format
-  nameWithType: IndexBufferDescription.Format
-- uid: Veldrid.IndexBufferDescription.GetHashCode
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_Equals_
+  commentId: Overload:Veldrid.GraphicsPipelineDescription.Equals
+  fullName: Veldrid.GraphicsPipelineDescription.Equals
+  nameWithType: GraphicsPipelineDescription.Equals
+- uid: Veldrid.GraphicsPipelineDescription.GetHashCode
   name: GetHashCode()
-  href: api/Veldrid.IndexBufferDescription.html#Veldrid_IndexBufferDescription_GetHashCode
-  commentId: M:Veldrid.IndexBufferDescription.GetHashCode
-  fullName: Veldrid.IndexBufferDescription.GetHashCode()
-  nameWithType: IndexBufferDescription.GetHashCode()
-- uid: Veldrid.IndexBufferDescription.GetHashCode*
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_GetHashCode
+  commentId: M:Veldrid.GraphicsPipelineDescription.GetHashCode
+  fullName: Veldrid.GraphicsPipelineDescription.GetHashCode()
+  nameWithType: GraphicsPipelineDescription.GetHashCode()
+- uid: Veldrid.GraphicsPipelineDescription.GetHashCode*
   name: GetHashCode
-  href: api/Veldrid.IndexBufferDescription.html#Veldrid_IndexBufferDescription_GetHashCode_
-  commentId: Overload:Veldrid.IndexBufferDescription.GetHashCode
-  fullName: Veldrid.IndexBufferDescription.GetHashCode
-  nameWithType: IndexBufferDescription.GetHashCode
-- uid: Veldrid.IndexBufferDescription.SizeInBytes
-  name: SizeInBytes
-  href: api/Veldrid.IndexBufferDescription.html#Veldrid_IndexBufferDescription_SizeInBytes
-  commentId: F:Veldrid.IndexBufferDescription.SizeInBytes
-  fullName: Veldrid.IndexBufferDescription.SizeInBytes
-  nameWithType: IndexBufferDescription.SizeInBytes
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_GetHashCode_
+  commentId: Overload:Veldrid.GraphicsPipelineDescription.GetHashCode
+  fullName: Veldrid.GraphicsPipelineDescription.GetHashCode
+  nameWithType: GraphicsPipelineDescription.GetHashCode
+- uid: Veldrid.GraphicsPipelineDescription.Outputs
+  name: Outputs
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_Outputs
+  commentId: F:Veldrid.GraphicsPipelineDescription.Outputs
+  fullName: Veldrid.GraphicsPipelineDescription.Outputs
+  nameWithType: GraphicsPipelineDescription.Outputs
+- uid: Veldrid.GraphicsPipelineDescription.PrimitiveTopology
+  name: PrimitiveTopology
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_PrimitiveTopology
+  commentId: F:Veldrid.GraphicsPipelineDescription.PrimitiveTopology
+  fullName: Veldrid.GraphicsPipelineDescription.PrimitiveTopology
+  nameWithType: GraphicsPipelineDescription.PrimitiveTopology
+- uid: Veldrid.GraphicsPipelineDescription.RasterizerState
+  name: RasterizerState
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_RasterizerState
+  commentId: F:Veldrid.GraphicsPipelineDescription.RasterizerState
+  fullName: Veldrid.GraphicsPipelineDescription.RasterizerState
+  nameWithType: GraphicsPipelineDescription.RasterizerState
+- uid: Veldrid.GraphicsPipelineDescription.ResourceLayouts
+  name: ResourceLayouts
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts
+  commentId: F:Veldrid.GraphicsPipelineDescription.ResourceLayouts
+  fullName: Veldrid.GraphicsPipelineDescription.ResourceLayouts
+  nameWithType: GraphicsPipelineDescription.ResourceLayouts
+- uid: Veldrid.GraphicsPipelineDescription.ShaderSet
+  name: ShaderSet
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ShaderSet
+  commentId: F:Veldrid.GraphicsPipelineDescription.ShaderSet
+  fullName: Veldrid.GraphicsPipelineDescription.ShaderSet
+  nameWithType: GraphicsPipelineDescription.ShaderSet
 - uid: Veldrid.IndexFormat
   name: IndexFormat
   href: api/Veldrid.IndexFormat.html
@@ -1813,93 +2035,18 @@ references:
   commentId: Overload:Veldrid.Pipeline.Dispose
   fullName: Veldrid.Pipeline.Dispose
   nameWithType: Pipeline.Dispose
-- uid: Veldrid.PipelineDescription
-  name: PipelineDescription
-  href: api/Veldrid.PipelineDescription.html
-  commentId: T:Veldrid.PipelineDescription
-  fullName: Veldrid.PipelineDescription
-  nameWithType: PipelineDescription
-- uid: Veldrid.PipelineDescription.#ctor(Veldrid.BlendStateDescription,Veldrid.DepthStencilStateDescription,Veldrid.RasterizerStateDescription,Veldrid.PrimitiveTopology,Veldrid.ShaderSetDescription,Veldrid.ResourceLayout[],Veldrid.OutputDescription)
-  name: PipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout[], OutputDescription)
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription__ctor_Veldrid_BlendStateDescription_Veldrid_DepthStencilStateDescription_Veldrid_RasterizerStateDescription_Veldrid_PrimitiveTopology_Veldrid_ShaderSetDescription_Veldrid_ResourceLayout___Veldrid_OutputDescription_
-  commentId: M:Veldrid.PipelineDescription.#ctor(Veldrid.BlendStateDescription,Veldrid.DepthStencilStateDescription,Veldrid.RasterizerStateDescription,Veldrid.PrimitiveTopology,Veldrid.ShaderSetDescription,Veldrid.ResourceLayout[],Veldrid.OutputDescription)
-  name.vb: PipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout(), OutputDescription)
-  fullName: Veldrid.PipelineDescription.PipelineDescription(Veldrid.BlendStateDescription, Veldrid.DepthStencilStateDescription, Veldrid.RasterizerStateDescription, Veldrid.PrimitiveTopology, Veldrid.ShaderSetDescription, Veldrid.ResourceLayout[], Veldrid.OutputDescription)
-  fullName.vb: Veldrid.PipelineDescription.PipelineDescription(Veldrid.BlendStateDescription, Veldrid.DepthStencilStateDescription, Veldrid.RasterizerStateDescription, Veldrid.PrimitiveTopology, Veldrid.ShaderSetDescription, Veldrid.ResourceLayout(), Veldrid.OutputDescription)
-  nameWithType: PipelineDescription.PipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout[], OutputDescription)
-  nameWithType.vb: PipelineDescription.PipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout(), OutputDescription)
-- uid: Veldrid.PipelineDescription.#ctor*
-  name: PipelineDescription
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription__ctor_
-  commentId: Overload:Veldrid.PipelineDescription.#ctor
-  fullName: Veldrid.PipelineDescription.PipelineDescription
-  nameWithType: PipelineDescription.PipelineDescription
-- uid: Veldrid.PipelineDescription.BlendState
-  name: BlendState
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_BlendState
-  commentId: F:Veldrid.PipelineDescription.BlendState
-  fullName: Veldrid.PipelineDescription.BlendState
-  nameWithType: PipelineDescription.BlendState
-- uid: Veldrid.PipelineDescription.DepthStencilState
-  name: DepthStencilState
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_DepthStencilState
-  commentId: F:Veldrid.PipelineDescription.DepthStencilState
-  fullName: Veldrid.PipelineDescription.DepthStencilState
-  nameWithType: PipelineDescription.DepthStencilState
-- uid: Veldrid.PipelineDescription.Equals(Veldrid.PipelineDescription)
-  name: Equals(PipelineDescription)
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_Equals_Veldrid_PipelineDescription_
-  commentId: M:Veldrid.PipelineDescription.Equals(Veldrid.PipelineDescription)
-  fullName: Veldrid.PipelineDescription.Equals(Veldrid.PipelineDescription)
-  nameWithType: PipelineDescription.Equals(PipelineDescription)
-- uid: Veldrid.PipelineDescription.Equals*
-  name: Equals
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_Equals_
-  commentId: Overload:Veldrid.PipelineDescription.Equals
-  fullName: Veldrid.PipelineDescription.Equals
-  nameWithType: PipelineDescription.Equals
-- uid: Veldrid.PipelineDescription.GetHashCode
-  name: GetHashCode()
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_GetHashCode
-  commentId: M:Veldrid.PipelineDescription.GetHashCode
-  fullName: Veldrid.PipelineDescription.GetHashCode()
-  nameWithType: PipelineDescription.GetHashCode()
-- uid: Veldrid.PipelineDescription.GetHashCode*
-  name: GetHashCode
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_GetHashCode_
-  commentId: Overload:Veldrid.PipelineDescription.GetHashCode
-  fullName: Veldrid.PipelineDescription.GetHashCode
-  nameWithType: PipelineDescription.GetHashCode
-- uid: Veldrid.PipelineDescription.Outputs
-  name: Outputs
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_Outputs
-  commentId: F:Veldrid.PipelineDescription.Outputs
-  fullName: Veldrid.PipelineDescription.Outputs
-  nameWithType: PipelineDescription.Outputs
-- uid: Veldrid.PipelineDescription.PrimitiveTopology
-  name: PrimitiveTopology
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_PrimitiveTopology
-  commentId: F:Veldrid.PipelineDescription.PrimitiveTopology
-  fullName: Veldrid.PipelineDescription.PrimitiveTopology
-  nameWithType: PipelineDescription.PrimitiveTopology
-- uid: Veldrid.PipelineDescription.RasterizerState
-  name: RasterizerState
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_RasterizerState
-  commentId: F:Veldrid.PipelineDescription.RasterizerState
-  fullName: Veldrid.PipelineDescription.RasterizerState
-  nameWithType: PipelineDescription.RasterizerState
-- uid: Veldrid.PipelineDescription.ResourceLayouts
-  name: ResourceLayouts
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_ResourceLayouts
-  commentId: F:Veldrid.PipelineDescription.ResourceLayouts
-  fullName: Veldrid.PipelineDescription.ResourceLayouts
-  nameWithType: PipelineDescription.ResourceLayouts
-- uid: Veldrid.PipelineDescription.ShaderSet
-  name: ShaderSet
-  href: api/Veldrid.PipelineDescription.html#Veldrid_PipelineDescription_ShaderSet
-  commentId: F:Veldrid.PipelineDescription.ShaderSet
-  fullName: Veldrid.PipelineDescription.ShaderSet
-  nameWithType: PipelineDescription.ShaderSet
+- uid: Veldrid.Pipeline.IsComputePipeline
+  name: IsComputePipeline
+  href: api/Veldrid.Pipeline.html#Veldrid_Pipeline_IsComputePipeline
+  commentId: P:Veldrid.Pipeline.IsComputePipeline
+  fullName: Veldrid.Pipeline.IsComputePipeline
+  nameWithType: Pipeline.IsComputePipeline
+- uid: Veldrid.Pipeline.IsComputePipeline*
+  name: IsComputePipeline
+  href: api/Veldrid.Pipeline.html#Veldrid_Pipeline_IsComputePipeline_
+  commentId: Overload:Veldrid.Pipeline.IsComputePipeline
+  fullName: Veldrid.Pipeline.IsComputePipeline
+  nameWithType: Pipeline.IsComputePipeline
 - uid: Veldrid.PixelFormat
   name: PixelFormat
   href: api/Veldrid.PixelFormat.html
@@ -2092,6 +2239,42 @@ references:
   commentId: Overload:Veldrid.ResourceFactory.BackendType
   fullName: Veldrid.ResourceFactory.BackendType
   nameWithType: ResourceFactory.BackendType
+- uid: Veldrid.ResourceFactory.CreateBuffer(Veldrid.BufferDescription)
+  name: CreateBuffer(BufferDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateBuffer_Veldrid_BufferDescription_
+  commentId: M:Veldrid.ResourceFactory.CreateBuffer(Veldrid.BufferDescription)
+  fullName: Veldrid.ResourceFactory.CreateBuffer(Veldrid.BufferDescription)
+  nameWithType: ResourceFactory.CreateBuffer(BufferDescription)
+- uid: Veldrid.ResourceFactory.CreateBuffer(Veldrid.BufferDescription@)
+  name: CreateBuffer(ref BufferDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateBuffer_Veldrid_BufferDescription__
+  commentId: M:Veldrid.ResourceFactory.CreateBuffer(Veldrid.BufferDescription@)
+  name.vb: CreateBuffer(ByRef BufferDescription)
+  fullName: Veldrid.ResourceFactory.CreateBuffer(ref Veldrid.BufferDescription)
+  fullName.vb: Veldrid.ResourceFactory.CreateBuffer(ByRef Veldrid.BufferDescription)
+  nameWithType: ResourceFactory.CreateBuffer(ref BufferDescription)
+  nameWithType.vb: ResourceFactory.CreateBuffer(ByRef BufferDescription)
+- uid: Veldrid.ResourceFactory.CreateBuffer*
+  name: CreateBuffer
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateBuffer_
+  commentId: Overload:Veldrid.ResourceFactory.CreateBuffer
+  fullName: Veldrid.ResourceFactory.CreateBuffer
+  nameWithType: ResourceFactory.CreateBuffer
+- uid: Veldrid.ResourceFactory.CreateBufferCore(Veldrid.BufferDescription@)
+  name: CreateBufferCore(ref BufferDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateBufferCore_Veldrid_BufferDescription__
+  commentId: M:Veldrid.ResourceFactory.CreateBufferCore(Veldrid.BufferDescription@)
+  name.vb: CreateBufferCore(ByRef BufferDescription)
+  fullName: Veldrid.ResourceFactory.CreateBufferCore(ref Veldrid.BufferDescription)
+  fullName.vb: Veldrid.ResourceFactory.CreateBufferCore(ByRef Veldrid.BufferDescription)
+  nameWithType: ResourceFactory.CreateBufferCore(ref BufferDescription)
+  nameWithType.vb: ResourceFactory.CreateBufferCore(ByRef BufferDescription)
+- uid: Veldrid.ResourceFactory.CreateBufferCore*
+  name: CreateBufferCore
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateBufferCore_
+  commentId: Overload:Veldrid.ResourceFactory.CreateBufferCore
+  fullName: Veldrid.ResourceFactory.CreateBufferCore
+  nameWithType: ResourceFactory.CreateBufferCore
 - uid: Veldrid.ResourceFactory.CreateCommandList
   name: CreateCommandList()
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateCommandList
@@ -2119,6 +2302,27 @@ references:
   commentId: Overload:Veldrid.ResourceFactory.CreateCommandList
   fullName: Veldrid.ResourceFactory.CreateCommandList
   nameWithType: ResourceFactory.CreateCommandList
+- uid: Veldrid.ResourceFactory.CreateComputePipeline(Veldrid.ComputePipelineDescription)
+  name: CreateComputePipeline(ComputePipelineDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateComputePipeline_Veldrid_ComputePipelineDescription_
+  commentId: M:Veldrid.ResourceFactory.CreateComputePipeline(Veldrid.ComputePipelineDescription)
+  fullName: Veldrid.ResourceFactory.CreateComputePipeline(Veldrid.ComputePipelineDescription)
+  nameWithType: ResourceFactory.CreateComputePipeline(ComputePipelineDescription)
+- uid: Veldrid.ResourceFactory.CreateComputePipeline(Veldrid.ComputePipelineDescription@)
+  name: CreateComputePipeline(ref ComputePipelineDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateComputePipeline_Veldrid_ComputePipelineDescription__
+  commentId: M:Veldrid.ResourceFactory.CreateComputePipeline(Veldrid.ComputePipelineDescription@)
+  name.vb: CreateComputePipeline(ByRef ComputePipelineDescription)
+  fullName: Veldrid.ResourceFactory.CreateComputePipeline(ref Veldrid.ComputePipelineDescription)
+  fullName.vb: Veldrid.ResourceFactory.CreateComputePipeline(ByRef Veldrid.ComputePipelineDescription)
+  nameWithType: ResourceFactory.CreateComputePipeline(ref ComputePipelineDescription)
+  nameWithType.vb: ResourceFactory.CreateComputePipeline(ByRef ComputePipelineDescription)
+- uid: Veldrid.ResourceFactory.CreateComputePipeline*
+  name: CreateComputePipeline
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateComputePipeline_
+  commentId: Overload:Veldrid.ResourceFactory.CreateComputePipeline
+  fullName: Veldrid.ResourceFactory.CreateComputePipeline
+  nameWithType: ResourceFactory.CreateComputePipeline
 - uid: Veldrid.ResourceFactory.CreateFramebuffer(Veldrid.FramebufferDescription)
   name: CreateFramebuffer(FramebufferDescription)
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateFramebuffer_Veldrid_FramebufferDescription_
@@ -2140,48 +2344,27 @@ references:
   commentId: Overload:Veldrid.ResourceFactory.CreateFramebuffer
   fullName: Veldrid.ResourceFactory.CreateFramebuffer
   nameWithType: ResourceFactory.CreateFramebuffer
-- uid: Veldrid.ResourceFactory.CreateIndexBuffer(Veldrid.IndexBufferDescription)
-  name: CreateIndexBuffer(IndexBufferDescription)
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateIndexBuffer_Veldrid_IndexBufferDescription_
-  commentId: M:Veldrid.ResourceFactory.CreateIndexBuffer(Veldrid.IndexBufferDescription)
-  fullName: Veldrid.ResourceFactory.CreateIndexBuffer(Veldrid.IndexBufferDescription)
-  nameWithType: ResourceFactory.CreateIndexBuffer(IndexBufferDescription)
-- uid: Veldrid.ResourceFactory.CreateIndexBuffer(Veldrid.IndexBufferDescription@)
-  name: CreateIndexBuffer(ref IndexBufferDescription)
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateIndexBuffer_Veldrid_IndexBufferDescription__
-  commentId: M:Veldrid.ResourceFactory.CreateIndexBuffer(Veldrid.IndexBufferDescription@)
-  name.vb: CreateIndexBuffer(ByRef IndexBufferDescription)
-  fullName: Veldrid.ResourceFactory.CreateIndexBuffer(ref Veldrid.IndexBufferDescription)
-  fullName.vb: Veldrid.ResourceFactory.CreateIndexBuffer(ByRef Veldrid.IndexBufferDescription)
-  nameWithType: ResourceFactory.CreateIndexBuffer(ref IndexBufferDescription)
-  nameWithType.vb: ResourceFactory.CreateIndexBuffer(ByRef IndexBufferDescription)
-- uid: Veldrid.ResourceFactory.CreateIndexBuffer*
-  name: CreateIndexBuffer
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateIndexBuffer_
-  commentId: Overload:Veldrid.ResourceFactory.CreateIndexBuffer
-  fullName: Veldrid.ResourceFactory.CreateIndexBuffer
-  nameWithType: ResourceFactory.CreateIndexBuffer
-- uid: Veldrid.ResourceFactory.CreatePipeline(Veldrid.PipelineDescription)
-  name: CreatePipeline(PipelineDescription)
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreatePipeline_Veldrid_PipelineDescription_
-  commentId: M:Veldrid.ResourceFactory.CreatePipeline(Veldrid.PipelineDescription)
-  fullName: Veldrid.ResourceFactory.CreatePipeline(Veldrid.PipelineDescription)
-  nameWithType: ResourceFactory.CreatePipeline(PipelineDescription)
-- uid: Veldrid.ResourceFactory.CreatePipeline(Veldrid.PipelineDescription@)
-  name: CreatePipeline(ref PipelineDescription)
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreatePipeline_Veldrid_PipelineDescription__
-  commentId: M:Veldrid.ResourceFactory.CreatePipeline(Veldrid.PipelineDescription@)
-  name.vb: CreatePipeline(ByRef PipelineDescription)
-  fullName: Veldrid.ResourceFactory.CreatePipeline(ref Veldrid.PipelineDescription)
-  fullName.vb: Veldrid.ResourceFactory.CreatePipeline(ByRef Veldrid.PipelineDescription)
-  nameWithType: ResourceFactory.CreatePipeline(ref PipelineDescription)
-  nameWithType.vb: ResourceFactory.CreatePipeline(ByRef PipelineDescription)
-- uid: Veldrid.ResourceFactory.CreatePipeline*
-  name: CreatePipeline
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreatePipeline_
-  commentId: Overload:Veldrid.ResourceFactory.CreatePipeline
-  fullName: Veldrid.ResourceFactory.CreatePipeline
-  nameWithType: ResourceFactory.CreatePipeline
+- uid: Veldrid.ResourceFactory.CreateGraphicsPipeline(Veldrid.GraphicsPipelineDescription)
+  name: CreateGraphicsPipeline(GraphicsPipelineDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateGraphicsPipeline_Veldrid_GraphicsPipelineDescription_
+  commentId: M:Veldrid.ResourceFactory.CreateGraphicsPipeline(Veldrid.GraphicsPipelineDescription)
+  fullName: Veldrid.ResourceFactory.CreateGraphicsPipeline(Veldrid.GraphicsPipelineDescription)
+  nameWithType: ResourceFactory.CreateGraphicsPipeline(GraphicsPipelineDescription)
+- uid: Veldrid.ResourceFactory.CreateGraphicsPipeline(Veldrid.GraphicsPipelineDescription@)
+  name: CreateGraphicsPipeline(ref GraphicsPipelineDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateGraphicsPipeline_Veldrid_GraphicsPipelineDescription__
+  commentId: M:Veldrid.ResourceFactory.CreateGraphicsPipeline(Veldrid.GraphicsPipelineDescription@)
+  name.vb: CreateGraphicsPipeline(ByRef GraphicsPipelineDescription)
+  fullName: Veldrid.ResourceFactory.CreateGraphicsPipeline(ref Veldrid.GraphicsPipelineDescription)
+  fullName.vb: Veldrid.ResourceFactory.CreateGraphicsPipeline(ByRef Veldrid.GraphicsPipelineDescription)
+  nameWithType: ResourceFactory.CreateGraphicsPipeline(ref GraphicsPipelineDescription)
+  nameWithType.vb: ResourceFactory.CreateGraphicsPipeline(ByRef GraphicsPipelineDescription)
+- uid: Veldrid.ResourceFactory.CreateGraphicsPipeline*
+  name: CreateGraphicsPipeline
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateGraphicsPipeline_
+  commentId: Overload:Veldrid.ResourceFactory.CreateGraphicsPipeline
+  fullName: Veldrid.ResourceFactory.CreateGraphicsPipeline
+  nameWithType: ResourceFactory.CreateGraphicsPipeline
 - uid: Veldrid.ResourceFactory.CreateResourceLayout(Veldrid.ResourceLayoutDescription)
   name: CreateResourceLayout(ResourceLayoutDescription)
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateResourceLayout_Veldrid_ResourceLayoutDescription_
@@ -2287,6 +2470,21 @@ references:
   commentId: Overload:Veldrid.ResourceFactory.CreateTexture
   fullName: Veldrid.ResourceFactory.CreateTexture
   nameWithType: ResourceFactory.CreateTexture
+- uid: Veldrid.ResourceFactory.CreateTextureCore(Veldrid.TextureDescription@)
+  name: CreateTextureCore(ref TextureDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateTextureCore_Veldrid_TextureDescription__
+  commentId: M:Veldrid.ResourceFactory.CreateTextureCore(Veldrid.TextureDescription@)
+  name.vb: CreateTextureCore(ByRef TextureDescription)
+  fullName: Veldrid.ResourceFactory.CreateTextureCore(ref Veldrid.TextureDescription)
+  fullName.vb: Veldrid.ResourceFactory.CreateTextureCore(ByRef Veldrid.TextureDescription)
+  nameWithType: ResourceFactory.CreateTextureCore(ref TextureDescription)
+  nameWithType.vb: ResourceFactory.CreateTextureCore(ByRef TextureDescription)
+- uid: Veldrid.ResourceFactory.CreateTextureCore*
+  name: CreateTextureCore
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateTextureCore_
+  commentId: Overload:Veldrid.ResourceFactory.CreateTextureCore
+  fullName: Veldrid.ResourceFactory.CreateTextureCore
+  nameWithType: ResourceFactory.CreateTextureCore
 - uid: Veldrid.ResourceFactory.CreateTextureView(Veldrid.Texture)
   name: CreateTextureView(Texture)
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateTextureView_Veldrid_Texture_
@@ -2314,48 +2512,21 @@ references:
   commentId: Overload:Veldrid.ResourceFactory.CreateTextureView
   fullName: Veldrid.ResourceFactory.CreateTextureView
   nameWithType: ResourceFactory.CreateTextureView
-- uid: Veldrid.ResourceFactory.CreateUniformBuffer(Veldrid.BufferDescription)
-  name: CreateUniformBuffer(BufferDescription)
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateUniformBuffer_Veldrid_BufferDescription_
-  commentId: M:Veldrid.ResourceFactory.CreateUniformBuffer(Veldrid.BufferDescription)
-  fullName: Veldrid.ResourceFactory.CreateUniformBuffer(Veldrid.BufferDescription)
-  nameWithType: ResourceFactory.CreateUniformBuffer(BufferDescription)
-- uid: Veldrid.ResourceFactory.CreateUniformBuffer(Veldrid.BufferDescription@)
-  name: CreateUniformBuffer(ref BufferDescription)
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateUniformBuffer_Veldrid_BufferDescription__
-  commentId: M:Veldrid.ResourceFactory.CreateUniformBuffer(Veldrid.BufferDescription@)
-  name.vb: CreateUniformBuffer(ByRef BufferDescription)
-  fullName: Veldrid.ResourceFactory.CreateUniformBuffer(ref Veldrid.BufferDescription)
-  fullName.vb: Veldrid.ResourceFactory.CreateUniformBuffer(ByRef Veldrid.BufferDescription)
-  nameWithType: ResourceFactory.CreateUniformBuffer(ref BufferDescription)
-  nameWithType.vb: ResourceFactory.CreateUniformBuffer(ByRef BufferDescription)
-- uid: Veldrid.ResourceFactory.CreateUniformBuffer*
-  name: CreateUniformBuffer
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateUniformBuffer_
-  commentId: Overload:Veldrid.ResourceFactory.CreateUniformBuffer
-  fullName: Veldrid.ResourceFactory.CreateUniformBuffer
-  nameWithType: ResourceFactory.CreateUniformBuffer
-- uid: Veldrid.ResourceFactory.CreateVertexBuffer(Veldrid.BufferDescription)
-  name: CreateVertexBuffer(BufferDescription)
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateVertexBuffer_Veldrid_BufferDescription_
-  commentId: M:Veldrid.ResourceFactory.CreateVertexBuffer(Veldrid.BufferDescription)
-  fullName: Veldrid.ResourceFactory.CreateVertexBuffer(Veldrid.BufferDescription)
-  nameWithType: ResourceFactory.CreateVertexBuffer(BufferDescription)
-- uid: Veldrid.ResourceFactory.CreateVertexBuffer(Veldrid.BufferDescription@)
-  name: CreateVertexBuffer(ref BufferDescription)
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateVertexBuffer_Veldrid_BufferDescription__
-  commentId: M:Veldrid.ResourceFactory.CreateVertexBuffer(Veldrid.BufferDescription@)
-  name.vb: CreateVertexBuffer(ByRef BufferDescription)
-  fullName: Veldrid.ResourceFactory.CreateVertexBuffer(ref Veldrid.BufferDescription)
-  fullName.vb: Veldrid.ResourceFactory.CreateVertexBuffer(ByRef Veldrid.BufferDescription)
-  nameWithType: ResourceFactory.CreateVertexBuffer(ref BufferDescription)
-  nameWithType.vb: ResourceFactory.CreateVertexBuffer(ByRef BufferDescription)
-- uid: Veldrid.ResourceFactory.CreateVertexBuffer*
-  name: CreateVertexBuffer
-  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateVertexBuffer_
-  commentId: Overload:Veldrid.ResourceFactory.CreateVertexBuffer
-  fullName: Veldrid.ResourceFactory.CreateVertexBuffer
-  nameWithType: ResourceFactory.CreateVertexBuffer
+- uid: Veldrid.ResourceFactory.CreateTextureViewCore(Veldrid.TextureViewDescription@)
+  name: CreateTextureViewCore(ref TextureViewDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateTextureViewCore_Veldrid_TextureViewDescription__
+  commentId: M:Veldrid.ResourceFactory.CreateTextureViewCore(Veldrid.TextureViewDescription@)
+  name.vb: CreateTextureViewCore(ByRef TextureViewDescription)
+  fullName: Veldrid.ResourceFactory.CreateTextureViewCore(ref Veldrid.TextureViewDescription)
+  fullName.vb: Veldrid.ResourceFactory.CreateTextureViewCore(ByRef Veldrid.TextureViewDescription)
+  nameWithType: ResourceFactory.CreateTextureViewCore(ref TextureViewDescription)
+  nameWithType.vb: ResourceFactory.CreateTextureViewCore(ByRef TextureViewDescription)
+- uid: Veldrid.ResourceFactory.CreateTextureViewCore*
+  name: CreateTextureViewCore
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateTextureViewCore_
+  commentId: Overload:Veldrid.ResourceFactory.CreateTextureViewCore
+  fullName: Veldrid.ResourceFactory.CreateTextureViewCore
+  nameWithType: ResourceFactory.CreateTextureViewCore
 - uid: Veldrid.ResourceKind
   name: ResourceKind
   href: api/Veldrid.ResourceKind.html
@@ -2368,12 +2539,30 @@ references:
   commentId: F:Veldrid.ResourceKind.Sampler
   fullName: Veldrid.ResourceKind.Sampler
   nameWithType: ResourceKind.Sampler
-- uid: Veldrid.ResourceKind.TextureView
-  name: TextureView
-  href: api/Veldrid.ResourceKind.html#Veldrid_ResourceKind_TextureView
-  commentId: F:Veldrid.ResourceKind.TextureView
-  fullName: Veldrid.ResourceKind.TextureView
-  nameWithType: ResourceKind.TextureView
+- uid: Veldrid.ResourceKind.StructuredBufferReadOnly
+  name: StructuredBufferReadOnly
+  href: api/Veldrid.ResourceKind.html#Veldrid_ResourceKind_StructuredBufferReadOnly
+  commentId: F:Veldrid.ResourceKind.StructuredBufferReadOnly
+  fullName: Veldrid.ResourceKind.StructuredBufferReadOnly
+  nameWithType: ResourceKind.StructuredBufferReadOnly
+- uid: Veldrid.ResourceKind.StructuredBufferReadWrite
+  name: StructuredBufferReadWrite
+  href: api/Veldrid.ResourceKind.html#Veldrid_ResourceKind_StructuredBufferReadWrite
+  commentId: F:Veldrid.ResourceKind.StructuredBufferReadWrite
+  fullName: Veldrid.ResourceKind.StructuredBufferReadWrite
+  nameWithType: ResourceKind.StructuredBufferReadWrite
+- uid: Veldrid.ResourceKind.TextureReadOnly
+  name: TextureReadOnly
+  href: api/Veldrid.ResourceKind.html#Veldrid_ResourceKind_TextureReadOnly
+  commentId: F:Veldrid.ResourceKind.TextureReadOnly
+  fullName: Veldrid.ResourceKind.TextureReadOnly
+  nameWithType: ResourceKind.TextureReadOnly
+- uid: Veldrid.ResourceKind.TextureReadWrite
+  name: TextureReadWrite
+  href: api/Veldrid.ResourceKind.html#Veldrid_ResourceKind_TextureReadWrite
+  commentId: F:Veldrid.ResourceKind.TextureReadWrite
+  fullName: Veldrid.ResourceKind.TextureReadWrite
+  nameWithType: ResourceKind.TextureReadWrite
 - uid: Veldrid.ResourceKind.UniformBuffer
   name: UniformBuffer
   href: api/Veldrid.ResourceKind.html#Veldrid_ResourceKind_UniformBuffer
@@ -3283,6 +3472,12 @@ references:
   commentId: T:Veldrid.ShaderStages
   fullName: Veldrid.ShaderStages
   nameWithType: ShaderStages
+- uid: Veldrid.ShaderStages.Compute
+  name: Compute
+  href: api/Veldrid.ShaderStages.html#Veldrid_ShaderStages_Compute
+  commentId: F:Veldrid.ShaderStages.Compute
+  fullName: Veldrid.ShaderStages.Compute
+  nameWithType: ShaderStages.Compute
 - uid: Veldrid.ShaderStages.Fragment
   name: Fragment
   href: api/Veldrid.ShaderStages.html#Veldrid_ShaderStages_Fragment
@@ -3601,12 +3796,54 @@ references:
   commentId: F:Veldrid.TextureUsage.Sampled
   fullName: Veldrid.TextureUsage.Sampled
   nameWithType: TextureUsage.Sampled
+- uid: Veldrid.TextureUsage.Storage
+  name: Storage
+  href: api/Veldrid.TextureUsage.html#Veldrid_TextureUsage_Storage
+  commentId: F:Veldrid.TextureUsage.Storage
+  fullName: Veldrid.TextureUsage.Storage
+  nameWithType: TextureUsage.Storage
 - uid: Veldrid.TextureView
   name: TextureView
   href: api/Veldrid.TextureView.html
   commentId: T:Veldrid.TextureView
   fullName: Veldrid.TextureView
   nameWithType: TextureView
+- uid: Veldrid.TextureView.ArrayLayers
+  name: ArrayLayers
+  href: api/Veldrid.TextureView.html#Veldrid_TextureView_ArrayLayers
+  commentId: P:Veldrid.TextureView.ArrayLayers
+  fullName: Veldrid.TextureView.ArrayLayers
+  nameWithType: TextureView.ArrayLayers
+- uid: Veldrid.TextureView.ArrayLayers*
+  name: ArrayLayers
+  href: api/Veldrid.TextureView.html#Veldrid_TextureView_ArrayLayers_
+  commentId: Overload:Veldrid.TextureView.ArrayLayers
+  fullName: Veldrid.TextureView.ArrayLayers
+  nameWithType: TextureView.ArrayLayers
+- uid: Veldrid.TextureView.BaseArrayLayer
+  name: BaseArrayLayer
+  href: api/Veldrid.TextureView.html#Veldrid_TextureView_BaseArrayLayer
+  commentId: P:Veldrid.TextureView.BaseArrayLayer
+  fullName: Veldrid.TextureView.BaseArrayLayer
+  nameWithType: TextureView.BaseArrayLayer
+- uid: Veldrid.TextureView.BaseArrayLayer*
+  name: BaseArrayLayer
+  href: api/Veldrid.TextureView.html#Veldrid_TextureView_BaseArrayLayer_
+  commentId: Overload:Veldrid.TextureView.BaseArrayLayer
+  fullName: Veldrid.TextureView.BaseArrayLayer
+  nameWithType: TextureView.BaseArrayLayer
+- uid: Veldrid.TextureView.BaseMipLevel
+  name: BaseMipLevel
+  href: api/Veldrid.TextureView.html#Veldrid_TextureView_BaseMipLevel
+  commentId: P:Veldrid.TextureView.BaseMipLevel
+  fullName: Veldrid.TextureView.BaseMipLevel
+  nameWithType: TextureView.BaseMipLevel
+- uid: Veldrid.TextureView.BaseMipLevel*
+  name: BaseMipLevel
+  href: api/Veldrid.TextureView.html#Veldrid_TextureView_BaseMipLevel_
+  commentId: Overload:Veldrid.TextureView.BaseMipLevel
+  fullName: Veldrid.TextureView.BaseMipLevel
+  nameWithType: TextureView.BaseMipLevel
 - uid: Veldrid.TextureView.Dispose
   name: Dispose()
   href: api/Veldrid.TextureView.html#Veldrid_TextureView_Dispose
@@ -3619,6 +3856,18 @@ references:
   commentId: Overload:Veldrid.TextureView.Dispose
   fullName: Veldrid.TextureView.Dispose
   nameWithType: TextureView.Dispose
+- uid: Veldrid.TextureView.MipLevels
+  name: MipLevels
+  href: api/Veldrid.TextureView.html#Veldrid_TextureView_MipLevels
+  commentId: P:Veldrid.TextureView.MipLevels
+  fullName: Veldrid.TextureView.MipLevels
+  nameWithType: TextureView.MipLevels
+- uid: Veldrid.TextureView.MipLevels*
+  name: MipLevels
+  href: api/Veldrid.TextureView.html#Veldrid_TextureView_MipLevels_
+  commentId: Overload:Veldrid.TextureView.MipLevels
+  fullName: Veldrid.TextureView.MipLevels
+  nameWithType: TextureView.MipLevels
 - uid: Veldrid.TextureView.Target
   name: Target
   href: api/Veldrid.TextureView.html#Veldrid_TextureView_Target
@@ -3649,6 +3898,24 @@ references:
   commentId: Overload:Veldrid.TextureViewDescription.#ctor
   fullName: Veldrid.TextureViewDescription.TextureViewDescription
   nameWithType: TextureViewDescription.TextureViewDescription
+- uid: Veldrid.TextureViewDescription.ArrayLayers
+  name: ArrayLayers
+  href: api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription_ArrayLayers
+  commentId: F:Veldrid.TextureViewDescription.ArrayLayers
+  fullName: Veldrid.TextureViewDescription.ArrayLayers
+  nameWithType: TextureViewDescription.ArrayLayers
+- uid: Veldrid.TextureViewDescription.BaseArrayLayer
+  name: BaseArrayLayer
+  href: api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription_BaseArrayLayer
+  commentId: F:Veldrid.TextureViewDescription.BaseArrayLayer
+  fullName: Veldrid.TextureViewDescription.BaseArrayLayer
+  nameWithType: TextureViewDescription.BaseArrayLayer
+- uid: Veldrid.TextureViewDescription.BaseMipLevel
+  name: BaseMipLevel
+  href: api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription_BaseMipLevel
+  commentId: F:Veldrid.TextureViewDescription.BaseMipLevel
+  fullName: Veldrid.TextureViewDescription.BaseMipLevel
+  nameWithType: TextureViewDescription.BaseMipLevel
 - uid: Veldrid.TextureViewDescription.Equals(Veldrid.TextureViewDescription)
   name: Equals(TextureViewDescription)
   href: api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription_Equals_Veldrid_TextureViewDescription_
@@ -3673,18 +3940,18 @@ references:
   commentId: Overload:Veldrid.TextureViewDescription.GetHashCode
   fullName: Veldrid.TextureViewDescription.GetHashCode
   nameWithType: TextureViewDescription.GetHashCode
+- uid: Veldrid.TextureViewDescription.MipLevels
+  name: MipLevels
+  href: api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription_MipLevels
+  commentId: F:Veldrid.TextureViewDescription.MipLevels
+  fullName: Veldrid.TextureViewDescription.MipLevels
+  nameWithType: TextureViewDescription.MipLevels
 - uid: Veldrid.TextureViewDescription.Target
   name: Target
   href: api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription_Target
   commentId: F:Veldrid.TextureViewDescription.Target
   fullName: Veldrid.TextureViewDescription.Target
   nameWithType: TextureViewDescription.Target
-- uid: Veldrid.UniformBuffer
-  name: UniformBuffer
-  href: api/Veldrid.UniformBuffer.html
-  commentId: T:Veldrid.UniformBuffer
-  fullName: Veldrid.UniformBuffer
-  nameWithType: UniformBuffer
 - uid: Veldrid.VeldridException
   name: VeldridException
   href: api/Veldrid.VeldridException.html
@@ -3709,12 +3976,6 @@ references:
   commentId: Overload:Veldrid.VeldridException.#ctor
   fullName: Veldrid.VeldridException.VeldridException
   nameWithType: VeldridException.VeldridException
-- uid: Veldrid.VertexBuffer
-  name: VertexBuffer
-  href: api/Veldrid.VertexBuffer.html
-  commentId: T:Veldrid.VertexBuffer
-  fullName: Veldrid.VertexBuffer
-  nameWithType: VertexBuffer
 - uid: Veldrid.VertexElementDescription
   name: VertexElementDescription
   href: api/Veldrid.VertexElementDescription.html

@@ -81,8 +81,8 @@ When the <a class="xref" href="Veldrid.CommandList.html">CommandList</a> is read
 NOTE: The use of <a class="xref" href="Veldrid.CommandList.html">CommandList</a> is not thread-safe. Access to the <a class="xref" href="Veldrid.CommandList.html">CommandList</a> must be
 externally synchronized.
 There are some limitations dictating proper usage and ordering of graphics commands. For example, a
-<a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>, and <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a> must all be
-bound before a call to <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">Draw(UInt32, UInt32, UInt32, Int32, UInt32)</a> will succeed.
+<a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, vertex buffer, and index buffer must all be
+bound before a call to <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">DrawIndexed(UInt32, UInt32, UInt32, Int32, UInt32)</a> will succeed.
 These limitations are described in each function, where applicable.
 <a class="xref" href="Veldrid.CommandList.html">CommandList</a> instances cannot be executed multiple times per-recording. When executed by a
 <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>, they must be reset and commands must be issued again.
@@ -240,6 +240,43 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   </table>
   
   
+  <a id="Veldrid_CommandList_Dispatch_" data-uid="Veldrid.CommandList.Dispatch*"></a>
+  <h4 id="Veldrid_CommandList_Dispatch_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.Dispatch(System.UInt32,System.UInt32,System.UInt32)">Dispatch(UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Dispatch(uint groupCountX, uint groupCountY, uint groupCountZ)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">groupCountX</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">groupCountY</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">groupCountZ</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_CommandList_Dispose_" data-uid="Veldrid.CommandList.Dispose*"></a>
   <h4 id="Veldrid_CommandList_Dispose" data-uid="Veldrid.CommandList.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"><p>Frees unmanaged device resources controlled by this instance.</p>
@@ -252,13 +289,55 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   
   
   <a id="Veldrid_CommandList_Draw_" data-uid="Veldrid.CommandList.Draw*"></a>
-  <h4 id="Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_" data-uid="Veldrid.CommandList.Draw(System.UInt32,System.UInt32,System.UInt32,System.Int32,System.UInt32)">Draw(UInt32, UInt32, UInt32, Int32, UInt32)</h4>
+  <h4 id="Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.Draw(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">Draw(UInt32, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void Draw(uint vertexCount, uint instanceCount, uint vertexStart, uint instanceStart)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">vertexCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">instanceCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">vertexStart</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">instanceStart</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_DrawIndexed_" data-uid="Veldrid.CommandList.DrawIndexed*"></a>
+  <h4 id="Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexed(System.UInt32,System.UInt32,System.UInt32,System.Int32,System.UInt32)">DrawIndexed(UInt32, UInt32, UInt32, Int32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Draws primitives from the currently-bound state in this <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Draw(uint indexCount, uint instanceCount, uint indexStart, int vertexOffset, uint instanceStart)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void DrawIndexed(uint indexCount, uint instanceCount, uint indexStart, int vertexOffset, uint instanceStart)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -285,13 +364,13 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">indexStart</span></td>
-        <td><p>The number of indices to skip in the active <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
+        <td><p>The number of indices to skip in the active index buffer.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.Int32</span></td>
         <td><span class="parametername">vertexOffset</span></td>
-        <td><p>The base vertex value, which is added to each index value read from the <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
+        <td><p>The base vertex value, which is added to each index value read from the index buffer.</p>
 </td>
       </tr>
       <tr>
@@ -386,6 +465,70 @@ It is an error to call this function in succession, unless <a class="xref" href=
         <td><p>The destination of the resolve operation. Must be a non-multisampled <a class="xref" href="Veldrid.Texture.html">Texture</a>
 (<a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_SampleCount">SampleCount</a> == 1).</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetComputeResourceSet_" data-uid="Veldrid.CommandList.SetComputeResourceSet*"></a>
+  <h4 id="Veldrid_CommandList_SetComputeResourceSet_System_UInt32_Veldrid_ResourceSet_" data-uid="Veldrid.CommandList.SetComputeResourceSet(System.UInt32,Veldrid.ResourceSet)">SetComputeResourceSet(UInt32, ResourceSet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetComputeResourceSet(uint slot, ResourceSet rs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
+        <td><span class="parametername">rs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetComputeResourceSetCore_" data-uid="Veldrid.CommandList.SetComputeResourceSetCore*"></a>
+  <h4 id="Veldrid_CommandList_SetComputeResourceSetCore_System_UInt32_Veldrid_ResourceSet_" data-uid="Veldrid.CommandList.SetComputeResourceSetCore(System.UInt32,Veldrid.ResourceSet)">SetComputeResourceSetCore(UInt32, ResourceSet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetComputeResourceSetCore(uint slot, ResourceSet set)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
+        <td><span class="parametername">set</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -530,75 +673,14 @@ A compatible <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> has the s
   </div>
   
   
-  <a id="Veldrid_CommandList_SetIndexBuffer_" data-uid="Veldrid.CommandList.SetIndexBuffer*"></a>
-  <h4 id="Veldrid_CommandList_SetIndexBuffer_Veldrid_IndexBuffer_" data-uid="Veldrid.CommandList.SetIndexBuffer(Veldrid.IndexBuffer)">SetIndexBuffer(IndexBuffer)</h4>
-  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.
-When drawing, an <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a> must be bound.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void SetIndexBuffer(IndexBuffer ib)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a></td>
-        <td><span class="parametername">ib</span></td>
-        <td><p>The new <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_CommandList_SetPipeline_" data-uid="Veldrid.CommandList.SetPipeline*"></a>
-  <h4 id="Veldrid_CommandList_SetPipeline_Veldrid_Pipeline_" data-uid="Veldrid.CommandList.SetPipeline(Veldrid.Pipeline)">SetPipeline(Pipeline)</h4>
-  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> used for rendering.
-When drawing, the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> must be compatible with the bound <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>,
-<a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>, and <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a> objects.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void SetPipeline(Pipeline pipeline)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
-        <td><span class="parametername">pipeline</span></td>
-        <td><p>The new <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> object.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_CommandList_SetResourceSet_" data-uid="Veldrid.CommandList.SetResourceSet*"></a>
-  <h4 id="Veldrid_CommandList_SetResourceSet_System_UInt32_Veldrid_ResourceSet_" data-uid="Veldrid.CommandList.SetResourceSet(System.UInt32,Veldrid.ResourceSet)">SetResourceSet(UInt32, ResourceSet)</h4>
+  <a id="Veldrid_CommandList_SetGraphicsResourceSet_" data-uid="Veldrid.CommandList.SetGraphicsResourceSet*"></a>
+  <h4 id="Veldrid_CommandList_SetGraphicsResourceSet_System_UInt32_Veldrid_ResourceSet_" data-uid="Veldrid.CommandList.SetGraphicsResourceSet(System.UInt32,Veldrid.ResourceSet)">SetGraphicsResourceSet(UInt32, ResourceSet)</h4>
   <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> for the given index.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void SetResourceSet(uint slot, ResourceSet rs)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetGraphicsResourceSet(uint slot, ResourceSet rs)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -620,6 +702,137 @@ When drawing, the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</
         <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
         <td><span class="parametername">rs</span></td>
         <td><p>The new <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetGraphicsResourceSetCore_" data-uid="Veldrid.CommandList.SetGraphicsResourceSetCore*"></a>
+  <h4 id="Veldrid_CommandList_SetGraphicsResourceSetCore_System_UInt32_Veldrid_ResourceSet_" data-uid="Veldrid.CommandList.SetGraphicsResourceSetCore(System.UInt32,Veldrid.ResourceSet)">SetGraphicsResourceSetCore(UInt32, ResourceSet)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetGraphicsResourceSetCore(uint slot, ResourceSet rs)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
+        <td><span class="parametername">rs</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetIndexBuffer_" data-uid="Veldrid.CommandList.SetIndexBuffer*"></a>
+  <h4 id="Veldrid_CommandList_SetIndexBuffer_Veldrid_Buffer_Veldrid_IndexFormat_" data-uid="Veldrid.CommandList.SetIndexBuffer(Veldrid.Buffer,Veldrid.IndexFormat)">SetIndexBuffer(Buffer, IndexFormat)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.
+When drawing, an <a class="xref" href="Veldrid.Buffer.html">Buffer</a> must be bound.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIndexBuffer(Buffer buffer, IndexFormat format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.IndexFormat.html">IndexFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format of data in the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetIndexBufferCore_" data-uid="Veldrid.CommandList.SetIndexBufferCore*"></a>
+  <h4 id="Veldrid_CommandList_SetIndexBufferCore_Veldrid_Buffer_Veldrid_IndexFormat_" data-uid="Veldrid.CommandList.SetIndexBufferCore(Veldrid.Buffer,Veldrid.IndexFormat)">SetIndexBufferCore(Buffer, IndexFormat)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetIndexBufferCore(Buffer buffer, IndexFormat format)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">buffer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.IndexFormat.html">IndexFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetPipeline_" data-uid="Veldrid.CommandList.SetPipeline*"></a>
+  <h4 id="Veldrid_CommandList_SetPipeline_Veldrid_Pipeline_" data-uid="Veldrid.CommandList.SetPipeline(Veldrid.Pipeline)">SetPipeline(Pipeline)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> used for rendering.
+When drawing, the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> must be compatible with the bound <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>,
+<a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>, and <a class="xref" href="Veldrid.Buffer.html">Buffer</a> objects.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void SetPipeline(Pipeline pipeline)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
+        <td><span class="parametername">pipeline</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> object.</p>
 </td>
       </tr>
     </tbody>
@@ -681,14 +894,14 @@ The index given must be less than the number of color attachments in the active 
   
   
   <a id="Veldrid_CommandList_SetVertexBuffer_" data-uid="Veldrid.CommandList.SetVertexBuffer*"></a>
-  <h4 id="Veldrid_CommandList_SetVertexBuffer_System_UInt32_Veldrid_VertexBuffer_" data-uid="Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.VertexBuffer)">SetVertexBuffer(UInt32, VertexBuffer)</h4>
-  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a> for the given index.
-When drawing, the bound <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a> objects must be compatible with the bound <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
+  <h4 id="Veldrid_CommandList_SetVertexBuffer_System_UInt32_Veldrid_Buffer_" data-uid="Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.Buffer)">SetVertexBuffer(UInt32, Buffer)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Buffer.html">Buffer</a> for the given index.
+When drawing, the bound <a class="xref" href="Veldrid.Buffer.html">Buffer</a> objects must be compatible with the bound <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void SetVertexBuffer(uint index, VertexBuffer vb)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetVertexBuffer(uint index, Buffer buffer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -707,10 +920,42 @@ When drawing, the bound <a class="xref" href="Veldrid.VertexBuffer.html">VertexB
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a></td>
-        <td><span class="parametername">vb</span></td>
-        <td><p>The new <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>.</p>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetVertexBufferCore_" data-uid="Veldrid.CommandList.SetVertexBufferCore*"></a>
+  <h4 id="Veldrid_CommandList_SetVertexBufferCore_System_UInt32_Veldrid_Buffer_" data-uid="Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.Buffer)">SetVertexBufferCore(UInt32, Buffer)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetVertexBufferCore(uint index, Buffer buffer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">buffer</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

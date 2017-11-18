@@ -75,7 +75,7 @@
   </h1>
   <div class="markdown level0 summary"><p>A device resource encapsulating all state in a graphics pipeline. Used in 
 <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_SetPipeline_Veldrid_Pipeline_">SetPipeline(Pipeline)</a> to prepare a <a class="xref" href="Veldrid.CommandList.html">CommandList</a> for draw commands.
-See <a class="xref" href="Veldrid.PipelineDescription.html">PipelineDescription</a>.</p>
+See <a class="xref" href="Veldrid.GraphicsPipelineDescription.html">GraphicsPipelineDescription</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
@@ -118,6 +118,33 @@ See <a class="xref" href="Veldrid.PipelineDescription.html">PipelineDescription<
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class Pipeline : DeviceResource, IDisposable</code></pre>
   </div>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Veldrid_Pipeline_IsComputePipeline_" data-uid="Veldrid.Pipeline.IsComputePipeline*"></a>
+  <h4 id="Veldrid_Pipeline_IsComputePipeline" data-uid="Veldrid.Pipeline.IsComputePipeline">IsComputePipeline</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool IsComputePipeline { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   

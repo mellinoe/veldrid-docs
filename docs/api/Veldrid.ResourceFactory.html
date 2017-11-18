@@ -143,6 +143,138 @@
   </h3>
   
   
+  <a id="Veldrid_ResourceFactory_CreateBuffer_" data-uid="Veldrid.ResourceFactory.CreateBuffer*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateBuffer_Veldrid_BufferDescription_" data-uid="Veldrid.ResourceFactory.CreateBuffer(Veldrid.BufferDescription)">CreateBuffer(BufferDescription)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Buffer CreateBuffer(BufferDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The desired properties of the created object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_ResourceFactory_CreateBuffer_" data-uid="Veldrid.ResourceFactory.CreateBuffer*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateBuffer_Veldrid_BufferDescription__" data-uid="Veldrid.ResourceFactory.CreateBuffer(Veldrid.BufferDescription@)">CreateBuffer(ref BufferDescription)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Buffer CreateBuffer(ref BufferDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The desired properties of the created object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_ResourceFactory_CreateBufferCore_" data-uid="Veldrid.ResourceFactory.CreateBufferCore*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateBufferCore_Veldrid_BufferDescription__" data-uid="Veldrid.ResourceFactory.CreateBufferCore(Veldrid.BufferDescription@)">CreateBufferCore(ref BufferDescription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Buffer CreateBufferCore(ref BufferDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_ResourceFactory_CreateCommandList_" data-uid="Veldrid.ResourceFactory.CreateCommandList*"></a>
   <h4 id="Veldrid_ResourceFactory_CreateCommandList" data-uid="Veldrid.ResourceFactory.CreateCommandList">CreateCommandList()</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.</p>
@@ -260,6 +392,90 @@
   </table>
   
   
+  <a id="Veldrid_ResourceFactory_CreateComputePipeline_" data-uid="Veldrid.ResourceFactory.CreateComputePipeline*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateComputePipeline_Veldrid_ComputePipelineDescription_" data-uid="Veldrid.ResourceFactory.CreateComputePipeline(Veldrid.ComputePipelineDescription)">CreateComputePipeline(ComputePipelineDescription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Pipeline CreateComputePipeline(ComputePipelineDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.ComputePipelineDescription.html">ComputePipelineDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_ResourceFactory_CreateComputePipeline_" data-uid="Veldrid.ResourceFactory.CreateComputePipeline*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateComputePipeline_Veldrid_ComputePipelineDescription__" data-uid="Veldrid.ResourceFactory.CreateComputePipeline(Veldrid.ComputePipelineDescription@)">CreateComputePipeline(ref ComputePipelineDescription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Pipeline CreateComputePipeline(ref ComputePipelineDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.ComputePipelineDescription.html">ComputePipelineDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_ResourceFactory_CreateFramebuffer_" data-uid="Veldrid.ResourceFactory.CreateFramebuffer*"></a>
   <h4 id="Veldrid_ResourceFactory_CreateFramebuffer_Veldrid_FramebufferDescription_" data-uid="Veldrid.ResourceFactory.CreateFramebuffer(Veldrid.FramebufferDescription)">CreateFramebuffer(FramebufferDescription)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
@@ -350,104 +566,14 @@
   </table>
   
   
-  <a id="Veldrid_ResourceFactory_CreateIndexBuffer_" data-uid="Veldrid.ResourceFactory.CreateIndexBuffer*"></a>
-  <h4 id="Veldrid_ResourceFactory_CreateIndexBuffer_Veldrid_IndexBufferDescription_" data-uid="Veldrid.ResourceFactory.CreateIndexBuffer(Veldrid.IndexBufferDescription)">CreateIndexBuffer(IndexBufferDescription)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public IndexBuffer CreateIndexBuffer(IndexBufferDescription description)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.IndexBufferDescription.html">IndexBufferDescription</a></td>
-        <td><span class="parametername">description</span></td>
-        <td><p>The desired properties of the created object.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a></td>
-        <td><p>A new <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_ResourceFactory_CreateIndexBuffer_" data-uid="Veldrid.ResourceFactory.CreateIndexBuffer*"></a>
-  <h4 id="Veldrid_ResourceFactory_CreateIndexBuffer_Veldrid_IndexBufferDescription__" data-uid="Veldrid.ResourceFactory.CreateIndexBuffer(Veldrid.IndexBufferDescription@)">CreateIndexBuffer(ref IndexBufferDescription)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract IndexBuffer CreateIndexBuffer(ref IndexBufferDescription description)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.IndexBufferDescription.html">IndexBufferDescription</a></td>
-        <td><span class="parametername">description</span></td>
-        <td><p>The desired properties of the created object.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a></td>
-        <td><p>A new <a class="xref" href="Veldrid.IndexBuffer.html">IndexBuffer</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_ResourceFactory_CreatePipeline_" data-uid="Veldrid.ResourceFactory.CreatePipeline*"></a>
-  <h4 id="Veldrid_ResourceFactory_CreatePipeline_Veldrid_PipelineDescription_" data-uid="Veldrid.ResourceFactory.CreatePipeline(Veldrid.PipelineDescription)">CreatePipeline(PipelineDescription)</h4>
+  <a id="Veldrid_ResourceFactory_CreateGraphicsPipeline_" data-uid="Veldrid.ResourceFactory.CreateGraphicsPipeline*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateGraphicsPipeline_Veldrid_GraphicsPipelineDescription_" data-uid="Veldrid.ResourceFactory.CreateGraphicsPipeline(Veldrid.GraphicsPipelineDescription)">CreateGraphicsPipeline(GraphicsPipelineDescription)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Pipeline CreatePipeline(PipelineDescription description)</code></pre>
+    <pre><code class="lang-csharp hljs">public Pipeline CreateGraphicsPipeline(GraphicsPipelineDescription description)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -460,7 +586,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.PipelineDescription.html">PipelineDescription</a></td>
+        <td><a class="xref" href="Veldrid.GraphicsPipelineDescription.html">GraphicsPipelineDescription</a></td>
         <td><span class="parametername">description</span></td>
         <td><p>The desired properties of the created object.</p>
 </td>
@@ -485,14 +611,14 @@
   </table>
   
   
-  <a id="Veldrid_ResourceFactory_CreatePipeline_" data-uid="Veldrid.ResourceFactory.CreatePipeline*"></a>
-  <h4 id="Veldrid_ResourceFactory_CreatePipeline_Veldrid_PipelineDescription__" data-uid="Veldrid.ResourceFactory.CreatePipeline(Veldrid.PipelineDescription@)">CreatePipeline(ref PipelineDescription)</h4>
+  <a id="Veldrid_ResourceFactory_CreateGraphicsPipeline_" data-uid="Veldrid.ResourceFactory.CreateGraphicsPipeline*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateGraphicsPipeline_Veldrid_GraphicsPipelineDescription__" data-uid="Veldrid.ResourceFactory.CreateGraphicsPipeline(Veldrid.GraphicsPipelineDescription@)">CreateGraphicsPipeline(ref GraphicsPipelineDescription)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> object.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Pipeline CreatePipeline(ref PipelineDescription description)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract Pipeline CreateGraphicsPipeline(ref GraphicsPipelineDescription description)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -505,7 +631,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.PipelineDescription.html">PipelineDescription</a></td>
+        <td><a class="xref" href="Veldrid.GraphicsPipelineDescription.html">GraphicsPipelineDescription</a></td>
         <td><span class="parametername">description</span></td>
         <td><p>The desired properties of the created object.</p>
 </td>
@@ -942,7 +1068,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Texture CreateTexture(ref TextureDescription description)</code></pre>
+    <pre><code class="lang-csharp hljs">public Texture CreateTexture(ref TextureDescription description)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -975,6 +1101,48 @@
         <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
         <td><p>A new <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_ResourceFactory_CreateTextureCore_" data-uid="Veldrid.ResourceFactory.CreateTextureCore*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateTextureCore_Veldrid_TextureDescription__" data-uid="Veldrid.ResourceFactory.CreateTextureCore(Veldrid.TextureDescription@)">CreateTextureCore(ref TextureDescription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Texture CreateTextureCore(ref TextureDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1072,12 +1240,11 @@
   
   <a id="Veldrid_ResourceFactory_CreateTextureView_" data-uid="Veldrid.ResourceFactory.CreateTextureView*"></a>
   <h4 id="Veldrid_ResourceFactory_CreateTextureView_Veldrid_TextureViewDescription__" data-uid="Veldrid.ResourceFactory.CreateTextureView(Veldrid.TextureViewDescription@)">CreateTextureView(ref TextureViewDescription)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.TextureView.html">TextureView</a>.</p>
-</div>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TextureView CreateTextureView(ref TextureViewDescription description)</code></pre>
+    <pre><code class="lang-csharp hljs">public TextureView CreateTextureView(ref TextureViewDescription description)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1092,8 +1259,7 @@
       <tr>
         <td><a class="xref" href="Veldrid.TextureViewDescription.html">TextureViewDescription</a></td>
         <td><span class="parametername">description</span></td>
-        <td><p>The desired properties of the created object.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1108,21 +1274,19 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.TextureView.html">TextureView</a></td>
-        <td><p>A new <a class="xref" href="Veldrid.TextureView.html">TextureView</a>.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_ResourceFactory_CreateUniformBuffer_" data-uid="Veldrid.ResourceFactory.CreateUniformBuffer*"></a>
-  <h4 id="Veldrid_ResourceFactory_CreateUniformBuffer_Veldrid_BufferDescription_" data-uid="Veldrid.ResourceFactory.CreateUniformBuffer(Veldrid.BufferDescription)">CreateUniformBuffer(BufferDescription)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a>.</p>
-</div>
+  <a id="Veldrid_ResourceFactory_CreateTextureViewCore_" data-uid="Veldrid.ResourceFactory.CreateTextureViewCore*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateTextureViewCore_Veldrid_TextureViewDescription__" data-uid="Veldrid.ResourceFactory.CreateTextureViewCore(Veldrid.TextureViewDescription@)">CreateTextureViewCore(ref TextureViewDescription)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public UniformBuffer CreateUniformBuffer(BufferDescription description)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract TextureView CreateTextureViewCore(ref TextureViewDescription description)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1135,10 +1299,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a></td>
+        <td><a class="xref" href="Veldrid.TextureViewDescription.html">TextureViewDescription</a></td>
         <td><span class="parametername">description</span></td>
-        <td><p>The desired properties of the created object.</p>
-</td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1152,144 +1315,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a></td>
-        <td><p>A new <a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_ResourceFactory_CreateUniformBuffer_" data-uid="Veldrid.ResourceFactory.CreateUniformBuffer*"></a>
-  <h4 id="Veldrid_ResourceFactory_CreateUniformBuffer_Veldrid_BufferDescription__" data-uid="Veldrid.ResourceFactory.CreateUniformBuffer(Veldrid.BufferDescription@)">CreateUniformBuffer(ref BufferDescription)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract UniformBuffer CreateUniformBuffer(ref BufferDescription description)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a></td>
-        <td><span class="parametername">description</span></td>
-        <td><p>The desired properties of the created object.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a></td>
-        <td><p>A new <a class="xref" href="Veldrid.UniformBuffer.html">UniformBuffer</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_ResourceFactory_CreateVertexBuffer_" data-uid="Veldrid.ResourceFactory.CreateVertexBuffer*"></a>
-  <h4 id="Veldrid_ResourceFactory_CreateVertexBuffer_Veldrid_BufferDescription_" data-uid="Veldrid.ResourceFactory.CreateVertexBuffer(Veldrid.BufferDescription)">CreateVertexBuffer(BufferDescription)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VertexBuffer CreateVertexBuffer(BufferDescription description)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a></td>
-        <td><span class="parametername">description</span></td>
-        <td><p>The desired properties of the created object.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a></td>
-        <td><p>A new <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_ResourceFactory_CreateVertexBuffer_" data-uid="Veldrid.ResourceFactory.CreateVertexBuffer*"></a>
-  <h4 id="Veldrid_ResourceFactory_CreateVertexBuffer_Veldrid_BufferDescription__" data-uid="Veldrid.ResourceFactory.CreateVertexBuffer(Veldrid.BufferDescription@)">CreateVertexBuffer(ref BufferDescription)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract VertexBuffer CreateVertexBuffer(ref BufferDescription description)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a></td>
-        <td><span class="parametername">description</span></td>
-        <td><p>The desired properties of the created object.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a></td>
-        <td><p>A new <a class="xref" href="Veldrid.VertexBuffer.html">VertexBuffer</a>.</p>
-</td>
+        <td><a class="xref" href="Veldrid.TextureView.html">TextureView</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

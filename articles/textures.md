@@ -32,9 +32,11 @@ In order to be read in a shader, a Texture needs to be created with the [Texture
 
 To bind a Texture to a shader program, a [TextureView](xref:Veldrid.TextureView) resource must be created. This TextureView can be used in a [ResourceSet](xref:Veldrid.ResourceSet) to make the Texture available to the shader.
 
+Textures can also be written to in shaders, if they were created using the [TextureUsage.Storage](xref:Veldrid.TextureUsage) flag.
+
 ## As Framebuffer Targets
 
-Textures can also be used as Framebuffer targets. To use a Texture as a color target, it must have been created with the [TextureUsage.RenderTarget](xref:Veldrid.TextureUsage) flag. To use a Texture as a depth target, it must have been created with the [TextureUsage.DepthStencil](xref:Veldrid.TextureUsage) flag.
+Textures can be used as Framebuffer targets. To use a Texture as a color target, it must have been created with the [TextureUsage.RenderTarget](xref:Veldrid.TextureUsage) flag. To use a Texture as a depth target, it must have been created with the [TextureUsage.DepthStencil](xref:Veldrid.TextureUsage) flag.
 
 ## Updating a Texture
 
