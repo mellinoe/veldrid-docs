@@ -277,6 +277,70 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   </table>
   
   
+  <a id="Veldrid_CommandList_DispatchIndirect_" data-uid="Veldrid.CommandList.DispatchIndirect*"></a>
+  <h4 id="Veldrid_CommandList_DispatchIndirect_Veldrid_Buffer_System_UInt32_" data-uid="Veldrid.CommandList.DispatchIndirect(Veldrid.Buffer,System.UInt32)">DispatchIndirect(Buffer, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DispatchIndirect(Buffer indirectBuffer, uint offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">indirectBuffer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_DispatchIndirectCore_" data-uid="Veldrid.CommandList.DispatchIndirectCore*"></a>
+  <h4 id="Veldrid_CommandList_DispatchIndirectCore_Veldrid_Buffer_System_UInt32_" data-uid="Veldrid.CommandList.DispatchIndirectCore(Veldrid.Buffer,System.UInt32)">DispatchIndirectCore(Buffer, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void DispatchIndirectCore(Buffer indirectBuffer, uint offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">indirectBuffer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_CommandList_Dispose_" data-uid="Veldrid.CommandList.Dispose*"></a>
   <h4 id="Veldrid_CommandList_Dispose" data-uid="Veldrid.CommandList.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"><p>Frees unmanaged device resources controlled by this instance.</p>
@@ -378,6 +442,174 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
         <td><span class="parametername">instanceStart</span></td>
         <td><p>The starting instance value.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_DrawIndexedIndirect_" data-uid="Veldrid.CommandList.DrawIndexedIndirect*"></a>
+  <h4 id="Veldrid_CommandList_DrawIndexedIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexedIndirect(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndexedIndirect(Buffer, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawIndexedIndirect(Buffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">indirectBuffer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">drawCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">stride</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_DrawIndexedIndirectCore_" data-uid="Veldrid.CommandList.DrawIndexedIndirectCore*"></a>
+  <h4 id="Veldrid_CommandList_DrawIndexedIndirectCore_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexedIndirectCore(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndexedIndirectCore(Buffer, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void DrawIndexedIndirectCore(Buffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">indirectBuffer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">drawCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">stride</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_DrawIndirect_" data-uid="Veldrid.CommandList.DrawIndirect*"></a>
+  <h4 id="Veldrid_CommandList_DrawIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndirect(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndirect(Buffer, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawIndirect(Buffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">indirectBuffer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">drawCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">stride</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_DrawIndirectCore_" data-uid="Veldrid.CommandList.DrawIndirectCore*"></a>
+  <h4 id="Veldrid_CommandList_DrawIndirectCore_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndirectCore(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndirectCore(Buffer, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void DrawIndirectCore(Buffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">indirectBuffer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">drawCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">stride</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

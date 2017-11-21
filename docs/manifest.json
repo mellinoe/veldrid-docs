@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.BufferUsage.html",
-          "hash": "JMrD/fewCjYHbmGLqSrNXg=="
+          "hash": "9P5WXdWvkZ3SPL1XGLahxg=="
         }
       },
       "is_incremental": false,
@@ -105,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.CommandList.html",
-          "hash": "5OTbqna01L6Pe6J0xYveIg=="
+          "hash": "fg7H+mFTqlot83IxxOEtGw=="
         }
       },
       "is_incremental": false,
@@ -298,6 +298,42 @@
         ".html": {
           "relative_path": "api/Veldrid.IndexFormat.html",
           "hash": "+fdgy+t7Vg8/x49sDxjm+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.IndirectDispatchArguments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.IndirectDispatchArguments.html",
+          "hash": "RGli30ExJ6TGW7gyfFPtyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.IndirectDrawArguments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.IndirectDrawArguments.html",
+          "hash": "DWjzLXF6cljmFCpEVIMWdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.IndirectDrawIndexedArguments.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.IndirectDrawIndexedArguments.html",
+          "hash": "d9y3FIswqXnQKVOEP5kBkw=="
         }
       },
       "is_incremental": false,
@@ -705,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.TextureViewDescription.html",
-          "hash": "whaNC5XyR5pJLH4QMJUW3Q=="
+          "hash": "CXjn8mLS3GsQxKxmAl6kng=="
         }
       },
       "is_incremental": false,
@@ -813,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.html",
-          "hash": "XrDNzq/OJ13Lsb+a5YolAQ=="
+          "hash": "iUdu5f7uIjoSLpZEouwDHQ=="
         }
       },
       "is_incremental": false,
@@ -837,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "pA9slrg9VTHazFyyP7ceLg=="
+          "hash": "Ba8l1Dc5MM4p7pugEPI5VA=="
         }
       },
       "is_incremental": false,
@@ -1020,6 +1056,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -1028,11 +1069,6 @@
         "RestApiDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

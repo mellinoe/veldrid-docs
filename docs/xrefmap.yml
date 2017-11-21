@@ -469,6 +469,12 @@ references:
   commentId: F:Veldrid.BufferUsage.IndexBuffer
   fullName: Veldrid.BufferUsage.IndexBuffer
   nameWithType: BufferUsage.IndexBuffer
+- uid: Veldrid.BufferUsage.IndirectBuffer
+  name: IndirectBuffer
+  href: api/Veldrid.BufferUsage.html#Veldrid_BufferUsage_IndirectBuffer
+  commentId: F:Veldrid.BufferUsage.IndirectBuffer
+  fullName: Veldrid.BufferUsage.IndirectBuffer
+  nameWithType: BufferUsage.IndirectBuffer
 - uid: Veldrid.BufferUsage.StructuredBufferReadOnly
   name: StructuredBufferReadOnly
   href: api/Veldrid.BufferUsage.html#Veldrid_BufferUsage_StructuredBufferReadOnly
@@ -553,6 +559,30 @@ references:
   commentId: Overload:Veldrid.CommandList.Dispatch
   fullName: Veldrid.CommandList.Dispatch
   nameWithType: CommandList.Dispatch
+- uid: Veldrid.CommandList.DispatchIndirect(Veldrid.Buffer,System.UInt32)
+  name: DispatchIndirect(Buffer, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DispatchIndirect_Veldrid_Buffer_System_UInt32_
+  commentId: M:Veldrid.CommandList.DispatchIndirect(Veldrid.Buffer,System.UInt32)
+  fullName: Veldrid.CommandList.DispatchIndirect(Veldrid.Buffer, System.UInt32)
+  nameWithType: CommandList.DispatchIndirect(Buffer, UInt32)
+- uid: Veldrid.CommandList.DispatchIndirect*
+  name: DispatchIndirect
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DispatchIndirect_
+  commentId: Overload:Veldrid.CommandList.DispatchIndirect
+  fullName: Veldrid.CommandList.DispatchIndirect
+  nameWithType: CommandList.DispatchIndirect
+- uid: Veldrid.CommandList.DispatchIndirectCore(Veldrid.Buffer,System.UInt32)
+  name: DispatchIndirectCore(Buffer, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DispatchIndirectCore_Veldrid_Buffer_System_UInt32_
+  commentId: M:Veldrid.CommandList.DispatchIndirectCore(Veldrid.Buffer,System.UInt32)
+  fullName: Veldrid.CommandList.DispatchIndirectCore(Veldrid.Buffer, System.UInt32)
+  nameWithType: CommandList.DispatchIndirectCore(Buffer, UInt32)
+- uid: Veldrid.CommandList.DispatchIndirectCore*
+  name: DispatchIndirectCore
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DispatchIndirectCore_
+  commentId: Overload:Veldrid.CommandList.DispatchIndirectCore
+  fullName: Veldrid.CommandList.DispatchIndirectCore
+  nameWithType: CommandList.DispatchIndirectCore
 - uid: Veldrid.CommandList.Dispose
   name: Dispose()
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_Dispose
@@ -589,6 +619,54 @@ references:
   commentId: Overload:Veldrid.CommandList.DrawIndexed
   fullName: Veldrid.CommandList.DrawIndexed
   nameWithType: CommandList.DrawIndexed
+- uid: Veldrid.CommandList.DrawIndexedIndirect(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)
+  name: DrawIndexedIndirect(Buffer, UInt32, UInt32, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexedIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.CommandList.DrawIndexedIndirect(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.CommandList.DrawIndexedIndirect(Veldrid.Buffer, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: CommandList.DrawIndexedIndirect(Buffer, UInt32, UInt32, UInt32)
+- uid: Veldrid.CommandList.DrawIndexedIndirect*
+  name: DrawIndexedIndirect
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexedIndirect_
+  commentId: Overload:Veldrid.CommandList.DrawIndexedIndirect
+  fullName: Veldrid.CommandList.DrawIndexedIndirect
+  nameWithType: CommandList.DrawIndexedIndirect
+- uid: Veldrid.CommandList.DrawIndexedIndirectCore(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)
+  name: DrawIndexedIndirectCore(Buffer, UInt32, UInt32, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexedIndirectCore_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.CommandList.DrawIndexedIndirectCore(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.CommandList.DrawIndexedIndirectCore(Veldrid.Buffer, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: CommandList.DrawIndexedIndirectCore(Buffer, UInt32, UInt32, UInt32)
+- uid: Veldrid.CommandList.DrawIndexedIndirectCore*
+  name: DrawIndexedIndirectCore
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexedIndirectCore_
+  commentId: Overload:Veldrid.CommandList.DrawIndexedIndirectCore
+  fullName: Veldrid.CommandList.DrawIndexedIndirectCore
+  nameWithType: CommandList.DrawIndexedIndirectCore
+- uid: Veldrid.CommandList.DrawIndirect(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)
+  name: DrawIndirect(Buffer, UInt32, UInt32, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.CommandList.DrawIndirect(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.CommandList.DrawIndirect(Veldrid.Buffer, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: CommandList.DrawIndirect(Buffer, UInt32, UInt32, UInt32)
+- uid: Veldrid.CommandList.DrawIndirect*
+  name: DrawIndirect
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndirect_
+  commentId: Overload:Veldrid.CommandList.DrawIndirect
+  fullName: Veldrid.CommandList.DrawIndirect
+  nameWithType: CommandList.DrawIndirect
+- uid: Veldrid.CommandList.DrawIndirectCore(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)
+  name: DrawIndirectCore(Buffer, UInt32, UInt32, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndirectCore_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.CommandList.DrawIndirectCore(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.CommandList.DrawIndirectCore(Veldrid.Buffer, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: CommandList.DrawIndirectCore(Buffer, UInt32, UInt32, UInt32)
+- uid: Veldrid.CommandList.DrawIndirectCore*
+  name: DrawIndirectCore
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndirectCore_
+  commentId: Overload:Veldrid.CommandList.DrawIndirectCore
+  fullName: Veldrid.CommandList.DrawIndirectCore
+  nameWithType: CommandList.DrawIndirectCore
 - uid: Veldrid.CommandList.End
   name: End()
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_End
@@ -1810,6 +1888,96 @@ references:
   commentId: F:Veldrid.IndexFormat.UInt32
   fullName: Veldrid.IndexFormat.UInt32
   nameWithType: IndexFormat.UInt32
+- uid: Veldrid.IndirectDispatchArguments
+  name: IndirectDispatchArguments
+  href: api/Veldrid.IndirectDispatchArguments.html
+  commentId: T:Veldrid.IndirectDispatchArguments
+  fullName: Veldrid.IndirectDispatchArguments
+  nameWithType: IndirectDispatchArguments
+- uid: Veldrid.IndirectDispatchArguments.GroupCountX
+  name: GroupCountX
+  href: api/Veldrid.IndirectDispatchArguments.html#Veldrid_IndirectDispatchArguments_GroupCountX
+  commentId: F:Veldrid.IndirectDispatchArguments.GroupCountX
+  fullName: Veldrid.IndirectDispatchArguments.GroupCountX
+  nameWithType: IndirectDispatchArguments.GroupCountX
+- uid: Veldrid.IndirectDispatchArguments.GroupCountY
+  name: GroupCountY
+  href: api/Veldrid.IndirectDispatchArguments.html#Veldrid_IndirectDispatchArguments_GroupCountY
+  commentId: F:Veldrid.IndirectDispatchArguments.GroupCountY
+  fullName: Veldrid.IndirectDispatchArguments.GroupCountY
+  nameWithType: IndirectDispatchArguments.GroupCountY
+- uid: Veldrid.IndirectDispatchArguments.GroupCountZ
+  name: GroupCountZ
+  href: api/Veldrid.IndirectDispatchArguments.html#Veldrid_IndirectDispatchArguments_GroupCountZ
+  commentId: F:Veldrid.IndirectDispatchArguments.GroupCountZ
+  fullName: Veldrid.IndirectDispatchArguments.GroupCountZ
+  nameWithType: IndirectDispatchArguments.GroupCountZ
+- uid: Veldrid.IndirectDrawArguments
+  name: IndirectDrawArguments
+  href: api/Veldrid.IndirectDrawArguments.html
+  commentId: T:Veldrid.IndirectDrawArguments
+  fullName: Veldrid.IndirectDrawArguments
+  nameWithType: IndirectDrawArguments
+- uid: Veldrid.IndirectDrawArguments.FirstInstance
+  name: FirstInstance
+  href: api/Veldrid.IndirectDrawArguments.html#Veldrid_IndirectDrawArguments_FirstInstance
+  commentId: F:Veldrid.IndirectDrawArguments.FirstInstance
+  fullName: Veldrid.IndirectDrawArguments.FirstInstance
+  nameWithType: IndirectDrawArguments.FirstInstance
+- uid: Veldrid.IndirectDrawArguments.FirstVertex
+  name: FirstVertex
+  href: api/Veldrid.IndirectDrawArguments.html#Veldrid_IndirectDrawArguments_FirstVertex
+  commentId: F:Veldrid.IndirectDrawArguments.FirstVertex
+  fullName: Veldrid.IndirectDrawArguments.FirstVertex
+  nameWithType: IndirectDrawArguments.FirstVertex
+- uid: Veldrid.IndirectDrawArguments.InstanceCount
+  name: InstanceCount
+  href: api/Veldrid.IndirectDrawArguments.html#Veldrid_IndirectDrawArguments_InstanceCount
+  commentId: F:Veldrid.IndirectDrawArguments.InstanceCount
+  fullName: Veldrid.IndirectDrawArguments.InstanceCount
+  nameWithType: IndirectDrawArguments.InstanceCount
+- uid: Veldrid.IndirectDrawArguments.VertexCount
+  name: VertexCount
+  href: api/Veldrid.IndirectDrawArguments.html#Veldrid_IndirectDrawArguments_VertexCount
+  commentId: F:Veldrid.IndirectDrawArguments.VertexCount
+  fullName: Veldrid.IndirectDrawArguments.VertexCount
+  nameWithType: IndirectDrawArguments.VertexCount
+- uid: Veldrid.IndirectDrawIndexedArguments
+  name: IndirectDrawIndexedArguments
+  href: api/Veldrid.IndirectDrawIndexedArguments.html
+  commentId: T:Veldrid.IndirectDrawIndexedArguments
+  fullName: Veldrid.IndirectDrawIndexedArguments
+  nameWithType: IndirectDrawIndexedArguments
+- uid: Veldrid.IndirectDrawIndexedArguments.FirstIndex
+  name: FirstIndex
+  href: api/Veldrid.IndirectDrawIndexedArguments.html#Veldrid_IndirectDrawIndexedArguments_FirstIndex
+  commentId: F:Veldrid.IndirectDrawIndexedArguments.FirstIndex
+  fullName: Veldrid.IndirectDrawIndexedArguments.FirstIndex
+  nameWithType: IndirectDrawIndexedArguments.FirstIndex
+- uid: Veldrid.IndirectDrawIndexedArguments.FirstInstance
+  name: FirstInstance
+  href: api/Veldrid.IndirectDrawIndexedArguments.html#Veldrid_IndirectDrawIndexedArguments_FirstInstance
+  commentId: F:Veldrid.IndirectDrawIndexedArguments.FirstInstance
+  fullName: Veldrid.IndirectDrawIndexedArguments.FirstInstance
+  nameWithType: IndirectDrawIndexedArguments.FirstInstance
+- uid: Veldrid.IndirectDrawIndexedArguments.IndexCount
+  name: IndexCount
+  href: api/Veldrid.IndirectDrawIndexedArguments.html#Veldrid_IndirectDrawIndexedArguments_IndexCount
+  commentId: F:Veldrid.IndirectDrawIndexedArguments.IndexCount
+  fullName: Veldrid.IndirectDrawIndexedArguments.IndexCount
+  nameWithType: IndirectDrawIndexedArguments.IndexCount
+- uid: Veldrid.IndirectDrawIndexedArguments.InstanceCount
+  name: InstanceCount
+  href: api/Veldrid.IndirectDrawIndexedArguments.html#Veldrid_IndirectDrawIndexedArguments_InstanceCount
+  commentId: F:Veldrid.IndirectDrawIndexedArguments.InstanceCount
+  fullName: Veldrid.IndirectDrawIndexedArguments.InstanceCount
+  nameWithType: IndirectDrawIndexedArguments.InstanceCount
+- uid: Veldrid.IndirectDrawIndexedArguments.VertexOffset
+  name: VertexOffset
+  href: api/Veldrid.IndirectDrawIndexedArguments.html#Veldrid_IndirectDrawIndexedArguments_VertexOffset
+  commentId: F:Veldrid.IndirectDrawIndexedArguments.VertexOffset
+  fullName: Veldrid.IndirectDrawIndexedArguments.VertexOffset
+  nameWithType: IndirectDrawIndexedArguments.VertexOffset
 - uid: Veldrid.OpenGL
   name: Veldrid.OpenGL
   href: api/Veldrid.OpenGL.html
@@ -3892,6 +4060,12 @@ references:
   commentId: M:Veldrid.TextureViewDescription.#ctor(Veldrid.Texture)
   fullName: Veldrid.TextureViewDescription.TextureViewDescription(Veldrid.Texture)
   nameWithType: TextureViewDescription.TextureViewDescription(Texture)
+- uid: Veldrid.TextureViewDescription.#ctor(Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  name: TextureViewDescription(Texture, UInt32, UInt32, UInt32, UInt32)
+  href: api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription__ctor_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.TextureViewDescription.#ctor(Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.TextureViewDescription.TextureViewDescription(Veldrid.Texture, System.UInt32, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: TextureViewDescription.TextureViewDescription(Texture, UInt32, UInt32, UInt32, UInt32)
 - uid: Veldrid.TextureViewDescription.#ctor*
   name: TextureViewDescription
   href: api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription__ctor_
