@@ -11,9 +11,9 @@ A basic understanding of graphics APIs and hardware is helpful for understanding
 # Features
 
 * Full customization of graphics resources and pipeline state, with support for current-gen features and optimizations.
-  * Blend, depth-stencil, and rasterizer states.
-  * Programmable vertex, fragment, tessellation, and geometry shaders.
-  * Simplified resource layout and binding model.
+  * Programmable vertex, fragment, tessellation, geometry, and compute shaders.
+  * Indirect drawing and compute dispatch.
+  * Simplified resource layout and binding model, including support for read-write textures and buffers.
   * Simple, unified resource creation and update mechanisms.
 * High-performance: Veldrid is built on a thin, low-cost abstraction that is close to current-gen graphics API's.
 * Allocation-less: The core rendering loop (outside of resource creation and initialization) can be used without allocating any garbage-collected memory. If application code follows suit, then completely GC-less rendering can be achieved.
@@ -31,9 +31,9 @@ See [API Concepts](xref:api-concepts) for an overview of the common object types
 
 # Samples
 
-[NeoDemo](https://github.com/mellinoe/veldrid/tree/master/src/NeoDemo) is a sample application being built in tandem with Veldrid.
+See the [Veldrid Samples](https://github.com/mellinoe/veldrid-samples) repository for a growing set of demo applications build using Veldrid.
 
-A more comprehensive set of example projects is planned as the project matures.
+Additionally, [NeoDemo](https://github.com/mellinoe/veldrid/tree/master/src/NeoDemo) is a sample application being built in tandem with Veldrid, and which uses a large chunk of the available features.
 
 # NuGet Packages
 

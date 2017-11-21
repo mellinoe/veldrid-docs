@@ -1,6 +1,6 @@
 # Veldrid
 
-Veldrid is a cross-platform, graphics API-agnostic rendering library for .NET. It allows you to use a single set of rendering commands and run your application on a number of different graphics API's. With some small exceptions, applications written against Veldrid will run on any of its backends without modification.
+Veldrid is a low-level graphics library for .NET. It can be used to create high-performance 2D and 3D games, simulations, tools, and other graphical applications. Unlike most other .NET graphics libraries, Veldrid is designed to be portable, meaning it is not tied to any particular operating system or native graphics API. With Direct3D, Vulkan, and OpenGL backends, applications built with Veldrid can run on all desktop and mobile platforms without modification.
 
 [Introduction to Veldrid](xref:intro)
 
