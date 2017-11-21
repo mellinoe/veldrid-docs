@@ -73,7 +73,8 @@
   
   <h1 id="Veldrid_BufferUsage" data-uid="Veldrid.BufferUsage" class="text-break">Enum BufferUsage
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>A bitmask describing the permitted uses of a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> object.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
@@ -93,27 +94,39 @@
     <tbody>
       <tr>
         <td id="Veldrid_BufferUsage_IndexBuffer">IndexBuffer</td>
-        <td></td>
+        <td><p>Indicates that a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> can be used as the source of index data for drawing commands.
+This flag enables the use of a Buffer in the <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBuffer_Veldrid_Buffer_Veldrid_IndexFormat_">SetIndexBuffer(Buffer, IndexFormat)</a> method.</p>
+</td>
       </tr>
       <tr>
         <td id="Veldrid_BufferUsage_IndirectBuffer">IndirectBuffer</td>
-        <td></td>
+        <td><p>Indicates that a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> can be used as the source of indirect drawing information.
+This flag enables the use of a buffer in the DrawIndirect methods of <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.</p>
+</td>
       </tr>
       <tr>
         <td id="Veldrid_BufferUsage_StructuredBufferReadOnly">StructuredBufferReadOnly</td>
-        <td></td>
+        <td><p>Indicates that a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> can be used as a read-only structured buffer.
+This flag enables the use of a Buffer in a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> as a read-only structured Buffer.</p>
+</td>
       </tr>
       <tr>
         <td id="Veldrid_BufferUsage_StructuredBufferReadWrite">StructuredBufferReadWrite</td>
-        <td></td>
+        <td><p>Indicates that a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> can be used as a read-write structured buffer.
+This flag enables the use of a Buffer in a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> as a read-write structured Buffer.</p>
+</td>
       </tr>
       <tr>
         <td id="Veldrid_BufferUsage_UniformBuffer">UniformBuffer</td>
-        <td></td>
+        <td><p>Indicates that a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> can be used as a uniform buffer.
+This flag enables the use of a Buffer in a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> as a uniform Buffer.</p>
+</td>
       </tr>
       <tr>
         <td id="Veldrid_BufferUsage_VertexBuffer">VertexBuffer</td>
-        <td></td>
+        <td><p>Indicates that a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> can be used as the source of vertex data for drawing commands.
+This flag enables the use of a Buffer in the <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBuffer_System_UInt32_Veldrid_Buffer_">SetVertexBuffer(UInt32, Buffer)</a> method.</p>
+</td>
       </tr>
     </tbody>
   </thead></thead></table>

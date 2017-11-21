@@ -242,7 +242,8 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   
   <a id="Veldrid_CommandList_Dispatch_" data-uid="Veldrid.CommandList.Dispatch*"></a>
   <h4 id="Veldrid_CommandList_Dispatch_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.Dispatch(System.UInt32,System.UInt32,System.UInt32)">Dispatch(UInt32, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Dispatches a compute operation from the currently-bound compute state of this Pipeline.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -261,17 +262,20 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">groupCountX</span></td>
-        <td></td>
+        <td><p>The X dimension of the compute thread groups that are dispatched.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">groupCountY</span></td>
-        <td></td>
+        <td><p>The Y dimension of the compute thread groups that are dispatched.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">groupCountZ</span></td>
-        <td></td>
+        <td><p>The Z dimension of the compute thread groups that are dispatched.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -279,7 +283,10 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   
   <a id="Veldrid_CommandList_DispatchIndirect_" data-uid="Veldrid.CommandList.DispatchIndirect*"></a>
   <h4 id="Veldrid_CommandList_DispatchIndirect_Veldrid_Buffer_System_UInt32_" data-uid="Veldrid.CommandList.DispatchIndirect(Veldrid.Buffer,System.UInt32)">DispatchIndirect(Buffer, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Issues an indirect compute dispatch command based on the information contained in the given indirect
+<a class="xref" href="Veldrid.Buffer.html">Buffer</a>. The information stored in the indirect Buffer should conform to the structure of
+<a class="xref" href="Veldrid.IndirectDispatchArguments.html">IndirectDispatchArguments</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -298,12 +305,16 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
       <tr>
         <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
         <td><span class="parametername">indirectBuffer</span></td>
-        <td></td>
+        <td><p>The indirect Buffer to read from. Must have been created with the
+<a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_IndirectBuffer">IndirectBuffer</a> flag.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">offset</span></td>
-        <td></td>
+        <td><p>An offset, in bytes, from the start of the indirect buffer from which the draw commands will be
+read. This value must be a multiple of 4.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -354,7 +365,8 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   
   <a id="Veldrid_CommandList_Draw_" data-uid="Veldrid.CommandList.Draw*"></a>
   <h4 id="Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.Draw(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">Draw(UInt32, UInt32, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Draws primitives from the currently-bound state in this CommandList. An index Buffer is not used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -373,22 +385,26 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">vertexCount</span></td>
-        <td></td>
+        <td><p>The number of vertices.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">instanceCount</span></td>
-        <td></td>
+        <td><p>The number of instances.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">vertexStart</span></td>
-        <td></td>
+        <td><p>The first vertex to use when drawing.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">instanceStart</span></td>
-        <td></td>
+        <td><p>The starting instance value.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -396,7 +412,7 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   
   <a id="Veldrid_CommandList_DrawIndexed_" data-uid="Veldrid.CommandList.DrawIndexed*"></a>
   <h4 id="Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexed(System.UInt32,System.UInt32,System.UInt32,System.Int32,System.UInt32)">DrawIndexed(UInt32, UInt32, UInt32, Int32, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Draws primitives from the currently-bound state in this <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.</p>
+  <div class="markdown level1 summary"><p>Draws indexed primitives from the currently-bound state in this <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -449,7 +465,10 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   
   <a id="Veldrid_CommandList_DrawIndexedIndirect_" data-uid="Veldrid.CommandList.DrawIndexedIndirect*"></a>
   <h4 id="Veldrid_CommandList_DrawIndexedIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexedIndirect(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndexedIndirect(Buffer, UInt32, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Issues indirect, indexed draw commands based on the information contained in the given indirect <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.
+The information stored in the indirect Buffer should conform to the structure of
+<a class="xref" href="Veldrid.IndirectDrawIndexedArguments.html">IndirectDrawIndexedArguments</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -468,22 +487,29 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
       <tr>
         <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
         <td><span class="parametername">indirectBuffer</span></td>
-        <td></td>
+        <td><p>The indirect Buffer to read from. Must have been created with the
+<a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_IndirectBuffer">IndirectBuffer</a> flag.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">offset</span></td>
-        <td></td>
+        <td><p>An offset, in bytes, from the start of the indirect buffer from which the draw commands will be
+read. This value must be a multiple of 4.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">drawCount</span></td>
-        <td></td>
+        <td><p>The number of draw commands to read and issue from the indirect Buffer.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">stride</span></td>
-        <td></td>
+        <td><p>The stride, in bytes, between consecutive draw commands in the indirect Buffer. This value must
+be a multiple of four, and must be larger than the size of <a class="xref" href="Veldrid.IndirectDrawIndexedArguments.html">IndirectDrawIndexedArguments</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -533,7 +559,9 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   
   <a id="Veldrid_CommandList_DrawIndirect_" data-uid="Veldrid.CommandList.DrawIndirect*"></a>
   <h4 id="Veldrid_CommandList_DrawIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndirect(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndirect(Buffer, UInt32, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Issues indirect draw commands based on the information contained in the given indirect <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.
+The information stored in the indirect Buffer should conform to the structure of <a class="xref" href="Veldrid.IndirectDrawArguments.html">IndirectDrawArguments</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -552,22 +580,29 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
       <tr>
         <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
         <td><span class="parametername">indirectBuffer</span></td>
-        <td></td>
+        <td><p>The indirect Buffer to read from. Must have been created with the
+<a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_IndirectBuffer">IndirectBuffer</a> flag.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">offset</span></td>
-        <td></td>
+        <td><p>An offset, in bytes, from the start of the indirect buffer from which the draw commands will be
+read. This value must be a multiple of 4.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">drawCount</span></td>
-        <td></td>
+        <td><p>The number of draw commands to read and issue from the indirect Buffer.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">stride</span></td>
-        <td></td>
+        <td><p>The stride, in bytes, between consecutive draw commands in the indirect Buffer. This value must
+be a multiple of four, and must be larger than the size of <a class="xref" href="Veldrid.IndirectDrawArguments.html">IndirectDrawArguments</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -704,7 +739,9 @@ It is an error to call this function in succession, unless <a class="xref" href=
   
   <a id="Veldrid_CommandList_SetComputeResourceSet_" data-uid="Veldrid.CommandList.SetComputeResourceSet*"></a>
   <h4 id="Veldrid_CommandList_SetComputeResourceSet_System_UInt32_Veldrid_ResourceSet_" data-uid="Veldrid.CommandList.SetComputeResourceSet(System.UInt32,Veldrid.ResourceSet)">SetComputeResourceSet(UInt32, ResourceSet)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> for the given index. This ResourceSet is only active for the compute
+Pipeline.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -723,12 +760,14 @@ It is an error to call this function in succession, unless <a class="xref" href=
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">slot</span></td>
-        <td></td>
+        <td><p>The resource slot.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
         <td><span class="parametername">rs</span></td>
-        <td></td>
+        <td><p>The new <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -907,7 +946,8 @@ A compatible <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> has the s
   
   <a id="Veldrid_CommandList_SetGraphicsResourceSet_" data-uid="Veldrid.CommandList.SetGraphicsResourceSet*"></a>
   <h4 id="Veldrid_CommandList_SetGraphicsResourceSet_System_UInt32_Veldrid_ResourceSet_" data-uid="Veldrid.CommandList.SetGraphicsResourceSet(System.UInt32,Veldrid.ResourceSet)">SetGraphicsResourceSet(UInt32, ResourceSet)</h4>
-  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> for the given index.</p>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> for the given index. This ResourceSet is only active for the graphics
+Pipeline.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
