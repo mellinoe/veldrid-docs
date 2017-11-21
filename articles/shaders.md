@@ -24,6 +24,44 @@ ResourceLayouts themselves contain a set of one-or-more resource elements. Addit
 
 Generally, it is advisable to group resources into sets and layouts which are common or shared. For example, it is a good idea to group the camera's view and projection matrix, and other scene-level information, into a single ResourceLayout and shared ResourceSet. This allows many objects to be rendered using the same bound ResourceSet. Specific object Pipelines can utilize extra ResourceLayouts and ResourceSets to accomodate their specific rendering requirements while still utilizing shared resources when it makes sense. Changing ResourceSets can be a costly operation, so re-using them as much as possible can help performance.
 
+## Types of Resources
+
+There are many types of shader resources available in Veldrid.
+
+### Uniform Buffer
+
+A uniform [Buffer](xref:Veldrid.Buffer) is a resource used to store a small-to-medium amount of data for a shader to access. Uniform buffers are commonly used to store per-object transformations, camera transformations and properties, and other information.
+
+A Buffer must be created with [BufferUsage.UniformBuffer](xref:Veldrid.BufferUsage) to be used as a uniform Buffer.
+
+Uniform Buffers correspond to "cbuffer" blocks in HLSL, and a uniform variable or uniform block in GLSL.
+
+### Structured Buffer
+
+A structured buffer is another kind of Buffer resource available to shaders. Like uniform Buffers, they can be used to store arbitrary data, but are generally much larger. Structured Buffers are used to store a large amount of a single kind of value (a "structure"). The size of the structure that is stored must be designated upon Buffer creation (see [BufferDescription.StructurByteStride](xref:Veldrid.BufferDescription#Veldrid_BufferDescription_StructureByteStride)).
+
+Structured Buffers may be read-only or read-write. Read-write Buffers can be written to in the fragment and compute stages, allowing arbitrary data to be output by shaders. Read-only structured buffers must be created with the [BufferUsage.StructuredBufferReadOnly](xref:Veldrid.BufferUsage) flag, and read-write structured buffers must be created with the [BufferUsage.StructuredBufferReadWrite](xref:Veldrid.BufferUsage) flag.
+
+Structure Buffers correspond to `StructuredBuffer<T>` or `RWStructuredBuffer<T>` objects in HLSL, and `readonly` or normal "buffer blocks" in GLSL.
+
+### TextureView
+
+A [TextureView](xref:Veldrid.TextureView) is a resource which gives a shader read-only or read-write access to a [Texture](xref:Veldrid.Texture). A TextureView allows a subset of the Texture object's dimensions to be accessible, enabling a single slice of an array texture to be read from or written to, for example.
+
+Read-only TextureView objects must have a [Target](xref:Veldrid.TextureViewDescription#Veldrid_TextureViewDescription_Target) that was created with the [TextureUsage.Sampled](xref:Veldrid.TextureUsage) flag. Read-write TextureViews must target a Texture created with the [TextureUsage.Storage](xref:Veldrid.TextureUsage) flag.
+
+Read-only TextureViews correspond to "Texture" objects in HLSL (Texture2D, Texture2DArray, TextureCube, etc). They correspond to "sampler" objects in OpenGL-flavored GLSL (sampler2D, sampler2DArray, samplerCube, etc.), and "texture" objects in Vulkan-flavored GLSL (texture2D, texture2DArray, textureCube, etc.).
+
+Read-write TextureViews correspond to "RWTexture" objects in HLSL. They correspond to "uniform image" types in GLSL (image2D, image2DArray, imageCube, etc.).
+
+### Sampler
+
+A [Sampler](xref:Veldrid.Sampler) is a resource which controls how TextureViews are sampled. See [SamplerDescription](xref:Veldrid.SamplerDescription) for the set of properties governing their behavior.
+
+Several shared Samplers are available as properties on [GraphicsDevice](xref:Veldrid.GraphicsDevice). These can be used when a common type of Sampler is needed and you don't want to manage the lifetime of a shared Sampler.
+
+There is an important caveat regarding OpenGL support for Sampler objects and how they can be bound to a Pipeline. before Vulkan, GLSL did not allow Sampler object state to be separated from Textures. GLSL "sampler" objects encapsulate both, and the GL objects must be bound to a shared set of texture units. TextureViews and Samplers are separated in Veldrid, and these objects must be bound separately to a Pipeline. This means it is not possible to represent Veldrid's abstraction fully in the OpenGL backend: when a Sampler object appears in a ResourceLayout list, it applies to all of the TextureView objects before it (until the previous Sampler in the list). This means that if you need to sample the same TextureView with two different Samplers, then you need to declare two TextureViews with two Samplers in your ResourceLayout.
+
 ## Mapping HLSL/GLSL resources to ResourceLayouts
 
 The layout system is convention-based, and relies on shader code being authored in a particular way for resource slots to match.

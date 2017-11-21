@@ -78,7 +78,7 @@ Graphics and compute pipelines are tracked separately in a CommandList. This mea
 
 ### ResourceLayouts and ResourceSets
 
-A [ResourceSet](xref:Veldrid.ResourceSet) is another fundamental device resource which is necessary, along with a Pipeline, for all Drawing commands. ResourceSets are the mechanism by which BindableResource objects ([Buffers](xref:Veldrid.Buffer)(uniform and structured), [TextureViews](xref:Veldrid.TextureView), and [Samplers](xref:Veldrid.Sampler)) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a [ResourceLayout](xref:Veldrid.ResourceLayout) object, used to create both a ResourceSet and a Pipeline.
+A [ResourceSet](xref:Veldrid.ResourceSet) is another fundamental device resource which is necessary, along with a Pipeline, for all Drawing commands. ResourceSets are the mechanism by which BindableResource objects ([Buffers](xref:Veldrid.Buffer), [TextureViews](xref:Veldrid.TextureView), and [Samplers](xref:Veldrid.Sampler)) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a [ResourceLayout](xref:Veldrid.ResourceLayout) object, used to create both a ResourceSet and a Pipeline.
 
 ### Framebuffer
 
