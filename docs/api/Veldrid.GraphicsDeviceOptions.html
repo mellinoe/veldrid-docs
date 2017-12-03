@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Buffer
+    <title>Struct GraphicsDeviceOptions
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Buffer
+    <meta name="title" content="Struct GraphicsDeviceOptions
    ">
     <meta name="generator" content="docfx 2.26.4.0">
     
@@ -68,35 +68,24 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Veldrid.Buffer">
+            <article class="content wrap" id="_content" data-uid="Veldrid.GraphicsDeviceOptions">
   
   
-  <h1 id="Veldrid_Buffer" data-uid="Veldrid.Buffer" class="text-break">Class Buffer
+  <h1 id="Veldrid_GraphicsDeviceOptions" data-uid="Veldrid.GraphicsDeviceOptions" class="text-break">Struct GraphicsDeviceOptions
   </h1>
-  <div class="markdown level0 summary"><p>A device resource used to store arbitrary graphics data in various formats.
-The size of a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> is fixed upon creation, and resizing is not possible.
-See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.</p>
+  <div class="markdown level0 summary"><p>A structure describing several common properties of a GraphicsDevice.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div class="inheritance">
-    <h5>Inheritance</h5>
-    <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Buffer</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a></div>
-    <div><a class="xref" href="Veldrid.BindableResource.html">BindableResource</a></div>
-    <div><a class="xref" href="Veldrid.MappableResource.html">MappableResource</a></div>
-    <div><span class="xref">IDisposable</span></div>
-  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.Object.ToString()</span>
+      <span class="xref">System.ValueType.Equals(System.Object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.Equals(System.Object)</span>
+      <span class="xref">System.ValueType.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.ToString()</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
@@ -105,35 +94,74 @@ See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
     <div>
-      <span class="xref">System.Object.GetHashCode()</span>
-    </div>
-    <div>
       <span class="xref">System.Object.GetType()</span>
-    </div>
-    <div>
-      <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Veldrid_Buffer_syntax">Syntax</h5>
+  <h5 id="Veldrid_GraphicsDeviceOptions_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Buffer : DeviceResource, BindableResource, MappableResource, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public struct GraphicsDeviceOptions</code></pre>
   </div>
-  <h3 id="properties">Properties
+  <h3 id="constructors">Constructors
   </h3>
   
   
-  <a id="Veldrid_Buffer_SizeInBytes_" data-uid="Veldrid.Buffer.SizeInBytes*"></a>
-  <h4 id="Veldrid_Buffer_SizeInBytes" data-uid="Veldrid.Buffer.SizeInBytes">SizeInBytes</h4>
-  <div class="markdown level1 summary"><p>The total capacity, in bytes, of the buffer. This value is fixed upon creation.</p>
+  <a id="Veldrid_GraphicsDeviceOptions__ctor_" data-uid="Veldrid.GraphicsDeviceOptions.#ctor*"></a>
+  <h4 id="Veldrid_GraphicsDeviceOptions__ctor_System_Boolean_System_Nullable_Veldrid_PixelFormat__System_Boolean_" data-uid="Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean)">GraphicsDeviceOptions(Boolean, Nullable&lt;PixelFormat&gt;, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new GraphicsDeviceOptions.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract uint SizeInBytes { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GraphicsDeviceOptions(bool debug, PixelFormat? swapchainDepthFormat, bool syncToVerticalBlank)</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">debug</span></td>
+        <td><p>Indicates whether the GraphicsDevice will support debug features, provided they are supported by
+the host system.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a>&gt;</td>
+        <td><span class="parametername">swapchainDepthFormat</span></td>
+        <td><p>An optional <a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a> to be used for the depth buffer of the
+swapchain. If this value is null, then no depth buffer will be present on the swapchain.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">syncToVerticalBlank</span></td>
+        <td><p>Indicates whether the GraphicsDevice will be synchronized to the window system&apos;s
+vertical refresh rate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="fields">Fields
+  </h3>
+  
+  
+  <h4 id="Veldrid_GraphicsDeviceOptions_Debug" data-uid="Veldrid.GraphicsDeviceOptions.Debug">Debug</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the GraphicsDevice will support debug features, provided they are supported by the host system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Debug</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -143,23 +171,23 @@ See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_Buffer_Usage_" data-uid="Veldrid.Buffer.Usage*"></a>
-  <h4 id="Veldrid_Buffer_Usage" data-uid="Veldrid.Buffer.Usage">Usage</h4>
-  <div class="markdown level1 summary"><p>A bitmask indicating how this instance is permitted to be used.</p>
+  <h4 id="Veldrid_GraphicsDeviceOptions_SwapchainDepthFormat" data-uid="Veldrid.GraphicsDeviceOptions.SwapchainDepthFormat">SwapchainDepthFormat</h4>
+  <div class="markdown level1 summary"><p>An optional <a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a> to be used for the depth buffer of the swapchain. If this value is null, then
+no depth buffer will be present on the swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract BufferUsage Usage { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public PixelFormat? SwapchainDepthFormat</code></pre>
   </div>
-  <h5 class="propertyValue">Property Value</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -169,37 +197,36 @@ See <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.BufferUsage.html">BufferUsage</a></td>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   
   
-  <a id="Veldrid_Buffer_Dispose_" data-uid="Veldrid.Buffer.Dispose*"></a>
-  <h4 id="Veldrid_Buffer_Dispose" data-uid="Veldrid.Buffer.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"><p>Frees unmanaged device resources controlled by this instance.</p>
+  <h4 id="Veldrid_GraphicsDeviceOptions_SyncToVerticalBlank" data-uid="Veldrid.GraphicsDeviceOptions.SyncToVerticalBlank">SyncToVerticalBlank</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the GraphicsDevice will be synchronized to the window system&apos;s vertical refresh rate.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Dispose()</code></pre>
+    <pre><code class="lang-csharp hljs">public bool SyncToVerticalBlank</code></pre>
   </div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a>
-  </div>
-  <div>
-      <a class="xref" href="Veldrid.BindableResource.html">BindableResource</a>
-  </div>
-  <div>
-      <a class="xref" href="Veldrid.MappableResource.html">MappableResource</a>
-  </div>
-  <div>
-      <span class="xref">IDisposable</span>
-  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

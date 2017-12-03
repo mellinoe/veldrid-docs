@@ -76,7 +76,7 @@
 <pre><code class="lang-XML">&lt;PackageReference Include=&quot;Veldrid&quot; Version=&quot;4.0.0-gaa5ff5bed4&quot; /&gt;
 &lt;PackageReference Include=&quot;Veldrid.StartupUtilities&quot; Version=&quot;4.0.0-gaa5ff5bed4&quot; /&gt;
 </code></pre><h2 id="creating-a-window">Creating a Window</h2>
-<p>Veldrid itself does not care what framework or library you use to manage your window or render view -- it is flexible enough to work with many different systems. The <code>VeldridStartup</code> static class (from Veldrid.StartupUtilities) includes a number of helper functions intended to make Window and GraphicsDevice creation easier for common scenarios, which will be used here.</p>
+<p>Veldrid itself does not care what framework or library you use to manage your window or render view -- it is flexible enough to work with many different systems. The <code>VeldridStartup</code> static class (from Veldrid.StartupUtilities) includes a number of helper functions intended to make Window and GraphicsDevice creation easier for common scenarios, and it will be used here.</p>
 <p>First, we will create a Window. Inside the <code>Main()</code> method, let&#39;s add some code.</p>
 <pre><code class="lang-C#">WindowCreateInfo windowCI = new WindowCreateInfo()
 {
@@ -88,10 +88,8 @@
 };
 Sdl2Window window = VeldridStartup.CreateWindow(ref windowCI);
 </code></pre><p>This creates a new Sdl2Window with some basic properties. Next, we will create a GraphicsDevice attached to it. This will let us issue graphics commands into the window. Create a new <a class="xref" href="../../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a> field called <code>_graphicsDevice</code>. We will use another <code>VeldridStartup</code> helper method to create it:</p>
-<pre><code class="lang-C#">GraphicsDeviceCreateInfo gdCI = new GraphicsDeviceCreateInfo();
-_graphicsDevice = VeldridStartup.CreateGraphicsDevice(ref gdCI, window);
-</code></pre><p><code>GraphicsDeviceCreateInfo</code> has two properties that we could set: a boolean controlling whether the device will report debug information (<code>DebugDevice</code>), and a <a class="xref" href="../../api/Veldrid.GraphicsBackend.html">GraphicsBackend</a> identifying a preferred graphics API to use (Vulkan, Direct3D 11, or OpenGL). When unspecified, the default backend for the platform will be chosen. We will leave the default.</p>
-<p>Next, let&#39;s add in a very basic application loop that keeps the window running. At the bottom of <code>Main()</code>:</p>
+<pre><code class="lang-C#">_graphicsDevice = VeldridStartup.CreateGraphicsDevice(window);
+</code></pre><p>Next, let&#39;s add in a very basic application loop that keeps the window running. At the bottom of <code>Main()</code>:</p>
 <pre><code class="lang-C#">while (window.Exists)
 {
     window.PumpEvents();

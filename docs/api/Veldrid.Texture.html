@@ -85,6 +85,7 @@ See <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a></div>
+    <div><a class="xref" href="Veldrid.MappableResource.html">MappableResource</a></div>
     <div><span class="xref">IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
@@ -115,7 +116,7 @@ See <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Veldrid_Texture_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Texture : DeviceResource, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Texture : DeviceResource, MappableResource, IDisposable</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
@@ -333,6 +334,57 @@ used, and it is an error to attempt to use the Texture outside of those contexts
   </h3>
   
   
+  <a id="Veldrid_Texture_CalculateSubresource_" data-uid="Veldrid.Texture.CalculateSubresource*"></a>
+  <h4 id="Veldrid_Texture_CalculateSubresource_System_UInt32_System_UInt32_" data-uid="Veldrid.Texture.CalculateSubresource(System.UInt32,System.UInt32)">CalculateSubresource(UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Calculates the subresource index, given a mipmap level and array layer.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint CalculateSubresource(uint mipLevel, uint arrayLayer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">mipLevel</span></td>
+        <td><p>The mip level. This should be less than <a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_MipLevels">MipLevels</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">arrayLayer</span></td>
+        <td><p>The array layer. This should be less than <a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_ArrayLayers">ArrayLayers</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><p>The subresource index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_Texture_Dispose_" data-uid="Veldrid.Texture.Dispose*"></a>
   <h4 id="Veldrid_Texture_Dispose" data-uid="Veldrid.Texture.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"><p>Frees unmanaged device resources controlled by this instance.</p>
@@ -345,6 +397,9 @@ used, and it is an error to attempt to use the Texture outside of those contexts
   <h3 id="implements">Implements</h3>
   <div>
       <a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a>
+  </div>
+  <div>
+      <a class="xref" href="Veldrid.MappableResource.html">MappableResource</a>
   </div>
   <div>
       <span class="xref">IDisposable</span>

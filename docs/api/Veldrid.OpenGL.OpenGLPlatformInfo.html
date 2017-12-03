@@ -117,13 +117,13 @@ API.</p>
   
   
   <a id="Veldrid_OpenGL_OpenGLPlatformInfo__ctor_" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.#ctor*"></a>
-  <h4 id="Veldrid_OpenGL_OpenGLPlatformInfo__ctor_IntPtr_Func_System_String_IntPtr__Action_IntPtr__Action_IntPtr__Action_" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.#ctor(IntPtr,Func{System.String,IntPtr},Action{IntPtr},Action{IntPtr},Action)">OpenGLPlatformInfo(IntPtr, Func&lt;String, IntPtr&gt;, Action&lt;IntPtr&gt;, Action&lt;IntPtr&gt;, Action)</h4>
+  <h4 id="Veldrid_OpenGL_OpenGLPlatformInfo__ctor_IntPtr_Func_System_String_IntPtr__Action_IntPtr__Func_IntPtr__Action_Action_IntPtr__Action_Action_System_Boolean__" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.#ctor(IntPtr,Func{System.String,IntPtr},Action{IntPtr},Func{IntPtr},Action,Action{IntPtr},Action,Action{System.Boolean})">OpenGLPlatformInfo(IntPtr, Func&lt;String, IntPtr&gt;, Action&lt;IntPtr&gt;, Func&lt;IntPtr&gt;, Action, Action&lt;IntPtr&gt;, Action, Action&lt;Boolean&gt;)</h4>
   <div class="markdown level1 summary"><p>Constructs a new OpenGLPlatformInfo.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public OpenGLPlatformInfo(IntPtr openGLContextHandle, Func&lt;string, IntPtr&gt; getProcAddress, Action&lt;IntPtr&gt; makeCurrent, Action&lt;IntPtr&gt; deleteContext, Action swapBuffers)</code></pre>
+    <pre><code class="lang-csharp hljs">public OpenGLPlatformInfo(IntPtr openGLContextHandle, Func&lt;string, IntPtr&gt; getProcAddress, Action&lt;IntPtr&gt; makeCurrent, Func&lt;IntPtr&gt; getCurrentContext, Action clearCurrentContext, Action&lt;IntPtr&gt; deleteContext, Action swapBuffers, Action&lt;bool&gt; setSyncToVerticalBlank)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -155,6 +155,18 @@ thread.</p>
 </td>
       </tr>
       <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IntPtr</span>&gt;</td>
+        <td><span class="parametername">getCurrentContext</span></td>
+        <td><p>A delegate which can be used to retrieve the calling thread&apos;s active OpenGL context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">clearCurrentContext</span></td>
+        <td><p>A delegate which can be used to clear the calling thread&apos;s GL context.</p>
+</td>
+      </tr>
+      <tr>
         <td><span class="xref">Action</span>&lt;<span class="xref">IntPtr</span>&gt;</td>
         <td><span class="parametername">deleteContext</span></td>
         <td><p>A delegate which can be used to delete the given context.</p>
@@ -167,10 +179,43 @@ thread.</p>
 context.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">setSyncToVerticalBlank</span></td>
+        <td><p>A delegate which can be used to set the synchronization behavior of the OpenGL
+context.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Veldrid_OpenGL_OpenGLPlatformInfo_ClearCurrentContext_" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.ClearCurrentContext*"></a>
+  <h4 id="Veldrid_OpenGL_OpenGLPlatformInfo_ClearCurrentContext" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.ClearCurrentContext">ClearCurrentContext</h4>
+  <div class="markdown level1 summary"><p>A delegate which can be used to clear the calling thread&apos;s GL context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action ClearCurrentContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Veldrid_OpenGL_OpenGLPlatformInfo_DeleteContext_" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.DeleteContext*"></a>
@@ -193,6 +238,32 @@ context.</p>
     <tbody>
       <tr>
         <td><span class="xref">Action</span>&lt;<span class="xref">IntPtr</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_OpenGL_OpenGLPlatformInfo_GetCurrentContext_" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.GetCurrentContext*"></a>
+  <h4 id="Veldrid_OpenGL_OpenGLPlatformInfo_GetCurrentContext" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.GetCurrentContext">GetCurrentContext</h4>
+  <div class="markdown level1 summary"><p>A delegate which can be used to retrieve the calling thread&apos;s active OpenGL context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Func&lt;IntPtr&gt; GetCurrentContext { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IntPtr</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>
@@ -271,6 +342,32 @@ context.</p>
     <tbody>
       <tr>
         <td><span class="xref">IntPtr</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_OpenGL_OpenGLPlatformInfo_SetSyncToVerticalBlank_" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.SetSyncToVerticalBlank*"></a>
+  <h4 id="Veldrid_OpenGL_OpenGLPlatformInfo_SetSyncToVerticalBlank" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.SetSyncToVerticalBlank">SetSyncToVerticalBlank</h4>
+  <div class="markdown level1 summary"><p>A delegate which can be used to set the synchronization behavior of the OpenGL context.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;bool&gt; SetSyncToVerticalBlank { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
         <td></td>
       </tr>
     </tbody>

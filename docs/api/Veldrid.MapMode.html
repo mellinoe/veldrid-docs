@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Enum TextureUsage
+    <title>Enum MapMode
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Enum TextureUsage
+    <meta name="title" content="Enum MapMode
    ">
     <meta name="generator" content="docfx 2.26.4.0">
     
@@ -68,19 +68,19 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Veldrid.TextureUsage">
+            <article class="content wrap" id="_content" data-uid="Veldrid.MapMode">
   
   
-  <h1 id="Veldrid_TextureUsage" data-uid="Veldrid.TextureUsage" class="text-break">Enum TextureUsage
+  <h1 id="Veldrid_MapMode" data-uid="Veldrid.MapMode" class="text-break">Enum MapMode
   </h1>
-  <div class="markdown level0 summary"><p>A bitmask indicating how a <a class="xref" href="Veldrid.Texture.html">Texture</a> is permitted to be used.</p>
+  <div class="markdown level0 summary"><p>Identifies how a <a class="xref" href="Veldrid.MappableResource.html">MappableResource</a> will be mapped into CPU address space.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Veldrid_TextureUsage_syntax">Syntax</h5>
+  <h5 id="Veldrid_MapMode_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum TextureUsage : byte</code></pre>
+    <pre><code class="lang-csharp hljs">public enum MapMode : byte</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -93,35 +93,23 @@
     <thead>
     <tbody>
       <tr>
-        <td id="Veldrid_TextureUsage_Cubemap">Cubemap</td>
-        <td><p>The Texture is a two-dimensional cubemap.</p>
+        <td id="Veldrid_MapMode_Read">Read</td>
+        <td><p>A read-only resource mapping. The mapped data region is not writable, and cannot be used to transfer data into the
+graphics resource. NOTE: This mode can only be used on resources created with the Staging usage flag.</p>
 </td>
       </tr>
       <tr>
-        <td id="Veldrid_TextureUsage_DepthStencil">DepthStencil</td>
-        <td><p>The Texture can be used as the depth target of a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
+        <td id="Veldrid_MapMode_ReadWrite">ReadWrite</td>
+        <td><p>A read-write resource mapping. The mapped data region is both readable and writable. NOTE: this mode can only be used
+on resources created with the Staging usage flag.</p>
 </td>
       </tr>
       <tr>
-        <td id="Veldrid_TextureUsage_RenderTarget">RenderTarget</td>
-        <td><p>The Texture can be used as the color target of a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_TextureUsage_Sampled">Sampled</td>
-        <td><p>The Texture can be used as the target of a read-only <a class="xref" href="Veldrid.TextureView.html">TextureView</a>, and can be accessed from a shader.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_TextureUsage_Staging">Staging</td>
-        <td><p>The Texture is used as a read-write staging resource for uploading Texture data.
-With this flag, a Texture can be mapped using the <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_System_UInt32_">Map(MappableResource, MapMode, UInt32)</a>
-method.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_TextureUsage_Storage">Storage</td>
-        <td><p>The Texture can be used as the target of a read-write <a class="xref" href="Veldrid.TextureView.html">TextureView</a>, and can be accessed from a shader.</p>
+        <td id="Veldrid_MapMode_Write">Write</td>
+        <td><p>A write-only resource mapping. The mapped data region is writable, and will be transferred into the graphics resource
+when <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Unmap_Veldrid_MappableResource_System_UInt32_">Unmap(MappableResource, UInt32)</a> is called. NOTE: upon mapping a buffer with this
+mode, the previous contents of the resource will be erased. This mode can only be used to entirely replace the
+contents of a resource.</p>
 </td>
       </tr>
     </tbody>

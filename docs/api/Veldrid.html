@@ -171,6 +171,9 @@ See <a class="xref" href="Veldrid.TextureViewDescription.html">TextureViewDescri
       <h4><a class="xref" href="Veldrid.FramebufferDescription.html">FramebufferDescription</a></h4>
       <section><p>Describes a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
 </section>
+      <h4><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></h4>
+      <section><p>A structure describing several common properties of a GraphicsDevice.</p>
+</section>
       <h4><a class="xref" href="Veldrid.GraphicsPipelineDescription.html">GraphicsPipelineDescription</a></h4>
       <section><p>Describes a graphics <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
 </section>
@@ -183,6 +186,13 @@ See <a class="xref" href="Veldrid.TextureViewDescription.html">TextureViewDescri
       <h4><a class="xref" href="Veldrid.IndirectDrawIndexedArguments.html">IndirectDrawIndexedArguments</a></h4>
       <section><p>A structure describing the format expected by indirect, indexed draw commands contained in an indirect
 <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.MappedResource.html">MappedResource</a></h4>
+      <section><p>A structure describing the layout of a mapped <a class="xref" href="Veldrid.MappableResource.html">MappableResource</a> object.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.MappedResourceView-1.html">MappedResourceView&lt;T&gt;</a></h4>
+      <section><p>A typed view of a <a class="xref" href="Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_MappedResource">MappedResource</a>. Provides by-reference structured access to individual elements in the
+mapped resource.</p>
 </section>
       <h4><a class="xref" href="Veldrid.OutputAttachmentDescription.html">OutputAttachmentDescription</a></h4>
       <section><p>Describes an individual output attachment and its format.</p>
@@ -246,6 +256,10 @@ See <a class="xref" href="Veldrid.Buffer.html">Buffer</a>, <a class="xref" href=
 <a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a> instances can be given unique names using
 <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SetResourceName_Veldrid_DeviceResource_System_String_">SetResourceName(DeviceResource, String)</a>.</p>
 </section>
+      <h4><a class="xref" href="Veldrid.MappableResource.html">MappableResource</a></h4>
+      <section><p>A marker interface designating a device resource which can be mapped into CPU-visible memory with
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_System_UInt32_">Map(MappableResource, MapMode, UInt32)</a></p>
+</section>
     <h3 id="enums">Enums
   </h3>
       <h4><a class="xref" href="Veldrid.BlendFactor.html">BlendFactor</a></h4>
@@ -256,9 +270,6 @@ See <a class="xref" href="Veldrid.Buffer.html">Buffer</a>, <a class="xref" href=
 </section>
       <h4><a class="xref" href="Veldrid.BufferUsage.html">BufferUsage</a></h4>
       <section><p>A bitmask describing the permitted uses of a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> object.</p>
-</section>
-      <h4><a class="xref" href="Veldrid.CubeFace.html">CubeFace</a></h4>
-      <section><p>Identifies a unique face of a cubemap <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
 </section>
       <h4><a class="xref" href="Veldrid.DepthComparisonKind.html">DepthComparisonKind</a></h4>
       <section><p>Describes how new values are compared with existing values in a depth comparison.</p>
@@ -274,6 +285,9 @@ See <a class="xref" href="Veldrid.Buffer.html">Buffer</a>, <a class="xref" href=
 </section>
       <h4><a class="xref" href="Veldrid.IndexFormat.html">IndexFormat</a></h4>
       <section><p>The format of index data used in a <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.MapMode.html">MapMode</a></h4>
+      <section><p>Identifies how a <a class="xref" href="Veldrid.MappableResource.html">MappableResource</a> will be mapped into CPU address space.</p>
 </section>
       <h4><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></h4>
       <section><p>The format of data stored in a <a class="xref" href="Veldrid.Texture.html">Texture</a>.

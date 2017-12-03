@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Enum TextureUsage
+    <title>Interface MappableResource
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Enum TextureUsage
+    <meta name="title" content="Interface MappableResource
    ">
     <meta name="generator" content="docfx 2.26.4.0">
     
@@ -68,64 +68,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Veldrid.TextureUsage">
+            <article class="content wrap" id="_content" data-uid="Veldrid.MappableResource">
   
   
-  <h1 id="Veldrid_TextureUsage" data-uid="Veldrid.TextureUsage" class="text-break">Enum TextureUsage
+  <h1 id="Veldrid_MappableResource" data-uid="Veldrid.MappableResource" class="text-break">Interface MappableResource
   </h1>
-  <div class="markdown level0 summary"><p>A bitmask indicating how a <a class="xref" href="Veldrid.Texture.html">Texture</a> is permitted to be used.</p>
+  <div class="markdown level0 summary"><p>A marker interface designating a device resource which can be mapped into CPU-visible memory with
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_System_UInt32_">Map(MappableResource, MapMode, UInt32)</a></p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Veldrid_TextureUsage_syntax">Syntax</h5>
+  <h5 id="Veldrid_MappableResource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum TextureUsage : byte</code></pre>
+    <pre><code class="lang-csharp hljs">public interface MappableResource</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    <thead>
-    <tbody>
-      <tr>
-        <td id="Veldrid_TextureUsage_Cubemap">Cubemap</td>
-        <td><p>The Texture is a two-dimensional cubemap.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_TextureUsage_DepthStencil">DepthStencil</td>
-        <td><p>The Texture can be used as the depth target of a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_TextureUsage_RenderTarget">RenderTarget</td>
-        <td><p>The Texture can be used as the color target of a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_TextureUsage_Sampled">Sampled</td>
-        <td><p>The Texture can be used as the target of a read-only <a class="xref" href="Veldrid.TextureView.html">TextureView</a>, and can be accessed from a shader.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_TextureUsage_Staging">Staging</td>
-        <td><p>The Texture is used as a read-write staging resource for uploading Texture data.
-With this flag, a Texture can be mapped using the <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_System_UInt32_">Map(MappableResource, MapMode, UInt32)</a>
-method.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_TextureUsage_Storage">Storage</td>
-        <td><p>The Texture can be used as the target of a read-write <a class="xref" href="Veldrid.TextureView.html">TextureView</a>, and can be accessed from a shader.</p>
-</td>
-      </tr>
-    </tbody>
-  </thead></thead></table>
 </article>
           </div>
           

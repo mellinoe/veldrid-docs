@@ -385,36 +385,24 @@ references:
   commentId: T:Veldrid.BufferDescription
   fullName: Veldrid.BufferDescription
   nameWithType: BufferDescription
-- uid: Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage)
-  name: BufferDescription(UInt64, BufferUsage)
-  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_System_UInt64_Veldrid_BufferUsage_
-  commentId: M:Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage)
-  fullName: Veldrid.BufferDescription.BufferDescription(System.UInt64, Veldrid.BufferUsage)
-  nameWithType: BufferDescription.BufferDescription(UInt64, BufferUsage)
-- uid: Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage,System.Boolean)
-  name: BufferDescription(UInt64, BufferUsage, Boolean)
-  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_System_UInt64_Veldrid_BufferUsage_System_Boolean_
-  commentId: M:Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage,System.Boolean)
-  fullName: Veldrid.BufferDescription.BufferDescription(System.UInt64, Veldrid.BufferUsage, System.Boolean)
-  nameWithType: BufferDescription.BufferDescription(UInt64, BufferUsage, Boolean)
-- uid: Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage,System.Boolean,System.UInt32)
-  name: BufferDescription(UInt64, BufferUsage, Boolean, UInt32)
-  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_System_UInt64_Veldrid_BufferUsage_System_Boolean_System_UInt32_
-  commentId: M:Veldrid.BufferDescription.#ctor(System.UInt64,Veldrid.BufferUsage,System.Boolean,System.UInt32)
-  fullName: Veldrid.BufferDescription.BufferDescription(System.UInt64, Veldrid.BufferUsage, System.Boolean, System.UInt32)
-  nameWithType: BufferDescription.BufferDescription(UInt64, BufferUsage, Boolean, UInt32)
+- uid: Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage)
+  name: BufferDescription(UInt32, BufferUsage)
+  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_System_UInt32_Veldrid_BufferUsage_
+  commentId: M:Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage)
+  fullName: Veldrid.BufferDescription.BufferDescription(System.UInt32, Veldrid.BufferUsage)
+  nameWithType: BufferDescription.BufferDescription(UInt32, BufferUsage)
+- uid: Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage,System.UInt32)
+  name: BufferDescription(UInt32, BufferUsage, UInt32)
+  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_System_UInt32_Veldrid_BufferUsage_System_UInt32_
+  commentId: M:Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage,System.UInt32)
+  fullName: Veldrid.BufferDescription.BufferDescription(System.UInt32, Veldrid.BufferUsage, System.UInt32)
+  nameWithType: BufferDescription.BufferDescription(UInt32, BufferUsage, UInt32)
 - uid: Veldrid.BufferDescription.#ctor*
   name: BufferDescription
   href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_
   commentId: Overload:Veldrid.BufferDescription.#ctor
   fullName: Veldrid.BufferDescription.BufferDescription
   nameWithType: BufferDescription.BufferDescription
-- uid: Veldrid.BufferDescription.Dynamic
-  name: Dynamic
-  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription_Dynamic
-  commentId: F:Veldrid.BufferDescription.Dynamic
-  fullName: Veldrid.BufferDescription.Dynamic
-  nameWithType: BufferDescription.Dynamic
 - uid: Veldrid.BufferDescription.Equals(Veldrid.BufferDescription)
   name: Equals(BufferDescription)
   href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription_Equals_Veldrid_BufferDescription_
@@ -463,6 +451,12 @@ references:
   commentId: T:Veldrid.BufferUsage
   fullName: Veldrid.BufferUsage
   nameWithType: BufferUsage
+- uid: Veldrid.BufferUsage.Dynamic
+  name: Dynamic
+  href: api/Veldrid.BufferUsage.html#Veldrid_BufferUsage_Dynamic
+  commentId: F:Veldrid.BufferUsage.Dynamic
+  fullName: Veldrid.BufferUsage.Dynamic
+  nameWithType: BufferUsage.Dynamic
 - uid: Veldrid.BufferUsage.IndexBuffer
   name: IndexBuffer
   href: api/Veldrid.BufferUsage.html#Veldrid_BufferUsage_IndexBuffer
@@ -475,6 +469,12 @@ references:
   commentId: F:Veldrid.BufferUsage.IndirectBuffer
   fullName: Veldrid.BufferUsage.IndirectBuffer
   nameWithType: BufferUsage.IndirectBuffer
+- uid: Veldrid.BufferUsage.Staging
+  name: Staging
+  href: api/Veldrid.BufferUsage.html#Veldrid_BufferUsage_Staging
+  commentId: F:Veldrid.BufferUsage.Staging
+  fullName: Veldrid.BufferUsage.Staging
+  nameWithType: BufferUsage.Staging
 - uid: Veldrid.BufferUsage.StructuredBufferReadOnly
   name: StructuredBufferReadOnly
   href: api/Veldrid.BufferUsage.html#Veldrid_BufferUsage_StructuredBufferReadOnly
@@ -547,6 +547,54 @@ references:
   commentId: Overload:Veldrid.CommandList.ClearDepthTarget
   fullName: Veldrid.CommandList.ClearDepthTarget
   nameWithType: CommandList.ClearDepthTarget
+- uid: Veldrid.CommandList.CopyBuffer(Veldrid.Buffer,System.UInt32,Veldrid.Buffer,System.UInt32,System.UInt32)
+  name: CopyBuffer(Buffer, UInt32, Buffer, UInt32, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyBuffer_Veldrid_Buffer_System_UInt32_Veldrid_Buffer_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.CommandList.CopyBuffer(Veldrid.Buffer,System.UInt32,Veldrid.Buffer,System.UInt32,System.UInt32)
+  fullName: Veldrid.CommandList.CopyBuffer(Veldrid.Buffer, System.UInt32, Veldrid.Buffer, System.UInt32, System.UInt32)
+  nameWithType: CommandList.CopyBuffer(Buffer, UInt32, Buffer, UInt32, UInt32)
+- uid: Veldrid.CommandList.CopyBuffer*
+  name: CopyBuffer
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyBuffer_
+  commentId: Overload:Veldrid.CommandList.CopyBuffer
+  fullName: Veldrid.CommandList.CopyBuffer
+  nameWithType: CommandList.CopyBuffer
+- uid: Veldrid.CommandList.CopyBufferCore(Veldrid.Buffer,System.UInt32,Veldrid.Buffer,System.UInt32,System.UInt32)
+  name: CopyBufferCore(Buffer, UInt32, Buffer, UInt32, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyBufferCore_Veldrid_Buffer_System_UInt32_Veldrid_Buffer_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.CommandList.CopyBufferCore(Veldrid.Buffer,System.UInt32,Veldrid.Buffer,System.UInt32,System.UInt32)
+  fullName: Veldrid.CommandList.CopyBufferCore(Veldrid.Buffer, System.UInt32, Veldrid.Buffer, System.UInt32, System.UInt32)
+  nameWithType: CommandList.CopyBufferCore(Buffer, UInt32, Buffer, UInt32, UInt32)
+- uid: Veldrid.CommandList.CopyBufferCore*
+  name: CopyBufferCore
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyBufferCore_
+  commentId: Overload:Veldrid.CommandList.CopyBufferCore
+  fullName: Veldrid.CommandList.CopyBufferCore
+  nameWithType: CommandList.CopyBufferCore
+- uid: Veldrid.CommandList.CopyTexture(Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  name: CopyTexture(Texture, UInt32, UInt32, UInt32, UInt32, UInt32, Texture, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyTexture_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.CommandList.CopyTexture(Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.CommandList.CopyTexture(Veldrid.Texture, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, Veldrid.Texture, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: CommandList.CopyTexture(Texture, UInt32, UInt32, UInt32, UInt32, UInt32, Texture, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
+- uid: Veldrid.CommandList.CopyTexture*
+  name: CopyTexture
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyTexture_
+  commentId: Overload:Veldrid.CommandList.CopyTexture
+  fullName: Veldrid.CommandList.CopyTexture
+  nameWithType: CommandList.CopyTexture
+- uid: Veldrid.CommandList.CopyTextureCore(Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  name: CopyTextureCore(Texture, UInt32, UInt32, UInt32, UInt32, UInt32, Texture, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyTextureCore_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.CommandList.CopyTextureCore(Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.CommandList.CopyTextureCore(Veldrid.Texture, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, Veldrid.Texture, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: CommandList.CopyTextureCore(Texture, UInt32, UInt32, UInt32, UInt32, UInt32, Texture, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
+- uid: Veldrid.CommandList.CopyTextureCore*
+  name: CopyTextureCore
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyTextureCore_
+  commentId: Overload:Veldrid.CommandList.CopyTextureCore
+  fullName: Veldrid.CommandList.CopyTextureCore
+  nameWithType: CommandList.CopyTextureCore
 - uid: Veldrid.CommandList.Dispatch(System.UInt32,System.UInt32,System.UInt32)
   name: Dispatch(UInt32, UInt32, UInt32)
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_Dispatch_System_UInt32_System_UInt32_System_UInt32_
@@ -964,30 +1012,6 @@ references:
   fullName.vb: Veldrid.CommandList.UpdateBuffer(Of T)(Veldrid.Buffer, System.UInt32, T())
   nameWithType: CommandList.UpdateBuffer<T>(Buffer, UInt32, T[])
   nameWithType.vb: CommandList.UpdateBuffer(Of T)(Buffer, UInt32, T())
-- uid: Veldrid.CommandList.UpdateTexture(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
-  name: UpdateTexture(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
-  href: api/Veldrid.CommandList.html#Veldrid_CommandList_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
-  commentId: M:Veldrid.CommandList.UpdateTexture(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
-  fullName: Veldrid.CommandList.UpdateTexture(Veldrid.Texture, IntPtr, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32)
-  nameWithType: CommandList.UpdateTexture(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
-- uid: Veldrid.CommandList.UpdateTexture*
-  name: UpdateTexture
-  href: api/Veldrid.CommandList.html#Veldrid_CommandList_UpdateTexture_
-  commentId: Overload:Veldrid.CommandList.UpdateTexture
-  fullName: Veldrid.CommandList.UpdateTexture
-  nameWithType: CommandList.UpdateTexture
-- uid: Veldrid.CommandList.UpdateTextureCube(Veldrid.Texture,IntPtr,System.UInt32,Veldrid.CubeFace,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
-  name: UpdateTextureCube(Texture, IntPtr, UInt32, CubeFace, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
-  href: api/Veldrid.CommandList.html#Veldrid_CommandList_UpdateTextureCube_Veldrid_Texture_IntPtr_System_UInt32_Veldrid_CubeFace_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
-  commentId: M:Veldrid.CommandList.UpdateTextureCube(Veldrid.Texture,IntPtr,System.UInt32,Veldrid.CubeFace,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
-  fullName: Veldrid.CommandList.UpdateTextureCube(Veldrid.Texture, IntPtr, System.UInt32, Veldrid.CubeFace, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32)
-  nameWithType: CommandList.UpdateTextureCube(Texture, IntPtr, UInt32, CubeFace, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
-- uid: Veldrid.CommandList.UpdateTextureCube*
-  name: UpdateTextureCube
-  href: api/Veldrid.CommandList.html#Veldrid_CommandList_UpdateTextureCube_
-  commentId: Overload:Veldrid.CommandList.UpdateTextureCube
-  fullName: Veldrid.CommandList.UpdateTextureCube
-  nameWithType: CommandList.UpdateTextureCube
 - uid: Veldrid.CommandListDescription
   name: CommandListDescription
   href: api/Veldrid.CommandListDescription.html
@@ -1075,48 +1099,6 @@ references:
   commentId: F:Veldrid.ComputePipelineDescription.ShaderStage
   fullName: Veldrid.ComputePipelineDescription.ShaderStage
   nameWithType: ComputePipelineDescription.ShaderStage
-- uid: Veldrid.CubeFace
-  name: CubeFace
-  href: api/Veldrid.CubeFace.html
-  commentId: T:Veldrid.CubeFace
-  fullName: Veldrid.CubeFace
-  nameWithType: CubeFace
-- uid: Veldrid.CubeFace.NegativeX
-  name: NegativeX
-  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_NegativeX
-  commentId: F:Veldrid.CubeFace.NegativeX
-  fullName: Veldrid.CubeFace.NegativeX
-  nameWithType: CubeFace.NegativeX
-- uid: Veldrid.CubeFace.NegativeY
-  name: NegativeY
-  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_NegativeY
-  commentId: F:Veldrid.CubeFace.NegativeY
-  fullName: Veldrid.CubeFace.NegativeY
-  nameWithType: CubeFace.NegativeY
-- uid: Veldrid.CubeFace.NegativeZ
-  name: NegativeZ
-  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_NegativeZ
-  commentId: F:Veldrid.CubeFace.NegativeZ
-  fullName: Veldrid.CubeFace.NegativeZ
-  nameWithType: CubeFace.NegativeZ
-- uid: Veldrid.CubeFace.PositiveX
-  name: PositiveX
-  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_PositiveX
-  commentId: F:Veldrid.CubeFace.PositiveX
-  fullName: Veldrid.CubeFace.PositiveX
-  nameWithType: CubeFace.PositiveX
-- uid: Veldrid.CubeFace.PositiveY
-  name: PositiveY
-  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_PositiveY
-  commentId: F:Veldrid.CubeFace.PositiveY
-  fullName: Veldrid.CubeFace.PositiveY
-  nameWithType: CubeFace.PositiveY
-- uid: Veldrid.CubeFace.PositiveZ
-  name: PositiveZ
-  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_PositiveZ
-  commentId: F:Veldrid.CubeFace.PositiveZ
-  fullName: Veldrid.CubeFace.PositiveZ
-  nameWithType: CubeFace.PositiveZ
 - uid: Veldrid.DepthComparisonKind
   name: DepthComparisonKind
   href: api/Veldrid.DepthComparisonKind.html
@@ -1591,36 +1573,36 @@ references:
   commentId: Overload:Veldrid.GraphicsDevice.BackendType
   fullName: Veldrid.GraphicsDevice.BackendType
   nameWithType: GraphicsDevice.BackendType
-- uid: Veldrid.GraphicsDevice.CreateD3D11(IntPtr,System.UInt32,System.UInt32)
-  name: CreateD3D11(IntPtr, UInt32, UInt32)
-  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_IntPtr_System_UInt32_System_UInt32_
-  commentId: M:Veldrid.GraphicsDevice.CreateD3D11(IntPtr,System.UInt32,System.UInt32)
-  fullName: Veldrid.GraphicsDevice.CreateD3D11(IntPtr, System.UInt32, System.UInt32)
-  nameWithType: GraphicsDevice.CreateD3D11(IntPtr, UInt32, UInt32)
+- uid: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,IntPtr,System.UInt32,System.UInt32)
+  name: CreateD3D11(GraphicsDeviceOptions, IntPtr, UInt32, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_IntPtr_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,IntPtr,System.UInt32,System.UInt32)
+  fullName: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions, IntPtr, System.UInt32, System.UInt32)
+  nameWithType: GraphicsDevice.CreateD3D11(GraphicsDeviceOptions, IntPtr, UInt32, UInt32)
 - uid: Veldrid.GraphicsDevice.CreateD3D11*
   name: CreateD3D11
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_
   commentId: Overload:Veldrid.GraphicsDevice.CreateD3D11
   fullName: Veldrid.GraphicsDevice.CreateD3D11
   nameWithType: GraphicsDevice.CreateD3D11
-- uid: Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.OpenGL.OpenGLPlatformInfo,System.UInt32,System.UInt32,System.Boolean)
-  name: CreateOpenGL(OpenGLPlatformInfo, UInt32, UInt32, Boolean)
-  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGL_Veldrid_OpenGL_OpenGLPlatformInfo_System_UInt32_System_UInt32_System_Boolean_
-  commentId: M:Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.OpenGL.OpenGLPlatformInfo,System.UInt32,System.UInt32,System.Boolean)
-  fullName: Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.OpenGL.OpenGLPlatformInfo, System.UInt32, System.UInt32, System.Boolean)
-  nameWithType: GraphicsDevice.CreateOpenGL(OpenGLPlatformInfo, UInt32, UInt32, Boolean)
+- uid: Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.GraphicsDeviceOptions,Veldrid.OpenGL.OpenGLPlatformInfo,System.UInt32,System.UInt32)
+  name: CreateOpenGL(GraphicsDeviceOptions, OpenGLPlatformInfo, UInt32, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGL_Veldrid_GraphicsDeviceOptions_Veldrid_OpenGL_OpenGLPlatformInfo_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.GraphicsDeviceOptions,Veldrid.OpenGL.OpenGLPlatformInfo,System.UInt32,System.UInt32)
+  fullName: Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.GraphicsDeviceOptions, Veldrid.OpenGL.OpenGLPlatformInfo, System.UInt32, System.UInt32)
+  nameWithType: GraphicsDevice.CreateOpenGL(GraphicsDeviceOptions, OpenGLPlatformInfo, UInt32, UInt32)
 - uid: Veldrid.GraphicsDevice.CreateOpenGL*
   name: CreateOpenGL
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGL_
   commentId: Overload:Veldrid.GraphicsDevice.CreateOpenGL
   fullName: Veldrid.GraphicsDevice.CreateOpenGL
   nameWithType: GraphicsDevice.CreateOpenGL
-- uid: Veldrid.GraphicsDevice.CreateVulkan(Veldrid.Vk.VkSurfaceSource,System.UInt32,System.UInt32,System.Boolean)
-  name: CreateVulkan(VkSurfaceSource, UInt32, UInt32, Boolean)
-  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_Vk_VkSurfaceSource_System_UInt32_System_UInt32_System_Boolean_
-  commentId: M:Veldrid.GraphicsDevice.CreateVulkan(Veldrid.Vk.VkSurfaceSource,System.UInt32,System.UInt32,System.Boolean)
-  fullName: Veldrid.GraphicsDevice.CreateVulkan(Veldrid.Vk.VkSurfaceSource, System.UInt32, System.UInt32, System.Boolean)
-  nameWithType: GraphicsDevice.CreateVulkan(VkSurfaceSource, UInt32, UInt32, Boolean)
+- uid: Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions,Veldrid.Vk.VkSurfaceSource,System.UInt32,System.UInt32)
+  name: CreateVulkan(GraphicsDeviceOptions, VkSurfaceSource, UInt32, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_Vk_VkSurfaceSource_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions,Veldrid.Vk.VkSurfaceSource,System.UInt32,System.UInt32)
+  fullName: Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions, Veldrid.Vk.VkSurfaceSource, System.UInt32, System.UInt32)
+  nameWithType: GraphicsDevice.CreateVulkan(GraphicsDeviceOptions, VkSurfaceSource, UInt32, UInt32)
 - uid: Veldrid.GraphicsDevice.CreateVulkan*
   name: CreateVulkan
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_
@@ -1675,6 +1657,54 @@ references:
   commentId: Overload:Veldrid.GraphicsDevice.LinearSampler
   fullName: Veldrid.GraphicsDevice.LinearSampler
   nameWithType: GraphicsDevice.LinearSampler
+- uid: Veldrid.GraphicsDevice.Map(Veldrid.MappableResource,Veldrid.MapMode)
+  name: Map(MappableResource, MapMode)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_
+  commentId: M:Veldrid.GraphicsDevice.Map(Veldrid.MappableResource,Veldrid.MapMode)
+  fullName: Veldrid.GraphicsDevice.Map(Veldrid.MappableResource, Veldrid.MapMode)
+  nameWithType: GraphicsDevice.Map(MappableResource, MapMode)
+- uid: Veldrid.GraphicsDevice.Map(Veldrid.MappableResource,Veldrid.MapMode,System.UInt32)
+  name: Map(MappableResource, MapMode, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.Map(Veldrid.MappableResource,Veldrid.MapMode,System.UInt32)
+  fullName: Veldrid.GraphicsDevice.Map(Veldrid.MappableResource, Veldrid.MapMode, System.UInt32)
+  nameWithType: GraphicsDevice.Map(MappableResource, MapMode, UInt32)
+- uid: Veldrid.GraphicsDevice.Map*
+  name: Map
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map_
+  commentId: Overload:Veldrid.GraphicsDevice.Map
+  fullName: Veldrid.GraphicsDevice.Map
+  nameWithType: GraphicsDevice.Map
+- uid: Veldrid.GraphicsDevice.Map``1(Veldrid.MappableResource,Veldrid.MapMode)
+  name: Map<T>(MappableResource, MapMode)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map__1_Veldrid_MappableResource_Veldrid_MapMode_
+  commentId: M:Veldrid.GraphicsDevice.Map``1(Veldrid.MappableResource,Veldrid.MapMode)
+  name.vb: Map(Of T)(MappableResource, MapMode)
+  fullName: Veldrid.GraphicsDevice.Map<T>(Veldrid.MappableResource, Veldrid.MapMode)
+  fullName.vb: Veldrid.GraphicsDevice.Map(Of T)(Veldrid.MappableResource, Veldrid.MapMode)
+  nameWithType: GraphicsDevice.Map<T>(MappableResource, MapMode)
+  nameWithType.vb: GraphicsDevice.Map(Of T)(MappableResource, MapMode)
+- uid: Veldrid.GraphicsDevice.Map``1(Veldrid.MappableResource,Veldrid.MapMode,System.UInt32)
+  name: Map<T>(MappableResource, MapMode, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map__1_Veldrid_MappableResource_Veldrid_MapMode_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.Map``1(Veldrid.MappableResource,Veldrid.MapMode,System.UInt32)
+  name.vb: Map(Of T)(MappableResource, MapMode, UInt32)
+  fullName: Veldrid.GraphicsDevice.Map<T>(Veldrid.MappableResource, Veldrid.MapMode, System.UInt32)
+  fullName.vb: Veldrid.GraphicsDevice.Map(Of T)(Veldrid.MappableResource, Veldrid.MapMode, System.UInt32)
+  nameWithType: GraphicsDevice.Map<T>(MappableResource, MapMode, UInt32)
+  nameWithType.vb: GraphicsDevice.Map(Of T)(MappableResource, MapMode, UInt32)
+- uid: Veldrid.GraphicsDevice.MapCore(Veldrid.MappableResource,Veldrid.MapMode,System.UInt32)
+  name: MapCore(MappableResource, MapMode, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MapCore_Veldrid_MappableResource_Veldrid_MapMode_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.MapCore(Veldrid.MappableResource,Veldrid.MapMode,System.UInt32)
+  fullName: Veldrid.GraphicsDevice.MapCore(Veldrid.MappableResource, Veldrid.MapMode, System.UInt32)
+  nameWithType: GraphicsDevice.MapCore(MappableResource, MapMode, UInt32)
+- uid: Veldrid.GraphicsDevice.MapCore*
+  name: MapCore
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MapCore_
+  commentId: Overload:Veldrid.GraphicsDevice.MapCore
+  fullName: Veldrid.GraphicsDevice.MapCore
+  nameWithType: GraphicsDevice.MapCore
 - uid: Veldrid.GraphicsDevice.PlatformDispose
   name: PlatformDispose()
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_PlatformDispose
@@ -1771,6 +1801,108 @@ references:
   commentId: Overload:Veldrid.GraphicsDevice.SwapchainFramebuffer
   fullName: Veldrid.GraphicsDevice.SwapchainFramebuffer
   nameWithType: GraphicsDevice.SwapchainFramebuffer
+- uid: Veldrid.GraphicsDevice.SyncToVerticalBlank
+  name: SyncToVerticalBlank
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SyncToVerticalBlank
+  commentId: P:Veldrid.GraphicsDevice.SyncToVerticalBlank
+  fullName: Veldrid.GraphicsDevice.SyncToVerticalBlank
+  nameWithType: GraphicsDevice.SyncToVerticalBlank
+- uid: Veldrid.GraphicsDevice.SyncToVerticalBlank*
+  name: SyncToVerticalBlank
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SyncToVerticalBlank_
+  commentId: Overload:Veldrid.GraphicsDevice.SyncToVerticalBlank
+  fullName: Veldrid.GraphicsDevice.SyncToVerticalBlank
+  nameWithType: GraphicsDevice.SyncToVerticalBlank
+- uid: Veldrid.GraphicsDevice.Unmap(Veldrid.MappableResource)
+  name: Unmap(MappableResource)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Unmap_Veldrid_MappableResource_
+  commentId: M:Veldrid.GraphicsDevice.Unmap(Veldrid.MappableResource)
+  fullName: Veldrid.GraphicsDevice.Unmap(Veldrid.MappableResource)
+  nameWithType: GraphicsDevice.Unmap(MappableResource)
+- uid: Veldrid.GraphicsDevice.Unmap(Veldrid.MappableResource,System.UInt32)
+  name: Unmap(MappableResource, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Unmap_Veldrid_MappableResource_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.Unmap(Veldrid.MappableResource,System.UInt32)
+  fullName: Veldrid.GraphicsDevice.Unmap(Veldrid.MappableResource, System.UInt32)
+  nameWithType: GraphicsDevice.Unmap(MappableResource, UInt32)
+- uid: Veldrid.GraphicsDevice.Unmap*
+  name: Unmap
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Unmap_
+  commentId: Overload:Veldrid.GraphicsDevice.Unmap
+  fullName: Veldrid.GraphicsDevice.Unmap
+  nameWithType: GraphicsDevice.Unmap
+- uid: Veldrid.GraphicsDevice.UnmapCore(Veldrid.MappableResource,System.UInt32)
+  name: UnmapCore(MappableResource, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UnmapCore_Veldrid_MappableResource_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.UnmapCore(Veldrid.MappableResource,System.UInt32)
+  fullName: Veldrid.GraphicsDevice.UnmapCore(Veldrid.MappableResource, System.UInt32)
+  nameWithType: GraphicsDevice.UnmapCore(MappableResource, UInt32)
+- uid: Veldrid.GraphicsDevice.UnmapCore*
+  name: UnmapCore
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UnmapCore_
+  commentId: Overload:Veldrid.GraphicsDevice.UnmapCore
+  fullName: Veldrid.GraphicsDevice.UnmapCore
+  nameWithType: GraphicsDevice.UnmapCore
+- uid: Veldrid.GraphicsDevice.UpdateBuffer(Veldrid.Buffer,System.UInt32,IntPtr,System.UInt32)
+  name: UpdateBuffer(Buffer, UInt32, IntPtr, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateBuffer_Veldrid_Buffer_System_UInt32_IntPtr_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.UpdateBuffer(Veldrid.Buffer,System.UInt32,IntPtr,System.UInt32)
+  fullName: Veldrid.GraphicsDevice.UpdateBuffer(Veldrid.Buffer, System.UInt32, IntPtr, System.UInt32)
+  nameWithType: GraphicsDevice.UpdateBuffer(Buffer, UInt32, IntPtr, UInt32)
+- uid: Veldrid.GraphicsDevice.UpdateBuffer*
+  name: UpdateBuffer
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateBuffer_
+  commentId: Overload:Veldrid.GraphicsDevice.UpdateBuffer
+  fullName: Veldrid.GraphicsDevice.UpdateBuffer
+  nameWithType: GraphicsDevice.UpdateBuffer
+- uid: Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0)
+  name: UpdateBuffer<T>(Buffer, UInt32, T)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0_
+  commentId: M:Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0)
+  name.vb: UpdateBuffer(Of T)(Buffer, UInt32, T)
+  fullName: Veldrid.GraphicsDevice.UpdateBuffer<T>(Veldrid.Buffer, System.UInt32, T)
+  fullName.vb: Veldrid.GraphicsDevice.UpdateBuffer(Of T)(Veldrid.Buffer, System.UInt32, T)
+  nameWithType: GraphicsDevice.UpdateBuffer<T>(Buffer, UInt32, T)
+  nameWithType.vb: GraphicsDevice.UpdateBuffer(Of T)(Buffer, UInt32, T)
+- uid: Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0@)
+  name: UpdateBuffer<T>(Buffer, UInt32, ref T)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0__
+  commentId: M:Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0@)
+  name.vb: UpdateBuffer(Of T)(Buffer, UInt32, ByRef T)
+  fullName: Veldrid.GraphicsDevice.UpdateBuffer<T>(Veldrid.Buffer, System.UInt32, ref T)
+  fullName.vb: Veldrid.GraphicsDevice.UpdateBuffer(Of T)(Veldrid.Buffer, System.UInt32, ByRef T)
+  nameWithType: GraphicsDevice.UpdateBuffer<T>(Buffer, UInt32, ref T)
+  nameWithType.vb: GraphicsDevice.UpdateBuffer(Of T)(Buffer, UInt32, ByRef T)
+- uid: Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0@,System.UInt32)
+  name: UpdateBuffer<T>(Buffer, UInt32, ref T, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0__System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0@,System.UInt32)
+  name.vb: UpdateBuffer(Of T)(Buffer, UInt32, ByRef T, UInt32)
+  fullName: Veldrid.GraphicsDevice.UpdateBuffer<T>(Veldrid.Buffer, System.UInt32, ref T, System.UInt32)
+  fullName.vb: Veldrid.GraphicsDevice.UpdateBuffer(Of T)(Veldrid.Buffer, System.UInt32, ByRef T, System.UInt32)
+  nameWithType: GraphicsDevice.UpdateBuffer<T>(Buffer, UInt32, ref T, UInt32)
+  nameWithType.vb: GraphicsDevice.UpdateBuffer(Of T)(Buffer, UInt32, ByRef T, UInt32)
+- uid: Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0[])
+  name: UpdateBuffer<T>(Buffer, UInt32, T[])
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___
+  commentId: M:Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0[])
+  name.vb: UpdateBuffer(Of T)(Buffer, UInt32, T())
+  fullName: Veldrid.GraphicsDevice.UpdateBuffer<T>(Veldrid.Buffer, System.UInt32, T[])
+  fullName.vb: Veldrid.GraphicsDevice.UpdateBuffer(Of T)(Veldrid.Buffer, System.UInt32, T())
+  nameWithType: GraphicsDevice.UpdateBuffer<T>(Buffer, UInt32, T[])
+  nameWithType.vb: GraphicsDevice.UpdateBuffer(Of T)(Buffer, UInt32, T())
+- uid: Veldrid.GraphicsDevice.UpdateTexture(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  name: UpdateTexture(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.UpdateTexture(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.GraphicsDevice.UpdateTexture(Veldrid.Texture, IntPtr, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: GraphicsDevice.UpdateTexture(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
+- uid: Veldrid.GraphicsDevice.UpdateTexture*
+  name: UpdateTexture
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateTexture_
+  commentId: Overload:Veldrid.GraphicsDevice.UpdateTexture
+  fullName: Veldrid.GraphicsDevice.UpdateTexture
+  nameWithType: GraphicsDevice.UpdateTexture
 - uid: Veldrid.GraphicsDevice.WaitForIdle
   name: WaitForIdle()
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_WaitForIdle
@@ -1783,6 +1915,45 @@ references:
   commentId: Overload:Veldrid.GraphicsDevice.WaitForIdle
   fullName: Veldrid.GraphicsDevice.WaitForIdle
   nameWithType: GraphicsDevice.WaitForIdle
+- uid: Veldrid.GraphicsDeviceOptions
+  name: GraphicsDeviceOptions
+  href: api/Veldrid.GraphicsDeviceOptions.html
+  commentId: T:Veldrid.GraphicsDeviceOptions
+  fullName: Veldrid.GraphicsDeviceOptions
+  nameWithType: GraphicsDeviceOptions
+- uid: Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean)
+  name: GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean)
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions__ctor_System_Boolean_System_Nullable_Veldrid_PixelFormat__System_Boolean_
+  commentId: M:Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean)
+  name.vb: GraphicsDeviceOptions(Boolean, Nullable(Of PixelFormat), Boolean)
+  fullName: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean, System.Nullable<Veldrid.PixelFormat>, System.Boolean)
+  fullName.vb: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean, System.Nullable(Of Veldrid.PixelFormat), System.Boolean)
+  nameWithType: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean)
+  nameWithType.vb: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable(Of PixelFormat), Boolean)
+- uid: Veldrid.GraphicsDeviceOptions.#ctor*
+  name: GraphicsDeviceOptions
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions__ctor_
+  commentId: Overload:Veldrid.GraphicsDeviceOptions.#ctor
+  fullName: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions
+  nameWithType: GraphicsDeviceOptions.GraphicsDeviceOptions
+- uid: Veldrid.GraphicsDeviceOptions.Debug
+  name: Debug
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_Debug
+  commentId: F:Veldrid.GraphicsDeviceOptions.Debug
+  fullName: Veldrid.GraphicsDeviceOptions.Debug
+  nameWithType: GraphicsDeviceOptions.Debug
+- uid: Veldrid.GraphicsDeviceOptions.SwapchainDepthFormat
+  name: SwapchainDepthFormat
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_SwapchainDepthFormat
+  commentId: F:Veldrid.GraphicsDeviceOptions.SwapchainDepthFormat
+  fullName: Veldrid.GraphicsDeviceOptions.SwapchainDepthFormat
+  nameWithType: GraphicsDeviceOptions.SwapchainDepthFormat
+- uid: Veldrid.GraphicsDeviceOptions.SyncToVerticalBlank
+  name: SyncToVerticalBlank
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_SyncToVerticalBlank
+  commentId: F:Veldrid.GraphicsDeviceOptions.SyncToVerticalBlank
+  fullName: Veldrid.GraphicsDeviceOptions.SyncToVerticalBlank
+  nameWithType: GraphicsDeviceOptions.SyncToVerticalBlank
 - uid: Veldrid.GraphicsPipelineDescription
   name: GraphicsPipelineDescription
   href: api/Veldrid.GraphicsPipelineDescription.html
@@ -1978,6 +2149,168 @@ references:
   commentId: F:Veldrid.IndirectDrawIndexedArguments.VertexOffset
   fullName: Veldrid.IndirectDrawIndexedArguments.VertexOffset
   nameWithType: IndirectDrawIndexedArguments.VertexOffset
+- uid: Veldrid.MapMode
+  name: MapMode
+  href: api/Veldrid.MapMode.html
+  commentId: T:Veldrid.MapMode
+  fullName: Veldrid.MapMode
+  nameWithType: MapMode
+- uid: Veldrid.MapMode.Read
+  name: Read
+  href: api/Veldrid.MapMode.html#Veldrid_MapMode_Read
+  commentId: F:Veldrid.MapMode.Read
+  fullName: Veldrid.MapMode.Read
+  nameWithType: MapMode.Read
+- uid: Veldrid.MapMode.ReadWrite
+  name: ReadWrite
+  href: api/Veldrid.MapMode.html#Veldrid_MapMode_ReadWrite
+  commentId: F:Veldrid.MapMode.ReadWrite
+  fullName: Veldrid.MapMode.ReadWrite
+  nameWithType: MapMode.ReadWrite
+- uid: Veldrid.MapMode.Write
+  name: Write
+  href: api/Veldrid.MapMode.html#Veldrid_MapMode_Write
+  commentId: F:Veldrid.MapMode.Write
+  fullName: Veldrid.MapMode.Write
+  nameWithType: MapMode.Write
+- uid: Veldrid.MappableResource
+  name: MappableResource
+  href: api/Veldrid.MappableResource.html
+  commentId: T:Veldrid.MappableResource
+  fullName: Veldrid.MappableResource
+  nameWithType: MappableResource
+- uid: Veldrid.MappedResource
+  name: MappedResource
+  href: api/Veldrid.MappedResource.html
+  commentId: T:Veldrid.MappedResource
+  fullName: Veldrid.MappedResource
+  nameWithType: MappedResource
+- uid: Veldrid.MappedResource.Data
+  name: Data
+  href: api/Veldrid.MappedResource.html#Veldrid_MappedResource_Data
+  commentId: F:Veldrid.MappedResource.Data
+  fullName: Veldrid.MappedResource.Data
+  nameWithType: MappedResource.Data
+- uid: Veldrid.MappedResource.DepthPitch
+  name: DepthPitch
+  href: api/Veldrid.MappedResource.html#Veldrid_MappedResource_DepthPitch
+  commentId: F:Veldrid.MappedResource.DepthPitch
+  fullName: Veldrid.MappedResource.DepthPitch
+  nameWithType: MappedResource.DepthPitch
+- uid: Veldrid.MappedResource.Mode
+  name: Mode
+  href: api/Veldrid.MappedResource.html#Veldrid_MappedResource_Mode
+  commentId: F:Veldrid.MappedResource.Mode
+  fullName: Veldrid.MappedResource.Mode
+  nameWithType: MappedResource.Mode
+- uid: Veldrid.MappedResource.Resource
+  name: Resource
+  href: api/Veldrid.MappedResource.html#Veldrid_MappedResource_Resource
+  commentId: F:Veldrid.MappedResource.Resource
+  fullName: Veldrid.MappedResource.Resource
+  nameWithType: MappedResource.Resource
+- uid: Veldrid.MappedResource.RowPitch
+  name: RowPitch
+  href: api/Veldrid.MappedResource.html#Veldrid_MappedResource_RowPitch
+  commentId: F:Veldrid.MappedResource.RowPitch
+  fullName: Veldrid.MappedResource.RowPitch
+  nameWithType: MappedResource.RowPitch
+- uid: Veldrid.MappedResource.SizeInBytes
+  name: SizeInBytes
+  href: api/Veldrid.MappedResource.html#Veldrid_MappedResource_SizeInBytes
+  commentId: F:Veldrid.MappedResource.SizeInBytes
+  fullName: Veldrid.MappedResource.SizeInBytes
+  nameWithType: MappedResource.SizeInBytes
+- uid: Veldrid.MappedResource.Subresource
+  name: Subresource
+  href: api/Veldrid.MappedResource.html#Veldrid_MappedResource_Subresource
+  commentId: F:Veldrid.MappedResource.Subresource
+  fullName: Veldrid.MappedResource.Subresource
+  nameWithType: MappedResource.Subresource
+- uid: Veldrid.MappedResourceView`1
+  name: MappedResourceView<T>
+  href: api/Veldrid.MappedResourceView-1.html
+  commentId: T:Veldrid.MappedResourceView`1
+  name.vb: MappedResourceView(Of T)
+  fullName: Veldrid.MappedResourceView<T>
+  fullName.vb: Veldrid.MappedResourceView(Of T)
+  nameWithType: MappedResourceView<T>
+  nameWithType.vb: MappedResourceView(Of T)
+- uid: Veldrid.MappedResourceView`1.#ctor(Veldrid.MappedResource)
+  name: MappedResourceView(MappedResource)
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1__ctor_Veldrid_MappedResource_
+  commentId: M:Veldrid.MappedResourceView`1.#ctor(Veldrid.MappedResource)
+  fullName: Veldrid.MappedResourceView<T>.MappedResourceView(Veldrid.MappedResource)
+  fullName.vb: Veldrid.MappedResourceView(Of T).MappedResourceView(Veldrid.MappedResource)
+  nameWithType: MappedResourceView<T>.MappedResourceView(MappedResource)
+  nameWithType.vb: MappedResourceView(Of T).MappedResourceView(MappedResource)
+- uid: Veldrid.MappedResourceView`1.#ctor*
+  name: MappedResourceView
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1__ctor_
+  commentId: Overload:Veldrid.MappedResourceView`1.#ctor
+  fullName: Veldrid.MappedResourceView<T>.MappedResourceView
+  fullName.vb: Veldrid.MappedResourceView(Of T).MappedResourceView
+  nameWithType: MappedResourceView<T>.MappedResourceView
+  nameWithType.vb: MappedResourceView(Of T).MappedResourceView
+- uid: Veldrid.MappedResourceView`1.Count
+  name: Count
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Count
+  commentId: F:Veldrid.MappedResourceView`1.Count
+  fullName: Veldrid.MappedResourceView<T>.Count
+  fullName.vb: Veldrid.MappedResourceView(Of T).Count
+  nameWithType: MappedResourceView<T>.Count
+  nameWithType.vb: MappedResourceView(Of T).Count
+- uid: Veldrid.MappedResourceView`1.Item(System.Int32)
+  name: Item[Int32]
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Item_System_Int32_
+  commentId: P:Veldrid.MappedResourceView`1.Item(System.Int32)
+  name.vb: Item(Int32)
+  fullName: Veldrid.MappedResourceView<T>.Item[System.Int32]
+  fullName.vb: Veldrid.MappedResourceView(Of T).Item(System.Int32)
+  nameWithType: MappedResourceView<T>.Item[Int32]
+  nameWithType.vb: MappedResourceView(Of T).Item(Int32)
+- uid: Veldrid.MappedResourceView`1.Item(System.Int32,System.Int32)
+  name: Item[Int32, Int32]
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Item_System_Int32_System_Int32_
+  commentId: P:Veldrid.MappedResourceView`1.Item(System.Int32,System.Int32)
+  name.vb: Item(Int32, Int32)
+  fullName: Veldrid.MappedResourceView<T>.Item[System.Int32, System.Int32]
+  fullName.vb: Veldrid.MappedResourceView(Of T).Item(System.Int32, System.Int32)
+  nameWithType: MappedResourceView<T>.Item[Int32, Int32]
+  nameWithType.vb: MappedResourceView(Of T).Item(Int32, Int32)
+- uid: Veldrid.MappedResourceView`1.Item(System.Int32,System.Int32,System.Int32)
+  name: Item[Int32, Int32, Int32]
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Item_System_Int32_System_Int32_System_Int32_
+  commentId: P:Veldrid.MappedResourceView`1.Item(System.Int32,System.Int32,System.Int32)
+  name.vb: Item(Int32, Int32, Int32)
+  fullName: Veldrid.MappedResourceView<T>.Item[System.Int32, System.Int32, System.Int32]
+  fullName.vb: Veldrid.MappedResourceView(Of T).Item(System.Int32, System.Int32, System.Int32)
+  nameWithType: MappedResourceView<T>.Item[Int32, Int32, Int32]
+  nameWithType.vb: MappedResourceView(Of T).Item(Int32, Int32, Int32)
+- uid: Veldrid.MappedResourceView`1.Item*
+  name: Item
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Item_
+  commentId: Overload:Veldrid.MappedResourceView`1.Item
+  fullName: Veldrid.MappedResourceView<T>.Item
+  fullName.vb: Veldrid.MappedResourceView(Of T).Item
+  nameWithType: MappedResourceView<T>.Item
+  nameWithType.vb: MappedResourceView(Of T).Item
+- uid: Veldrid.MappedResourceView`1.MappedResource
+  name: MappedResource
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_MappedResource
+  commentId: F:Veldrid.MappedResourceView`1.MappedResource
+  fullName: Veldrid.MappedResourceView<T>.MappedResource
+  fullName.vb: Veldrid.MappedResourceView(Of T).MappedResource
+  nameWithType: MappedResourceView<T>.MappedResource
+  nameWithType.vb: MappedResourceView(Of T).MappedResource
+- uid: Veldrid.MappedResourceView`1.SizeInBytes
+  name: SizeInBytes
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_SizeInBytes
+  commentId: F:Veldrid.MappedResourceView`1.SizeInBytes
+  fullName: Veldrid.MappedResourceView<T>.SizeInBytes
+  fullName.vb: Veldrid.MappedResourceView(Of T).SizeInBytes
+  nameWithType: MappedResourceView<T>.SizeInBytes
+  nameWithType.vb: MappedResourceView(Of T).SizeInBytes
 - uid: Veldrid.OpenGL
   name: Veldrid.OpenGL
   href: api/Veldrid.OpenGL.html
@@ -1990,21 +2323,33 @@ references:
   commentId: T:Veldrid.OpenGL.OpenGLPlatformInfo
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo
   nameWithType: OpenGLPlatformInfo
-- uid: Veldrid.OpenGL.OpenGLPlatformInfo.#ctor(IntPtr,Func{System.String,IntPtr},Action{IntPtr},Action{IntPtr},Action)
-  name: OpenGLPlatformInfo(IntPtr, Func<String, IntPtr>, Action<IntPtr>, Action<IntPtr>, Action)
-  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo__ctor_IntPtr_Func_System_String_IntPtr__Action_IntPtr__Action_IntPtr__Action_
-  commentId: M:Veldrid.OpenGL.OpenGLPlatformInfo.#ctor(IntPtr,Func{System.String,IntPtr},Action{IntPtr},Action{IntPtr},Action)
-  name.vb: OpenGLPlatformInfo(IntPtr, Func(Of String, IntPtr), Action(Of IntPtr), Action(Of IntPtr), Action)
-  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func<System.String, IntPtr>, Action<IntPtr>, Action<IntPtr>, Action)
-  fullName.vb: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func(Of System.String, IntPtr), Action(Of IntPtr), Action(Of IntPtr), Action)
-  nameWithType: OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func<String, IntPtr>, Action<IntPtr>, Action<IntPtr>, Action)
-  nameWithType.vb: OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func(Of String, IntPtr), Action(Of IntPtr), Action(Of IntPtr), Action)
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.#ctor(IntPtr,Func{System.String,IntPtr},Action{IntPtr},Func{IntPtr},Action,Action{IntPtr},Action,Action{System.Boolean})
+  name: OpenGLPlatformInfo(IntPtr, Func<String, IntPtr>, Action<IntPtr>, Func<IntPtr>, Action, Action<IntPtr>, Action, Action<Boolean>)
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo__ctor_IntPtr_Func_System_String_IntPtr__Action_IntPtr__Func_IntPtr__Action_Action_IntPtr__Action_Action_System_Boolean__
+  commentId: M:Veldrid.OpenGL.OpenGLPlatformInfo.#ctor(IntPtr,Func{System.String,IntPtr},Action{IntPtr},Func{IntPtr},Action,Action{IntPtr},Action,Action{System.Boolean})
+  name.vb: OpenGLPlatformInfo(IntPtr, Func(Of String, IntPtr), Action(Of IntPtr), Func(Of IntPtr), Action, Action(Of IntPtr), Action, Action(Of Boolean))
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func<System.String, IntPtr>, Action<IntPtr>, Func<IntPtr>, Action, Action<IntPtr>, Action, Action<System.Boolean>)
+  fullName.vb: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func(Of System.String, IntPtr), Action(Of IntPtr), Func(Of IntPtr), Action, Action(Of IntPtr), Action, Action(Of System.Boolean))
+  nameWithType: OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func<String, IntPtr>, Action<IntPtr>, Func<IntPtr>, Action, Action<IntPtr>, Action, Action<Boolean>)
+  nameWithType.vb: OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func(Of String, IntPtr), Action(Of IntPtr), Func(Of IntPtr), Action, Action(Of IntPtr), Action, Action(Of Boolean))
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.#ctor*
   name: OpenGLPlatformInfo
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo__ctor_
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.#ctor
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLPlatformInfo
   nameWithType: OpenGLPlatformInfo.OpenGLPlatformInfo
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.ClearCurrentContext
+  name: ClearCurrentContext
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_ClearCurrentContext
+  commentId: P:Veldrid.OpenGL.OpenGLPlatformInfo.ClearCurrentContext
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.ClearCurrentContext
+  nameWithType: OpenGLPlatformInfo.ClearCurrentContext
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.ClearCurrentContext*
+  name: ClearCurrentContext
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_ClearCurrentContext_
+  commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.ClearCurrentContext
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.ClearCurrentContext
+  nameWithType: OpenGLPlatformInfo.ClearCurrentContext
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.DeleteContext
   name: DeleteContext
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_DeleteContext
@@ -2017,6 +2362,18 @@ references:
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.DeleteContext
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.DeleteContext
   nameWithType: OpenGLPlatformInfo.DeleteContext
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.GetCurrentContext
+  name: GetCurrentContext
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_GetCurrentContext
+  commentId: P:Veldrid.OpenGL.OpenGLPlatformInfo.GetCurrentContext
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.GetCurrentContext
+  nameWithType: OpenGLPlatformInfo.GetCurrentContext
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.GetCurrentContext*
+  name: GetCurrentContext
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_GetCurrentContext_
+  commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.GetCurrentContext
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.GetCurrentContext
+  nameWithType: OpenGLPlatformInfo.GetCurrentContext
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.GetProcAddress
   name: GetProcAddress
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_GetProcAddress
@@ -2053,6 +2410,18 @@ references:
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLContextHandle
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLContextHandle
   nameWithType: OpenGLPlatformInfo.OpenGLContextHandle
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.SetSyncToVerticalBlank
+  name: SetSyncToVerticalBlank
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_SetSyncToVerticalBlank
+  commentId: P:Veldrid.OpenGL.OpenGLPlatformInfo.SetSyncToVerticalBlank
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.SetSyncToVerticalBlank
+  nameWithType: OpenGLPlatformInfo.SetSyncToVerticalBlank
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.SetSyncToVerticalBlank*
+  name: SetSyncToVerticalBlank
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_SetSyncToVerticalBlank_
+  commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.SetSyncToVerticalBlank
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.SetSyncToVerticalBlank
+  nameWithType: OpenGLPlatformInfo.SetSyncToVerticalBlank
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.SwapBuffers
   name: SwapBuffers
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_SwapBuffers
@@ -3163,6 +3532,18 @@ references:
   commentId: F:Veldrid.RgbaFloat.SizeInBytes
   fullName: Veldrid.RgbaFloat.SizeInBytes
   nameWithType: RgbaFloat.SizeInBytes
+- uid: Veldrid.RgbaFloat.ToString
+  name: ToString()
+  href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_ToString
+  commentId: M:Veldrid.RgbaFloat.ToString
+  fullName: Veldrid.RgbaFloat.ToString()
+  nameWithType: RgbaFloat.ToString()
+- uid: Veldrid.RgbaFloat.ToString*
+  name: ToString
+  href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_ToString_
+  commentId: Overload:Veldrid.RgbaFloat.ToString
+  fullName: Veldrid.RgbaFloat.ToString
+  nameWithType: RgbaFloat.ToString
 - uid: Veldrid.RgbaFloat.ToVector4
   name: ToVector4()
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_ToVector4
@@ -3700,6 +4081,18 @@ references:
   commentId: Overload:Veldrid.Texture.ArrayLayers
   fullName: Veldrid.Texture.ArrayLayers
   nameWithType: Texture.ArrayLayers
+- uid: Veldrid.Texture.CalculateSubresource(System.UInt32,System.UInt32)
+  name: CalculateSubresource(UInt32, UInt32)
+  href: api/Veldrid.Texture.html#Veldrid_Texture_CalculateSubresource_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.Texture.CalculateSubresource(System.UInt32,System.UInt32)
+  fullName: Veldrid.Texture.CalculateSubresource(System.UInt32, System.UInt32)
+  nameWithType: Texture.CalculateSubresource(UInt32, UInt32)
+- uid: Veldrid.Texture.CalculateSubresource*
+  name: CalculateSubresource
+  href: api/Veldrid.Texture.html#Veldrid_Texture_CalculateSubresource_
+  commentId: Overload:Veldrid.Texture.CalculateSubresource
+  fullName: Veldrid.Texture.CalculateSubresource
+  nameWithType: Texture.CalculateSubresource
 - uid: Veldrid.Texture.Depth
   name: Depth
   href: api/Veldrid.Texture.html#Veldrid_Texture_Depth
@@ -3964,6 +4357,12 @@ references:
   commentId: F:Veldrid.TextureUsage.Sampled
   fullName: Veldrid.TextureUsage.Sampled
   nameWithType: TextureUsage.Sampled
+- uid: Veldrid.TextureUsage.Staging
+  name: Staging
+  href: api/Veldrid.TextureUsage.html#Veldrid_TextureUsage_Staging
+  commentId: F:Veldrid.TextureUsage.Staging
+  fullName: Veldrid.TextureUsage.Staging
+  nameWithType: TextureUsage.Staging
 - uid: Veldrid.TextureUsage.Storage
   name: Storage
   href: api/Veldrid.TextureUsage.html#Veldrid_TextureUsage_Storage
@@ -4144,6 +4543,12 @@ references:
   commentId: M:Veldrid.VeldridException.#ctor(System.String)
   fullName: Veldrid.VeldridException.VeldridException(System.String)
   nameWithType: VeldridException.VeldridException(String)
+- uid: Veldrid.VeldridException.#ctor(System.String,Exception)
+  name: VeldridException(String, Exception)
+  href: api/Veldrid.VeldridException.html#Veldrid_VeldridException__ctor_System_String_Exception_
+  commentId: M:Veldrid.VeldridException.#ctor(System.String,Exception)
+  fullName: Veldrid.VeldridException.VeldridException(System.String, Exception)
+  nameWithType: VeldridException.VeldridException(String, Exception)
 - uid: Veldrid.VeldridException.#ctor*
   name: VeldridException
   href: api/Veldrid.VeldridException.html#Veldrid_VeldridException__ctor_

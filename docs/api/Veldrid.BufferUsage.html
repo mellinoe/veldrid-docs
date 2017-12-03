@@ -93,6 +93,12 @@
     <thead>
     <tbody>
       <tr>
+        <td id="Veldrid_BufferUsage_Dynamic">Dynamic</td>
+        <td><p>Indicates that a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> will be updated with new data very frequently. Dynamic Buffers are able to be
+mapped with <a class="xref" href="Veldrid.MapMode.html#Veldrid_MapMode_Write">Write</a>.</p>
+</td>
+      </tr>
+      <tr>
         <td id="Veldrid_BufferUsage_IndexBuffer">IndexBuffer</td>
         <td><p>Indicates that a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> can be used as the source of index data for drawing commands.
 This flag enables the use of a Buffer in the <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBuffer_Veldrid_Buffer_Veldrid_IndexFormat_">SetIndexBuffer(Buffer, IndexFormat)</a> method.</p>
@@ -102,6 +108,14 @@ This flag enables the use of a Buffer in the <a class="xref" href="Veldrid.Comma
         <td id="Veldrid_BufferUsage_IndirectBuffer">IndirectBuffer</td>
         <td><p>Indicates that a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> can be used as the source of indirect drawing information.
 This flag enables the use of a buffer in the DrawIndirect methods of <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_BufferUsage_Staging">Staging</td>
+        <td><p>Indicates that a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> will be used as a staging Buffer. Staging Buffers can be used to transfer data
+to-and-from the CPU using <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_">Map(MappableResource, MapMode)</a>. Staging Buffers can use all
+<a class="xref" href="Veldrid.MapMode.html">MapMode</a> values.
+If this flag is present, no other flags are permitted.</p>
 </td>
       </tr>
       <tr>

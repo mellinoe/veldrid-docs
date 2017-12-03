@@ -240,6 +240,327 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   </table>
   
   
+  <a id="Veldrid_CommandList_CopyBuffer_" data-uid="Veldrid.CommandList.CopyBuffer*"></a>
+  <h4 id="Veldrid_CommandList_CopyBuffer_Veldrid_Buffer_System_UInt32_Veldrid_Buffer_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.CopyBuffer(Veldrid.Buffer,System.UInt32,Veldrid.Buffer,System.UInt32,System.UInt32)">CopyBuffer(Buffer, UInt32, Buffer, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Copies a region from the source <a class="xref" href="Veldrid.Buffer.html">Buffer</a> to another region in the destination <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyBuffer(Buffer source, uint sourceOffset, Buffer destination, uint destinationOffset, uint sizeInBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The source <a class="xref" href="Veldrid.Buffer.html">Buffer</a> from which data will be copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">sourceOffset</span></td>
+        <td><p>An offset into <code data-dev-comment-type="paramref" class="paramref">source</code> at which the copy region begins.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The destination <a class="xref" href="Veldrid.Buffer.html">Buffer</a> into which data will be copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">destinationOffset</span></td>
+        <td><p>An offset into <code data-dev-comment-type="paramref" class="paramref">destination</code> at which the data will be copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">sizeInBytes</span></td>
+        <td><p>The number of bytes to copy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_CopyBufferCore_" data-uid="Veldrid.CommandList.CopyBufferCore*"></a>
+  <h4 id="Veldrid_CommandList_CopyBufferCore_Veldrid_Buffer_System_UInt32_Veldrid_Buffer_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.CopyBufferCore(Veldrid.Buffer,System.UInt32,Veldrid.Buffer,System.UInt32,System.UInt32)">CopyBufferCore(Buffer, UInt32, Buffer, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void CopyBufferCore(Buffer source, uint sourceOffset, Buffer destination, uint destinationOffset, uint sizeInBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">sourceOffset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="parametername">destination</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">destinationOffset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">sizeInBytes</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_CopyTexture_" data-uid="Veldrid.CommandList.CopyTexture*"></a>
+  <h4 id="Veldrid_CommandList_CopyTexture_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.CopyTexture(Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">CopyTexture(Texture, UInt32, UInt32, UInt32, UInt32, UInt32, Texture, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Copies a region from one <a class="xref" href="Veldrid.Texture.html">Texture</a> into another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTexture(Texture source, uint srcX, uint srcY, uint srcZ, uint srcMipLevel, uint srcBaseArrayLayer, Texture destination, uint dstX, uint dstY, uint dstZ, uint dstMipLevel, uint dstBaseArrayLayer, uint width, uint height, uint depth, uint layerCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The source <a class="xref" href="Veldrid.Texture.html">Texture</a> from which data is copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">srcX</span></td>
+        <td><p>The X coordinate of the source copy region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">srcY</span></td>
+        <td><p>The Y coordinate of the source copy region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">srcZ</span></td>
+        <td><p>The Z coordinate of the source copy region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">srcMipLevel</span></td>
+        <td><p>The mip level to copy from the source Texture.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">srcBaseArrayLayer</span></td>
+        <td><p>The starting array layer to copy from the source Texture.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The destination <a class="xref" href="Veldrid.Texture.html">Texture</a> into which data is copied.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dstX</span></td>
+        <td><p>The X coordinate of the destination copy region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dstY</span></td>
+        <td><p>The Y coordinate of the destination copy region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dstZ</span></td>
+        <td><p>The Z coordinate of the destination copy region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dstMipLevel</span></td>
+        <td><p>The mip level to copy the data into.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dstBaseArrayLayer</span></td>
+        <td><p>The starting array layer to copy data into.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width in texels of the copy region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height in texels of the copy region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth in texels, of the copy region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">layerCount</span></td>
+        <td><p>The number of array layers to copy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_CopyTextureCore_" data-uid="Veldrid.CommandList.CopyTextureCore*"></a>
+  <h4 id="Veldrid_CommandList_CopyTextureCore_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.CopyTextureCore(Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">CopyTextureCore(Texture, UInt32, UInt32, UInt32, UInt32, UInt32, Texture, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void CopyTextureCore(Texture source, uint srcX, uint srcY, uint srcZ, uint srcMipLevel, uint srcBaseArrayLayer, Texture destination, uint dstX, uint dstY, uint dstZ, uint dstMipLevel, uint dstBaseArrayLayer, uint width, uint height, uint depth, uint layerCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">source</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">srcX</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">srcY</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">srcZ</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">srcMipLevel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">srcBaseArrayLayer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">destination</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dstX</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dstY</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dstZ</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dstMipLevel</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dstBaseArrayLayer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">layerCount</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_CommandList_Dispatch_" data-uid="Veldrid.CommandList.Dispatch*"></a>
   <h4 id="Veldrid_CommandList_Dispatch_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.Dispatch(System.UInt32,System.UInt32,System.UInt32)">Dispatch(UInt32, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Dispatches a compute operation from the currently-bound compute state of this Pipeline.</p>
@@ -1589,184 +1910,6 @@ which new data will be uploaded.</p>
       <tr>
         <td><span class="parametername">T</span></td>
         <td><p>The type of data to upload.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_CommandList_UpdateTexture_" data-uid="Veldrid.CommandList.UpdateTexture*"></a>
-  <h4 id="Veldrid_CommandList_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.UpdateTexture(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">UpdateTexture(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Updates a portion of a <a class="xref" href="Veldrid.Texture.html">Texture</a> resource with new data.
-Cube textures should instead use 
-<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_UpdateTextureCube_Veldrid_Texture_IntPtr_System_UInt32_Veldrid_CubeFace_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_">UpdateTextureCube(Texture, IntPtr, UInt32, CubeFace, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void UpdateTexture(Texture texture, IntPtr source, uint sizeInBytes, uint x, uint y, uint z, uint width, uint height, uint depth, uint mipLevel, uint arrayLayer)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
-        <td><span class="parametername">texture</span></td>
-        <td><p>The resource to update.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">IntPtr</span></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>A pointer to the start of the data to upload.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">sizeInBytes</span></td>
-        <td><p>The number of bytes to upload. This value must match the total size of the texture region specified.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">x</span></td>
-        <td><p>The minimum X value of the updated region.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">y</span></td>
-        <td><p>The minimum Y value of the updated region.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">z</span></td>
-        <td><p>The minimum Z value of the updated region.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">width</span></td>
-        <td><p>The width of the updated region, in texels.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">height</span></td>
-        <td><p>The height of the updated region, in texels.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">depth</span></td>
-        <td><p>The depth of the updated region, in texels.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">mipLevel</span></td>
-        <td><p>The mipmap level to update. Must be less than the total number of mipmaps contained in the
-<a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">arrayLayer</span></td>
-        <td><p>The array layer to update. Must be less than the total array layer count contained in the
-<a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_CommandList_UpdateTextureCube_" data-uid="Veldrid.CommandList.UpdateTextureCube*"></a>
-  <h4 id="Veldrid_CommandList_UpdateTextureCube_Veldrid_Texture_IntPtr_System_UInt32_Veldrid_CubeFace_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.UpdateTextureCube(Veldrid.Texture,IntPtr,System.UInt32,Veldrid.CubeFace,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">UpdateTextureCube(Texture, IntPtr, UInt32, CubeFace, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Updates a portion of a <a class="xref" href="Veldrid.Texture.html">Texture</a> resource with new data. This function operates on cubemap textures.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void UpdateTextureCube(Texture texture, IntPtr source, uint sizeInBytes, CubeFace face, uint x, uint y, uint width, uint height, uint mipLevel, uint arrayLayer)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
-        <td><span class="parametername">texture</span></td>
-        <td><p>The resource to update.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">IntPtr</span></td>
-        <td><span class="parametername">source</span></td>
-        <td><p>A pointer to the start of the data to upload.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">sizeInBytes</span></td>
-        <td><p>The number of bytes to upload. This value must match the total size of the texture region specified.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.CubeFace.html">CubeFace</a></td>
-        <td><span class="parametername">face</span></td>
-        <td><p>The <a class="xref" href="Veldrid.CubeFace.html">CubeFace</a> into which the texture data is uploaded.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">x</span></td>
-        <td><p>The minimum X value of the updated region.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">y</span></td>
-        <td><p>The minimum Y value of the updated region.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">width</span></td>
-        <td><p>The width of the updated region, in texels.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">height</span></td>
-        <td><p>The height of the updated region, in texels.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">mipLevel</span></td>
-        <td><p>The mipmap level to update. Must be less than the total number of mipmaps contained in the
-<a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">arrayLayer</span></td>
-        <td><p>The array layer to update. Must be less than the total array layer count contained in the
-<a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
 </td>
       </tr>
     </tbody>

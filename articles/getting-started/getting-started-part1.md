@@ -19,7 +19,7 @@ Create a new console application by running `dotnet new console`, or by using a 
 
 ## Creating a Window
 
-Veldrid itself does not care what framework or library you use to manage your window or render view -- it is flexible enough to work with many different systems. The `VeldridStartup` static class (from Veldrid.StartupUtilities) includes a number of helper functions intended to make Window and GraphicsDevice creation easier for common scenarios, which will be used here.
+Veldrid itself does not care what framework or library you use to manage your window or render view -- it is flexible enough to work with many different systems. The `VeldridStartup` static class (from Veldrid.StartupUtilities) includes a number of helper functions intended to make Window and GraphicsDevice creation easier for common scenarios, and it will be used here.
 
 First, we will create a Window. Inside the `Main()` method, let's add some code.
 
@@ -38,11 +38,8 @@ Sdl2Window window = VeldridStartup.CreateWindow(ref windowCI);
 This creates a new Sdl2Window with some basic properties. Next, we will create a GraphicsDevice attached to it. This will let us issue graphics commands into the window. Create a new [GraphicsDevice](xref:Veldrid.GraphicsDevice) field called `_graphicsDevice`. We will use another `VeldridStartup` helper method to create it:
 
 ```C#
-GraphicsDeviceCreateInfo gdCI = new GraphicsDeviceCreateInfo();
-_graphicsDevice = VeldridStartup.CreateGraphicsDevice(ref gdCI, window);
+_graphicsDevice = VeldridStartup.CreateGraphicsDevice(window);
 ```
-
-`GraphicsDeviceCreateInfo` has two properties that we could set: a boolean controlling whether the device will report debug information (`DebugDevice`), and a [GraphicsBackend](xref:Veldrid.GraphicsBackend) identifying a preferred graphics API to use (Vulkan, Direct3D 11, or OpenGL). When unspecified, the default backend for the platform will be chosen. We will leave the default.
 
 Next, let's add in a very basic application loop that keeps the window running. At the bottom of `Main()`:
 

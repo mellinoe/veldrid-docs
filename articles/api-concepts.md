@@ -12,7 +12,7 @@ A [GraphicsDevice](xref:Veldrid.GraphicsDevice) is the entry point into Veldrid.
 
 ## CommandList
 
-A [CommandList](xref:Veldrid.CommandList) is a device resource capable of recording graphics commands, which can then be executed by a GraphicsDevice. All rendering commands, like drawing primitives, updating textures, and clearing framebuffers, are submitted to a CommandList. Optionally, multiple CommandList objects can be used in parallel to record independent graphics commands on separate threads.
+A [CommandList](xref:Veldrid.CommandList) is a device resource capable of recording graphics commands, which can then be executed by a GraphicsDevice. All rendering commands, like setting draw state, binding resources, clearing framebuffers, and issuing draw calls, are submitted to a CommandList. Optionally, multiple CommandList objects can be used in parallel to record independent graphics commands on separate threads.
 
 See the [CommandList overview](xref:command-lists) for more information.
 
@@ -26,7 +26,6 @@ Veldrid exposes a number of Description types, which are plain data structures u
 
 * The total size of the Buffer in bytes.
 * How the Buffer will be used ([Veldrid.BufferUsage](xref:Veldrid.BufferUsage)).
-* Whether the Buffer will be updated dynamically (often).
 * If the Buffer is a structured Buffer, then the size of each structure element.
 
 All device resources can be uniformly created with an appropriate Description object. Additionally, there are some convenience methods that allow the creation of some resource objects with a small set of common parameters, rather than a full Description object.
@@ -67,19 +66,21 @@ A graphics Pipeline is a device resource which encapsulates a large amount of in
 * Resource layouts: The types and layout of all shader resources being used.
 * Outputs: The depth and color outputs of the Framebuffer that are written to.
 
+It is not possible to issue a draw command without binding a graphics Pipeline.
+
 A compute Pipeline is another kind of resource which encapsulates the necessary state for a compute shader dispatch. A compute Pipeline does not include any graphics-specific information, like blend state, depth stencil state, etc. The only information contained is:
 
 * The compute shader module used
 * Resource layouts
 
-Compute Pipelines do not have explicit outputs like graphics Pipelines do. Instead, they make use of read-write shader resources to output information.
+Compute Pipelines do not have explicit Framebuffer-based outputs like graphics Pipelines do. Instead, they make use of read-write shader resources to output information.
 
 Graphics and compute pipelines are tracked separately in a CommandList. This means that setting a compute Pipeline, or attaching ResourceSets to a compute Pipeline, do not disturb the previously-set graphics Pipeline state.
 
 ### ResourceLayouts and ResourceSets
 
-A [ResourceSet](xref:Veldrid.ResourceSet) is another fundamental device resource which is necessary, along with a Pipeline, for all Drawing commands. ResourceSets are the mechanism by which BindableResource objects ([Buffers](xref:Veldrid.Buffer), [TextureViews](xref:Veldrid.TextureView), and [Samplers](xref:Veldrid.Sampler)) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a [ResourceLayout](xref:Veldrid.ResourceLayout) object, used to create both a ResourceSet and a Pipeline.
+A [ResourceSet](xref:Veldrid.ResourceSet) is another fundamental device resource which is used, along with a Pipeline, for drawing commands. ResourceSets are the mechanism by which BindableResource objects ([Buffers](xref:Veldrid.Buffer), [TextureViews](xref:Veldrid.TextureView), and [Samplers](xref:Veldrid.Sampler)) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a [ResourceLayout](xref:Veldrid.ResourceLayout) object, used to create both a ResourceSet and a Pipeline.
 
 ### Framebuffer
 
-A [Framebuffer](xref:Veldrid.Framebuffer) controls the set of textures that are drawn into when rendering commands are executed. The application's swapchain Framebuffer is also accessible via the [GraphicsDevice.SwapchainFramebuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) property. The swapchain Framebuffer is used to present an image to the application window or view. See the [Framebuffers overview](xref:framebuffers) for more information.
+A [Framebuffer](xref:Veldrid.Framebuffer) controls the set of textures that are drawn into when draw commands are executed. The application's swapchain Framebuffer is also accessible via the [GraphicsDevice.SwapchainFramebuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) property. The swapchain Framebuffer is used to present an image to the application window or view. See the [Framebuffers overview](xref:framebuffers) for more information.

@@ -73,7 +73,7 @@
 <h2 id="graphicsdevice">GraphicsDevice</h2>
 <p>A <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a> is the entry point into Veldrid. It represents a GPU device capable of creating and managing graphics resources, executing commands, and presenting rendered images to the application&#39;s main swapchain. GraphicsDevices are created explicity by the application, and a particular backing API (Vulkan, Direct3D, OpenGL) is selected at that time.</p>
 <h2 id="commandlist">CommandList</h2>
-<p>A <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a> is a device resource capable of recording graphics commands, which can then be executed by a GraphicsDevice. All rendering commands, like drawing primitives, updating textures, and clearing framebuffers, are submitted to a CommandList. Optionally, multiple CommandList objects can be used in parallel to record independent graphics commands on separate threads.</p>
+<p>A <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a> is a device resource capable of recording graphics commands, which can then be executed by a GraphicsDevice. All rendering commands, like setting draw state, binding resources, clearing framebuffers, and issuing draw calls, are submitted to a CommandList. Optionally, multiple CommandList objects can be used in parallel to record independent graphics commands on separate threads.</p>
 <p>See the <a class="xref" href="command-lists.html">CommandList overview</a> for more information.</p>
 <h2 id="resources">Resources</h2>
 <p>A variety of device resources can be created by a GraphicsDevice in order to control rendering operations. Veldrid resources are owned by their creator, and they must be disposed explicitly to avoid leaking device memory.</p>
@@ -82,7 +82,6 @@
 <ul>
 <li>The total size of the Buffer in bytes.</li>
 <li>How the Buffer will be used (<a class="xref" href="../api/Veldrid.BufferUsage.html">Veldrid.BufferUsage</a>).</li>
-<li>Whether the Buffer will be updated dynamically (often).</li>
 <li>If the Buffer is a structured Buffer, then the size of each structure element.</li>
 </ul>
 <p>All device resources can be uniformly created with an appropriate Description object. Additionally, there are some convenience methods that allow the creation of some resource objects with a small set of common parameters, rather than a full Description object.</p>
@@ -109,17 +108,18 @@
 <li>Resource layouts: The types and layout of all shader resources being used.</li>
 <li>Outputs: The depth and color outputs of the Framebuffer that are written to.</li>
 </ul>
+<p>It is not possible to issue a draw command without binding a graphics Pipeline.</p>
 <p>A compute Pipeline is another kind of resource which encapsulates the necessary state for a compute shader dispatch. A compute Pipeline does not include any graphics-specific information, like blend state, depth stencil state, etc. The only information contained is:</p>
 <ul>
 <li>The compute shader module used</li>
 <li>Resource layouts</li>
 </ul>
-<p>Compute Pipelines do not have explicit outputs like graphics Pipelines do. Instead, they make use of read-write shader resources to output information.</p>
+<p>Compute Pipelines do not have explicit Framebuffer-based outputs like graphics Pipelines do. Instead, they make use of read-write shader resources to output information.</p>
 <p>Graphics and compute pipelines are tracked separately in a CommandList. This means that setting a compute Pipeline, or attaching ResourceSets to a compute Pipeline, do not disturb the previously-set graphics Pipeline state.</p>
 <h3 id="resourcelayouts-and-resourcesets">ResourceLayouts and ResourceSets</h3>
-<p>A <a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSet</a> is another fundamental device resource which is necessary, along with a Pipeline, for all Drawing commands. ResourceSets are the mechanism by which BindableResource objects (<a class="xref" href="../api/Veldrid.Buffer.html">Buffers</a>, <a class="xref" href="../api/Veldrid.TextureView.html">TextureViews</a>, and <a class="xref" href="../api/Veldrid.Sampler.html">Samplers</a>) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a <a class="xref" href="../api/Veldrid.ResourceLayout.html">ResourceLayout</a> object, used to create both a ResourceSet and a Pipeline.</p>
+<p>A <a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSet</a> is another fundamental device resource which is used, along with a Pipeline, for drawing commands. ResourceSets are the mechanism by which BindableResource objects (<a class="xref" href="../api/Veldrid.Buffer.html">Buffers</a>, <a class="xref" href="../api/Veldrid.TextureView.html">TextureViews</a>, and <a class="xref" href="../api/Veldrid.Sampler.html">Samplers</a>) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a <a class="xref" href="../api/Veldrid.ResourceLayout.html">ResourceLayout</a> object, used to create both a ResourceSet and a Pipeline.</p>
 <h3 id="framebuffer">Framebuffer</h3>
-<p>A <a class="xref" href="../api/Veldrid.Framebuffer.html">Framebuffer</a> controls the set of textures that are drawn into when rendering commands are executed. The application&#39;s swapchain Framebuffer is also accessible via the <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">GraphicsDevice.SwapchainFramebuffer</a> property. The swapchain Framebuffer is used to present an image to the application window or view. See the <a class="xref" href="framebuffers.html">Framebuffers overview</a> for more information.</p>
+<p>A <a class="xref" href="../api/Veldrid.Framebuffer.html">Framebuffer</a> controls the set of textures that are drawn into when draw commands are executed. The application&#39;s swapchain Framebuffer is also accessible via the <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">GraphicsDevice.SwapchainFramebuffer</a> property. The swapchain Framebuffer is used to present an image to the application window or view. See the <a class="xref" href="framebuffers.html">Framebuffers overview</a> for more information.</p>
 </article>
           </div>
           

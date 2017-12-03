@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct BufferDescription
+    <title>Struct MappedResourceView&lt;T&gt;
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct BufferDescription
+    <meta name="title" content="Struct MappedResourceView&lt;T&gt;
    ">
     <meta name="generator" content="docfx 2.26.4.0">
     
@@ -68,23 +68,22 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Veldrid.BufferDescription">
+            <article class="content wrap" id="_content" data-uid="Veldrid.MappedResourceView`1">
   
   
-  <h1 id="Veldrid_BufferDescription" data-uid="Veldrid.BufferDescription" class="text-break">Struct BufferDescription
+  <h1 id="Veldrid_MappedResourceView_1" data-uid="Veldrid.MappedResourceView`1" class="text-break">Struct MappedResourceView&lt;T&gt;
   </h1>
-  <div class="markdown level0 summary"><p>Describes a <a class="xref" href="Veldrid.Buffer.html">Buffer</a>, used in the creation of <a class="xref" href="Veldrid.Buffer.html">Buffer</a> objects by a
-<a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+  <div class="markdown level0 summary"><p>A typed view of a <a class="xref" href="Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_MappedResource">MappedResource</a>. Provides by-reference structured access to individual elements in the
+mapped resource.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>&gt;</div>
-  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.ValueType.ToString()</span>
@@ -101,57 +100,39 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Veldrid_BufferDescription_syntax">Syntax</h5>
+  <h5 id="Veldrid_MappedResourceView_1_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct BufferDescription : IEquatable&lt;BufferDescription&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct MappedResourceView&lt;T&gt;
+    where T : struct</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="Veldrid_BufferDescription__ctor_" data-uid="Veldrid.BufferDescription.#ctor*"></a>
-  <h4 id="Veldrid_BufferDescription__ctor_System_UInt32_Veldrid_BufferUsage_" data-uid="Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage)">BufferDescription(UInt32, BufferUsage)</h4>
-  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a> describing a non-dynamic <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BufferDescription(uint sizeInBytes, BufferUsage usage)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
+  <h5 class="typeParameters">Type Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
-        <th>Type</th>
         <th>Name</th>
         <th>Description</th>
       </tr>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">sizeInBytes</span></td>
-        <td><p>The desired capacity, in bytes.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.BufferUsage.html">BufferUsage</a></td>
-        <td><span class="parametername">usage</span></td>
-        <td><p>Indicates how the <a class="xref" href="Veldrid.Buffer.html">Buffer</a> will be used.</p>
+        <td><span class="parametername">T</span></td>
+        <td><p>The blittable value type which mapped data is viewed as.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <h3 id="constructors">Constructors
+  </h3>
   
   
-  <a id="Veldrid_BufferDescription__ctor_" data-uid="Veldrid.BufferDescription.#ctor*"></a>
-  <h4 id="Veldrid_BufferDescription__ctor_System_UInt32_Veldrid_BufferUsage_System_UInt32_" data-uid="Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage,System.UInt32)">BufferDescription(UInt32, BufferUsage, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.</p>
+  <a id="Veldrid_MappedResourceView_1__ctor_" data-uid="Veldrid.MappedResourceView`1.#ctor*"></a>
+  <h4 id="Veldrid_MappedResourceView_1__ctor_Veldrid_MappedResource_" data-uid="Veldrid.MappedResourceView`1.#ctor(Veldrid.MappedResource)">MappedResourceView(MappedResource)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new MappedResourceView which wraps the given <a class="xref" href="Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_MappedResource">MappedResource</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BufferDescription(uint sizeInBytes, BufferUsage usage, uint structureByteStride)</code></pre>
+    <pre><code class="lang-csharp hljs">public MappedResourceView(MappedResource rawResource)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -164,22 +145,9 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">sizeInBytes</span></td>
-        <td><p>The desired capacity, in bytes.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.BufferUsage.html">BufferUsage</a></td>
-        <td><span class="parametername">usage</span></td>
-        <td><p>Indicates how the <a class="xref" href="Veldrid.Buffer.html">Buffer</a> will be used.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">structureByteStride</span></td>
-        <td><p>For structured buffers, this value indicates the size in bytes of a single
-structure element, and must be non-zero. For all other buffer types, this value must be zero.</p>
+        <td><a class="xref" href="Veldrid.MappedResource.html">MappedResource</a></td>
+        <td><span class="parametername">rawResource</span></td>
+        <td><p>The raw resource which has been mapped.</p>
 </td>
       </tr>
     </tbody>
@@ -188,139 +156,16 @@ structure element, and must be non-zero. For all other buffer types, this value 
   </h3>
   
   
-  <h4 id="Veldrid_BufferDescription_SizeInBytes" data-uid="Veldrid.BufferDescription.SizeInBytes">SizeInBytes</h4>
-  <div class="markdown level1 summary"><p>The desired capacity, in bytes, of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+  <h4 id="Veldrid_MappedResourceView_1_Count" data-uid="Veldrid.MappedResourceView`1.Count">Count</h4>
+  <div class="markdown level1 summary"><p>The total number of structures that is contained in the resource. This is effectively the total number of bytes
+divided by the size of the structure type.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint SizeInBytes</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly int Count</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Veldrid_BufferDescription_StructureByteStride" data-uid="Veldrid.BufferDescription.StructureByteStride">StructureByteStride</h4>
-  <div class="markdown level1 summary"><p>For structured buffers, this value indicates the size in bytes of a single structure element, and must be non-zero.
-For all other buffer types, this value must be zero.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint StructureByteStride</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Veldrid_BufferDescription_Usage" data-uid="Veldrid.BufferDescription.Usage">Usage</h4>
-  <div class="markdown level1 summary"><p>Indicates how the <a class="xref" href="Veldrid.Buffer.html">Buffer</a> will be used.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BufferUsage Usage</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.BufferUsage.html">BufferUsage</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h3 id="methods">Methods
-  </h3>
-  
-  
-  <a id="Veldrid_BufferDescription_Equals_" data-uid="Veldrid.BufferDescription.Equals*"></a>
-  <h4 id="Veldrid_BufferDescription_Equals_Veldrid_BufferDescription_" data-uid="Veldrid.BufferDescription.Equals(Veldrid.BufferDescription)">Equals(BufferDescription)</h4>
-  <div class="markdown level1 summary"><p>Element-wise equality.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(BufferDescription other)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a></td>
-        <td><span class="parametername">other</span></td>
-        <td><p>The instance to compare to.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if all elements are equal; false otherswise.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_BufferDescription_GetHashCode_" data-uid="Veldrid.BufferDescription.GetHashCode*"></a>
-  <h4 id="Veldrid_BufferDescription_GetHashCode" data-uid="Veldrid.BufferDescription.GetHashCode">GetHashCode()</h4>
-  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -331,17 +176,215 @@ For all other buffer types, this value must be zero.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Int32</span></td>
-        <td><p>A 32-bit signed integer that is the hash code for this instance.</p>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_MappedResourceView_1_MappedResource" data-uid="Veldrid.MappedResourceView`1.MappedResource">MappedResource</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_MappedResource">MappedResource</a> that this instance views.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly MappedResource MappedResource</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.MappedResource.html">MappedResource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_MappedResourceView_1_SizeInBytes" data-uid="Veldrid.MappedResourceView`1.SizeInBytes">SizeInBytes</h4>
+  <div class="markdown level1 summary"><p>The total size in bytes of the mapped resource.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly uint SizeInBytes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Veldrid_MappedResourceView_1_Item_" data-uid="Veldrid.MappedResourceView`1.Item*"></a>
+  <h4 id="Veldrid_MappedResourceView_1_Item_System_Int32_" data-uid="Veldrid.MappedResourceView`1.Item(System.Int32)">Item[Int32]</h4>
+  <div class="markdown level1 summary"><p>Gets a reference to the structure value at the given index.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T this[int index] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The index of the value.</p>
 </td>
       </tr>
     </tbody>
   </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>A reference to the value at the given index.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_MappedResourceView_1_Item_" data-uid="Veldrid.MappedResourceView`1.Item*"></a>
+  <h4 id="Veldrid_MappedResourceView_1_Item_System_Int32_System_Int32_" data-uid="Veldrid.MappedResourceView`1.Item(System.Int32,System.Int32)">Item[Int32, Int32]</h4>
+  <div class="markdown level1 summary"><p>Gets a reference to the structure at the given 2-dimensional texture coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T this[int x, int y] { get; }</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The X coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The Y coordinate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>A reference to the value at the given coordinates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_MappedResourceView_1_Item_" data-uid="Veldrid.MappedResourceView`1.Item*"></a>
+  <h4 id="Veldrid_MappedResourceView_1_Item_System_Int32_System_Int32_System_Int32_" data-uid="Veldrid.MappedResourceView`1.Item(System.Int32,System.Int32,System.Int32)">Item[Int32, Int32, Int32]</h4>
+  <div class="markdown level1 summary"><p>Gets a reference to the structure at the given 3-dimensional texture coordinates.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public T this[int x, int y, int z] { get; }</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The X coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The Y coordinate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">z</span></td>
+        <td><p>The Z coordinate.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">T</span></td>
+        <td><p>A reference to the value at the given coordinates.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

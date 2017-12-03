@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct BufferDescription
+    <title>Struct MappedResource
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct BufferDescription
+    <meta name="title" content="Struct MappedResource
    ">
     <meta name="generator" content="docfx 2.26.4.0">
     
@@ -68,23 +68,21 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Veldrid.BufferDescription">
+            <article class="content wrap" id="_content" data-uid="Veldrid.MappedResource">
   
   
-  <h1 id="Veldrid_BufferDescription" data-uid="Veldrid.BufferDescription" class="text-break">Struct BufferDescription
+  <h1 id="Veldrid_MappedResource" data-uid="Veldrid.MappedResource" class="text-break">Struct MappedResource
   </h1>
-  <div class="markdown level0 summary"><p>Describes a <a class="xref" href="Veldrid.Buffer.html">Buffer</a>, used in the creation of <a class="xref" href="Veldrid.Buffer.html">Buffer</a> objects by a
-<a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
+  <div class="markdown level0 summary"><p>A structure describing the layout of a mapped <a class="xref" href="Veldrid.MappableResource.html">MappableResource</a> object.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>&gt;</div>
-  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <span class="xref">System.ValueType.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.ValueType.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.ValueType.ToString()</span>
@@ -101,100 +99,47 @@
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Veldrid_BufferDescription_syntax">Syntax</h5>
+  <h5 id="Veldrid_MappedResource_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct BufferDescription : IEquatable&lt;BufferDescription&gt;</code></pre>
+    <pre><code class="lang-csharp hljs">public struct MappedResource</code></pre>
   </div>
-  <h3 id="constructors">Constructors
-  </h3>
-  
-  
-  <a id="Veldrid_BufferDescription__ctor_" data-uid="Veldrid.BufferDescription.#ctor*"></a>
-  <h4 id="Veldrid_BufferDescription__ctor_System_UInt32_Veldrid_BufferUsage_" data-uid="Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage)">BufferDescription(UInt32, BufferUsage)</h4>
-  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a> describing a non-dynamic <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BufferDescription(uint sizeInBytes, BufferUsage usage)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">sizeInBytes</span></td>
-        <td><p>The desired capacity, in bytes.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.BufferUsage.html">BufferUsage</a></td>
-        <td><span class="parametername">usage</span></td>
-        <td><p>Indicates how the <a class="xref" href="Veldrid.Buffer.html">Buffer</a> will be used.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_BufferDescription__ctor_" data-uid="Veldrid.BufferDescription.#ctor*"></a>
-  <h4 id="Veldrid_BufferDescription__ctor_System_UInt32_Veldrid_BufferUsage_System_UInt32_" data-uid="Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage,System.UInt32)">BufferDescription(UInt32, BufferUsage, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BufferDescription(uint sizeInBytes, BufferUsage usage, uint structureByteStride)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">sizeInBytes</span></td>
-        <td><p>The desired capacity, in bytes.</p>
-</td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.BufferUsage.html">BufferUsage</a></td>
-        <td><span class="parametername">usage</span></td>
-        <td><p>Indicates how the <a class="xref" href="Veldrid.Buffer.html">Buffer</a> will be used.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">structureByteStride</span></td>
-        <td><p>For structured buffers, this value indicates the size in bytes of a single
-structure element, and must be non-zero. For all other buffer types, this value must be zero.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="fields">Fields
   </h3>
   
   
-  <h4 id="Veldrid_BufferDescription_SizeInBytes" data-uid="Veldrid.BufferDescription.SizeInBytes">SizeInBytes</h4>
-  <div class="markdown level1 summary"><p>The desired capacity, in bytes, of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+  <h4 id="Veldrid_MappedResource_Data" data-uid="Veldrid.MappedResource.Data">Data</h4>
+  <div class="markdown level1 summary"><p>A pointer to the start of the mapped data region.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint SizeInBytes</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly IntPtr Data</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IntPtr</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_MappedResource_DepthPitch" data-uid="Veldrid.MappedResource.DepthPitch">DepthPitch</h4>
+  <div class="markdown level1 summary"><p>For mapped <a class="xref" href="Veldrid.Texture.html">Texture</a> resources, this is the number of bytes between each slice of a 3D Texture.
+For <a class="xref" href="Veldrid.Buffer.html">Buffer</a> resources, this field has no meaning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly uint DepthPitch</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -213,14 +158,64 @@ structure element, and must be non-zero. For all other buffer types, this value 
   </table>
   
   
-  <h4 id="Veldrid_BufferDescription_StructureByteStride" data-uid="Veldrid.BufferDescription.StructureByteStride">StructureByteStride</h4>
-  <div class="markdown level1 summary"><p>For structured buffers, this value indicates the size in bytes of a single structure element, and must be non-zero.
-For all other buffer types, this value must be zero.</p>
+  <h4 id="Veldrid_MappedResource_Mode" data-uid="Veldrid.MappedResource.Mode">Mode</h4>
+  <div class="markdown level1 summary"><p>Identifies the <a class="xref" href="Veldrid.MapMode.html">MapMode</a> that was used to map the resource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint StructureByteStride</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly MapMode Mode</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.MapMode.html">MapMode</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_MappedResource_Resource" data-uid="Veldrid.MappedResource.Resource">Resource</h4>
+  <div class="markdown level1 summary"><p>The resource which has been mapped.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly MappableResource Resource</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.MappableResource.html">MappableResource</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_MappedResource_RowPitch" data-uid="Veldrid.MappedResource.RowPitch">RowPitch</h4>
+  <div class="markdown level1 summary"><p>For mapped <a class="xref" href="Veldrid.Texture.html">Texture</a> resources, this is the number of bytes between each row of texels.
+For <a class="xref" href="Veldrid.Buffer.html">Buffer</a> resources, this field has no meaning.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public readonly uint RowPitch</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,13 +234,13 @@ For all other buffer types, this value must be zero.</p>
   </table>
   
   
-  <h4 id="Veldrid_BufferDescription_Usage" data-uid="Veldrid.BufferDescription.Usage">Usage</h4>
-  <div class="markdown level1 summary"><p>Indicates how the <a class="xref" href="Veldrid.Buffer.html">Buffer</a> will be used.</p>
+  <h4 id="Veldrid_MappedResource_SizeInBytes" data-uid="Veldrid.MappedResource.SizeInBytes">SizeInBytes</h4>
+  <div class="markdown level1 summary"><p>The total size, in bytes, of the mapped data region.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public BufferUsage Usage</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly uint SizeInBytes</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -257,43 +252,23 @@ For all other buffer types, this value must be zero.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.BufferUsage.html">BufferUsage</a></td>
+        <td><span class="xref">System.UInt32</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   
   
-  <a id="Veldrid_BufferDescription_Equals_" data-uid="Veldrid.BufferDescription.Equals*"></a>
-  <h4 id="Veldrid_BufferDescription_Equals_Veldrid_BufferDescription_" data-uid="Veldrid.BufferDescription.Equals(Veldrid.BufferDescription)">Equals(BufferDescription)</h4>
-  <div class="markdown level1 summary"><p>Element-wise equality.</p>
+  <h4 id="Veldrid_MappedResource_Subresource" data-uid="Veldrid.MappedResource.Subresource">Subresource</h4>
+  <div class="markdown level1 summary"><p>For mapped <a class="xref" href="Veldrid.Texture.html">Texture</a> resources, this is the subresource which is mapped.
+For <a class="xref" href="Veldrid.Buffer.html">Buffer</a> resources, this field has no meaning.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool Equals(BufferDescription other)</code></pre>
+    <pre><code class="lang-csharp hljs">public readonly uint Subresource</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a></td>
-        <td><span class="parametername">other</span></td>
-        <td><p>The instance to compare to.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -303,45 +278,11 @@ For all other buffer types, this value must be zero.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if all elements are equal; false otherswise.</p>
-</td>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
-  
-  
-  <a id="Veldrid_BufferDescription_GetHashCode_" data-uid="Veldrid.BufferDescription.GetHashCode*"></a>
-  <h4 id="Veldrid_BufferDescription_GetHashCode" data-uid="Veldrid.BufferDescription.GetHashCode">GetHashCode()</h4>
-  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
-  </div>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><p>A 32-bit signed integer that is the hash code for this instance.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="overrides">Overrides</h5>
-  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
-  </div>
 </article>
           </div>
           

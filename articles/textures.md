@@ -40,4 +40,14 @@ Textures can be used as Framebuffer targets. To use a Texture as a color target,
 
 ## Updating a Texture
 
-Texture data is uploaded from CPU memory using the [CommandList.UpdateTexture](xref:Veldrid.CommandList#Veldrid_CommandList_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_) and [CommandList.UpdateTextureCube](xref:Veldrid.CommandList#Veldrid_CommandList_UpdateTextureCube_Veldrid_Texture_IntPtr_System_UInt32_Veldrid_CubeFace_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_) methods. These methods can be used to upload the data for a subregion of a single mipmap level and array layer. Multiple calls should be used to fully upload all of the mipmap levels and array layers for a Texture, as appropriate.
+Texture data is uploaded from CPU memory using the [GraphicsDevice.UpdateTexture](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_) method. These methods can be used to upload the data for a subregion of a single mipmap level and array layer. Multiple calls should be used to fully upload all of the mipmap levels and array layers for a Texture, as appropriate.
+
+## Staging Textures
+
+Although [GraphicsDevice.UpdateTexture](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_) can always be used to update a Texture object, it is more efficient to first upload the data into an intermediate "Staging Texture", and then schedule a copy from that resource into the Texture you wish to render with. A "Staging Texture" is simply a Texture created with the [TextureUsage.Staging](xref:Veldrid.TextureUsage) usage flag.
+
+Staging Textures can be "mapped" into a CPU-visible data range. This allows you to write directly into a region specifically prepared by the GPU driver to transfer texture data. After the data has been mapped and unmapped (see [GraphicsDevice.Map](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_System_UInt32_) and [GraphicsDevice.Unmap](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_Unmap_Veldrid_MappableResource_System_UInt32_)), you should then schedule a copy using [CommandList.CopyTexture](xref:Veldrid.CommandList#Veldrid_CommandList_CopyTexture_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_).
+
+## Reading back Texture data
+
+A Staging Texture is also needed to read back texture data from the GPU. A Texture should be mapped using [MapMode.Read](xref:Veldrid.MapMode) or [MapMode.ReadWrite](xref:Veldrid.MapMode).
