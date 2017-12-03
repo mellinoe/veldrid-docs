@@ -1099,6 +1099,48 @@ references:
   commentId: F:Veldrid.ComputePipelineDescription.ShaderStage
   fullName: Veldrid.ComputePipelineDescription.ShaderStage
   nameWithType: ComputePipelineDescription.ShaderStage
+- uid: Veldrid.CubeFace
+  name: CubeFace
+  href: api/Veldrid.CubeFace.html
+  commentId: T:Veldrid.CubeFace
+  fullName: Veldrid.CubeFace
+  nameWithType: CubeFace
+- uid: Veldrid.CubeFace.NegativeX
+  name: NegativeX
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_NegativeX
+  commentId: F:Veldrid.CubeFace.NegativeX
+  fullName: Veldrid.CubeFace.NegativeX
+  nameWithType: CubeFace.NegativeX
+- uid: Veldrid.CubeFace.NegativeY
+  name: NegativeY
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_NegativeY
+  commentId: F:Veldrid.CubeFace.NegativeY
+  fullName: Veldrid.CubeFace.NegativeY
+  nameWithType: CubeFace.NegativeY
+- uid: Veldrid.CubeFace.NegativeZ
+  name: NegativeZ
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_NegativeZ
+  commentId: F:Veldrid.CubeFace.NegativeZ
+  fullName: Veldrid.CubeFace.NegativeZ
+  nameWithType: CubeFace.NegativeZ
+- uid: Veldrid.CubeFace.PositiveX
+  name: PositiveX
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_PositiveX
+  commentId: F:Veldrid.CubeFace.PositiveX
+  fullName: Veldrid.CubeFace.PositiveX
+  nameWithType: CubeFace.PositiveX
+- uid: Veldrid.CubeFace.PositiveY
+  name: PositiveY
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_PositiveY
+  commentId: F:Veldrid.CubeFace.PositiveY
+  fullName: Veldrid.CubeFace.PositiveY
+  nameWithType: CubeFace.PositiveY
+- uid: Veldrid.CubeFace.PositiveZ
+  name: PositiveZ
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_PositiveZ
+  commentId: F:Veldrid.CubeFace.PositiveZ
+  fullName: Veldrid.CubeFace.PositiveZ
+  nameWithType: CubeFace.PositiveZ
 - uid: Veldrid.DepthComparisonKind
   name: DepthComparisonKind
   href: api/Veldrid.DepthComparisonKind.html

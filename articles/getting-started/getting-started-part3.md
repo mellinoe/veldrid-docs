@@ -18,7 +18,7 @@ while (window.Exists)
 
 The Draw() method will include all of our per-frame commands for drawing our multi-colored quad using the resources we created in the last section.
 
-The first thing we need to do is call Begin() on our CommandList again.
+The first thing we need to do is call Begin() on our CommandList. Before commands can be recorded into a CommandList, this method must be called.
 
 ```C#
 _commandList.Begin();

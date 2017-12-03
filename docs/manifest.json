@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/projects/veldrid-docs",
+  "source_base_path": "E:/projects/veldrid-docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -130,6 +130,18 @@
         ".html": {
           "relative_path": "api/Veldrid.ComputePipelineDescription.html",
           "hash": "Qw/xUWuAgdc+ub9JAKediQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.CubeFace.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.CubeFace.html",
+          "hash": "RJ+qPxuES7eXp3bmnK1NiA=="
         }
       },
       "is_incremental": false,
@@ -981,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/getting-started-part2.html",
-          "hash": "gf6ZA4vzrXof4n60hLtYQg=="
+          "hash": "TBCRPsxaVeHjWitcNU8KjA=="
         }
       },
       "is_incremental": false,
@@ -993,7 +1005,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/getting-started-part3.html",
-          "hash": "5X4lYsmebIwkEYfAynxwpg=="
+          "hash": "rZOuOYt//4d9mLaqkTI9sg=="
         }
       },
       "is_incremental": false,
@@ -1119,11 +1131,11 @@
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         }

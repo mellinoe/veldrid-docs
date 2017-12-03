@@ -34,14 +34,6 @@ We will create our resources one-by-one, using the ResourceFactory property of o
 ResourceFactory factory = _graphicsDevice.ResourceFactory;
 ```
 
-### CommandList
-
-A [CommandList](xref:Veldrid.CommandList) is a device resource that lets you record and execute graphics commands. You can't do anything interesting in Veldrid without one, and advanced techniques make use of many in parallel. In this program, we will use a single CommandList in two ways: to initialize some data, and to issue our rendering commands. Creating a CommandList is simple:
-
-```C#
-_commandList = factory.CreateCommandList();
-```
-
 ### VertexBuffer and IndexBuffer
 
 Next, let's create an array to store our vertex data. For this demo, we just need simple vertices containing a normalized position, and a color. Let's define a structure which will represent each vertex:
@@ -87,24 +79,11 @@ _vertexBuffer = factory.CreateBuffer(new BufferDescription(4 * VertexPositionCol
 _indexBuffer = factory.CreateBuffer(new BufferDescription(4 * sizeof(ushort), BufferUsage.IndexBuffer));
 ```
 
-We've created our Buffers, but they are empty at the moment. We need to fill them with the data contained in our `quadVertices` and `indexData` arrays. Resource updates are done through our `CommandList`. Before we can do that, we need to call [Begin](xref:Veldrid.CommandList#Veldrid_CommandList_Begin):
+We've created our Buffers, but they are empty at the moment. We need to fill them with the data contained in our `quadVertices` and `indexData` arrays. Buffers can be filled with data using the [GraphicsDevice.UpdateBuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___) method:
 
 ```C#
-_commandList.Begin();
-```
-
-We will use the [UpdateBuffer](xref:Veldrid.CommandList#Veldrid_CommandList_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___) method to upload our data:
-
-```C#
-_commandList.UpdateBuffer(_vertexBuffer, 0, quadVertices);
-_commandList.UpdateBuffer(_indexBuffer, 0, indexData);
-```
-
-These commands are simply recorded into the CommandList. To execute them on the GraphicsDevice, we need to [End](xref:Veldrid.CommandList#Veldrid_CommandList_End) our CommandList, and then call [GraphicsDevice.ExecuteCommands](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_).
-
-```C#
-_commandList.End();
-_graphicsDevice.ExecuteCommands(_commandList);
+_graphicsDevice.UpdateBuffer(_vertexBuffer, 0, quadVertices);
+_graphicsDevice.UpdateBuffer(_indexBuffer, 0, indexData);
 ```
 
 `_vertexBuffer` and `_indexBuffer` now contain all of the data from our arrays.
@@ -163,7 +142,7 @@ shaderSet.ShaderStages = shaderStages;
 
 ### Pipeline
 
-The last object we need is a [Pipeline](xref:Veldrid.Pipeline). There are two types of Pipelines in Veldrid: graphics and compute. In this tutorial, we are going to be creating a graphics Pipeline. This is an object which encapsulates all of the necessary graphics state for drawing primitives. One piece of information is the set of shaders that will be used -- we have that already. There are several other pieces of information we need.
+Another object we need is a [Pipeline](xref:Veldrid.Pipeline). There are two types of Pipelines in Veldrid: graphics and compute. In this tutorial, we are going to be creating a graphics Pipeline. This is an object which encapsulates all of the necessary graphics state for drawing primitives. One piece of information is the set of shaders that will be used -- we have that already. There are several other pieces of information we need.
 
 ```C#
 GraphicsPipelineDescription pipelineDescription = new GraphicsPipelineDescription();
@@ -222,6 +201,14 @@ Finally, we can create the Pipeline.
 
 ```C#
 _pipeline = factory.CreateGraphicsPipeline(ref pipelineDescription);
+```
+
+### CommandList
+
+A [CommandList](xref:Veldrid.CommandList) is a device resource that lets you record and execute graphics commands. You can't do anything interesting in Veldrid without one, and advanced techniques make use of many in parallel. In this program, we will use a single CommandList to issue our rendering commands. Creating a CommandList is simple:
+
+```C#
+_commandList = factory.CreateCommandList();
 ```
 
 We have successfully created all of the device resources that we need. In the next section, we will draw our quad, and then do some cleanup.

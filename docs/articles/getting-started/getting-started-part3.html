@@ -77,7 +77,7 @@
     Draw();
 }
 </code></pre><p>The Draw() method will include all of our per-frame commands for drawing our multi-colored quad using the resources we created in the last section.</p>
-<p>The first thing we need to do is call Begin() on our CommandList again.</p>
+<p>The first thing we need to do is call Begin() on our CommandList. Before commands can be recorded into a CommandList, this method must be called.</p>
 <pre><code class="lang-C#">_commandList.Begin();
 </code></pre><p>Before we can issue a Draw command, we need to set a <a class="xref" href="../../api/Veldrid.Framebuffer.html">Framebuffer</a> and <a class="xref" href="../../api/Veldrid.Viewport.html">Viewport</a>.</p>
 <pre><code class="lang-C#">_commandList.SetFramebuffer(_graphicsDevice.SwapchainFramebuffer);

@@ -86,9 +86,6 @@ while (window.Exists)
 }
 </code></pre><p>We will create our resources one-by-one, using the ResourceFactory property of our GraphicsDevice. Inside of our new CreateResources method, let&#39;s add the following:</p>
 <pre><code class="lang-C#">ResourceFactory factory = _graphicsDevice.ResourceFactory;
-</code></pre><h3 id="commandlist">CommandList</h3>
-<p>A <a class="xref" href="../../api/Veldrid.CommandList.html">CommandList</a> is a device resource that lets you record and execute graphics commands. You can&#39;t do anything interesting in Veldrid without one, and advanced techniques make use of many in parallel. In this program, we will use a single CommandList in two ways: to initialize some data, and to issue our rendering commands. Creating a CommandList is simple:</p>
-<pre><code class="lang-C#">_commandList = factory.CreateCommandList();
 </code></pre><h3 id="vertexbuffer-and-indexbuffer">VertexBuffer and IndexBuffer</h3>
 <p>Next, let&#39;s create an array to store our vertex data. For this demo, we just need simple vertices containing a normalized position, and a color. Let&#39;s define a structure which will represent each vertex:</p>
 <pre><code class="lang-C#">struct VertexPositionColor
@@ -116,14 +113,9 @@ while (window.Exists)
 <p>A Buffer is created with a <a class="xref" href="../../api/Veldrid.BufferDescription.html">BufferDescription</a> object. For each Buffer, we need to provide the total size that it will contain, as well as how the Buffer object will be used. In our case, we want to use one as a vertex Buffer, and one as an index Buffer.</p>
 <pre><code class="lang-C#">_vertexBuffer = factory.CreateBuffer(new BufferDescription(4 * VertexPositionColor.SizeInBytes, BufferUsage.VertexBuffer));
 _indexBuffer = factory.CreateBuffer(new BufferDescription(4 * sizeof(ushort), BufferUsage.IndexBuffer));
-</code></pre><p>We&#39;ve created our Buffers, but they are empty at the moment. We need to fill them with the data contained in our <code>quadVertices</code> and <code>indexData</code> arrays. Resource updates are done through our <code>CommandList</code>. Before we can do that, we need to call <a class="xref" href="../../api/Veldrid.CommandList.html#Veldrid_CommandList_Begin">Begin</a>:</p>
-<pre><code class="lang-C#">_commandList.Begin();
-</code></pre><p>We will use the <a class="xref" href="../../api/Veldrid.CommandList.html#Veldrid_CommandList_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___">UpdateBuffer</a> method to upload our data:</p>
-<pre><code class="lang-C#">_commandList.UpdateBuffer(_vertexBuffer, 0, quadVertices);
-_commandList.UpdateBuffer(_indexBuffer, 0, indexData);
-</code></pre><p>These commands are simply recorded into the CommandList. To execute them on the GraphicsDevice, we need to <a class="xref" href="../../api/Veldrid.CommandList.html#Veldrid_CommandList_End">End</a> our CommandList, and then call <a class="xref" href="../../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_">GraphicsDevice.ExecuteCommands</a>.</p>
-<pre><code class="lang-C#">_commandList.End();
-_graphicsDevice.ExecuteCommands(_commandList);
+</code></pre><p>We&#39;ve created our Buffers, but they are empty at the moment. We need to fill them with the data contained in our <code>quadVertices</code> and <code>indexData</code> arrays. Buffers can be filled with data using the <a class="xref" href="../../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___">GraphicsDevice.UpdateBuffer</a> method:</p>
+<pre><code class="lang-C#">_graphicsDevice.UpdateBuffer(_vertexBuffer, 0, quadVertices);
+_graphicsDevice.UpdateBuffer(_indexBuffer, 0, indexData);
 </code></pre><p><code>_vertexBuffer</code> and <code>_indexBuffer</code> now contain all of the data from our arrays.</p>
 <p>Creating a Pipeline requires that we know the layout of the VertexBuffer that will be used. Let&#39;s create a description for our VertexBuffer now.</p>
 <pre><code class="lang-C#">VertexLayoutDescription vertexLayout = new VertexLayoutDescription(
@@ -165,7 +157,7 @@ ShaderSetDescription shaderSet = new ShaderSetDescription();
 shaderSet.VertexLayouts = new VertexLayoutDescription[] { vertexLayout };
 shaderSet.ShaderStages = shaderStages;
 </code></pre><h3 id="pipeline">Pipeline</h3>
-<p>The last object we need is a <a class="xref" href="../../api/Veldrid.Pipeline.html">Pipeline</a>. There are two types of Pipelines in Veldrid: graphics and compute. In this tutorial, we are going to be creating a graphics Pipeline. This is an object which encapsulates all of the necessary graphics state for drawing primitives. One piece of information is the set of shaders that will be used -- we have that already. There are several other pieces of information we need.</p>
+<p>Another object we need is a <a class="xref" href="../../api/Veldrid.Pipeline.html">Pipeline</a>. There are two types of Pipelines in Veldrid: graphics and compute. In this tutorial, we are going to be creating a graphics Pipeline. This is an object which encapsulates all of the necessary graphics state for drawing primitives. One piece of information is the set of shaders that will be used -- we have that already. There are several other pieces of information we need.</p>
 <pre><code class="lang-C#">GraphicsPipelineDescription pipelineDescription = new GraphicsPipelineDescription();
 pipelineDescription.BlendState = BlendStateDescription.SingleOverrideBlend;
 </code></pre><p>The <code>BlendState</code> controls how the results from rendering are blended into the output textures. This is a simple example -- we only have a single output texture, and we want our new results to completely overwrite the existing data in our output.</p>
@@ -193,6 +185,9 @@ pipelineDescription.BlendState = BlendStateDescription.SingleOverrideBlend;
 </code></pre><p>Every <code>Pipeline</code> in Veldrid needs to know how many outputs it has, and what the format of each is. Since we are going to be rendering directly to the application&#39;s swapchain, we will use the swapchain&#39;s <a class="xref" href="../../api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_OutputDescription">OutputDescription</a>.</p>
 <p>Finally, we can create the Pipeline.</p>
 <pre><code class="lang-C#">_pipeline = factory.CreateGraphicsPipeline(ref pipelineDescription);
+</code></pre><h3 id="commandlist">CommandList</h3>
+<p>A <a class="xref" href="../../api/Veldrid.CommandList.html">CommandList</a> is a device resource that lets you record and execute graphics commands. You can&#39;t do anything interesting in Veldrid without one, and advanced techniques make use of many in parallel. In this program, we will use a single CommandList to issue our rendering commands. Creating a CommandList is simple:</p>
+<pre><code class="lang-C#">_commandList = factory.CreateCommandList();
 </code></pre><p>We have successfully created all of the device resources that we need. In the next section, we will draw our quad, and then do some cleanup.</p>
 <p><a class="xref" href="getting-started-part3.html">Next: Part 3</a></p>
 </article>
