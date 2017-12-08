@@ -86,7 +86,7 @@ _commandList.SetFullViewports();
 <p>Viewports control the target area in the Framebuffer that is actually rendered to. Pixels outside of that area are discarded. In our case, we want to render to the entire window, so we use the helper method <a class="xref" href="../../api/Veldrid.CommandList.html#Veldrid_CommandList_SetFullViewports">SetFullViewports</a>, which simply sets all Viewports to the full size of the Framebuffer.</p>
 <p>At the beginning of every frame, we clear the screen to black and the depth buffer to the max value. In a static scene, this is not really necessary, but I will do it anyway for demonstration.</p>
 <pre><code class="lang-C#">_commandList.ClearColorTarget(0, RgbaFloat.Black);
-_commandList.ClearDepthTarget(1);
+_commandList.ClearDepthStencil(1);
 </code></pre><p>Now that we have done that, we need to bind the resources that we created in the last section, and issue a draw call.</p>
 <pre><code class="lang-C#">_commandList.SetVertexBuffer(0, _vertexBuffer);
 _commandList.SetIndexBuffer(_indexBuffer, IndexFormat.UInt16);

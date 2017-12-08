@@ -115,29 +115,21 @@ private static Shader LoadShader(ShaderStages stage)
         case GraphicsBackend.OpenGL:
             extension = "glsl";
             break;
-        default: throw new InvalidOperationException();
+        default: throw new System.InvalidOperationException();
     }
 
+    string entryPoint = stage == ShaderStages.Vertex ? "VS" : "FS";
     string path = Path.Combine(System.AppContext.BaseDirectory, "Shaders", $"{stage.ToString()}.{extension}");
     byte[] shaderBytes = File.ReadAllBytes(path);
-    return _graphicsDevice.ResourceFactory.CreateShader(new ShaderDescription(stage, shaderBytes));
+    return _graphicsDevice.ResourceFactory.CreateShader(new ShaderDescription(stage, shaderBytes, entryPoint));
 }
 ```
 
-Next, we load our vertex and fragment shaders and create a [ShaderSetDescription](xref:Veldrid.ShaderSetDescription).
+Next, we load our vertex and fragment shaders using the helper method.
 
 ```C#
 _vertexShader = LoadShader(ShaderStages.Vertex);
 _fragmentShader = LoadShader(ShaderStages.Fragment);
-ShaderStageDescription[] shaderStages =
-{
-    new ShaderStageDescription(ShaderStages.Vertex, _vertexShader, "VS"),
-    new ShaderStageDescription(ShaderStages.Fragment, _fragmentShader, "FS")
-};
-
-ShaderSetDescription shaderSet = new ShaderSetDescription();
-shaderSet.VertexLayouts = new VertexLayoutDescription[] { vertexLayout };
-shaderSet.ShaderStages = shaderStages;
 ```
 
 ### Pipeline
@@ -155,7 +147,7 @@ The `BlendState` controls how the results from rendering are blended into the ou
 pipelineDescription.DepthStencilState = new DepthStencilStateDescription(
     depthTestEnabled: true,
     depthWriteEnabled: true,
-    comparisonKind: DepthComparisonKind.LessEqual);
+    comparisonKind: ComparisonKind.LessEqual);
 ```
 
 In this example, the depth state is not very important -- we're only drawing a static 2D object. We've set up the depth-stencil state such that all depth testing and writing is enabled, anyways.
@@ -186,7 +178,7 @@ Our shaders do not read from any resources, so we use an empty array here.
 ```C#
 pipelineDescription.ShaderSet = new ShaderSetDescription(
     vertexLayouts: new VertexLayoutDescription[] { vertexLayout },
-    shaderStages: shaderStages);
+    shaders: new Shader[] { _vertexShader, _fragmentShader });
 ```
 
 We're passing in our previously-created shader stages and vertex layout here. This controls which shaders are used for rendering when the Pipeline is active.

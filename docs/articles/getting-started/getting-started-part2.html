@@ -137,25 +137,17 @@ _graphicsDevice.UpdateBuffer(_indexBuffer, 0, indexData);
         case GraphicsBackend.OpenGL:
             extension = &quot;glsl&quot;;
             break;
-        default: throw new InvalidOperationException();
+        default: throw new System.InvalidOperationException();
     }
 
+    string entryPoint = stage == ShaderStages.Vertex ? &quot;VS&quot; : &quot;FS&quot;;
     string path = Path.Combine(System.AppContext.BaseDirectory, &quot;Shaders&quot;, $&quot;{stage.ToString()}.{extension}&quot;);
     byte[] shaderBytes = File.ReadAllBytes(path);
-    return _graphicsDevice.ResourceFactory.CreateShader(new ShaderDescription(stage, shaderBytes));
+    return _graphicsDevice.ResourceFactory.CreateShader(new ShaderDescription(stage, shaderBytes, entryPoint));
 }
-</code></pre><p>Next, we load our vertex and fragment shaders and create a <a class="xref" href="../../api/Veldrid.ShaderSetDescription.html">ShaderSetDescription</a>.</p>
+</code></pre><p>Next, we load our vertex and fragment shaders using the helper method.</p>
 <pre><code class="lang-C#">_vertexShader = LoadShader(ShaderStages.Vertex);
 _fragmentShader = LoadShader(ShaderStages.Fragment);
-ShaderStageDescription[] shaderStages =
-{
-    new ShaderStageDescription(ShaderStages.Vertex, _vertexShader, &quot;VS&quot;),
-    new ShaderStageDescription(ShaderStages.Fragment, _fragmentShader, &quot;FS&quot;)
-};
-
-ShaderSetDescription shaderSet = new ShaderSetDescription();
-shaderSet.VertexLayouts = new VertexLayoutDescription[] { vertexLayout };
-shaderSet.ShaderStages = shaderStages;
 </code></pre><h3 id="pipeline">Pipeline</h3>
 <p>Another object we need is a <a class="xref" href="../../api/Veldrid.Pipeline.html">Pipeline</a>. There are two types of Pipelines in Veldrid: graphics and compute. In this tutorial, we are going to be creating a graphics Pipeline. This is an object which encapsulates all of the necessary graphics state for drawing primitives. One piece of information is the set of shaders that will be used -- we have that already. There are several other pieces of information we need.</p>
 <pre><code class="lang-C#">GraphicsPipelineDescription pipelineDescription = new GraphicsPipelineDescription();
@@ -164,7 +156,7 @@ pipelineDescription.BlendState = BlendStateDescription.SingleOverrideBlend;
 <pre><code class="lang-C#">pipelineDescription.DepthStencilState = new DepthStencilStateDescription(
     depthTestEnabled: true,
     depthWriteEnabled: true,
-    comparisonKind: DepthComparisonKind.LessEqual);
+    comparisonKind: ComparisonKind.LessEqual);
 </code></pre><p>In this example, the depth state is not very important -- we&#39;re only drawing a static 2D object. We&#39;ve set up the depth-stencil state such that all depth testing and writing is enabled, anyways.</p>
 <pre><code class="lang-C#">pipelineDescription.RasterizerState = new RasterizerStateDescription(
     cullMode: FaceCullMode.Back,
@@ -179,7 +171,7 @@ pipelineDescription.BlendState = BlendStateDescription.SingleOverrideBlend;
 </code></pre><p>Our shaders do not read from any resources, so we use an empty array here.</p>
 <pre><code class="lang-C#">pipelineDescription.ShaderSet = new ShaderSetDescription(
     vertexLayouts: new VertexLayoutDescription[] { vertexLayout },
-    shaderStages: shaderStages);
+    shaders: new Shader[] { _vertexShader, _fragmentShader });
 </code></pre><p>We&#39;re passing in our previously-created shader stages and vertex layout here. This controls which shaders are used for rendering when the Pipeline is active.</p>
 <pre><code class="lang-C#">pipelineDescription.Outputs = _graphicsDevice.SwapchainFramebuffer.OutputDescription;
 </code></pre><p>Every <code>Pipeline</code> in Veldrid needs to know how many outputs it has, and what the format of each is. Since we are going to be rendering directly to the application&#39;s swapchain, we will use the swapchain&#39;s <a class="xref" href="../../api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_OutputDescription">OutputDescription</a>.</p>

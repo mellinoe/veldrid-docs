@@ -39,7 +39,7 @@ At the beginning of every frame, we clear the screen to black and the depth buff
 
 ```C#
 _commandList.ClearColorTarget(0, RgbaFloat.Black);
-_commandList.ClearDepthTarget(1);
+_commandList.ClearDepthStencil(1);
 ```
 
 Now that we have done that, we need to bind the resources that we created in the last section, and issue a draw call.
