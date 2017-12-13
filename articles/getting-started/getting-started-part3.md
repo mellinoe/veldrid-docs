@@ -31,7 +31,7 @@ _commandList.SetFramebuffer(_graphicsDevice.SwapchainFramebuffer);
 _commandList.SetFullViewports();
 ```
 
-A Framebuffer is a device resource which controls where the rendered outputs go. The [SwapchainFramebuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) is application's main Framebuffer. It can be used to draw directly into the application's view.
+A Framebuffer is a device resource which controls where the rendered outputs go. The [SwapchainFramebuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) is the application's main Framebuffer. It can be used to draw directly into the application's view.
 
 Viewports control the target area in the Framebuffer that is actually rendered to. Pixels outside of that area are discarded. In our case, we want to render to the entire window, so we use the helper method [SetFullViewports](xref:Veldrid.CommandList#Veldrid_CommandList_SetFullViewports), which simply sets all Viewports to the full size of the Framebuffer.
 
@@ -104,8 +104,9 @@ The completed project of this tutorial is available [here](https://github.com/me
 See the [NeoDemo] project in the Veldrid repository for a more complex application built on Veldrid. It uses the following techniques:
 
 * Real-time dynamic shadows with three cascades
+* Real-time reflections.
 * Point lighting with configurable diffuse and specular components
-* 2D Shadowmap previews
+* 2D shadow and reflection map previews
 * ImGui integration
 * Multiple framebuffer outputs and full-screen effects
 * Configurable MSAA

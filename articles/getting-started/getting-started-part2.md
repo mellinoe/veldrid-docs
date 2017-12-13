@@ -41,14 +41,14 @@ Next, let's create an array to store our vertex data. For this demo, we just nee
 ```C#
 struct VertexPositionColor
 {
-    public const uint SizeInBytes = 24;
-    public Vector2 Position;
-    public RgbaFloat Color;
+    public Vector2 Position; // This is the position, in normalized device coordinates.
+    public RgbaFloat Color; // This is the color of the vertex.
     public VertexPositionColor(Vector2 position, RgbaFloat color)
     {
         Position = position;
         Color = color;
     }
+    public const uint SizeInBytes = 24;
 }
 ```
 
@@ -67,7 +67,7 @@ VertexPositionColor[] quadVertices =
 We will render these vertices as a Triangle Strip, so we need four indices as well. We will use 16-bit indices:
 
 ```C#
-ushort[] indexData = { 0, 1, 2, 3 };
+ushort[] quadIndices = { 0, 1, 2, 3 };
 ```
 
 We need somewhere to store this vertex and index data that the GraphicsDevice can use for rendering. This is accomplished with two [Buffer](xref:Veldrid.Buffer) objects, which can be used to store many different types of data.
@@ -79,16 +79,16 @@ _vertexBuffer = factory.CreateBuffer(new BufferDescription(4 * VertexPositionCol
 _indexBuffer = factory.CreateBuffer(new BufferDescription(4 * sizeof(ushort), BufferUsage.IndexBuffer));
 ```
 
-We've created our Buffers, but they are empty at the moment. We need to fill them with the data contained in our `quadVertices` and `indexData` arrays. Buffers can be filled with data using the [GraphicsDevice.UpdateBuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___) method:
+We've created our Buffers, but they are empty at the moment. We need to fill them with the data contained in our `quadVertices` and `quadIndices` arrays. Buffers can be filled with data using the [GraphicsDevice.UpdateBuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___) method:
 
 ```C#
 _graphicsDevice.UpdateBuffer(_vertexBuffer, 0, quadVertices);
-_graphicsDevice.UpdateBuffer(_indexBuffer, 0, indexData);
+_graphicsDevice.UpdateBuffer(_indexBuffer, 0, quadIndices);
 ```
 
 `_vertexBuffer` and `_indexBuffer` now contain all of the data from our arrays.
 
-Creating a Pipeline requires that we know the layout of the VertexBuffer that will be used. Let's create a description for our VertexBuffer now.
+To create a Pipeline later on, we need to know the layout of the vertex Buffer that will be used. Let's create the [VertexLayoutDescription](xref:Veldrid.VertexLayoutDescription) now.
 
 ```C#
 VertexLayoutDescription vertexLayout = new VertexLayoutDescription(
@@ -98,7 +98,7 @@ VertexLayoutDescription vertexLayout = new VertexLayoutDescription(
 
 Our vertex data has only two elements: a 2-float position, and a 4-float color.
 
-To create a Pipeline, we also need a set of shaders. Shader code is a bit outside of the scope of this tutorial, so I have provided some pre-written shaders which can be used to draw our multi-colored quad. Copy [these assets](https://github.com/mellinoe/veldrid-samples/tree/master/src/GettingStarted/Shaders) into your project and set them to Copy to Output upon build. Included are shaders for all graphics backends. To load our [Veldrid.Shader](xref:Veldrid.Shader) objects, we will use a helper function which simply selects the appropriate file from the "Shaders" subdirectory and loads it into a Shader. For simplicity, the filename is assumed to be the name of the shader stage (vertex or fragment).
+To create a Pipeline, we also need a set of shaders. Shader code is a bit outside of the scope of this tutorial, so I have provided some pre-written shaders which can be used to draw our multi-colored quad. Copy [these assets](https://github.com/mellinoe/veldrid-samples/tree/master/src/GettingStarted/Shaders) into your project and set them to "Copy to Output" upon build. Shaders for all graphics backends are included. To load our [Veldrid.Shader](xref:Veldrid.Shader) objects, we will use a helper function which simply selects the appropriate file from the "Shaders" subdirectory and loads it into a Shader. For simplicity, the filename is assumed to be the name of the shader stage (vertex or fragment).
 
 ```C#
 private static Shader LoadShader(ShaderStages stage)
@@ -192,7 +192,7 @@ Every `Pipeline` in Veldrid needs to know how many outputs it has, and what the 
 Finally, we can create the Pipeline.
 
 ```C#
-_pipeline = factory.CreateGraphicsPipeline(ref pipelineDescription);
+_pipeline = factory.CreateGraphicsPipeline(pipelineDescription);
 ```
 
 ### CommandList

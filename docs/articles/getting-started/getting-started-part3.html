@@ -82,7 +82,7 @@
 </code></pre><p>Before we can issue a Draw command, we need to set a <a class="xref" href="../../api/Veldrid.Framebuffer.html">Framebuffer</a> and <a class="xref" href="../../api/Veldrid.Viewport.html">Viewport</a>.</p>
 <pre><code class="lang-C#">_commandList.SetFramebuffer(_graphicsDevice.SwapchainFramebuffer);
 _commandList.SetFullViewports();
-</code></pre><p>A Framebuffer is a device resource which controls where the rendered outputs go. The <a class="xref" href="../../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">SwapchainFramebuffer</a> is application&#39;s main Framebuffer. It can be used to draw directly into the application&#39;s view.</p>
+</code></pre><p>A Framebuffer is a device resource which controls where the rendered outputs go. The <a class="xref" href="../../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">SwapchainFramebuffer</a> is the application&#39;s main Framebuffer. It can be used to draw directly into the application&#39;s view.</p>
 <p>Viewports control the target area in the Framebuffer that is actually rendered to. Pixels outside of that area are discarded. In our case, we want to render to the entire window, so we use the helper method <a class="xref" href="../../api/Veldrid.CommandList.html#Veldrid_CommandList_SetFullViewports">SetFullViewports</a>, which simply sets all Viewports to the full size of the Framebuffer.</p>
 <p>At the beginning of every frame, we clear the screen to black and the depth buffer to the max value. In a static scene, this is not really necessary, but I will do it anyway for demonstration.</p>
 <pre><code class="lang-C#">_commandList.ClearColorTarget(0, RgbaFloat.Black);
@@ -128,8 +128,9 @@ DisposeResources();
 <p>See the [NeoDemo] project in the Veldrid repository for a more complex application built on Veldrid. It uses the following techniques:</p>
 <ul>
 <li>Real-time dynamic shadows with three cascades</li>
+<li>Real-time reflections.</li>
 <li>Point lighting with configurable diffuse and specular components</li>
-<li>2D Shadowmap previews</li>
+<li>2D shadow and reflection map previews</li>
 <li>ImGui integration</li>
 <li>Multiple framebuffer outputs and full-screen effects</li>
 <li>Configurable MSAA</li>
