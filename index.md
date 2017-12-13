@@ -4,10 +4,10 @@ Veldrid is a low-level graphics library for .NET. It can be used to create high-
 
 Veldrid is open source software, available under the permissive [MIT License](https://github.com/mellinoe/veldrid/blob/master/LICENSE).
 
-[Introduction to Veldrid](xref:intro)
+[__Introduction to Veldrid__](xref:intro)
 
-[Getting Started Tutorial](xref:getting-started-intro)
+[__Getting Started Tutorial__](xref:getting-started-intro)
 
-[API Documentation](xref:Veldrid)
+[__API Documentation__](xref:Veldrid)
 
 ![Image](images/neodemo-reflections-2-smallest.png)
