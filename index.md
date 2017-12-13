@@ -7,3 +7,5 @@ Veldrid is a low-level graphics library for .NET. It can be used to create high-
 [Getting Started Tutorial](xref:getting-started-intro)
 
 [API Documentation](xref:Veldrid)
+
+![Image](images/neodemo-reflections-2-smallest.png)

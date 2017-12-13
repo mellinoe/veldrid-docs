@@ -13,8 +13,8 @@ This walkthrough assumes you are using the .NET Core toolchain, although the sam
 Create a new console application by running `dotnet new console`, or by using a "New Project" dialogue in Visual Studio or other IDE. Then, add a reference to two Veldrid NuGet packages:
 
 ```XML
-<PackageReference Include="Veldrid" Version="4.0.0-gaa5ff5bed4" />
-<PackageReference Include="Veldrid.StartupUtilities" Version="4.0.0-gaa5ff5bed4" />
+<PackageReference Include="Veldrid" Version="4.0.0-beta0" />
+<PackageReference Include="Veldrid.StartupUtilities" Version="4.0.0-beta0" />
 ```
 
 ## Creating a Window

@@ -73,8 +73,8 @@
 <h2 id="create-a-new-project">Create a new Project</h2>
 <p>This walkthrough assumes you are using the .NET Core toolchain, although the same code could be run on .NET Framework or Mono.</p>
 <p>Create a new console application by running <code>dotnet new console</code>, or by using a &quot;New Project&quot; dialogue in Visual Studio or other IDE. Then, add a reference to two Veldrid NuGet packages:</p>
-<pre><code class="lang-XML">&lt;PackageReference Include=&quot;Veldrid&quot; Version=&quot;4.0.0-gaa5ff5bed4&quot; /&gt;
-&lt;PackageReference Include=&quot;Veldrid.StartupUtilities&quot; Version=&quot;4.0.0-gaa5ff5bed4&quot; /&gt;
+<pre><code class="lang-XML">&lt;PackageReference Include=&quot;Veldrid&quot; Version=&quot;4.0.0-beta0&quot; /&gt;
+&lt;PackageReference Include=&quot;Veldrid.StartupUtilities&quot; Version=&quot;4.0.0-beta0&quot; /&gt;
 </code></pre><h2 id="creating-a-window">Creating a Window</h2>
 <p>Veldrid itself does not care what framework or library you use to manage your window or render view -- it is flexible enough to work with many different systems. The <code>VeldridStartup</code> static class (from Veldrid.StartupUtilities) includes a number of helper functions intended to make Window and GraphicsDevice creation easier for common scenarios, and it will be used here.</p>
 <p>First, we will create a Window. Inside the <code>Main()</code> method, let&#39;s add some code.</p>
