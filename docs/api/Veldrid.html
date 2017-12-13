@@ -227,8 +227,8 @@ mapped resource.</p>
       <h4><a class="xref" href="Veldrid.ShaderSetDescription.html">ShaderSetDescription</a></h4>
       <section><p>A <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> component describing a full set of shader stages and vertex layouts.</p>
 </section>
-      <h4><a class="xref" href="Veldrid.ShaderStageDescription.html">ShaderStageDescription</a></h4>
-      <section><p>Describes a single shader stage.</p>
+      <h4><a class="xref" href="Veldrid.StencilBehaviorDescription.html">StencilBehaviorDescription</a></h4>
+      <section><p>Describes how stencil tests are performed in a <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>&apos;s depth-stencil state.</p>
 </section>
       <h4><a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a></h4>
       <section><p>Describes a <a class="xref" href="Veldrid.Texture.html">Texture</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
@@ -252,9 +252,8 @@ mapped resource.</p>
 See <a class="xref" href="Veldrid.Buffer.html">Buffer</a>, <a class="xref" href="Veldrid.TextureView.html">TextureView</a> and <a class="xref" href="Veldrid.Sampler.html">Sampler</a>.</p>
 </section>
       <h4><a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a></h4>
-      <section><p>A resource owned by a <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>.
-<a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a> instances can be given unique names using
-<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SetResourceName_Veldrid_DeviceResource_System_String_">SetResourceName(DeviceResource, String)</a>.</p>
+      <section><p>A resource owned by a <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>, which can be given a string identifier for debugging and
+informational purposes.</p>
 </section>
       <h4><a class="xref" href="Veldrid.MappableResource.html">MappableResource</a></h4>
       <section><p>A marker interface designating a device resource which can be mapped into CPU-visible memory with
@@ -271,8 +270,8 @@ See <a class="xref" href="Veldrid.Buffer.html">Buffer</a>, <a class="xref" href=
       <h4><a class="xref" href="Veldrid.BufferUsage.html">BufferUsage</a></h4>
       <section><p>A bitmask describing the permitted uses of a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> object.</p>
 </section>
-      <h4><a class="xref" href="Veldrid.DepthComparisonKind.html">DepthComparisonKind</a></h4>
-      <section><p>Describes how new values are compared with existing values in a depth comparison.</p>
+      <h4><a class="xref" href="Veldrid.ComparisonKind.html">ComparisonKind</a></h4>
+      <section><p>Describes how new values are compared with existing values in a depth or stencil comparison.</p>
 </section>
       <h4><a class="xref" href="Veldrid.FaceCullMode.html">FaceCullMode</a></h4>
       <section><p>Indicates which face will be culled.</p>
@@ -316,6 +315,9 @@ type.</p>
 </section>
       <h4><a class="xref" href="Veldrid.ShaderStages.html">ShaderStages</a></h4>
       <section><p>A bitmask representing a set of shader stages.</p>
+</section>
+      <h4><a class="xref" href="Veldrid.StencilOperation.html">StencilOperation</a></h4>
+      <section><p>Identifies an action taken on samples that pass or fail the stencil test.</p>
 </section>
       <h4><a class="xref" href="Veldrid.TextureSampleCount.html">TextureSampleCount</a></h4>
       <section><p>Describes the number of samples to use in a <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>

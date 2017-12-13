@@ -109,13 +109,14 @@
   
   
   <a id="Veldrid_DepthStencilStateDescription__ctor_" data-uid="Veldrid.DepthStencilStateDescription.#ctor*"></a>
-  <h4 id="Veldrid_DepthStencilStateDescription__ctor_System_Boolean_System_Boolean_Veldrid_DepthComparisonKind_" data-uid="Veldrid.DepthStencilStateDescription.#ctor(System.Boolean,System.Boolean,Veldrid.DepthComparisonKind)">DepthStencilStateDescription(Boolean, Boolean, DepthComparisonKind)</h4>
-  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Veldrid.DepthStencilStateDescription.html">DepthStencilStateDescription</a>.</p>
+  <h4 id="Veldrid_DepthStencilStateDescription__ctor_System_Boolean_System_Boolean_Veldrid_ComparisonKind_" data-uid="Veldrid.DepthStencilStateDescription.#ctor(System.Boolean,System.Boolean,Veldrid.ComparisonKind)">DepthStencilStateDescription(Boolean, Boolean, ComparisonKind)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Veldrid.DepthStencilStateDescription.html">DepthStencilStateDescription</a>. This describes a depth-stencil state with no stencil
+testing enabled.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DepthStencilStateDescription(bool depthTestEnabled, bool depthWriteEnabled, DepthComparisonKind comparisonKind)</code></pre>
+    <pre><code class="lang-csharp hljs">public DepthStencilStateDescription(bool depthTestEnabled, bool depthWriteEnabled, ComparisonKind comparisonKind)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,9 +141,87 @@
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Veldrid.DepthComparisonKind.html">DepthComparisonKind</a></td>
+        <td><a class="xref" href="Veldrid.ComparisonKind.html">ComparisonKind</a></td>
         <td><span class="parametername">comparisonKind</span></td>
-        <td><p>The <a class="xref" href="Veldrid.DepthComparisonKind.html">DepthComparisonKind</a> used when considering new depth values.</p>
+        <td><p>The <a class="xref" href="Veldrid.ComparisonKind.html">ComparisonKind</a> used when considering new depth values.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_DepthStencilStateDescription__ctor_" data-uid="Veldrid.DepthStencilStateDescription.#ctor*"></a>
+  <h4 id="Veldrid_DepthStencilStateDescription__ctor_System_Boolean_System_Boolean_Veldrid_ComparisonKind_System_Boolean_Veldrid_StencilBehaviorDescription_Veldrid_StencilBehaviorDescription_System_Byte_System_Byte_System_UInt32_" data-uid="Veldrid.DepthStencilStateDescription.#ctor(System.Boolean,System.Boolean,Veldrid.ComparisonKind,System.Boolean,Veldrid.StencilBehaviorDescription,Veldrid.StencilBehaviorDescription,System.Byte,System.Byte,System.UInt32)">DepthStencilStateDescription(Boolean, Boolean, ComparisonKind, Boolean, StencilBehaviorDescription, StencilBehaviorDescription, Byte, Byte, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Veldrid.DepthStencilStateDescription.html">DepthStencilStateDescription</a>. This describes a depth-stencil state with no stencil
+testing enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DepthStencilStateDescription(bool depthTestEnabled, bool depthWriteEnabled, ComparisonKind comparisonKind, bool stencilTestEnabled, StencilBehaviorDescription stencilFront, StencilBehaviorDescription stencilBack, byte stencilReadMask, byte stencilWriteMask, uint stencilReference)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">depthTestEnabled</span></td>
+        <td><p>Controls whether depth testing is enabled.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">depthWriteEnabled</span></td>
+        <td><p>Controls whether new depth values are written to the depth buffer.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ComparisonKind.html">ComparisonKind</a></td>
+        <td><span class="parametername">comparisonKind</span></td>
+        <td><p>The <a class="xref" href="Veldrid.ComparisonKind.html">ComparisonKind</a> used when considering new depth values.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">stencilTestEnabled</span></td>
+        <td><p>Controls whether the stencil test is enabled.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.StencilBehaviorDescription.html">StencilBehaviorDescription</a></td>
+        <td><span class="parametername">stencilFront</span></td>
+        <td><p>Controls how stencil tests are handled for pixels whose surface faces towards the camera.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.StencilBehaviorDescription.html">StencilBehaviorDescription</a></td>
+        <td><span class="parametername">stencilBack</span></td>
+        <td><p>Controls how stencil tests are handled for pixels whose surface faces away from the camera.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">stencilReadMask</span></td>
+        <td><p>Controls the portion of the stencil buffer used for reading.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">stencilWriteMask</span></td>
+        <td><p>Controls the portion of the stencil buffer used for writing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">stencilReference</span></td>
+        <td><p>The reference value to use when doing a stencil test.</p>
 </td>
       </tr>
     </tbody>
@@ -151,13 +230,13 @@
   </h3>
   
   
-  <h4 id="Veldrid_DepthStencilStateDescription_ComparisonKind" data-uid="Veldrid.DepthStencilStateDescription.ComparisonKind">ComparisonKind</h4>
-  <div class="markdown level1 summary"><p>The <a class="xref" href="Veldrid.DepthComparisonKind.html">DepthComparisonKind</a> used when considering new depth values.</p>
+  <h4 id="Veldrid_DepthStencilStateDescription_DepthComparison" data-uid="Veldrid.DepthStencilStateDescription.DepthComparison">DepthComparison</h4>
+  <div class="markdown level1 summary"><p>The <a class="xref" href="Veldrid.ComparisonKind.html">ComparisonKind</a> used when considering new depth values.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public DepthComparisonKind ComparisonKind</code></pre>
+    <pre><code class="lang-csharp hljs">public ComparisonKind DepthComparison</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -169,7 +248,37 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.DepthComparisonKind.html">DepthComparisonKind</a></td>
+        <td><a class="xref" href="Veldrid.ComparisonKind.html">ComparisonKind</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_DepthStencilStateDescription_DepthOnlyLessEqual" data-uid="Veldrid.DepthStencilStateDescription.DepthOnlyLessEqual">DepthOnlyLessEqual</h4>
+  <div class="markdown level1 summary"><p>Describes a depth-only depth stencil state which uses a <a class="xref" href="Veldrid.ComparisonKind.html#Veldrid_ComparisonKind_LessEqual">LessEqual</a> comparison.
+The stencil test is disabled.
+Settings:
+DepthTestEnabled = true
+DepthWriteEnabled = true
+ComparisonKind = DepthComparisonKind.LessEqual</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly DepthStencilStateDescription DepthOnlyLessEqual</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.DepthStencilStateDescription.html">DepthStencilStateDescription</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -227,7 +336,8 @@
   
   
   <h4 id="Veldrid_DepthStencilStateDescription_Disabled" data-uid="Veldrid.DepthStencilStateDescription.Disabled">Disabled</h4>
-  <div class="markdown level1 summary"><p>Describes a depth stencil state in which depth testing and writing is disabled.
+  <div class="markdown level1 summary"><p>Describes a depth-only depth stencil state in which depth testing and writing is disabled.
+The stencil test is disabled.
 Settings:
 DepthTestEnabled = false
 DepthWriteEnabled = false
@@ -255,17 +365,13 @@ ComparisonKind = DepthComparisonKind.LessEqual</p>
   </table>
   
   
-  <h4 id="Veldrid_DepthStencilStateDescription_LessEqual" data-uid="Veldrid.DepthStencilStateDescription.LessEqual">LessEqual</h4>
-  <div class="markdown level1 summary"><p>Describes a depth stencil state which uses a <a class="xref" href="Veldrid.DepthComparisonKind.html#Veldrid_DepthComparisonKind_LessEqual">LessEqual</a> comparison.
-Settings:
-DepthTestEnabled = true
-DepthWriteEnabled = true
-ComparisonKind = DepthComparisonKind.LessEqual</p>
+  <h4 id="Veldrid_DepthStencilStateDescription_StencilBack" data-uid="Veldrid.DepthStencilStateDescription.StencilBack">StencilBack</h4>
+  <div class="markdown level1 summary"><p>Controls how stencil tests are handled for pixels whose surface faces away from the camera.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static readonly DepthStencilStateDescription LessEqual</code></pre>
+    <pre><code class="lang-csharp hljs">public StencilBehaviorDescription StencilBack</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -277,7 +383,132 @@ ComparisonKind = DepthComparisonKind.LessEqual</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.DepthStencilStateDescription.html">DepthStencilStateDescription</a></td>
+        <td><a class="xref" href="Veldrid.StencilBehaviorDescription.html">StencilBehaviorDescription</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_DepthStencilStateDescription_StencilFront" data-uid="Veldrid.DepthStencilStateDescription.StencilFront">StencilFront</h4>
+  <div class="markdown level1 summary"><p>Controls how stencil tests are handled for pixels whose surface faces towards the camera.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public StencilBehaviorDescription StencilFront</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.StencilBehaviorDescription.html">StencilBehaviorDescription</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_DepthStencilStateDescription_StencilReadMask" data-uid="Veldrid.DepthStencilStateDescription.StencilReadMask">StencilReadMask</h4>
+  <div class="markdown level1 summary"><p>Controls the portion of the stencil buffer used for reading.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte StencilReadMask</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_DepthStencilStateDescription_StencilReference" data-uid="Veldrid.DepthStencilStateDescription.StencilReference">StencilReference</h4>
+  <div class="markdown level1 summary"><p>The reference value to use when doing a stencil test.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint StencilReference</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_DepthStencilStateDescription_StencilTestEnabled" data-uid="Veldrid.DepthStencilStateDescription.StencilTestEnabled">StencilTestEnabled</h4>
+  <div class="markdown level1 summary"><p>Controls whether the stencil test is enabled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool StencilTestEnabled</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_DepthStencilStateDescription_StencilWriteMask" data-uid="Veldrid.DepthStencilStateDescription.StencilWriteMask">StencilWriteMask</h4>
+  <div class="markdown level1 summary"><p>Controls the portion of the stencil buffer used for writing.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public byte StencilWriteMask</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
         <td></td>
       </tr>
     </tbody>

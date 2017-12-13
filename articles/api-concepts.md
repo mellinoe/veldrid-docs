@@ -4,7 +4,7 @@ uid: api-concepts
 
 # API Concepts
 
-Veldrid is a flexible library exposing a large number of types granting access to various pieces of graphics functionality. The following are the most important concepts in the API which are needed for most common rendering techniques. See the [API Documentation](xref:Veldrid) page for a full listing of available Veldrid types.
+Veldrid is a flexible library exposing a large number of types granting access to various pieces of graphics functionality. The following are the most important concepts in the API which are needed for many common rendering techniques. See the [API Documentation](xref:Veldrid) page for a full listing of available Veldrid types.
 
 ## GraphicsDevice
 
@@ -40,13 +40,13 @@ See the [Textures overview](xref:textures) for more information about Textures.
 
 Buffers can be created for a variety of applications. The [BufferUsage](xref:Veldrid.BufferUsage) type enumerates all options.
 
-Vertex Buffers (BufferUsage.VertexBuffer) contain vertex data which is bound to a CommandList before issuing render commands. Vertex data is pulled from the bound vertex Buffers.
+* Vertex Buffers (BufferUsage.VertexBuffer) contain vertex data which is bound to a CommandList before issuing render commands. Vertex data is pulled from the bound vertex Buffers.
 
-Index Buffers (BufferUsage.IndexBuffer) contain index data which controls how vertices are selected during indexed drawing [CommandList.DrawIndexed](xref:Veldrid.CommandList#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_).
+* Index Buffers (BufferUsage.IndexBuffer) contain index data which controls how vertices are selected during indexed drawing [CommandList.DrawIndexed](xref:Veldrid.CommandList#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_).
 
-Uniform Buffers (BufferUsage.UniformBuffer) are Buffers which can be read from shader programs. These are commonly used to store object transformations, camera transformations, and other arbitrary pieces of data encoding some information about the scene being rendered.
+* Uniform Buffers (BufferUsage.UniformBuffer) are Buffers which can be read from shader programs. These are commonly used to store object transformations, camera transformations, and other arbitrary pieces of data encoding some information about the scene being rendered.
 
-Structured Buffers (BufferUsage.StructuredBufferReadOnly and BufferUsage.StructuredBufferReadWrite) are Buffers containing an array of a single data type, whose size is specified upon Buffer creation. Shaders can get read-only or read-write access to these resources, depending on the needs of the technique being used.
+* Structured Buffers (BufferUsage.StructuredBufferReadOnly and BufferUsage.StructuredBufferReadWrite) are Buffers containing an array of a single data type, whose size is specified upon Buffer creation. Shaders can get read-only or read-write access to these resources, depending on the needs of the technique being used.
 
 ### Shaders
 
@@ -59,7 +59,7 @@ In Veldrid, there are two types of [Pipelines](xref:Veldrid.Pipeline): graphics 
 A graphics Pipeline is a device resource which encapsulates a large amount of information. In other graphics libraries, a Pipeline is split into several unrelated objects or function calls which can be combined in confusing and unpredictable ways. Veldrid pipelines represent the combined set of all of these pieces of information, and are immutable. This avoids a huge amount of complexity inherent in the mutable state machine paradigm of OpenGL and similar APIs. Pipeline information encompasses:
 
 * Blend state: how color values are blended into the Framebuffer.
-* Depth stencil state: How depth testing, writing, comparing are performed.
+* Depth stencil state: How depth-stencil testing, writing, comparing are performed.
 * Rasterizer state: How culling, clipping, scissor tests, etc. are performed.
 * Primitive topology: How a series of input vertices are interpreted.
 * Shader set: the full set of shader programs in use.

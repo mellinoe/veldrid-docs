@@ -109,13 +109,13 @@
   
   
   <a id="Veldrid_ComputePipelineDescription__ctor_" data-uid="Veldrid.ComputePipelineDescription.#ctor*"></a>
-  <h4 id="Veldrid_ComputePipelineDescription__ctor_Veldrid_ShaderStageDescription_Veldrid_ResourceLayout___" data-uid="Veldrid.ComputePipelineDescription.#ctor(Veldrid.ShaderStageDescription,Veldrid.ResourceLayout[])">ComputePipelineDescription(ShaderStageDescription, ResourceLayout[])</h4>
+  <h4 id="Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout_" data-uid="Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout)">ComputePipelineDescription(Shader, ResourceLayout)</h4>
   <div class="markdown level1 summary"><p>Constructs a new ComputePipelineDescription.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ComputePipelineDescription(ShaderStageDescription shaderStage, ResourceLayout[] resourceLayouts)</code></pre>
+    <pre><code class="lang-csharp hljs">public ComputePipelineDescription(Shader shaderStage, ResourceLayout resourceLayout)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -128,19 +128,84 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.ShaderStageDescription.html">ShaderStageDescription</a></td>
+        <td><a class="xref" href="Veldrid.Shader.html">Shader</a></td>
         <td><span class="parametername">shaderStage</span></td>
-        <td></td>
+        <td><p>The compute <a class="xref" href="Veldrid.Shader.html">Shader</a> to be used in the Pipeline. This must be a Shader with
+<a class="xref" href="Veldrid.ShaderStages.html#Veldrid_ShaderStages_Compute">Compute</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a></td>
+        <td><span class="parametername">resourceLayout</span></td>
+        <td><p>The resource layout available to the Pipeline.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_ComputePipelineDescription__ctor_" data-uid="Veldrid.ComputePipelineDescription.#ctor*"></a>
+  <h4 id="Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout___" data-uid="Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout[])">ComputePipelineDescription(Shader, ResourceLayout[])</h4>
+  <div class="markdown level1 summary"><p>Constructs a new ComputePipelineDescription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComputePipelineDescription(Shader computeShader, ResourceLayout[] resourceLayouts)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Shader.html">Shader</a></td>
+        <td><span class="parametername">computeShader</span></td>
+        <td><p>The compute <a class="xref" href="Veldrid.Shader.html">Shader</a> to be used in the Pipeline. This must be a Shader with
+<a class="xref" href="Veldrid.ShaderStages.html#Veldrid_ShaderStages_Compute">Compute</a>.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a>[]</td>
         <td><span class="parametername">resourceLayouts</span></td>
-        <td></td>
+        <td><p>The set of resource layouts available to the Pipeline.</p>
+</td>
       </tr>
     </tbody>
   </table>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Veldrid_ComputePipelineDescription_ComputeShader" data-uid="Veldrid.ComputePipelineDescription.ComputeShader">ComputeShader</h4>
+  <div class="markdown level1 summary"><p>The compute <a class="xref" href="Veldrid.Shader.html">Shader</a> to be used in the Pipeline. This must be a Shader with
+<a class="xref" href="Veldrid.ShaderStages.html#Veldrid_ShaderStages_Compute">Compute</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Shader ComputeShader</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Shader.html">Shader</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Veldrid_ComputePipelineDescription_ResourceLayouts" data-uid="Veldrid.ComputePipelineDescription.ResourceLayouts">ResourceLayouts</h4>
@@ -162,31 +227,6 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a>[]</td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Veldrid_ComputePipelineDescription_ShaderStage" data-uid="Veldrid.ComputePipelineDescription.ShaderStage">ShaderStage</h4>
-  <div class="markdown level1 summary"><p>A description of the shader set to be used.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ShaderStageDescription ShaderStage</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.ShaderStageDescription.html">ShaderStageDescription</a></td>
         <td></td>
       </tr>
     </tbody>

@@ -87,8 +87,17 @@
 <li><a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSets</a></li>
 </ul>
 <h2 id="drawing">Drawing</h2>
-<p>The <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">DrawIndexed</a> method can be invoked to record an indexed draw command into the CommandList. The effect of this Draw is controlled by the active state of the CommandList -- which vertex Buffer, index Buffer, Pipeline, ResourceSets, and Framebuffer are bound, and what Viewport and scissor rectangles are set. Regular indexed and instanced draw commands are both supported by this method.</p>
+<p>The <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">DrawIndexed</a> method can be invoked to record an indexed draw command into the CommandList. The effect of this draw is controlled by the active state of the CommandList -- which vertex Buffer, index Buffer, Pipeline, ResourceSets, and Framebuffer are bound, and what Viewport and scissor rectangles are set. Regular indexed and instanced draw commands are both supported by this method.</p>
 <p>The <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_UInt32_">Draw</a> method can be invoked to record a non-indexed draw command into the CommandList. This method can be used without an index Buffer bound, and simply selects sequential vertices from the bound vertex Buffer, if it exists.</p>
+<h2 id="compute-dispatch">Compute Dispatch</h2>
+<p>The <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_Dispatch_System_UInt32_System_UInt32_System_UInt32_">Dispatch</a> method can be invoked to record a compute dispatch command into the CommandList. The effects of this call depend on the currently-bound compute Pipeline and ResourceSets.</p>
+<h2 id="indirect">Indirect</h2>
+<p>There are also &quot;Indirect&quot; variants of the above draw and compute functions. These &quot;Indirect&quot; variants allow the relevant draw/dispatch parameters to be read from a GPU Buffer, rather than passed in directly. This &quot;Indirect&quot; Buffer must have been created with the <a class="xref" href="../api/Veldrid.BufferUsage.html">BufferUsage.IndirectBuffer</a> flag, and is subject to some other restrictions. The information stored in the Buffer should adhere to the format of one of the following structures, depending on the operation being performed:</p>
+<ul>
+<li><a class="xref" href="../api/Veldrid.IndirectDrawArguments.html">IndirectDrawArguments</a>, used by <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_">DrawIndirect</a></li>
+<li><a class="xref" href="../api/Veldrid.IndirectDrawIndexedArguments.html">IndirectDrawIndexedArguments</a>, used by <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexedIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_">DrawIndexedIndirect</a></li>
+<li><a class="xref" href="../api/Veldrid.IndirectDispatchArguments.html">IndirectDispatchArguments</a>, used by <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DispatchIndirect_Veldrid_Buffer_System_UInt32_">DispatchIndirect</a></li>
+</ul>
 </article>
           </div>
           

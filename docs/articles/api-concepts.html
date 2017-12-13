@@ -69,7 +69,7 @@
             <article class="content wrap" id="_content" data-uid="api-concepts">
 <h1 id="api-concepts">API Concepts</h1>
 
-<p>Veldrid is a flexible library exposing a large number of types granting access to various pieces of graphics functionality. The following are the most important concepts in the API which are needed for most common rendering techniques. See the <a class="xref" href="../api/Veldrid.html">API Documentation</a> page for a full listing of available Veldrid types.</p>
+<p>Veldrid is a flexible library exposing a large number of types granting access to various pieces of graphics functionality. The following are the most important concepts in the API which are needed for many common rendering techniques. See the <a class="xref" href="../api/Veldrid.html">API Documentation</a> page for a full listing of available Veldrid types.</p>
 <h2 id="graphicsdevice">GraphicsDevice</h2>
 <p>A <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a> is the entry point into Veldrid. It represents a GPU device capable of creating and managing graphics resources, executing commands, and presenting rendered images to the application&#39;s main swapchain. GraphicsDevices are created explicity by the application, and a particular backing API (Vulkan, Direct3D, OpenGL) is selected at that time.</p>
 <h2 id="commandlist">CommandList</h2>
@@ -90,10 +90,16 @@
 <p>Textures can be sampled in shader programs using a <a class="xref" href="../api/Veldrid.TextureView.html">TextureView</a>. They can also be used as the destination of drawing operations when used to create a <a class="xref" href="../api/Veldrid.Framebuffer.html">Framebuffer</a> object.</p>
 <p>See the <a class="xref" href="textures.html">Textures overview</a> for more information about Textures.</p>
 <p>Buffers can be created for a variety of applications. The <a class="xref" href="../api/Veldrid.BufferUsage.html">BufferUsage</a> type enumerates all options.</p>
-<p>Vertex Buffers (BufferUsage.VertexBuffer) contain vertex data which is bound to a CommandList before issuing render commands. Vertex data is pulled from the bound vertex Buffers.</p>
-<p>Index Buffers (BufferUsage.IndexBuffer) contain index data which controls how vertices are selected during indexed drawing <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">CommandList.DrawIndexed</a>.</p>
-<p>Uniform Buffers (BufferUsage.UniformBuffer) are Buffers which can be read from shader programs. These are commonly used to store object transformations, camera transformations, and other arbitrary pieces of data encoding some information about the scene being rendered.</p>
-<p>Structured Buffers (BufferUsage.StructuredBufferReadOnly and BufferUsage.StructuredBufferReadWrite) are Buffers containing an array of a single data type, whose size is specified upon Buffer creation. Shaders can get read-only or read-write access to these resources, depending on the needs of the technique being used.</p>
+<ul>
+<li><p>Vertex Buffers (BufferUsage.VertexBuffer) contain vertex data which is bound to a CommandList before issuing render commands. Vertex data is pulled from the bound vertex Buffers.</p>
+</li>
+<li><p>Index Buffers (BufferUsage.IndexBuffer) contain index data which controls how vertices are selected during indexed drawing <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">CommandList.DrawIndexed</a>.</p>
+</li>
+<li><p>Uniform Buffers (BufferUsage.UniformBuffer) are Buffers which can be read from shader programs. These are commonly used to store object transformations, camera transformations, and other arbitrary pieces of data encoding some information about the scene being rendered.</p>
+</li>
+<li><p>Structured Buffers (BufferUsage.StructuredBufferReadOnly and BufferUsage.StructuredBufferReadWrite) are Buffers containing an array of a single data type, whose size is specified upon Buffer creation. Shaders can get read-only or read-write access to these resources, depending on the needs of the technique being used.</p>
+</li>
+</ul>
 <h3 id="shaders">Shaders</h3>
 <p><a class="xref" href="../api/Veldrid.Shader.html">Shaders</a> are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry). They are created from graphics-API-specific data chunks. Multiple shader modules are combined into a &quot;shader set&quot;, used to construct a Pipeline. See the <a class="xref" href="shaders.html">Shaders and Resources overview</a> for more information.</p>
 <h3 id="pipelines">Pipelines</h3>
@@ -101,7 +107,7 @@
 <p>A graphics Pipeline is a device resource which encapsulates a large amount of information. In other graphics libraries, a Pipeline is split into several unrelated objects or function calls which can be combined in confusing and unpredictable ways. Veldrid pipelines represent the combined set of all of these pieces of information, and are immutable. This avoids a huge amount of complexity inherent in the mutable state machine paradigm of OpenGL and similar APIs. Pipeline information encompasses:</p>
 <ul>
 <li>Blend state: how color values are blended into the Framebuffer.</li>
-<li>Depth stencil state: How depth testing, writing, comparing are performed.</li>
+<li>Depth stencil state: How depth-stencil testing, writing, comparing are performed.</li>
 <li>Rasterizer state: How culling, clipping, scissor tests, etc. are performed.</li>
 <li>Primitive topology: How a series of input vertices are interpreted.</li>
 <li>Shader set: the full set of shader programs in use.</li>

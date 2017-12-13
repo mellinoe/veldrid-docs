@@ -156,6 +156,35 @@ See <a class="xref" href="Veldrid.CommandListDescription.html">CommandListDescri
       </tr>
     </tbody>
   </table>
+  <h3 id="properties">Properties
+  </h3>
+  
+  
+  <a id="Veldrid_CommandList_Name_" data-uid="Veldrid.CommandList.Name*"></a>
+  <h4 id="Veldrid_CommandList_Name" data-uid="Veldrid.CommandList.Name">Name</h4>
+  <div class="markdown level1 summary"><p>A string identifying this instance. Can be used to differentiate between objects in graphics debuggers and other
+tools.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract string Name { get; set; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -210,15 +239,16 @@ The index given must be less than the number of color attachments in the active 
   </table>
   
   
-  <a id="Veldrid_CommandList_ClearDepthTarget_" data-uid="Veldrid.CommandList.ClearDepthTarget*"></a>
-  <h4 id="Veldrid_CommandList_ClearDepthTarget_System_Single_" data-uid="Veldrid.CommandList.ClearDepthTarget(System.Single)">ClearDepthTarget(Single)</h4>
-  <div class="markdown level1 summary"><p>Clears the depth target of the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.
-The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must have a depth attachment.</p>
+  <a id="Veldrid_CommandList_ClearDepthStencil_" data-uid="Veldrid.CommandList.ClearDepthStencil*"></a>
+  <h4 id="Veldrid_CommandList_ClearDepthStencil_System_Single_" data-uid="Veldrid.CommandList.ClearDepthStencil(System.Single)">ClearDepthStencil(Single)</h4>
+  <div class="markdown level1 summary"><p>Clears the depth-stencil target of the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.
+The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must have a depth attachment.
+With this overload, the stencil buffer is cleared to 0.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void ClearDepthTarget(float depth)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ClearDepthStencil(float depth)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -233,7 +263,43 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
       <tr>
         <td><span class="xref">System.Single</span></td>
         <td><span class="parametername">depth</span></td>
-        <td><p>The value to clear the depth target to.</p>
+        <td><p>The value to clear the depth buffer to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_ClearDepthStencil_" data-uid="Veldrid.CommandList.ClearDepthStencil*"></a>
+  <h4 id="Veldrid_CommandList_ClearDepthStencil_System_Single_System_Byte_" data-uid="Veldrid.CommandList.ClearDepthStencil(System.Single,System.Byte)">ClearDepthStencil(Single, Byte)</h4>
+  <div class="markdown level1 summary"><p>Clears the depth-stencil target of the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.
+The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must have a depth attachment.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void ClearDepthStencil(float depth, byte stencil)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The value to clear the depth buffer to.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">stencil</span></td>
+        <td><p>The value to clear the stencil buffer to.</p>
 </td>
       </tr>
     </tbody>
@@ -685,6 +751,35 @@ read. This value must be a multiple of 4.</p>
   
   
   <a id="Veldrid_CommandList_Draw_" data-uid="Veldrid.CommandList.Draw*"></a>
+  <h4 id="Veldrid_CommandList_Draw_System_UInt32_" data-uid="Veldrid.CommandList.Draw(System.UInt32)">Draw(UInt32)</h4>
+  <div class="markdown level1 summary"><p>Draws primitives from the currently-bound state in this CommandList. An index Buffer is not used.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void Draw(uint vertexCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">vertexCount</span></td>
+        <td><p>The number of vertices.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_Draw_" data-uid="Veldrid.CommandList.Draw*"></a>
   <h4 id="Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.Draw(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">Draw(UInt32, UInt32, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Draws primitives from the currently-bound state in this CommandList. An index Buffer is not used.</p>
 </div>
@@ -725,6 +820,35 @@ read. This value must be a multiple of 4.</p>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">instanceStart</span></td>
         <td><p>The starting instance value.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_DrawIndexed_" data-uid="Veldrid.CommandList.DrawIndexed*"></a>
+  <h4 id="Veldrid_CommandList_DrawIndexed_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexed(System.UInt32)">DrawIndexed(UInt32)</h4>
+  <div class="markdown level1 summary"><p>Draws indexed primitives from the currently-bound state in this <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawIndexed(uint indexCount)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">indexCount</span></td>
+        <td><p>The number of indices.</p>
 </td>
       </tr>
     </tbody>
