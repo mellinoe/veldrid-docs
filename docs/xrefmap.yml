@@ -4,6 +4,9 @@ references:
 - uid: api-concepts
   name: API Concepts
   href: articles/api-concepts.html
+- uid: beta1
+  name: Veldrid Beta 1
+  href: updates/beta1.html
 - uid: command-lists
   name: Command Lists
   href: articles/command-lists.html

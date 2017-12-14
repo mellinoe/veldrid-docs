@@ -10,4 +10,4 @@ Veldrid is open source software, available under the permissive [MIT License](ht
 
 [__API Documentation__](xref:Veldrid)
 
-![Image](images/neodemo-reflections-2-smallest.png)
+![Image](images/neodemo-low-wide.png)
