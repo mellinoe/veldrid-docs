@@ -993,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/getting-started-part1.html",
-          "hash": "ww3mGauZ9XC2nJ32N4YM9g=="
+          "hash": "sEP7GhLMFZhCrMjOTYLVcw=="
         }
       },
       "is_incremental": false,
@@ -1005,7 +1005,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/getting-started-part2.html",
-          "hash": "2HzphOsLySSJyBTqtBuqgQ=="
+          "hash": "N4QZN1hauHI96e5NossjiQ=="
         }
       },
       "is_incremental": false,
@@ -1017,7 +1017,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/getting-started-part3.html",
-          "hash": "ubUZm8r10yq6c5Aq/hmdsw=="
+          "hash": "CumO1wNqX8d2LvKdx3BO7g=="
         }
       },
       "is_incremental": false,
@@ -1029,7 +1029,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/intro.html",
-          "hash": "CaMOGJHav9AeSgtQlj4B8w=="
+          "hash": "jMkt9lXJzzABugTeCG4wqg=="
         }
       },
       "is_incremental": false,
@@ -1089,7 +1089,18 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "ili8GXzLrPAKVgUC8udX2w=="
+          "hash": "yiaBqPxRJsEZEfDtyH0mNg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/copy-to-output.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/copy-to-output.png"
         }
       },
       "is_incremental": false,
@@ -1101,6 +1112,17 @@
       "output": {
         "resource": {
           "relative_path": "images/neodemo-reflections-2-smallest.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/tutorial-result.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/tutorial-result.png"
         }
       },
       "is_incremental": false,
@@ -1139,27 +1161,27 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "RestApiDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ResourceDocumentProcessor": {
           "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "RestApiDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor RestApiDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

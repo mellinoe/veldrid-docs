@@ -71,10 +71,17 @@
 
 <p>In this section, we will set up a new project, create a Window to draw into, and create a Veldrid GraphicsDevice. We will also set up a very simple skeleton for the other sections to fill in.</p>
 <h2 id="create-a-new-project">Create a new Project</h2>
-<p>This walkthrough assumes you are using the .NET Core toolchain, although the same code could be run on .NET Framework or Mono.</p>
-<p>Create a new console application by running <code>dotnet new console</code>, or by using a &quot;New Project&quot; dialogue in Visual Studio or other IDE. Then, add a reference to two Veldrid NuGet packages:</p>
-<pre><code class="lang-XML">&lt;PackageReference Include=&quot;Veldrid&quot; Version=&quot;4.0.0-beta1&quot; /&gt;
-&lt;PackageReference Include=&quot;Veldrid.StartupUtilities&quot; Version=&quot;4.0.0-beta1&quot; /&gt;
+<p>This walkthrough assumes you are using the .NET Core toolchain, although the same code could be run on .NET Framework or Mono. Veldrid is a .NET Standard 2.0 library, so you will need the .NET Core 2.0 SDK, or a </p>
+<p>Create a new console application by running <code>dotnet new console</code>, or by using a &quot;New Project&quot; dialogue in Visual Studio or other IDE. Then, add a reference to these two NuGet packages:</p>
+<ul>
+<li>Veldrid: the core package containing all of the important graphics functionality.</li>
+<li>Veldrid.StartupUtilities: a utility package that makes it easy to set up an application using SDL2.</li>
+</ul>
+<p>You can add references to these packages using the Visual Studio package manager, or you can add the following lines directly into your .csproj.</p>
+<pre><code class="lang-XML">&lt;ItemGroup&gt;
+  &lt;PackageReference Include=&quot;Veldrid&quot; Version=&quot;4.0.0-beta1&quot; /&gt;
+  &lt;PackageReference Include=&quot;Veldrid.StartupUtilities&quot; Version=&quot;4.0.0-beta1&quot; /&gt;
+&lt;/ItemGroup&gt;
 </code></pre><h2 id="creating-a-window">Creating a Window</h2>
 <p>Veldrid itself does not care what framework or library you use to manage your window or render view -- it is flexible enough to work with many different systems. The <code>VeldridStartup</code> static class (from Veldrid.StartupUtilities) includes a number of helper functions intended to make Window and GraphicsDevice creation easier for common scenarios, and it will be used here.</p>
 <p>First, we will create a Window. Inside the <code>Main()</code> method, let&#39;s add some code.</p>
@@ -87,7 +94,8 @@
     WindowTitle = &quot;Veldrid Tutorial&quot;
 };
 Sdl2Window window = VeldridStartup.CreateWindow(ref windowCI);
-</code></pre><p>This creates a new Sdl2Window with some basic properties. Next, we will create a GraphicsDevice attached to it. This will let us issue graphics commands into the window. Create a new <a class="xref" href="../../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a> field called <code>_graphicsDevice</code>. We will use another <code>VeldridStartup</code> helper method to create it:</p>
+</code></pre><p>Behind the scenes, the StartupUtilities package is using <a href="https://www.libsdl.org/">SDL2</a> to create and manage windows for us. The Sdl2Window class is a simple wrapper which lets you do common things like resize the window, respond to user input, etc.</p>
+<p>Next, we will create a GraphicsDevice attached to our window, which will let us issue graphics commands. Create a new <a class="xref" href="../../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a> field called <code>_graphicsDevice</code>. We will use another <code>VeldridStartup</code> helper method to create it:</p>
 <pre><code class="lang-C#">_graphicsDevice = VeldridStartup.CreateGraphicsDevice(window);
 </code></pre><p>Next, let&#39;s add in a very basic application loop that keeps the window running. At the bottom of <code>Main()</code>:</p>
 <pre><code class="lang-C#">while (window.Exists)
@@ -97,7 +105,39 @@ Sdl2Window window = VeldridStartup.CreateWindow(ref windowCI);
 </code></pre><p>If we run this code, we will not see anything terribly interesting. A blank window will appear, which can be moved around, resized, and closed, but it will not display anything.</p>
 <p>In the next section, we will create some Veldrid graphics resources which we will need to render a basic multi-colored quad. In the third section, we will draw the quad and perform resource and application cleanup.</p>
 <p><a class="xref" href="getting-started-part2.html">Next: Part 2</a></p>
-</article>
+<p>Here is what our application should look like at the end of this section:</p>
+<pre><code class="lang-C#">using Veldrid;
+using Veldrid.Sdl2;
+using Veldrid.StartupUtilities;
+
+namespace GettingStarted
+{
+    class Program
+    {
+        private static GraphicsDevice _graphicsDevice;
+
+        static void Main()
+        {
+            WindowCreateInfo windowCI = new WindowCreateInfo()
+            {
+                X = 100,
+                Y = 100,
+                WindowWidth = 960,
+                WindowHeight = 540,
+                WindowTitle = &quot;Veldrid Tutorial&quot;
+            };
+            Sdl2Window window = VeldridStartup.CreateWindow(ref windowCI);
+
+            _graphicsDevice = VeldridStartup.CreateGraphicsDevice(window);
+
+            while (window.Exists)
+            {
+                window.PumpEvents();
+            }
+        }
+    }
+}
+</code></pre></article>
           </div>
           
           <div class="hidden-sm col-md-2" role="complementary">

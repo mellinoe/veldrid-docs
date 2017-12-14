@@ -34,9 +34,9 @@ We will create our resources one-by-one, using the ResourceFactory property of o
 ResourceFactory factory = _graphicsDevice.ResourceFactory;
 ```
 
-### VertexBuffer and IndexBuffer
+### Vertex and Index Buffers
 
-Next, let's create an array to store our vertex data. For this demo, we just need simple vertices containing a normalized position, and a color. Let's define a structure which will represent each vertex:
+Next, let's create an array to store our vertex data. For this demo, we just need simple vertices containing a normalized position, and a color. Let's define a structure which will represent each vertex. Place this structure definition after the `Program` class:
 
 ```C#
 struct VertexPositionColor
@@ -52,7 +52,7 @@ struct VertexPositionColor
 }
 ```
 
-Let's create an array of these, representing the four corners of our multi-colored quad.
+Let's create an array of these, representing the four corners of our multi-colored quad. Put this at the end of the CreateResources method:
 
 ```C#
 VertexPositionColor[] quadVertices =
@@ -98,7 +98,11 @@ VertexLayoutDescription vertexLayout = new VertexLayoutDescription(
 
 Our vertex data has only two elements: a 2-float position, and a 4-float color.
 
-To create a Pipeline, we also need a set of shaders. Shader code is a bit outside of the scope of this tutorial, so I have provided some pre-written shaders which can be used to draw our multi-colored quad. Copy [these assets](https://github.com/mellinoe/veldrid-samples/tree/master/src/GettingStarted/Shaders) into your project and set them to "Copy to Output" upon build. Shaders for all graphics backends are included. To load our [Veldrid.Shader](xref:Veldrid.Shader) objects, we will use a helper function which simply selects the appropriate file from the "Shaders" subdirectory and loads it into a Shader. For simplicity, the filename is assumed to be the name of the shader stage (vertex or fragment).
+To create a Pipeline, we also need a set of shaders. Shader code is a bit outside of the scope of this tutorial, so I have provided some pre-written shaders which can be used to draw our multi-colored quad. Copy [these files](https://github.com/mellinoe/veldrid-samples/tree/master/src/GettingStarted/Shaders) into your project and set them to "Copy to Output" upon build. In Visual Studio, you can do this by selecting all of the files and applying these options:
+
+![Copy To Output](../../images/copy-to-output.png)
+
+Shaders for all graphics backends are included. To load our [Veldrid.Shader](xref:Veldrid.Shader) objects, we will use a helper function which simply selects the appropriate file from the "Shaders" subdirectory and loads it into a Shader. For simplicity, the filename is assumed to be the name of the shader stage (vertex or fragment). Put this method into the `Program` class:
 
 ```C#
 private static Shader LoadShader(ShaderStages stage)
@@ -206,3 +210,140 @@ _commandList = factory.CreateCommandList();
 We have successfully created all of the device resources that we need. In the next section, we will draw our quad, and then do some cleanup.
 
 [Next: Part 3](xref:getting-started-part3)
+
+Here is what our application should look like at the end of this section:
+
+```C#
+using System.IO;
+using System.Numerics;
+using Veldrid;
+using Veldrid.Sdl2;
+using Veldrid.StartupUtilities;
+
+namespace GettingStarted
+{
+    class Program
+    {
+        private static GraphicsDevice _graphicsDevice;
+        private static CommandList _commandList;
+        private static Buffer _vertexBuffer;
+        private static Buffer _indexBuffer;
+        private static Shader _vertexShader;
+        private static Shader _fragmentShader;
+        private static Pipeline _pipeline;
+
+        static void Main()
+        {
+            WindowCreateInfo windowCI = new WindowCreateInfo()
+            {
+                X = 100,
+                Y = 100,
+                WindowWidth = 960,
+                WindowHeight = 540,
+                WindowTitle = "Veldrid Tutorial"
+            };
+            Sdl2Window window = VeldridStartup.CreateWindow(ref windowCI);
+
+            _graphicsDevice = VeldridStartup.CreateGraphicsDevice(window);
+
+            CreateResources();
+
+            while (window.Exists)
+            {
+                window.PumpEvents();
+            }
+        }
+
+        private static void CreateResources()
+        {
+            ResourceFactory factory = _graphicsDevice.ResourceFactory;
+
+            VertexPositionColor[] quadVertices =
+            {
+                new VertexPositionColor(new Vector2(-.75f, .75f), RgbaFloat.Red),
+                new VertexPositionColor(new Vector2(.75f, .75f), RgbaFloat.Green),
+                new VertexPositionColor(new Vector2(-.75f, -.75f), RgbaFloat.Blue),
+                new VertexPositionColor(new Vector2(.75f, -.75f), RgbaFloat.Yellow)
+            };
+
+            ushort[] quadIndices = { 0, 1, 2, 3 };
+
+            _vertexBuffer = factory.CreateBuffer(new BufferDescription(4 * VertexPositionColor.SizeInBytes, BufferUsage.VertexBuffer));
+            _indexBuffer = factory.CreateBuffer(new BufferDescription(4 * sizeof(ushort), BufferUsage.IndexBuffer));
+
+            _graphicsDevice.UpdateBuffer(_vertexBuffer, 0, quadVertices);
+            _graphicsDevice.UpdateBuffer(_indexBuffer, 0, quadIndices);
+
+            VertexLayoutDescription vertexLayout = new VertexLayoutDescription(
+                new VertexElementDescription("Position", VertexElementSemantic.Position, VertexElementFormat.Float2),
+                new VertexElementDescription("Color", VertexElementSemantic.Color, VertexElementFormat.Float4));
+
+            _vertexShader = LoadShader(ShaderStages.Vertex);
+            _fragmentShader = LoadShader(ShaderStages.Fragment);
+
+            GraphicsPipelineDescription pipelineDescription = new GraphicsPipelineDescription();
+            pipelineDescription.BlendState = BlendStateDescription.SingleOverrideBlend;
+
+            pipelineDescription.DepthStencilState = new DepthStencilStateDescription(
+                depthTestEnabled: true,
+                depthWriteEnabled: true,
+                comparisonKind: ComparisonKind.LessEqual);
+
+            pipelineDescription.RasterizerState = new RasterizerStateDescription(
+                cullMode: FaceCullMode.Back,
+                fillMode: PolygonFillMode.Solid,
+                frontFace: FrontFace.Clockwise,
+                depthClipEnabled: true,
+                scissorTestEnabled: false);
+
+            pipelineDescription.PrimitiveTopology = PrimitiveTopology.TriangleStrip;
+            pipelineDescription.ResourceLayouts = System.Array.Empty<ResourceLayout>();
+
+            pipelineDescription.ShaderSet = new ShaderSetDescription(
+                vertexLayouts: new VertexLayoutDescription[] { vertexLayout },
+                shaders: new Shader[] { _vertexShader, _fragmentShader });
+
+            pipelineDescription.Outputs = _graphicsDevice.SwapchainFramebuffer.OutputDescription;
+            _pipeline = factory.CreateGraphicsPipeline(pipelineDescription);
+
+            _commandList = factory.CreateCommandList();
+        }
+
+        private static Shader LoadShader(ShaderStages stage)
+        {
+            string extension = null;
+            switch (_graphicsDevice.BackendType)
+            {
+                case GraphicsBackend.Direct3D11:
+                    extension = "hlsl.bytes";
+                    break;
+                case GraphicsBackend.Vulkan:
+                    extension = "spv";
+                    break;
+                case GraphicsBackend.OpenGL:
+                    extension = "glsl";
+                    break;
+                default: throw new System.InvalidOperationException();
+            }
+
+            string entryPoint = stage == ShaderStages.Vertex ? "VS" : "FS";
+            string path = Path.Combine(System.AppContext.BaseDirectory, "Shaders", $"{stage.ToString()}.{extension}");
+            byte[] shaderBytes = File.ReadAllBytes(path);
+            return _graphicsDevice.ResourceFactory.CreateShader(new ShaderDescription(stage, shaderBytes, entryPoint));
+        }
+    }
+
+    struct VertexPositionColor
+    {
+        public Vector2 Position; // This is the position, in normalized device coordinates.
+        public RgbaFloat Color; // This is the color of the vertex.
+        public VertexPositionColor(Vector2 position, RgbaFloat color)
+        {
+            Position = position;
+            Color = color;
+        }
+        public const uint SizeInBytes = 24;
+    }
+}
+
+```

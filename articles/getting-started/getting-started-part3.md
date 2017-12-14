@@ -56,7 +56,7 @@ _commandList.DrawIndexed(
     instanceStart: 0);
 ```
 
-The vertex Buffer is bound to slot 0. In our case, we only have one slot, but it is possible for multiple slots and multiple vertex Buffers to be used. When we bind our index Buffer, we need to communicate the format of data inside of it. Ours contains 16-bit unsigned integers ([IndexFormat.UInt16](xref:Veldrid.IndexFormat)) We issue a DrawIndexed command with four indices, one instance, and no offsets.
+The vertex Buffer is bound to slot 0. In our case, we only have one slot, but it is possible for multiple slots and multiple vertex Buffers to be used. When we bind our index Buffer, we need to communicate the format of data inside of it. Ours contains 16-bit unsigned integers ([IndexFormat.UInt16](xref:Veldrid.IndexFormat)). We issue a DrawIndexed command with four indices, one instance, and no offsets.
 
 We are almost ready to see our colored quad. All that remains is to execute our commands, and swap the buffers of the main swapchain.
 
@@ -67,6 +67,8 @@ _graphicsDevice.SwapBuffers();
 ```
 
 If you run the application now, you should see a quad being rendered, with a different color mixing from each corner.
+
+![Final Image](../../images/tutorial-result.png)
 
 ## Resource Cleanup
 
