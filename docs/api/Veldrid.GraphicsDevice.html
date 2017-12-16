@@ -341,6 +341,76 @@ This object is created with <a class="xref" href="Veldrid.SamplerDescription.htm
   </table>
   
   
+  <a id="Veldrid_GraphicsDevice_CreateD3D11_" data-uid="Veldrid.GraphicsDevice.CreateD3D11*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_System_Object_System_Double_System_Double_System_Single_" data-uid="Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,System.Object,System.Double,System.Double,System.Single)">CreateD3D11(GraphicsDeviceOptions, Object, Double, Double, Single)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Direct3D11.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateD3D11(GraphicsDeviceOptions options, object swapChainPanel, double renderWidth, double renderHeight, float logicalDpi)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Describes several common properties of the GraphicsDevice.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Object</span></td>
+        <td><span class="parametername">swapChainPanel</span></td>
+        <td><p>A COM object which must implement the <see cref="!:SharpDX.DXGI.ISwapChainPanelNative"></see>
+or <see cref="!:SharpDX.DXGI.ISwapChainBackgroundPanelNative"></see> interface. Generally, this should be a SwapChainPanel
+or SwapChainBackgroundPanel contained in your application window.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">renderWidth</span></td>
+        <td><p>The renderable width of the swapchain panel.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Double</span></td>
+        <td><span class="parametername">renderHeight</span></td>
+        <td><p>The renderable height of the swapchain panel.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">logicalDpi</span></td>
+        <td><p>The logical DPI of the swapchain panel.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_GraphicsDevice_CreateOpenGL_" data-uid="Veldrid.GraphicsDevice.CreateOpenGL*"></a>
   <h4 id="Veldrid_GraphicsDevice_CreateOpenGL_Veldrid_GraphicsDeviceOptions_Veldrid_OpenGL_OpenGLPlatformInfo_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.GraphicsDeviceOptions,Veldrid.OpenGL.OpenGLPlatformInfo,System.UInt32,System.UInt32)">CreateOpenGL(GraphicsDeviceOptions, OpenGLPlatformInfo, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using OpenGL.</p>

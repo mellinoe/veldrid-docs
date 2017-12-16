@@ -1690,12 +1690,6 @@ references:
   commentId: F:Veldrid.GraphicsBackend.OpenGL
   fullName: Veldrid.GraphicsBackend.OpenGL
   nameWithType: GraphicsBackend.OpenGL
-- uid: Veldrid.GraphicsBackend.OpenGLES
-  name: OpenGLES
-  href: api/Veldrid.GraphicsBackend.html#Veldrid_GraphicsBackend_OpenGLES
-  commentId: F:Veldrid.GraphicsBackend.OpenGLES
-  fullName: Veldrid.GraphicsBackend.OpenGLES
-  nameWithType: GraphicsBackend.OpenGLES
 - uid: Veldrid.GraphicsBackend.Vulkan
   name: Vulkan
   href: api/Veldrid.GraphicsBackend.html#Veldrid_GraphicsBackend_Vulkan
@@ -1738,6 +1732,12 @@ references:
   commentId: M:Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,IntPtr,System.UInt32,System.UInt32)
   fullName: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions, IntPtr, System.UInt32, System.UInt32)
   nameWithType: GraphicsDevice.CreateD3D11(GraphicsDeviceOptions, IntPtr, UInt32, UInt32)
+- uid: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,System.Object,System.Double,System.Double,System.Single)
+  name: CreateD3D11(GraphicsDeviceOptions, Object, Double, Double, Single)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_System_Object_System_Double_System_Double_System_Single_
+  commentId: M:Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,System.Object,System.Double,System.Double,System.Single)
+  fullName: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions, System.Object, System.Double, System.Double, System.Single)
+  nameWithType: GraphicsDevice.CreateD3D11(GraphicsDeviceOptions, Object, Double, Double, Single)
 - uid: Veldrid.GraphicsDevice.CreateD3D11*
   name: CreateD3D11
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_
