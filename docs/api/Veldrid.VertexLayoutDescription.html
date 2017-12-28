@@ -73,7 +73,7 @@
   
   <h1 id="Veldrid_VertexLayoutDescription" data-uid="Veldrid.VertexLayoutDescription" class="text-break">Struct VertexLayoutDescription
   </h1>
-  <div class="markdown level0 summary"><p>Describes the layout of vertex data in a single <a class="xref" href="Veldrid.Buffer.html">Buffer</a> used as a vertex buffer.</p>
+  <div class="markdown level0 summary"><p>Describes the layout of vertex data in a single <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> used as a vertex buffer.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
@@ -109,6 +109,51 @@
   
   
   <a id="Veldrid_VertexLayoutDescription__ctor_" data-uid="Veldrid.VertexLayoutDescription.#ctor*"></a>
+  <h4 id="Veldrid_VertexLayoutDescription__ctor_System_UInt32_System_UInt32_Veldrid_VertexElementDescription___" data-uid="Veldrid.VertexLayoutDescription.#ctor(System.UInt32,System.UInt32,Veldrid.VertexElementDescription[])">VertexLayoutDescription(UInt32, UInt32, VertexElementDescription[])</h4>
+  <div class="markdown level1 summary"><p>Constructs a new VertexLayoutDescription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public VertexLayoutDescription(uint stride, uint instanceStepRate, params VertexElementDescription[] elements)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">stride</span></td>
+        <td><p>The number of bytes in between successive elements in the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">instanceStepRate</span></td>
+        <td><p>A value controlling how often data for instances is advanced for this element. For
+per-vertex elements, this value should be 0.
+For example, an InstanceStepRate of 3 indicates that 3 instances will be drawn with the same value for this element.
+The next 3 instances will be drawn with the next value for this element, and so on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.VertexElementDescription.html">VertexElementDescription</a>[]</td>
+        <td><span class="parametername">elements</span></td>
+        <td><p>An array of <a class="xref" href="Veldrid.VertexElementDescription.html">VertexElementDescription</a> objects, each describing a single element
+of vertex data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_VertexLayoutDescription__ctor_" data-uid="Veldrid.VertexLayoutDescription.#ctor*"></a>
   <h4 id="Veldrid_VertexLayoutDescription__ctor_System_UInt32_Veldrid_VertexElementDescription___" data-uid="Veldrid.VertexLayoutDescription.#ctor(System.UInt32,Veldrid.VertexElementDescription[])">VertexLayoutDescription(UInt32, VertexElementDescription[])</h4>
   <div class="markdown level1 summary"><p>Constructs a new VertexLayoutDescription.</p>
 </div>
@@ -130,7 +175,7 @@
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">stride</span></td>
-        <td><p>The number of bytes in between successive elements in the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+        <td><p>The number of bytes in between successive elements in the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
 </td>
       </tr>
       <tr>
@@ -201,8 +246,36 @@ of vertex data.</p>
   </table>
   
   
+  <h4 id="Veldrid_VertexLayoutDescription_InstanceStepRate" data-uid="Veldrid.VertexLayoutDescription.InstanceStepRate">InstanceStepRate</h4>
+  <div class="markdown level1 summary"><p>A value controlling how often data for instances is advanced for this layout. For per-vertex elements, this value
+should be 0.
+For example, an InstanceStepRate of 3 indicates that 3 instances will be drawn with the same value for this layout. The
+next 3 instances will be drawn with the next value, and so on.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint InstanceStepRate</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Veldrid_VertexLayoutDescription_Stride" data-uid="Veldrid.VertexLayoutDescription.Stride">Stride</h4>
-  <div class="markdown level1 summary"><p>The number of bytes in between successive elements in the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+  <div class="markdown level1 summary"><p>The number of bytes in between successive elements in the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

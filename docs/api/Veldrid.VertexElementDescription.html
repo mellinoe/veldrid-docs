@@ -109,13 +109,13 @@
   
   
   <a id="Veldrid_VertexElementDescription__ctor_" data-uid="Veldrid.VertexElementDescription.#ctor*"></a>
-  <h4 id="Veldrid_VertexElementDescription__ctor_System_String_Veldrid_VertexElementFormat_Veldrid_VertexElementSemantic_System_UInt32_" data-uid="Veldrid.VertexElementDescription.#ctor(System.String,Veldrid.VertexElementFormat,Veldrid.VertexElementSemantic,System.UInt32)">VertexElementDescription(String, VertexElementFormat, VertexElementSemantic, UInt32)</h4>
+  <h4 id="Veldrid_VertexElementDescription__ctor_System_String_Veldrid_VertexElementFormat_Veldrid_VertexElementSemantic_" data-uid="Veldrid.VertexElementDescription.#ctor(System.String,Veldrid.VertexElementFormat,Veldrid.VertexElementSemantic)">VertexElementDescription(String, VertexElementFormat, VertexElementSemantic)</h4>
   <div class="markdown level1 summary"><p>Constructs a new VertexElementDescription.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public VertexElementDescription(string name, VertexElementFormat format, VertexElementSemantic semantic, uint instanceStepRate)</code></pre>
+    <pre><code class="lang-csharp hljs">public VertexElementDescription(string name, VertexElementFormat format, VertexElementSemantic semantic)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -143,15 +143,6 @@
         <td><a class="xref" href="Veldrid.VertexElementSemantic.html">VertexElementSemantic</a></td>
         <td><span class="parametername">semantic</span></td>
         <td><p>The semantic type of the element.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">instanceStepRate</span></td>
-        <td><p>A value controlling how often data for instances is advanced for this element. For
-per-vertex elements, this value should be 0.
-For example, an InstanceStepRate of 3 indicates that 3 instances will be drawn with the same value for this element.
-The next 3 instances will be drawn with the next value for this element, and so on.</p>
 </td>
       </tr>
     </tbody>
@@ -220,34 +211,6 @@ The next 3 instances will be drawn with the next value for this element, and so 
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.VertexElementFormat.html">VertexElementFormat</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Veldrid_VertexElementDescription_InstanceStepRate" data-uid="Veldrid.VertexElementDescription.InstanceStepRate">InstanceStepRate</h4>
-  <div class="markdown level1 summary"><p>A value controlling how often data for instances is advanced for this element. For per-vertex elements, this value
-should be 0.
-For example, an InstanceStepRate of 3 indicates that 3 instances will be drawn with the same value for this element. The
-next 3 instances will be drawn with the next value for this element, and so on.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint InstanceStepRate</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
         <td></td>
       </tr>
     </tbody>

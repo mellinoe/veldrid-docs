@@ -69,10 +69,10 @@
             <article class="content wrap" id="_content" data-uid="command-lists">
 <h1 id="command-lists">Command Lists</h1>
 
-<p>Using Veldrid, all graphics commands must be executed using a <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a>. A CommandList is a special device resource (created by a <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a>) that records a variety of commands. These commands can then be submitted for execution on the device using the <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_">GraphicsDevice.ExecuteCommands</a> method.</p>
+<p>Using Veldrid, all graphics commands must be executed using a <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a>. A CommandList is a special device resource (created by a <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a>) that records a variety of commands. These commands can then be submitted for execution on the device using the <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SubmitCommands_Veldrid_CommandList_">GraphicsDevice.SubmitCommands</a> method.</p>
 <p>Several types of commands are available, depending on what work is being done.</p>
 <h2 id="resource-updates">Resource Updates</h2>
-<p><a class="xref" href="../api/Veldrid.Texture.html">Texture</a> and <a class="xref" href="../api/Veldrid.Buffer.html">Buffer</a> objects can be updated directly in a CommandList, using the UpdateBuffer and UpdateTexture methods.</p>
+<p><a class="xref" href="../api/Veldrid.Texture.html">Texture</a> and <a class="xref" href="../api/Veldrid.DeviceBuffer.html">DeviceBuffer</a> objects can be updated directly in a CommandList, using the UpdateBuffer and UpdateTexture methods.</p>
 <p>The color and depth targets of the active <a class="xref" href="../api/Veldrid.Framebuffer.html">Framebuffer</a> can be cleared.</p>
 <p>Multisampled Textures can be resolved down into a regular non-multisampled Texture using the ResolveTexture method.</p>
 <h2 id="state-changes">State Changes</h2>
@@ -81,22 +81,22 @@
 <li><a class="xref" href="../api/Veldrid.Framebuffer.html">Framebuffer</a></li>
 <li><a class="xref" href="../api/Veldrid.Viewport.html">Viewports</a></li>
 <li>Scissor rectangles</li>
-<li><a class="xref" href="../api/Veldrid.Buffer.html">Vertex Buffers</a></li>
-<li><a class="xref" href="../api/Veldrid.Buffer.html">Index Buffer</a></li>
+<li><a class="xref" href="../api/Veldrid.DeviceBuffer.html">Vertex Buffers</a></li>
+<li><a class="xref" href="../api/Veldrid.DeviceBuffer.html">Index Buffer</a></li>
 <li><a class="xref" href="../api/Veldrid.Pipeline.html">Pipeline</a></li>
 <li><a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSets</a></li>
 </ul>
 <h2 id="drawing">Drawing</h2>
-<p>The <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">DrawIndexed</a> method can be invoked to record an indexed draw command into the CommandList. The effect of this draw is controlled by the active state of the CommandList -- which vertex Buffer, index Buffer, Pipeline, ResourceSets, and Framebuffer are bound, and what Viewport and scissor rectangles are set. Regular indexed and instanced draw commands are both supported by this method.</p>
-<p>The <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_UInt32_">Draw</a> method can be invoked to record a non-indexed draw command into the CommandList. This method can be used without an index Buffer bound, and simply selects sequential vertices from the bound vertex Buffer, if it exists.</p>
+<p>The <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">DrawIndexed</a> method can be invoked to record an indexed draw command into the CommandList. The effect of this draw is controlled by the active state of the CommandList -- which vertex buffer, index buffer, Pipeline, ResourceSets, and Framebuffer are bound, and what Viewport and scissor rectangles are set. Regular indexed and instanced draw commands are both supported by this method.</p>
+<p>The <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_UInt32_">Draw</a> method can be invoked to record a non-indexed draw command into the CommandList. This method can be used without an index buffer bound, and simply selects sequential vertices from the bound vertex buffer, if it exists.</p>
 <h2 id="compute-dispatch">Compute Dispatch</h2>
 <p>The <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_Dispatch_System_UInt32_System_UInt32_System_UInt32_">Dispatch</a> method can be invoked to record a compute dispatch command into the CommandList. The effects of this call depend on the currently-bound compute Pipeline and ResourceSets.</p>
 <h2 id="indirect">Indirect</h2>
-<p>There are also &quot;Indirect&quot; variants of the above draw and compute functions. These &quot;Indirect&quot; variants allow the relevant draw/dispatch parameters to be read from a GPU Buffer, rather than passed in directly. This &quot;Indirect&quot; Buffer must have been created with the <a class="xref" href="../api/Veldrid.BufferUsage.html">BufferUsage.IndirectBuffer</a> flag, and is subject to some other restrictions. The information stored in the Buffer should adhere to the format of one of the following structures, depending on the operation being performed:</p>
+<p>There are also &quot;Indirect&quot; variants of the above draw and compute functions. These &quot;Indirect&quot; variants allow the relevant draw/dispatch parameters to be read from a GPU DeviceBuffer, rather than passed in directly. This &quot;Indirect&quot; buffer must have been created with the <a class="xref" href="../api/Veldrid.BufferUsage.html">BufferUsage.IndirectBuffer</a> flag, and is subject to some other restrictions. The information stored in the buffer should adhere to the format of one of the following structures, depending on the operation being performed:</p>
 <ul>
-<li><a class="xref" href="../api/Veldrid.IndirectDrawArguments.html">IndirectDrawArguments</a>, used by <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_">DrawIndirect</a></li>
-<li><a class="xref" href="../api/Veldrid.IndirectDrawIndexedArguments.html">IndirectDrawIndexedArguments</a>, used by <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexedIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_">DrawIndexedIndirect</a></li>
-<li><a class="xref" href="../api/Veldrid.IndirectDispatchArguments.html">IndirectDispatchArguments</a>, used by <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DispatchIndirect_Veldrid_Buffer_System_UInt32_">DispatchIndirect</a></li>
+<li><a class="xref" href="../api/Veldrid.IndirectDrawArguments.html">IndirectDrawArguments</a>, used by <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndirect_Veldrid_DeviceBuffer_System_UInt32_System_UInt32_System_UInt32_">DrawIndirect</a></li>
+<li><a class="xref" href="../api/Veldrid.IndirectDrawIndexedArguments.html">IndirectDrawIndexedArguments</a>, used by <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexedIndirect_Veldrid_DeviceBuffer_System_UInt32_System_UInt32_System_UInt32_">DrawIndexedIndirect</a></li>
+<li><a class="xref" href="../api/Veldrid.IndirectDispatchArguments.html">IndirectDispatchArguments</a>, used by <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_DispatchIndirect_Veldrid_DeviceBuffer_System_UInt32_">DispatchIndirect</a></li>
 </ul>
 </article>
           </div>
@@ -106,7 +106,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/articles/command-lists.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/beta2/articles/command-lists.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

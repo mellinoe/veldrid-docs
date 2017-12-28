@@ -77,7 +77,7 @@
 <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>.
 Before graphics commands can be issued, the <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_Begin">Begin()</a> method must be invoked.
 When the <a class="xref" href="Veldrid.CommandList.html">CommandList</a> is ready to be executed, <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> must be invoked, and then
-<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_">ExecuteCommands(CommandList)</a> should be used.
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SubmitCommands_Veldrid_CommandList_">SubmitCommands(CommandList)</a> should be used.
 NOTE: The use of <a class="xref" href="Veldrid.CommandList.html">CommandList</a> is not thread-safe. Access to the <a class="xref" href="Veldrid.CommandList.html">CommandList</a> must be
 externally synchronized.
 There are some limitations dictating proper usage and ordering of graphics commands. For example, a
@@ -133,6 +133,30 @@ See <a class="xref" href="Veldrid.CommandListDescription.html">CommandListDescri
   </h3>
   
   
+  <h4 id="Veldrid_CommandList__computePipeline" data-uid="Veldrid.CommandList._computePipeline">_computePipeline</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Pipeline _computePipeline</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Veldrid_CommandList__framebuffer" data-uid="Veldrid.CommandList._framebuffer">_framebuffer</h4>
   <div class="markdown level1 summary"><p>The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
 </div>
@@ -152,6 +176,30 @@ See <a class="xref" href="Veldrid.CommandListDescription.html">CommandListDescri
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_CommandList__graphicsPipeline" data-uid="Veldrid.CommandList._graphicsPipeline">_graphicsPipeline</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected Pipeline _graphicsPipeline</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -194,7 +242,7 @@ tools.</p>
   <div class="markdown level1 summary"><p>Puts this <a class="xref" href="Veldrid.CommandList.html">CommandList</a> into the initial state.
 This function must be called before other graphics commands can be issued.
 Begin must only be called if it has not been previously called, if <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> has been called,
-or if <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_">ExecuteCommands(CommandList)</a> has been called on this instance.</p>
+or if <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SubmitCommands_Veldrid_CommandList_">SubmitCommands(CommandList)</a> has been called on this instance.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -211,7 +259,7 @@ The index given must be less than the number of color attachments in the active 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void ClearColorTarget(uint index, RgbaFloat clearColor)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ClearColorTarget(uint index, RgbaFloat clearColor)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -234,6 +282,38 @@ The index given must be less than the number of color attachments in the active 
         <td><span class="parametername">clearColor</span></td>
         <td><p>The value to clear the target to.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_ClearColorTargetCore_" data-uid="Veldrid.CommandList.ClearColorTargetCore*"></a>
+  <h4 id="Veldrid_CommandList_ClearColorTargetCore_System_UInt32_Veldrid_RgbaFloat_" data-uid="Veldrid.CommandList.ClearColorTargetCore(System.UInt32,Veldrid.RgbaFloat)">ClearColorTargetCore(UInt32, RgbaFloat)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void ClearColorTargetCore(uint index, RgbaFloat clearColor)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaFloat.html">RgbaFloat</a></td>
+        <td><span class="parametername">clearColor</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -278,7 +358,7 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void ClearDepthStencil(float depth, byte stencil)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ClearDepthStencil(float depth, byte stencil)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -306,14 +386,13 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   </table>
   
   
-  <a id="Veldrid_CommandList_CopyBuffer_" data-uid="Veldrid.CommandList.CopyBuffer*"></a>
-  <h4 id="Veldrid_CommandList_CopyBuffer_Veldrid_Buffer_System_UInt32_Veldrid_Buffer_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.CopyBuffer(Veldrid.Buffer,System.UInt32,Veldrid.Buffer,System.UInt32,System.UInt32)">CopyBuffer(Buffer, UInt32, Buffer, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Copies a region from the source <a class="xref" href="Veldrid.Buffer.html">Buffer</a> to another region in the destination <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
-</div>
+  <a id="Veldrid_CommandList_ClearDepthStencilCore_" data-uid="Veldrid.CommandList.ClearDepthStencilCore*"></a>
+  <h4 id="Veldrid_CommandList_ClearDepthStencilCore_System_Single_System_Byte_" data-uid="Veldrid.CommandList.ClearDepthStencilCore(System.Single,System.Byte)">ClearDepthStencilCore(Single, Byte)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void CopyBuffer(Buffer source, uint sourceOffset, Buffer destination, uint destinationOffset, uint sizeInBytes)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void ClearDepthStencilCore(float depth, byte stencil)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -326,9 +405,42 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="xref">System.Single</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Byte</span></td>
+        <td><span class="parametername">stencil</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_CopyBuffer_" data-uid="Veldrid.CommandList.CopyBuffer*"></a>
+  <h4 id="Veldrid_CommandList_CopyBuffer_Veldrid_DeviceBuffer_System_UInt32_Veldrid_DeviceBuffer_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.CopyBuffer(Veldrid.DeviceBuffer,System.UInt32,Veldrid.DeviceBuffer,System.UInt32,System.UInt32)">CopyBuffer(DeviceBuffer, UInt32, DeviceBuffer, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Copies a region from the source <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> to another region in the destination <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyBuffer(DeviceBuffer source, uint sourceOffset, DeviceBuffer destination, uint destinationOffset, uint sizeInBytes)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">source</span></td>
-        <td><p>The source <a class="xref" href="Veldrid.Buffer.html">Buffer</a> from which data will be copied.</p>
+        <td><p>The source <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> from which data will be copied.</p>
 </td>
       </tr>
       <tr>
@@ -338,9 +450,9 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">destination</span></td>
-        <td><p>The destination <a class="xref" href="Veldrid.Buffer.html">Buffer</a> into which data will be copied.</p>
+        <td><p>The destination <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> into which data will be copied.</p>
 </td>
       </tr>
       <tr>
@@ -360,12 +472,12 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   
   
   <a id="Veldrid_CommandList_CopyBufferCore_" data-uid="Veldrid.CommandList.CopyBufferCore*"></a>
-  <h4 id="Veldrid_CommandList_CopyBufferCore_Veldrid_Buffer_System_UInt32_Veldrid_Buffer_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.CopyBufferCore(Veldrid.Buffer,System.UInt32,Veldrid.Buffer,System.UInt32,System.UInt32)">CopyBufferCore(Buffer, UInt32, Buffer, UInt32, UInt32)</h4>
+  <h4 id="Veldrid_CommandList_CopyBufferCore_Veldrid_DeviceBuffer_System_UInt32_Veldrid_DeviceBuffer_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.CopyBufferCore(Veldrid.DeviceBuffer,System.UInt32,Veldrid.DeviceBuffer,System.UInt32,System.UInt32)">CopyBufferCore(DeviceBuffer, UInt32, DeviceBuffer, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void CopyBufferCore(Buffer source, uint sourceOffset, Buffer destination, uint destinationOffset, uint sizeInBytes)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void CopyBufferCore(DeviceBuffer source, uint sourceOffset, DeviceBuffer destination, uint destinationOffset, uint sizeInBytes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,7 +490,7 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">source</span></td>
         <td></td>
       </tr>
@@ -388,7 +500,7 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">destination</span></td>
         <td></td>
       </tr>
@@ -519,6 +631,88 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">layerCount</span></td>
         <td><p>The number of array layers to copy.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_CopyTexture_" data-uid="Veldrid.CommandList.CopyTexture*"></a>
+  <h4 id="Veldrid_CommandList_CopyTexture_Veldrid_Texture_Veldrid_Texture_" data-uid="Veldrid.CommandList.CopyTexture(Veldrid.Texture,Veldrid.Texture)">CopyTexture(Texture, Texture)</h4>
+  <div class="markdown level1 summary"><p>Copies all subresources from one <a class="xref" href="Veldrid.Texture.html">Texture</a> to another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTexture(Texture source, Texture destination)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The source of Texture data.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The destination of Texture data.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_CopyTexture_" data-uid="Veldrid.CommandList.CopyTexture*"></a>
+  <h4 id="Veldrid_CommandList_CopyTexture_Veldrid_Texture_Veldrid_Texture_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.CopyTexture(Veldrid.Texture,Veldrid.Texture,System.UInt32,System.UInt32)">CopyTexture(Texture, Texture, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Copies all subresources from one <a class="xref" href="Veldrid.Texture.html">Texture</a> to another.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void CopyTexture(Texture source, Texture destination, uint mipLevel, uint arrayLayer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The source of Texture data.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">destination</span></td>
+        <td><p>The destination of Texture data.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">mipLevel</span></td>
+        <td><p>The mip level to copy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">arrayLayer</span></td>
+        <td><p>The array layer to copy.</p>
 </td>
       </tr>
     </tbody>
@@ -669,15 +863,15 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
   
   
   <a id="Veldrid_CommandList_DispatchIndirect_" data-uid="Veldrid.CommandList.DispatchIndirect*"></a>
-  <h4 id="Veldrid_CommandList_DispatchIndirect_Veldrid_Buffer_System_UInt32_" data-uid="Veldrid.CommandList.DispatchIndirect(Veldrid.Buffer,System.UInt32)">DispatchIndirect(Buffer, UInt32)</h4>
+  <h4 id="Veldrid_CommandList_DispatchIndirect_Veldrid_DeviceBuffer_System_UInt32_" data-uid="Veldrid.CommandList.DispatchIndirect(Veldrid.DeviceBuffer,System.UInt32)">DispatchIndirect(DeviceBuffer, UInt32)</h4>
   <div class="markdown level1 summary"><p>Issues an indirect compute dispatch command based on the information contained in the given indirect
-<a class="xref" href="Veldrid.Buffer.html">Buffer</a>. The information stored in the indirect Buffer should conform to the structure of
+<a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>. The information stored in the indirect Buffer should conform to the structure of
 <a class="xref" href="Veldrid.IndirectDispatchArguments.html">IndirectDispatchArguments</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DispatchIndirect(Buffer indirectBuffer, uint offset)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DispatchIndirect(DeviceBuffer indirectBuffer, uint offset)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -690,7 +884,7 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">indirectBuffer</span></td>
         <td><p>The indirect Buffer to read from. Must have been created with the
 <a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_IndirectBuffer">IndirectBuffer</a> flag.</p>
@@ -708,12 +902,12 @@ read. This value must be a multiple of 4.</p>
   
   
   <a id="Veldrid_CommandList_DispatchIndirectCore_" data-uid="Veldrid.CommandList.DispatchIndirectCore*"></a>
-  <h4 id="Veldrid_CommandList_DispatchIndirectCore_Veldrid_Buffer_System_UInt32_" data-uid="Veldrid.CommandList.DispatchIndirectCore(Veldrid.Buffer,System.UInt32)">DispatchIndirectCore(Buffer, UInt32)</h4>
+  <h4 id="Veldrid_CommandList_DispatchIndirectCore_Veldrid_DeviceBuffer_System_UInt32_" data-uid="Veldrid.CommandList.DispatchIndirectCore(Veldrid.DeviceBuffer,System.UInt32)">DispatchIndirectCore(DeviceBuffer, UInt32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void DispatchIndirectCore(Buffer indirectBuffer, uint offset)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void DispatchIndirectCore(DeviceBuffer indirectBuffer, uint offset)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -726,7 +920,7 @@ read. This value must be a multiple of 4.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">indirectBuffer</span></td>
         <td></td>
       </tr>
@@ -786,7 +980,7 @@ read. This value must be a multiple of 4.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Draw(uint vertexCount, uint instanceCount, uint vertexStart, uint instanceStart)</code></pre>
+    <pre><code class="lang-csharp hljs">public void Draw(uint vertexCount, uint instanceCount, uint vertexStart, uint instanceStart)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -821,6 +1015,48 @@ read. This value must be a multiple of 4.</p>
         <td><span class="parametername">instanceStart</span></td>
         <td><p>The starting instance value.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_DrawCore_" data-uid="Veldrid.CommandList.DrawCore*"></a>
+  <h4 id="Veldrid_CommandList_DrawCore_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawCore(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">DrawCore(UInt32, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void DrawCore(uint vertexCount, uint instanceCount, uint vertexStart, uint instanceStart)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">vertexCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">instanceCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">vertexStart</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">instanceStart</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -862,7 +1098,7 @@ read. This value must be a multiple of 4.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void DrawIndexed(uint indexCount, uint instanceCount, uint indexStart, int vertexOffset, uint instanceStart)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawIndexed(uint indexCount, uint instanceCount, uint indexStart, int vertexOffset, uint instanceStart)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -908,16 +1144,13 @@ read. This value must be a multiple of 4.</p>
   </table>
   
   
-  <a id="Veldrid_CommandList_DrawIndexedIndirect_" data-uid="Veldrid.CommandList.DrawIndexedIndirect*"></a>
-  <h4 id="Veldrid_CommandList_DrawIndexedIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexedIndirect(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndexedIndirect(Buffer, UInt32, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Issues indirect, indexed draw commands based on the information contained in the given indirect <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.
-The information stored in the indirect Buffer should conform to the structure of
-<a class="xref" href="Veldrid.IndirectDrawIndexedArguments.html">IndirectDrawIndexedArguments</a>.</p>
-</div>
+  <a id="Veldrid_CommandList_DrawIndexedCore_" data-uid="Veldrid.CommandList.DrawIndexedCore*"></a>
+  <h4 id="Veldrid_CommandList_DrawIndexedCore_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexedCore(System.UInt32,System.UInt32,System.UInt32,System.Int32,System.UInt32)">DrawIndexedCore(UInt32, UInt32, UInt32, Int32, UInt32)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawIndexedIndirect(Buffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void DrawIndexedCore(uint indexCount, uint instanceCount, uint indexStart, int vertexOffset, uint instanceStart)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -930,7 +1163,57 @@ The information stored in the indirect Buffer should conform to the structure of
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">indexCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">instanceCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">indexStart</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><span class="parametername">vertexOffset</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">instanceStart</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_DrawIndexedIndirect_" data-uid="Veldrid.CommandList.DrawIndexedIndirect*"></a>
+  <h4 id="Veldrid_CommandList_DrawIndexedIndirect_Veldrid_DeviceBuffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexedIndirect(Veldrid.DeviceBuffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndexedIndirect(DeviceBuffer, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Issues indirect, indexed draw commands based on the information contained in the given indirect <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.
+The information stored in the indirect Buffer should conform to the structure of
+<a class="xref" href="Veldrid.IndirectDrawIndexedArguments.html">IndirectDrawIndexedArguments</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void DrawIndexedIndirect(DeviceBuffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">indirectBuffer</span></td>
         <td><p>The indirect Buffer to read from. Must have been created with the
 <a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_IndirectBuffer">IndirectBuffer</a> flag.</p>
@@ -961,12 +1244,12 @@ be a multiple of four, and must be larger than the size of <a class="xref" href=
   
   
   <a id="Veldrid_CommandList_DrawIndexedIndirectCore_" data-uid="Veldrid.CommandList.DrawIndexedIndirectCore*"></a>
-  <h4 id="Veldrid_CommandList_DrawIndexedIndirectCore_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexedIndirectCore(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndexedIndirectCore(Buffer, UInt32, UInt32, UInt32)</h4>
+  <h4 id="Veldrid_CommandList_DrawIndexedIndirectCore_Veldrid_DeviceBuffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexedIndirectCore(Veldrid.DeviceBuffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndexedIndirectCore(DeviceBuffer, UInt32, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void DrawIndexedIndirectCore(Buffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void DrawIndexedIndirectCore(DeviceBuffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -979,7 +1262,7 @@ be a multiple of four, and must be larger than the size of <a class="xref" href=
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">indirectBuffer</span></td>
         <td></td>
       </tr>
@@ -1003,14 +1286,14 @@ be a multiple of four, and must be larger than the size of <a class="xref" href=
   
   
   <a id="Veldrid_CommandList_DrawIndirect_" data-uid="Veldrid.CommandList.DrawIndirect*"></a>
-  <h4 id="Veldrid_CommandList_DrawIndirect_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndirect(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndirect(Buffer, UInt32, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Issues indirect draw commands based on the information contained in the given indirect <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.
+  <h4 id="Veldrid_CommandList_DrawIndirect_Veldrid_DeviceBuffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndirect(Veldrid.DeviceBuffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndirect(DeviceBuffer, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Issues indirect draw commands based on the information contained in the given indirect <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.
 The information stored in the indirect Buffer should conform to the structure of <a class="xref" href="Veldrid.IndirectDrawArguments.html">IndirectDrawArguments</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void DrawIndirect(Buffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DrawIndirect(DeviceBuffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1023,7 +1306,7 @@ The information stored in the indirect Buffer should conform to the structure of
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">indirectBuffer</span></td>
         <td><p>The indirect Buffer to read from. Must have been created with the
 <a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_IndirectBuffer">IndirectBuffer</a> flag.</p>
@@ -1054,12 +1337,12 @@ be a multiple of four, and must be larger than the size of <a class="xref" href=
   
   
   <a id="Veldrid_CommandList_DrawIndirectCore_" data-uid="Veldrid.CommandList.DrawIndirectCore*"></a>
-  <h4 id="Veldrid_CommandList_DrawIndirectCore_Veldrid_Buffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndirectCore(Veldrid.Buffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndirectCore(Buffer, UInt32, UInt32, UInt32)</h4>
+  <h4 id="Veldrid_CommandList_DrawIndirectCore_Veldrid_DeviceBuffer_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndirectCore(Veldrid.DeviceBuffer,System.UInt32,System.UInt32,System.UInt32)">DrawIndirectCore(DeviceBuffer, UInt32, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void DrawIndirectCore(Buffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void DrawIndirectCore(DeviceBuffer indirectBuffer, uint offset, uint drawCount, uint stride)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1072,7 +1355,7 @@ be a multiple of four, and must be larger than the size of <a class="xref" href=
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">indirectBuffer</span></td>
         <td></td>
       </tr>
@@ -1458,14 +1741,14 @@ Pipeline.</p>
   
   
   <a id="Veldrid_CommandList_SetIndexBuffer_" data-uid="Veldrid.CommandList.SetIndexBuffer*"></a>
-  <h4 id="Veldrid_CommandList_SetIndexBuffer_Veldrid_Buffer_Veldrid_IndexFormat_" data-uid="Veldrid.CommandList.SetIndexBuffer(Veldrid.Buffer,Veldrid.IndexFormat)">SetIndexBuffer(Buffer, IndexFormat)</h4>
-  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.
-When drawing, an <a class="xref" href="Veldrid.Buffer.html">Buffer</a> must be bound.</p>
+  <h4 id="Veldrid_CommandList_SetIndexBuffer_Veldrid_DeviceBuffer_Veldrid_IndexFormat_" data-uid="Veldrid.CommandList.SetIndexBuffer(Veldrid.DeviceBuffer,Veldrid.IndexFormat)">SetIndexBuffer(DeviceBuffer, IndexFormat)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.
+When drawing, an <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> must be bound.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetIndexBuffer(Buffer buffer, IndexFormat format)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetIndexBuffer(DeviceBuffer buffer, IndexFormat format)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1478,15 +1761,15 @@ When drawing, an <a class="xref" href="Veldrid.Buffer.html">Buffer</a> must be b
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
-        <td><p>The new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+        <td><p>The new <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
 </td>
       </tr>
       <tr>
         <td><a class="xref" href="Veldrid.IndexFormat.html">IndexFormat</a></td>
         <td><span class="parametername">format</span></td>
-        <td><p>The format of data in the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+        <td><p>The format of data in the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -1494,12 +1777,12 @@ When drawing, an <a class="xref" href="Veldrid.Buffer.html">Buffer</a> must be b
   
   
   <a id="Veldrid_CommandList_SetIndexBufferCore_" data-uid="Veldrid.CommandList.SetIndexBufferCore*"></a>
-  <h4 id="Veldrid_CommandList_SetIndexBufferCore_Veldrid_Buffer_Veldrid_IndexFormat_" data-uid="Veldrid.CommandList.SetIndexBufferCore(Veldrid.Buffer,Veldrid.IndexFormat)">SetIndexBufferCore(Buffer, IndexFormat)</h4>
+  <h4 id="Veldrid_CommandList_SetIndexBufferCore_Veldrid_DeviceBuffer_Veldrid_IndexFormat_" data-uid="Veldrid.CommandList.SetIndexBufferCore(Veldrid.DeviceBuffer,Veldrid.IndexFormat)">SetIndexBufferCore(DeviceBuffer, IndexFormat)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SetIndexBufferCore(Buffer buffer, IndexFormat format)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void SetIndexBufferCore(DeviceBuffer buffer, IndexFormat format)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1512,7 +1795,7 @@ When drawing, an <a class="xref" href="Veldrid.Buffer.html">Buffer</a> must be b
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td></td>
       </tr>
@@ -1529,12 +1812,12 @@ When drawing, an <a class="xref" href="Veldrid.Buffer.html">Buffer</a> must be b
   <h4 id="Veldrid_CommandList_SetPipeline_Veldrid_Pipeline_" data-uid="Veldrid.CommandList.SetPipeline(Veldrid.Pipeline)">SetPipeline(Pipeline)</h4>
   <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> used for rendering.
 When drawing, the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> must be compatible with the bound <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>,
-<a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>, and <a class="xref" href="Veldrid.Buffer.html">Buffer</a> objects.</p>
+<a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>, and <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> objects.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void SetPipeline(Pipeline pipeline)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetPipeline(Pipeline pipeline)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1551,6 +1834,33 @@ When drawing, the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</
         <td><span class="parametername">pipeline</span></td>
         <td><p>The new <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> object.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetPipelineCore_" data-uid="Veldrid.CommandList.SetPipelineCore*"></a>
+  <h4 id="Veldrid_CommandList_SetPipelineCore_Veldrid_Pipeline_" data-uid="Veldrid.CommandList.SetPipelineCore(Veldrid.Pipeline)">SetPipelineCore(Pipeline)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SetPipelineCore(Pipeline pipeline)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
+        <td><span class="parametername">pipeline</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1611,14 +1921,14 @@ The index given must be less than the number of color attachments in the active 
   
   
   <a id="Veldrid_CommandList_SetVertexBuffer_" data-uid="Veldrid.CommandList.SetVertexBuffer*"></a>
-  <h4 id="Veldrid_CommandList_SetVertexBuffer_System_UInt32_Veldrid_Buffer_" data-uid="Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.Buffer)">SetVertexBuffer(UInt32, Buffer)</h4>
-  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Buffer.html">Buffer</a> for the given index.
-When drawing, the bound <a class="xref" href="Veldrid.Buffer.html">Buffer</a> objects must be compatible with the bound <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
+  <h4 id="Veldrid_CommandList_SetVertexBuffer_System_UInt32_Veldrid_DeviceBuffer_" data-uid="Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.DeviceBuffer)">SetVertexBuffer(UInt32, DeviceBuffer)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> for the given index.
+When drawing, the bound <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> objects must be compatible with the bound <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void SetVertexBuffer(uint index, Buffer buffer)</code></pre>
+    <pre><code class="lang-csharp hljs">public void SetVertexBuffer(uint index, DeviceBuffer buffer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1637,9 +1947,9 @@ When drawing, the bound <a class="xref" href="Veldrid.Buffer.html">Buffer</a> ob
 </td>
       </tr>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
-        <td><p>The new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+        <td><p>The new <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -1647,12 +1957,12 @@ When drawing, the bound <a class="xref" href="Veldrid.Buffer.html">Buffer</a> ob
   
   
   <a id="Veldrid_CommandList_SetVertexBufferCore_" data-uid="Veldrid.CommandList.SetVertexBufferCore*"></a>
-  <h4 id="Veldrid_CommandList_SetVertexBufferCore_System_UInt32_Veldrid_Buffer_" data-uid="Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.Buffer)">SetVertexBufferCore(UInt32, Buffer)</h4>
+  <h4 id="Veldrid_CommandList_SetVertexBufferCore_System_UInt32_Veldrid_DeviceBuffer_" data-uid="Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.DeviceBuffer)">SetVertexBufferCore(UInt32, DeviceBuffer)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SetVertexBufferCore(uint index, Buffer buffer)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void SetVertexBufferCore(uint index, DeviceBuffer buffer)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1670,7 +1980,7 @@ When drawing, the bound <a class="xref" href="Veldrid.Buffer.html">Buffer</a> ob
         <td></td>
       </tr>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td></td>
       </tr>
@@ -1751,13 +2061,13 @@ The index given must be less than the number of color attachments in the active 
   
   
   <a id="Veldrid_CommandList_UpdateBuffer_" data-uid="Veldrid.CommandList.UpdateBuffer*"></a>
-  <h4 id="Veldrid_CommandList_UpdateBuffer_Veldrid_Buffer_System_UInt32_IntPtr_System_UInt32_" data-uid="Veldrid.CommandList.UpdateBuffer(Veldrid.Buffer,System.UInt32,IntPtr,System.UInt32)">UpdateBuffer(Buffer, UInt32, IntPtr, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.</p>
+  <h4 id="Veldrid_CommandList_UpdateBuffer_Veldrid_DeviceBuffer_System_UInt32_IntPtr_System_UInt32_" data-uid="Veldrid.CommandList.UpdateBuffer(Veldrid.DeviceBuffer,System.UInt32,IntPtr,System.UInt32)">UpdateBuffer(DeviceBuffer, UInt32, IntPtr, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void UpdateBuffer(Buffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void UpdateBuffer(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1770,7 +2080,7 @@ The index given must be less than the number of color attachments in the active 
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td><p>The resource to update.</p>
 </td>
@@ -1778,7 +2088,7 @@ The index given must be less than the number of color attachments in the active 
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">bufferOffsetInBytes</span></td>
-        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>&apos;s storage, at
 which new data will be uploaded.</p>
 </td>
       </tr>
@@ -1799,14 +2109,14 @@ which new data will be uploaded.</p>
   
   
   <a id="Veldrid_CommandList_UpdateBuffer_" data-uid="Veldrid.CommandList.UpdateBuffer*"></a>
-  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0_" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0)">UpdateBuffer&lt;T&gt;(Buffer, UInt32, T)</h4>
-  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_DeviceBuffer_System_UInt32___0_" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.DeviceBuffer,System.UInt32,``0)">UpdateBuffer&lt;T&gt;(DeviceBuffer, UInt32, T)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.
 This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, T source)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, T source)where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1819,7 +2129,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td><p>The resource to update.</p>
 </td>
@@ -1827,7 +2137,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">bufferOffsetInBytes</span></td>
-        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a> storage, at
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> storage, at
 which new data will be uploaded.</p>
 </td>
       </tr>
@@ -1858,14 +2168,14 @@ which new data will be uploaded.</p>
   
   
   <a id="Veldrid_CommandList_UpdateBuffer_" data-uid="Veldrid.CommandList.UpdateBuffer*"></a>
-  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0__" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0@)">UpdateBuffer&lt;T&gt;(Buffer, UInt32, ref T)</h4>
-  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_DeviceBuffer_System_UInt32___0__" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.DeviceBuffer,System.UInt32,``0@)">UpdateBuffer&lt;T&gt;(DeviceBuffer, UInt32, ref T)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.
 This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, ref T source)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, ref T source)where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1878,7 +2188,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td><p>The resource to update.</p>
 </td>
@@ -1886,7 +2196,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">bufferOffsetInBytes</span></td>
-        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>&apos;s storage, at
 which new data will be uploaded.</p>
 </td>
       </tr>
@@ -1917,14 +2227,14 @@ which new data will be uploaded.</p>
   
   
   <a id="Veldrid_CommandList_UpdateBuffer_" data-uid="Veldrid.CommandList.UpdateBuffer*"></a>
-  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0__System_UInt32_" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0@,System.UInt32)">UpdateBuffer&lt;T&gt;(Buffer, UInt32, ref T, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_DeviceBuffer_System_UInt32___0__System_UInt32_" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.DeviceBuffer,System.UInt32,``0@,System.UInt32)">UpdateBuffer&lt;T&gt;(DeviceBuffer, UInt32, ref T, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.
 This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, ref T source, uint sizeInBytes)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, ref T source, uint sizeInBytes)where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1937,7 +2247,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td><p>The resource to update.</p>
 </td>
@@ -1945,7 +2255,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">bufferOffsetInBytes</span></td>
-        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>&apos;s storage, at
 which new data will be uploaded.</p>
 </td>
       </tr>
@@ -1982,14 +2292,14 @@ which new data will be uploaded.</p>
   
   
   <a id="Veldrid_CommandList_UpdateBuffer_" data-uid="Veldrid.CommandList.UpdateBuffer*"></a>
-  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0[])">UpdateBuffer&lt;T&gt;(Buffer, UInt32, T[])</h4>
-  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+  <h4 id="Veldrid_CommandList_UpdateBuffer__1_Veldrid_DeviceBuffer_System_UInt32___0___" data-uid="Veldrid.CommandList.UpdateBuffer``1(Veldrid.DeviceBuffer,System.UInt32,``0[])">UpdateBuffer&lt;T&gt;(DeviceBuffer, UInt32, T[])</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.
 This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, T[] source)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, T[] source)where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2002,7 +2312,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td><p>The resource to update.</p>
 </td>
@@ -2010,7 +2320,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">bufferOffsetInBytes</span></td>
-        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>&apos;s storage, at
 which new data will be uploaded.</p>
 </td>
       </tr>

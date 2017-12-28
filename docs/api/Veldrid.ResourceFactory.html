@@ -145,12 +145,12 @@
   
   <a id="Veldrid_ResourceFactory_CreateBuffer_" data-uid="Veldrid.ResourceFactory.CreateBuffer*"></a>
   <h4 id="Veldrid_ResourceFactory_CreateBuffer_Veldrid_BufferDescription_" data-uid="Veldrid.ResourceFactory.CreateBuffer(Veldrid.BufferDescription)">CreateBuffer(BufferDescription)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Buffer CreateBuffer(BufferDescription description)</code></pre>
+    <pre><code class="lang-csharp hljs">public DeviceBuffer CreateBuffer(BufferDescription description)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -180,8 +180,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
-        <td><p>A new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -190,12 +190,12 @@
   
   <a id="Veldrid_ResourceFactory_CreateBuffer_" data-uid="Veldrid.ResourceFactory.CreateBuffer*"></a>
   <h4 id="Veldrid_ResourceFactory_CreateBuffer_Veldrid_BufferDescription__" data-uid="Veldrid.ResourceFactory.CreateBuffer(Veldrid.BufferDescription@)">CreateBuffer(ref BufferDescription)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public Buffer CreateBuffer(ref BufferDescription description)</code></pre>
+    <pre><code class="lang-csharp hljs">public DeviceBuffer CreateBuffer(ref BufferDescription description)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -225,8 +225,8 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
-        <td><p>A new <a class="xref" href="Veldrid.Buffer.html">Buffer</a>.</p>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
 </td>
       </tr>
     </tbody>
@@ -239,7 +239,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract Buffer CreateBufferCore(ref BufferDescription description)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract DeviceBuffer CreateBufferCore(ref BufferDescription description)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -268,7 +268,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -477,6 +477,48 @@
         <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
         <td><p>A new <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> which, when bound to a CommandList, is used to dispatch compute commands.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_ResourceFactory_CreateFence_" data-uid="Veldrid.ResourceFactory.CreateFence*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateFence_System_Boolean_" data-uid="Veldrid.ResourceFactory.CreateFence(System.Boolean)">CreateFence(Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Fence CreateFence(bool signaled)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">signaled</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

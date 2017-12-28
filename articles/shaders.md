@@ -18,7 +18,7 @@ A [ShaderDescription](xref:Veldrid.ShaderDescription) takes two pieces of inform
 
 Shader objects have a unique relationship with [ResourceLayouts](xref:Veldrid.ResourceLayout) and [ResourceSets](xref:Veldrid.ResourceSet). When creating a Pipeline, the provided [ResourceLayouts](xref:Veldrid.GraphicsPipelineDescription#Veldrid_GraphicsPipelineDescription_ResourceLayouts) must match the actual resource types that are specified in the shader code.
 
-ResourceLayouts merely define the layout of resources expected by a set of shaders. When draw commands are executed, the actual shader resources (Buffers, TextureViews, and Samplers) are determined based on the CommandList's currently-bound [ResourceSets](xref:Veldrid.ResourceSet).
+ResourceLayouts merely define the layout of resources expected by a set of shaders. When draw commands are executed, the actual shader resources (DeviceBuffers, TextureViews, and Samplers) are determined based on the CommandList's currently-bound [ResourceSets](xref:Veldrid.ResourceSet).
 
 ResourceLayouts themselves contain a set of one-or-more resource elements. Additionally, multiple ResourceLayout objects can be used to define the inputs of a shader set. When this is done, each ResourceLayout must be matched by a corresponding ResourceSet containing the appropriate resource types. ResourceSet objects are bound to a particular slot. The slot corresponds to the index of the matching ResourceLayout given in the [ResourceLayouts](xref:Veldrid.GraphicsPipelineDescription#Veldrid_GraphicsPipelineDescription_ResourceLayouts) field of the [GraphicsPipelineDescription](xref:Veldrid.GraphicsPipelineDescription) or [ComputePipelineDescription](xref:Veldrid.ComputePipelineDescription).
 
@@ -30,19 +30,19 @@ There are many types of shader resources available in Veldrid.
 
 ### Uniform Buffer
 
-A uniform [Buffer](xref:Veldrid.Buffer) is a resource used to store a small-to-medium amount of data for a shader to access. Uniform buffers are commonly used to store per-object transformations, camera transformations and properties, and other information.
+A uniform [DeviceBuffer](xref:Veldrid.DeviceBuffer) is a resource used to store a small-to-medium amount of data for a shader to access. Uniform buffers are commonly used to store per-object transformations, camera transformations and properties, and other information.
 
-A Buffer must be created with [BufferUsage.UniformBuffer](xref:Veldrid.BufferUsage) to be used as a uniform Buffer.
+A DeviceBuffer must be created with [BufferUsage.UniformBuffer](xref:Veldrid.BufferUsage) to be used as a uniform buffer.
 
-Uniform Buffers correspond to "cbuffer" blocks in HLSL, and a uniform variable or uniform block in GLSL.
+Uniform buffers correspond to "cbuffer" blocks in HLSL, and a uniform variable or uniform block in GLSL.
 
 ### Structured Buffer
 
-A structured buffer is another kind of Buffer resource available to shaders. Like uniform Buffers, they can be used to store arbitrary data, but are generally much larger. Structured Buffers are used to store a large amount of a single kind of value (a "structure"). The size of the structure that is stored must be designated upon Buffer creation (see [BufferDescription.StructureByteStride](xref:Veldrid.BufferDescription#Veldrid_BufferDescription_StructureByteStride)).
+A structured buffer is another kind of DeviceBuffer resource available to shaders. Like uniform buffers, they can be used to store arbitrary data, but are generally much larger. Structured buffers are used to store a large amount of a single kind of value (a "structure"). The size of the structure that is stored must be designated upon DeviceBuffer creation (see [BufferDescription.StructureByteStride](xref:Veldrid.BufferDescription#Veldrid_BufferDescription_StructureByteStride)).
 
-Structured Buffers may be read-only or read-write. Read-write Buffers can be written to in the fragment and compute stages, allowing arbitrary data to be output by shaders. Read-only structured buffers must be created with the [BufferUsage.StructuredBufferReadOnly](xref:Veldrid.BufferUsage) flag, and read-write structured buffers must be created with the [BufferUsage.StructuredBufferReadWrite](xref:Veldrid.BufferUsage) flag.
+Structured buffers may be read-only or read-write. Read-write buffers can be written to in the fragment and compute stages, allowing arbitrary data to be output by shaders. Read-only structured buffers must be created with the [BufferUsage.StructuredBufferReadOnly](xref:Veldrid.BufferUsage) flag, and read-write structured buffers must be created with the [BufferUsage.StructuredBufferReadWrite](xref:Veldrid.BufferUsage) flag.
 
-Structure Buffers correspond to `StructuredBuffer<T>` or `RWStructuredBuffer<T>` objects in HLSL, and `readonly` or normal "buffer blocks" in GLSL.
+Structure buffers correspond to `StructuredBuffer<T>` or `RWStructuredBuffer<T>` objects in HLSL, and `readonly` or normal "buffer blocks" in GLSL.
 
 ### TextureView
 

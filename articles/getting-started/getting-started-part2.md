@@ -10,8 +10,8 @@ It's time to create some Veldrid objects which we will need to render our multi-
 
 ```C#
 private static CommandList _commandList;
-private static Buffer _vertexBuffer;
-private static Buffer _indexBuffer;
+private static DeviceBuffer _vertexBuffer;
+private static DeviceBuffer _indexBuffer;
 private static Shader _vertexShader;
 private static Shader _fragmentShader;
 private static Pipeline _pipeline;
@@ -70,16 +70,16 @@ We will render these vertices as a Triangle Strip, so we need four indices as we
 ushort[] quadIndices = { 0, 1, 2, 3 };
 ```
 
-We need somewhere to store this vertex and index data that the GraphicsDevice can use for rendering. This is accomplished with two [Buffer](xref:Veldrid.Buffer) objects, which can be used to store many different types of data.
+We need somewhere to store this vertex and index data that the GraphicsDevice can use for rendering. This is accomplished with two [DeviceBuffer](xref:Veldrid.DeviceBuffer) objects, which can be used to store many different types of data.
 
-A Buffer is created with a [BufferDescription](xref:Veldrid.BufferDescription) object. For each Buffer, we need to provide the total size that it will contain, as well as how the Buffer object will be used. In our case, we want to use one as a vertex Buffer, and one as an index Buffer.
+A DeviceBuffer is created with a [BufferDescription](xref:Veldrid.BufferDescription) object. For each DeviceBuffer, we need to provide the total size that it will contain, as well as how the DeviceBuffer object will be used. In our case, we want to use one as a vertex buffer, and one as an index buffer.
 
 ```C#
 _vertexBuffer = factory.CreateBuffer(new BufferDescription(4 * VertexPositionColor.SizeInBytes, BufferUsage.VertexBuffer));
 _indexBuffer = factory.CreateBuffer(new BufferDescription(4 * sizeof(ushort), BufferUsage.IndexBuffer));
 ```
 
-We've created our Buffers, but they are empty at the moment. We need to fill them with the data contained in our `quadVertices` and `quadIndices` arrays. Buffers can be filled with data using the [GraphicsDevice.UpdateBuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___) method:
+We've created our DeviceBuffers, but they are empty at the moment. We need to fill them with the data contained in our `quadVertices` and `quadIndices` arrays. DeviceBuffers can be filled with data using the [GraphicsDevice.UpdateBuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_DeviceBuffer_System_UInt32___0___) method:
 
 ```C#
 _graphicsDevice.UpdateBuffer(_vertexBuffer, 0, quadVertices);
@@ -88,7 +88,7 @@ _graphicsDevice.UpdateBuffer(_indexBuffer, 0, quadIndices);
 
 `_vertexBuffer` and `_indexBuffer` now contain all of the data from our arrays.
 
-To create a Pipeline later on, we need to know the layout of the vertex Buffer that will be used. Let's create the [VertexLayoutDescription](xref:Veldrid.VertexLayoutDescription) now.
+To create a Pipeline later on, we need to know the layout of the vertex buffer that will be used. Let's create the [VertexLayoutDescription](xref:Veldrid.VertexLayoutDescription) now.
 
 ```C#
 VertexLayoutDescription vertexLayout = new VertexLayoutDescription(
@@ -226,8 +226,8 @@ namespace GettingStarted
     {
         private static GraphicsDevice _graphicsDevice;
         private static CommandList _commandList;
-        private static Buffer _vertexBuffer;
-        private static Buffer _indexBuffer;
+        private static DeviceBuffer _vertexBuffer;
+        private static DeviceBuffer _indexBuffer;
         private static Shader _vertexShader;
         private static Shader _fragmentShader;
         private static Pipeline _pipeline;

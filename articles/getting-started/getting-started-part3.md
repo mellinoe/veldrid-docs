@@ -35,11 +35,10 @@ A Framebuffer is a device resource which controls where the rendered outputs go.
 
 Viewports control the target area in the Framebuffer that is actually rendered to. Pixels outside of that area are discarded. In our case, we want to render to the entire window, so we use the helper method [SetFullViewports](xref:Veldrid.CommandList#Veldrid_CommandList_SetFullViewports), which simply sets all Viewports to the full size of the Framebuffer.
 
-At the beginning of every frame, we clear the screen to black and the depth buffer to the max value. In a static scene, this is not really necessary, but I will do it anyway for demonstration.
+At the beginning of every frame, we clear the screen to black. In a static scene, this is not really necessary, but I will do it anyway for demonstration.
 
 ```C#
 _commandList.ClearColorTarget(0, RgbaFloat.Black);
-_commandList.ClearDepthStencil(1);
 ```
 
 Now that we have done that, we need to bind the resources that we created in the last section, and issue a draw call.
@@ -56,7 +55,7 @@ _commandList.DrawIndexed(
     instanceStart: 0);
 ```
 
-The vertex Buffer is bound to slot 0. In our case, we only have one slot, but it is possible for multiple slots and multiple vertex Buffers to be used. When we bind our index Buffer, we need to communicate the format of data inside of it. Ours contains 16-bit unsigned integers ([IndexFormat.UInt16](xref:Veldrid.IndexFormat)). We issue a DrawIndexed command with four indices, one instance, and no offsets.
+The vertex buffer is bound to slot 0. In our case, we only have one slot, but it is possible for multiple slots and multiple vertex buffers to be used. When we bind our index buffer, we need to communicate the format of data inside of it. Ours contains 16-bit unsigned integers ([IndexFormat.UInt16](xref:Veldrid.IndexFormat)). We issue a DrawIndexed command with four indices, one instance, and no offsets.
 
 We are almost ready to see our colored quad. All that remains is to execute our commands, and swap the buffers of the main swapchain.
 

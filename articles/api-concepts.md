@@ -22,31 +22,31 @@ A variety of device resources can be created by a GraphicsDevice in order to con
 
 ### "Descriptions"
 
-Veldrid exposes a number of Description types, which are plain data structures used by a [ResourceFactory](xref:Veldrid.ResourceFactory) in order to create new graphics resources. These are simple, transient objects which contain a small number of fields describing the properties of a single type of resource. For example, a [BufferDescription](xref:Veldrid.BufferDescription) contains a few pieces of information necessary to create a [Buffer](xref:Veldrid.Buffer):
+Veldrid exposes a number of Description types, which are plain data structures used by a [ResourceFactory](xref:Veldrid.ResourceFactory) in order to create new graphics resources. These are simple, transient objects which contain a small number of fields describing the properties of a single type of resource. For example, a [BufferDescription](xref:Veldrid.BufferDescription) contains a few pieces of information necessary to create a [DeviceBuffer](xref:Veldrid.DeviceBuffer):
 
-* The total size of the Buffer in bytes.
-* How the Buffer will be used ([Veldrid.BufferUsage](xref:Veldrid.BufferUsage)).
-* If the Buffer is a structured Buffer, then the size of each structure element.
+* The total size of the DeviceBuffer in bytes.
+* How the DeviceBuffer will be used ([Veldrid.BufferUsage](xref:Veldrid.BufferUsage)).
+* If the DeviceBuffer is a structured DeviceBuffer, then the size of each structure element.
 
 All device resources can be uniformly created with an appropriate Description object. Additionally, there are some convenience methods that allow the creation of some resource objects with a small set of common parameters, rather than a full Description object.
 
-### Textures and Buffers
+### Textures and DeviceBuffers
 
-[Textures](xref:Veldrid.Texture) and [Buffers](xref:Veldrid.Buffer) are staple device resources used to store various kinds of information on the GPU. They can act as the source or destination of data for rendering operations.
+[Textures](xref:Veldrid.Texture) and [DeviceBuffers](xref:Veldrid.DeviceBuffer) are staple device resources used to store various kinds of information on the GPU. They can act as the source or destination of data for rendering operations.
 
 Textures can be sampled in shader programs using a [TextureView](xref:Veldrid.TextureView). They can also be used as the destination of drawing operations when used to create a [Framebuffer](xref:Veldrid.Framebuffer) object.
 
 See the [Textures overview](xref:textures) for more information about Textures.
 
-Buffers can be created for a variety of applications. The [BufferUsage](xref:Veldrid.BufferUsage) type enumerates all options.
+DeviceBuffers can be created for a variety of applications. The [BufferUsage](xref:Veldrid.BufferUsage) type enumerates all options.
 
-* Vertex Buffers (BufferUsage.VertexBuffer) contain vertex data which is bound to a CommandList before issuing render commands. Vertex data is pulled from the bound vertex Buffers.
+* Vertex Buffers (BufferUsage.VertexBuffer) contain vertex data which is bound to a CommandList before issuing render commands. Vertex data is pulled from the bound vertex buffers.
 
 * Index Buffers (BufferUsage.IndexBuffer) contain index data which controls how vertices are selected during indexed drawing [CommandList.DrawIndexed](xref:Veldrid.CommandList#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_).
 
-* Uniform Buffers (BufferUsage.UniformBuffer) are Buffers which can be read from shader programs. These are commonly used to store object transformations, camera transformations, and other arbitrary pieces of data encoding some information about the scene being rendered.
+* Uniform Buffers (BufferUsage.UniformBuffer) are DeviceBuffers which can be read from shader programs. These are commonly used to store object transformations, camera transformations, and other arbitrary pieces of data encoding some information about the scene being rendered.
 
-* Structured Buffers (BufferUsage.StructuredBufferReadOnly and BufferUsage.StructuredBufferReadWrite) are Buffers containing an array of a single data type, whose size is specified upon Buffer creation. Shaders can get read-only or read-write access to these resources, depending on the needs of the technique being used.
+* Structured Buffers (BufferUsage.StructuredBufferReadOnly and BufferUsage.StructuredBufferReadWrite) are DeviceBuffers containing an array of a single data type, whose size is specified upon buffer creation. Shaders can get read-only or read-write access to these resources, depending on the needs of the technique being used.
 
 ### Shaders
 
@@ -79,7 +79,7 @@ Graphics and compute pipelines are tracked separately in a CommandList. This mea
 
 ### ResourceLayouts and ResourceSets
 
-A [ResourceSet](xref:Veldrid.ResourceSet) is another fundamental device resource which is used, along with a Pipeline, for drawing commands. ResourceSets are the mechanism by which BindableResource objects ([Buffers](xref:Veldrid.Buffer), [TextureViews](xref:Veldrid.TextureView), and [Samplers](xref:Veldrid.Sampler)) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a [ResourceLayout](xref:Veldrid.ResourceLayout) object, used to create both a ResourceSet and a Pipeline.
+A [ResourceSet](xref:Veldrid.ResourceSet) is another fundamental device resource which is used, along with a Pipeline, for drawing commands. ResourceSets are the mechanism by which BindableResource objects ([DeviceBuffers](xref:Veldrid.DeviceBuffer), [TextureViews](xref:Veldrid.TextureView), and [Samplers](xref:Veldrid.Sampler)) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a [ResourceLayout](xref:Veldrid.ResourceLayout) object, used to create both a ResourceSet and a Pipeline.
 
 ### Framebuffer
 

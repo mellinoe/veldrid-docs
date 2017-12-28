@@ -550,17 +550,13 @@ All created child resources must be Disposed prior to calling this method.</p>
   </div>
   
   
-  <a id="Veldrid_GraphicsDevice_ExecuteCommands_" data-uid="Veldrid.GraphicsDevice.ExecuteCommands*"></a>
-  <h4 id="Veldrid_GraphicsDevice_ExecuteCommands_Veldrid_CommandList_" data-uid="Veldrid.GraphicsDevice.ExecuteCommands(Veldrid.CommandList)">ExecuteCommands(CommandList)</h4>
-  <div class="markdown level1 summary"><p>Submits the given <a class="xref" href="Veldrid.CommandList.html">CommandList</a> for execution by this device.
-Commands submitted in this way may not be completed when this method returns.
-Use <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_WaitForIdle">WaitForIdle()</a> to wait for all submitted commands to complete.
-<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> must have been called on <code data-dev-comment-type="paramref" class="paramref">commandList</code> for this method to succeed.</p>
-</div>
+  <a id="Veldrid_GraphicsDevice_DisposeWhenIdle_" data-uid="Veldrid.GraphicsDevice.DisposeWhenIdle*"></a>
+  <h4 id="Veldrid_GraphicsDevice_DisposeWhenIdle_IDisposable_" data-uid="Veldrid.GraphicsDevice.DisposeWhenIdle(IDisposable)">DisposeWhenIdle(IDisposable)</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void ExecuteCommands(CommandList commandList)</code></pre>
+    <pre><code class="lang-csharp hljs">public void DisposeWhenIdle(IDisposable disposable)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -573,11 +569,9 @@ Use <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Wai
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.CommandList.html">CommandList</a></td>
-        <td><span class="parametername">commandList</span></td>
-        <td><p>The completed <a class="xref" href="Veldrid.CommandList.html">CommandList</a> to execute. <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> must have
-been previously called on this object.</p>
-</td>
+        <td><span class="xref">IDisposable</span></td>
+        <td><span class="parametername">disposable</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -637,7 +631,7 @@ format can be created with.</p>
   
   <a id="Veldrid_GraphicsDevice_Map_" data-uid="Veldrid.GraphicsDevice.Map*"></a>
   <h4 id="Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_" data-uid="Veldrid.GraphicsDevice.Map(Veldrid.MappableResource,Veldrid.MapMode)">Map(MappableResource, MapMode)</h4>
-  <div class="markdown level1 summary"><p>Maps a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> into a CPU-accessible data region. For Texture resources, this
+  <div class="markdown level1 summary"><p>Maps a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> into a CPU-accessible data region. For Texture resources, this
 overload maps the first subresource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -658,7 +652,7 @@ overload maps the first subresource.</p>
       <tr>
         <td><a class="xref" href="Veldrid.MappableResource.html">MappableResource</a></td>
         <td><span class="parametername">resource</span></td>
-        <td><p>The <a class="xref" href="Veldrid.Buffer.html">Buffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> resource to map.</p>
+        <td><p>The <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> resource to map.</p>
 </td>
       </tr>
       <tr>
@@ -689,7 +683,7 @@ overload maps the first subresource.</p>
   
   <a id="Veldrid_GraphicsDevice_Map_" data-uid="Veldrid.GraphicsDevice.Map*"></a>
   <h4 id="Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_System_UInt32_" data-uid="Veldrid.GraphicsDevice.Map(Veldrid.MappableResource,Veldrid.MapMode,System.UInt32)">Map(MappableResource, MapMode, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Maps a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> into a CPU-accessible data region.</p>
+  <div class="markdown level1 summary"><p>Maps a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> into a CPU-accessible data region.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -709,7 +703,7 @@ overload maps the first subresource.</p>
       <tr>
         <td><a class="xref" href="Veldrid.MappableResource.html">MappableResource</a></td>
         <td><span class="parametername">resource</span></td>
-        <td><p>The <a class="xref" href="Veldrid.Buffer.html">Buffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> resource to map.</p>
+        <td><p>The <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> resource to map.</p>
 </td>
       </tr>
       <tr>
@@ -722,7 +716,7 @@ overload maps the first subresource.</p>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">subresource</span></td>
         <td><p>The subresource to map. Subresources are indexed first by mip slice, then by array layer.
-For <a class="xref" href="Veldrid.Buffer.html">Buffer</a> resources, this parameter must be 0.</p>
+For <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> resources, this parameter must be 0.</p>
 </td>
       </tr>
     </tbody>
@@ -747,7 +741,7 @@ For <a class="xref" href="Veldrid.Buffer.html">Buffer</a> resources, this parame
   
   <a id="Veldrid_GraphicsDevice_Map_" data-uid="Veldrid.GraphicsDevice.Map*"></a>
   <h4 id="Veldrid_GraphicsDevice_Map__1_Veldrid_MappableResource_Veldrid_MapMode_" data-uid="Veldrid.GraphicsDevice.Map``1(Veldrid.MappableResource,Veldrid.MapMode)">Map&lt;T&gt;(MappableResource, MapMode)</h4>
-  <div class="markdown level1 summary"><p>Maps a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> into a CPU-accessible data region, and returns a structured
+  <div class="markdown level1 summary"><p>Maps a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> into a CPU-accessible data region, and returns a structured
 view over that region. For Texture resources, this overload maps the first subresource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -768,7 +762,7 @@ view over that region. For Texture resources, this overload maps the first subre
       <tr>
         <td><a class="xref" href="Veldrid.MappableResource.html">MappableResource</a></td>
         <td><span class="parametername">resource</span></td>
-        <td><p>The <a class="xref" href="Veldrid.Buffer.html">Buffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> resource to map.</p>
+        <td><p>The <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> resource to map.</p>
 </td>
       </tr>
       <tr>
@@ -815,7 +809,7 @@ view over that region. For Texture resources, this overload maps the first subre
   
   <a id="Veldrid_GraphicsDevice_Map_" data-uid="Veldrid.GraphicsDevice.Map*"></a>
   <h4 id="Veldrid_GraphicsDevice_Map__1_Veldrid_MappableResource_Veldrid_MapMode_System_UInt32_" data-uid="Veldrid.GraphicsDevice.Map``1(Veldrid.MappableResource,Veldrid.MapMode,System.UInt32)">Map&lt;T&gt;(MappableResource, MapMode, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Maps a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> into a CPU-accessible data region, and returns a structured
+  <div class="markdown level1 summary"><p>Maps a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> into a CPU-accessible data region, and returns a structured
 view over that region.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -836,7 +830,7 @@ view over that region.</p>
       <tr>
         <td><a class="xref" href="Veldrid.MappableResource.html">MappableResource</a></td>
         <td><span class="parametername">resource</span></td>
-        <td><p>The <a class="xref" href="Veldrid.Buffer.html">Buffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> resource to map.</p>
+        <td><p>The <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a> resource to map.</p>
 </td>
       </tr>
       <tr>
@@ -961,6 +955,33 @@ view over that region.</p>
   </div>
   
   
+  <a id="Veldrid_GraphicsDevice_ResetFence_" data-uid="Veldrid.GraphicsDevice.ResetFence*"></a>
+  <h4 id="Veldrid_GraphicsDevice_ResetFence_Veldrid_Fence_" data-uid="Veldrid.GraphicsDevice.ResetFence(Veldrid.Fence)">ResetFence(Fence)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract void ResetFence(Fence fence)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
+        <td><span class="parametername">fence</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_GraphicsDevice_ResizeMainWindow_" data-uid="Veldrid.GraphicsDevice.ResizeMainWindow*"></a>
   <h4 id="Veldrid_GraphicsDevice_ResizeMainWindow_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.ResizeMainWindow(System.UInt32,System.UInt32)">ResizeMainWindow(UInt32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Notifies this instance that the main window has been resized. This causes the <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">SwapchainFramebuffer</a> to
@@ -997,6 +1018,109 @@ be appropriately resized and recreated.</p>
   </table>
   
   
+  <a id="Veldrid_GraphicsDevice_SubmitCommands_" data-uid="Veldrid.GraphicsDevice.SubmitCommands*"></a>
+  <h4 id="Veldrid_GraphicsDevice_SubmitCommands_Veldrid_CommandList_" data-uid="Veldrid.GraphicsDevice.SubmitCommands(Veldrid.CommandList)">SubmitCommands(CommandList)</h4>
+  <div class="markdown level1 summary"><p>Submits the given <a class="xref" href="Veldrid.CommandList.html">CommandList</a> for execution by this device.
+Commands submitted in this way may not be completed when this method returns.
+Use <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_WaitForIdle">WaitForIdle()</a> to wait for all submitted commands to complete.
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> must have been called on <code data-dev-comment-type="paramref" class="paramref">commandList</code> for this method to succeed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SubmitCommands(CommandList commandList)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.CommandList.html">CommandList</a></td>
+        <td><span class="parametername">commandList</span></td>
+        <td><p>The completed <a class="xref" href="Veldrid.CommandList.html">CommandList</a> to execute. <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> must have
+been previously called on this object.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_SubmitCommands_" data-uid="Veldrid.GraphicsDevice.SubmitCommands*"></a>
+  <h4 id="Veldrid_GraphicsDevice_SubmitCommands_Veldrid_CommandList_Veldrid_Fence_" data-uid="Veldrid.GraphicsDevice.SubmitCommands(Veldrid.CommandList,Veldrid.Fence)">SubmitCommands(CommandList, Fence)</h4>
+  <div class="markdown level1 summary"><p>Submits the given <a class="xref" href="Veldrid.CommandList.html">CommandList</a> for execution by this device.
+Commands submitted in this way may not be completed when this method returns.
+Use <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_WaitForIdle">WaitForIdle()</a> to wait for all submitted commands to complete.
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> must have been called on <code data-dev-comment-type="paramref" class="paramref">commandList</code> for this method to succeed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SubmitCommands(CommandList commandList, Fence fence)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.CommandList.html">CommandList</a></td>
+        <td><span class="parametername">commandList</span></td>
+        <td><p>The completed <a class="xref" href="Veldrid.CommandList.html">CommandList</a> to execute. <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_End">End()</a> must have
+been previously called on this object.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
+        <td><span class="parametername">fence</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_SubmitCommandsCore_" data-uid="Veldrid.GraphicsDevice.SubmitCommandsCore*"></a>
+  <h4 id="Veldrid_GraphicsDevice_SubmitCommandsCore_Veldrid_CommandList_Veldrid_Fence_" data-uid="Veldrid.GraphicsDevice.SubmitCommandsCore(Veldrid.CommandList,Veldrid.Fence)">SubmitCommandsCore(CommandList, Fence)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SubmitCommandsCore(CommandList commandList, Fence fence)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.CommandList.html">CommandList</a></td>
+        <td><span class="parametername">commandList</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
+        <td><span class="parametername">fence</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_GraphicsDevice_SwapBuffers_" data-uid="Veldrid.GraphicsDevice.SwapBuffers*"></a>
   <h4 id="Veldrid_GraphicsDevice_SwapBuffers" data-uid="Veldrid.GraphicsDevice.SwapBuffers">SwapBuffers()</h4>
   <div class="markdown level1 summary"><p>Swaps the buffers of the swapchain and presents the rendered image to the screen.</p>
@@ -1004,13 +1128,23 @@ be appropriately resized and recreated.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void SwapBuffers()</code></pre>
+    <pre><code class="lang-csharp hljs">public void SwapBuffers()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_GraphicsDevice_SwapBuffersCore_" data-uid="Veldrid.GraphicsDevice.SwapBuffersCore*"></a>
+  <h4 id="Veldrid_GraphicsDevice_SwapBuffersCore" data-uid="Veldrid.GraphicsDevice.SwapBuffersCore">SwapBuffersCore()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void SwapBuffersCore()</code></pre>
   </div>
   
   
   <a id="Veldrid_GraphicsDevice_Unmap_" data-uid="Veldrid.GraphicsDevice.Unmap*"></a>
   <h4 id="Veldrid_GraphicsDevice_Unmap_Veldrid_MappableResource_" data-uid="Veldrid.GraphicsDevice.Unmap(Veldrid.MappableResource)">Unmap(MappableResource)</h4>
-  <div class="markdown level1 summary"><p>Invalidates a previously-mapped data region for the given <a class="xref" href="Veldrid.Buffer.html">Buffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a>.
+  <div class="markdown level1 summary"><p>Invalidates a previously-mapped data region for the given <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a>.
 For <a class="xref" href="Veldrid.Texture.html">Texture</a> resources, this unmaps the first subresource.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -1040,7 +1174,7 @@ For <a class="xref" href="Veldrid.Texture.html">Texture</a> resources, this unma
   
   <a id="Veldrid_GraphicsDevice_Unmap_" data-uid="Veldrid.GraphicsDevice.Unmap*"></a>
   <h4 id="Veldrid_GraphicsDevice_Unmap_Veldrid_MappableResource_System_UInt32_" data-uid="Veldrid.GraphicsDevice.Unmap(Veldrid.MappableResource,System.UInt32)">Unmap(MappableResource, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Invalidates a previously-mapped data region for the given <a class="xref" href="Veldrid.Buffer.html">Buffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+  <div class="markdown level1 summary"><p>Invalidates a previously-mapped data region for the given <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> or <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1067,7 +1201,7 @@ For <a class="xref" href="Veldrid.Texture.html">Texture</a> resources, this unma
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">subresource</span></td>
         <td><p>The subresource to unmap. Subresources are indexed first by mip slice, then by array layer.
-For <a class="xref" href="Veldrid.Buffer.html">Buffer</a> resources, this parameter must be 0.</p>
+For <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> resources, this parameter must be 0.</p>
 </td>
       </tr>
     </tbody>
@@ -1107,13 +1241,13 @@ For <a class="xref" href="Veldrid.Buffer.html">Buffer</a> resources, this parame
   
   
   <a id="Veldrid_GraphicsDevice_UpdateBuffer_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer*"></a>
-  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer_Veldrid_Buffer_System_UInt32_IntPtr_System_UInt32_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer(Veldrid.Buffer,System.UInt32,IntPtr,System.UInt32)">UpdateBuffer(Buffer, UInt32, IntPtr, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.</p>
+  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer_Veldrid_DeviceBuffer_System_UInt32_IntPtr_System_UInt32_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer(Veldrid.DeviceBuffer,System.UInt32,IntPtr,System.UInt32)">UpdateBuffer(DeviceBuffer, UInt32, IntPtr, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void UpdateBuffer(Buffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void UpdateBuffer(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1126,7 +1260,7 @@ For <a class="xref" href="Veldrid.Buffer.html">Buffer</a> resources, this parame
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td><p>The resource to update.</p>
 </td>
@@ -1134,7 +1268,7 @@ For <a class="xref" href="Veldrid.Buffer.html">Buffer</a> resources, this parame
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">bufferOffsetInBytes</span></td>
-        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>&apos;s storage, at
 which new data will be uploaded.</p>
 </td>
       </tr>
@@ -1155,14 +1289,14 @@ which new data will be uploaded.</p>
   
   
   <a id="Veldrid_GraphicsDevice_UpdateBuffer_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer*"></a>
-  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0)">UpdateBuffer&lt;T&gt;(Buffer, UInt32, T)</h4>
-  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_DeviceBuffer_System_UInt32___0_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.DeviceBuffer,System.UInt32,``0)">UpdateBuffer&lt;T&gt;(DeviceBuffer, UInt32, T)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.
 This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, T source)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, T source)where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1175,7 +1309,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td><p>The resource to update.</p>
 </td>
@@ -1183,7 +1317,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">bufferOffsetInBytes</span></td>
-        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a> storage, at
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> storage, at
 which new data will be uploaded.</p>
 </td>
       </tr>
@@ -1214,14 +1348,14 @@ which new data will be uploaded.</p>
   
   
   <a id="Veldrid_GraphicsDevice_UpdateBuffer_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer*"></a>
-  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0__" data-uid="Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0@)">UpdateBuffer&lt;T&gt;(Buffer, UInt32, ref T)</h4>
-  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_DeviceBuffer_System_UInt32___0__" data-uid="Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.DeviceBuffer,System.UInt32,``0@)">UpdateBuffer&lt;T&gt;(DeviceBuffer, UInt32, ref T)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.
 This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, ref T source)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, ref T source)where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1234,7 +1368,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td><p>The resource to update.</p>
 </td>
@@ -1242,7 +1376,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">bufferOffsetInBytes</span></td>
-        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>&apos;s storage, at
 which new data will be uploaded.</p>
 </td>
       </tr>
@@ -1273,14 +1407,14 @@ which new data will be uploaded.</p>
   
   
   <a id="Veldrid_GraphicsDevice_UpdateBuffer_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer*"></a>
-  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0__System_UInt32_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0@,System.UInt32)">UpdateBuffer&lt;T&gt;(Buffer, UInt32, ref T, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_DeviceBuffer_System_UInt32___0__System_UInt32_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.DeviceBuffer,System.UInt32,``0@,System.UInt32)">UpdateBuffer&lt;T&gt;(DeviceBuffer, UInt32, ref T, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.
 This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, ref T source, uint sizeInBytes)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, ref T source, uint sizeInBytes)where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1293,7 +1427,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td><p>The resource to update.</p>
 </td>
@@ -1301,7 +1435,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">bufferOffsetInBytes</span></td>
-        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>&apos;s storage, at
 which new data will be uploaded.</p>
 </td>
       </tr>
@@ -1338,14 +1472,14 @@ which new data will be uploaded.</p>
   
   
   <a id="Veldrid_GraphicsDevice_UpdateBuffer_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer*"></a>
-  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_Buffer_System_UInt32___0___" data-uid="Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.Buffer,System.UInt32,``0[])">UpdateBuffer&lt;T&gt;(Buffer, UInt32, T[])</h4>
-  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.Buffer.html">Buffer</a> region with new data.
+  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer__1_Veldrid_DeviceBuffer_System_UInt32___0___" data-uid="Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.DeviceBuffer,System.UInt32,``0[])">UpdateBuffer&lt;T&gt;(DeviceBuffer, UInt32, T[])</h4>
+  <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.
 This function must be used with a blittable value type <code data-dev-comment-type="typeparamref" class="typeparamref">T</code>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(Buffer buffer, uint bufferOffsetInBytes, T[] source)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, T[] source)where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1358,7 +1492,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Buffer.html">Buffer</a></td>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
         <td><p>The resource to update.</p>
 </td>
@@ -1366,7 +1500,7 @@ This function must be used with a blittable value type <code data-dev-comment-ty
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">bufferOffsetInBytes</span></td>
-        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.Buffer.html">Buffer</a>&apos;s storage, at
+        <td><p>An offset, in bytes, from the beginning of the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>&apos;s storage, at
 which new data will be uploaded.</p>
 </td>
       </tr>
@@ -1487,6 +1621,293 @@ which new data will be uploaded.</p>
   </table>
   
   
+  <a id="Veldrid_GraphicsDevice_WaitForFence_" data-uid="Veldrid.GraphicsDevice.WaitForFence*"></a>
+  <h4 id="Veldrid_GraphicsDevice_WaitForFence_Veldrid_Fence_" data-uid="Veldrid.GraphicsDevice.WaitForFence(Veldrid.Fence)">WaitForFence(Fence)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WaitForFence(Fence fence)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
+        <td><span class="parametername">fence</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_WaitForFence_" data-uid="Veldrid.GraphicsDevice.WaitForFence*"></a>
+  <h4 id="Veldrid_GraphicsDevice_WaitForFence_Veldrid_Fence_System_UInt64_" data-uid="Veldrid.GraphicsDevice.WaitForFence(Veldrid.Fence,System.UInt64)">WaitForFence(Fence, UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool WaitForFence(Fence fence, ulong nanosecondTimeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
+        <td><span class="parametername">fence</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">nanosecondTimeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_WaitForFence_" data-uid="Veldrid.GraphicsDevice.WaitForFence*"></a>
+  <h4 id="Veldrid_GraphicsDevice_WaitForFence_Veldrid_Fence_TimeSpan_" data-uid="Veldrid.GraphicsDevice.WaitForFence(Veldrid.Fence,TimeSpan)">WaitForFence(Fence, TimeSpan)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WaitForFence(Fence fence, TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
+        <td><span class="parametername">fence</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_WaitForFences_" data-uid="Veldrid.GraphicsDevice.WaitForFences*"></a>
+  <h4 id="Veldrid_GraphicsDevice_WaitForFences_Veldrid_Fence___System_Boolean_" data-uid="Veldrid.GraphicsDevice.WaitForFences(Veldrid.Fence[],System.Boolean)">WaitForFences(Fence[], Boolean)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WaitForFences(Fence[] fences, bool waitAll)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a>[]</td>
+        <td><span class="parametername">fences</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">waitAll</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_WaitForFences_" data-uid="Veldrid.GraphicsDevice.WaitForFences*"></a>
+  <h4 id="Veldrid_GraphicsDevice_WaitForFences_Veldrid_Fence___System_Boolean_System_UInt64_" data-uid="Veldrid.GraphicsDevice.WaitForFences(Veldrid.Fence[],System.Boolean,System.UInt64)">WaitForFences(Fence[], Boolean, UInt64)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool WaitForFences(Fence[] fences, bool waitAll, ulong nanosecondTimeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a>[]</td>
+        <td><span class="parametername">fences</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">waitAll</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">nanosecondTimeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_WaitForFences_" data-uid="Veldrid.GraphicsDevice.WaitForFences*"></a>
+  <h4 id="Veldrid_GraphicsDevice_WaitForFences_Veldrid_Fence___System_Boolean_TimeSpan_" data-uid="Veldrid.GraphicsDevice.WaitForFences(Veldrid.Fence[],System.Boolean,TimeSpan)">WaitForFences(Fence[], Boolean, TimeSpan)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WaitForFences(Fence[] fences, bool waitAll, TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a>[]</td>
+        <td><span class="parametername">fences</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">waitAll</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_GraphicsDevice_WaitForIdle_" data-uid="Veldrid.GraphicsDevice.WaitForIdle*"></a>
   <h4 id="Veldrid_GraphicsDevice_WaitForIdle" data-uid="Veldrid.GraphicsDevice.WaitForIdle">WaitForIdle()</h4>
   <div class="markdown level1 summary"><p>A blocking method that returns when all submitted <a class="xref" href="Veldrid.CommandList.html">CommandList</a> objects have fully completed.</p>
@@ -1494,7 +1915,17 @@ which new data will be uploaded.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void WaitForIdle()</code></pre>
+    <pre><code class="lang-csharp hljs">public void WaitForIdle()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_GraphicsDevice_WaitForIdleCore_" data-uid="Veldrid.GraphicsDevice.WaitForIdleCore*"></a>
+  <h4 id="Veldrid_GraphicsDevice_WaitForIdleCore" data-uid="Veldrid.GraphicsDevice.WaitForIdleCore">WaitForIdleCore()</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void WaitForIdleCore()</code></pre>
   </div>
 </article>
           </div>

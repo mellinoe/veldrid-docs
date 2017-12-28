@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Struct IndirectDrawArguments
+    <title>Class Fence
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Struct IndirectDrawArguments
+    <meta name="title" content="Class Fence
    ">
     <meta name="generator" content="docfx 2.26.4.0">
     
@@ -68,24 +68,30 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Veldrid.IndirectDrawArguments">
+            <article class="content wrap" id="_content" data-uid="Veldrid.Fence">
   
   
-  <h1 id="Veldrid_IndirectDrawArguments" data-uid="Veldrid.IndirectDrawArguments" class="text-break">Struct IndirectDrawArguments
+  <h1 id="Veldrid_Fence" data-uid="Veldrid.Fence" class="text-break">Class Fence
   </h1>
-  <div class="markdown level0 summary"><p>A structure describing the format expected by indirect draw commands contained in an indirect <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
-</div>
+  <div class="markdown level0 summary"></div>
   <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><span class="xref">System.Object</span></div>
+    <div class="level1"><span class="xref">Fence</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a></div>
+    <div><span class="xref">IDisposable</span></div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
-      <span class="xref">System.ValueType.Equals(System.Object)</span>
+      <span class="xref">System.Object.ToString()</span>
     </div>
     <div>
-      <span class="xref">System.ValueType.GetHashCode()</span>
-    </div>
-    <div>
-      <span class="xref">System.ValueType.ToString()</span>
+      <span class="xref">System.Object.Equals(System.Object)</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
@@ -94,28 +100,36 @@
       <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
     </div>
     <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
       <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
     </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Veldrid_IndirectDrawArguments_syntax">Syntax</h5>
+  <h5 id="Veldrid_Fence_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct IndirectDrawArguments</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract class Fence : DeviceResource, IDisposable</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
   
   
-  <h4 id="Veldrid_IndirectDrawArguments_FirstInstance" data-uid="Veldrid.IndirectDrawArguments.FirstInstance">FirstInstance</h4>
-  <div class="markdown level1 summary"><p>The first instance to draw. Subsequent instances are incrmented by 1.</p>
+  <a id="Veldrid_Fence_Name_" data-uid="Veldrid.Fence.Name*"></a>
+  <h4 id="Veldrid_Fence_Name" data-uid="Veldrid.Fence.Name">Name</h4>
+  <div class="markdown level1 summary"><p>A string identifying this instance. Can be used to differentiate between objects in graphics debuggers and other
+tools.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint FirstInstance</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract string Name { get; set; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -125,22 +139,22 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="xref">System.String</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <h4 id="Veldrid_IndirectDrawArguments_FirstVertex" data-uid="Veldrid.IndirectDrawArguments.FirstVertex">FirstVertex</h4>
-  <div class="markdown level1 summary"><p>The first vertex to draw. Subsequent vertices are incremented by 1.</p>
-</div>
+  <a id="Veldrid_Fence_Signaled_" data-uid="Veldrid.Fence.Signaled*"></a>
+  <h4 id="Veldrid_Fence_Signaled" data-uid="Veldrid.Fence.Signaled">Signaled</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint FirstVertex</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract bool Signaled { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -150,61 +164,40 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
+  <h3 id="methods">Methods
+  </h3>
   
   
-  <h4 id="Veldrid_IndirectDrawArguments_InstanceCount" data-uid="Veldrid.IndirectDrawArguments.InstanceCount">InstanceCount</h4>
-  <div class="markdown level1 summary"><p>The number of instances to draw.</p>
-</div>
+  <a id="Veldrid_Fence_Dispose_" data-uid="Veldrid.Fence.Dispose*"></a>
+  <h4 id="Veldrid_Fence_Dispose" data-uid="Veldrid.Fence.Dispose">Dispose()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint InstanceCount</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void Dispose()</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   
   
-  <h4 id="Veldrid_IndirectDrawArguments_VertexCount" data-uid="Veldrid.IndirectDrawArguments.VertexCount">VertexCount</h4>
-  <div class="markdown level1 summary"><p>The number of vertices to draw.</p>
-</div>
+  <a id="Veldrid_Fence_Reset_" data-uid="Veldrid.Fence.Reset*"></a>
+  <h4 id="Veldrid_Fence_Reset" data-uid="Veldrid.Fence.Reset">Reset()</h4>
+  <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint VertexCount</code></pre>
+    <pre><code class="lang-csharp hljs">public abstract void Reset()</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a>
+  </div>
+  <div>
+      <span class="xref">IDisposable</span>
+  </div>
 </article>
           </div>
           
