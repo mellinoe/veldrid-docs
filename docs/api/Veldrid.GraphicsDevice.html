@@ -552,7 +552,10 @@ All created child resources must be Disposed prior to calling this method.</p>
   
   <a id="Veldrid_GraphicsDevice_DisposeWhenIdle_" data-uid="Veldrid.GraphicsDevice.DisposeWhenIdle*"></a>
   <h4 id="Veldrid_GraphicsDevice_DisposeWhenIdle_IDisposable_" data-uid="Veldrid.GraphicsDevice.DisposeWhenIdle(IDisposable)">DisposeWhenIdle(IDisposable)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Adds the given object to a deferred disposal list, which will be processed when this GraphicsDevice becomes idle.
+This method can be used to safely dispose a device resource which may be in use at the time this method is called,
+but which will no longer be in use when the device is idle.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -571,7 +574,8 @@ All created child resources must be Disposed prior to calling this method.</p>
       <tr>
         <td><span class="xref">IDisposable</span></td>
         <td><span class="parametername">disposable</span></td>
-        <td></td>
+        <td><p>An object to dispose when this instance becomes idle.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -957,7 +961,8 @@ view over that region.</p>
   
   <a id="Veldrid_GraphicsDevice_ResetFence_" data-uid="Veldrid.GraphicsDevice.ResetFence*"></a>
   <h4 id="Veldrid_GraphicsDevice_ResetFence_Veldrid_Fence_" data-uid="Veldrid.GraphicsDevice.ResetFence(Veldrid.Fence)">ResetFence(Fence)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Resets the given <a class="xref" href="Veldrid.Fence.html">Fence</a> to the unsignaled state.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -976,7 +981,8 @@ view over that region.</p>
       <tr>
         <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
         <td><span class="parametername">fence</span></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Veldrid.Fence.html">Fence</a> instance to reset.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1083,7 +1089,9 @@ been previously called on this object.</p>
       <tr>
         <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
         <td><span class="parametername">fence</span></td>
-        <td></td>
+        <td><p>A <a class="xref" href="Veldrid.Fence.html">Fence</a> which will become signaled after this submission fully completes
+execution.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1623,11 +1631,12 @@ which new data will be uploaded.</p>
   
   <a id="Veldrid_GraphicsDevice_WaitForFence_" data-uid="Veldrid.GraphicsDevice.WaitForFence*"></a>
   <h4 id="Veldrid_GraphicsDevice_WaitForFence_Veldrid_Fence_" data-uid="Veldrid.GraphicsDevice.WaitForFence(Veldrid.Fence)">WaitForFence(Fence)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Blocks the calling thread until the given <a class="xref" href="Veldrid.Fence.html">Fence</a> becomes signaled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool WaitForFence(Fence fence)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WaitForFence(Fence fence)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1642,22 +1651,8 @@ which new data will be uploaded.</p>
       <tr>
         <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
         <td><span class="parametername">fence</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Veldrid.Fence.html">Fence</a> instance to wait on.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1665,7 +1660,9 @@ which new data will be uploaded.</p>
   
   <a id="Veldrid_GraphicsDevice_WaitForFence_" data-uid="Veldrid.GraphicsDevice.WaitForFence*"></a>
   <h4 id="Veldrid_GraphicsDevice_WaitForFence_Veldrid_Fence_System_UInt64_" data-uid="Veldrid.GraphicsDevice.WaitForFence(Veldrid.Fence,System.UInt64)">WaitForFence(Fence, UInt64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Blocks the calling thread until the given <a class="xref" href="Veldrid.Fence.html">Fence</a> becomes signaled, or until a time greater than the
+given TimeSpan has elapsed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1684,12 +1681,14 @@ which new data will be uploaded.</p>
       <tr>
         <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
         <td><span class="parametername">fence</span></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Veldrid.Fence.html">Fence</a> instance to wait on.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">nanosecondTimeout</span></td>
-        <td></td>
+        <td><p>A value in nanoseconds, indicating the maximum time to wait on the Fence.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1704,7 +1703,8 @@ which new data will be uploaded.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>True if the Fence was signaled. False if the timeout was reached instead.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1712,7 +1712,9 @@ which new data will be uploaded.</p>
   
   <a id="Veldrid_GraphicsDevice_WaitForFence_" data-uid="Veldrid.GraphicsDevice.WaitForFence*"></a>
   <h4 id="Veldrid_GraphicsDevice_WaitForFence_Veldrid_Fence_TimeSpan_" data-uid="Veldrid.GraphicsDevice.WaitForFence(Veldrid.Fence,TimeSpan)">WaitForFence(Fence, TimeSpan)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Blocks the calling thread until the given <a class="xref" href="Veldrid.Fence.html">Fence</a> becomes signaled, or until a time greater than the
+given TimeSpan has elapsed.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1731,12 +1733,14 @@ which new data will be uploaded.</p>
       <tr>
         <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
         <td><span class="parametername">fence</span></td>
-        <td></td>
+        <td><p>The <a class="xref" href="Veldrid.Fence.html">Fence</a> instance to wait on.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td></td>
+        <td><p>A TimeSpan indicating the maximum time to wait on the Fence.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1751,7 +1755,8 @@ which new data will be uploaded.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>True if the Fence was signaled. False if the timeout was reached instead.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1759,11 +1764,12 @@ which new data will be uploaded.</p>
   
   <a id="Veldrid_GraphicsDevice_WaitForFences_" data-uid="Veldrid.GraphicsDevice.WaitForFences*"></a>
   <h4 id="Veldrid_GraphicsDevice_WaitForFences_Veldrid_Fence___System_Boolean_" data-uid="Veldrid.GraphicsDevice.WaitForFences(Veldrid.Fence[],System.Boolean)">WaitForFences(Fence[], Boolean)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Blocks the calling thread until one or all of the given <a class="xref" href="Veldrid.Fence.html">Fence</a> instances have become signaled.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool WaitForFences(Fence[] fences, bool waitAll)</code></pre>
+    <pre><code class="lang-csharp hljs">public void WaitForFences(Fence[] fences, bool waitAll)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1778,27 +1784,15 @@ which new data will be uploaded.</p>
       <tr>
         <td><a class="xref" href="Veldrid.Fence.html">Fence</a>[]</td>
         <td><span class="parametername">fences</span></td>
-        <td></td>
+        <td><p>An array of <a class="xref" href="Veldrid.Fence.html">Fence</a> objects to wait on.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">waitAll</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>If true, then this method blocks until all of the given Fences become signaled.
+If false, then this method only waits until one of the Fences become signaled.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1806,7 +1800,9 @@ which new data will be uploaded.</p>
   
   <a id="Veldrid_GraphicsDevice_WaitForFences_" data-uid="Veldrid.GraphicsDevice.WaitForFences*"></a>
   <h4 id="Veldrid_GraphicsDevice_WaitForFences_Veldrid_Fence___System_Boolean_System_UInt64_" data-uid="Veldrid.GraphicsDevice.WaitForFences(Veldrid.Fence[],System.Boolean,System.UInt64)">WaitForFences(Fence[], Boolean, UInt64)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Blocks the calling thread until one or all of the given <a class="xref" href="Veldrid.Fence.html">Fence</a> instances have become signaled,
+or until the given timeout has been reached.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1825,17 +1821,21 @@ which new data will be uploaded.</p>
       <tr>
         <td><a class="xref" href="Veldrid.Fence.html">Fence</a>[]</td>
         <td><span class="parametername">fences</span></td>
-        <td></td>
+        <td><p>An array of <a class="xref" href="Veldrid.Fence.html">Fence</a> objects to wait on.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">waitAll</span></td>
-        <td></td>
+        <td><p>If true, then this method blocks until all of the given Fences become signaled.
+If false, then this method only waits until one of the Fences become signaled.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt64</span></td>
         <td><span class="parametername">nanosecondTimeout</span></td>
-        <td></td>
+        <td><p>A value in nanoseconds, indicating the maximum time to wait on the Fence.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1850,7 +1850,8 @@ which new data will be uploaded.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>True if the Fence was signaled. False if the timeout was reached instead.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1858,7 +1859,9 @@ which new data will be uploaded.</p>
   
   <a id="Veldrid_GraphicsDevice_WaitForFences_" data-uid="Veldrid.GraphicsDevice.WaitForFences*"></a>
   <h4 id="Veldrid_GraphicsDevice_WaitForFences_Veldrid_Fence___System_Boolean_TimeSpan_" data-uid="Veldrid.GraphicsDevice.WaitForFences(Veldrid.Fence[],System.Boolean,TimeSpan)">WaitForFences(Fence[], Boolean, TimeSpan)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Blocks the calling thread until one or all of the given <a class="xref" href="Veldrid.Fence.html">Fence</a> instances have become signaled,
+or until the given timeout has been reached.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1877,17 +1880,21 @@ which new data will be uploaded.</p>
       <tr>
         <td><a class="xref" href="Veldrid.Fence.html">Fence</a>[]</td>
         <td><span class="parametername">fences</span></td>
-        <td></td>
+        <td><p>An array of <a class="xref" href="Veldrid.Fence.html">Fence</a> objects to wait on.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">waitAll</span></td>
-        <td></td>
+        <td><p>If true, then this method blocks until all of the given Fences become signaled.
+If false, then this method only waits until one of the Fences become signaled.</p>
+</td>
       </tr>
       <tr>
         <td><span class="xref">TimeSpan</span></td>
         <td><span class="parametername">timeout</span></td>
-        <td></td>
+        <td><p>A TimeSpan indicating the maximum time to wait on the Fences.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1902,7 +1909,8 @@ which new data will be uploaded.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Boolean</span></td>
-        <td></td>
+        <td><p>True if the Fence was signaled. False if the timeout was reached instead.</p>
+</td>
       </tr>
     </tbody>
   </table>

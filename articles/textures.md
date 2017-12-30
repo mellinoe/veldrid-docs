@@ -10,9 +10,9 @@ uid: textures
 
 Texture data is stored in one of a number of [formats](xref:Veldrid.PixelFormat), specified by the [TextureDescription.Format](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Format) field.
 
-## Dimensions
+## Type and Dimensions
 
-Textures can be 1D, 2D, or 3D. This is controlled by [TextureDescription.Width](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Width), [TextureDescription.Height](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Height), and [TextureDescription.Depth](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Depth).
+Textures can be 1D, 2D, or 3D. This is controlled by [TextureDescription.Type](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Type). The actualy dimensions of the Texture are controlled by [TextureDescription.Width](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Width), [TextureDescription.Height](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Height), and [TextureDescription.Depth](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Depth). For any particular type of Texture (1D, 2D, 3D), the dimensions must be valid. For example, a 1D Texture cannot have a Height or Depth greater than 1.
 
 ## Array Layers
 
@@ -20,7 +20,7 @@ Textures can be 1D, 2D, or 3D. This is controlled by [TextureDescription.Width](
 
 ## Multisamples
 
-1D and 2D textures can be multisampled Textures. 3D textures cannot. This is specified by [TextureDescription.SampleCount](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_SampleCount). The maximum sample count is limited by the specific GraphicsDevice being used. Use the [GetSampleCountLimit](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_GetSampleCountLimit_Veldrid_PixelFormat_System_Boolean_) method to get the maximum sample count for a given [PixelFormat](xref:Veldrid.PixelFormat).
+2D Textures can be multisampled Textures. 1D and 3D textures cannot. This is specified by [TextureDescription.SampleCount](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_SampleCount). The maximum sample count is limited by the specific GraphicsDevice being used. Use the [GetSampleCountLimit](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_GetSampleCountLimit_Veldrid_PixelFormat_System_Boolean_) method to get the maximum sample count for a given [PixelFormat](xref:Veldrid.PixelFormat).
 
 ## Mipmaps
 

@@ -340,6 +340,60 @@ references:
   commentId: F:Veldrid.BlendStateDescription.SingleOverrideBlend
   fullName: Veldrid.BlendStateDescription.SingleOverrideBlend
   nameWithType: BlendStateDescription.SingleOverrideBlend
+- uid: Veldrid.Buffer
+  name: Buffer
+  href: api/Veldrid.Buffer.html
+  commentId: T:Veldrid.Buffer
+  fullName: Veldrid.Buffer
+  nameWithType: Buffer
+- uid: Veldrid.Buffer.Dispose
+  name: Dispose()
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_Dispose
+  commentId: M:Veldrid.Buffer.Dispose
+  fullName: Veldrid.Buffer.Dispose()
+  nameWithType: Buffer.Dispose()
+- uid: Veldrid.Buffer.Dispose*
+  name: Dispose
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_Dispose_
+  commentId: Overload:Veldrid.Buffer.Dispose
+  fullName: Veldrid.Buffer.Dispose
+  nameWithType: Buffer.Dispose
+- uid: Veldrid.Buffer.Name
+  name: Name
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_Name
+  commentId: P:Veldrid.Buffer.Name
+  fullName: Veldrid.Buffer.Name
+  nameWithType: Buffer.Name
+- uid: Veldrid.Buffer.Name*
+  name: Name
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_Name_
+  commentId: Overload:Veldrid.Buffer.Name
+  fullName: Veldrid.Buffer.Name
+  nameWithType: Buffer.Name
+- uid: Veldrid.Buffer.SizeInBytes
+  name: SizeInBytes
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_SizeInBytes
+  commentId: P:Veldrid.Buffer.SizeInBytes
+  fullName: Veldrid.Buffer.SizeInBytes
+  nameWithType: Buffer.SizeInBytes
+- uid: Veldrid.Buffer.SizeInBytes*
+  name: SizeInBytes
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_SizeInBytes_
+  commentId: Overload:Veldrid.Buffer.SizeInBytes
+  fullName: Veldrid.Buffer.SizeInBytes
+  nameWithType: Buffer.SizeInBytes
+- uid: Veldrid.Buffer.Usage
+  name: Usage
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_Usage
+  commentId: P:Veldrid.Buffer.Usage
+  fullName: Veldrid.Buffer.Usage
+  nameWithType: Buffer.Usage
+- uid: Veldrid.Buffer.Usage*
+  name: Usage
+  href: api/Veldrid.Buffer.html#Veldrid_Buffer_Usage_
+  commentId: Overload:Veldrid.Buffer.Usage
+  fullName: Veldrid.Buffer.Usage
+  nameWithType: Buffer.Usage
 - uid: Veldrid.BufferDescription
   name: BufferDescription
   href: api/Veldrid.BufferDescription.html
@@ -1234,6 +1288,48 @@ references:
   commentId: F:Veldrid.ComputePipelineDescription.ResourceLayouts
   fullName: Veldrid.ComputePipelineDescription.ResourceLayouts
   nameWithType: ComputePipelineDescription.ResourceLayouts
+- uid: Veldrid.CubeFace
+  name: CubeFace
+  href: api/Veldrid.CubeFace.html
+  commentId: T:Veldrid.CubeFace
+  fullName: Veldrid.CubeFace
+  nameWithType: CubeFace
+- uid: Veldrid.CubeFace.NegativeX
+  name: NegativeX
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_NegativeX
+  commentId: F:Veldrid.CubeFace.NegativeX
+  fullName: Veldrid.CubeFace.NegativeX
+  nameWithType: CubeFace.NegativeX
+- uid: Veldrid.CubeFace.NegativeY
+  name: NegativeY
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_NegativeY
+  commentId: F:Veldrid.CubeFace.NegativeY
+  fullName: Veldrid.CubeFace.NegativeY
+  nameWithType: CubeFace.NegativeY
+- uid: Veldrid.CubeFace.NegativeZ
+  name: NegativeZ
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_NegativeZ
+  commentId: F:Veldrid.CubeFace.NegativeZ
+  fullName: Veldrid.CubeFace.NegativeZ
+  nameWithType: CubeFace.NegativeZ
+- uid: Veldrid.CubeFace.PositiveX
+  name: PositiveX
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_PositiveX
+  commentId: F:Veldrid.CubeFace.PositiveX
+  fullName: Veldrid.CubeFace.PositiveX
+  nameWithType: CubeFace.PositiveX
+- uid: Veldrid.CubeFace.PositiveY
+  name: PositiveY
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_PositiveY
+  commentId: F:Veldrid.CubeFace.PositiveY
+  fullName: Veldrid.CubeFace.PositiveY
+  nameWithType: CubeFace.PositiveY
+- uid: Veldrid.CubeFace.PositiveZ
+  name: PositiveZ
+  href: api/Veldrid.CubeFace.html#Veldrid_CubeFace_PositiveZ
+  commentId: F:Veldrid.CubeFace.PositiveZ
+  fullName: Veldrid.CubeFace.PositiveZ
+  nameWithType: CubeFace.PositiveZ
 - uid: Veldrid.DepthStencilStateDescription
   name: DepthStencilStateDescription
   href: api/Veldrid.DepthStencilStateDescription.html
@@ -2563,6 +2659,12 @@ references:
   commentId: F:Veldrid.MappedResource.Data
   fullName: Veldrid.MappedResource.Data
   nameWithType: MappedResource.Data
+- uid: Veldrid.MappedResource.DepthPitch
+  name: DepthPitch
+  href: api/Veldrid.MappedResource.html#Veldrid_MappedResource_DepthPitch
+  commentId: F:Veldrid.MappedResource.DepthPitch
+  fullName: Veldrid.MappedResource.DepthPitch
+  nameWithType: MappedResource.DepthPitch
 - uid: Veldrid.MappedResource.Mode
   name: Mode
   href: api/Veldrid.MappedResource.html#Veldrid_MappedResource_Mode
@@ -2644,6 +2746,15 @@ references:
   fullName.vb: Veldrid.MappedResourceView(Of T).Item(System.Int32, System.Int32)
   nameWithType: MappedResourceView<T>.Item[Int32, Int32]
   nameWithType.vb: MappedResourceView(Of T).Item(Int32, Int32)
+- uid: Veldrid.MappedResourceView`1.Item(System.Int32,System.Int32,System.Int32)
+  name: Item[Int32, Int32, Int32]
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Item_System_Int32_System_Int32_System_Int32_
+  commentId: P:Veldrid.MappedResourceView`1.Item(System.Int32,System.Int32,System.Int32)
+  name.vb: Item(Int32, Int32, Int32)
+  fullName: Veldrid.MappedResourceView<T>.Item[System.Int32, System.Int32, System.Int32]
+  fullName.vb: Veldrid.MappedResourceView(Of T).Item(System.Int32, System.Int32, System.Int32)
+  nameWithType: MappedResourceView<T>.Item[Int32, Int32, Int32]
+  nameWithType.vb: MappedResourceView(Of T).Item(Int32, Int32, Int32)
 - uid: Veldrid.MappedResourceView`1.Item*
   name: Item
   href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Item_
@@ -3793,6 +3904,18 @@ references:
   commentId: F:Veldrid.RgbaByte.R
   fullName: Veldrid.RgbaByte.R
   nameWithType: RgbaByte.R
+- uid: Veldrid.RgbaByte.ToString
+  name: ToString()
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_ToString
+  commentId: M:Veldrid.RgbaByte.ToString
+  fullName: Veldrid.RgbaByte.ToString()
+  nameWithType: RgbaByte.ToString()
+- uid: Veldrid.RgbaByte.ToString*
+  name: ToString
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_ToString_
+  commentId: Overload:Veldrid.RgbaByte.ToString
+  fullName: Veldrid.RgbaByte.ToString
+  nameWithType: RgbaByte.ToString
 - uid: Veldrid.RgbaByte.White
   name: White
   href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_White
@@ -4714,6 +4837,18 @@ references:
   commentId: Overload:Veldrid.Texture.SampleCount
   fullName: Veldrid.Texture.SampleCount
   nameWithType: Texture.SampleCount
+- uid: Veldrid.Texture.Type
+  name: Type
+  href: api/Veldrid.Texture.html#Veldrid_Texture_Type
+  commentId: P:Veldrid.Texture.Type
+  fullName: Veldrid.Texture.Type
+  nameWithType: Texture.Type
+- uid: Veldrid.Texture.Type*
+  name: Type
+  href: api/Veldrid.Texture.html#Veldrid_Texture_Type_
+  commentId: Overload:Veldrid.Texture.Type
+  fullName: Veldrid.Texture.Type
+  nameWithType: Texture.Type
 - uid: Veldrid.Texture.Usage
   name: Usage
   href: api/Veldrid.Texture.html#Veldrid_Texture_Usage
@@ -4744,18 +4879,18 @@ references:
   commentId: T:Veldrid.TextureDescription
   fullName: Veldrid.TextureDescription
   nameWithType: TextureDescription
-- uid: Veldrid.TextureDescription.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage)
-  name: TextureDescription(UInt32, UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage)
-  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription__ctor_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_PixelFormat_Veldrid_TextureUsage_
-  commentId: M:Veldrid.TextureDescription.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage)
-  fullName: Veldrid.TextureDescription.TextureDescription(System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, Veldrid.PixelFormat, Veldrid.TextureUsage)
-  nameWithType: TextureDescription.TextureDescription(UInt32, UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage)
-- uid: Veldrid.TextureDescription.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage,Veldrid.TextureSampleCount)
-  name: TextureDescription(UInt32, UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage, TextureSampleCount)
-  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription__ctor_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_PixelFormat_Veldrid_TextureUsage_Veldrid_TextureSampleCount_
-  commentId: M:Veldrid.TextureDescription.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage,Veldrid.TextureSampleCount)
-  fullName: Veldrid.TextureDescription.TextureDescription(System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, Veldrid.PixelFormat, Veldrid.TextureUsage, Veldrid.TextureSampleCount)
-  nameWithType: TextureDescription.TextureDescription(UInt32, UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage, TextureSampleCount)
+- uid: Veldrid.TextureDescription.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage,Veldrid.TextureType)
+  name: TextureDescription(UInt32, UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage, TextureType)
+  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription__ctor_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_PixelFormat_Veldrid_TextureUsage_Veldrid_TextureType_
+  commentId: M:Veldrid.TextureDescription.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage,Veldrid.TextureType)
+  fullName: Veldrid.TextureDescription.TextureDescription(System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, Veldrid.PixelFormat, Veldrid.TextureUsage, Veldrid.TextureType)
+  nameWithType: TextureDescription.TextureDescription(UInt32, UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage, TextureType)
+- uid: Veldrid.TextureDescription.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage,Veldrid.TextureType,Veldrid.TextureSampleCount)
+  name: TextureDescription(UInt32, UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage, TextureType, TextureSampleCount)
+  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription__ctor_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_PixelFormat_Veldrid_TextureUsage_Veldrid_TextureType_Veldrid_TextureSampleCount_
+  commentId: M:Veldrid.TextureDescription.#ctor(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage,Veldrid.TextureType,Veldrid.TextureSampleCount)
+  fullName: Veldrid.TextureDescription.TextureDescription(System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, Veldrid.PixelFormat, Veldrid.TextureUsage, Veldrid.TextureType, Veldrid.TextureSampleCount)
+  nameWithType: TextureDescription.TextureDescription(UInt32, UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage, TextureType, TextureSampleCount)
 - uid: Veldrid.TextureDescription.#ctor*
   name: TextureDescription
   href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription__ctor_
@@ -4822,6 +4957,54 @@ references:
   commentId: F:Veldrid.TextureDescription.SampleCount
   fullName: Veldrid.TextureDescription.SampleCount
   nameWithType: TextureDescription.SampleCount
+- uid: Veldrid.TextureDescription.Texture1D(System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage)
+  name: Texture1D(UInt32, UInt32, UInt32, PixelFormat, TextureUsage)
+  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Texture1D_System_UInt32_System_UInt32_System_UInt32_Veldrid_PixelFormat_Veldrid_TextureUsage_
+  commentId: M:Veldrid.TextureDescription.Texture1D(System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage)
+  fullName: Veldrid.TextureDescription.Texture1D(System.UInt32, System.UInt32, System.UInt32, Veldrid.PixelFormat, Veldrid.TextureUsage)
+  nameWithType: TextureDescription.Texture1D(UInt32, UInt32, UInt32, PixelFormat, TextureUsage)
+- uid: Veldrid.TextureDescription.Texture1D*
+  name: Texture1D
+  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Texture1D_
+  commentId: Overload:Veldrid.TextureDescription.Texture1D
+  fullName: Veldrid.TextureDescription.Texture1D
+  nameWithType: TextureDescription.Texture1D
+- uid: Veldrid.TextureDescription.Texture2D(System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage)
+  name: Texture2D(UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage)
+  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Texture2D_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_PixelFormat_Veldrid_TextureUsage_
+  commentId: M:Veldrid.TextureDescription.Texture2D(System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage)
+  fullName: Veldrid.TextureDescription.Texture2D(System.UInt32, System.UInt32, System.UInt32, System.UInt32, Veldrid.PixelFormat, Veldrid.TextureUsage)
+  nameWithType: TextureDescription.Texture2D(UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage)
+- uid: Veldrid.TextureDescription.Texture2D(System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage,Veldrid.TextureSampleCount)
+  name: Texture2D(UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage, TextureSampleCount)
+  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Texture2D_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_PixelFormat_Veldrid_TextureUsage_Veldrid_TextureSampleCount_
+  commentId: M:Veldrid.TextureDescription.Texture2D(System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage,Veldrid.TextureSampleCount)
+  fullName: Veldrid.TextureDescription.Texture2D(System.UInt32, System.UInt32, System.UInt32, System.UInt32, Veldrid.PixelFormat, Veldrid.TextureUsage, Veldrid.TextureSampleCount)
+  nameWithType: TextureDescription.Texture2D(UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage, TextureSampleCount)
+- uid: Veldrid.TextureDescription.Texture2D*
+  name: Texture2D
+  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Texture2D_
+  commentId: Overload:Veldrid.TextureDescription.Texture2D
+  fullName: Veldrid.TextureDescription.Texture2D
+  nameWithType: TextureDescription.Texture2D
+- uid: Veldrid.TextureDescription.Texture3D(System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage)
+  name: Texture3D(UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage)
+  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Texture3D_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_PixelFormat_Veldrid_TextureUsage_
+  commentId: M:Veldrid.TextureDescription.Texture3D(System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage)
+  fullName: Veldrid.TextureDescription.Texture3D(System.UInt32, System.UInt32, System.UInt32, System.UInt32, Veldrid.PixelFormat, Veldrid.TextureUsage)
+  nameWithType: TextureDescription.Texture3D(UInt32, UInt32, UInt32, UInt32, PixelFormat, TextureUsage)
+- uid: Veldrid.TextureDescription.Texture3D*
+  name: Texture3D
+  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Texture3D_
+  commentId: Overload:Veldrid.TextureDescription.Texture3D
+  fullName: Veldrid.TextureDescription.Texture3D
+  nameWithType: TextureDescription.Texture3D
+- uid: Veldrid.TextureDescription.Type
+  name: Type
+  href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Type
+  commentId: F:Veldrid.TextureDescription.Type
+  fullName: Veldrid.TextureDescription.Type
+  nameWithType: TextureDescription.Type
 - uid: Veldrid.TextureDescription.Usage
   name: Usage
   href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Usage
@@ -4876,6 +5059,30 @@ references:
   commentId: F:Veldrid.TextureSampleCount.Count8
   fullName: Veldrid.TextureSampleCount.Count8
   nameWithType: TextureSampleCount.Count8
+- uid: Veldrid.TextureType
+  name: TextureType
+  href: api/Veldrid.TextureType.html
+  commentId: T:Veldrid.TextureType
+  fullName: Veldrid.TextureType
+  nameWithType: TextureType
+- uid: Veldrid.TextureType.Texture1D
+  name: Texture1D
+  href: api/Veldrid.TextureType.html#Veldrid_TextureType_Texture1D
+  commentId: F:Veldrid.TextureType.Texture1D
+  fullName: Veldrid.TextureType.Texture1D
+  nameWithType: TextureType.Texture1D
+- uid: Veldrid.TextureType.Texture2D
+  name: Texture2D
+  href: api/Veldrid.TextureType.html#Veldrid_TextureType_Texture2D
+  commentId: F:Veldrid.TextureType.Texture2D
+  fullName: Veldrid.TextureType.Texture2D
+  nameWithType: TextureType.Texture2D
+- uid: Veldrid.TextureType.Texture3D
+  name: Texture3D
+  href: api/Veldrid.TextureType.html#Veldrid_TextureType_Texture3D
+  commentId: F:Veldrid.TextureType.Texture3D
+  fullName: Veldrid.TextureType.Texture3D
+  nameWithType: TextureType.Texture3D
 - uid: Veldrid.TextureUsage
   name: TextureUsage
   href: api/Veldrid.TextureUsage.html
