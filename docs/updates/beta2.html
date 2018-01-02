@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Veldrid Beta 2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Veldrid Beta 2 ">
+    <meta name="generator" content="docfx 2.26.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="beta2">
+<h1 id="veldrid-beta-2">Veldrid Beta 2</h1>
+
+<p><em>2018-1-1</em></p>
+<p>Beta 2 is now available. This version includes a large number of fixes, optimizations, and improvements. This is the last planned beta before a stable release. There are a small number of minor breaking changes from the previous beta, all of which are listed below. NuGet packages are available from nuget.org.</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Allow a D3D11 GraphicsDevice to be created from a UWP SwapChainPanel. <a href="https://github.com/mellinoe/veldrid/commit/5118f26415e6fc0bd87ed3ef4c36429c22ba609a">[5118f26]</a></li>
+<li>Add a new type, &quot;Fence&quot;, which allows you to wait on the completion of a particular CommandList submission. <a href="https://github.com/mellinoe/veldrid/commit/eb8b2df3f95558e31368fcbafca29149817d69d7">[eb8b2df]</a>.</li>
+<li>Add two convenience overloads for CommandList.CopyTexture. <a href="https://github.com/mellinoe/veldrid/commit/482501bac1a150223b3a3b6c056cff5d7eaeb84a">[482501b]</a></li>
+<li>Added descriptions to NuGet packages. <a href="https://github.com/mellinoe/veldrid/commit/592528be423671ef9495b50cc05453e3d4a4022f">[592528b]</a></li>
+<li>Various performance optimizations and allocation improvements.</li>
+<li>Improved early usage validation and error messages in many cases. <a href="https://github.com/mellinoe/veldrid/commit/bac67e39d60096fa45deba3b7f98a922f2f0adcc">[bac67e3]</a>, <a href="https://github.com/mellinoe/veldrid/commit/0d128f4dc3e1dffa6be10d0874d3649acceb5c9a">[0d128f4]</a>, <a href="https://github.com/mellinoe/veldrid/commit/18d8efbaede3e43e7e8018a0d62e99443668992c">[18d8efb]</a>, <a href="https://github.com/mellinoe/veldrid/commit/fe8a60d18087818fe94e580398de6e038adc929f">[fe8a60d]</a>, <a href="https://github.com/mellinoe/veldrid/commit/1e31065874c1f71002a3452616868af691a2aab5">[1e31065]</a>, <a href="https://github.com/mellinoe/veldrid/commit/8dd4005f459449158ab723c2ac1b582925a174e0">[8dd4005]</a></li>
+</ul>
+<h2 id="breaking-changes-from-beta-1">Breaking Changes from Beta 1</h2>
+<ul>
+<li>Veldrid.Buffer has been renamed to Veldrid.DeviceBuffer to avoid name collisions with System.Buffer. <a href="https://github.com/mellinoe/veldrid/commit/2080e66a7c094ab9b07349a84ae68f0f64fe8128">[2080e66]</a></li>
+<li>Rename GraphicsDevice.ExecuteCommands() to GraphicsDevice.SubmitCommands(). There is no functional change, but the new name better reflects the fact that the work is only being submitted, and may not complete before the method returns.</li>
+<li>Add a TextureType enumeration, and add a TextureType parameter to each TextureDescription constructor. This value is required.<ul>
+<li>TextureDescription now includes a few helper methods which allow you to easily create a description for a particular type of Texture (see Texture1D(), Texture2D(), and Texture3D()).</li>
+</ul>
+</li>
+<li>GraphicsBackend.OpenGLES has been removed. When the backend is truly supported, the enumeration value will be added back. <a href="https://github.com/mellinoe/veldrid/commit/fa895045e2f9948b29c0df980c64d5833a1d85af">[fa89504]</a></li>
+<li>Some elements of the VertexElementFormat enumeration have been cleaned up and made more consistent. These are the 8-bit UNorm and UInt variants. <a href="https://github.com/mellinoe/veldrid/commit/632fdabe6f7170eb423dac6b5c6ec12fcac4356c">[632fdab]</a><ul>
+<li>Byte1 has been removed.</li>
+<li>Byte2 has been split into Byte2_UNorm and Byte2_UInt.</li>
+<li>Byte4 has been split into Byte4_UNorm and Byte4_UInt.</li>
+</ul>
+</li>
+<li>The InstanceStepRate property of vertex layouts has been moved onto the VertexLayoutDescription structure, rather than on individual elements as it was before. It wasn&#39;t actually possible to specify a different step rate for each element, so the previous behavior was unnecessarily confusing. <a href="https://github.com/mellinoe/veldrid/commit/e54a79589cd1660d6b502f719af77ac571b72d56">[e54a795]</a></li>
+</ul>
+<h2 id="bug-fixes">Bug Fixes</h2>
+<ul>
+<li>On Linux, attempt to load SDL2 from multiple different names. <a href="https://github.com/mellinoe/veldrid/commit/ece7f27f175c130c825ef28e7bd4b7237831c94f">[ece7f27]</a> <a href="https://github.com/mellinoe/veldrid/issues/18">[Issue #18]</a></li>
+<li>Fix an SDL2 interop issue when running on 32-bit Windows. <a href="https://github.com/mellinoe/veldrid/commit/444d3295bf97346ffafdbdd0960c96fdce91d0a8">[444d329]</a> <a href="https://github.com/mellinoe/veldrid/issues/17">[Issue #17]</a></li>
+<li>Fixed an issue with how OpenGL was representing its Swapchain Textures. <a href="https://github.com/mellinoe/veldrid/commit/46d279512b992307b41365b126a841c478596f79">[46d2795]</a></li>
+<li>Give an appropriate error message when OpenGL shader compilation fails on macOS. <a href="https://github.com/mellinoe/veldrid/commit/c8280070ab688365255e4d7c91b709b1b87af43b">[c828007]</a></li>
+<li>Fix a timing issue related to how/when some Vulkan objects were being disposed <a href="https://github.com/mellinoe/veldrid/commit/de01cfc3564fac0e3fddfcd3809a369a91cb3ace">[de01cfc]</a></li>
+<li>Fix an issue where D3D11 structured buffers had a hardcoded size. <a href="https://github.com/mellinoe/veldrid/commit/f1750bb64d1f2642f40b6e06e18f9d23c9d285ba">[f1750bb]</a></li>
+<li>Fix an issue where an OpenGL CommandList could not be submitted more than once before previous submissions fully completed. <a href="https://github.com/mellinoe/veldrid/commit/8a291727eb041b833f2786cdb1b8841796b3c036">[8a29172]</a></li>
+<li>Fix issues with Texture-&gt;Texture copying on multiple backends. <a href="https://github.com/mellinoe/veldrid/commit/19cbd5e5aa78c1142eac3f30305740cb2477b337">[19cbd5e]</a>, <a href="https://github.com/mellinoe/veldrid/commit/d7dec201c64a3cb30f9741091098db78ab5b132f">[d7dec20]</a>, <a href="https://github.com/mellinoe/veldrid/commit/4262c13673cb6b9d8a01fe8baab449936e38bc3f">[4262c13]</a>, <a href="https://github.com/mellinoe/veldrid/commit/e83710d2bc513beca8504a5644622306106dc0e4">[e83710d]</a>, <a href="https://github.com/mellinoe/veldrid/commit/517f6e1033f1937e2a2acdefdd19ba5a888d3f06">[517f6e1]</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/beta2/updates/beta2.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

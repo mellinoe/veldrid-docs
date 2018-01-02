@@ -7,6 +7,9 @@ references:
 - uid: beta1
   name: Veldrid Beta 1
   href: updates/beta1.html
+- uid: beta2
+  name: Veldrid Beta 2
+  href: updates/beta2.html
 - uid: command-lists
   name: Command Lists
   href: articles/command-lists.html
