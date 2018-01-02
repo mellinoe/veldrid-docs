@@ -6,7 +6,7 @@ uid: beta2
 
 _2018-1-1_
 
-Beta 2 is now available. This version includes a large number of fixes, optimizations, and improvements. This is the last planned beta before a stable release. There are a small number of minor breaking changes from the previous beta, all of which are listed below. NuGet packages are available from nuget.org.
+Beta 2 is now available. This version includes a large number of fixes, optimizations, and improvements. This is the last planned beta before a stable release. There are a small number of minor breaking changes from the previous beta, all of which are listed below. NuGet packages are available on [NuGet.org](https://www.nuget.org/packages/Veldrid/).
 
 ## Features
 
