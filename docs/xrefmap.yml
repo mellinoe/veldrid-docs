@@ -1234,21 +1234,21 @@ references:
   commentId: T:Veldrid.ComputePipelineDescription
   fullName: Veldrid.ComputePipelineDescription
   nameWithType: ComputePipelineDescription
-- uid: Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout)
-  name: ComputePipelineDescription(Shader, ResourceLayout)
-  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout_
-  commentId: M:Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout)
-  fullName: Veldrid.ComputePipelineDescription.ComputePipelineDescription(Veldrid.Shader, Veldrid.ResourceLayout)
-  nameWithType: ComputePipelineDescription.ComputePipelineDescription(Shader, ResourceLayout)
-- uid: Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout[])
-  name: ComputePipelineDescription(Shader, ResourceLayout[])
-  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout___
-  commentId: M:Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout[])
-  name.vb: ComputePipelineDescription(Shader, ResourceLayout())
-  fullName: Veldrid.ComputePipelineDescription.ComputePipelineDescription(Veldrid.Shader, Veldrid.ResourceLayout[])
-  fullName.vb: Veldrid.ComputePipelineDescription.ComputePipelineDescription(Veldrid.Shader, Veldrid.ResourceLayout())
-  nameWithType: ComputePipelineDescription.ComputePipelineDescription(Shader, ResourceLayout[])
-  nameWithType.vb: ComputePipelineDescription.ComputePipelineDescription(Shader, ResourceLayout())
+- uid: Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout,System.UInt32,System.UInt32,System.UInt32)
+  name: ComputePipelineDescription(Shader, ResourceLayout, UInt32, UInt32, UInt32)
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout,System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.ComputePipelineDescription.ComputePipelineDescription(Veldrid.Shader, Veldrid.ResourceLayout, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: ComputePipelineDescription.ComputePipelineDescription(Shader, ResourceLayout, UInt32, UInt32, UInt32)
+- uid: Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout[],System.UInt32,System.UInt32,System.UInt32)
+  name: ComputePipelineDescription(Shader, ResourceLayout[], UInt32, UInt32, UInt32)
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout___System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout[],System.UInt32,System.UInt32,System.UInt32)
+  name.vb: ComputePipelineDescription(Shader, ResourceLayout(), UInt32, UInt32, UInt32)
+  fullName: Veldrid.ComputePipelineDescription.ComputePipelineDescription(Veldrid.Shader, Veldrid.ResourceLayout[], System.UInt32, System.UInt32, System.UInt32)
+  fullName.vb: Veldrid.ComputePipelineDescription.ComputePipelineDescription(Veldrid.Shader, Veldrid.ResourceLayout(), System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: ComputePipelineDescription.ComputePipelineDescription(Shader, ResourceLayout[], UInt32, UInt32, UInt32)
+  nameWithType.vb: ComputePipelineDescription.ComputePipelineDescription(Shader, ResourceLayout(), UInt32, UInt32, UInt32)
 - uid: Veldrid.ComputePipelineDescription.#ctor*
   name: ComputePipelineDescription
   href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription__ctor_
@@ -1291,6 +1291,24 @@ references:
   commentId: F:Veldrid.ComputePipelineDescription.ResourceLayouts
   fullName: Veldrid.ComputePipelineDescription.ResourceLayouts
   nameWithType: ComputePipelineDescription.ResourceLayouts
+- uid: Veldrid.ComputePipelineDescription.ThreadGroupSizeX
+  name: ThreadGroupSizeX
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_ThreadGroupSizeX
+  commentId: F:Veldrid.ComputePipelineDescription.ThreadGroupSizeX
+  fullName: Veldrid.ComputePipelineDescription.ThreadGroupSizeX
+  nameWithType: ComputePipelineDescription.ThreadGroupSizeX
+- uid: Veldrid.ComputePipelineDescription.ThreadGroupSizeY
+  name: ThreadGroupSizeY
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_ThreadGroupSizeY
+  commentId: F:Veldrid.ComputePipelineDescription.ThreadGroupSizeY
+  fullName: Veldrid.ComputePipelineDescription.ThreadGroupSizeY
+  nameWithType: ComputePipelineDescription.ThreadGroupSizeY
+- uid: Veldrid.ComputePipelineDescription.ThreadGroupSizeZ
+  name: ThreadGroupSizeZ
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_ThreadGroupSizeZ
+  commentId: F:Veldrid.ComputePipelineDescription.ThreadGroupSizeZ
+  fullName: Veldrid.ComputePipelineDescription.ThreadGroupSizeZ
+  nameWithType: ComputePipelineDescription.ThreadGroupSizeZ
 - uid: Veldrid.CubeFace
   name: CubeFace
   href: api/Veldrid.CubeFace.html
@@ -1879,6 +1897,12 @@ references:
   commentId: F:Veldrid.GraphicsBackend.Direct3D11
   fullName: Veldrid.GraphicsBackend.Direct3D11
   nameWithType: GraphicsBackend.Direct3D11
+- uid: Veldrid.GraphicsBackend.Metal
+  name: Metal
+  href: api/Veldrid.GraphicsBackend.html#Veldrid_GraphicsBackend_Metal
+  commentId: F:Veldrid.GraphicsBackend.Metal
+  fullName: Veldrid.GraphicsBackend.Metal
+  nameWithType: GraphicsBackend.Metal
 - uid: Veldrid.GraphicsBackend.OpenGL
   name: OpenGL
   href: api/Veldrid.GraphicsBackend.html#Veldrid_GraphicsBackend_OpenGL
@@ -1939,6 +1963,18 @@ references:
   commentId: Overload:Veldrid.GraphicsDevice.CreateD3D11
   fullName: Veldrid.GraphicsDevice.CreateD3D11
   nameWithType: GraphicsDevice.CreateD3D11
+- uid: Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions,IntPtr)
+  name: CreateMetal(GraphicsDeviceOptions, IntPtr)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateMetal_Veldrid_GraphicsDeviceOptions_IntPtr_
+  commentId: M:Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions,IntPtr)
+  fullName: Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions, IntPtr)
+  nameWithType: GraphicsDevice.CreateMetal(GraphicsDeviceOptions, IntPtr)
+- uid: Veldrid.GraphicsDevice.CreateMetal*
+  name: CreateMetal
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateMetal_
+  commentId: Overload:Veldrid.GraphicsDevice.CreateMetal
+  fullName: Veldrid.GraphicsDevice.CreateMetal
+  nameWithType: GraphicsDevice.CreateMetal
 - uid: Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.GraphicsDeviceOptions,Veldrid.OpenGL.OpenGLPlatformInfo,System.UInt32,System.UInt32)
   name: CreateOpenGL(GraphicsDeviceOptions, OpenGLPlatformInfo, UInt32, UInt32)
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGL_Veldrid_GraphicsDeviceOptions_Veldrid_OpenGL_OpenGLPlatformInfo_System_UInt32_System_UInt32_
@@ -1999,6 +2035,18 @@ references:
   commentId: Overload:Veldrid.GraphicsDevice.GetSampleCountLimit
   fullName: Veldrid.GraphicsDevice.GetSampleCountLimit
   nameWithType: GraphicsDevice.GetSampleCountLimit
+- uid: Veldrid.GraphicsDevice.IsBackendSupported(Veldrid.GraphicsBackend)
+  name: IsBackendSupported(GraphicsBackend)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsBackendSupported_Veldrid_GraphicsBackend_
+  commentId: M:Veldrid.GraphicsDevice.IsBackendSupported(Veldrid.GraphicsBackend)
+  fullName: Veldrid.GraphicsDevice.IsBackendSupported(Veldrid.GraphicsBackend)
+  nameWithType: GraphicsDevice.IsBackendSupported(GraphicsBackend)
+- uid: Veldrid.GraphicsDevice.IsBackendSupported*
+  name: IsBackendSupported
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsBackendSupported_
+  commentId: Overload:Veldrid.GraphicsDevice.IsBackendSupported
+  fullName: Veldrid.GraphicsDevice.IsBackendSupported
+  nameWithType: GraphicsDevice.IsBackendSupported
 - uid: Veldrid.GraphicsDevice.LinearSampler
   name: LinearSampler
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_LinearSampler
@@ -2758,6 +2806,33 @@ references:
   fullName.vb: Veldrid.MappedResourceView(Of T).Item(System.Int32, System.Int32, System.Int32)
   nameWithType: MappedResourceView<T>.Item[Int32, Int32, Int32]
   nameWithType.vb: MappedResourceView(Of T).Item(Int32, Int32, Int32)
+- uid: Veldrid.MappedResourceView`1.Item(System.UInt32)
+  name: Item[UInt32]
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Item_System_UInt32_
+  commentId: P:Veldrid.MappedResourceView`1.Item(System.UInt32)
+  name.vb: Item(UInt32)
+  fullName: Veldrid.MappedResourceView<T>.Item[System.UInt32]
+  fullName.vb: Veldrid.MappedResourceView(Of T).Item(System.UInt32)
+  nameWithType: MappedResourceView<T>.Item[UInt32]
+  nameWithType.vb: MappedResourceView(Of T).Item(UInt32)
+- uid: Veldrid.MappedResourceView`1.Item(System.UInt32,System.UInt32)
+  name: Item[UInt32, UInt32]
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Item_System_UInt32_System_UInt32_
+  commentId: P:Veldrid.MappedResourceView`1.Item(System.UInt32,System.UInt32)
+  name.vb: Item(UInt32, UInt32)
+  fullName: Veldrid.MappedResourceView<T>.Item[System.UInt32, System.UInt32]
+  fullName.vb: Veldrid.MappedResourceView(Of T).Item(System.UInt32, System.UInt32)
+  nameWithType: MappedResourceView<T>.Item[UInt32, UInt32]
+  nameWithType.vb: MappedResourceView(Of T).Item(UInt32, UInt32)
+- uid: Veldrid.MappedResourceView`1.Item(System.UInt32,System.UInt32,System.UInt32)
+  name: Item[UInt32, UInt32, UInt32]
+  href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Item_System_UInt32_System_UInt32_System_UInt32_
+  commentId: P:Veldrid.MappedResourceView`1.Item(System.UInt32,System.UInt32,System.UInt32)
+  name.vb: Item(UInt32, UInt32, UInt32)
+  fullName: Veldrid.MappedResourceView<T>.Item[System.UInt32, System.UInt32, System.UInt32]
+  fullName.vb: Veldrid.MappedResourceView(Of T).Item(System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: MappedResourceView<T>.Item[UInt32, UInt32, UInt32]
+  nameWithType.vb: MappedResourceView(Of T).Item(UInt32, UInt32, UInt32)
 - uid: Veldrid.MappedResourceView`1.Item*
   name: Item
   href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Item_

@@ -109,13 +109,13 @@
   
   
   <a id="Veldrid_ComputePipelineDescription__ctor_" data-uid="Veldrid.ComputePipelineDescription.#ctor*"></a>
-  <h4 id="Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout_" data-uid="Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout)">ComputePipelineDescription(Shader, ResourceLayout)</h4>
+  <h4 id="Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout,System.UInt32,System.UInt32,System.UInt32)">ComputePipelineDescription(Shader, ResourceLayout, UInt32, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Constructs a new ComputePipelineDescription.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ComputePipelineDescription(Shader shaderStage, ResourceLayout resourceLayout)</code></pre>
+    <pre><code class="lang-csharp hljs">public ComputePipelineDescription(Shader shaderStage, ResourceLayout resourceLayout, uint threadGroupSizeX, uint threadGroupSizeY, uint threadGroupSizeZ)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -140,18 +140,36 @@
         <td><p>The resource layout available to the Pipeline.</p>
 </td>
       </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">threadGroupSizeX</span></td>
+        <td><p>The X dimension of the thread group size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">threadGroupSizeY</span></td>
+        <td><p>The Y dimension of the thread group size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">threadGroupSizeZ</span></td>
+        <td><p>The Z dimension of the thread group size.</p>
+</td>
+      </tr>
     </tbody>
   </table>
   
   
   <a id="Veldrid_ComputePipelineDescription__ctor_" data-uid="Veldrid.ComputePipelineDescription.#ctor*"></a>
-  <h4 id="Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout___" data-uid="Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout[])">ComputePipelineDescription(Shader, ResourceLayout[])</h4>
+  <h4 id="Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout___System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout[],System.UInt32,System.UInt32,System.UInt32)">ComputePipelineDescription(Shader, ResourceLayout[], UInt32, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Constructs a new ComputePipelineDescription.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ComputePipelineDescription(Shader computeShader, ResourceLayout[] resourceLayouts)</code></pre>
+    <pre><code class="lang-csharp hljs">public ComputePipelineDescription(Shader computeShader, ResourceLayout[] resourceLayouts, uint threadGroupSizeX, uint threadGroupSizeY, uint threadGroupSizeZ)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -174,6 +192,24 @@
         <td><a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a>[]</td>
         <td><span class="parametername">resourceLayouts</span></td>
         <td><p>The set of resource layouts available to the Pipeline.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">threadGroupSizeX</span></td>
+        <td><p>The X dimension of the thread group size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">threadGroupSizeY</span></td>
+        <td><p>The Y dimension of the thread group size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">threadGroupSizeZ</span></td>
+        <td><p>The Z dimension of the thread group size.</p>
 </td>
       </tr>
     </tbody>
@@ -227,6 +263,81 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_ComputePipelineDescription_ThreadGroupSizeX" data-uid="Veldrid.ComputePipelineDescription.ThreadGroupSizeX">ThreadGroupSizeX</h4>
+  <div class="markdown level1 summary"><p>The X dimension of the thread group size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ThreadGroupSizeX</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_ComputePipelineDescription_ThreadGroupSizeY" data-uid="Veldrid.ComputePipelineDescription.ThreadGroupSizeY">ThreadGroupSizeY</h4>
+  <div class="markdown level1 summary"><p>The Y dimension of the thread group size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ThreadGroupSizeY</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_ComputePipelineDescription_ThreadGroupSizeZ" data-uid="Veldrid.ComputePipelineDescription.ThreadGroupSizeZ">ThreadGroupSizeZ</h4>
+  <div class="markdown level1 summary"><p>The Z dimension of the thread group size.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint ThreadGroupSizeZ</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
         <td></td>
       </tr>
     </tbody>

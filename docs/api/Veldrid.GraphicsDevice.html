@@ -343,7 +343,7 @@ This object is created with <a class="xref" href="Veldrid.SamplerDescription.htm
   
   <a id="Veldrid_GraphicsDevice_CreateD3D11_" data-uid="Veldrid.GraphicsDevice.CreateD3D11*"></a>
   <h4 id="Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_System_Object_System_Double_System_Double_System_Single_" data-uid="Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,System.Object,System.Double,System.Double,System.Single)">CreateD3D11(GraphicsDeviceOptions, Object, Double, Double, Single)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Direct3D11.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Direct3D 11.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -406,6 +406,57 @@ or SwapChainBackgroundPanel contained in your application window.</p>
       <tr>
         <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
         <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_CreateMetal_" data-uid="Veldrid.GraphicsDevice.CreateMetal*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateMetal_Veldrid_GraphicsDeviceOptions_IntPtr_" data-uid="Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions,IntPtr)">CreateMetal(GraphicsDeviceOptions, IntPtr)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Metal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateMetal(GraphicsDeviceOptions options, IntPtr nsWindow)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Describes several common properties of the GraphicsDevice.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">IntPtr</span></td>
+        <td><span class="parametername">nsWindow</span></td>
+        <td><p>A pointer to an NSWindow object, which will be used to create the Metal device&apos;s swapchain.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the Metal API.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -627,6 +678,51 @@ but which will no longer be in use when the device is idle.</p>
         <td><a class="xref" href="Veldrid.TextureSampleCount.html">TextureSampleCount</a></td>
         <td><p>A <a class="xref" href="Veldrid.TextureSampleCount.html">TextureSampleCount</a> value representing the maximum count that a <a class="xref" href="Veldrid.Texture.html">Texture</a> of that
 format can be created with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_IsBackendSupported_" data-uid="Veldrid.GraphicsDevice.IsBackendSupported*"></a>
+  <h4 id="Veldrid_GraphicsDevice_IsBackendSupported_Veldrid_GraphicsBackend_" data-uid="Veldrid.GraphicsDevice.IsBackendSupported(Veldrid.GraphicsBackend)">IsBackendSupported(GraphicsBackend)</h4>
+  <div class="markdown level1 summary"><p>Checks whether the given <a class="xref" href="Veldrid.GraphicsBackend.html">GraphicsBackend</a> is supported on this system.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static bool IsBackendSupported(GraphicsBackend backend)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsBackend.html">GraphicsBackend</a></td>
+        <td><span class="parametername">backend</span></td>
+        <td><p>The GraphicsBackend to check.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the GraphicsBackend is supported; false otherwise.</p>
 </td>
       </tr>
     </tbody>

@@ -139,6 +139,9 @@ _graphicsDevice.UpdateBuffer(_indexBuffer, 0, quadIndices);
         case GraphicsBackend.OpenGL:
             extension = &quot;glsl&quot;;
             break;
+        case GraphicsBackend.Metal:
+            extension = &quot;metallib&quot;;
+            break;
         default: throw new System.InvalidOperationException();
     }
 

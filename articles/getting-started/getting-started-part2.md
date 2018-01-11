@@ -119,6 +119,9 @@ private static Shader LoadShader(ShaderStages stage)
         case GraphicsBackend.OpenGL:
             extension = "glsl";
             break;
+        case GraphicsBackend.Metal:
+            extension = "metallib";
+            break;
         default: throw new System.InvalidOperationException();
     }
 
