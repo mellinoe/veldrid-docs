@@ -61,7 +61,7 @@ We are almost ready to see our colored quad. All that remains is to execute our 
 
 ```C#
 _commandList.End();
-_graphicsDevice.ExecuteCommands(_commandList);
+_graphicsDevice.SubmitCommands(_commandList);
 _graphicsDevice.SwapBuffers();
 ```
 
