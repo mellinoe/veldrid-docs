@@ -46,7 +46,7 @@ A structured buffer is another kind of DeviceBuffer resource available to shader
 
 Structured buffers may be read-only or read-write. Read-write buffers can be written to in the fragment and compute stages, allowing arbitrary data to be output by shaders. Read-only structured buffers must be created with the [BufferUsage.StructuredBufferReadOnly](xref:Veldrid.BufferUsage) flag, and read-write structured buffers must be created with the [BufferUsage.StructuredBufferReadWrite](xref:Veldrid.BufferUsage) flag.
 
-Structure buffers correspond to the following:
+Structured buffers correspond to the following:
 * HLSL: `StructuredBuffer<T>` or `RWStructuredBuffer<T>` objects.
 * GLSL: `readonly` or normal "buffer blocks".
 * Metal: `device T* value` variables.

@@ -97,7 +97,7 @@
 <h3 id="structured-buffer">Structured Buffer</h3>
 <p>A structured buffer is another kind of DeviceBuffer resource available to shaders. Like uniform buffers, they can be used to store arbitrary data, but are generally much larger. Structured buffers are used to store a large amount of a single kind of value (a &quot;structure&quot;). The size of the structure that is stored must be designated upon DeviceBuffer creation (see <a class="xref" href="../api/Veldrid.BufferDescription.html#Veldrid_BufferDescription_StructureByteStride">BufferDescription.StructureByteStride</a>).</p>
 <p>Structured buffers may be read-only or read-write. Read-write buffers can be written to in the fragment and compute stages, allowing arbitrary data to be output by shaders. Read-only structured buffers must be created with the <a class="xref" href="../api/Veldrid.BufferUsage.html">BufferUsage.StructuredBufferReadOnly</a> flag, and read-write structured buffers must be created with the <a class="xref" href="../api/Veldrid.BufferUsage.html">BufferUsage.StructuredBufferReadWrite</a> flag.</p>
-<p>Structure buffers correspond to the following:</p>
+<p>Structured buffers correspond to the following:</p>
 <ul>
 <li>HLSL: <code>StructuredBuffer&lt;T&gt;</code> or <code>RWStructuredBuffer&lt;T&gt;</code> objects.</li>
 <li>GLSL: <code>readonly</code> or normal &quot;buffer blocks&quot;.</li>
