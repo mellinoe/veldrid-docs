@@ -2335,6 +2335,18 @@ references:
   fullName.vb: Veldrid.GraphicsDevice.UpdateBuffer(Of T)(Veldrid.DeviceBuffer, System.UInt32, T())
   nameWithType: GraphicsDevice.UpdateBuffer<T>(DeviceBuffer, UInt32, T[])
   nameWithType.vb: GraphicsDevice.UpdateBuffer(Of T)(DeviceBuffer, UInt32, T())
+- uid: Veldrid.GraphicsDevice.UpdateBufferCore(Veldrid.DeviceBuffer,System.UInt32,IntPtr,System.UInt32)
+  name: UpdateBufferCore(DeviceBuffer, UInt32, IntPtr, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateBufferCore_Veldrid_DeviceBuffer_System_UInt32_IntPtr_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.UpdateBufferCore(Veldrid.DeviceBuffer,System.UInt32,IntPtr,System.UInt32)
+  fullName: Veldrid.GraphicsDevice.UpdateBufferCore(Veldrid.DeviceBuffer, System.UInt32, IntPtr, System.UInt32)
+  nameWithType: GraphicsDevice.UpdateBufferCore(DeviceBuffer, UInt32, IntPtr, UInt32)
+- uid: Veldrid.GraphicsDevice.UpdateBufferCore*
+  name: UpdateBufferCore
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateBufferCore_
+  commentId: Overload:Veldrid.GraphicsDevice.UpdateBufferCore
+  fullName: Veldrid.GraphicsDevice.UpdateBufferCore
+  nameWithType: GraphicsDevice.UpdateBufferCore
 - uid: Veldrid.GraphicsDevice.UpdateTexture(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
   name: UpdateTexture(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
@@ -4102,6 +4114,18 @@ references:
   commentId: Overload:Veldrid.RgbaFloat.G
   fullName: Veldrid.RgbaFloat.G
   nameWithType: RgbaFloat.G
+- uid: Veldrid.RgbaFloat.GetHashCode
+  name: GetHashCode()
+  href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_GetHashCode
+  commentId: M:Veldrid.RgbaFloat.GetHashCode
+  fullName: Veldrid.RgbaFloat.GetHashCode()
+  nameWithType: RgbaFloat.GetHashCode()
+- uid: Veldrid.RgbaFloat.GetHashCode*
+  name: GetHashCode
+  href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_GetHashCode_
+  commentId: Overload:Veldrid.RgbaFloat.GetHashCode
+  fullName: Veldrid.RgbaFloat.GetHashCode
+  nameWithType: RgbaFloat.GetHashCode
 - uid: Veldrid.RgbaFloat.Green
   name: Green
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_Green
@@ -5473,30 +5497,30 @@ references:
   commentId: T:Veldrid.VertexElementFormat
   fullName: Veldrid.VertexElementFormat
   nameWithType: VertexElementFormat
-- uid: Veldrid.VertexElementFormat.Byte2_UInt
-  name: Byte2_UInt
-  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Byte2_UInt
-  commentId: F:Veldrid.VertexElementFormat.Byte2_UInt
-  fullName: Veldrid.VertexElementFormat.Byte2_UInt
-  nameWithType: VertexElementFormat.Byte2_UInt
-- uid: Veldrid.VertexElementFormat.Byte2_UNorm
-  name: Byte2_UNorm
-  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Byte2_UNorm
-  commentId: F:Veldrid.VertexElementFormat.Byte2_UNorm
-  fullName: Veldrid.VertexElementFormat.Byte2_UNorm
-  nameWithType: VertexElementFormat.Byte2_UNorm
-- uid: Veldrid.VertexElementFormat.Byte4_UInt
-  name: Byte4_UInt
-  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Byte4_UInt
-  commentId: F:Veldrid.VertexElementFormat.Byte4_UInt
-  fullName: Veldrid.VertexElementFormat.Byte4_UInt
-  nameWithType: VertexElementFormat.Byte4_UInt
-- uid: Veldrid.VertexElementFormat.Byte4_UNorm
-  name: Byte4_UNorm
-  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Byte4_UNorm
-  commentId: F:Veldrid.VertexElementFormat.Byte4_UNorm
-  fullName: Veldrid.VertexElementFormat.Byte4_UNorm
-  nameWithType: VertexElementFormat.Byte4_UNorm
+- uid: Veldrid.VertexElementFormat.Byte2
+  name: Byte2
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Byte2
+  commentId: F:Veldrid.VertexElementFormat.Byte2
+  fullName: Veldrid.VertexElementFormat.Byte2
+  nameWithType: VertexElementFormat.Byte2
+- uid: Veldrid.VertexElementFormat.Byte2_Norm
+  name: Byte2_Norm
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Byte2_Norm
+  commentId: F:Veldrid.VertexElementFormat.Byte2_Norm
+  fullName: Veldrid.VertexElementFormat.Byte2_Norm
+  nameWithType: VertexElementFormat.Byte2_Norm
+- uid: Veldrid.VertexElementFormat.Byte4
+  name: Byte4
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Byte4
+  commentId: F:Veldrid.VertexElementFormat.Byte4
+  fullName: Veldrid.VertexElementFormat.Byte4
+  nameWithType: VertexElementFormat.Byte4
+- uid: Veldrid.VertexElementFormat.Byte4_Norm
+  name: Byte4_Norm
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Byte4_Norm
+  commentId: F:Veldrid.VertexElementFormat.Byte4_Norm
+  fullName: Veldrid.VertexElementFormat.Byte4_Norm
+  nameWithType: VertexElementFormat.Byte4_Norm
 - uid: Veldrid.VertexElementFormat.Float1
   name: Float1
   href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Float1
@@ -5521,6 +5545,126 @@ references:
   commentId: F:Veldrid.VertexElementFormat.Float4
   fullName: Veldrid.VertexElementFormat.Float4
   nameWithType: VertexElementFormat.Float4
+- uid: Veldrid.VertexElementFormat.Int1
+  name: Int1
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Int1
+  commentId: F:Veldrid.VertexElementFormat.Int1
+  fullName: Veldrid.VertexElementFormat.Int1
+  nameWithType: VertexElementFormat.Int1
+- uid: Veldrid.VertexElementFormat.Int2
+  name: Int2
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Int2
+  commentId: F:Veldrid.VertexElementFormat.Int2
+  fullName: Veldrid.VertexElementFormat.Int2
+  nameWithType: VertexElementFormat.Int2
+- uid: Veldrid.VertexElementFormat.Int3
+  name: Int3
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Int3
+  commentId: F:Veldrid.VertexElementFormat.Int3
+  fullName: Veldrid.VertexElementFormat.Int3
+  nameWithType: VertexElementFormat.Int3
+- uid: Veldrid.VertexElementFormat.Int4
+  name: Int4
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Int4
+  commentId: F:Veldrid.VertexElementFormat.Int4
+  fullName: Veldrid.VertexElementFormat.Int4
+  nameWithType: VertexElementFormat.Int4
+- uid: Veldrid.VertexElementFormat.SByte2
+  name: SByte2
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_SByte2
+  commentId: F:Veldrid.VertexElementFormat.SByte2
+  fullName: Veldrid.VertexElementFormat.SByte2
+  nameWithType: VertexElementFormat.SByte2
+- uid: Veldrid.VertexElementFormat.SByte2_Norm
+  name: SByte2_Norm
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_SByte2_Norm
+  commentId: F:Veldrid.VertexElementFormat.SByte2_Norm
+  fullName: Veldrid.VertexElementFormat.SByte2_Norm
+  nameWithType: VertexElementFormat.SByte2_Norm
+- uid: Veldrid.VertexElementFormat.SByte4
+  name: SByte4
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_SByte4
+  commentId: F:Veldrid.VertexElementFormat.SByte4
+  fullName: Veldrid.VertexElementFormat.SByte4
+  nameWithType: VertexElementFormat.SByte4
+- uid: Veldrid.VertexElementFormat.SByte4_Norm
+  name: SByte4_Norm
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_SByte4_Norm
+  commentId: F:Veldrid.VertexElementFormat.SByte4_Norm
+  fullName: Veldrid.VertexElementFormat.SByte4_Norm
+  nameWithType: VertexElementFormat.SByte4_Norm
+- uid: Veldrid.VertexElementFormat.Short2
+  name: Short2
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Short2
+  commentId: F:Veldrid.VertexElementFormat.Short2
+  fullName: Veldrid.VertexElementFormat.Short2
+  nameWithType: VertexElementFormat.Short2
+- uid: Veldrid.VertexElementFormat.Short2_Norm
+  name: Short2_Norm
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Short2_Norm
+  commentId: F:Veldrid.VertexElementFormat.Short2_Norm
+  fullName: Veldrid.VertexElementFormat.Short2_Norm
+  nameWithType: VertexElementFormat.Short2_Norm
+- uid: Veldrid.VertexElementFormat.Short4
+  name: Short4
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Short4
+  commentId: F:Veldrid.VertexElementFormat.Short4
+  fullName: Veldrid.VertexElementFormat.Short4
+  nameWithType: VertexElementFormat.Short4
+- uid: Veldrid.VertexElementFormat.Short4_Norm
+  name: Short4_Norm
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_Short4_Norm
+  commentId: F:Veldrid.VertexElementFormat.Short4_Norm
+  fullName: Veldrid.VertexElementFormat.Short4_Norm
+  nameWithType: VertexElementFormat.Short4_Norm
+- uid: Veldrid.VertexElementFormat.UInt1
+  name: UInt1
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_UInt1
+  commentId: F:Veldrid.VertexElementFormat.UInt1
+  fullName: Veldrid.VertexElementFormat.UInt1
+  nameWithType: VertexElementFormat.UInt1
+- uid: Veldrid.VertexElementFormat.UInt2
+  name: UInt2
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_UInt2
+  commentId: F:Veldrid.VertexElementFormat.UInt2
+  fullName: Veldrid.VertexElementFormat.UInt2
+  nameWithType: VertexElementFormat.UInt2
+- uid: Veldrid.VertexElementFormat.UInt3
+  name: UInt3
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_UInt3
+  commentId: F:Veldrid.VertexElementFormat.UInt3
+  fullName: Veldrid.VertexElementFormat.UInt3
+  nameWithType: VertexElementFormat.UInt3
+- uid: Veldrid.VertexElementFormat.UInt4
+  name: UInt4
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_UInt4
+  commentId: F:Veldrid.VertexElementFormat.UInt4
+  fullName: Veldrid.VertexElementFormat.UInt4
+  nameWithType: VertexElementFormat.UInt4
+- uid: Veldrid.VertexElementFormat.UShort2
+  name: UShort2
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_UShort2
+  commentId: F:Veldrid.VertexElementFormat.UShort2
+  fullName: Veldrid.VertexElementFormat.UShort2
+  nameWithType: VertexElementFormat.UShort2
+- uid: Veldrid.VertexElementFormat.UShort2_Norm
+  name: UShort2_Norm
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_UShort2_Norm
+  commentId: F:Veldrid.VertexElementFormat.UShort2_Norm
+  fullName: Veldrid.VertexElementFormat.UShort2_Norm
+  nameWithType: VertexElementFormat.UShort2_Norm
+- uid: Veldrid.VertexElementFormat.UShort4
+  name: UShort4
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_UShort4
+  commentId: F:Veldrid.VertexElementFormat.UShort4
+  fullName: Veldrid.VertexElementFormat.UShort4
+  nameWithType: VertexElementFormat.UShort4
+- uid: Veldrid.VertexElementFormat.UShort4_Norm
+  name: UShort4_Norm
+  href: api/Veldrid.VertexElementFormat.html#Veldrid_VertexElementFormat_UShort4_Norm
+  commentId: F:Veldrid.VertexElementFormat.UShort4_Norm
+  fullName: Veldrid.VertexElementFormat.UShort4_Norm
+  nameWithType: VertexElementFormat.UShort4_Norm
 - uid: Veldrid.VertexElementSemantic
   name: VertexElementSemantic
   href: api/Veldrid.VertexElementSemantic.html
