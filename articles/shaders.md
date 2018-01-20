@@ -13,6 +13,7 @@ A [ShaderDescription](xref:Veldrid.ShaderDescription) takes two pieces of inform
 * Direct3D11: `ShaderBytes` must contain HLSL bytecode.
 * Vulkan: `ShaderBytes` must contain SPIR-V bytecode.
 * OpenGL: `ShaderBytes` must contain ASCII-encoded GLSL text.
+* Metal: `ShaderBytes` must contain Metal bytecode (a "metallib" file created using the `metallib` tool).
 
 ## Shader Resources
 
