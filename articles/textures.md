@@ -12,15 +12,15 @@ Texture data is stored in one of a number of [formats](xref:Veldrid.PixelFormat)
 
 ## Type and Dimensions
 
-Textures can be 1D, 2D, or 3D. This is controlled by [TextureDescription.Type](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Type). The actualy dimensions of the Texture are controlled by [TextureDescription.Width](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Width), [TextureDescription.Height](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Height), and [TextureDescription.Depth](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Depth). For any particular type of Texture (1D, 2D, 3D), the dimensions must be valid. For example, a 1D Texture cannot have a Height or Depth greater than 1.
+Textures can be 1D, 2D, or 3D. This is controlled by [TextureDescription.Type](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Type). The actual dimensions of the Texture are controlled by [TextureDescription.Width](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Width), [TextureDescription.Height](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Height), and [TextureDescription.Depth](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Depth). For any particular type of Texture (1D, 2D, 3D), the dimensions must be valid. For example, a 1D Texture cannot have a Height or Depth greater than 1. A 2D Texture cannot have a depth value greater than 1.
 
 ## Array Layers
 
-1D and 2D textures can have multiple array layers. 3D textures (where [TextureDescription.Depth](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_Depth) > 1) cannot. To control the number of array layers, set [TextureDescription.ArrayLayers](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_ArrayLayers)).
+1D and 2D textures can have multiple array layers. 3D textures ([TextureType.Texture3D](xref:Veldrid.TextureType)) cannot. To control the number of array layers, set [TextureDescription.ArrayLayers](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_ArrayLayers)).
 
 ## Multisamples
 
-2D Textures can be multisampled Textures. 1D and 3D textures cannot. This is specified by [TextureDescription.SampleCount](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_SampleCount). The maximum sample count is limited by the specific GraphicsDevice being used. Use the [GetSampleCountLimit](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_GetSampleCountLimit_Veldrid_PixelFormat_System_Boolean_) method to get the maximum sample count for a given [PixelFormat](xref:Veldrid.PixelFormat).
+2D Textures can be multisampled Textures. 1D and 3D textures cannot. This is specified by [TextureDescription.SampleCount](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_SampleCount). The maximum sample count is limited by the specific GraphicsDevice being used. Use the [GetSampleCountLimit](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_GetSampleCountLimit_Veldrid_PixelFormat_System_Boolean_) method to get the maximum sample count for a given [PixelFormat](xref:Veldrid.PixelFormat). Generally, 2 through 8 samples are commonly-supported. Higher values are rarely supported, but often unnecessary.
 
 ## Mipmaps
 
@@ -40,7 +40,7 @@ Textures can be used as Framebuffer targets. To use a Texture as a color target,
 
 ## Updating a Texture
 
-Texture data is uploaded from CPU memory using the [GraphicsDevice.UpdateTexture](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_) method. These methods can be used to upload the data for a subregion of a single mipmap level and array layer. Multiple calls should be used to fully upload all of the mipmap levels and array layers for a Texture, as appropriate.
+Texture data is uploaded from CPU memory using the [GraphicsDevice.UpdateTexture](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_) method. This method can be used to upload the data for a subregion of a single mipmap level and array layer. Multiple calls should be used to fully upload all of the mipmap levels and array layers for a Texture, as appropriate.
 
 ## Staging Textures
 

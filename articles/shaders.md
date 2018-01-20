@@ -34,7 +34,10 @@ A uniform [DeviceBuffer](xref:Veldrid.DeviceBuffer) is a resource used to store 
 
 A DeviceBuffer must be created with [BufferUsage.UniformBuffer](xref:Veldrid.BufferUsage) to be used as a uniform buffer.
 
-Uniform buffers correspond to "cbuffer" blocks in HLSL, and a uniform variable or uniform block in GLSL.
+Uniform buffers correspond to the following:
+* HLSL: `cbuffer` blocks.
+* GLSL: uniform variables or uniform blocks.
+* Metal: `constant T& value` variables.
 
 ### Structured Buffer
 
@@ -42,7 +45,10 @@ A structured buffer is another kind of DeviceBuffer resource available to shader
 
 Structured buffers may be read-only or read-write. Read-write buffers can be written to in the fragment and compute stages, allowing arbitrary data to be output by shaders. Read-only structured buffers must be created with the [BufferUsage.StructuredBufferReadOnly](xref:Veldrid.BufferUsage) flag, and read-write structured buffers must be created with the [BufferUsage.StructuredBufferReadWrite](xref:Veldrid.BufferUsage) flag.
 
-Structure buffers correspond to `StructuredBuffer<T>` or `RWStructuredBuffer<T>` objects in HLSL, and `readonly` or normal "buffer blocks" in GLSL.
+Structure buffers correspond to the following:
+* HLSL: `StructuredBuffer<T>` or `RWStructuredBuffer<T>` objects.
+* GLSL: `readonly` or normal "buffer blocks".
+* Metal: `device T* value` variables.
 
 ### TextureView
 
@@ -50,9 +56,16 @@ A [TextureView](xref:Veldrid.TextureView) is a resource which gives a shader rea
 
 Read-only TextureView objects must have a [Target](xref:Veldrid.TextureViewDescription#Veldrid_TextureViewDescription_Target) that was created with the [TextureUsage.Sampled](xref:Veldrid.TextureUsage) flag. Read-write TextureViews must target a Texture created with the [TextureUsage.Storage](xref:Veldrid.TextureUsage) flag.
 
-Read-only TextureViews correspond to "Texture" objects in HLSL (Texture2D, Texture2DArray, TextureCube, etc). They correspond to "sampler" objects in OpenGL-flavored GLSL (sampler2D, sampler2DArray, samplerCube, etc.), and "texture" objects in Vulkan-flavored GLSL (texture2D, texture2DArray, textureCube, etc.).
+Read-only TextureViews correspond to the following:
+* HLSL: "Texture" objects (`Texture2D`, `Texture2DArray`, `TextureCube`, etc.).
+* GLSL (OpenGL): "sampler" objects (`sampler2D`, `sampler2DArray`, `samplerCube`, etc.).
+* GLSL (Vulkan): "texture" objects in Vulkan-flavored GLSL (`texture2D`, `texture2DArray`, `textureCube`, etc.).
+* Metal: "texture" objects (`texture2d<T>`, `texture2d_ms<T>`, etc.) with `access::sample` or `access::read`.
 
-Read-write TextureViews correspond to "RWTexture" objects in HLSL. They correspond to "uniform image" types in GLSL (image2D, image2DArray, imageCube, etc.).
+Read-write TextureViews correspond to the following:
+* HLSL: `RWTexture<T>`.
+* GLSL: uniform image variables.
+* Metal: "texture" objects with `access::read_write`.
 
 ### Sampler
 
@@ -104,5 +117,7 @@ defines a uniform belonging to binding 1 (of the [ResourceLayoutElementDescripti
     SamplerState Sampler1 : register(s1);
     ```
     (the declaration order is unimportant -- only the register indices matter).
+
+* Metal: Metal resources are assigned slots in the same way as HLSL resources. There are only three types of slots (buffer, texture, and sampler), and indices are assigned in simple increasing order depending on where they appear in the ResourceLayout creation list.
 
 * OpenGL: Resources are matched strictly by-name. Each resource must correspond to a uniform or uniform block in the shader program, and the names must be identical. Numerical indices are ignored when matching resources to GLSL uniforms.
