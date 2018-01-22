@@ -1,6 +1,6 @@
 # Veldrid Stable Release
 
-Today, the new version of Veldrid is stable and available for use. There are a small number of features and bug fixes incorporated after the beta 2 release. Notably, there is now support for the Metal graphics API, which adds a new high-performance, high-fidelity option for Apple systems.
+Today, the new version of Veldrid is stable and available for use. There are a small number of features and bug fixes incorporated after the beta 2 release. Notably, there is now support for the Metal graphics API, which adds a new high-performance, high-fidelity option for Apple systems. NuGet packages are available on [NuGet.org](https://www.nuget.org/packages/Veldrid/).
 
 ## Features
 

@@ -69,7 +69,7 @@
             <article class="content wrap" id="_content" data-uid="">
 <h1 id="veldrid-stable-release">Veldrid Stable Release</h1>
 
-<p>Today, the new version of Veldrid is stable and available for use. There are a small number of features and bug fixes incorporated after the beta 2 release. Notably, there is now support for the Metal graphics API, which adds a new high-performance, high-fidelity option for Apple systems.</p>
+<p>Today, the new version of Veldrid is stable and available for use. There are a small number of features and bug fixes incorporated after the beta 2 release. Notably, there is now support for the Metal graphics API, which adds a new high-performance, high-fidelity option for Apple systems. NuGet packages are available on <a href="https://www.nuget.org/packages/Veldrid/">NuGet.org</a>.</p>
 <h2 id="features">Features</h2>
 <ul>
 <li>Add a new Metal backend (GraphicsBackend.Metal). <a href="https://github.com/mellinoe/veldrid/commit/bbb7722d6b85557cb54e2f0142ce091311d28c89">bbb7722</a></li>
@@ -86,6 +86,8 @@
 <li>Count: The number of elements</li>
 <li>[_Norm]: An optional suffix which indicates whether the vertex element is actually a 0-&gt;1 value normalized into the range of the integer. For example, <code>UShort4_Norm</code> represents a vertex element with four ushorts (UInt16), where the values represent a normalized 0-&gt;1 value. <code>UShort4</code> represents the same, but the values are not normalized -- they are simply interpreted as unsigned integers.</li>
 </ul>
+</li>
+<li><p>When creating a Compute Pipeline, you must now specify the threadgroup size up front. This is in support of the Metal backend.</p>
 </li>
 </ul>
 <h2 id="bug-fixes">Bug Fixes</h2>
