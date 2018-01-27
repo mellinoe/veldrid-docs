@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>OpenGL Backend </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="OpenGL Backend ">
+    <meta name="generator" content="docfx 2.30.0.0">
+    
+    <link rel="shortcut icon" href="../../favicon.ico">
+    <link rel="stylesheet" href="../../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../../styles/docfx.css">
+    <link rel="stylesheet" href="../../styles/main.css">
+    <meta property="docfx:navrel" content="../../toc.html">
+    <meta property="docfx:tocrel" content="../toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../../index.html">
+                <img id="logo" class="svg" src="../../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="opengl-backend">OpenGL Backend</h1>
+
+<p>The OpenGL backend is a multi-platform backend implemented using OpenGL. It is supported on most desktop platforms, except for UWP. OpenGL 3.0 is required for an OpenGL <a class="xref" href="../../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a>.</p>
+<p>To create an OpenGL GraphicsDevice, several pieces of pre-configured &quot;context&quot; information are needed (see <a class="xref" href="../../api/Veldrid.OpenGL.OpenGLPlatformInfo.html">OpenGLPlatformInfo</a>). This information includes:</p>
+<ul>
+<li>The OpenGL context handle, created outside of Veldrid.</li>
+<li>The &quot;GetProcAddress&quot; delegate, used to retrieve function pointers.</li>
+<li>The &quot;MakeCurrent&quot; delegate, used to make an OpenGL context current on the calling thread.</li>
+<li>The &quot;GetCurrentContext&quot; delegate, used to retrieve the calling thread&#39;s current OpenGL context.</li>
+<li>The &quot;ClearCurrentContext&quot; delegate, used to clear the calling thread&#39;s OpenGL context.</li>
+<li>The &quot;Delete Context&quot; delegate, used to delete an OpenGL context.</li>
+<li>The &quot;SwapBuffers&quot; delegate, used to swap the applications backbuffer.</li>
+<li>The &quot;SetSyncToVerticalBlank&quot; delegate, used to control Vsync behavior.</li>
+</ul>
+<p>These functions are platform-specific, and different operating systems vary in how they implement these functions. As such, it is difficult to write portable logic which satisfies all of these pieces of information. The Veldrid.StartupUtilities library includes functionality to obtain this information portably, using SDL2.</p>
+<h2 id="api-concept-map">API Concept Map</h2>
+<table>
+<thead>
+<tr>
+<th>Veldrid Concept</th>
+<th>OpenGL Concept</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+<td>GL Context (roughly)</td>
+<td>Various other parts of OpenGL support GraphicsDevice functionality.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.CommandList.html">CommandList</a></td>
+<td>Emulated (see below)</td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
+<td><a href="https://www.khronos.org/opengl/wiki/Buffer_Object">Buffer objects</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.BufferUsage.html">BufferUsage</a></td>
+<td>None</td>
+<td>OpenGL buffers can always be used as any type of buffer -- there is no specialiazation.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.Texture.html">Texture</a></td>
+<td><a href="https://www.khronos.org/opengl/wiki/Texture">Texture objects</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.TextureUsage.html">TextureUsage</a></td>
+<td>None</td>
+<td>OpenGL textures can always be used as any type of texture -- there is no specialiazation.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.TextureView.html">TextureView</a></td>
+<td><a href="https://www.khronos.org/opengl/wiki/Texture_Storage#Texture_views"><code>ARB_texture_view</code></a></td>
+<td>Not all Veldrid TextureViews require <code>ARB_texture_view</code>.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.Sampler.html">Sampler</a></td>
+<td><a href="https://www.khronos.org/opengl/wiki/Sampler_Object">Sampler objects</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.Pipeline.html">Pipeline</a></td>
+<td>Compound (see below)</td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.BlendStateDescription.html">Blend State</a></td>
+<td><code>glBlendColor</code>, <code>glBlendFuncSeparatei</code>, <code>glBlendEquationSeparatei</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.DepthStencilStateDescription.html">Depth Stencil State</a></td>
+<td><code>glDepthFunc</code>, <code>glDepthMask</code>, <code>glStencilFuncSeparate</code>, <code>glStencilMask</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.RasterizerStateDescription.html">Rasterizer State</a></td>
+<td><code>glCullFace</code>, <code>GL_CULL_FACE</code>, <code>glPolygonMode</code>, <code>GL_SCISSOR_TEST</code>, <code>glScissorIndexed</code>, <code>GL_DEPTH_CLAMP</code>, <code>glFrontFace</code></td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.PrimitiveTopology.html">PrimitiveTopology</a></td>
+<td><code>GL_LINES</code>, <code>GL_POINTS</code>, <code>GL_TRIANGLES</code>, etc.</td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.VertexLayoutDescription.html">Vertex Layouts</a></td>
+<td><code>glEnableVertexAttribArray</code>, <code>glVertexAttrib*Pointer</code>, <code>glVertexAttribDivisor</code></td>
+<td>A single, global VAO is bound during initialization, and vertex attributes are updated into it as needed.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.Shader.html">Shader</a></td>
+<td><a href="https://www.khronos.org/opengl/wiki/Shader">Shader objects</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.ShaderSetDescription.html">ShaderSetDescription</a></td>
+<td><a href="https://www.khronos.org/opengl/wiki/GLSL_Object#Program_objects">Program objects</a>.</td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.Framebuffer.html">Framebuffer</a></td>
+<td><a href="https://www.khronos.org/opengl/wiki/Framebuffer_Object">Framebuffer objects</a>.aspx)</td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.ResourceLayout.html">ResourceLayout</a></td>
+<td>None</td>
+<td>The OpenGL backend uses the information from a ResourceLayout to determine which uniform locations a particular resource corresponds to, by name.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.ResourceSet.html">ResourceSet</a></td>
+<td>None</td>
+<td>The OpenGL backend simply uses the individual resources contained in a ResourceSet to bind to a program. The slots are determined using information from the associated ResourceLayout.</td>
+</tr>
+<tr>
+<td><a class="xref" href="../../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">Swapchain</a></td>
+<td>None (implicit)</td>
+<td>An OpenGL swapchain is not explicitly created by the user, nor can it be directly accessed or managed. Instead, it is part of the OpenGL context created by the system.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="notes">Notes</h2>
+<p>The OpenGL backend is the most complicated backend, and has to work around various limitations in the OpenGL API to provide a full-fidelity implementation of Veldrid&#39;s abstraction. Although it is a highly portable backend and can be used on many operating systems, it is not the preferred backend on any system, because of the following:</p>
+<ul>
+<li>OpenGL driver quality is not consistent. Performance and correctness varies wildly across vendors and operating systems. The Veldrid OpenGL backend has a variety of code paths working around the presence and absence of certain extensions, and avoids using some features altogether due to their poor implementations on some systems.</li>
+<li>macOS does not support modern OpenGL, and it is unlikely that it ever will. This means that some functionality, like Compute Shaders and texture views, are completely unsupported on macOS. Various other important extensions, like <code>ARB_direct_state_access</code>, are also unimplemented, which results in degraded performance.</li>
+<li>OpenGL is a poorly-designed API, and is simply slower (in general) than other API&#39;s.</li>
+<li>OpenGL&#39;s lack of support for multiple threads requires more complex and costly handling in Veldrid&#39;s OpenGL backend, which imposes some minor runtime overhead. See below for more details.</li>
+</ul>
+<p>On Linux, OpenGL may be the only available backend, if Vulkan is not supported. Luckily, Linux OpenGL drivers are generally of decent quality, and support modern functionality (unlike macOS). However, Vulkan is supported by all modern GPU&#39;s, and should be preferred when available.</p>
+<h3 id="threading-concerns">Threading Concerns</h3>
+<p>OpenGL has a very unfortunate relationship with threads. Not only can OpenGL functions not be used from multiple threads simultaneously, they must always be called from a SINGLE main thread. This means that it is not possible to simply synchronize access to a GL context between multiple threads. Only one single thread can ever use OpenGL functions. Veldrid allows many functions to be used in a free-threaded manner. All operations on a GraphicsDevice or a ResourceFactory, for example, can be used from any thread at any time. This allows you to create and update resources (DeviceBuffers and Textures) at any time, without worrying about synchronization. Modern graphics API&#39;s (even D3D11) allow this without trouble. Unfortunately, OpenGL does not support this natively. To accomodate OpenGL&#39;s limitations, the following approach is taken:</p>
+<ul>
+<li>All OpenGL functions are run from a single &quot;OpenGL worker thread&quot;. This worker thread is started when the OpenGL GraphicsDevice is created, and loops continuously until the GraphicsDevice is disposed. This thread takes sole ownership of the GL context when it starts, using the provided delegates.</li>
+<li>All OpenGL resources (buffers, textures, framebuffers, shaders, etc.) are all lazily-initialized. Because the real OpenGL resources must be created solely from the &quot;OpenGL worker&quot; thread, this work is deferred until the resource is actually used in an actual OpenGL function. When the worker thread is processing a command involving a DeviceBuffer, for example, it will ensure the OpenGL buffer object is created (<code>glCreateBuffers</code>, <code>glNamedBufferData</code>, etc.) before using it. The worker thread is the only thread that ever fully initializes OpenGL resources, but any thread is permitted to create an uninitialized resource.</li>
+<li>Resources that require initialization information store that information inside the lazy object until initialization occurs. For example, an OpenGL Shader stores the raw shader bytes in a shared storage buffer until the OpenGL shader object can actually be created (by the worker thread).</li>
+<li>All commands recorded into an OpenGL CommandList are stored into an emulated, CPU-side list. This is done in a specialized, allocation-free, and highly optimized manner. Commands that include data to be uploaded, like <code>CommandList.UpdateBuffer</code>, instead copy the data into a shared storage buffer. When the worker thread finally executes the CommandList, this data is consumed, and the shared storage buffer is recycled.</li>
+</ul>
+<p>As you can imagine, the above approach has a small amount of runtime CPU and memory overhead. In general, the OpenGL backend needs to cache a little more information (on the host system) than other backends do. Also, some work that is done up-front in other backends is deferred until a (potentially) unexpected time in the OpenGL backend. For example, when you first bind an OpenGL Pipeline, you may need to pay a lazy initialization cost (compiling the shaders, linking a program, retrieving uniform locations, etc.). On the other hand, creating the uninitialized Pipeline object itself is relatively inexpensive, because none of that work is done up-front.</p>
+<h3 id="synchronization">Synchronization</h3>
+<p>Although OpenGL command execution is synchronous, it is all done through a separate worker thread. OpenGL Fence objects are actually signaled when the submission that they are attached to is fully processed by the worker thread. This means that, when an OpenGL CommandList is submitted, it will not be completed until a later time. The <a class="xref" href="../../api/Veldrid.GraphicsDevice.html">Graphicsdevice.WaitForIdle</a> method blocks until all previously-submitted commands are processed by the worker thread.</p>
+<p>Some GraphicsDevice methods need to truly synchronize with the worker thread. For example, if an OpenGL DeviceBuffer is mapped or unmapped, then <code>glMapBuffer</code> or <code>glUnmapBuffer</code> must be called on the dedicated worker thread before the call returns. To synchronize the calling thread and the worker thread, a <code>ManualResetEvent</code> is used. Once the buffer is mapped or unmapped by the worker thread, the reset event is signaled and the calling thread resumes. Because commands are executed in submission order by the worker thread, this means that a call to <code>GraphicsDevice.Map</code> will block until all previously-submitted CommandLists, as well as the actual mapping operation, are fully completed.</p>
+<h3 id="mapmodewrite">MapMode.Write</h3>
+<p>One exception to the above example is <a class="xref" href="../../api/Veldrid.MapMode.html">MapMode.Write</a>. Because this mode does not require information to be read back from OpenGL, no synchronization is required. Instead, a shared storage buffer is provided to the caller immediately, and no communication with OpenGL takes place. When a resource mapped in this way is Unmap&#39;d, the worker thread uploads the data and then recycles the shared buffer. Unmapping a resource like this causes the calling thread to synchronize with the worker thread (because it must communciate with OpenGL).</p>
+<h3 id="state-tracking">State Tracking</h3>
+<p>Like the Direct3D 11 backend, the OpenGL backend internally tracks certain pieces of OpenGL state, and avoids issuing redundant function calls if they will have no effect. Because all OpenGL function calls are routed through a dedicated worker thread, this information can be easily tracked in a central location.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/articles/implementation/opengl.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../../styles/docfx.js"></script>
+    <script type="text/javascript" src="../../styles/main.js"></script>
+  </body>
+</html>

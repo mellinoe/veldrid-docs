@@ -24,3 +24,17 @@
     href: getting-started/getting-started-part2.md
   - name: "Part 3: Drawing a quad, and resource cleanup"
     href: getting-started/getting-started-part3.md
+- name: Implementation Details
+  items:
+  - name: Overview
+    href: implementation/overview.md
+  - name: Public Interface
+    href: implementation/public-interface.md
+  - name: Direct3D 11 Backend
+    href: implementation/d3d11.md
+  - name: Vulkan Backend
+    href: implementation/vulkan.md
+  - name: Metal Backend
+    href: implementation/metal.md
+  - name: OpenGL Backend
+    href: implementation/opengl.md
