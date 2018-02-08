@@ -76,13 +76,14 @@
   <div class="markdown level0 summary"><p>A color stored in four 8-bit unsigned normalized integer values, in RGBA component order.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a>&gt;</div>
+  </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
     <div>
       <span class="xref">System.ValueType.Equals(System.Object)</span>
-    </div>
-    <div>
-      <span class="xref">System.ValueType.GetHashCode()</span>
     </div>
     <div>
       <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
@@ -98,7 +99,7 @@
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Veldrid_RgbaByte_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public struct RgbaByte</code></pre>
+    <pre><code class="lang-csharp hljs">public struct RgbaByte : IEquatable&lt;RgbaByte&gt;</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -228,6 +229,81 @@
   </table>
   
   
+  <h4 id="Veldrid_RgbaByte_Blue" data-uid="Veldrid.RgbaByte.Blue">Blue</h4>
+  <div class="markdown level1 summary"><p>Blue (0, 0, 255, 255)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RgbaByte Blue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_RgbaByte_Clear" data-uid="Veldrid.RgbaByte.Clear">Clear</h4>
+  <div class="markdown level1 summary"><p>Clear (0, 0, 0, 0)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RgbaByte Clear</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_RgbaByte_CornflowerBlue" data-uid="Veldrid.RgbaByte.CornflowerBlue">CornflowerBlue</h4>
+  <div class="markdown level1 summary"><p>Cornflower Blue (100, 149, 237, 255)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RgbaByte CornflowerBlue</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Veldrid_RgbaByte_Cyan" data-uid="Veldrid.RgbaByte.Cyan">Cyan</h4>
   <div class="markdown level1 summary"><p>Cyan (0, 255, 255, 255)</p>
 </div>
@@ -235,6 +311,31 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public static readonly RgbaByte Cyan</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_RgbaByte_DarkRed" data-uid="Veldrid.RgbaByte.DarkRed">DarkRed</h4>
+  <div class="markdown level1 summary"><p>Dark Red (153, 0, 0, 255)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RgbaByte DarkRed</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,6 +373,106 @@
     <tbody>
       <tr>
         <td><span class="xref">System.Byte</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_RgbaByte_Green" data-uid="Veldrid.RgbaByte.Green">Green</h4>
+  <div class="markdown level1 summary"><p>Green (0, 255, 0, 255)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RgbaByte Green</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_RgbaByte_Grey" data-uid="Veldrid.RgbaByte.Grey">Grey</h4>
+  <div class="markdown level1 summary"><p>Grey (64, 64, 64, 255)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RgbaByte Grey</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_RgbaByte_LightGrey" data-uid="Veldrid.RgbaByte.LightGrey">LightGrey</h4>
+  <div class="markdown level1 summary"><p>Light Grey (166, 166, 166, 255)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RgbaByte LightGrey</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_RgbaByte_Orange" data-uid="Veldrid.RgbaByte.Orange">Orange</h4>
+  <div class="markdown level1 summary"><p>Orange (255, 92, 0, 255)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RgbaByte Orange</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -328,6 +529,31 @@
   </table>
   
   
+  <h4 id="Veldrid_RgbaByte_Red" data-uid="Veldrid.RgbaByte.Red">Red</h4>
+  <div class="markdown level1 summary"><p>Red (255, 0, 0, 255)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RgbaByte Red</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <h4 id="Veldrid_RgbaByte_White" data-uid="Veldrid.RgbaByte.White">White</h4>
   <div class="markdown level1 summary"><p>White (255, 255, 255, 255)</p>
 </div>
@@ -351,8 +577,107 @@
       </tr>
     </tbody>
   </table>
+  
+  
+  <h4 id="Veldrid_RgbaByte_Yellow" data-uid="Veldrid.RgbaByte.Yellow">Yellow</h4>
+  <div class="markdown level1 summary"><p>Yellow (255, 255, 0, 255)</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static readonly RgbaByte Yellow</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  
+  
+  <a id="Veldrid_RgbaByte_Equals_" data-uid="Veldrid.RgbaByte.Equals*"></a>
+  <h4 id="Veldrid_RgbaByte_Equals_Veldrid_RgbaByte_" data-uid="Veldrid.RgbaByte.Equals(Veldrid.RgbaByte)">Equals(RgbaByte)</h4>
+  <div class="markdown level1 summary"><p>Element-wise equality.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool Equals(RgbaByte other)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaByte.html">RgbaByte</a></td>
+        <td><span class="parametername">other</span></td>
+        <td><p>The instance to compare to.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if all elements are equal; false otherswise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_RgbaByte_GetHashCode_" data-uid="Veldrid.RgbaByte.GetHashCode*"></a>
+  <h4 id="Veldrid_RgbaByte_GetHashCode" data-uid="Veldrid.RgbaByte.GetHashCode">GetHashCode()</h4>
+  <div class="markdown level1 summary"><p>Returns the hash code for this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Int32</span></td>
+        <td><p>A 32-bit signed integer that is the hash code for this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">System.ValueType.GetHashCode()</span></div>
   
   
   <a id="Veldrid_RgbaByte_ToString_" data-uid="Veldrid.RgbaByte.ToString*"></a>
@@ -381,6 +706,10 @@
   </table>
   <h5 class="overrides">Overrides</h5>
   <div><span class="xref">System.ValueType.ToString()</span></div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">IEquatable&lt;&gt;</span>
+  </div>
 </article>
           </div>
           

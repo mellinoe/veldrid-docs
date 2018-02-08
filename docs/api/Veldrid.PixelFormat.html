@@ -102,6 +102,21 @@ type.</p>
 </td>
       </tr>
       <tr>
+        <td id="Veldrid_PixelFormat_BC1_Rgb_UNorm">BC1_Rgb_UNorm</td>
+        <td><p>BC1 block compressed format with no alpha.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_BC1_Rgba_UNorm">BC1_Rgba_UNorm</td>
+        <td><p>BC1 block compressed format with a single-bit alpha channel.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_BC2_UNorm">BC2_UNorm</td>
+        <td><p>BC2 block compressed format.</p>
+</td>
+      </tr>
+      <tr>
         <td id="Veldrid_PixelFormat_BC3_UNorm">BC3_UNorm</td>
         <td><p>BC3 block compressed format.</p>
 </td>
@@ -119,8 +134,98 @@ in an 8-bit unsigned integer.</p>
 </td>
       </tr>
       <tr>
+        <td id="Veldrid_PixelFormat_R10_G10_B10_A2_UInt">R10_G10_B10_A2_UInt</td>
+        <td><p>A 32-bit packed format. The 10-bit R component occupies bits 0..9, the 10-bit G component occupies bits 10..19,
+the 10-bit A component occupies 20..29, and the 2-bit A component occupies bits 30..31. Each value is an unsigned
+integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R10_G10_B10_A2_UNorm">R10_G10_B10_A2_UNorm</td>
+        <td><p>A 32-bit packed format. The 10-bit R component occupies bits 0..9, the 10-bit G component occupies bits 10..19,
+the 10-bit A component occupies 20..29, and the 2-bit A component occupies bits 30..31. Each value is an unsigned,
+normalized integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R11_G11_B10_Float">R11_G11_B10_Float</td>
+        <td><p>A 32-bit packed format. The 11-bit R componnent occupies bits 0..10, the 11-bit G component occupies bits 11..21,
+and the 10-bit B component occupies bits 22..31. Each value is an unsigned floating point value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_Float">R16_Float</td>
+        <td><p>Single-channel, 16-bit signed floating-point value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_G16_B16_A16_Float">R16_G16_B16_A16_Float</td>
+        <td><p>RGBA component order. Each component is a 16-bit floating-point value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_G16_B16_A16_SInt">R16_G16_B16_A16_SInt</td>
+        <td><p>RGBA component order. Each component is a 16-bit signed integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_G16_B16_A16_SNorm">R16_G16_B16_A16_SNorm</td>
+        <td><p>RGBA component order. Each component is a 16-bit signed normalized integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_G16_B16_A16_UInt">R16_G16_B16_A16_UInt</td>
+        <td><p>RGBA component order. Each component is a 16-bit unsigned integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_G16_B16_A16_UNorm">R16_G16_B16_A16_UNorm</td>
+        <td><p>RGBA component order. Each component is a 16-bit unsigned normalized integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_G16_Float">R16_G16_Float</td>
+        <td><p>RG component order. Each component is a 16-bit signed floating-point value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_G16_SInt">R16_G16_SInt</td>
+        <td><p>RG component order. Each component is a 16-bit signed integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_G16_SNorm">R16_G16_SNorm</td>
+        <td><p>RG component order. Each component is a 16-bit signed normalized integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_G16_UInt">R16_G16_UInt</td>
+        <td><p>RG component order. Each component is a 16-bit unsigned integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_G16_UNorm">R16_G16_UNorm</td>
+        <td><p>RG component order. Each component is a 16-bit unsigned normalized integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_SInt">R16_SInt</td>
+        <td><p>Single-channel, 16-bit signed integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_SNorm">R16_SNorm</td>
+        <td><p>Single-channel, 16-bit signed normalized integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R16_UInt">R16_UInt</td>
+        <td><p>Single-channel, 16-bit unsigned integer.</p>
+</td>
+      </tr>
+      <tr>
         <td id="Veldrid_PixelFormat_R16_UNorm">R16_UNorm</td>
-        <td><p>Single-channel, 16-bit unsigned integer. Can be used as a depth format.</p>
+        <td><p>Single-channel, 16-bit unsigned normalized integer. Can be used as a depth format.</p>
 </td>
       </tr>
       <tr>
@@ -134,13 +239,98 @@ in an 8-bit unsigned integer.</p>
 </td>
       </tr>
       <tr>
+        <td id="Veldrid_PixelFormat_R32_G32_B32_A32_SInt">R32_G32_B32_A32_SInt</td>
+        <td><p>RGBA component order. Each component is a 32-bit signed integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R32_G32_B32_A32_UInt">R32_G32_B32_A32_UInt</td>
+        <td><p>RGBA component order. Each component is a 32-bit unsigned integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R32_G32_Float">R32_G32_Float</td>
+        <td><p>RG component order. Each component is a 32-bit signed floating-point value.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R32_G32_SInt">R32_G32_SInt</td>
+        <td><p>RG component order. Each component is a 32-bit signed integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R32_G32_UInt">R32_G32_UInt</td>
+        <td><p>RG component order. Each component is a 32-bit unsigned integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R32_SInt">R32_SInt</td>
+        <td><p>Single-channel, 32-bit signed integer</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R32_UInt">R32_UInt</td>
+        <td><p>Single-channel, 32-bit unsigned integer</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R8_G8_B8_A8_SInt">R8_G8_B8_A8_SInt</td>
+        <td><p>RGBA component order. Each component is an 8-bit signed integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R8_G8_B8_A8_SNorm">R8_G8_B8_A8_SNorm</td>
+        <td><p>RGBA component order. Each component is an 8-bit signed normalized integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R8_G8_B8_A8_UInt">R8_G8_B8_A8_UInt</td>
+        <td><p>RGBA component order. Each component is an 8-bit unsigned integer.</p>
+</td>
+      </tr>
+      <tr>
         <td id="Veldrid_PixelFormat_R8_G8_B8_A8_UNorm">R8_G8_B8_A8_UNorm</td>
         <td><p>RGBA component order. Each component is an 8-bit unsigned normalized integer.</p>
 </td>
       </tr>
       <tr>
-        <td id="Veldrid_PixelFormat_R8_UNorm">R8_UNorm</td>
+        <td id="Veldrid_PixelFormat_R8_G8_SInt">R8_G8_SInt</td>
+        <td><p>RG component order. Each component is an 8-bit signed integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R8_G8_SNorm">R8_G8_SNorm</td>
+        <td><p>RG component order. Each component is an 8-bit signed normalized integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R8_G8_UInt">R8_G8_UInt</td>
+        <td><p>RG component order. Each component is an 8-bit unsigned integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R8_G8_UNorm">R8_G8_UNorm</td>
+        <td><p>RG component order. Each component is an 8-bit unsigned normalized integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R8_SInt">R8_SInt</td>
+        <td><p>Single-channel, 8-bit signed integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R8_SNorm">R8_SNorm</td>
+        <td><p>Single-channel, 8-bit signed normalized integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R8_UInt">R8_UInt</td>
         <td><p>Single-channel, 8-bit unsigned integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R8_UNorm">R8_UNorm</td>
+        <td><p>Single-channel, 8-bit unsigned normalized integer.</p>
 </td>
       </tr>
     </tbody>

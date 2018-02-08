@@ -112,6 +112,12 @@ references:
   commentId: F:Veldrid.BlendAttachmentDescription.DestinationColorFactor
   fullName: Veldrid.BlendAttachmentDescription.DestinationColorFactor
   nameWithType: BlendAttachmentDescription.DestinationColorFactor
+- uid: Veldrid.BlendAttachmentDescription.Disabled
+  name: Disabled
+  href: api/Veldrid.BlendAttachmentDescription.html#Veldrid_BlendAttachmentDescription_Disabled
+  commentId: F:Veldrid.BlendAttachmentDescription.Disabled
+  fullName: Veldrid.BlendAttachmentDescription.Disabled
+  nameWithType: BlendAttachmentDescription.Disabled
 - uid: Veldrid.BlendAttachmentDescription.Equals(Veldrid.BlendAttachmentDescription)
   name: Equals(BlendAttachmentDescription)
   href: api/Veldrid.BlendAttachmentDescription.html#Veldrid_BlendAttachmentDescription_Equals_Veldrid_BlendAttachmentDescription_
@@ -331,12 +337,24 @@ references:
   commentId: Overload:Veldrid.BlendStateDescription.GetHashCode
   fullName: Veldrid.BlendStateDescription.GetHashCode
   nameWithType: BlendStateDescription.GetHashCode
+- uid: Veldrid.BlendStateDescription.SingleAdditiveBlend
+  name: SingleAdditiveBlend
+  href: api/Veldrid.BlendStateDescription.html#Veldrid_BlendStateDescription_SingleAdditiveBlend
+  commentId: F:Veldrid.BlendStateDescription.SingleAdditiveBlend
+  fullName: Veldrid.BlendStateDescription.SingleAdditiveBlend
+  nameWithType: BlendStateDescription.SingleAdditiveBlend
 - uid: Veldrid.BlendStateDescription.SingleAlphaBlend
   name: SingleAlphaBlend
   href: api/Veldrid.BlendStateDescription.html#Veldrid_BlendStateDescription_SingleAlphaBlend
   commentId: F:Veldrid.BlendStateDescription.SingleAlphaBlend
   fullName: Veldrid.BlendStateDescription.SingleAlphaBlend
   nameWithType: BlendStateDescription.SingleAlphaBlend
+- uid: Veldrid.BlendStateDescription.SingleDisabled
+  name: SingleDisabled
+  href: api/Veldrid.BlendStateDescription.html#Veldrid_BlendStateDescription_SingleDisabled
+  commentId: F:Veldrid.BlendStateDescription.SingleDisabled
+  fullName: Veldrid.BlendStateDescription.SingleDisabled
+  nameWithType: BlendStateDescription.SingleDisabled
 - uid: Veldrid.BlendStateDescription.SingleOverrideBlend
   name: SingleOverrideBlend
   href: api/Veldrid.BlendStateDescription.html#Veldrid_BlendStateDescription_SingleOverrideBlend
@@ -1387,6 +1405,12 @@ references:
   commentId: F:Veldrid.DepthStencilStateDescription.DepthOnlyLessEqual
   fullName: Veldrid.DepthStencilStateDescription.DepthOnlyLessEqual
   nameWithType: DepthStencilStateDescription.DepthOnlyLessEqual
+- uid: Veldrid.DepthStencilStateDescription.DepthOnlyLessEqualRead
+  name: DepthOnlyLessEqualRead
+  href: api/Veldrid.DepthStencilStateDescription.html#Veldrid_DepthStencilStateDescription_DepthOnlyLessEqualRead
+  commentId: F:Veldrid.DepthStencilStateDescription.DepthOnlyLessEqualRead
+  fullName: Veldrid.DepthStencilStateDescription.DepthOnlyLessEqualRead
+  nameWithType: DepthStencilStateDescription.DepthOnlyLessEqualRead
 - uid: Veldrid.DepthStencilStateDescription.DepthTestEnabled
   name: DepthTestEnabled
   href: api/Veldrid.DepthStencilStateDescription.html#Veldrid_DepthStencilStateDescription_DepthTestEnabled
@@ -2359,6 +2383,18 @@ references:
   commentId: Overload:Veldrid.GraphicsDevice.UpdateTexture
   fullName: Veldrid.GraphicsDevice.UpdateTexture
   nameWithType: GraphicsDevice.UpdateTexture
+- uid: Veldrid.GraphicsDevice.UpdateTextureCore(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  name: UpdateTextureCore(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateTextureCore_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.UpdateTextureCore(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  fullName: Veldrid.GraphicsDevice.UpdateTextureCore(Veldrid.Texture, IntPtr, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: GraphicsDevice.UpdateTextureCore(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
+- uid: Veldrid.GraphicsDevice.UpdateTextureCore*
+  name: UpdateTextureCore
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateTextureCore_
+  commentId: Overload:Veldrid.GraphicsDevice.UpdateTextureCore
+  fullName: Veldrid.GraphicsDevice.UpdateTextureCore
+  nameWithType: GraphicsDevice.UpdateTextureCore
 - uid: Veldrid.GraphicsDevice.WaitForFence(Veldrid.Fence)
   name: WaitForFence(Fence)
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_WaitForFence_Veldrid_Fence_
@@ -3166,6 +3202,24 @@ references:
   commentId: F:Veldrid.PixelFormat.B8_G8_R8_A8_UNorm
   fullName: Veldrid.PixelFormat.B8_G8_R8_A8_UNorm
   nameWithType: PixelFormat.B8_G8_R8_A8_UNorm
+- uid: Veldrid.PixelFormat.BC1_Rgb_UNorm
+  name: BC1_Rgb_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_BC1_Rgb_UNorm
+  commentId: F:Veldrid.PixelFormat.BC1_Rgb_UNorm
+  fullName: Veldrid.PixelFormat.BC1_Rgb_UNorm
+  nameWithType: PixelFormat.BC1_Rgb_UNorm
+- uid: Veldrid.PixelFormat.BC1_Rgba_UNorm
+  name: BC1_Rgba_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_BC1_Rgba_UNorm
+  commentId: F:Veldrid.PixelFormat.BC1_Rgba_UNorm
+  fullName: Veldrid.PixelFormat.BC1_Rgba_UNorm
+  nameWithType: PixelFormat.BC1_Rgba_UNorm
+- uid: Veldrid.PixelFormat.BC2_UNorm
+  name: BC2_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_BC2_UNorm
+  commentId: F:Veldrid.PixelFormat.BC2_UNorm
+  fullName: Veldrid.PixelFormat.BC2_UNorm
+  nameWithType: PixelFormat.BC2_UNorm
 - uid: Veldrid.PixelFormat.BC3_UNorm
   name: BC3_UNorm
   href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_BC3_UNorm
@@ -3184,6 +3238,108 @@ references:
   commentId: F:Veldrid.PixelFormat.D32_Float_S8_UInt
   fullName: Veldrid.PixelFormat.D32_Float_S8_UInt
   nameWithType: PixelFormat.D32_Float_S8_UInt
+- uid: Veldrid.PixelFormat.R10_G10_B10_A2_UInt
+  name: R10_G10_B10_A2_UInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R10_G10_B10_A2_UInt
+  commentId: F:Veldrid.PixelFormat.R10_G10_B10_A2_UInt
+  fullName: Veldrid.PixelFormat.R10_G10_B10_A2_UInt
+  nameWithType: PixelFormat.R10_G10_B10_A2_UInt
+- uid: Veldrid.PixelFormat.R10_G10_B10_A2_UNorm
+  name: R10_G10_B10_A2_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R10_G10_B10_A2_UNorm
+  commentId: F:Veldrid.PixelFormat.R10_G10_B10_A2_UNorm
+  fullName: Veldrid.PixelFormat.R10_G10_B10_A2_UNorm
+  nameWithType: PixelFormat.R10_G10_B10_A2_UNorm
+- uid: Veldrid.PixelFormat.R11_G11_B10_Float
+  name: R11_G11_B10_Float
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R11_G11_B10_Float
+  commentId: F:Veldrid.PixelFormat.R11_G11_B10_Float
+  fullName: Veldrid.PixelFormat.R11_G11_B10_Float
+  nameWithType: PixelFormat.R11_G11_B10_Float
+- uid: Veldrid.PixelFormat.R16_Float
+  name: R16_Float
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_Float
+  commentId: F:Veldrid.PixelFormat.R16_Float
+  fullName: Veldrid.PixelFormat.R16_Float
+  nameWithType: PixelFormat.R16_Float
+- uid: Veldrid.PixelFormat.R16_G16_B16_A16_Float
+  name: R16_G16_B16_A16_Float
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_G16_B16_A16_Float
+  commentId: F:Veldrid.PixelFormat.R16_G16_B16_A16_Float
+  fullName: Veldrid.PixelFormat.R16_G16_B16_A16_Float
+  nameWithType: PixelFormat.R16_G16_B16_A16_Float
+- uid: Veldrid.PixelFormat.R16_G16_B16_A16_SInt
+  name: R16_G16_B16_A16_SInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_G16_B16_A16_SInt
+  commentId: F:Veldrid.PixelFormat.R16_G16_B16_A16_SInt
+  fullName: Veldrid.PixelFormat.R16_G16_B16_A16_SInt
+  nameWithType: PixelFormat.R16_G16_B16_A16_SInt
+- uid: Veldrid.PixelFormat.R16_G16_B16_A16_SNorm
+  name: R16_G16_B16_A16_SNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_G16_B16_A16_SNorm
+  commentId: F:Veldrid.PixelFormat.R16_G16_B16_A16_SNorm
+  fullName: Veldrid.PixelFormat.R16_G16_B16_A16_SNorm
+  nameWithType: PixelFormat.R16_G16_B16_A16_SNorm
+- uid: Veldrid.PixelFormat.R16_G16_B16_A16_UInt
+  name: R16_G16_B16_A16_UInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_G16_B16_A16_UInt
+  commentId: F:Veldrid.PixelFormat.R16_G16_B16_A16_UInt
+  fullName: Veldrid.PixelFormat.R16_G16_B16_A16_UInt
+  nameWithType: PixelFormat.R16_G16_B16_A16_UInt
+- uid: Veldrid.PixelFormat.R16_G16_B16_A16_UNorm
+  name: R16_G16_B16_A16_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_G16_B16_A16_UNorm
+  commentId: F:Veldrid.PixelFormat.R16_G16_B16_A16_UNorm
+  fullName: Veldrid.PixelFormat.R16_G16_B16_A16_UNorm
+  nameWithType: PixelFormat.R16_G16_B16_A16_UNorm
+- uid: Veldrid.PixelFormat.R16_G16_Float
+  name: R16_G16_Float
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_G16_Float
+  commentId: F:Veldrid.PixelFormat.R16_G16_Float
+  fullName: Veldrid.PixelFormat.R16_G16_Float
+  nameWithType: PixelFormat.R16_G16_Float
+- uid: Veldrid.PixelFormat.R16_G16_SInt
+  name: R16_G16_SInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_G16_SInt
+  commentId: F:Veldrid.PixelFormat.R16_G16_SInt
+  fullName: Veldrid.PixelFormat.R16_G16_SInt
+  nameWithType: PixelFormat.R16_G16_SInt
+- uid: Veldrid.PixelFormat.R16_G16_SNorm
+  name: R16_G16_SNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_G16_SNorm
+  commentId: F:Veldrid.PixelFormat.R16_G16_SNorm
+  fullName: Veldrid.PixelFormat.R16_G16_SNorm
+  nameWithType: PixelFormat.R16_G16_SNorm
+- uid: Veldrid.PixelFormat.R16_G16_UInt
+  name: R16_G16_UInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_G16_UInt
+  commentId: F:Veldrid.PixelFormat.R16_G16_UInt
+  fullName: Veldrid.PixelFormat.R16_G16_UInt
+  nameWithType: PixelFormat.R16_G16_UInt
+- uid: Veldrid.PixelFormat.R16_G16_UNorm
+  name: R16_G16_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_G16_UNorm
+  commentId: F:Veldrid.PixelFormat.R16_G16_UNorm
+  fullName: Veldrid.PixelFormat.R16_G16_UNorm
+  nameWithType: PixelFormat.R16_G16_UNorm
+- uid: Veldrid.PixelFormat.R16_SInt
+  name: R16_SInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_SInt
+  commentId: F:Veldrid.PixelFormat.R16_SInt
+  fullName: Veldrid.PixelFormat.R16_SInt
+  nameWithType: PixelFormat.R16_SInt
+- uid: Veldrid.PixelFormat.R16_SNorm
+  name: R16_SNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_SNorm
+  commentId: F:Veldrid.PixelFormat.R16_SNorm
+  fullName: Veldrid.PixelFormat.R16_SNorm
+  nameWithType: PixelFormat.R16_SNorm
+- uid: Veldrid.PixelFormat.R16_UInt
+  name: R16_UInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_UInt
+  commentId: F:Veldrid.PixelFormat.R16_UInt
+  fullName: Veldrid.PixelFormat.R16_UInt
+  nameWithType: PixelFormat.R16_UInt
 - uid: Veldrid.PixelFormat.R16_UNorm
   name: R16_UNorm
   href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R16_UNorm
@@ -3202,12 +3358,114 @@ references:
   commentId: F:Veldrid.PixelFormat.R32_G32_B32_A32_Float
   fullName: Veldrid.PixelFormat.R32_G32_B32_A32_Float
   nameWithType: PixelFormat.R32_G32_B32_A32_Float
+- uid: Veldrid.PixelFormat.R32_G32_B32_A32_SInt
+  name: R32_G32_B32_A32_SInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R32_G32_B32_A32_SInt
+  commentId: F:Veldrid.PixelFormat.R32_G32_B32_A32_SInt
+  fullName: Veldrid.PixelFormat.R32_G32_B32_A32_SInt
+  nameWithType: PixelFormat.R32_G32_B32_A32_SInt
+- uid: Veldrid.PixelFormat.R32_G32_B32_A32_UInt
+  name: R32_G32_B32_A32_UInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R32_G32_B32_A32_UInt
+  commentId: F:Veldrid.PixelFormat.R32_G32_B32_A32_UInt
+  fullName: Veldrid.PixelFormat.R32_G32_B32_A32_UInt
+  nameWithType: PixelFormat.R32_G32_B32_A32_UInt
+- uid: Veldrid.PixelFormat.R32_G32_Float
+  name: R32_G32_Float
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R32_G32_Float
+  commentId: F:Veldrid.PixelFormat.R32_G32_Float
+  fullName: Veldrid.PixelFormat.R32_G32_Float
+  nameWithType: PixelFormat.R32_G32_Float
+- uid: Veldrid.PixelFormat.R32_G32_SInt
+  name: R32_G32_SInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R32_G32_SInt
+  commentId: F:Veldrid.PixelFormat.R32_G32_SInt
+  fullName: Veldrid.PixelFormat.R32_G32_SInt
+  nameWithType: PixelFormat.R32_G32_SInt
+- uid: Veldrid.PixelFormat.R32_G32_UInt
+  name: R32_G32_UInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R32_G32_UInt
+  commentId: F:Veldrid.PixelFormat.R32_G32_UInt
+  fullName: Veldrid.PixelFormat.R32_G32_UInt
+  nameWithType: PixelFormat.R32_G32_UInt
+- uid: Veldrid.PixelFormat.R32_SInt
+  name: R32_SInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R32_SInt
+  commentId: F:Veldrid.PixelFormat.R32_SInt
+  fullName: Veldrid.PixelFormat.R32_SInt
+  nameWithType: PixelFormat.R32_SInt
+- uid: Veldrid.PixelFormat.R32_UInt
+  name: R32_UInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R32_UInt
+  commentId: F:Veldrid.PixelFormat.R32_UInt
+  fullName: Veldrid.PixelFormat.R32_UInt
+  nameWithType: PixelFormat.R32_UInt
+- uid: Veldrid.PixelFormat.R8_G8_B8_A8_SInt
+  name: R8_G8_B8_A8_SInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_G8_B8_A8_SInt
+  commentId: F:Veldrid.PixelFormat.R8_G8_B8_A8_SInt
+  fullName: Veldrid.PixelFormat.R8_G8_B8_A8_SInt
+  nameWithType: PixelFormat.R8_G8_B8_A8_SInt
+- uid: Veldrid.PixelFormat.R8_G8_B8_A8_SNorm
+  name: R8_G8_B8_A8_SNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_G8_B8_A8_SNorm
+  commentId: F:Veldrid.PixelFormat.R8_G8_B8_A8_SNorm
+  fullName: Veldrid.PixelFormat.R8_G8_B8_A8_SNorm
+  nameWithType: PixelFormat.R8_G8_B8_A8_SNorm
+- uid: Veldrid.PixelFormat.R8_G8_B8_A8_UInt
+  name: R8_G8_B8_A8_UInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_G8_B8_A8_UInt
+  commentId: F:Veldrid.PixelFormat.R8_G8_B8_A8_UInt
+  fullName: Veldrid.PixelFormat.R8_G8_B8_A8_UInt
+  nameWithType: PixelFormat.R8_G8_B8_A8_UInt
 - uid: Veldrid.PixelFormat.R8_G8_B8_A8_UNorm
   name: R8_G8_B8_A8_UNorm
   href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_G8_B8_A8_UNorm
   commentId: F:Veldrid.PixelFormat.R8_G8_B8_A8_UNorm
   fullName: Veldrid.PixelFormat.R8_G8_B8_A8_UNorm
   nameWithType: PixelFormat.R8_G8_B8_A8_UNorm
+- uid: Veldrid.PixelFormat.R8_G8_SInt
+  name: R8_G8_SInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_G8_SInt
+  commentId: F:Veldrid.PixelFormat.R8_G8_SInt
+  fullName: Veldrid.PixelFormat.R8_G8_SInt
+  nameWithType: PixelFormat.R8_G8_SInt
+- uid: Veldrid.PixelFormat.R8_G8_SNorm
+  name: R8_G8_SNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_G8_SNorm
+  commentId: F:Veldrid.PixelFormat.R8_G8_SNorm
+  fullName: Veldrid.PixelFormat.R8_G8_SNorm
+  nameWithType: PixelFormat.R8_G8_SNorm
+- uid: Veldrid.PixelFormat.R8_G8_UInt
+  name: R8_G8_UInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_G8_UInt
+  commentId: F:Veldrid.PixelFormat.R8_G8_UInt
+  fullName: Veldrid.PixelFormat.R8_G8_UInt
+  nameWithType: PixelFormat.R8_G8_UInt
+- uid: Veldrid.PixelFormat.R8_G8_UNorm
+  name: R8_G8_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_G8_UNorm
+  commentId: F:Veldrid.PixelFormat.R8_G8_UNorm
+  fullName: Veldrid.PixelFormat.R8_G8_UNorm
+  nameWithType: PixelFormat.R8_G8_UNorm
+- uid: Veldrid.PixelFormat.R8_SInt
+  name: R8_SInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_SInt
+  commentId: F:Veldrid.PixelFormat.R8_SInt
+  fullName: Veldrid.PixelFormat.R8_SInt
+  nameWithType: PixelFormat.R8_SInt
+- uid: Veldrid.PixelFormat.R8_SNorm
+  name: R8_SNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_SNorm
+  commentId: F:Veldrid.PixelFormat.R8_SNorm
+  fullName: Veldrid.PixelFormat.R8_SNorm
+  nameWithType: PixelFormat.R8_SNorm
+- uid: Veldrid.PixelFormat.R8_UInt
+  name: R8_UInt
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_UInt
+  commentId: F:Veldrid.PixelFormat.R8_UInt
+  fullName: Veldrid.PixelFormat.R8_UInt
+  nameWithType: PixelFormat.R8_UInt
 - uid: Veldrid.PixelFormat.R8_UNorm
   name: R8_UNorm
   href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R8_UNorm
@@ -3292,6 +3550,12 @@ references:
   commentId: F:Veldrid.RasterizerStateDescription.CullMode
   fullName: Veldrid.RasterizerStateDescription.CullMode
   nameWithType: RasterizerStateDescription.CullMode
+- uid: Veldrid.RasterizerStateDescription.CullNone
+  name: CullNone
+  href: api/Veldrid.RasterizerStateDescription.html#Veldrid_RasterizerStateDescription_CullNone
+  commentId: F:Veldrid.RasterizerStateDescription.CullNone
+  fullName: Veldrid.RasterizerStateDescription.CullNone
+  nameWithType: RasterizerStateDescription.CullNone
 - uid: Veldrid.RasterizerStateDescription.Default
   name: Default
   href: api/Veldrid.RasterizerStateDescription.html#Veldrid_RasterizerStateDescription_Default
@@ -3970,18 +4234,90 @@ references:
   commentId: F:Veldrid.RgbaByte.Black
   fullName: Veldrid.RgbaByte.Black
   nameWithType: RgbaByte.Black
+- uid: Veldrid.RgbaByte.Blue
+  name: Blue
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Blue
+  commentId: F:Veldrid.RgbaByte.Blue
+  fullName: Veldrid.RgbaByte.Blue
+  nameWithType: RgbaByte.Blue
+- uid: Veldrid.RgbaByte.Clear
+  name: Clear
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Clear
+  commentId: F:Veldrid.RgbaByte.Clear
+  fullName: Veldrid.RgbaByte.Clear
+  nameWithType: RgbaByte.Clear
+- uid: Veldrid.RgbaByte.CornflowerBlue
+  name: CornflowerBlue
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_CornflowerBlue
+  commentId: F:Veldrid.RgbaByte.CornflowerBlue
+  fullName: Veldrid.RgbaByte.CornflowerBlue
+  nameWithType: RgbaByte.CornflowerBlue
 - uid: Veldrid.RgbaByte.Cyan
   name: Cyan
   href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Cyan
   commentId: F:Veldrid.RgbaByte.Cyan
   fullName: Veldrid.RgbaByte.Cyan
   nameWithType: RgbaByte.Cyan
+- uid: Veldrid.RgbaByte.DarkRed
+  name: DarkRed
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_DarkRed
+  commentId: F:Veldrid.RgbaByte.DarkRed
+  fullName: Veldrid.RgbaByte.DarkRed
+  nameWithType: RgbaByte.DarkRed
+- uid: Veldrid.RgbaByte.Equals(Veldrid.RgbaByte)
+  name: Equals(RgbaByte)
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Equals_Veldrid_RgbaByte_
+  commentId: M:Veldrid.RgbaByte.Equals(Veldrid.RgbaByte)
+  fullName: Veldrid.RgbaByte.Equals(Veldrid.RgbaByte)
+  nameWithType: RgbaByte.Equals(RgbaByte)
+- uid: Veldrid.RgbaByte.Equals*
+  name: Equals
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Equals_
+  commentId: Overload:Veldrid.RgbaByte.Equals
+  fullName: Veldrid.RgbaByte.Equals
+  nameWithType: RgbaByte.Equals
 - uid: Veldrid.RgbaByte.G
   name: G
   href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_G
   commentId: F:Veldrid.RgbaByte.G
   fullName: Veldrid.RgbaByte.G
   nameWithType: RgbaByte.G
+- uid: Veldrid.RgbaByte.GetHashCode
+  name: GetHashCode()
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_GetHashCode
+  commentId: M:Veldrid.RgbaByte.GetHashCode
+  fullName: Veldrid.RgbaByte.GetHashCode()
+  nameWithType: RgbaByte.GetHashCode()
+- uid: Veldrid.RgbaByte.GetHashCode*
+  name: GetHashCode
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_GetHashCode_
+  commentId: Overload:Veldrid.RgbaByte.GetHashCode
+  fullName: Veldrid.RgbaByte.GetHashCode
+  nameWithType: RgbaByte.GetHashCode
+- uid: Veldrid.RgbaByte.Green
+  name: Green
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Green
+  commentId: F:Veldrid.RgbaByte.Green
+  fullName: Veldrid.RgbaByte.Green
+  nameWithType: RgbaByte.Green
+- uid: Veldrid.RgbaByte.Grey
+  name: Grey
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Grey
+  commentId: F:Veldrid.RgbaByte.Grey
+  fullName: Veldrid.RgbaByte.Grey
+  nameWithType: RgbaByte.Grey
+- uid: Veldrid.RgbaByte.LightGrey
+  name: LightGrey
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_LightGrey
+  commentId: F:Veldrid.RgbaByte.LightGrey
+  fullName: Veldrid.RgbaByte.LightGrey
+  nameWithType: RgbaByte.LightGrey
+- uid: Veldrid.RgbaByte.Orange
+  name: Orange
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Orange
+  commentId: F:Veldrid.RgbaByte.Orange
+  fullName: Veldrid.RgbaByte.Orange
+  nameWithType: RgbaByte.Orange
 - uid: Veldrid.RgbaByte.Pink
   name: Pink
   href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Pink
@@ -3994,6 +4330,12 @@ references:
   commentId: F:Veldrid.RgbaByte.R
   fullName: Veldrid.RgbaByte.R
   nameWithType: RgbaByte.R
+- uid: Veldrid.RgbaByte.Red
+  name: Red
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Red
+  commentId: F:Veldrid.RgbaByte.Red
+  fullName: Veldrid.RgbaByte.Red
+  nameWithType: RgbaByte.Red
 - uid: Veldrid.RgbaByte.ToString
   name: ToString()
   href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_ToString
@@ -4012,6 +4354,12 @@ references:
   commentId: F:Veldrid.RgbaByte.White
   fullName: Veldrid.RgbaByte.White
   nameWithType: RgbaByte.White
+- uid: Veldrid.RgbaByte.Yellow
+  name: Yellow
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Yellow
+  commentId: F:Veldrid.RgbaByte.Yellow
+  fullName: Veldrid.RgbaByte.Yellow
+  nameWithType: RgbaByte.Yellow
 - uid: Veldrid.RgbaFloat
   name: RgbaFloat
   href: api/Veldrid.RgbaFloat.html
