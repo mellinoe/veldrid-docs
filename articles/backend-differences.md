@@ -34,7 +34,7 @@ The above examples are assuming your application uses Direct3D 11 conventions. I
 
 ## OpenGL framebuffer texture coordinates
 
-OpenGL, unlike other graphics API's, has its texture coordinate origin in the bottom-left corner of a texture. Other API's have this origin in the top left. This results in all texture samples being flipped in the Y axis. When sampling regular textures, there is no discernible difference, because texture data is also uploaded starting from that lower-left corner. When sampling a framebuffer attachment, however, the difference is visible, and the sampled data will appear to be flipped across the Y axis. In order to reconcile this difference, there are two main options:
+OpenGL, unlike other graphics API's, has its texture coordinate origin in the bottom-left corner of a texture. Other API's have this origin in the top left. This results in all texture samples being flipped in the Y axis. When sampling regular textures, there is no discernible difference, because texture data is also uploaded starting from that lower-left corner. When sampling a framebuffer attachment, however, the difference is visible, and the sampled data will appear to be flipped across the X axis. In order to reconcile this difference, there are two main options:
 
 1. In your GLSL code, flip the Y value of the relevant texture coordinates. Since shaders are API-specific, this is a logical and straightforward place to put the logic.
 
