@@ -16,7 +16,7 @@ Textures can be 1D, 2D, or 3D. This is controlled by [TextureDescription.Type](x
 
 ## Array Layers
 
-1D and 2D textures can have multiple array layers. 3D textures ([TextureType.Texture3D](xref:Veldrid.TextureType)) cannot. To control the number of array layers, set [TextureDescription.ArrayLayers](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_ArrayLayers)).
+1D and 2D textures can have multiple array layers. 3D textures ([TextureType.Texture3D](xref:Veldrid.TextureType)) cannot. To control the number of array layers, set [TextureDescription.ArrayLayers](xref:Veldrid.TextureDescription#Veldrid_TextureDescription_ArrayLayers).
 
 ## Multisamples
 
