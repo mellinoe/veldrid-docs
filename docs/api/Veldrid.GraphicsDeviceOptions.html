@@ -108,8 +108,38 @@
   
   
   <a id="Veldrid_GraphicsDeviceOptions__ctor_" data-uid="Veldrid.GraphicsDeviceOptions.#ctor*"></a>
+  <h4 id="Veldrid_GraphicsDeviceOptions__ctor_System_Boolean_" data-uid="Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean)">GraphicsDeviceOptions(Boolean)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new GraphicsDeviceOptions for a device with no main Swapchain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsDeviceOptions(bool debug)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">debug</span></td>
+        <td><p>Indicates whether the GraphicsDevice will support debug features, provided they are supported by
+the host system.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDeviceOptions__ctor_" data-uid="Veldrid.GraphicsDeviceOptions.#ctor*"></a>
   <h4 id="Veldrid_GraphicsDeviceOptions__ctor_System_Boolean_System_Nullable_Veldrid_PixelFormat__System_Boolean_" data-uid="Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean)">GraphicsDeviceOptions(Boolean, Nullable&lt;PixelFormat&gt;, Boolean)</h4>
-  <div class="markdown level1 summary"><p>Constructs a new GraphicsDeviceOptions.</p>
+  <div class="markdown level1 summary"><p>Constructs a new GraphicsDeviceOptions for a device with a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -129,7 +159,7 @@
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">debug</span></td>
-        <td><p>Indicates whether the GraphicsDevice will support debug features, provided they are supported by
+        <td><p>Indicates whether the GraphicsDevice will enable debug features, provided they are supported by
 the host system.</p>
 </td>
       </tr>
@@ -143,7 +173,7 @@ swapchain. If this value is null, then no depth buffer will be present on the sw
       <tr>
         <td><span class="xref">System.Boolean</span></td>
         <td><span class="parametername">syncToVerticalBlank</span></td>
-        <td><p>Indicates whether the GraphicsDevice will be synchronized to the window system&apos;s
+        <td><p>Indicates whether the main Swapchain will be synchronized to the window system&apos;s
 vertical refresh rate.</p>
 </td>
       </tr>
@@ -160,6 +190,32 @@ vertical refresh rate.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public bool Debug</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_GraphicsDeviceOptions_HasMainSwapchain" data-uid="Veldrid.GraphicsDeviceOptions.HasMainSwapchain">HasMainSwapchain</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the Graphicsdevice will include a &quot;main&quot; Swapchain. If this value is true, then the GraphicsDevice
+must be created with one of the overloads that provides Swapchain source information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool HasMainSwapchain</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +261,7 @@ no depth buffer will be present on the swapchain.</p>
   
   
   <h4 id="Veldrid_GraphicsDeviceOptions_SyncToVerticalBlank" data-uid="Veldrid.GraphicsDeviceOptions.SyncToVerticalBlank">SyncToVerticalBlank</h4>
-  <div class="markdown level1 summary"><p>Indicates whether the GraphicsDevice will be synchronized to the window system&apos;s vertical refresh rate.</p>
+  <div class="markdown level1 summary"><p>Indicates whether the main Swapchain will be synchronized to the window system&apos;s vertical refresh rate.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

@@ -1969,6 +1969,12 @@ references:
   commentId: Overload:Veldrid.GraphicsDevice.BackendType
   fullName: Veldrid.GraphicsDevice.BackendType
   nameWithType: GraphicsDevice.BackendType
+- uid: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions)
+  name: CreateD3D11(GraphicsDeviceOptions)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_
+  commentId: M:Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions)
+  fullName: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions)
+  nameWithType: GraphicsDevice.CreateD3D11(GraphicsDeviceOptions)
 - uid: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,IntPtr,System.UInt32,System.UInt32)
   name: CreateD3D11(GraphicsDeviceOptions, IntPtr, UInt32, UInt32)
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_IntPtr_System_UInt32_System_UInt32_
@@ -1981,18 +1987,36 @@ references:
   commentId: M:Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,System.Object,System.Double,System.Double,System.Single)
   fullName: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions, System.Object, System.Double, System.Double, System.Single)
   nameWithType: GraphicsDevice.CreateD3D11(GraphicsDeviceOptions, Object, Double, Double, Single)
+- uid: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)
+  name: CreateD3D11(GraphicsDeviceOptions, SwapchainDescription)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_
+  commentId: M:Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)
+  fullName: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions, Veldrid.SwapchainDescription)
+  nameWithType: GraphicsDevice.CreateD3D11(GraphicsDeviceOptions, SwapchainDescription)
 - uid: Veldrid.GraphicsDevice.CreateD3D11*
   name: CreateD3D11
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_
   commentId: Overload:Veldrid.GraphicsDevice.CreateD3D11
   fullName: Veldrid.GraphicsDevice.CreateD3D11
   nameWithType: GraphicsDevice.CreateD3D11
+- uid: Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions)
+  name: CreateMetal(GraphicsDeviceOptions)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateMetal_Veldrid_GraphicsDeviceOptions_
+  commentId: M:Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions)
+  fullName: Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions)
+  nameWithType: GraphicsDevice.CreateMetal(GraphicsDeviceOptions)
 - uid: Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions,IntPtr)
   name: CreateMetal(GraphicsDeviceOptions, IntPtr)
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateMetal_Veldrid_GraphicsDeviceOptions_IntPtr_
   commentId: M:Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions,IntPtr)
   fullName: Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions, IntPtr)
   nameWithType: GraphicsDevice.CreateMetal(GraphicsDeviceOptions, IntPtr)
+- uid: Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)
+  name: CreateMetal(GraphicsDeviceOptions, SwapchainDescription)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateMetal_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_
+  commentId: M:Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)
+  fullName: Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions, Veldrid.SwapchainDescription)
+  nameWithType: GraphicsDevice.CreateMetal(GraphicsDeviceOptions, SwapchainDescription)
 - uid: Veldrid.GraphicsDevice.CreateMetal*
   name: CreateMetal
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateMetal_
@@ -2011,6 +2035,18 @@ references:
   commentId: Overload:Veldrid.GraphicsDevice.CreateOpenGL
   fullName: Veldrid.GraphicsDevice.CreateOpenGL
   nameWithType: GraphicsDevice.CreateOpenGL
+- uid: Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions)
+  name: CreateVulkan(GraphicsDeviceOptions)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_
+  commentId: M:Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions)
+  fullName: Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions)
+  nameWithType: GraphicsDevice.CreateVulkan(GraphicsDeviceOptions)
+- uid: Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)
+  name: CreateVulkan(GraphicsDeviceOptions, SwapchainDescription)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_
+  commentId: M:Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)
+  fullName: Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions, Veldrid.SwapchainDescription)
+  nameWithType: GraphicsDevice.CreateVulkan(GraphicsDeviceOptions, SwapchainDescription)
 - uid: Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions,Veldrid.Vk.VkSurfaceSource,System.UInt32,System.UInt32)
   name: CreateVulkan(GraphicsDeviceOptions, VkSurfaceSource, UInt32, UInt32)
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_Vk_VkSurfaceSource_System_UInt32_System_UInt32_
@@ -2083,6 +2119,18 @@ references:
   commentId: Overload:Veldrid.GraphicsDevice.LinearSampler
   fullName: Veldrid.GraphicsDevice.LinearSampler
   nameWithType: GraphicsDevice.LinearSampler
+- uid: Veldrid.GraphicsDevice.MainSwapchain
+  name: MainSwapchain
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MainSwapchain
+  commentId: P:Veldrid.GraphicsDevice.MainSwapchain
+  fullName: Veldrid.GraphicsDevice.MainSwapchain
+  nameWithType: GraphicsDevice.MainSwapchain
+- uid: Veldrid.GraphicsDevice.MainSwapchain*
+  name: MainSwapchain
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MainSwapchain_
+  commentId: Overload:Veldrid.GraphicsDevice.MainSwapchain
+  fullName: Veldrid.GraphicsDevice.MainSwapchain
+  nameWithType: GraphicsDevice.MainSwapchain
 - uid: Veldrid.GraphicsDevice.Map(Veldrid.MappableResource,Veldrid.MapMode)
   name: Map(MappableResource, MapMode)
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_
@@ -2239,18 +2287,24 @@ references:
   commentId: M:Veldrid.GraphicsDevice.SwapBuffers
   fullName: Veldrid.GraphicsDevice.SwapBuffers()
   nameWithType: GraphicsDevice.SwapBuffers()
+- uid: Veldrid.GraphicsDevice.SwapBuffers(Veldrid.Swapchain)
+  name: SwapBuffers(Swapchain)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffers_Veldrid_Swapchain_
+  commentId: M:Veldrid.GraphicsDevice.SwapBuffers(Veldrid.Swapchain)
+  fullName: Veldrid.GraphicsDevice.SwapBuffers(Veldrid.Swapchain)
+  nameWithType: GraphicsDevice.SwapBuffers(Swapchain)
 - uid: Veldrid.GraphicsDevice.SwapBuffers*
   name: SwapBuffers
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffers_
   commentId: Overload:Veldrid.GraphicsDevice.SwapBuffers
   fullName: Veldrid.GraphicsDevice.SwapBuffers
   nameWithType: GraphicsDevice.SwapBuffers
-- uid: Veldrid.GraphicsDevice.SwapBuffersCore
-  name: SwapBuffersCore()
-  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffersCore
-  commentId: M:Veldrid.GraphicsDevice.SwapBuffersCore
-  fullName: Veldrid.GraphicsDevice.SwapBuffersCore()
-  nameWithType: GraphicsDevice.SwapBuffersCore()
+- uid: Veldrid.GraphicsDevice.SwapBuffersCore(Veldrid.Swapchain)
+  name: SwapBuffersCore(Swapchain)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffersCore_Veldrid_Swapchain_
+  commentId: M:Veldrid.GraphicsDevice.SwapBuffersCore(Veldrid.Swapchain)
+  fullName: Veldrid.GraphicsDevice.SwapBuffersCore(Veldrid.Swapchain)
+  nameWithType: GraphicsDevice.SwapBuffersCore(Swapchain)
 - uid: Veldrid.GraphicsDevice.SwapBuffersCore*
   name: SwapBuffersCore
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffersCore_
@@ -2482,6 +2536,12 @@ references:
   commentId: T:Veldrid.GraphicsDeviceOptions
   fullName: Veldrid.GraphicsDeviceOptions
   nameWithType: GraphicsDeviceOptions
+- uid: Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean)
+  name: GraphicsDeviceOptions(Boolean)
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions__ctor_System_Boolean_
+  commentId: M:Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean)
+  fullName: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean)
+  nameWithType: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean)
 - uid: Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean)
   name: GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean)
   href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions__ctor_System_Boolean_System_Nullable_Veldrid_PixelFormat__System_Boolean_
@@ -2503,6 +2563,12 @@ references:
   commentId: F:Veldrid.GraphicsDeviceOptions.Debug
   fullName: Veldrid.GraphicsDeviceOptions.Debug
   nameWithType: GraphicsDeviceOptions.Debug
+- uid: Veldrid.GraphicsDeviceOptions.HasMainSwapchain
+  name: HasMainSwapchain
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_HasMainSwapchain
+  commentId: F:Veldrid.GraphicsDeviceOptions.HasMainSwapchain
+  fullName: Veldrid.GraphicsDeviceOptions.HasMainSwapchain
+  nameWithType: GraphicsDeviceOptions.HasMainSwapchain
 - uid: Veldrid.GraphicsDeviceOptions.SwapchainDepthFormat
   name: SwapchainDepthFormat
   href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_SwapchainDepthFormat
@@ -3850,6 +3916,27 @@ references:
   commentId: Overload:Veldrid.ResourceFactory.CreateShader
   fullName: Veldrid.ResourceFactory.CreateShader
   nameWithType: ResourceFactory.CreateShader
+- uid: Veldrid.ResourceFactory.CreateSwapchain(Veldrid.SwapchainDescription)
+  name: CreateSwapchain(SwapchainDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateSwapchain_Veldrid_SwapchainDescription_
+  commentId: M:Veldrid.ResourceFactory.CreateSwapchain(Veldrid.SwapchainDescription)
+  fullName: Veldrid.ResourceFactory.CreateSwapchain(Veldrid.SwapchainDescription)
+  nameWithType: ResourceFactory.CreateSwapchain(SwapchainDescription)
+- uid: Veldrid.ResourceFactory.CreateSwapchain(Veldrid.SwapchainDescription@)
+  name: CreateSwapchain(ref SwapchainDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateSwapchain_Veldrid_SwapchainDescription__
+  commentId: M:Veldrid.ResourceFactory.CreateSwapchain(Veldrid.SwapchainDescription@)
+  name.vb: CreateSwapchain(ByRef SwapchainDescription)
+  fullName: Veldrid.ResourceFactory.CreateSwapchain(ref Veldrid.SwapchainDescription)
+  fullName.vb: Veldrid.ResourceFactory.CreateSwapchain(ByRef Veldrid.SwapchainDescription)
+  nameWithType: ResourceFactory.CreateSwapchain(ref SwapchainDescription)
+  nameWithType.vb: ResourceFactory.CreateSwapchain(ByRef SwapchainDescription)
+- uid: Veldrid.ResourceFactory.CreateSwapchain*
+  name: CreateSwapchain
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateSwapchain_
+  commentId: Overload:Veldrid.ResourceFactory.CreateSwapchain
+  fullName: Veldrid.ResourceFactory.CreateSwapchain
+  nameWithType: ResourceFactory.CreateSwapchain
 - uid: Veldrid.ResourceFactory.CreateTexture(Veldrid.TextureDescription)
   name: CreateTexture(TextureDescription)
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateTexture_Veldrid_TextureDescription_
@@ -5173,6 +5260,213 @@ references:
   commentId: F:Veldrid.StencilOperation.Zero
   fullName: Veldrid.StencilOperation.Zero
   nameWithType: StencilOperation.Zero
+- uid: Veldrid.Swapchain
+  name: Swapchain
+  href: api/Veldrid.Swapchain.html
+  commentId: T:Veldrid.Swapchain
+  fullName: Veldrid.Swapchain
+  nameWithType: Swapchain
+- uid: Veldrid.Swapchain.Dispose
+  name: Dispose()
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Dispose
+  commentId: M:Veldrid.Swapchain.Dispose
+  fullName: Veldrid.Swapchain.Dispose()
+  nameWithType: Swapchain.Dispose()
+- uid: Veldrid.Swapchain.Dispose*
+  name: Dispose
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Dispose_
+  commentId: Overload:Veldrid.Swapchain.Dispose
+  fullName: Veldrid.Swapchain.Dispose
+  nameWithType: Swapchain.Dispose
+- uid: Veldrid.Swapchain.Framebuffer
+  name: Framebuffer
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Framebuffer
+  commentId: P:Veldrid.Swapchain.Framebuffer
+  fullName: Veldrid.Swapchain.Framebuffer
+  nameWithType: Swapchain.Framebuffer
+- uid: Veldrid.Swapchain.Framebuffer*
+  name: Framebuffer
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Framebuffer_
+  commentId: Overload:Veldrid.Swapchain.Framebuffer
+  fullName: Veldrid.Swapchain.Framebuffer
+  nameWithType: Swapchain.Framebuffer
+- uid: Veldrid.Swapchain.Name
+  name: Name
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Name
+  commentId: P:Veldrid.Swapchain.Name
+  fullName: Veldrid.Swapchain.Name
+  nameWithType: Swapchain.Name
+- uid: Veldrid.Swapchain.Name*
+  name: Name
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Name_
+  commentId: Overload:Veldrid.Swapchain.Name
+  fullName: Veldrid.Swapchain.Name
+  nameWithType: Swapchain.Name
+- uid: Veldrid.Swapchain.Resize(System.UInt32,System.UInt32)
+  name: Resize(UInt32, UInt32)
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Resize_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.Swapchain.Resize(System.UInt32,System.UInt32)
+  fullName: Veldrid.Swapchain.Resize(System.UInt32, System.UInt32)
+  nameWithType: Swapchain.Resize(UInt32, UInt32)
+- uid: Veldrid.Swapchain.Resize*
+  name: Resize
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Resize_
+  commentId: Overload:Veldrid.Swapchain.Resize
+  fullName: Veldrid.Swapchain.Resize
+  nameWithType: Swapchain.Resize
+- uid: Veldrid.Swapchain.SyncToVerticalBlank
+  name: SyncToVerticalBlank
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_SyncToVerticalBlank
+  commentId: P:Veldrid.Swapchain.SyncToVerticalBlank
+  fullName: Veldrid.Swapchain.SyncToVerticalBlank
+  nameWithType: Swapchain.SyncToVerticalBlank
+- uid: Veldrid.Swapchain.SyncToVerticalBlank*
+  name: SyncToVerticalBlank
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_SyncToVerticalBlank_
+  commentId: Overload:Veldrid.Swapchain.SyncToVerticalBlank
+  fullName: Veldrid.Swapchain.SyncToVerticalBlank
+  nameWithType: Swapchain.SyncToVerticalBlank
+- uid: Veldrid.SwapchainDescription
+  name: SwapchainDescription
+  href: api/Veldrid.SwapchainDescription.html
+  commentId: T:Veldrid.SwapchainDescription
+  fullName: Veldrid.SwapchainDescription
+  nameWithType: SwapchainDescription
+- uid: Veldrid.SwapchainDescription.#ctor(Veldrid.SwapchainSource,System.UInt32,System.UInt32,System.Nullable{Veldrid.PixelFormat},System.Boolean)
+  name: SwapchainDescription(SwapchainSource, UInt32, UInt32, Nullable<PixelFormat>, Boolean)
+  href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription__ctor_Veldrid_SwapchainSource_System_UInt32_System_UInt32_System_Nullable_Veldrid_PixelFormat__System_Boolean_
+  commentId: M:Veldrid.SwapchainDescription.#ctor(Veldrid.SwapchainSource,System.UInt32,System.UInt32,System.Nullable{Veldrid.PixelFormat},System.Boolean)
+  name.vb: SwapchainDescription(SwapchainSource, UInt32, UInt32, Nullable(Of PixelFormat), Boolean)
+  fullName: Veldrid.SwapchainDescription.SwapchainDescription(Veldrid.SwapchainSource, System.UInt32, System.UInt32, System.Nullable<Veldrid.PixelFormat>, System.Boolean)
+  fullName.vb: Veldrid.SwapchainDescription.SwapchainDescription(Veldrid.SwapchainSource, System.UInt32, System.UInt32, System.Nullable(Of Veldrid.PixelFormat), System.Boolean)
+  nameWithType: SwapchainDescription.SwapchainDescription(SwapchainSource, UInt32, UInt32, Nullable<PixelFormat>, Boolean)
+  nameWithType.vb: SwapchainDescription.SwapchainDescription(SwapchainSource, UInt32, UInt32, Nullable(Of PixelFormat), Boolean)
+- uid: Veldrid.SwapchainDescription.#ctor*
+  name: SwapchainDescription
+  href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription__ctor_
+  commentId: Overload:Veldrid.SwapchainDescription.#ctor
+  fullName: Veldrid.SwapchainDescription.SwapchainDescription
+  nameWithType: SwapchainDescription.SwapchainDescription
+- uid: Veldrid.SwapchainDescription.DepthFormat
+  name: DepthFormat
+  href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_DepthFormat
+  commentId: F:Veldrid.SwapchainDescription.DepthFormat
+  fullName: Veldrid.SwapchainDescription.DepthFormat
+  nameWithType: SwapchainDescription.DepthFormat
+- uid: Veldrid.SwapchainDescription.Equals(Veldrid.SwapchainDescription)
+  name: Equals(SwapchainDescription)
+  href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_Equals_Veldrid_SwapchainDescription_
+  commentId: M:Veldrid.SwapchainDescription.Equals(Veldrid.SwapchainDescription)
+  fullName: Veldrid.SwapchainDescription.Equals(Veldrid.SwapchainDescription)
+  nameWithType: SwapchainDescription.Equals(SwapchainDescription)
+- uid: Veldrid.SwapchainDescription.Equals*
+  name: Equals
+  href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_Equals_
+  commentId: Overload:Veldrid.SwapchainDescription.Equals
+  fullName: Veldrid.SwapchainDescription.Equals
+  nameWithType: SwapchainDescription.Equals
+- uid: Veldrid.SwapchainDescription.GetHashCode
+  name: GetHashCode()
+  href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_GetHashCode
+  commentId: M:Veldrid.SwapchainDescription.GetHashCode
+  fullName: Veldrid.SwapchainDescription.GetHashCode()
+  nameWithType: SwapchainDescription.GetHashCode()
+- uid: Veldrid.SwapchainDescription.GetHashCode*
+  name: GetHashCode
+  href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_GetHashCode_
+  commentId: Overload:Veldrid.SwapchainDescription.GetHashCode
+  fullName: Veldrid.SwapchainDescription.GetHashCode
+  nameWithType: SwapchainDescription.GetHashCode
+- uid: Veldrid.SwapchainDescription.Height
+  name: Height
+  href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_Height
+  commentId: F:Veldrid.SwapchainDescription.Height
+  fullName: Veldrid.SwapchainDescription.Height
+  nameWithType: SwapchainDescription.Height
+- uid: Veldrid.SwapchainDescription.Source
+  name: Source
+  href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_Source
+  commentId: F:Veldrid.SwapchainDescription.Source
+  fullName: Veldrid.SwapchainDescription.Source
+  nameWithType: SwapchainDescription.Source
+- uid: Veldrid.SwapchainDescription.SyncToVerticalBlank
+  name: SyncToVerticalBlank
+  href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_SyncToVerticalBlank
+  commentId: F:Veldrid.SwapchainDescription.SyncToVerticalBlank
+  fullName: Veldrid.SwapchainDescription.SyncToVerticalBlank
+  nameWithType: SwapchainDescription.SyncToVerticalBlank
+- uid: Veldrid.SwapchainDescription.Width
+  name: Width
+  href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_Width
+  commentId: F:Veldrid.SwapchainDescription.Width
+  fullName: Veldrid.SwapchainDescription.Width
+  nameWithType: SwapchainDescription.Width
+- uid: Veldrid.SwapchainSource
+  name: SwapchainSource
+  href: api/Veldrid.SwapchainSource.html
+  commentId: T:Veldrid.SwapchainSource
+  fullName: Veldrid.SwapchainSource
+  nameWithType: SwapchainSource
+- uid: Veldrid.SwapchainSource.CreateNSWindow(IntPtr)
+  name: CreateNSWindow(IntPtr)
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateNSWindow_IntPtr_
+  commentId: M:Veldrid.SwapchainSource.CreateNSWindow(IntPtr)
+  fullName: Veldrid.SwapchainSource.CreateNSWindow(IntPtr)
+  nameWithType: SwapchainSource.CreateNSWindow(IntPtr)
+- uid: Veldrid.SwapchainSource.CreateNSWindow*
+  name: CreateNSWindow
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateNSWindow_
+  commentId: Overload:Veldrid.SwapchainSource.CreateNSWindow
+  fullName: Veldrid.SwapchainSource.CreateNSWindow
+  nameWithType: SwapchainSource.CreateNSWindow
+- uid: Veldrid.SwapchainSource.CreateUIView(IntPtr)
+  name: CreateUIView(IntPtr)
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateUIView_IntPtr_
+  commentId: M:Veldrid.SwapchainSource.CreateUIView(IntPtr)
+  fullName: Veldrid.SwapchainSource.CreateUIView(IntPtr)
+  nameWithType: SwapchainSource.CreateUIView(IntPtr)
+- uid: Veldrid.SwapchainSource.CreateUIView*
+  name: CreateUIView
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateUIView_
+  commentId: Overload:Veldrid.SwapchainSource.CreateUIView
+  fullName: Veldrid.SwapchainSource.CreateUIView
+  nameWithType: SwapchainSource.CreateUIView
+- uid: Veldrid.SwapchainSource.CreateUwp(System.Object,System.Single)
+  name: CreateUwp(Object, Single)
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateUwp_System_Object_System_Single_
+  commentId: M:Veldrid.SwapchainSource.CreateUwp(System.Object,System.Single)
+  fullName: Veldrid.SwapchainSource.CreateUwp(System.Object, System.Single)
+  nameWithType: SwapchainSource.CreateUwp(Object, Single)
+- uid: Veldrid.SwapchainSource.CreateUwp*
+  name: CreateUwp
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateUwp_
+  commentId: Overload:Veldrid.SwapchainSource.CreateUwp
+  fullName: Veldrid.SwapchainSource.CreateUwp
+  nameWithType: SwapchainSource.CreateUwp
+- uid: Veldrid.SwapchainSource.CreateWin32(IntPtr,IntPtr)
+  name: CreateWin32(IntPtr, IntPtr)
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateWin32_IntPtr_IntPtr_
+  commentId: M:Veldrid.SwapchainSource.CreateWin32(IntPtr,IntPtr)
+  fullName: Veldrid.SwapchainSource.CreateWin32(IntPtr, IntPtr)
+  nameWithType: SwapchainSource.CreateWin32(IntPtr, IntPtr)
+- uid: Veldrid.SwapchainSource.CreateWin32*
+  name: CreateWin32
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateWin32_
+  commentId: Overload:Veldrid.SwapchainSource.CreateWin32
+  fullName: Veldrid.SwapchainSource.CreateWin32
+  nameWithType: SwapchainSource.CreateWin32
+- uid: Veldrid.SwapchainSource.CreateXlib(IntPtr,IntPtr)
+  name: CreateXlib(IntPtr, IntPtr)
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateXlib_IntPtr_IntPtr_
+  commentId: M:Veldrid.SwapchainSource.CreateXlib(IntPtr,IntPtr)
+  fullName: Veldrid.SwapchainSource.CreateXlib(IntPtr, IntPtr)
+  nameWithType: SwapchainSource.CreateXlib(IntPtr, IntPtr)
+- uid: Veldrid.SwapchainSource.CreateXlib*
+  name: CreateXlib
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateXlib_
+  commentId: Overload:Veldrid.SwapchainSource.CreateXlib
+  fullName: Veldrid.SwapchainSource.CreateXlib
+  nameWithType: SwapchainSource.CreateXlib
 - uid: Veldrid.Texture
   name: Texture
   href: api/Veldrid.Texture.html

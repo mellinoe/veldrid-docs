@@ -171,6 +171,33 @@ This object is created with <a class="xref" href="Veldrid.SamplerDescription.htm
   </table>
   
   
+  <a id="Veldrid_GraphicsDevice_MainSwapchain_" data-uid="Veldrid.GraphicsDevice.MainSwapchain*"></a>
+  <h4 id="Veldrid_GraphicsDevice_MainSwapchain" data-uid="Veldrid.GraphicsDevice.MainSwapchain">MainSwapchain</h4>
+  <div class="markdown level1 summary"><p>Retrieves the main Swapchain for this device. This property is only valid if the device was created with a main
+Swapchain, and will return null otherwise.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract Swapchain MainSwapchain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Swapchain.html">Swapchain</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_GraphicsDevice_PointSampler_" data-uid="Veldrid.GraphicsDevice.PointSampler*"></a>
   <h4 id="Veldrid_GraphicsDevice_PointSampler" data-uid="Veldrid.GraphicsDevice.PointSampler">PointSampler</h4>
   <div class="markdown level1 summary"><p>Gets a simple point-filtered <a class="xref" href="Veldrid.Sampler.html">Sampler</a> object owned by this instance.
@@ -226,12 +253,14 @@ This object is created with <a class="xref" href="Veldrid.SamplerDescription.htm
   
   <a id="Veldrid_GraphicsDevice_SwapchainFramebuffer_" data-uid="Veldrid.GraphicsDevice.SwapchainFramebuffer*"></a>
   <h4 id="Veldrid_GraphicsDevice_SwapchainFramebuffer" data-uid="Veldrid.GraphicsDevice.SwapchainFramebuffer">SwapchainFramebuffer</h4>
-  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> object representing the render targets of the main swapchain.</p>
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> object representing the render targets of the main swapchain.
+This is equivalent to <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MainSwapchain">MainSwapchain</a>.<a class="xref" href="Veldrid.Swapchain.html#Veldrid_Swapchain_Framebuffer">Framebuffer</a>.
+If this GraphicsDevice was created without a main Swapchain, then this returns null.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Framebuffer SwapchainFramebuffer { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public Framebuffer SwapchainFramebuffer { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -252,12 +281,15 @@ This object is created with <a class="xref" href="Veldrid.SamplerDescription.htm
   
   <a id="Veldrid_GraphicsDevice_SyncToVerticalBlank_" data-uid="Veldrid.GraphicsDevice.SyncToVerticalBlank*"></a>
   <h4 id="Veldrid_GraphicsDevice_SyncToVerticalBlank" data-uid="Veldrid.GraphicsDevice.SyncToVerticalBlank">SyncToVerticalBlank</h4>
-  <div class="markdown level1 summary"><p>Gets or sets whether <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffers">SwapBuffers()</a> should be synchronized to the window system&apos;s vertical refresh rate.</p>
+  <div class="markdown level1 summary"><p>Gets or sets whether the main Swapchain&apos;s <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffers">SwapBuffers()</a> should be synchronized to the window system&apos;s
+vertical refresh rate.
+This is equivalent to <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MainSwapchain">MainSwapchain</a>.<a class="xref" href="Veldrid.Swapchain.html#Veldrid_Swapchain_SyncToVerticalBlank">SyncToVerticalBlank</a>.
+This property cannot be set if this GraphicsDevice was created without a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract bool SyncToVerticalBlank { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual bool SyncToVerticalBlank { get; set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -279,8 +311,53 @@ This object is created with <a class="xref" href="Veldrid.SamplerDescription.htm
   
   
   <a id="Veldrid_GraphicsDevice_CreateD3D11_" data-uid="Veldrid.GraphicsDevice.CreateD3D11*"></a>
-  <h4 id="Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_IntPtr_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,IntPtr,System.UInt32,System.UInt32)">CreateD3D11(GraphicsDeviceOptions, IntPtr, UInt32, UInt32)</h4>
+  <h4 id="Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_" data-uid="Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions)">CreateD3D11(GraphicsDeviceOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Direct3D 11.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateD3D11(GraphicsDeviceOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Describes several common properties of the GraphicsDevice.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the Direct3D 11 API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_CreateD3D11_" data-uid="Veldrid.GraphicsDevice.CreateD3D11*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_IntPtr_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,IntPtr,System.UInt32,System.UInt32)">CreateD3D11(GraphicsDeviceOptions, IntPtr, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Direct3D 11, with a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -343,7 +420,7 @@ This object is created with <a class="xref" href="Veldrid.SamplerDescription.htm
   
   <a id="Veldrid_GraphicsDevice_CreateD3D11_" data-uid="Veldrid.GraphicsDevice.CreateD3D11*"></a>
   <h4 id="Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_System_Object_System_Double_System_Double_System_Single_" data-uid="Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,System.Object,System.Double,System.Double,System.Single)">CreateD3D11(GraphicsDeviceOptions, Object, Double, Double, Single)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Direct3D 11.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Direct3D 11, with a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -411,9 +488,105 @@ or SwapChainBackgroundPanel contained in your application window.</p>
   </table>
   
   
+  <a id="Veldrid_GraphicsDevice_CreateD3D11_" data-uid="Veldrid.GraphicsDevice.CreateD3D11*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_" data-uid="Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)">CreateD3D11(GraphicsDeviceOptions, SwapchainDescription)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Direct3D 11, with a main Swapchain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateD3D11(GraphicsDeviceOptions options, SwapchainDescription swapchainDescription)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Describes several common properties of the GraphicsDevice.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.SwapchainDescription.html">SwapchainDescription</a></td>
+        <td><span class="parametername">swapchainDescription</span></td>
+        <td><p>A description of the main Swapchain to create.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the Direct3D 11 API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_CreateMetal_" data-uid="Veldrid.GraphicsDevice.CreateMetal*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateMetal_Veldrid_GraphicsDeviceOptions_" data-uid="Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions)">CreateMetal(GraphicsDeviceOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Metal.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateMetal(GraphicsDeviceOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Describes several common properties of the GraphicsDevice.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the Metal API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_GraphicsDevice_CreateMetal_" data-uid="Veldrid.GraphicsDevice.CreateMetal*"></a>
   <h4 id="Veldrid_GraphicsDevice_CreateMetal_Veldrid_GraphicsDeviceOptions_IntPtr_" data-uid="Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions,IntPtr)">CreateMetal(GraphicsDeviceOptions, IntPtr)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Metal.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Metal, with a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -462,9 +635,60 @@ or SwapChainBackgroundPanel contained in your application window.</p>
   </table>
   
   
+  <a id="Veldrid_GraphicsDevice_CreateMetal_" data-uid="Veldrid.GraphicsDevice.CreateMetal*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateMetal_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_" data-uid="Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)">CreateMetal(GraphicsDeviceOptions, SwapchainDescription)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Metal, with a main Swapchain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateMetal(GraphicsDeviceOptions options, SwapchainDescription swapchainDescription)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Describes several common properties of the GraphicsDevice.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.SwapchainDescription.html">SwapchainDescription</a></td>
+        <td><span class="parametername">swapchainDescription</span></td>
+        <td><p>A description of the main Swapchain to create.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the Metal API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_GraphicsDevice_CreateOpenGL_" data-uid="Veldrid.GraphicsDevice.CreateOpenGL*"></a>
   <h4 id="Veldrid_GraphicsDevice_CreateOpenGL_Veldrid_GraphicsDeviceOptions_Veldrid_OpenGL_OpenGLPlatformInfo_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.GraphicsDeviceOptions,Veldrid.OpenGL.OpenGLPlatformInfo,System.UInt32,System.UInt32)">CreateOpenGL(GraphicsDeviceOptions, OpenGLPlatformInfo, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using OpenGL.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using OpenGL, with a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -527,8 +751,104 @@ information.</p>
   
   
   <a id="Veldrid_GraphicsDevice_CreateVulkan_" data-uid="Veldrid.GraphicsDevice.CreateVulkan*"></a>
-  <h4 id="Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_Vk_VkSurfaceSource_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions,Veldrid.Vk.VkSurfaceSource,System.UInt32,System.UInt32)">CreateVulkan(GraphicsDeviceOptions, VkSurfaceSource, UInt32, UInt32)</h4>
+  <h4 id="Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_" data-uid="Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions)">CreateVulkan(GraphicsDeviceOptions)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Vulkan.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateVulkan(GraphicsDeviceOptions options)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Describes several common properties of the GraphicsDevice.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the Vulkan API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_CreateVulkan_" data-uid="Veldrid.GraphicsDevice.CreateVulkan*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_" data-uid="Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)">CreateVulkan(GraphicsDeviceOptions, SwapchainDescription)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Vulkan, with a main Swapchain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateVulkan(GraphicsDeviceOptions options, SwapchainDescription swapchainDescription)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Describes several common properties of the GraphicsDevice.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.SwapchainDescription.html">SwapchainDescription</a></td>
+        <td><span class="parametername">swapchainDescription</span></td>
+        <td><p>A description of the main Swapchain to create.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the Vulkan API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_CreateVulkan_" data-uid="Veldrid.GraphicsDevice.CreateVulkan*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_Vk_VkSurfaceSource_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions,Veldrid.Vk.VkSurfaceSource,System.UInt32,System.UInt32)">CreateVulkan(GraphicsDeviceOptions, VkSurfaceSource, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Vulkan, with a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1087,12 +1407,14 @@ view over that region.</p>
   <a id="Veldrid_GraphicsDevice_ResizeMainWindow_" data-uid="Veldrid.GraphicsDevice.ResizeMainWindow*"></a>
   <h4 id="Veldrid_GraphicsDevice_ResizeMainWindow_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.ResizeMainWindow(System.UInt32,System.UInt32)">ResizeMainWindow(UInt32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Notifies this instance that the main window has been resized. This causes the <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">SwapchainFramebuffer</a> to
-be appropriately resized and recreated.</p>
+be appropriately resized and recreated.
+This is equivalent to calling <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MainSwapchain">MainSwapchain</a>.<a class="xref" href="Veldrid.Swapchain.html#Veldrid_Swapchain_Resize_System_UInt32_System_UInt32_">Resize(UInt32, UInt32)</a>.
+This method can only be called if this GraphicsDevice was created with a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void ResizeMainWindow(uint width, uint height)</code></pre>
+    <pre><code class="lang-csharp hljs">public void ResizeMainWindow(uint width, uint height)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1227,7 +1549,9 @@ execution.</p>
   
   <a id="Veldrid_GraphicsDevice_SwapBuffers_" data-uid="Veldrid.GraphicsDevice.SwapBuffers*"></a>
   <h4 id="Veldrid_GraphicsDevice_SwapBuffers" data-uid="Veldrid.GraphicsDevice.SwapBuffers">SwapBuffers()</h4>
-  <div class="markdown level1 summary"><p>Swaps the buffers of the swapchain and presents the rendered image to the screen.</p>
+  <div class="markdown level1 summary"><p>Swaps the buffers of the main swapchain and presents the rendered image to the screen.
+This is equivalent to passing <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MainSwapchain">MainSwapchain</a> to <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffers_Veldrid_Swapchain_">SwapBuffers(Swapchain)</a>.
+This method can only be called if this GraphicsDevice was created with a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1236,14 +1560,60 @@ execution.</p>
   </div>
   
   
+  <a id="Veldrid_GraphicsDevice_SwapBuffers_" data-uid="Veldrid.GraphicsDevice.SwapBuffers*"></a>
+  <h4 id="Veldrid_GraphicsDevice_SwapBuffers_Veldrid_Swapchain_" data-uid="Veldrid.GraphicsDevice.SwapBuffers(Veldrid.Swapchain)">SwapBuffers(Swapchain)</h4>
+  <div class="markdown level1 summary"><p>Swaps the buffers of the given swapchain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SwapBuffers(Swapchain swapchain)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Swapchain.html">Swapchain</a></td>
+        <td><span class="parametername">swapchain</span></td>
+        <td><p>The <a class="xref" href="Veldrid.Swapchain.html">Swapchain</a> to swap and present.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_GraphicsDevice_SwapBuffersCore_" data-uid="Veldrid.GraphicsDevice.SwapBuffersCore*"></a>
-  <h4 id="Veldrid_GraphicsDevice_SwapBuffersCore" data-uid="Veldrid.GraphicsDevice.SwapBuffersCore">SwapBuffersCore()</h4>
+  <h4 id="Veldrid_GraphicsDevice_SwapBuffersCore_Veldrid_Swapchain_" data-uid="Veldrid.GraphicsDevice.SwapBuffersCore(Veldrid.Swapchain)">SwapBuffersCore(Swapchain)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SwapBuffersCore()</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void SwapBuffersCore(Swapchain swapchain)</code></pre>
   </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Swapchain.html">Swapchain</a></td>
+        <td><span class="parametername">swapchain</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Veldrid_GraphicsDevice_Unmap_" data-uid="Veldrid.GraphicsDevice.Unmap*"></a>
