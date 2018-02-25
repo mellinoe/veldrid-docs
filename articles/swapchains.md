@@ -16,7 +16,7 @@ Overloads that only accept a `GraphicsDeviceOptions` parameter do NOT create a m
 * [GraphicsDevice.SwapBuffers()](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapBuffers) _Parameter-less overload only_
 * [GraphicsDevice.ResizeMainWindow(UInt32, UInt32)](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_ResizeMainWindow_System_UInt32_System_UInt32_)
 * [GraphicsDevice.SwapchainFramebuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer)
-* [GraphicsDevice.SyncToVerticalBlank](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice#SyncToVerticalBlank)
+* [GraphicsDevice.SyncToVerticalBlank](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SyncToVerticalBlank)
 
 
 NOTE: Calling any of the above members is equivalent to calling the same functions on [GraphicsDevice.MainSwapchain](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_MainSwapchain). There is no functional difference.
@@ -37,7 +37,7 @@ There are three main operations on a Swapchain: Rendering to it, presenting it, 
 
 Rendering to a Swapchain is accomplished by using its [Framebuffer](xref:Veldrid.Swapchain#Veldrid_Swapchain_Framebuffer) property. Bind this object using a [CommandList](xref:Veldrid.CommandList), and then issue draw commands. This Framebuffer is the same as any other Framebuffer in Veldrid.
 
-Presenting a Framebuffer is accomplished by calling [GraphicDevice.SwapBuffers(Swapchain)](xref:Veldrid.GraphicsDevice#Veldrid_Graphics_SwapBuffers_Veldrid_Swapchain_). This should be called after the relevant drawing commands have been submitted.
+Presenting a Framebuffer is accomplished by calling [GraphicDevice.SwapBuffers(Swapchain)](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapBuffers_Veldrid_Swapchain_). This should be called after the relevant drawing commands have been submitted.
 
 Resizing a Swapchain is accomplished by calling [Resize(UInt32, UInt32)](xref:Veldrid.Swapchain#Veldrid_Swapchain_Resize_System_UInt32_System_UInt32_). This should generally be done as a response to a "Resized" event issued by whatever windowing or UI framework you are using. If the Swapchain is not resized when the application view changes, then your presented image will appear distorted.
 
