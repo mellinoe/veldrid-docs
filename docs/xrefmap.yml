@@ -37,6 +37,9 @@ references:
 - uid: shaders-and-resources
   name: Shaders and Resources
   href: articles/shaders.html
+- uid: swapchains
+  name: Swapchains
+  href: articles/swapchains.html
 - uid: textures
   name: Textures
   href: articles/textures.html
