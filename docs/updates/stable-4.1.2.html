@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Veldrid 4.1.2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Veldrid 4.1.2 ">
+    <meta name="generator" content="docfx 2.30.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="veldrid-412">Veldrid 4.1.2</h1>
+
+<p>Veldrid version 4.1.2 is available. This is a small patch with some minor fixes and improvements.</p>
+<h2 id="all-changes">All Changes</h2>
+<p><strong>Veldrid</strong></p>
+<ul>
+<li>[Vulkan] Use correct Framebuffer dimensions when setting Swapchain.SyncToVerticalBlank. <a href="https://github.com/mellinoe/veldrid/commit/116175824de7719af32b7d9d559d3a7a8e252228">[1161758]</a></li>
+<li>[Vulkan] Fix an issue with the tracking of clear values in VkCommandList. <a href="https://github.com/mellinoe/veldrid/commit/c337c56139c6dcec830571c9aaa149aff427631f">[c337c56]</a></li>
+<li>[Vulkan] Fix an erroneous comparison in VkTexture.cs. <a href="https://github.com/mellinoe/veldrid/commit/e84db0ece093710f51f2715ea32011578f009037">[e84db0e]</a></li>
+<li>Defensively copy some arrays in the creation of resources, when necessary. <a href="https://github.com/mellinoe/veldrid/commit/0e0fa874f1604e320f9b5fdd460160bd29699780">[0e0fa87]</a></li>
+<li>[Vulkan] Add more needed synchronization to VkGraphicsDevice. <a href="https://github.com/mellinoe/veldrid/commit/8d5490aec433cf4c3bada9debd68fa60e7d72b78">[8d5490a]</a></li>
+<li>[D3D11] Synchronize DXGI usage with the immediate context (per MSDN). <a href="https://github.com/mellinoe/veldrid/commit/de327720d604e861bec2b47108bb08673b785683">[de32772]</a></li>
+<li>[Metal] Support CommandList.CopyBuffer and UpdateBuffer when region is unaligned. <a href="https://github.com/mellinoe/veldrid/commit/903ea1c168ee8b4979b269924adadcb39e77e201">[903ea1c]</a></li>
+<li>[Metal] Fix condition for compute buffer copy path. <a href="https://github.com/mellinoe/veldrid/commit/10dcb698918d8832cbbb7708c45477e5af3232cc">[10dcb69]</a></li>
+<li>[Vulkan] Fix aspect mask for depth-stencil clears. <a href="https://github.com/mellinoe/veldrid/commit/5f6ceb942d2e46ea3be0fa9ac300a21eb78e7953">[5f6ceb9]</a></li>
+<li>[OpenGL] Fix issues with texture binding and state tracking. <a href="https://github.com/mellinoe/veldrid/commit/4e25323875ec2b96070aad596c4d89601c8d9883">[4e25323]</a></li>
+<li>[Vulkan] Fix an issue with how render passes are specified. <a href="https://github.com/mellinoe/veldrid/commit/88c8a8781709274e078d24fceba96e0f54f65fbe">[88c8a87]</a></li>
+<li>[Vulkan] Fix multiple vertex bindings in Vulkan. <a href="https://github.com/mellinoe/veldrid/commit/271a9bb0c6df1b23c380f2fa9a7b5a5a4cd942bf">[271a9bb]</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/updates/stable-4.1.2.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
