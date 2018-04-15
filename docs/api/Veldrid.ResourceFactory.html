@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ResourceFactory
    ">
-    <meta name="generator" content="docfx 2.30.0.0">
+    <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -111,6 +111,35 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class ResourceFactory</code></pre>
   </div>
+  <h3 id="constructors">Constructors
+  </h3>
+  
+  
+  <a id="Veldrid_ResourceFactory__ctor_" data-uid="Veldrid.ResourceFactory.#ctor*"></a>
+  <h4 id="Veldrid_ResourceFactory__ctor_Veldrid_GraphicsDeviceFeatures_" data-uid="Veldrid.ResourceFactory.#ctor(Veldrid.GraphicsDeviceFeatures)">ResourceFactory(GraphicsDeviceFeatures)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected ResourceFactory(GraphicsDeviceFeatures features)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceFeatures.html">GraphicsDeviceFeatures</a></td>
+        <td><span class="parametername">features</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -135,6 +164,32 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.GraphicsBackend.html">GraphicsBackend</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_ResourceFactory_Features_" data-uid="Veldrid.ResourceFactory.Features*"></a>
+  <h4 id="Veldrid_ResourceFactory_Features" data-uid="Veldrid.ResourceFactory.Features">Features</h4>
+  <div class="markdown level1 summary"><p>Gets the <a class="xref" href="Veldrid.GraphicsDeviceFeatures.html">GraphicsDeviceFeatures</a> this instance was created with.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsDeviceFeatures Features { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceFeatures.html">GraphicsDeviceFeatures</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -669,7 +724,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Pipeline CreateGraphicsPipeline(ref GraphicsPipelineDescription description)</code></pre>
+    <pre><code class="lang-csharp hljs">public Pipeline CreateGraphicsPipeline(ref GraphicsPipelineDescription description)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -702,6 +757,48 @@
         <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
         <td><p>A new <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> which, when bound to a CommandList, is used to dispatch draw commands.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_ResourceFactory_CreateGraphicsPipelineCore_" data-uid="Veldrid.ResourceFactory.CreateGraphicsPipelineCore*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateGraphicsPipelineCore_Veldrid_GraphicsPipelineDescription__" data-uid="Veldrid.ResourceFactory.CreateGraphicsPipelineCore(Veldrid.GraphicsPipelineDescription@)">CreateGraphicsPipelineCore(ref GraphicsPipelineDescription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Pipeline CreateGraphicsPipelineCore(ref GraphicsPipelineDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsPipelineDescription.html">GraphicsPipelineDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -939,7 +1036,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Sampler CreateSampler(ref SamplerDescription description)</code></pre>
+    <pre><code class="lang-csharp hljs">public Sampler CreateSampler(ref SamplerDescription description)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -972,6 +1069,48 @@
         <td><a class="xref" href="Veldrid.Sampler.html">Sampler</a></td>
         <td><p>A new <a class="xref" href="Veldrid.Sampler.html">Sampler</a>.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_ResourceFactory_CreateSamplerCore_" data-uid="Veldrid.ResourceFactory.CreateSamplerCore*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateSamplerCore_Veldrid_SamplerDescription__" data-uid="Veldrid.ResourceFactory.CreateSamplerCore(Veldrid.SamplerDescription@)">CreateSamplerCore(ref SamplerDescription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Sampler CreateSamplerCore(ref SamplerDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.SamplerDescription.html">SamplerDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Sampler.html">Sampler</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1029,7 +1168,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract Shader CreateShader(ref ShaderDescription description)</code></pre>
+    <pre><code class="lang-csharp hljs">public Shader CreateShader(ref ShaderDescription description)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1067,9 +1206,52 @@
   </table>
   
   
+  <a id="Veldrid_ResourceFactory_CreateShaderCore_" data-uid="Veldrid.ResourceFactory.CreateShaderCore*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateShaderCore_Veldrid_ShaderDescription__" data-uid="Veldrid.ResourceFactory.CreateShaderCore(Veldrid.ShaderDescription@)">CreateShaderCore(ref ShaderDescription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Shader CreateShaderCore(ref ShaderDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.ShaderDescription.html">ShaderDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Shader.html">Shader</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_ResourceFactory_CreateSwapchain_" data-uid="Veldrid.ResourceFactory.CreateSwapchain*"></a>
   <h4 id="Veldrid_ResourceFactory_CreateSwapchain_Veldrid_SwapchainDescription_" data-uid="Veldrid.ResourceFactory.CreateSwapchain(Veldrid.SwapchainDescription)">CreateSwapchain(SwapchainDescription)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Swapchain.html">Swapchain</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1088,7 +1270,8 @@
       <tr>
         <td><a class="xref" href="Veldrid.SwapchainDescription.html">SwapchainDescription</a></td>
         <td><span class="parametername">description</span></td>
-        <td></td>
+        <td><p>The desired properties of the created object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1103,7 +1286,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.Swapchain.html">Swapchain</a></td>
-        <td></td>
+        <td><p>A new <a class="xref" href="Veldrid.Swapchain.html">Swapchain</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1111,7 +1295,8 @@
   
   <a id="Veldrid_ResourceFactory_CreateSwapchain_" data-uid="Veldrid.ResourceFactory.CreateSwapchain*"></a>
   <h4 id="Veldrid_ResourceFactory_CreateSwapchain_Veldrid_SwapchainDescription__" data-uid="Veldrid.ResourceFactory.CreateSwapchain(Veldrid.SwapchainDescription@)">CreateSwapchain(ref SwapchainDescription)</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Swapchain.html">Swapchain</a>.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -1130,7 +1315,8 @@
       <tr>
         <td><a class="xref" href="Veldrid.SwapchainDescription.html">SwapchainDescription</a></td>
         <td><span class="parametername">description</span></td>
-        <td></td>
+        <td><p>The desired properties of the created object.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1145,7 +1331,8 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.Swapchain.html">Swapchain</a></td>
-        <td></td>
+        <td><p>A new <a class="xref" href="Veldrid.Swapchain.html">Swapchain</a>.</p>
+</td>
       </tr>
     </tbody>
   </table>

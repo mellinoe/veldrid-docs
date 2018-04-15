@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Enum ComparisonKind
+    <title>Enum ResourceBindingModel
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Enum ComparisonKind
+    <meta name="title" content="Enum ResourceBindingModel
    ">
     <meta name="generator" content="docfx 2.34.0.0">
     
@@ -68,19 +68,20 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Veldrid.ComparisonKind">
+            <article class="content wrap" id="_content" data-uid="Veldrid.ResourceBindingModel">
   
   
-  <h1 id="Veldrid_ComparisonKind" data-uid="Veldrid.ComparisonKind" class="text-break">Enum ComparisonKind
+  <h1 id="Veldrid_ResourceBindingModel" data-uid="Veldrid.ResourceBindingModel" class="text-break">Enum ResourceBindingModel
   </h1>
-  <div class="markdown level0 summary"><p>Describes how new values are compared with existing values in a depth or stencil comparison.</p>
+  <div class="markdown level0 summary"><p>Identifies a particular binding model used when connecting elements in a <a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a> with resources
+defined in API-specific shader code.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Veldrid_ComparisonKind_syntax">Syntax</h5>
+  <h5 id="Veldrid_ResourceBindingModel_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public enum ComparisonKind : byte</code></pre>
+    <pre><code class="lang-csharp hljs">public enum ResourceBindingModel</code></pre>
   </div>
   <h3 id="fields">Fields
   </h3>
@@ -93,43 +94,13 @@
     <thead>
     <tbody>
       <tr>
-        <td id="Veldrid_ComparisonKind_Always">Always</td>
-        <td><p>The comparison always succeeds.</p>
+        <td id="Veldrid_ResourceBindingModel_Default">Default</td>
+        <td><p>The default binding model.</p>
 </td>
       </tr>
       <tr>
-        <td id="Veldrid_ComparisonKind_Equal">Equal</td>
-        <td><p>The comparison succeeds when the new value is equal to the existing value.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_ComparisonKind_Greater">Greater</td>
-        <td><p>The comparison succeeds when the new value is greater than the existing value.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_ComparisonKind_GreaterEqual">GreaterEqual</td>
-        <td><p>The comparison succeeds when the new value is greater than or equal to the existing value.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_ComparisonKind_Less">Less</td>
-        <td><p>The comparison succeeds when the new value is less than the existing value.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_ComparisonKind_LessEqual">LessEqual</td>
-        <td><p>The comparison succeeds when the new value is less than or equal to the existing value.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_ComparisonKind_Never">Never</td>
-        <td><p>The comparison never succeeds.</p>
-</td>
-      </tr>
-      <tr>
-        <td id="Veldrid_ComparisonKind_NotEqual">NotEqual</td>
-        <td><p>The comparison succeeds when the new value is not equal to the existing value.</p>
+        <td id="Veldrid_ResourceBindingModel_Improved">Improved</td>
+        <td><p>An improved binding model which enables greater shader reuse and authoring flexibility.</p>
 </td>
       </tr>
     </tbody>

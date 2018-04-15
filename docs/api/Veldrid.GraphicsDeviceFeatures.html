@@ -5,10 +5,10 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Class Texture
+    <title>Class GraphicsDeviceFeatures
    </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Class Texture
+    <meta name="title" content="Class GraphicsDeviceFeatures
    ">
     <meta name="generator" content="docfx 2.34.0.0">
     
@@ -68,25 +68,18 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="Veldrid.Texture">
+            <article class="content wrap" id="_content" data-uid="Veldrid.GraphicsDeviceFeatures">
   
   
-  <h1 id="Veldrid_Texture" data-uid="Veldrid.Texture" class="text-break">Class Texture
+  <h1 id="Veldrid_GraphicsDeviceFeatures" data-uid="Veldrid.GraphicsDeviceFeatures" class="text-break">Class GraphicsDeviceFeatures
   </h1>
-  <div class="markdown level0 summary"><p>A device resource used to store arbitrary image data in a specific format.
-See <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a>.</p>
+  <div class="markdown level0 summary"><p>Enumerates the optional features supported by a given <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a>.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><span class="xref">System.Object</span></div>
-    <div class="level1"><span class="xref">Texture</span></div>
-  </div>
-  <div classs="implements">
-    <h5>Implements</h5>
-    <div><a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a></div>
-    <div><a class="xref" href="Veldrid.MappableResource.html">MappableResource</a></div>
-    <div><span class="xref">IDisposable</span></div>
+    <div class="level1"><span class="xref">GraphicsDeviceFeatures</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -114,22 +107,22 @@ See <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
-  <h5 id="Veldrid_Texture_syntax">Syntax</h5>
+  <h5 id="Veldrid_GraphicsDeviceFeatures_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract class Texture : DeviceResource, MappableResource, IDisposable</code></pre>
+    <pre><code class="lang-csharp hljs">public class GraphicsDeviceFeatures</code></pre>
   </div>
   <h3 id="properties">Properties
   </h3>
   
   
-  <a id="Veldrid_Texture_ArrayLayers_" data-uid="Veldrid.Texture.ArrayLayers*"></a>
-  <h4 id="Veldrid_Texture_ArrayLayers" data-uid="Veldrid.Texture.ArrayLayers">ArrayLayers</h4>
-  <div class="markdown level1 summary"><p>The total number of array layers in this instance.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_ComputeShader_" data-uid="Veldrid.GraphicsDeviceFeatures.ComputeShader*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_ComputeShader" data-uid="Veldrid.GraphicsDeviceFeatures.ComputeShader">ComputeShader</h4>
+  <div class="markdown level1 summary"><p>Indicates whether Compute Shaders can be used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract uint ArrayLayers { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool ComputeShader { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -141,21 +134,21 @@ See <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_Texture_Depth_" data-uid="Veldrid.Texture.Depth*"></a>
-  <h4 id="Veldrid_Texture_Depth" data-uid="Veldrid.Texture.Depth">Depth</h4>
-  <div class="markdown level1 summary"><p>The total depth of this instance, in texels.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_DepthClipDisable_" data-uid="Veldrid.GraphicsDeviceFeatures.DepthClipDisable*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_DepthClipDisable" data-uid="Veldrid.GraphicsDeviceFeatures.DepthClipDisable">DepthClipDisable</h4>
+  <div class="markdown level1 summary"><p>Indicates whether <a class="xref" href="Veldrid.RasterizerStateDescription.html#Veldrid_RasterizerStateDescription_DepthClipEnabled">DepthClipEnabled</a> can be set to false.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract uint Depth { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool DepthClipDisable { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -167,21 +160,23 @@ See <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_Texture_Format_" data-uid="Veldrid.Texture.Format*"></a>
-  <h4 id="Veldrid_Texture_Format" data-uid="Veldrid.Texture.Format">Format</h4>
-  <div class="markdown level1 summary"><p>The format of individual texture elements stored in this instance.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_DrawBaseInstance_" data-uid="Veldrid.GraphicsDeviceFeatures.DrawBaseInstance*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_DrawBaseInstance" data-uid="Veldrid.GraphicsDeviceFeatures.DrawBaseInstance">DrawBaseInstance</h4>
+  <div class="markdown level1 summary"><p>Indicates whether a non-zero &quot;instanceStart&quot; value can be used in
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_UInt32_">Draw(UInt32, UInt32, UInt32, UInt32)</a> and
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">DrawIndexed(UInt32, UInt32, UInt32, Int32, UInt32)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract PixelFormat Format { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool DrawBaseInstance { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -193,21 +188,23 @@ See <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_Texture_Height_" data-uid="Veldrid.Texture.Height*"></a>
-  <h4 id="Veldrid_Texture_Height" data-uid="Veldrid.Texture.Height">Height</h4>
-  <div class="markdown level1 summary"><p>The total height of this instance, in texels.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_DrawBaseVertex_" data-uid="Veldrid.GraphicsDeviceFeatures.DrawBaseVertex*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_DrawBaseVertex" data-uid="Veldrid.GraphicsDeviceFeatures.DrawBaseVertex">DrawBaseVertex</h4>
+  <div class="markdown level1 summary"><p>Indicates whether a non-zero &quot;vertexStart&quot; value can be used in
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_Draw_System_UInt32_System_UInt32_System_UInt32_System_UInt32_">Draw(UInt32, UInt32, UInt32, UInt32)</a> and
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_">DrawIndexed(UInt32, UInt32, UInt32, Int32, UInt32)</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract uint Height { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool DrawBaseVertex { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -219,21 +216,21 @@ See <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_Texture_MipLevels_" data-uid="Veldrid.Texture.MipLevels*"></a>
-  <h4 id="Veldrid_Texture_MipLevels" data-uid="Veldrid.Texture.MipLevels">MipLevels</h4>
-  <div class="markdown level1 summary"><p>The total number of mipmap levels in this instance.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_FillModeWireframe_" data-uid="Veldrid.GraphicsDeviceFeatures.FillModeWireframe*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_FillModeWireframe" data-uid="Veldrid.GraphicsDeviceFeatures.FillModeWireframe">FillModeWireframe</h4>
+  <div class="markdown level1 summary"><p>Indicates whether <a class="xref" href="Veldrid.PolygonFillMode.html#Veldrid_PolygonFillMode_Wireframe">Wireframe</a> is supported.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract uint MipLevels { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool FillModeWireframe { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -245,22 +242,21 @@ See <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_Texture_Name_" data-uid="Veldrid.Texture.Name*"></a>
-  <h4 id="Veldrid_Texture_Name" data-uid="Veldrid.Texture.Name">Name</h4>
-  <div class="markdown level1 summary"><p>A string identifying this instance. Can be used to differentiate between objects in graphics debuggers and other
-tools.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_GeometryShader_" data-uid="Veldrid.GraphicsDeviceFeatures.GeometryShader*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_GeometryShader" data-uid="Veldrid.GraphicsDeviceFeatures.GeometryShader">GeometryShader</h4>
+  <div class="markdown level1 summary"><p>Indicates whether Geometry Shaders can be used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract string Name { get; set; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool GeometryShader { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -272,22 +268,23 @@ tools.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.String</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_Texture_SampleCount_" data-uid="Veldrid.Texture.SampleCount*"></a>
-  <h4 id="Veldrid_Texture_SampleCount" data-uid="Veldrid.Texture.SampleCount">SampleCount</h4>
-  <div class="markdown level1 summary"><p>The number of samples in this instance. If this returns any value other than <a class="xref" href="Veldrid.TextureSampleCount.html#Veldrid_TextureSampleCount_Count1">Count1</a>,
-then this instance is a multipsample texture.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_IndependentBlend_" data-uid="Veldrid.GraphicsDeviceFeatures.IndependentBlend*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_IndependentBlend" data-uid="Veldrid.GraphicsDeviceFeatures.IndependentBlend">IndependentBlend</h4>
+  <div class="markdown level1 summary"><p>Indicates whether a <a class="xref" href="Veldrid.BlendStateDescription.html">BlendStateDescription</a> can be used which has multiple different
+<a class="xref" href="Veldrid.BlendAttachmentDescription.html">BlendAttachmentDescription</a> values for each attachment. If false, all attachments must have the same
+blend state.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TextureSampleCount SampleCount { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool IndependentBlend { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -299,21 +296,22 @@ then this instance is a multipsample texture.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.TextureSampleCount.html">TextureSampleCount</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_Texture_Type_" data-uid="Veldrid.Texture.Type*"></a>
-  <h4 id="Veldrid_Texture_Type" data-uid="Veldrid.Texture.Type">Type</h4>
-  <div class="markdown level1 summary"><p>The <a class="xref" href="Veldrid.TextureType.html">TextureType</a> of this instance.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_MultipleViewports_" data-uid="Veldrid.GraphicsDeviceFeatures.MultipleViewports*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_MultipleViewports" data-uid="Veldrid.GraphicsDeviceFeatures.MultipleViewports">MultipleViewports</h4>
+  <div class="markdown level1 summary"><p>Indicates whether multiple independent viewports can be set simultaneously.
+If this is not supported, then only the first Viewport index will be used for all render outputs.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TextureType Type { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool MultipleViewports { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -325,22 +323,21 @@ then this instance is a multipsample texture.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.TextureType.html">TextureType</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_Texture_Usage_" data-uid="Veldrid.Texture.Usage*"></a>
-  <h4 id="Veldrid_Texture_Usage" data-uid="Veldrid.Texture.Usage">Usage</h4>
-  <div class="markdown level1 summary"><p>The usage flags given when this instance was created. This property controls how this instance is permitted to be
-used, and it is an error to attempt to use the Texture outside of those contexts.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_SamplerAnisotropy_" data-uid="Veldrid.GraphicsDeviceFeatures.SamplerAnisotropy*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_SamplerAnisotropy" data-uid="Veldrid.GraphicsDeviceFeatures.SamplerAnisotropy">SamplerAnisotropy</h4>
+  <div class="markdown level1 summary"><p>Indicates whether <a class="xref" href="Veldrid.SamplerFilter.html#Veldrid_SamplerFilter_Anisotropic">Anisotropic</a> is supported.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract TextureUsage Usage { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool SamplerAnisotropy { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -352,21 +349,22 @@ used, and it is an error to attempt to use the Texture outside of those contexts
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_Texture_Width_" data-uid="Veldrid.Texture.Width*"></a>
-  <h4 id="Veldrid_Texture_Width" data-uid="Veldrid.Texture.Width">Width</h4>
-  <div class="markdown level1 summary"><p>The total width of this instance, in texels.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_SamplerLodBias_" data-uid="Veldrid.GraphicsDeviceFeatures.SamplerLodBias*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_SamplerLodBias" data-uid="Veldrid.GraphicsDeviceFeatures.SamplerLodBias">SamplerLodBias</h4>
+  <div class="markdown level1 summary"><p>Indicates whether <a class="xref" href="Veldrid.SamplerDescription.html#Veldrid_SamplerDescription_LodBias">LodBias</a> can be non-zero.
+If false, it is an error to attempt to use a non-zero bias value.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract uint Width { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public bool SamplerLodBias { get; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -378,49 +376,23 @@ used, and it is an error to attempt to use the Texture outside of those contexts
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>
   </table>
-  <h3 id="methods">Methods
-  </h3>
   
   
-  <a id="Veldrid_Texture_CalculateSubresource_" data-uid="Veldrid.Texture.CalculateSubresource*"></a>
-  <h4 id="Veldrid_Texture_CalculateSubresource_System_UInt32_System_UInt32_" data-uid="Veldrid.Texture.CalculateSubresource(System.UInt32,System.UInt32)">CalculateSubresource(UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Calculates the subresource index, given a mipmap level and array layer.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_TessellationShaders_" data-uid="Veldrid.GraphicsDeviceFeatures.TessellationShaders*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_TessellationShaders" data-uid="Veldrid.GraphicsDeviceFeatures.TessellationShaders">TessellationShaders</h4>
+  <div class="markdown level1 summary"><p>Indicates whether Tessellation Shaders can be used.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public uint CalculateSubresource(uint mipLevel, uint arrayLayer)</code></pre>
+    <pre><code class="lang-csharp hljs">public bool TessellationShaders { get; }</code></pre>
   </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">mipLevel</span></td>
-        <td><p>The mip level. This should be less than <a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_MipLevels">MipLevels</a>.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">arrayLayer</span></td>
-        <td><p>The array layer. This should be less than <a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_ArrayLayers">ArrayLayers</a>.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -430,33 +402,37 @@ used, and it is an error to attempt to use the Texture outside of those contexts
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><p>The subresource index.</p>
-</td>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
   
   
-  <a id="Veldrid_Texture_Dispose_" data-uid="Veldrid.Texture.Dispose*"></a>
-  <h4 id="Veldrid_Texture_Dispose" data-uid="Veldrid.Texture.Dispose">Dispose()</h4>
-  <div class="markdown level1 summary"><p>Frees unmanaged device resources controlled by this instance.</p>
+  <a id="Veldrid_GraphicsDeviceFeatures_Texture1D_" data-uid="Veldrid.GraphicsDeviceFeatures.Texture1D*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_Texture1D" data-uid="Veldrid.GraphicsDeviceFeatures.Texture1D">Texture1D</h4>
+  <div class="markdown level1 summary"><p>Indicates whether a <a class="xref" href="Veldrid.Texture.html">Texture</a> can be created with <a class="xref" href="Veldrid.TextureType.html#Veldrid_TextureType_Texture1D">Texture1D</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void Dispose()</code></pre>
+    <pre><code class="lang-csharp hljs">public bool Texture1D { get; }</code></pre>
   </div>
-  <h3 id="implements">Implements</h3>
-  <div>
-      <a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a>
-  </div>
-  <div>
-      <a class="xref" href="Veldrid.MappableResource.html">MappableResource</a>
-  </div>
-  <div>
-      <span class="xref">IDisposable</span>
-  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
 </article>
           </div>
           

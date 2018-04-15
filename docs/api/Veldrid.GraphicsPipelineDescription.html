@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct GraphicsPipelineDescription
    ">
-    <meta name="generator" content="docfx 2.30.0.0">
+    <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -246,6 +246,83 @@ in the <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Veldrid_GraphicsPipelineDescription__ctor_" data-uid="Veldrid.GraphicsPipelineDescription.#ctor*"></a>
+  <h4 id="Veldrid_GraphicsPipelineDescription__ctor_Veldrid_BlendStateDescription_Veldrid_DepthStencilStateDescription_Veldrid_RasterizerStateDescription_Veldrid_PrimitiveTopology_Veldrid_ShaderSetDescription_Veldrid_ResourceLayout___Veldrid_OutputDescription_Veldrid_ResourceBindingModel_" data-uid="Veldrid.GraphicsPipelineDescription.#ctor(Veldrid.BlendStateDescription,Veldrid.DepthStencilStateDescription,Veldrid.RasterizerStateDescription,Veldrid.PrimitiveTopology,Veldrid.ShaderSetDescription,Veldrid.ResourceLayout[],Veldrid.OutputDescription,Veldrid.ResourceBindingModel)">GraphicsPipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout[], OutputDescription, ResourceBindingModel)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Veldrid.GraphicsPipelineDescription.html">GraphicsPipelineDescription</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsPipelineDescription(BlendStateDescription blendState, DepthStencilStateDescription depthStencilStateDescription, RasterizerStateDescription rasterizerState, PrimitiveTopology primitiveTopology, ShaderSetDescription shaderSet, ResourceLayout[] resourceLayouts, OutputDescription outputs, ResourceBindingModel resourceBindingModel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.BlendStateDescription.html">BlendStateDescription</a></td>
+        <td><span class="parametername">blendState</span></td>
+        <td><p>A description of the blend state, which controls how color values are blended into each
+color target.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.DepthStencilStateDescription.html">DepthStencilStateDescription</a></td>
+        <td><span class="parametername">depthStencilStateDescription</span></td>
+        <td><p>A description of the depth stencil state, which controls depth tests,
+writing, and comparisons.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.RasterizerStateDescription.html">RasterizerStateDescription</a></td>
+        <td><span class="parametername">rasterizerState</span></td>
+        <td><p>A description of the rasterizer state, which controls culling, clipping, scissor, and
+polygon-fill behavior.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.PrimitiveTopology.html">PrimitiveTopology</a></td>
+        <td><span class="parametername">primitiveTopology</span></td>
+        <td><p>The <a class="xref" href="Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_PrimitiveTopology">PrimitiveTopology</a> to use, which controls how a series of input
+vertices is interpreted by the <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ShaderSetDescription.html">ShaderSetDescription</a></td>
+        <td><span class="parametername">shaderSet</span></td>
+        <td><p>A description of the shader set to be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a>[]</td>
+        <td><span class="parametername">resourceLayouts</span></td>
+        <td><p>An array of <a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a>, which controls the layout of shader resoruces
+in the <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.OutputDescription.html">OutputDescription</a></td>
+        <td><span class="parametername">outputs</span></td>
+        <td><p>A description of the output attachments used by the <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceBindingModel.html">ResourceBindingModel</a></td>
+        <td><span class="parametername">resourceBindingModel</span></td>
+        <td><p>The <a class="xref" href="Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceBindingModel">ResourceBindingModel</a> to use for this pipeline. Overrides
+the value specified in <a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
   
@@ -370,6 +447,32 @@ in the <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.RasterizerStateDescription.html">RasterizerStateDescription</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_GraphicsPipelineDescription_ResourceBindingModel" data-uid="Veldrid.GraphicsPipelineDescription.ResourceBindingModel">ResourceBindingModel</h4>
+  <div class="markdown level1 summary"><p>Specifies which model the rendering backend should use for binding resources.
+If <pre><code>null</code></pre>, the pipeline will use the value specified in <a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ResourceBindingModel? ResourceBindingModel</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Veldrid.ResourceBindingModel.html">ResourceBindingModel</a>&gt;</td>
         <td></td>
       </tr>
     </tbody>

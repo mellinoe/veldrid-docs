@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class OpenGLPlatformInfo
    ">
-    <meta name="generator" content="docfx 2.30.0.0">
+    <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -188,6 +188,94 @@ context.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Veldrid_OpenGL_OpenGLPlatformInfo__ctor_" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.#ctor*"></a>
+  <h4 id="Veldrid_OpenGL_OpenGLPlatformInfo__ctor_IntPtr_Func_System_String_IntPtr__Action_IntPtr__Func_IntPtr__Action_Action_IntPtr__Action_Action_System_Boolean__Action_Action_System_UInt32_System_UInt32__" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.#ctor(IntPtr,Func{System.String,IntPtr},Action{IntPtr},Func{IntPtr},Action,Action{IntPtr},Action,Action{System.Boolean},Action,Action{System.UInt32,System.UInt32})">OpenGLPlatformInfo(IntPtr, Func&lt;String, IntPtr&gt;, Action&lt;IntPtr&gt;, Func&lt;IntPtr&gt;, Action, Action&lt;IntPtr&gt;, Action, Action&lt;Boolean&gt;, Action, Action&lt;UInt32, UInt32&gt;)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new OpenGLPlatformInfo.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public OpenGLPlatformInfo(IntPtr openGLContextHandle, Func&lt;string, IntPtr&gt; getProcAddress, Action&lt;IntPtr&gt; makeCurrent, Func&lt;IntPtr&gt; getCurrentContext, Action clearCurrentContext, Action&lt;IntPtr&gt; deleteContext, Action swapBuffers, Action&lt;bool&gt; setSyncToVerticalBlank, Action setSwapchainFramebuffer, Action&lt;uint, uint&gt; resizeSwapchain)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">IntPtr</span></td>
+        <td><span class="parametername">openGLContextHandle</span></td>
+        <td><p>The OpenGL context handle.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">System.String</span>, <span class="xref">IntPtr</span>&gt;</td>
+        <td><span class="parametername">getProcAddress</span></td>
+        <td><p>A delegate which can be used to retrieve OpenGL function pointers by name.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<span class="xref">IntPtr</span>&gt;</td>
+        <td><span class="parametername">makeCurrent</span></td>
+        <td><p>A delegate which can be used to make the given OpenGL context current on the calling
+thread.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Func</span>&lt;<span class="xref">IntPtr</span>&gt;</td>
+        <td><span class="parametername">getCurrentContext</span></td>
+        <td><p>A delegate which can be used to retrieve the calling thread&apos;s active OpenGL context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">clearCurrentContext</span></td>
+        <td><p>A delegate which can be used to clear the calling thread&apos;s GL context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<span class="xref">IntPtr</span>&gt;</td>
+        <td><span class="parametername">deleteContext</span></td>
+        <td><p>A delegate which can be used to delete the given context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">swapBuffers</span></td>
+        <td><p>A delegate which can be used to swap the main back buffer associated with the OpenGL
+context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<span class="xref">System.Boolean</span>&gt;</td>
+        <td><span class="parametername">setSyncToVerticalBlank</span></td>
+        <td><p>A delegate which can be used to set the synchronization behavior of the OpenGL
+context.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span></td>
+        <td><span class="parametername">setSwapchainFramebuffer</span></td>
+        <td><p>A delegate which can be used to set the framebuffer used to render to the
+application Swapchain.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<span class="xref">System.UInt32</span>, <span class="xref">System.UInt32</span>&gt;</td>
+        <td><span class="parametername">resizeSwapchain</span></td>
+        <td><p>A delegate which is invoked when the main Swapchain is resized. This may be null,
+in which case no special action is taken when the Swapchain is resized.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -342,6 +430,60 @@ context.</p>
     <tbody>
       <tr>
         <td><span class="xref">IntPtr</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_OpenGL_OpenGLPlatformInfo_ResizeSwapchain_" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.ResizeSwapchain*"></a>
+  <h4 id="Veldrid_OpenGL_OpenGLPlatformInfo_ResizeSwapchain" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.ResizeSwapchain">ResizeSwapchain</h4>
+  <div class="markdown level1 summary"><p>A delegate which is invoked when the main Swapchain is resized. This may be null, in which case
+no special action is taken when the Swapchain is resized.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action&lt;uint, uint&gt; ResizeSwapchain { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span>&lt;<span class="xref">System.UInt32</span>, <span class="xref">System.UInt32</span>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_OpenGL_OpenGLPlatformInfo_SetSwapchainFramebuffer_" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.SetSwapchainFramebuffer*"></a>
+  <h4 id="Veldrid_OpenGL_OpenGLPlatformInfo_SetSwapchainFramebuffer" data-uid="Veldrid.OpenGL.OpenGLPlatformInfo.SetSwapchainFramebuffer">SetSwapchainFramebuffer</h4>
+  <div class="markdown level1 summary"><p>A delegate which can be used to set the framebuffer used to render to the application Swapchain.
+If this is null, the default FBO (0) will be bound.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Action SetSwapchainFramebuffer { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Action</span></td>
         <td></td>
       </tr>
     </tbody>

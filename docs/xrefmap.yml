@@ -71,6 +71,7 @@ references:
   name: BlendAttachmentDescription
   href: api/Veldrid.BlendAttachmentDescription.html#Veldrid_BlendAttachmentDescription__ctor_
   commentId: Overload:Veldrid.BlendAttachmentDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.BlendAttachmentDescription.BlendAttachmentDescription
   nameWithType: BlendAttachmentDescription.BlendAttachmentDescription
 - uid: Veldrid.BlendAttachmentDescription.AdditiveBlend
@@ -131,6 +132,7 @@ references:
   name: Equals
   href: api/Veldrid.BlendAttachmentDescription.html#Veldrid_BlendAttachmentDescription_Equals_
   commentId: Overload:Veldrid.BlendAttachmentDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.BlendAttachmentDescription.Equals
   nameWithType: BlendAttachmentDescription.Equals
 - uid: Veldrid.BlendAttachmentDescription.GetHashCode
@@ -143,6 +145,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.BlendAttachmentDescription.html#Veldrid_BlendAttachmentDescription_GetHashCode_
   commentId: Overload:Veldrid.BlendAttachmentDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.BlendAttachmentDescription.GetHashCode
   nameWithType: BlendAttachmentDescription.GetHashCode
 - uid: Veldrid.BlendAttachmentDescription.OverrideBlend
@@ -296,6 +299,7 @@ references:
   name: BlendStateDescription
   href: api/Veldrid.BlendStateDescription.html#Veldrid_BlendStateDescription__ctor_
   commentId: Overload:Veldrid.BlendStateDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.BlendStateDescription.BlendStateDescription
   nameWithType: BlendStateDescription.BlendStateDescription
 - uid: Veldrid.BlendStateDescription.AttachmentStates
@@ -326,6 +330,7 @@ references:
   name: Equals
   href: api/Veldrid.BlendStateDescription.html#Veldrid_BlendStateDescription_Equals_
   commentId: Overload:Veldrid.BlendStateDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.BlendStateDescription.Equals
   nameWithType: BlendStateDescription.Equals
 - uid: Veldrid.BlendStateDescription.GetHashCode
@@ -338,6 +343,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.BlendStateDescription.html#Veldrid_BlendStateDescription_GetHashCode_
   commentId: Overload:Veldrid.BlendStateDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.BlendStateDescription.GetHashCode
   nameWithType: BlendStateDescription.GetHashCode
 - uid: Veldrid.BlendStateDescription.SingleAdditiveBlend
@@ -380,6 +386,7 @@ references:
   name: Dispose
   href: api/Veldrid.Buffer.html#Veldrid_Buffer_Dispose_
   commentId: Overload:Veldrid.Buffer.Dispose
+  isSpec: "True"
   fullName: Veldrid.Buffer.Dispose
   nameWithType: Buffer.Dispose
 - uid: Veldrid.Buffer.Name
@@ -392,6 +399,7 @@ references:
   name: Name
   href: api/Veldrid.Buffer.html#Veldrid_Buffer_Name_
   commentId: Overload:Veldrid.Buffer.Name
+  isSpec: "True"
   fullName: Veldrid.Buffer.Name
   nameWithType: Buffer.Name
 - uid: Veldrid.Buffer.SizeInBytes
@@ -404,6 +412,7 @@ references:
   name: SizeInBytes
   href: api/Veldrid.Buffer.html#Veldrid_Buffer_SizeInBytes_
   commentId: Overload:Veldrid.Buffer.SizeInBytes
+  isSpec: "True"
   fullName: Veldrid.Buffer.SizeInBytes
   nameWithType: Buffer.SizeInBytes
 - uid: Veldrid.Buffer.Usage
@@ -416,6 +425,7 @@ references:
   name: Usage
   href: api/Veldrid.Buffer.html#Veldrid_Buffer_Usage_
   commentId: Overload:Veldrid.Buffer.Usage
+  isSpec: "True"
   fullName: Veldrid.Buffer.Usage
   nameWithType: Buffer.Usage
 - uid: Veldrid.BufferDescription
@@ -440,6 +450,7 @@ references:
   name: BufferDescription
   href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_
   commentId: Overload:Veldrid.BufferDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.BufferDescription.BufferDescription
   nameWithType: BufferDescription.BufferDescription
 - uid: Veldrid.BufferDescription.Equals(Veldrid.BufferDescription)
@@ -452,6 +463,7 @@ references:
   name: Equals
   href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription_Equals_
   commentId: Overload:Veldrid.BufferDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.BufferDescription.Equals
   nameWithType: BufferDescription.Equals
 - uid: Veldrid.BufferDescription.GetHashCode
@@ -464,6 +476,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription_GetHashCode_
   commentId: Overload:Veldrid.BufferDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.BufferDescription.GetHashCode
   nameWithType: BufferDescription.GetHashCode
 - uid: Veldrid.BufferDescription.SizeInBytes
@@ -572,6 +585,7 @@ references:
   name: Begin
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_Begin_
   commentId: Overload:Veldrid.CommandList.Begin
+  isSpec: "True"
   fullName: Veldrid.CommandList.Begin
   nameWithType: CommandList.Begin
 - uid: Veldrid.CommandList.ClearColorTarget(System.UInt32,Veldrid.RgbaFloat)
@@ -584,6 +598,7 @@ references:
   name: ClearColorTarget
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_ClearColorTarget_
   commentId: Overload:Veldrid.CommandList.ClearColorTarget
+  isSpec: "True"
   fullName: Veldrid.CommandList.ClearColorTarget
   nameWithType: CommandList.ClearColorTarget
 - uid: Veldrid.CommandList.ClearColorTargetCore(System.UInt32,Veldrid.RgbaFloat)
@@ -596,6 +611,7 @@ references:
   name: ClearColorTargetCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_ClearColorTargetCore_
   commentId: Overload:Veldrid.CommandList.ClearColorTargetCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.ClearColorTargetCore
   nameWithType: CommandList.ClearColorTargetCore
 - uid: Veldrid.CommandList.ClearDepthStencil(System.Single)
@@ -614,6 +630,7 @@ references:
   name: ClearDepthStencil
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_ClearDepthStencil_
   commentId: Overload:Veldrid.CommandList.ClearDepthStencil
+  isSpec: "True"
   fullName: Veldrid.CommandList.ClearDepthStencil
   nameWithType: CommandList.ClearDepthStencil
 - uid: Veldrid.CommandList.ClearDepthStencilCore(System.Single,System.Byte)
@@ -626,6 +643,7 @@ references:
   name: ClearDepthStencilCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_ClearDepthStencilCore_
   commentId: Overload:Veldrid.CommandList.ClearDepthStencilCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.ClearDepthStencilCore
   nameWithType: CommandList.ClearDepthStencilCore
 - uid: Veldrid.CommandList.CopyBuffer(Veldrid.DeviceBuffer,System.UInt32,Veldrid.DeviceBuffer,System.UInt32,System.UInt32)
@@ -638,6 +656,7 @@ references:
   name: CopyBuffer
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyBuffer_
   commentId: Overload:Veldrid.CommandList.CopyBuffer
+  isSpec: "True"
   fullName: Veldrid.CommandList.CopyBuffer
   nameWithType: CommandList.CopyBuffer
 - uid: Veldrid.CommandList.CopyBufferCore(Veldrid.DeviceBuffer,System.UInt32,Veldrid.DeviceBuffer,System.UInt32,System.UInt32)
@@ -650,6 +669,7 @@ references:
   name: CopyBufferCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyBufferCore_
   commentId: Overload:Veldrid.CommandList.CopyBufferCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.CopyBufferCore
   nameWithType: CommandList.CopyBufferCore
 - uid: Veldrid.CommandList.CopyTexture(Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
@@ -674,6 +694,7 @@ references:
   name: CopyTexture
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyTexture_
   commentId: Overload:Veldrid.CommandList.CopyTexture
+  isSpec: "True"
   fullName: Veldrid.CommandList.CopyTexture
   nameWithType: CommandList.CopyTexture
 - uid: Veldrid.CommandList.CopyTextureCore(Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.Texture,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
@@ -686,6 +707,7 @@ references:
   name: CopyTextureCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_CopyTextureCore_
   commentId: Overload:Veldrid.CommandList.CopyTextureCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.CopyTextureCore
   nameWithType: CommandList.CopyTextureCore
 - uid: Veldrid.CommandList.Dispatch(System.UInt32,System.UInt32,System.UInt32)
@@ -698,6 +720,7 @@ references:
   name: Dispatch
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_Dispatch_
   commentId: Overload:Veldrid.CommandList.Dispatch
+  isSpec: "True"
   fullName: Veldrid.CommandList.Dispatch
   nameWithType: CommandList.Dispatch
 - uid: Veldrid.CommandList.DispatchIndirect(Veldrid.DeviceBuffer,System.UInt32)
@@ -710,6 +733,7 @@ references:
   name: DispatchIndirect
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_DispatchIndirect_
   commentId: Overload:Veldrid.CommandList.DispatchIndirect
+  isSpec: "True"
   fullName: Veldrid.CommandList.DispatchIndirect
   nameWithType: CommandList.DispatchIndirect
 - uid: Veldrid.CommandList.DispatchIndirectCore(Veldrid.DeviceBuffer,System.UInt32)
@@ -722,6 +746,7 @@ references:
   name: DispatchIndirectCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_DispatchIndirectCore_
   commentId: Overload:Veldrid.CommandList.DispatchIndirectCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.DispatchIndirectCore
   nameWithType: CommandList.DispatchIndirectCore
 - uid: Veldrid.CommandList.Dispose
@@ -734,6 +759,7 @@ references:
   name: Dispose
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_Dispose_
   commentId: Overload:Veldrid.CommandList.Dispose
+  isSpec: "True"
   fullName: Veldrid.CommandList.Dispose
   nameWithType: CommandList.Dispose
 - uid: Veldrid.CommandList.Draw(System.UInt32)
@@ -752,6 +778,7 @@ references:
   name: Draw
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_Draw_
   commentId: Overload:Veldrid.CommandList.Draw
+  isSpec: "True"
   fullName: Veldrid.CommandList.Draw
   nameWithType: CommandList.Draw
 - uid: Veldrid.CommandList.DrawCore(System.UInt32,System.UInt32,System.UInt32,System.UInt32)
@@ -764,6 +791,7 @@ references:
   name: DrawCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawCore_
   commentId: Overload:Veldrid.CommandList.DrawCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.DrawCore
   nameWithType: CommandList.DrawCore
 - uid: Veldrid.CommandList.DrawIndexed(System.UInt32)
@@ -782,6 +810,7 @@ references:
   name: DrawIndexed
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexed_
   commentId: Overload:Veldrid.CommandList.DrawIndexed
+  isSpec: "True"
   fullName: Veldrid.CommandList.DrawIndexed
   nameWithType: CommandList.DrawIndexed
 - uid: Veldrid.CommandList.DrawIndexedCore(System.UInt32,System.UInt32,System.UInt32,System.Int32,System.UInt32)
@@ -794,6 +823,7 @@ references:
   name: DrawIndexedCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexedCore_
   commentId: Overload:Veldrid.CommandList.DrawIndexedCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.DrawIndexedCore
   nameWithType: CommandList.DrawIndexedCore
 - uid: Veldrid.CommandList.DrawIndexedIndirect(Veldrid.DeviceBuffer,System.UInt32,System.UInt32,System.UInt32)
@@ -806,6 +836,7 @@ references:
   name: DrawIndexedIndirect
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexedIndirect_
   commentId: Overload:Veldrid.CommandList.DrawIndexedIndirect
+  isSpec: "True"
   fullName: Veldrid.CommandList.DrawIndexedIndirect
   nameWithType: CommandList.DrawIndexedIndirect
 - uid: Veldrid.CommandList.DrawIndexedIndirectCore(Veldrid.DeviceBuffer,System.UInt32,System.UInt32,System.UInt32)
@@ -818,6 +849,7 @@ references:
   name: DrawIndexedIndirectCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndexedIndirectCore_
   commentId: Overload:Veldrid.CommandList.DrawIndexedIndirectCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.DrawIndexedIndirectCore
   nameWithType: CommandList.DrawIndexedIndirectCore
 - uid: Veldrid.CommandList.DrawIndirect(Veldrid.DeviceBuffer,System.UInt32,System.UInt32,System.UInt32)
@@ -830,6 +862,7 @@ references:
   name: DrawIndirect
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndirect_
   commentId: Overload:Veldrid.CommandList.DrawIndirect
+  isSpec: "True"
   fullName: Veldrid.CommandList.DrawIndirect
   nameWithType: CommandList.DrawIndirect
 - uid: Veldrid.CommandList.DrawIndirectCore(Veldrid.DeviceBuffer,System.UInt32,System.UInt32,System.UInt32)
@@ -842,6 +875,7 @@ references:
   name: DrawIndirectCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_DrawIndirectCore_
   commentId: Overload:Veldrid.CommandList.DrawIndirectCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.DrawIndirectCore
   nameWithType: CommandList.DrawIndirectCore
 - uid: Veldrid.CommandList.End
@@ -854,6 +888,7 @@ references:
   name: End
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_End_
   commentId: Overload:Veldrid.CommandList.End
+  isSpec: "True"
   fullName: Veldrid.CommandList.End
   nameWithType: CommandList.End
 - uid: Veldrid.CommandList.Name
@@ -866,6 +901,7 @@ references:
   name: Name
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_Name_
   commentId: Overload:Veldrid.CommandList.Name
+  isSpec: "True"
   fullName: Veldrid.CommandList.Name
   nameWithType: CommandList.Name
 - uid: Veldrid.CommandList.ResolveTexture(Veldrid.Texture,Veldrid.Texture)
@@ -878,6 +914,7 @@ references:
   name: ResolveTexture
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_ResolveTexture_
   commentId: Overload:Veldrid.CommandList.ResolveTexture
+  isSpec: "True"
   fullName: Veldrid.CommandList.ResolveTexture
   nameWithType: CommandList.ResolveTexture
 - uid: Veldrid.CommandList.ResolveTextureCore(Veldrid.Texture,Veldrid.Texture)
@@ -890,6 +927,7 @@ references:
   name: ResolveTextureCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_ResolveTextureCore_
   commentId: Overload:Veldrid.CommandList.ResolveTextureCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.ResolveTextureCore
   nameWithType: CommandList.ResolveTextureCore
 - uid: Veldrid.CommandList.SetComputeResourceSet(System.UInt32,Veldrid.ResourceSet)
@@ -902,6 +940,7 @@ references:
   name: SetComputeResourceSet
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetComputeResourceSet_
   commentId: Overload:Veldrid.CommandList.SetComputeResourceSet
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetComputeResourceSet
   nameWithType: CommandList.SetComputeResourceSet
 - uid: Veldrid.CommandList.SetComputeResourceSetCore(System.UInt32,Veldrid.ResourceSet)
@@ -914,6 +953,7 @@ references:
   name: SetComputeResourceSetCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetComputeResourceSetCore_
   commentId: Overload:Veldrid.CommandList.SetComputeResourceSetCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetComputeResourceSetCore
   nameWithType: CommandList.SetComputeResourceSetCore
 - uid: Veldrid.CommandList.SetFramebuffer(Veldrid.Framebuffer)
@@ -926,6 +966,7 @@ references:
   name: SetFramebuffer
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetFramebuffer_
   commentId: Overload:Veldrid.CommandList.SetFramebuffer
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetFramebuffer
   nameWithType: CommandList.SetFramebuffer
 - uid: Veldrid.CommandList.SetFramebufferCore(Veldrid.Framebuffer)
@@ -938,6 +979,7 @@ references:
   name: SetFramebufferCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetFramebufferCore_
   commentId: Overload:Veldrid.CommandList.SetFramebufferCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetFramebufferCore
   nameWithType: CommandList.SetFramebufferCore
 - uid: Veldrid.CommandList.SetFullScissorRect(System.UInt32)
@@ -950,6 +992,7 @@ references:
   name: SetFullScissorRect
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetFullScissorRect_
   commentId: Overload:Veldrid.CommandList.SetFullScissorRect
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetFullScissorRect
   nameWithType: CommandList.SetFullScissorRect
 - uid: Veldrid.CommandList.SetFullScissorRects
@@ -962,6 +1005,7 @@ references:
   name: SetFullScissorRects
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetFullScissorRects_
   commentId: Overload:Veldrid.CommandList.SetFullScissorRects
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetFullScissorRects
   nameWithType: CommandList.SetFullScissorRects
 - uid: Veldrid.CommandList.SetFullViewport(System.UInt32)
@@ -974,6 +1018,7 @@ references:
   name: SetFullViewport
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetFullViewport_
   commentId: Overload:Veldrid.CommandList.SetFullViewport
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetFullViewport
   nameWithType: CommandList.SetFullViewport
 - uid: Veldrid.CommandList.SetFullViewports
@@ -986,6 +1031,7 @@ references:
   name: SetFullViewports
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetFullViewports_
   commentId: Overload:Veldrid.CommandList.SetFullViewports
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetFullViewports
   nameWithType: CommandList.SetFullViewports
 - uid: Veldrid.CommandList.SetGraphicsResourceSet(System.UInt32,Veldrid.ResourceSet)
@@ -998,6 +1044,7 @@ references:
   name: SetGraphicsResourceSet
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetGraphicsResourceSet_
   commentId: Overload:Veldrid.CommandList.SetGraphicsResourceSet
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetGraphicsResourceSet
   nameWithType: CommandList.SetGraphicsResourceSet
 - uid: Veldrid.CommandList.SetGraphicsResourceSetCore(System.UInt32,Veldrid.ResourceSet)
@@ -1010,6 +1057,7 @@ references:
   name: SetGraphicsResourceSetCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetGraphicsResourceSetCore_
   commentId: Overload:Veldrid.CommandList.SetGraphicsResourceSetCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetGraphicsResourceSetCore
   nameWithType: CommandList.SetGraphicsResourceSetCore
 - uid: Veldrid.CommandList.SetIndexBuffer(Veldrid.DeviceBuffer,Veldrid.IndexFormat)
@@ -1022,6 +1070,7 @@ references:
   name: SetIndexBuffer
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBuffer_
   commentId: Overload:Veldrid.CommandList.SetIndexBuffer
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetIndexBuffer
   nameWithType: CommandList.SetIndexBuffer
 - uid: Veldrid.CommandList.SetIndexBufferCore(Veldrid.DeviceBuffer,Veldrid.IndexFormat)
@@ -1034,6 +1083,7 @@ references:
   name: SetIndexBufferCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBufferCore_
   commentId: Overload:Veldrid.CommandList.SetIndexBufferCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetIndexBufferCore
   nameWithType: CommandList.SetIndexBufferCore
 - uid: Veldrid.CommandList.SetPipeline(Veldrid.Pipeline)
@@ -1046,6 +1096,7 @@ references:
   name: SetPipeline
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetPipeline_
   commentId: Overload:Veldrid.CommandList.SetPipeline
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetPipeline
   nameWithType: CommandList.SetPipeline
 - uid: Veldrid.CommandList.SetPipelineCore(Veldrid.Pipeline)
@@ -1058,6 +1109,7 @@ references:
   name: SetPipelineCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetPipelineCore_
   commentId: Overload:Veldrid.CommandList.SetPipelineCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetPipelineCore
   nameWithType: CommandList.SetPipelineCore
 - uid: Veldrid.CommandList.SetScissorRect(System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
@@ -1070,6 +1122,7 @@ references:
   name: SetScissorRect
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetScissorRect_
   commentId: Overload:Veldrid.CommandList.SetScissorRect
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetScissorRect
   nameWithType: CommandList.SetScissorRect
 - uid: Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.DeviceBuffer)
@@ -1082,6 +1135,7 @@ references:
   name: SetVertexBuffer
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBuffer_
   commentId: Overload:Veldrid.CommandList.SetVertexBuffer
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetVertexBuffer
   nameWithType: CommandList.SetVertexBuffer
 - uid: Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.DeviceBuffer)
@@ -1094,6 +1148,7 @@ references:
   name: SetVertexBufferCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBufferCore_
   commentId: Overload:Veldrid.CommandList.SetVertexBufferCore
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetVertexBufferCore
   nameWithType: CommandList.SetVertexBufferCore
 - uid: Veldrid.CommandList.SetViewport(System.UInt32,Veldrid.Viewport)
@@ -1115,6 +1170,7 @@ references:
   name: SetViewport
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetViewport_
   commentId: Overload:Veldrid.CommandList.SetViewport
+  isSpec: "True"
   fullName: Veldrid.CommandList.SetViewport
   nameWithType: CommandList.SetViewport
 - uid: Veldrid.CommandList.UpdateBuffer(Veldrid.DeviceBuffer,System.UInt32,IntPtr,System.UInt32)
@@ -1127,6 +1183,7 @@ references:
   name: UpdateBuffer
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_UpdateBuffer_
   commentId: Overload:Veldrid.CommandList.UpdateBuffer
+  isSpec: "True"
   fullName: Veldrid.CommandList.UpdateBuffer
   nameWithType: CommandList.UpdateBuffer
 - uid: Veldrid.CommandList.UpdateBuffer``1(Veldrid.DeviceBuffer,System.UInt32,``0)
@@ -1181,6 +1238,7 @@ references:
   name: Equals
   href: api/Veldrid.CommandListDescription.html#Veldrid_CommandListDescription_Equals_
   commentId: Overload:Veldrid.CommandListDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.CommandListDescription.Equals
   nameWithType: CommandListDescription.Equals
 - uid: Veldrid.CommandListDescription.GetHashCode
@@ -1193,6 +1251,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.CommandListDescription.html#Veldrid_CommandListDescription_GetHashCode_
   commentId: Overload:Veldrid.CommandListDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.CommandListDescription.GetHashCode
   nameWithType: CommandListDescription.GetHashCode
 - uid: Veldrid.ComparisonKind
@@ -1274,6 +1333,7 @@ references:
   name: ComputePipelineDescription
   href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription__ctor_
   commentId: Overload:Veldrid.ComputePipelineDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.ComputePipelineDescription.ComputePipelineDescription
   nameWithType: ComputePipelineDescription.ComputePipelineDescription
 - uid: Veldrid.ComputePipelineDescription.ComputeShader
@@ -1292,6 +1352,7 @@ references:
   name: Equals
   href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_Equals_
   commentId: Overload:Veldrid.ComputePipelineDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.ComputePipelineDescription.Equals
   nameWithType: ComputePipelineDescription.Equals
 - uid: Veldrid.ComputePipelineDescription.GetHashCode
@@ -1304,6 +1365,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_GetHashCode_
   commentId: Overload:Veldrid.ComputePipelineDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.ComputePipelineDescription.GetHashCode
   nameWithType: ComputePipelineDescription.GetHashCode
 - uid: Veldrid.ComputePipelineDescription.ResourceLayouts
@@ -1394,6 +1456,7 @@ references:
   name: DepthStencilStateDescription
   href: api/Veldrid.DepthStencilStateDescription.html#Veldrid_DepthStencilStateDescription__ctor_
   commentId: Overload:Veldrid.DepthStencilStateDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.DepthStencilStateDescription.DepthStencilStateDescription
   nameWithType: DepthStencilStateDescription.DepthStencilStateDescription
 - uid: Veldrid.DepthStencilStateDescription.DepthComparison
@@ -1442,6 +1505,7 @@ references:
   name: Equals
   href: api/Veldrid.DepthStencilStateDescription.html#Veldrid_DepthStencilStateDescription_Equals_
   commentId: Overload:Veldrid.DepthStencilStateDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.DepthStencilStateDescription.Equals
   nameWithType: DepthStencilStateDescription.Equals
 - uid: Veldrid.DepthStencilStateDescription.GetHashCode
@@ -1454,6 +1518,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.DepthStencilStateDescription.html#Veldrid_DepthStencilStateDescription_GetHashCode_
   commentId: Overload:Veldrid.DepthStencilStateDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.DepthStencilStateDescription.GetHashCode
   nameWithType: DepthStencilStateDescription.GetHashCode
 - uid: Veldrid.DepthStencilStateDescription.StencilBack
@@ -1508,6 +1573,7 @@ references:
   name: Dispose
   href: api/Veldrid.DeviceBuffer.html#Veldrid_DeviceBuffer_Dispose_
   commentId: Overload:Veldrid.DeviceBuffer.Dispose
+  isSpec: "True"
   fullName: Veldrid.DeviceBuffer.Dispose
   nameWithType: DeviceBuffer.Dispose
 - uid: Veldrid.DeviceBuffer.Name
@@ -1520,6 +1586,7 @@ references:
   name: Name
   href: api/Veldrid.DeviceBuffer.html#Veldrid_DeviceBuffer_Name_
   commentId: Overload:Veldrid.DeviceBuffer.Name
+  isSpec: "True"
   fullName: Veldrid.DeviceBuffer.Name
   nameWithType: DeviceBuffer.Name
 - uid: Veldrid.DeviceBuffer.SizeInBytes
@@ -1532,6 +1599,7 @@ references:
   name: SizeInBytes
   href: api/Veldrid.DeviceBuffer.html#Veldrid_DeviceBuffer_SizeInBytes_
   commentId: Overload:Veldrid.DeviceBuffer.SizeInBytes
+  isSpec: "True"
   fullName: Veldrid.DeviceBuffer.SizeInBytes
   nameWithType: DeviceBuffer.SizeInBytes
 - uid: Veldrid.DeviceBuffer.Usage
@@ -1544,6 +1612,7 @@ references:
   name: Usage
   href: api/Veldrid.DeviceBuffer.html#Veldrid_DeviceBuffer_Usage_
   commentId: Overload:Veldrid.DeviceBuffer.Usage
+  isSpec: "True"
   fullName: Veldrid.DeviceBuffer.Usage
   nameWithType: DeviceBuffer.Usage
 - uid: Veldrid.DeviceResource
@@ -1562,6 +1631,7 @@ references:
   name: Name
   href: api/Veldrid.DeviceResource.html#Veldrid_DeviceResource_Name_
   commentId: Overload:Veldrid.DeviceResource.Name
+  isSpec: "True"
   fullName: Veldrid.DeviceResource.Name
   nameWithType: DeviceResource.Name
 - uid: Veldrid.FaceCullMode
@@ -1604,6 +1674,7 @@ references:
   name: Dispose
   href: api/Veldrid.Fence.html#Veldrid_Fence_Dispose_
   commentId: Overload:Veldrid.Fence.Dispose
+  isSpec: "True"
   fullName: Veldrid.Fence.Dispose
   nameWithType: Fence.Dispose
 - uid: Veldrid.Fence.Name
@@ -1616,6 +1687,7 @@ references:
   name: Name
   href: api/Veldrid.Fence.html#Veldrid_Fence_Name_
   commentId: Overload:Veldrid.Fence.Name
+  isSpec: "True"
   fullName: Veldrid.Fence.Name
   nameWithType: Fence.Name
 - uid: Veldrid.Fence.Reset
@@ -1628,6 +1700,7 @@ references:
   name: Reset
   href: api/Veldrid.Fence.html#Veldrid_Fence_Reset_
   commentId: Overload:Veldrid.Fence.Reset
+  isSpec: "True"
   fullName: Veldrid.Fence.Reset
   nameWithType: Fence.Reset
 - uid: Veldrid.Fence.Signaled
@@ -1640,6 +1713,7 @@ references:
   name: Signaled
   href: api/Veldrid.Fence.html#Veldrid_Fence_Signaled_
   commentId: Overload:Veldrid.Fence.Signaled
+  isSpec: "True"
   fullName: Veldrid.Fence.Signaled
   nameWithType: Fence.Signaled
 - uid: Veldrid.Framebuffer
@@ -1658,6 +1732,7 @@ references:
   name: ColorTargets
   href: api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_ColorTargets_
   commentId: Overload:Veldrid.Framebuffer.ColorTargets
+  isSpec: "True"
   fullName: Veldrid.Framebuffer.ColorTargets
   nameWithType: Framebuffer.ColorTargets
 - uid: Veldrid.Framebuffer.DepthTarget
@@ -1670,6 +1745,7 @@ references:
   name: DepthTarget
   href: api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_DepthTarget_
   commentId: Overload:Veldrid.Framebuffer.DepthTarget
+  isSpec: "True"
   fullName: Veldrid.Framebuffer.DepthTarget
   nameWithType: Framebuffer.DepthTarget
 - uid: Veldrid.Framebuffer.Dispose
@@ -1682,6 +1758,7 @@ references:
   name: Dispose
   href: api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_Dispose_
   commentId: Overload:Veldrid.Framebuffer.Dispose
+  isSpec: "True"
   fullName: Veldrid.Framebuffer.Dispose
   nameWithType: Framebuffer.Dispose
 - uid: Veldrid.Framebuffer.Height
@@ -1694,6 +1771,7 @@ references:
   name: Height
   href: api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_Height_
   commentId: Overload:Veldrid.Framebuffer.Height
+  isSpec: "True"
   fullName: Veldrid.Framebuffer.Height
   nameWithType: Framebuffer.Height
 - uid: Veldrid.Framebuffer.Name
@@ -1706,6 +1784,7 @@ references:
   name: Name
   href: api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_Name_
   commentId: Overload:Veldrid.Framebuffer.Name
+  isSpec: "True"
   fullName: Veldrid.Framebuffer.Name
   nameWithType: Framebuffer.Name
 - uid: Veldrid.Framebuffer.OutputDescription
@@ -1718,6 +1797,7 @@ references:
   name: OutputDescription
   href: api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_OutputDescription_
   commentId: Overload:Veldrid.Framebuffer.OutputDescription
+  isSpec: "True"
   fullName: Veldrid.Framebuffer.OutputDescription
   nameWithType: Framebuffer.OutputDescription
 - uid: Veldrid.Framebuffer.Width
@@ -1730,6 +1810,7 @@ references:
   name: Width
   href: api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_Width_
   commentId: Overload:Veldrid.Framebuffer.Width
+  isSpec: "True"
   fullName: Veldrid.Framebuffer.Width
   nameWithType: Framebuffer.Width
 - uid: Veldrid.FramebufferAttachment
@@ -1748,6 +1829,7 @@ references:
   name: FramebufferAttachment
   href: api/Veldrid.FramebufferAttachment.html#Veldrid_FramebufferAttachment__ctor_
   commentId: Overload:Veldrid.FramebufferAttachment.#ctor
+  isSpec: "True"
   fullName: Veldrid.FramebufferAttachment.FramebufferAttachment
   nameWithType: FramebufferAttachment.FramebufferAttachment
 - uid: Veldrid.FramebufferAttachment.ArrayLayer
@@ -1760,6 +1842,7 @@ references:
   name: ArrayLayer
   href: api/Veldrid.FramebufferAttachment.html#Veldrid_FramebufferAttachment_ArrayLayer_
   commentId: Overload:Veldrid.FramebufferAttachment.ArrayLayer
+  isSpec: "True"
   fullName: Veldrid.FramebufferAttachment.ArrayLayer
   nameWithType: FramebufferAttachment.ArrayLayer
 - uid: Veldrid.FramebufferAttachment.Target
@@ -1772,6 +1855,7 @@ references:
   name: Target
   href: api/Veldrid.FramebufferAttachment.html#Veldrid_FramebufferAttachment_Target_
   commentId: Overload:Veldrid.FramebufferAttachment.Target
+  isSpec: "True"
   fullName: Veldrid.FramebufferAttachment.Target
   nameWithType: FramebufferAttachment.Target
 - uid: Veldrid.FramebufferAttachmentDescription
@@ -1790,6 +1874,7 @@ references:
   name: FramebufferAttachmentDescription
   href: api/Veldrid.FramebufferAttachmentDescription.html#Veldrid_FramebufferAttachmentDescription__ctor_
   commentId: Overload:Veldrid.FramebufferAttachmentDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.FramebufferAttachmentDescription.FramebufferAttachmentDescription
   nameWithType: FramebufferAttachmentDescription.FramebufferAttachmentDescription
 - uid: Veldrid.FramebufferAttachmentDescription.ArrayLayer
@@ -1808,6 +1893,7 @@ references:
   name: Equals
   href: api/Veldrid.FramebufferAttachmentDescription.html#Veldrid_FramebufferAttachmentDescription_Equals_
   commentId: Overload:Veldrid.FramebufferAttachmentDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.FramebufferAttachmentDescription.Equals
   nameWithType: FramebufferAttachmentDescription.Equals
 - uid: Veldrid.FramebufferAttachmentDescription.GetHashCode
@@ -1820,6 +1906,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.FramebufferAttachmentDescription.html#Veldrid_FramebufferAttachmentDescription_GetHashCode_
   commentId: Overload:Veldrid.FramebufferAttachmentDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.FramebufferAttachmentDescription.GetHashCode
   nameWithType: FramebufferAttachmentDescription.GetHashCode
 - uid: Veldrid.FramebufferAttachmentDescription.Target
@@ -1856,6 +1943,7 @@ references:
   name: FramebufferDescription
   href: api/Veldrid.FramebufferDescription.html#Veldrid_FramebufferDescription__ctor_
   commentId: Overload:Veldrid.FramebufferDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.FramebufferDescription.FramebufferDescription
   nameWithType: FramebufferDescription.FramebufferDescription
 - uid: Veldrid.FramebufferDescription.ColorTargets
@@ -1880,6 +1968,7 @@ references:
   name: Equals
   href: api/Veldrid.FramebufferDescription.html#Veldrid_FramebufferDescription_Equals_
   commentId: Overload:Veldrid.FramebufferDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.FramebufferDescription.Equals
   nameWithType: FramebufferDescription.Equals
 - uid: Veldrid.FramebufferDescription.GetHashCode
@@ -1892,6 +1981,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.FramebufferDescription.html#Veldrid_FramebufferDescription_GetHashCode_
   commentId: Overload:Veldrid.FramebufferDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.FramebufferDescription.GetHashCode
   nameWithType: FramebufferDescription.GetHashCode
 - uid: Veldrid.FrontFace
@@ -1936,6 +2026,12 @@ references:
   commentId: F:Veldrid.GraphicsBackend.OpenGL
   fullName: Veldrid.GraphicsBackend.OpenGL
   nameWithType: GraphicsBackend.OpenGL
+- uid: Veldrid.GraphicsBackend.OpenGLES
+  name: OpenGLES
+  href: api/Veldrid.GraphicsBackend.html#Veldrid_GraphicsBackend_OpenGLES
+  commentId: F:Veldrid.GraphicsBackend.OpenGLES
+  fullName: Veldrid.GraphicsBackend.OpenGLES
+  nameWithType: GraphicsBackend.OpenGLES
 - uid: Veldrid.GraphicsBackend.Vulkan
   name: Vulkan
   href: api/Veldrid.GraphicsBackend.html#Veldrid_GraphicsBackend_Vulkan
@@ -1958,6 +2054,7 @@ references:
   name: Aniso4xSampler
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Aniso4xSampler_
   commentId: Overload:Veldrid.GraphicsDevice.Aniso4xSampler
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.Aniso4xSampler
   nameWithType: GraphicsDevice.Aniso4xSampler
 - uid: Veldrid.GraphicsDevice.BackendType
@@ -1970,6 +2067,7 @@ references:
   name: BackendType
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_BackendType_
   commentId: Overload:Veldrid.GraphicsDevice.BackendType
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.BackendType
   nameWithType: GraphicsDevice.BackendType
 - uid: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions)
@@ -2000,6 +2098,7 @@ references:
   name: CreateD3D11
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_
   commentId: Overload:Veldrid.GraphicsDevice.CreateD3D11
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.CreateD3D11
   nameWithType: GraphicsDevice.CreateD3D11
 - uid: Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions)
@@ -2024,6 +2123,7 @@ references:
   name: CreateMetal
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateMetal_
   commentId: Overload:Veldrid.GraphicsDevice.CreateMetal
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.CreateMetal
   nameWithType: GraphicsDevice.CreateMetal
 - uid: Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.GraphicsDeviceOptions,Veldrid.OpenGL.OpenGLPlatformInfo,System.UInt32,System.UInt32)
@@ -2036,8 +2136,22 @@ references:
   name: CreateOpenGL
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGL_
   commentId: Overload:Veldrid.GraphicsDevice.CreateOpenGL
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.CreateOpenGL
   nameWithType: GraphicsDevice.CreateOpenGL
+- uid: Veldrid.GraphicsDevice.CreateOpenGLES(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)
+  name: CreateOpenGLES(GraphicsDeviceOptions, SwapchainDescription)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGLES_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_
+  commentId: M:Veldrid.GraphicsDevice.CreateOpenGLES(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)
+  fullName: Veldrid.GraphicsDevice.CreateOpenGLES(Veldrid.GraphicsDeviceOptions, Veldrid.SwapchainDescription)
+  nameWithType: GraphicsDevice.CreateOpenGLES(GraphicsDeviceOptions, SwapchainDescription)
+- uid: Veldrid.GraphicsDevice.CreateOpenGLES*
+  name: CreateOpenGLES
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGLES_
+  commentId: Overload:Veldrid.GraphicsDevice.CreateOpenGLES
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDevice.CreateOpenGLES
+  nameWithType: GraphicsDevice.CreateOpenGLES
 - uid: Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions)
   name: CreateVulkan(GraphicsDeviceOptions)
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_
@@ -2060,6 +2174,7 @@ references:
   name: CreateVulkan
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_
   commentId: Overload:Veldrid.GraphicsDevice.CreateVulkan
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.CreateVulkan
   nameWithType: GraphicsDevice.CreateVulkan
 - uid: Veldrid.GraphicsDevice.Dispose
@@ -2072,6 +2187,7 @@ references:
   name: Dispose
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Dispose_
   commentId: Overload:Veldrid.GraphicsDevice.Dispose
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.Dispose
   nameWithType: GraphicsDevice.Dispose
 - uid: Veldrid.GraphicsDevice.DisposeWhenIdle(IDisposable)
@@ -2084,8 +2200,60 @@ references:
   name: DisposeWhenIdle
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_DisposeWhenIdle_
   commentId: Overload:Veldrid.GraphicsDevice.DisposeWhenIdle
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.DisposeWhenIdle
   nameWithType: GraphicsDevice.DisposeWhenIdle
+- uid: Veldrid.GraphicsDevice.Features
+  name: Features
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Features
+  commentId: P:Veldrid.GraphicsDevice.Features
+  fullName: Veldrid.GraphicsDevice.Features
+  nameWithType: GraphicsDevice.Features
+- uid: Veldrid.GraphicsDevice.Features*
+  name: Features
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Features_
+  commentId: Overload:Veldrid.GraphicsDevice.Features
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDevice.Features
+  nameWithType: GraphicsDevice.Features
+- uid: Veldrid.GraphicsDevice.GetPixelFormatSupport(Veldrid.PixelFormat,Veldrid.TextureType,Veldrid.TextureUsage)
+  name: GetPixelFormatSupport(PixelFormat, TextureType, TextureUsage)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_GetPixelFormatSupport_Veldrid_PixelFormat_Veldrid_TextureType_Veldrid_TextureUsage_
+  commentId: M:Veldrid.GraphicsDevice.GetPixelFormatSupport(Veldrid.PixelFormat,Veldrid.TextureType,Veldrid.TextureUsage)
+  fullName: Veldrid.GraphicsDevice.GetPixelFormatSupport(Veldrid.PixelFormat, Veldrid.TextureType, Veldrid.TextureUsage)
+  nameWithType: GraphicsDevice.GetPixelFormatSupport(PixelFormat, TextureType, TextureUsage)
+- uid: Veldrid.GraphicsDevice.GetPixelFormatSupport(Veldrid.PixelFormat,Veldrid.TextureType,Veldrid.TextureUsage,Veldrid.PixelFormatProperties@)
+  name: GetPixelFormatSupport(PixelFormat, TextureType, TextureUsage, out PixelFormatProperties)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_GetPixelFormatSupport_Veldrid_PixelFormat_Veldrid_TextureType_Veldrid_TextureUsage_Veldrid_PixelFormatProperties__
+  commentId: M:Veldrid.GraphicsDevice.GetPixelFormatSupport(Veldrid.PixelFormat,Veldrid.TextureType,Veldrid.TextureUsage,Veldrid.PixelFormatProperties@)
+  name.vb: GetPixelFormatSupport(PixelFormat, TextureType, TextureUsage, ByRef PixelFormatProperties)
+  fullName: Veldrid.GraphicsDevice.GetPixelFormatSupport(Veldrid.PixelFormat, Veldrid.TextureType, Veldrid.TextureUsage, out Veldrid.PixelFormatProperties)
+  fullName.vb: Veldrid.GraphicsDevice.GetPixelFormatSupport(Veldrid.PixelFormat, Veldrid.TextureType, Veldrid.TextureUsage, ByRef Veldrid.PixelFormatProperties)
+  nameWithType: GraphicsDevice.GetPixelFormatSupport(PixelFormat, TextureType, TextureUsage, out PixelFormatProperties)
+  nameWithType.vb: GraphicsDevice.GetPixelFormatSupport(PixelFormat, TextureType, TextureUsage, ByRef PixelFormatProperties)
+- uid: Veldrid.GraphicsDevice.GetPixelFormatSupport*
+  name: GetPixelFormatSupport
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_GetPixelFormatSupport_
+  commentId: Overload:Veldrid.GraphicsDevice.GetPixelFormatSupport
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDevice.GetPixelFormatSupport
+  nameWithType: GraphicsDevice.GetPixelFormatSupport
+- uid: Veldrid.GraphicsDevice.GetPixelFormatSupportCore(Veldrid.PixelFormat,Veldrid.TextureType,Veldrid.TextureUsage,Veldrid.PixelFormatProperties@)
+  name: GetPixelFormatSupportCore(PixelFormat, TextureType, TextureUsage, out PixelFormatProperties)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_GetPixelFormatSupportCore_Veldrid_PixelFormat_Veldrid_TextureType_Veldrid_TextureUsage_Veldrid_PixelFormatProperties__
+  commentId: M:Veldrid.GraphicsDevice.GetPixelFormatSupportCore(Veldrid.PixelFormat,Veldrid.TextureType,Veldrid.TextureUsage,Veldrid.PixelFormatProperties@)
+  name.vb: GetPixelFormatSupportCore(PixelFormat, TextureType, TextureUsage, ByRef PixelFormatProperties)
+  fullName: Veldrid.GraphicsDevice.GetPixelFormatSupportCore(Veldrid.PixelFormat, Veldrid.TextureType, Veldrid.TextureUsage, out Veldrid.PixelFormatProperties)
+  fullName.vb: Veldrid.GraphicsDevice.GetPixelFormatSupportCore(Veldrid.PixelFormat, Veldrid.TextureType, Veldrid.TextureUsage, ByRef Veldrid.PixelFormatProperties)
+  nameWithType: GraphicsDevice.GetPixelFormatSupportCore(PixelFormat, TextureType, TextureUsage, out PixelFormatProperties)
+  nameWithType.vb: GraphicsDevice.GetPixelFormatSupportCore(PixelFormat, TextureType, TextureUsage, ByRef PixelFormatProperties)
+- uid: Veldrid.GraphicsDevice.GetPixelFormatSupportCore*
+  name: GetPixelFormatSupportCore
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_GetPixelFormatSupportCore_
+  commentId: Overload:Veldrid.GraphicsDevice.GetPixelFormatSupportCore
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDevice.GetPixelFormatSupportCore
+  nameWithType: GraphicsDevice.GetPixelFormatSupportCore
 - uid: Veldrid.GraphicsDevice.GetSampleCountLimit(Veldrid.PixelFormat,System.Boolean)
   name: GetSampleCountLimit(PixelFormat, Boolean)
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_GetSampleCountLimit_Veldrid_PixelFormat_System_Boolean_
@@ -2096,6 +2264,7 @@ references:
   name: GetSampleCountLimit
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_GetSampleCountLimit_
   commentId: Overload:Veldrid.GraphicsDevice.GetSampleCountLimit
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.GetSampleCountLimit
   nameWithType: GraphicsDevice.GetSampleCountLimit
 - uid: Veldrid.GraphicsDevice.IsBackendSupported(Veldrid.GraphicsBackend)
@@ -2108,6 +2277,7 @@ references:
   name: IsBackendSupported
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsBackendSupported_
   commentId: Overload:Veldrid.GraphicsDevice.IsBackendSupported
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.IsBackendSupported
   nameWithType: GraphicsDevice.IsBackendSupported
 - uid: Veldrid.GraphicsDevice.LinearSampler
@@ -2120,6 +2290,7 @@ references:
   name: LinearSampler
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_LinearSampler_
   commentId: Overload:Veldrid.GraphicsDevice.LinearSampler
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.LinearSampler
   nameWithType: GraphicsDevice.LinearSampler
 - uid: Veldrid.GraphicsDevice.MainSwapchain
@@ -2132,6 +2303,7 @@ references:
   name: MainSwapchain
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MainSwapchain_
   commentId: Overload:Veldrid.GraphicsDevice.MainSwapchain
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.MainSwapchain
   nameWithType: GraphicsDevice.MainSwapchain
 - uid: Veldrid.GraphicsDevice.Map(Veldrid.MappableResource,Veldrid.MapMode)
@@ -2150,6 +2322,7 @@ references:
   name: Map
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map_
   commentId: Overload:Veldrid.GraphicsDevice.Map
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.Map
   nameWithType: GraphicsDevice.Map
 - uid: Veldrid.GraphicsDevice.Map``1(Veldrid.MappableResource,Veldrid.MapMode)
@@ -2180,6 +2353,7 @@ references:
   name: MapCore
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MapCore_
   commentId: Overload:Veldrid.GraphicsDevice.MapCore
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.MapCore
   nameWithType: GraphicsDevice.MapCore
 - uid: Veldrid.GraphicsDevice.PlatformDispose
@@ -2192,6 +2366,7 @@ references:
   name: PlatformDispose
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_PlatformDispose_
   commentId: Overload:Veldrid.GraphicsDevice.PlatformDispose
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.PlatformDispose
   nameWithType: GraphicsDevice.PlatformDispose
 - uid: Veldrid.GraphicsDevice.PointSampler
@@ -2204,6 +2379,7 @@ references:
   name: PointSampler
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_PointSampler_
   commentId: Overload:Veldrid.GraphicsDevice.PointSampler
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.PointSampler
   nameWithType: GraphicsDevice.PointSampler
 - uid: Veldrid.GraphicsDevice.PostDeviceCreated
@@ -2216,6 +2392,7 @@ references:
   name: PostDeviceCreated
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_PostDeviceCreated_
   commentId: Overload:Veldrid.GraphicsDevice.PostDeviceCreated
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.PostDeviceCreated
   nameWithType: GraphicsDevice.PostDeviceCreated
 - uid: Veldrid.GraphicsDevice.ResetFence(Veldrid.Fence)
@@ -2228,6 +2405,7 @@ references:
   name: ResetFence
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ResetFence_
   commentId: Overload:Veldrid.GraphicsDevice.ResetFence
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.ResetFence
   nameWithType: GraphicsDevice.ResetFence
 - uid: Veldrid.GraphicsDevice.ResizeMainWindow(System.UInt32,System.UInt32)
@@ -2240,6 +2418,7 @@ references:
   name: ResizeMainWindow
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ResizeMainWindow_
   commentId: Overload:Veldrid.GraphicsDevice.ResizeMainWindow
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.ResizeMainWindow
   nameWithType: GraphicsDevice.ResizeMainWindow
 - uid: Veldrid.GraphicsDevice.ResourceFactory
@@ -2252,6 +2431,7 @@ references:
   name: ResourceFactory
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_ResourceFactory_
   commentId: Overload:Veldrid.GraphicsDevice.ResourceFactory
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.ResourceFactory
   nameWithType: GraphicsDevice.ResourceFactory
 - uid: Veldrid.GraphicsDevice.SubmitCommands(Veldrid.CommandList)
@@ -2270,6 +2450,7 @@ references:
   name: SubmitCommands
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SubmitCommands_
   commentId: Overload:Veldrid.GraphicsDevice.SubmitCommands
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.SubmitCommands
   nameWithType: GraphicsDevice.SubmitCommands
 - uid: Veldrid.GraphicsDevice.SubmitCommandsCore(Veldrid.CommandList,Veldrid.Fence)
@@ -2282,6 +2463,7 @@ references:
   name: SubmitCommandsCore
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SubmitCommandsCore_
   commentId: Overload:Veldrid.GraphicsDevice.SubmitCommandsCore
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.SubmitCommandsCore
   nameWithType: GraphicsDevice.SubmitCommandsCore
 - uid: Veldrid.GraphicsDevice.SwapBuffers
@@ -2300,6 +2482,7 @@ references:
   name: SwapBuffers
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffers_
   commentId: Overload:Veldrid.GraphicsDevice.SwapBuffers
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.SwapBuffers
   nameWithType: GraphicsDevice.SwapBuffers
 - uid: Veldrid.GraphicsDevice.SwapBuffersCore(Veldrid.Swapchain)
@@ -2312,6 +2495,7 @@ references:
   name: SwapBuffersCore
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffersCore_
   commentId: Overload:Veldrid.GraphicsDevice.SwapBuffersCore
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.SwapBuffersCore
   nameWithType: GraphicsDevice.SwapBuffersCore
 - uid: Veldrid.GraphicsDevice.SwapchainFramebuffer
@@ -2324,6 +2508,7 @@ references:
   name: SwapchainFramebuffer
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer_
   commentId: Overload:Veldrid.GraphicsDevice.SwapchainFramebuffer
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.SwapchainFramebuffer
   nameWithType: GraphicsDevice.SwapchainFramebuffer
 - uid: Veldrid.GraphicsDevice.SyncToVerticalBlank
@@ -2336,6 +2521,7 @@ references:
   name: SyncToVerticalBlank
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SyncToVerticalBlank_
   commentId: Overload:Veldrid.GraphicsDevice.SyncToVerticalBlank
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.SyncToVerticalBlank
   nameWithType: GraphicsDevice.SyncToVerticalBlank
 - uid: Veldrid.GraphicsDevice.Unmap(Veldrid.MappableResource)
@@ -2354,6 +2540,7 @@ references:
   name: Unmap
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Unmap_
   commentId: Overload:Veldrid.GraphicsDevice.Unmap
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.Unmap
   nameWithType: GraphicsDevice.Unmap
 - uid: Veldrid.GraphicsDevice.UnmapCore(Veldrid.MappableResource,System.UInt32)
@@ -2366,6 +2553,7 @@ references:
   name: UnmapCore
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UnmapCore_
   commentId: Overload:Veldrid.GraphicsDevice.UnmapCore
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.UnmapCore
   nameWithType: GraphicsDevice.UnmapCore
 - uid: Veldrid.GraphicsDevice.UpdateBuffer(Veldrid.DeviceBuffer,System.UInt32,IntPtr,System.UInt32)
@@ -2378,6 +2566,7 @@ references:
   name: UpdateBuffer
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateBuffer_
   commentId: Overload:Veldrid.GraphicsDevice.UpdateBuffer
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.UpdateBuffer
   nameWithType: GraphicsDevice.UpdateBuffer
 - uid: Veldrid.GraphicsDevice.UpdateBuffer``1(Veldrid.DeviceBuffer,System.UInt32,``0)
@@ -2426,6 +2615,7 @@ references:
   name: UpdateBufferCore
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateBufferCore_
   commentId: Overload:Veldrid.GraphicsDevice.UpdateBufferCore
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.UpdateBufferCore
   nameWithType: GraphicsDevice.UpdateBufferCore
 - uid: Veldrid.GraphicsDevice.UpdateTexture(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
@@ -2438,6 +2628,7 @@ references:
   name: UpdateTexture
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateTexture_
   commentId: Overload:Veldrid.GraphicsDevice.UpdateTexture
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.UpdateTexture
   nameWithType: GraphicsDevice.UpdateTexture
 - uid: Veldrid.GraphicsDevice.UpdateTextureCore(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
@@ -2450,6 +2641,7 @@ references:
   name: UpdateTextureCore
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateTextureCore_
   commentId: Overload:Veldrid.GraphicsDevice.UpdateTextureCore
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.UpdateTextureCore
   nameWithType: GraphicsDevice.UpdateTextureCore
 - uid: Veldrid.GraphicsDevice.WaitForFence(Veldrid.Fence)
@@ -2474,6 +2666,7 @@ references:
   name: WaitForFence
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_WaitForFence_
   commentId: Overload:Veldrid.GraphicsDevice.WaitForFence
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.WaitForFence
   nameWithType: GraphicsDevice.WaitForFence
 - uid: Veldrid.GraphicsDevice.WaitForFences(Veldrid.Fence[],System.Boolean)
@@ -2507,6 +2700,7 @@ references:
   name: WaitForFences
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_WaitForFences_
   commentId: Overload:Veldrid.GraphicsDevice.WaitForFences
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.WaitForFences
   nameWithType: GraphicsDevice.WaitForFences
 - uid: Veldrid.GraphicsDevice.WaitForIdle
@@ -2519,6 +2713,7 @@ references:
   name: WaitForIdle
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_WaitForIdle_
   commentId: Overload:Veldrid.GraphicsDevice.WaitForIdle
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.WaitForIdle
   nameWithType: GraphicsDevice.WaitForIdle
 - uid: Veldrid.GraphicsDevice.WaitForIdleCore
@@ -2531,8 +2726,171 @@ references:
   name: WaitForIdleCore
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_WaitForIdleCore_
   commentId: Overload:Veldrid.GraphicsDevice.WaitForIdleCore
+  isSpec: "True"
   fullName: Veldrid.GraphicsDevice.WaitForIdleCore
   nameWithType: GraphicsDevice.WaitForIdleCore
+- uid: Veldrid.GraphicsDeviceFeatures
+  name: GraphicsDeviceFeatures
+  href: api/Veldrid.GraphicsDeviceFeatures.html
+  commentId: T:Veldrid.GraphicsDeviceFeatures
+  fullName: Veldrid.GraphicsDeviceFeatures
+  nameWithType: GraphicsDeviceFeatures
+- uid: Veldrid.GraphicsDeviceFeatures.ComputeShader
+  name: ComputeShader
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_ComputeShader
+  commentId: P:Veldrid.GraphicsDeviceFeatures.ComputeShader
+  fullName: Veldrid.GraphicsDeviceFeatures.ComputeShader
+  nameWithType: GraphicsDeviceFeatures.ComputeShader
+- uid: Veldrid.GraphicsDeviceFeatures.ComputeShader*
+  name: ComputeShader
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_ComputeShader_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.ComputeShader
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.ComputeShader
+  nameWithType: GraphicsDeviceFeatures.ComputeShader
+- uid: Veldrid.GraphicsDeviceFeatures.DepthClipDisable
+  name: DepthClipDisable
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_DepthClipDisable
+  commentId: P:Veldrid.GraphicsDeviceFeatures.DepthClipDisable
+  fullName: Veldrid.GraphicsDeviceFeatures.DepthClipDisable
+  nameWithType: GraphicsDeviceFeatures.DepthClipDisable
+- uid: Veldrid.GraphicsDeviceFeatures.DepthClipDisable*
+  name: DepthClipDisable
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_DepthClipDisable_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.DepthClipDisable
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.DepthClipDisable
+  nameWithType: GraphicsDeviceFeatures.DepthClipDisable
+- uid: Veldrid.GraphicsDeviceFeatures.DrawBaseInstance
+  name: DrawBaseInstance
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_DrawBaseInstance
+  commentId: P:Veldrid.GraphicsDeviceFeatures.DrawBaseInstance
+  fullName: Veldrid.GraphicsDeviceFeatures.DrawBaseInstance
+  nameWithType: GraphicsDeviceFeatures.DrawBaseInstance
+- uid: Veldrid.GraphicsDeviceFeatures.DrawBaseInstance*
+  name: DrawBaseInstance
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_DrawBaseInstance_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.DrawBaseInstance
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.DrawBaseInstance
+  nameWithType: GraphicsDeviceFeatures.DrawBaseInstance
+- uid: Veldrid.GraphicsDeviceFeatures.DrawBaseVertex
+  name: DrawBaseVertex
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_DrawBaseVertex
+  commentId: P:Veldrid.GraphicsDeviceFeatures.DrawBaseVertex
+  fullName: Veldrid.GraphicsDeviceFeatures.DrawBaseVertex
+  nameWithType: GraphicsDeviceFeatures.DrawBaseVertex
+- uid: Veldrid.GraphicsDeviceFeatures.DrawBaseVertex*
+  name: DrawBaseVertex
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_DrawBaseVertex_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.DrawBaseVertex
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.DrawBaseVertex
+  nameWithType: GraphicsDeviceFeatures.DrawBaseVertex
+- uid: Veldrid.GraphicsDeviceFeatures.FillModeWireframe
+  name: FillModeWireframe
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_FillModeWireframe
+  commentId: P:Veldrid.GraphicsDeviceFeatures.FillModeWireframe
+  fullName: Veldrid.GraphicsDeviceFeatures.FillModeWireframe
+  nameWithType: GraphicsDeviceFeatures.FillModeWireframe
+- uid: Veldrid.GraphicsDeviceFeatures.FillModeWireframe*
+  name: FillModeWireframe
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_FillModeWireframe_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.FillModeWireframe
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.FillModeWireframe
+  nameWithType: GraphicsDeviceFeatures.FillModeWireframe
+- uid: Veldrid.GraphicsDeviceFeatures.GeometryShader
+  name: GeometryShader
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_GeometryShader
+  commentId: P:Veldrid.GraphicsDeviceFeatures.GeometryShader
+  fullName: Veldrid.GraphicsDeviceFeatures.GeometryShader
+  nameWithType: GraphicsDeviceFeatures.GeometryShader
+- uid: Veldrid.GraphicsDeviceFeatures.GeometryShader*
+  name: GeometryShader
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_GeometryShader_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.GeometryShader
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.GeometryShader
+  nameWithType: GraphicsDeviceFeatures.GeometryShader
+- uid: Veldrid.GraphicsDeviceFeatures.IndependentBlend
+  name: IndependentBlend
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_IndependentBlend
+  commentId: P:Veldrid.GraphicsDeviceFeatures.IndependentBlend
+  fullName: Veldrid.GraphicsDeviceFeatures.IndependentBlend
+  nameWithType: GraphicsDeviceFeatures.IndependentBlend
+- uid: Veldrid.GraphicsDeviceFeatures.IndependentBlend*
+  name: IndependentBlend
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_IndependentBlend_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.IndependentBlend
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.IndependentBlend
+  nameWithType: GraphicsDeviceFeatures.IndependentBlend
+- uid: Veldrid.GraphicsDeviceFeatures.MultipleViewports
+  name: MultipleViewports
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_MultipleViewports
+  commentId: P:Veldrid.GraphicsDeviceFeatures.MultipleViewports
+  fullName: Veldrid.GraphicsDeviceFeatures.MultipleViewports
+  nameWithType: GraphicsDeviceFeatures.MultipleViewports
+- uid: Veldrid.GraphicsDeviceFeatures.MultipleViewports*
+  name: MultipleViewports
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_MultipleViewports_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.MultipleViewports
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.MultipleViewports
+  nameWithType: GraphicsDeviceFeatures.MultipleViewports
+- uid: Veldrid.GraphicsDeviceFeatures.SamplerAnisotropy
+  name: SamplerAnisotropy
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_SamplerAnisotropy
+  commentId: P:Veldrid.GraphicsDeviceFeatures.SamplerAnisotropy
+  fullName: Veldrid.GraphicsDeviceFeatures.SamplerAnisotropy
+  nameWithType: GraphicsDeviceFeatures.SamplerAnisotropy
+- uid: Veldrid.GraphicsDeviceFeatures.SamplerAnisotropy*
+  name: SamplerAnisotropy
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_SamplerAnisotropy_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.SamplerAnisotropy
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.SamplerAnisotropy
+  nameWithType: GraphicsDeviceFeatures.SamplerAnisotropy
+- uid: Veldrid.GraphicsDeviceFeatures.SamplerLodBias
+  name: SamplerLodBias
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_SamplerLodBias
+  commentId: P:Veldrid.GraphicsDeviceFeatures.SamplerLodBias
+  fullName: Veldrid.GraphicsDeviceFeatures.SamplerLodBias
+  nameWithType: GraphicsDeviceFeatures.SamplerLodBias
+- uid: Veldrid.GraphicsDeviceFeatures.SamplerLodBias*
+  name: SamplerLodBias
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_SamplerLodBias_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.SamplerLodBias
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.SamplerLodBias
+  nameWithType: GraphicsDeviceFeatures.SamplerLodBias
+- uid: Veldrid.GraphicsDeviceFeatures.TessellationShaders
+  name: TessellationShaders
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_TessellationShaders
+  commentId: P:Veldrid.GraphicsDeviceFeatures.TessellationShaders
+  fullName: Veldrid.GraphicsDeviceFeatures.TessellationShaders
+  nameWithType: GraphicsDeviceFeatures.TessellationShaders
+- uid: Veldrid.GraphicsDeviceFeatures.TessellationShaders*
+  name: TessellationShaders
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_TessellationShaders_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.TessellationShaders
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.TessellationShaders
+  nameWithType: GraphicsDeviceFeatures.TessellationShaders
+- uid: Veldrid.GraphicsDeviceFeatures.Texture1D
+  name: Texture1D
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_Texture1D
+  commentId: P:Veldrid.GraphicsDeviceFeatures.Texture1D
+  fullName: Veldrid.GraphicsDeviceFeatures.Texture1D
+  nameWithType: GraphicsDeviceFeatures.Texture1D
+- uid: Veldrid.GraphicsDeviceFeatures.Texture1D*
+  name: Texture1D
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_Texture1D_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.Texture1D
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.Texture1D
+  nameWithType: GraphicsDeviceFeatures.Texture1D
 - uid: Veldrid.GraphicsDeviceOptions
   name: GraphicsDeviceOptions
   href: api/Veldrid.GraphicsDeviceOptions.html
@@ -2554,10 +2912,20 @@ references:
   fullName.vb: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean, System.Nullable(Of Veldrid.PixelFormat), System.Boolean)
   nameWithType: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean)
   nameWithType.vb: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable(Of PixelFormat), Boolean)
+- uid: Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean,Veldrid.ResourceBindingModel)
+  name: GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean, ResourceBindingModel)
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions__ctor_System_Boolean_System_Nullable_Veldrid_PixelFormat__System_Boolean_Veldrid_ResourceBindingModel_
+  commentId: M:Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean,Veldrid.ResourceBindingModel)
+  name.vb: GraphicsDeviceOptions(Boolean, Nullable(Of PixelFormat), Boolean, ResourceBindingModel)
+  fullName: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean, System.Nullable<Veldrid.PixelFormat>, System.Boolean, Veldrid.ResourceBindingModel)
+  fullName.vb: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean, System.Nullable(Of Veldrid.PixelFormat), System.Boolean, Veldrid.ResourceBindingModel)
+  nameWithType: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean, ResourceBindingModel)
+  nameWithType.vb: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable(Of PixelFormat), Boolean, ResourceBindingModel)
 - uid: Veldrid.GraphicsDeviceOptions.#ctor*
   name: GraphicsDeviceOptions
   href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions__ctor_
   commentId: Overload:Veldrid.GraphicsDeviceOptions.#ctor
+  isSpec: "True"
   fullName: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions
   nameWithType: GraphicsDeviceOptions.GraphicsDeviceOptions
 - uid: Veldrid.GraphicsDeviceOptions.Debug
@@ -2572,6 +2940,12 @@ references:
   commentId: F:Veldrid.GraphicsDeviceOptions.HasMainSwapchain
   fullName: Veldrid.GraphicsDeviceOptions.HasMainSwapchain
   nameWithType: GraphicsDeviceOptions.HasMainSwapchain
+- uid: Veldrid.GraphicsDeviceOptions.ResourceBindingModel
+  name: ResourceBindingModel
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_ResourceBindingModel
+  commentId: F:Veldrid.GraphicsDeviceOptions.ResourceBindingModel
+  fullName: Veldrid.GraphicsDeviceOptions.ResourceBindingModel
+  nameWithType: GraphicsDeviceOptions.ResourceBindingModel
 - uid: Veldrid.GraphicsDeviceOptions.SwapchainDepthFormat
   name: SwapchainDepthFormat
   href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_SwapchainDepthFormat
@@ -2605,10 +2979,20 @@ references:
   fullName.vb: Veldrid.GraphicsPipelineDescription.GraphicsPipelineDescription(Veldrid.BlendStateDescription, Veldrid.DepthStencilStateDescription, Veldrid.RasterizerStateDescription, Veldrid.PrimitiveTopology, Veldrid.ShaderSetDescription, Veldrid.ResourceLayout(), Veldrid.OutputDescription)
   nameWithType: GraphicsPipelineDescription.GraphicsPipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout[], OutputDescription)
   nameWithType.vb: GraphicsPipelineDescription.GraphicsPipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout(), OutputDescription)
+- uid: Veldrid.GraphicsPipelineDescription.#ctor(Veldrid.BlendStateDescription,Veldrid.DepthStencilStateDescription,Veldrid.RasterizerStateDescription,Veldrid.PrimitiveTopology,Veldrid.ShaderSetDescription,Veldrid.ResourceLayout[],Veldrid.OutputDescription,Veldrid.ResourceBindingModel)
+  name: GraphicsPipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout[], OutputDescription, ResourceBindingModel)
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription__ctor_Veldrid_BlendStateDescription_Veldrid_DepthStencilStateDescription_Veldrid_RasterizerStateDescription_Veldrid_PrimitiveTopology_Veldrid_ShaderSetDescription_Veldrid_ResourceLayout___Veldrid_OutputDescription_Veldrid_ResourceBindingModel_
+  commentId: M:Veldrid.GraphicsPipelineDescription.#ctor(Veldrid.BlendStateDescription,Veldrid.DepthStencilStateDescription,Veldrid.RasterizerStateDescription,Veldrid.PrimitiveTopology,Veldrid.ShaderSetDescription,Veldrid.ResourceLayout[],Veldrid.OutputDescription,Veldrid.ResourceBindingModel)
+  name.vb: GraphicsPipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout(), OutputDescription, ResourceBindingModel)
+  fullName: Veldrid.GraphicsPipelineDescription.GraphicsPipelineDescription(Veldrid.BlendStateDescription, Veldrid.DepthStencilStateDescription, Veldrid.RasterizerStateDescription, Veldrid.PrimitiveTopology, Veldrid.ShaderSetDescription, Veldrid.ResourceLayout[], Veldrid.OutputDescription, Veldrid.ResourceBindingModel)
+  fullName.vb: Veldrid.GraphicsPipelineDescription.GraphicsPipelineDescription(Veldrid.BlendStateDescription, Veldrid.DepthStencilStateDescription, Veldrid.RasterizerStateDescription, Veldrid.PrimitiveTopology, Veldrid.ShaderSetDescription, Veldrid.ResourceLayout(), Veldrid.OutputDescription, Veldrid.ResourceBindingModel)
+  nameWithType: GraphicsPipelineDescription.GraphicsPipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout[], OutputDescription, ResourceBindingModel)
+  nameWithType.vb: GraphicsPipelineDescription.GraphicsPipelineDescription(BlendStateDescription, DepthStencilStateDescription, RasterizerStateDescription, PrimitiveTopology, ShaderSetDescription, ResourceLayout(), OutputDescription, ResourceBindingModel)
 - uid: Veldrid.GraphicsPipelineDescription.#ctor*
   name: GraphicsPipelineDescription
   href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription__ctor_
   commentId: Overload:Veldrid.GraphicsPipelineDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.GraphicsPipelineDescription.GraphicsPipelineDescription
   nameWithType: GraphicsPipelineDescription.GraphicsPipelineDescription
 - uid: Veldrid.GraphicsPipelineDescription.BlendState
@@ -2633,6 +3017,7 @@ references:
   name: Equals
   href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_Equals_
   commentId: Overload:Veldrid.GraphicsPipelineDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.GraphicsPipelineDescription.Equals
   nameWithType: GraphicsPipelineDescription.Equals
 - uid: Veldrid.GraphicsPipelineDescription.GetHashCode
@@ -2645,6 +3030,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_GetHashCode_
   commentId: Overload:Veldrid.GraphicsPipelineDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.GraphicsPipelineDescription.GetHashCode
   nameWithType: GraphicsPipelineDescription.GetHashCode
 - uid: Veldrid.GraphicsPipelineDescription.Outputs
@@ -2665,6 +3051,12 @@ references:
   commentId: F:Veldrid.GraphicsPipelineDescription.RasterizerState
   fullName: Veldrid.GraphicsPipelineDescription.RasterizerState
   nameWithType: GraphicsPipelineDescription.RasterizerState
+- uid: Veldrid.GraphicsPipelineDescription.ResourceBindingModel
+  name: ResourceBindingModel
+  href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceBindingModel
+  commentId: F:Veldrid.GraphicsPipelineDescription.ResourceBindingModel
+  fullName: Veldrid.GraphicsPipelineDescription.ResourceBindingModel
+  nameWithType: GraphicsPipelineDescription.ResourceBindingModel
 - uid: Veldrid.GraphicsPipelineDescription.ResourceLayouts
   name: ResourceLayouts
   href: api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts
@@ -2884,6 +3276,7 @@ references:
   name: MappedResourceView
   href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1__ctor_
   commentId: Overload:Veldrid.MappedResourceView`1.#ctor
+  isSpec: "True"
   fullName: Veldrid.MappedResourceView<T>.MappedResourceView
   fullName.vb: Veldrid.MappedResourceView(Of T).MappedResourceView
   nameWithType: MappedResourceView<T>.MappedResourceView
@@ -2954,6 +3347,7 @@ references:
   name: Item
   href: api/Veldrid.MappedResourceView-1.html#Veldrid_MappedResourceView_1_Item_
   commentId: Overload:Veldrid.MappedResourceView`1.Item
+  isSpec: "True"
   fullName: Veldrid.MappedResourceView<T>.Item
   fullName.vb: Veldrid.MappedResourceView(Of T).Item
   nameWithType: MappedResourceView<T>.Item
@@ -2995,10 +3389,20 @@ references:
   fullName.vb: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func(Of System.String, IntPtr), Action(Of IntPtr), Func(Of IntPtr), Action, Action(Of IntPtr), Action, Action(Of System.Boolean))
   nameWithType: OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func<String, IntPtr>, Action<IntPtr>, Func<IntPtr>, Action, Action<IntPtr>, Action, Action<Boolean>)
   nameWithType.vb: OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func(Of String, IntPtr), Action(Of IntPtr), Func(Of IntPtr), Action, Action(Of IntPtr), Action, Action(Of Boolean))
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.#ctor(IntPtr,Func{System.String,IntPtr},Action{IntPtr},Func{IntPtr},Action,Action{IntPtr},Action,Action{System.Boolean},Action,Action{System.UInt32,System.UInt32})
+  name: OpenGLPlatformInfo(IntPtr, Func<String, IntPtr>, Action<IntPtr>, Func<IntPtr>, Action, Action<IntPtr>, Action, Action<Boolean>, Action, Action<UInt32, UInt32>)
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo__ctor_IntPtr_Func_System_String_IntPtr__Action_IntPtr__Func_IntPtr__Action_Action_IntPtr__Action_Action_System_Boolean__Action_Action_System_UInt32_System_UInt32__
+  commentId: M:Veldrid.OpenGL.OpenGLPlatformInfo.#ctor(IntPtr,Func{System.String,IntPtr},Action{IntPtr},Func{IntPtr},Action,Action{IntPtr},Action,Action{System.Boolean},Action,Action{System.UInt32,System.UInt32})
+  name.vb: OpenGLPlatformInfo(IntPtr, Func(Of String, IntPtr), Action(Of IntPtr), Func(Of IntPtr), Action, Action(Of IntPtr), Action, Action(Of Boolean), Action, Action(Of UInt32, UInt32))
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func<System.String, IntPtr>, Action<IntPtr>, Func<IntPtr>, Action, Action<IntPtr>, Action, Action<System.Boolean>, Action, Action<System.UInt32, System.UInt32>)
+  fullName.vb: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func(Of System.String, IntPtr), Action(Of IntPtr), Func(Of IntPtr), Action, Action(Of IntPtr), Action, Action(Of System.Boolean), Action, Action(Of System.UInt32, System.UInt32))
+  nameWithType: OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func<String, IntPtr>, Action<IntPtr>, Func<IntPtr>, Action, Action<IntPtr>, Action, Action<Boolean>, Action, Action<UInt32, UInt32>)
+  nameWithType.vb: OpenGLPlatformInfo.OpenGLPlatformInfo(IntPtr, Func(Of String, IntPtr), Action(Of IntPtr), Func(Of IntPtr), Action, Action(Of IntPtr), Action, Action(Of Boolean), Action, Action(Of UInt32, UInt32))
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.#ctor*
   name: OpenGLPlatformInfo
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo__ctor_
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.#ctor
+  isSpec: "True"
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLPlatformInfo
   nameWithType: OpenGLPlatformInfo.OpenGLPlatformInfo
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.ClearCurrentContext
@@ -3011,6 +3415,7 @@ references:
   name: ClearCurrentContext
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_ClearCurrentContext_
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.ClearCurrentContext
+  isSpec: "True"
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.ClearCurrentContext
   nameWithType: OpenGLPlatformInfo.ClearCurrentContext
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.DeleteContext
@@ -3023,6 +3428,7 @@ references:
   name: DeleteContext
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_DeleteContext_
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.DeleteContext
+  isSpec: "True"
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.DeleteContext
   nameWithType: OpenGLPlatformInfo.DeleteContext
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.GetCurrentContext
@@ -3035,6 +3441,7 @@ references:
   name: GetCurrentContext
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_GetCurrentContext_
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.GetCurrentContext
+  isSpec: "True"
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.GetCurrentContext
   nameWithType: OpenGLPlatformInfo.GetCurrentContext
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.GetProcAddress
@@ -3047,6 +3454,7 @@ references:
   name: GetProcAddress
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_GetProcAddress_
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.GetProcAddress
+  isSpec: "True"
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.GetProcAddress
   nameWithType: OpenGLPlatformInfo.GetProcAddress
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.MakeCurrent
@@ -3059,6 +3467,7 @@ references:
   name: MakeCurrent
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_MakeCurrent_
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.MakeCurrent
+  isSpec: "True"
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.MakeCurrent
   nameWithType: OpenGLPlatformInfo.MakeCurrent
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLContextHandle
@@ -3071,8 +3480,35 @@ references:
   name: OpenGLContextHandle
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_OpenGLContextHandle_
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLContextHandle
+  isSpec: "True"
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.OpenGLContextHandle
   nameWithType: OpenGLPlatformInfo.OpenGLContextHandle
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.ResizeSwapchain
+  name: ResizeSwapchain
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_ResizeSwapchain
+  commentId: P:Veldrid.OpenGL.OpenGLPlatformInfo.ResizeSwapchain
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.ResizeSwapchain
+  nameWithType: OpenGLPlatformInfo.ResizeSwapchain
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.ResizeSwapchain*
+  name: ResizeSwapchain
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_ResizeSwapchain_
+  commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.ResizeSwapchain
+  isSpec: "True"
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.ResizeSwapchain
+  nameWithType: OpenGLPlatformInfo.ResizeSwapchain
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.SetSwapchainFramebuffer
+  name: SetSwapchainFramebuffer
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_SetSwapchainFramebuffer
+  commentId: P:Veldrid.OpenGL.OpenGLPlatformInfo.SetSwapchainFramebuffer
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.SetSwapchainFramebuffer
+  nameWithType: OpenGLPlatformInfo.SetSwapchainFramebuffer
+- uid: Veldrid.OpenGL.OpenGLPlatformInfo.SetSwapchainFramebuffer*
+  name: SetSwapchainFramebuffer
+  href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_SetSwapchainFramebuffer_
+  commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.SetSwapchainFramebuffer
+  isSpec: "True"
+  fullName: Veldrid.OpenGL.OpenGLPlatformInfo.SetSwapchainFramebuffer
+  nameWithType: OpenGLPlatformInfo.SetSwapchainFramebuffer
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.SetSyncToVerticalBlank
   name: SetSyncToVerticalBlank
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_SetSyncToVerticalBlank
@@ -3083,6 +3519,7 @@ references:
   name: SetSyncToVerticalBlank
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_SetSyncToVerticalBlank_
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.SetSyncToVerticalBlank
+  isSpec: "True"
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.SetSyncToVerticalBlank
   nameWithType: OpenGLPlatformInfo.SetSyncToVerticalBlank
 - uid: Veldrid.OpenGL.OpenGLPlatformInfo.SwapBuffers
@@ -3095,6 +3532,7 @@ references:
   name: SwapBuffers
   href: api/Veldrid.OpenGL.OpenGLPlatformInfo.html#Veldrid_OpenGL_OpenGLPlatformInfo_SwapBuffers_
   commentId: Overload:Veldrid.OpenGL.OpenGLPlatformInfo.SwapBuffers
+  isSpec: "True"
   fullName: Veldrid.OpenGL.OpenGLPlatformInfo.SwapBuffers
   nameWithType: OpenGLPlatformInfo.SwapBuffers
 - uid: Veldrid.OutputAttachmentDescription
@@ -3113,6 +3551,7 @@ references:
   name: OutputAttachmentDescription
   href: api/Veldrid.OutputAttachmentDescription.html#Veldrid_OutputAttachmentDescription__ctor_
   commentId: Overload:Veldrid.OutputAttachmentDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.OutputAttachmentDescription.OutputAttachmentDescription
   nameWithType: OutputAttachmentDescription.OutputAttachmentDescription
 - uid: Veldrid.OutputAttachmentDescription.Equals(Veldrid.OutputAttachmentDescription)
@@ -3125,6 +3564,7 @@ references:
   name: Equals
   href: api/Veldrid.OutputAttachmentDescription.html#Veldrid_OutputAttachmentDescription_Equals_
   commentId: Overload:Veldrid.OutputAttachmentDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.OutputAttachmentDescription.Equals
   nameWithType: OutputAttachmentDescription.Equals
 - uid: Veldrid.OutputAttachmentDescription.Format
@@ -3143,6 +3583,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.OutputAttachmentDescription.html#Veldrid_OutputAttachmentDescription_GetHashCode_
   commentId: Overload:Veldrid.OutputAttachmentDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.OutputAttachmentDescription.GetHashCode
   nameWithType: OutputAttachmentDescription.GetHashCode
 - uid: Veldrid.OutputDescription
@@ -3173,6 +3614,7 @@ references:
   name: OutputDescription
   href: api/Veldrid.OutputDescription.html#Veldrid_OutputDescription__ctor_
   commentId: Overload:Veldrid.OutputDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.OutputDescription.OutputDescription
   nameWithType: OutputDescription.OutputDescription
 - uid: Veldrid.OutputDescription.ColorAttachments
@@ -3197,6 +3639,7 @@ references:
   name: Equals
   href: api/Veldrid.OutputDescription.html#Veldrid_OutputDescription_Equals_
   commentId: Overload:Veldrid.OutputDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.OutputDescription.Equals
   nameWithType: OutputDescription.Equals
 - uid: Veldrid.OutputDescription.GetHashCode
@@ -3209,6 +3652,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.OutputDescription.html#Veldrid_OutputDescription_GetHashCode_
   commentId: Overload:Veldrid.OutputDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.OutputDescription.GetHashCode
   nameWithType: OutputDescription.GetHashCode
 - uid: Veldrid.OutputDescription.SampleCount
@@ -3233,6 +3677,7 @@ references:
   name: Dispose
   href: api/Veldrid.Pipeline.html#Veldrid_Pipeline_Dispose_
   commentId: Overload:Veldrid.Pipeline.Dispose
+  isSpec: "True"
   fullName: Veldrid.Pipeline.Dispose
   nameWithType: Pipeline.Dispose
 - uid: Veldrid.Pipeline.IsComputePipeline
@@ -3245,6 +3690,7 @@ references:
   name: IsComputePipeline
   href: api/Veldrid.Pipeline.html#Veldrid_Pipeline_IsComputePipeline_
   commentId: Overload:Veldrid.Pipeline.IsComputePipeline
+  isSpec: "True"
   fullName: Veldrid.Pipeline.IsComputePipeline
   nameWithType: Pipeline.IsComputePipeline
 - uid: Veldrid.Pipeline.Name
@@ -3257,6 +3703,7 @@ references:
   name: Name
   href: api/Veldrid.Pipeline.html#Veldrid_Pipeline_Name_
   commentId: Overload:Veldrid.Pipeline.Name
+  isSpec: "True"
   fullName: Veldrid.Pipeline.Name
   nameWithType: Pipeline.Name
 - uid: Veldrid.PixelFormat
@@ -3307,6 +3754,24 @@ references:
   commentId: F:Veldrid.PixelFormat.D32_Float_S8_UInt
   fullName: Veldrid.PixelFormat.D32_Float_S8_UInt
   nameWithType: PixelFormat.D32_Float_S8_UInt
+- uid: Veldrid.PixelFormat.ETC2_R8_G8_B8_A1_UNorm
+  name: ETC2_R8_G8_B8_A1_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_ETC2_R8_G8_B8_A1_UNorm
+  commentId: F:Veldrid.PixelFormat.ETC2_R8_G8_B8_A1_UNorm
+  fullName: Veldrid.PixelFormat.ETC2_R8_G8_B8_A1_UNorm
+  nameWithType: PixelFormat.ETC2_R8_G8_B8_A1_UNorm
+- uid: Veldrid.PixelFormat.ETC2_R8_G8_B8_A8_UNorm
+  name: ETC2_R8_G8_B8_A8_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_ETC2_R8_G8_B8_A8_UNorm
+  commentId: F:Veldrid.PixelFormat.ETC2_R8_G8_B8_A8_UNorm
+  fullName: Veldrid.PixelFormat.ETC2_R8_G8_B8_A8_UNorm
+  nameWithType: PixelFormat.ETC2_R8_G8_B8_A8_UNorm
+- uid: Veldrid.PixelFormat.ETC2_R8_G8_B8_UNorm
+  name: ETC2_R8_G8_B8_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_ETC2_R8_G8_B8_UNorm
+  commentId: F:Veldrid.PixelFormat.ETC2_R8_G8_B8_UNorm
+  fullName: Veldrid.PixelFormat.ETC2_R8_G8_B8_UNorm
+  nameWithType: PixelFormat.ETC2_R8_G8_B8_UNorm
 - uid: Veldrid.PixelFormat.R10_G10_B10_A2_UInt
   name: R10_G10_B10_A2_UInt
   href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_R10_G10_B10_A2_UInt
@@ -3541,6 +4006,55 @@ references:
   commentId: F:Veldrid.PixelFormat.R8_UNorm
   fullName: Veldrid.PixelFormat.R8_UNorm
   nameWithType: PixelFormat.R8_UNorm
+- uid: Veldrid.PixelFormatProperties
+  name: PixelFormatProperties
+  href: api/Veldrid.PixelFormatProperties.html
+  commentId: T:Veldrid.PixelFormatProperties
+  fullName: Veldrid.PixelFormatProperties
+  nameWithType: PixelFormatProperties
+- uid: Veldrid.PixelFormatProperties.IsSampleCountSupported(Veldrid.TextureSampleCount)
+  name: IsSampleCountSupported(TextureSampleCount)
+  href: api/Veldrid.PixelFormatProperties.html#Veldrid_PixelFormatProperties_IsSampleCountSupported_Veldrid_TextureSampleCount_
+  commentId: M:Veldrid.PixelFormatProperties.IsSampleCountSupported(Veldrid.TextureSampleCount)
+  fullName: Veldrid.PixelFormatProperties.IsSampleCountSupported(Veldrid.TextureSampleCount)
+  nameWithType: PixelFormatProperties.IsSampleCountSupported(TextureSampleCount)
+- uid: Veldrid.PixelFormatProperties.IsSampleCountSupported*
+  name: IsSampleCountSupported
+  href: api/Veldrid.PixelFormatProperties.html#Veldrid_PixelFormatProperties_IsSampleCountSupported_
+  commentId: Overload:Veldrid.PixelFormatProperties.IsSampleCountSupported
+  isSpec: "True"
+  fullName: Veldrid.PixelFormatProperties.IsSampleCountSupported
+  nameWithType: PixelFormatProperties.IsSampleCountSupported
+- uid: Veldrid.PixelFormatProperties.MaxArrayLayers
+  name: MaxArrayLayers
+  href: api/Veldrid.PixelFormatProperties.html#Veldrid_PixelFormatProperties_MaxArrayLayers
+  commentId: F:Veldrid.PixelFormatProperties.MaxArrayLayers
+  fullName: Veldrid.PixelFormatProperties.MaxArrayLayers
+  nameWithType: PixelFormatProperties.MaxArrayLayers
+- uid: Veldrid.PixelFormatProperties.MaxDepth
+  name: MaxDepth
+  href: api/Veldrid.PixelFormatProperties.html#Veldrid_PixelFormatProperties_MaxDepth
+  commentId: F:Veldrid.PixelFormatProperties.MaxDepth
+  fullName: Veldrid.PixelFormatProperties.MaxDepth
+  nameWithType: PixelFormatProperties.MaxDepth
+- uid: Veldrid.PixelFormatProperties.MaxHeight
+  name: MaxHeight
+  href: api/Veldrid.PixelFormatProperties.html#Veldrid_PixelFormatProperties_MaxHeight
+  commentId: F:Veldrid.PixelFormatProperties.MaxHeight
+  fullName: Veldrid.PixelFormatProperties.MaxHeight
+  nameWithType: PixelFormatProperties.MaxHeight
+- uid: Veldrid.PixelFormatProperties.MaxMipLevels
+  name: MaxMipLevels
+  href: api/Veldrid.PixelFormatProperties.html#Veldrid_PixelFormatProperties_MaxMipLevels
+  commentId: F:Veldrid.PixelFormatProperties.MaxMipLevels
+  fullName: Veldrid.PixelFormatProperties.MaxMipLevels
+  nameWithType: PixelFormatProperties.MaxMipLevels
+- uid: Veldrid.PixelFormatProperties.MaxWidth
+  name: MaxWidth
+  href: api/Veldrid.PixelFormatProperties.html#Veldrid_PixelFormatProperties_MaxWidth
+  commentId: F:Veldrid.PixelFormatProperties.MaxWidth
+  fullName: Veldrid.PixelFormatProperties.MaxWidth
+  nameWithType: PixelFormatProperties.MaxWidth
 - uid: Veldrid.PolygonFillMode
   name: PolygonFillMode
   href: api/Veldrid.PolygonFillMode.html
@@ -3611,6 +4125,7 @@ references:
   name: RasterizerStateDescription
   href: api/Veldrid.RasterizerStateDescription.html#Veldrid_RasterizerStateDescription__ctor_
   commentId: Overload:Veldrid.RasterizerStateDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.RasterizerStateDescription.RasterizerStateDescription
   nameWithType: RasterizerStateDescription.RasterizerStateDescription
 - uid: Veldrid.RasterizerStateDescription.CullMode
@@ -3647,6 +4162,7 @@ references:
   name: Equals
   href: api/Veldrid.RasterizerStateDescription.html#Veldrid_RasterizerStateDescription_Equals_
   commentId: Overload:Veldrid.RasterizerStateDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.RasterizerStateDescription.Equals
   nameWithType: RasterizerStateDescription.Equals
 - uid: Veldrid.RasterizerStateDescription.FillMode
@@ -3671,6 +4187,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.RasterizerStateDescription.html#Veldrid_RasterizerStateDescription_GetHashCode_
   commentId: Overload:Veldrid.RasterizerStateDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.RasterizerStateDescription.GetHashCode
   nameWithType: RasterizerStateDescription.GetHashCode
 - uid: Veldrid.RasterizerStateDescription.ScissorTestEnabled
@@ -3679,12 +4196,43 @@ references:
   commentId: F:Veldrid.RasterizerStateDescription.ScissorTestEnabled
   fullName: Veldrid.RasterizerStateDescription.ScissorTestEnabled
   nameWithType: RasterizerStateDescription.ScissorTestEnabled
+- uid: Veldrid.ResourceBindingModel
+  name: ResourceBindingModel
+  href: api/Veldrid.ResourceBindingModel.html
+  commentId: T:Veldrid.ResourceBindingModel
+  fullName: Veldrid.ResourceBindingModel
+  nameWithType: ResourceBindingModel
+- uid: Veldrid.ResourceBindingModel.Default
+  name: Default
+  href: api/Veldrid.ResourceBindingModel.html#Veldrid_ResourceBindingModel_Default
+  commentId: F:Veldrid.ResourceBindingModel.Default
+  fullName: Veldrid.ResourceBindingModel.Default
+  nameWithType: ResourceBindingModel.Default
+- uid: Veldrid.ResourceBindingModel.Improved
+  name: Improved
+  href: api/Veldrid.ResourceBindingModel.html#Veldrid_ResourceBindingModel_Improved
+  commentId: F:Veldrid.ResourceBindingModel.Improved
+  fullName: Veldrid.ResourceBindingModel.Improved
+  nameWithType: ResourceBindingModel.Improved
 - uid: Veldrid.ResourceFactory
   name: ResourceFactory
   href: api/Veldrid.ResourceFactory.html
   commentId: T:Veldrid.ResourceFactory
   fullName: Veldrid.ResourceFactory
   nameWithType: ResourceFactory
+- uid: Veldrid.ResourceFactory.#ctor(Veldrid.GraphicsDeviceFeatures)
+  name: ResourceFactory(GraphicsDeviceFeatures)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory__ctor_Veldrid_GraphicsDeviceFeatures_
+  commentId: M:Veldrid.ResourceFactory.#ctor(Veldrid.GraphicsDeviceFeatures)
+  fullName: Veldrid.ResourceFactory.ResourceFactory(Veldrid.GraphicsDeviceFeatures)
+  nameWithType: ResourceFactory.ResourceFactory(GraphicsDeviceFeatures)
+- uid: Veldrid.ResourceFactory.#ctor*
+  name: ResourceFactory
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory__ctor_
+  commentId: Overload:Veldrid.ResourceFactory.#ctor
+  isSpec: "True"
+  fullName: Veldrid.ResourceFactory.ResourceFactory
+  nameWithType: ResourceFactory.ResourceFactory
 - uid: Veldrid.ResourceFactory.BackendType
   name: BackendType
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_BackendType
@@ -3695,6 +4243,7 @@ references:
   name: BackendType
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_BackendType_
   commentId: Overload:Veldrid.ResourceFactory.BackendType
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.BackendType
   nameWithType: ResourceFactory.BackendType
 - uid: Veldrid.ResourceFactory.CreateBuffer(Veldrid.BufferDescription)
@@ -3716,6 +4265,7 @@ references:
   name: CreateBuffer
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateBuffer_
   commentId: Overload:Veldrid.ResourceFactory.CreateBuffer
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateBuffer
   nameWithType: ResourceFactory.CreateBuffer
 - uid: Veldrid.ResourceFactory.CreateBufferCore(Veldrid.BufferDescription@)
@@ -3731,6 +4281,7 @@ references:
   name: CreateBufferCore
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateBufferCore_
   commentId: Overload:Veldrid.ResourceFactory.CreateBufferCore
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateBufferCore
   nameWithType: ResourceFactory.CreateBufferCore
 - uid: Veldrid.ResourceFactory.CreateCommandList
@@ -3758,6 +4309,7 @@ references:
   name: CreateCommandList
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateCommandList_
   commentId: Overload:Veldrid.ResourceFactory.CreateCommandList
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateCommandList
   nameWithType: ResourceFactory.CreateCommandList
 - uid: Veldrid.ResourceFactory.CreateComputePipeline(Veldrid.ComputePipelineDescription)
@@ -3779,6 +4331,7 @@ references:
   name: CreateComputePipeline
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateComputePipeline_
   commentId: Overload:Veldrid.ResourceFactory.CreateComputePipeline
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateComputePipeline
   nameWithType: ResourceFactory.CreateComputePipeline
 - uid: Veldrid.ResourceFactory.CreateFence(System.Boolean)
@@ -3791,6 +4344,7 @@ references:
   name: CreateFence
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateFence_
   commentId: Overload:Veldrid.ResourceFactory.CreateFence
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateFence
   nameWithType: ResourceFactory.CreateFence
 - uid: Veldrid.ResourceFactory.CreateFramebuffer(Veldrid.FramebufferDescription)
@@ -3812,6 +4366,7 @@ references:
   name: CreateFramebuffer
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateFramebuffer_
   commentId: Overload:Veldrid.ResourceFactory.CreateFramebuffer
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateFramebuffer
   nameWithType: ResourceFactory.CreateFramebuffer
 - uid: Veldrid.ResourceFactory.CreateGraphicsPipeline(Veldrid.GraphicsPipelineDescription)
@@ -3833,8 +4388,25 @@ references:
   name: CreateGraphicsPipeline
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateGraphicsPipeline_
   commentId: Overload:Veldrid.ResourceFactory.CreateGraphicsPipeline
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateGraphicsPipeline
   nameWithType: ResourceFactory.CreateGraphicsPipeline
+- uid: Veldrid.ResourceFactory.CreateGraphicsPipelineCore(Veldrid.GraphicsPipelineDescription@)
+  name: CreateGraphicsPipelineCore(ref GraphicsPipelineDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateGraphicsPipelineCore_Veldrid_GraphicsPipelineDescription__
+  commentId: M:Veldrid.ResourceFactory.CreateGraphicsPipelineCore(Veldrid.GraphicsPipelineDescription@)
+  name.vb: CreateGraphicsPipelineCore(ByRef GraphicsPipelineDescription)
+  fullName: Veldrid.ResourceFactory.CreateGraphicsPipelineCore(ref Veldrid.GraphicsPipelineDescription)
+  fullName.vb: Veldrid.ResourceFactory.CreateGraphicsPipelineCore(ByRef Veldrid.GraphicsPipelineDescription)
+  nameWithType: ResourceFactory.CreateGraphicsPipelineCore(ref GraphicsPipelineDescription)
+  nameWithType.vb: ResourceFactory.CreateGraphicsPipelineCore(ByRef GraphicsPipelineDescription)
+- uid: Veldrid.ResourceFactory.CreateGraphicsPipelineCore*
+  name: CreateGraphicsPipelineCore
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateGraphicsPipelineCore_
+  commentId: Overload:Veldrid.ResourceFactory.CreateGraphicsPipelineCore
+  isSpec: "True"
+  fullName: Veldrid.ResourceFactory.CreateGraphicsPipelineCore
+  nameWithType: ResourceFactory.CreateGraphicsPipelineCore
 - uid: Veldrid.ResourceFactory.CreateResourceLayout(Veldrid.ResourceLayoutDescription)
   name: CreateResourceLayout(ResourceLayoutDescription)
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateResourceLayout_Veldrid_ResourceLayoutDescription_
@@ -3854,6 +4426,7 @@ references:
   name: CreateResourceLayout
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateResourceLayout_
   commentId: Overload:Veldrid.ResourceFactory.CreateResourceLayout
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateResourceLayout
   nameWithType: ResourceFactory.CreateResourceLayout
 - uid: Veldrid.ResourceFactory.CreateResourceSet(Veldrid.ResourceSetDescription)
@@ -3875,6 +4448,7 @@ references:
   name: CreateResourceSet
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateResourceSet_
   commentId: Overload:Veldrid.ResourceFactory.CreateResourceSet
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateResourceSet
   nameWithType: ResourceFactory.CreateResourceSet
 - uid: Veldrid.ResourceFactory.CreateSampler(Veldrid.SamplerDescription)
@@ -3896,8 +4470,25 @@ references:
   name: CreateSampler
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateSampler_
   commentId: Overload:Veldrid.ResourceFactory.CreateSampler
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateSampler
   nameWithType: ResourceFactory.CreateSampler
+- uid: Veldrid.ResourceFactory.CreateSamplerCore(Veldrid.SamplerDescription@)
+  name: CreateSamplerCore(ref SamplerDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateSamplerCore_Veldrid_SamplerDescription__
+  commentId: M:Veldrid.ResourceFactory.CreateSamplerCore(Veldrid.SamplerDescription@)
+  name.vb: CreateSamplerCore(ByRef SamplerDescription)
+  fullName: Veldrid.ResourceFactory.CreateSamplerCore(ref Veldrid.SamplerDescription)
+  fullName.vb: Veldrid.ResourceFactory.CreateSamplerCore(ByRef Veldrid.SamplerDescription)
+  nameWithType: ResourceFactory.CreateSamplerCore(ref SamplerDescription)
+  nameWithType.vb: ResourceFactory.CreateSamplerCore(ByRef SamplerDescription)
+- uid: Veldrid.ResourceFactory.CreateSamplerCore*
+  name: CreateSamplerCore
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateSamplerCore_
+  commentId: Overload:Veldrid.ResourceFactory.CreateSamplerCore
+  isSpec: "True"
+  fullName: Veldrid.ResourceFactory.CreateSamplerCore
+  nameWithType: ResourceFactory.CreateSamplerCore
 - uid: Veldrid.ResourceFactory.CreateShader(Veldrid.ShaderDescription)
   name: CreateShader(ShaderDescription)
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateShader_Veldrid_ShaderDescription_
@@ -3917,8 +4508,25 @@ references:
   name: CreateShader
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateShader_
   commentId: Overload:Veldrid.ResourceFactory.CreateShader
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateShader
   nameWithType: ResourceFactory.CreateShader
+- uid: Veldrid.ResourceFactory.CreateShaderCore(Veldrid.ShaderDescription@)
+  name: CreateShaderCore(ref ShaderDescription)
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateShaderCore_Veldrid_ShaderDescription__
+  commentId: M:Veldrid.ResourceFactory.CreateShaderCore(Veldrid.ShaderDescription@)
+  name.vb: CreateShaderCore(ByRef ShaderDescription)
+  fullName: Veldrid.ResourceFactory.CreateShaderCore(ref Veldrid.ShaderDescription)
+  fullName.vb: Veldrid.ResourceFactory.CreateShaderCore(ByRef Veldrid.ShaderDescription)
+  nameWithType: ResourceFactory.CreateShaderCore(ref ShaderDescription)
+  nameWithType.vb: ResourceFactory.CreateShaderCore(ByRef ShaderDescription)
+- uid: Veldrid.ResourceFactory.CreateShaderCore*
+  name: CreateShaderCore
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateShaderCore_
+  commentId: Overload:Veldrid.ResourceFactory.CreateShaderCore
+  isSpec: "True"
+  fullName: Veldrid.ResourceFactory.CreateShaderCore
+  nameWithType: ResourceFactory.CreateShaderCore
 - uid: Veldrid.ResourceFactory.CreateSwapchain(Veldrid.SwapchainDescription)
   name: CreateSwapchain(SwapchainDescription)
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateSwapchain_Veldrid_SwapchainDescription_
@@ -3938,6 +4546,7 @@ references:
   name: CreateSwapchain
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateSwapchain_
   commentId: Overload:Veldrid.ResourceFactory.CreateSwapchain
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateSwapchain
   nameWithType: ResourceFactory.CreateSwapchain
 - uid: Veldrid.ResourceFactory.CreateTexture(Veldrid.TextureDescription)
@@ -3959,6 +4568,7 @@ references:
   name: CreateTexture
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateTexture_
   commentId: Overload:Veldrid.ResourceFactory.CreateTexture
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateTexture
   nameWithType: ResourceFactory.CreateTexture
 - uid: Veldrid.ResourceFactory.CreateTextureCore(Veldrid.TextureDescription@)
@@ -3974,6 +4584,7 @@ references:
   name: CreateTextureCore
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateTextureCore_
   commentId: Overload:Veldrid.ResourceFactory.CreateTextureCore
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateTextureCore
   nameWithType: ResourceFactory.CreateTextureCore
 - uid: Veldrid.ResourceFactory.CreateTextureView(Veldrid.Texture)
@@ -4001,6 +4612,7 @@ references:
   name: CreateTextureView
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateTextureView_
   commentId: Overload:Veldrid.ResourceFactory.CreateTextureView
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateTextureView
   nameWithType: ResourceFactory.CreateTextureView
 - uid: Veldrid.ResourceFactory.CreateTextureViewCore(Veldrid.TextureViewDescription@)
@@ -4016,8 +4628,22 @@ references:
   name: CreateTextureViewCore
   href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_CreateTextureViewCore_
   commentId: Overload:Veldrid.ResourceFactory.CreateTextureViewCore
+  isSpec: "True"
   fullName: Veldrid.ResourceFactory.CreateTextureViewCore
   nameWithType: ResourceFactory.CreateTextureViewCore
+- uid: Veldrid.ResourceFactory.Features
+  name: Features
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_Features
+  commentId: P:Veldrid.ResourceFactory.Features
+  fullName: Veldrid.ResourceFactory.Features
+  nameWithType: ResourceFactory.Features
+- uid: Veldrid.ResourceFactory.Features*
+  name: Features
+  href: api/Veldrid.ResourceFactory.html#Veldrid_ResourceFactory_Features_
+  commentId: Overload:Veldrid.ResourceFactory.Features
+  isSpec: "True"
+  fullName: Veldrid.ResourceFactory.Features
+  nameWithType: ResourceFactory.Features
 - uid: Veldrid.ResourceKind
   name: ResourceKind
   href: api/Veldrid.ResourceKind.html
@@ -4076,6 +4702,7 @@ references:
   name: Dispose
   href: api/Veldrid.ResourceLayout.html#Veldrid_ResourceLayout_Dispose_
   commentId: Overload:Veldrid.ResourceLayout.Dispose
+  isSpec: "True"
   fullName: Veldrid.ResourceLayout.Dispose
   nameWithType: ResourceLayout.Dispose
 - uid: Veldrid.ResourceLayout.Name
@@ -4088,6 +4715,7 @@ references:
   name: Name
   href: api/Veldrid.ResourceLayout.html#Veldrid_ResourceLayout_Name_
   commentId: Overload:Veldrid.ResourceLayout.Name
+  isSpec: "True"
   fullName: Veldrid.ResourceLayout.Name
   nameWithType: ResourceLayout.Name
 - uid: Veldrid.ResourceLayoutDescription
@@ -4109,6 +4737,7 @@ references:
   name: ResourceLayoutDescription
   href: api/Veldrid.ResourceLayoutDescription.html#Veldrid_ResourceLayoutDescription__ctor_
   commentId: Overload:Veldrid.ResourceLayoutDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.ResourceLayoutDescription.ResourceLayoutDescription
   nameWithType: ResourceLayoutDescription.ResourceLayoutDescription
 - uid: Veldrid.ResourceLayoutDescription.Elements
@@ -4127,6 +4756,7 @@ references:
   name: Equals
   href: api/Veldrid.ResourceLayoutDescription.html#Veldrid_ResourceLayoutDescription_Equals_
   commentId: Overload:Veldrid.ResourceLayoutDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.ResourceLayoutDescription.Equals
   nameWithType: ResourceLayoutDescription.Equals
 - uid: Veldrid.ResourceLayoutDescription.GetHashCode
@@ -4139,6 +4769,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.ResourceLayoutDescription.html#Veldrid_ResourceLayoutDescription_GetHashCode_
   commentId: Overload:Veldrid.ResourceLayoutDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.ResourceLayoutDescription.GetHashCode
   nameWithType: ResourceLayoutDescription.GetHashCode
 - uid: Veldrid.ResourceLayoutElementDescription
@@ -4157,6 +4788,7 @@ references:
   name: ResourceLayoutElementDescription
   href: api/Veldrid.ResourceLayoutElementDescription.html#Veldrid_ResourceLayoutElementDescription__ctor_
   commentId: Overload:Veldrid.ResourceLayoutElementDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.ResourceLayoutElementDescription.ResourceLayoutElementDescription
   nameWithType: ResourceLayoutElementDescription.ResourceLayoutElementDescription
 - uid: Veldrid.ResourceLayoutElementDescription.Equals(Veldrid.ResourceLayoutElementDescription)
@@ -4169,6 +4801,7 @@ references:
   name: Equals
   href: api/Veldrid.ResourceLayoutElementDescription.html#Veldrid_ResourceLayoutElementDescription_Equals_
   commentId: Overload:Veldrid.ResourceLayoutElementDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.ResourceLayoutElementDescription.Equals
   nameWithType: ResourceLayoutElementDescription.Equals
 - uid: Veldrid.ResourceLayoutElementDescription.GetHashCode
@@ -4181,6 +4814,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.ResourceLayoutElementDescription.html#Veldrid_ResourceLayoutElementDescription_GetHashCode_
   commentId: Overload:Veldrid.ResourceLayoutElementDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.ResourceLayoutElementDescription.GetHashCode
   nameWithType: ResourceLayoutElementDescription.GetHashCode
 - uid: Veldrid.ResourceLayoutElementDescription.Kind
@@ -4217,6 +4851,7 @@ references:
   name: Dispose
   href: api/Veldrid.ResourceSet.html#Veldrid_ResourceSet_Dispose_
   commentId: Overload:Veldrid.ResourceSet.Dispose
+  isSpec: "True"
   fullName: Veldrid.ResourceSet.Dispose
   nameWithType: ResourceSet.Dispose
 - uid: Veldrid.ResourceSet.Name
@@ -4229,6 +4864,7 @@ references:
   name: Name
   href: api/Veldrid.ResourceSet.html#Veldrid_ResourceSet_Name_
   commentId: Overload:Veldrid.ResourceSet.Name
+  isSpec: "True"
   fullName: Veldrid.ResourceSet.Name
   nameWithType: ResourceSet.Name
 - uid: Veldrid.ResourceSetDescription
@@ -4250,6 +4886,7 @@ references:
   name: ResourceSetDescription
   href: api/Veldrid.ResourceSetDescription.html#Veldrid_ResourceSetDescription__ctor_
   commentId: Overload:Veldrid.ResourceSetDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.ResourceSetDescription.ResourceSetDescription
   nameWithType: ResourceSetDescription.ResourceSetDescription
 - uid: Veldrid.ResourceSetDescription.BoundResources
@@ -4268,6 +4905,7 @@ references:
   name: Equals
   href: api/Veldrid.ResourceSetDescription.html#Veldrid_ResourceSetDescription_Equals_
   commentId: Overload:Veldrid.ResourceSetDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.ResourceSetDescription.Equals
   nameWithType: ResourceSetDescription.Equals
 - uid: Veldrid.ResourceSetDescription.GetHashCode
@@ -4280,6 +4918,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.ResourceSetDescription.html#Veldrid_ResourceSetDescription_GetHashCode_
   commentId: Overload:Veldrid.ResourceSetDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.ResourceSetDescription.GetHashCode
   nameWithType: ResourceSetDescription.GetHashCode
 - uid: Veldrid.ResourceSetDescription.Layout
@@ -4304,6 +4943,7 @@ references:
   name: RgbaByte
   href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte__ctor_
   commentId: Overload:Veldrid.RgbaByte.#ctor
+  isSpec: "True"
   fullName: Veldrid.RgbaByte.RgbaByte
   nameWithType: RgbaByte.RgbaByte
 - uid: Veldrid.RgbaByte.A
@@ -4364,6 +5004,7 @@ references:
   name: Equals
   href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Equals_
   commentId: Overload:Veldrid.RgbaByte.Equals
+  isSpec: "True"
   fullName: Veldrid.RgbaByte.Equals
   nameWithType: RgbaByte.Equals
 - uid: Veldrid.RgbaByte.G
@@ -4382,6 +5023,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_GetHashCode_
   commentId: Overload:Veldrid.RgbaByte.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.RgbaByte.GetHashCode
   nameWithType: RgbaByte.GetHashCode
 - uid: Veldrid.RgbaByte.Green
@@ -4436,6 +5078,7 @@ references:
   name: ToString
   href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_ToString_
   commentId: Overload:Veldrid.RgbaByte.ToString
+  isSpec: "True"
   fullName: Veldrid.RgbaByte.ToString
   nameWithType: RgbaByte.ToString
 - uid: Veldrid.RgbaByte.White
@@ -4466,6 +5109,7 @@ references:
   name: RgbaFloat
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat__ctor_
   commentId: Overload:Veldrid.RgbaFloat.#ctor
+  isSpec: "True"
   fullName: Veldrid.RgbaFloat.RgbaFloat
   nameWithType: RgbaFloat.RgbaFloat
 - uid: Veldrid.RgbaFloat.A
@@ -4478,6 +5122,7 @@ references:
   name: A
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_A_
   commentId: Overload:Veldrid.RgbaFloat.A
+  isSpec: "True"
   fullName: Veldrid.RgbaFloat.A
   nameWithType: RgbaFloat.A
 - uid: Veldrid.RgbaFloat.B
@@ -4490,6 +5135,7 @@ references:
   name: B
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_B_
   commentId: Overload:Veldrid.RgbaFloat.B
+  isSpec: "True"
   fullName: Veldrid.RgbaFloat.B
   nameWithType: RgbaFloat.B
 - uid: Veldrid.RgbaFloat.Black
@@ -4538,6 +5184,7 @@ references:
   name: Equals
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_Equals_
   commentId: Overload:Veldrid.RgbaFloat.Equals
+  isSpec: "True"
   fullName: Veldrid.RgbaFloat.Equals
   nameWithType: RgbaFloat.Equals
 - uid: Veldrid.RgbaFloat.G
@@ -4550,6 +5197,7 @@ references:
   name: G
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_G_
   commentId: Overload:Veldrid.RgbaFloat.G
+  isSpec: "True"
   fullName: Veldrid.RgbaFloat.G
   nameWithType: RgbaFloat.G
 - uid: Veldrid.RgbaFloat.GetHashCode
@@ -4562,6 +5210,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_GetHashCode_
   commentId: Overload:Veldrid.RgbaFloat.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.RgbaFloat.GetHashCode
   nameWithType: RgbaFloat.GetHashCode
 - uid: Veldrid.RgbaFloat.Green
@@ -4604,6 +5253,7 @@ references:
   name: R
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_R_
   commentId: Overload:Veldrid.RgbaFloat.R
+  isSpec: "True"
   fullName: Veldrid.RgbaFloat.R
   nameWithType: RgbaFloat.R
 - uid: Veldrid.RgbaFloat.Red
@@ -4628,6 +5278,7 @@ references:
   name: ToString
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_ToString_
   commentId: Overload:Veldrid.RgbaFloat.ToString
+  isSpec: "True"
   fullName: Veldrid.RgbaFloat.ToString
   nameWithType: RgbaFloat.ToString
 - uid: Veldrid.RgbaFloat.ToVector4
@@ -4640,6 +5291,7 @@ references:
   name: ToVector4
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_ToVector4_
   commentId: Overload:Veldrid.RgbaFloat.ToVector4
+  isSpec: "True"
   fullName: Veldrid.RgbaFloat.ToVector4
   nameWithType: RgbaFloat.ToVector4
 - uid: Veldrid.RgbaFloat.White
@@ -4670,6 +5322,7 @@ references:
   name: Dispose
   href: api/Veldrid.Sampler.html#Veldrid_Sampler_Dispose_
   commentId: Overload:Veldrid.Sampler.Dispose
+  isSpec: "True"
   fullName: Veldrid.Sampler.Dispose
   nameWithType: Sampler.Dispose
 - uid: Veldrid.Sampler.Name
@@ -4682,6 +5335,7 @@ references:
   name: Name
   href: api/Veldrid.Sampler.html#Veldrid_Sampler_Name_
   commentId: Overload:Veldrid.Sampler.Name
+  isSpec: "True"
   fullName: Veldrid.Sampler.Name
   nameWithType: Sampler.Name
 - uid: Veldrid.SamplerAddressMode
@@ -4757,6 +5411,7 @@ references:
   name: SamplerDescription
   href: api/Veldrid.SamplerDescription.html#Veldrid_SamplerDescription__ctor_
   commentId: Overload:Veldrid.SamplerDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.SamplerDescription.SamplerDescription
   nameWithType: SamplerDescription.SamplerDescription
 - uid: Veldrid.SamplerDescription.AddressModeU
@@ -4805,6 +5460,7 @@ references:
   name: Equals
   href: api/Veldrid.SamplerDescription.html#Veldrid_SamplerDescription_Equals_
   commentId: Overload:Veldrid.SamplerDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.SamplerDescription.Equals
   nameWithType: SamplerDescription.Equals
 - uid: Veldrid.SamplerDescription.Filter
@@ -4823,6 +5479,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.SamplerDescription.html#Veldrid_SamplerDescription_GetHashCode_
   commentId: Overload:Veldrid.SamplerDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.SamplerDescription.GetHashCode
   nameWithType: SamplerDescription.GetHashCode
 - uid: Veldrid.SamplerDescription.Linear
@@ -4937,6 +5594,7 @@ references:
   name: Dispose
   href: api/Veldrid.Shader.html#Veldrid_Shader_Dispose_
   commentId: Overload:Veldrid.Shader.Dispose
+  isSpec: "True"
   fullName: Veldrid.Shader.Dispose
   nameWithType: Shader.Dispose
 - uid: Veldrid.Shader.EntryPoint
@@ -4949,6 +5607,7 @@ references:
   name: EntryPoint
   href: api/Veldrid.Shader.html#Veldrid_Shader_EntryPoint_
   commentId: Overload:Veldrid.Shader.EntryPoint
+  isSpec: "True"
   fullName: Veldrid.Shader.EntryPoint
   nameWithType: Shader.EntryPoint
 - uid: Veldrid.Shader.Name
@@ -4961,6 +5620,7 @@ references:
   name: Name
   href: api/Veldrid.Shader.html#Veldrid_Shader_Name_
   commentId: Overload:Veldrid.Shader.Name
+  isSpec: "True"
   fullName: Veldrid.Shader.Name
   nameWithType: Shader.Name
 - uid: Veldrid.Shader.Stage
@@ -4973,6 +5633,7 @@ references:
   name: Stage
   href: api/Veldrid.Shader.html#Veldrid_Shader_Stage_
   commentId: Overload:Veldrid.Shader.Stage
+  isSpec: "True"
   fullName: Veldrid.Shader.Stage
   nameWithType: Shader.Stage
 - uid: Veldrid.ShaderDescription
@@ -4994,6 +5655,7 @@ references:
   name: ShaderDescription
   href: api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription__ctor_
   commentId: Overload:Veldrid.ShaderDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.ShaderDescription.ShaderDescription
   nameWithType: ShaderDescription.ShaderDescription
 - uid: Veldrid.ShaderDescription.EntryPoint
@@ -5012,6 +5674,7 @@ references:
   name: Equals
   href: api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription_Equals_
   commentId: Overload:Veldrid.ShaderDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.ShaderDescription.Equals
   nameWithType: ShaderDescription.Equals
 - uid: Veldrid.ShaderDescription.GetHashCode
@@ -5024,6 +5687,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription_GetHashCode_
   commentId: Overload:Veldrid.ShaderDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.ShaderDescription.GetHashCode
   nameWithType: ShaderDescription.GetHashCode
 - uid: Veldrid.ShaderDescription.ShaderBytes
@@ -5057,6 +5721,7 @@ references:
   name: ShaderSetDescription
   href: api/Veldrid.ShaderSetDescription.html#Veldrid_ShaderSetDescription__ctor_
   commentId: Overload:Veldrid.ShaderSetDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.ShaderSetDescription.ShaderSetDescription
   nameWithType: ShaderSetDescription.ShaderSetDescription
 - uid: Veldrid.ShaderSetDescription.Equals(Veldrid.ShaderSetDescription)
@@ -5069,6 +5734,7 @@ references:
   name: Equals
   href: api/Veldrid.ShaderSetDescription.html#Veldrid_ShaderSetDescription_Equals_
   commentId: Overload:Veldrid.ShaderSetDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.ShaderSetDescription.Equals
   nameWithType: ShaderSetDescription.Equals
 - uid: Veldrid.ShaderSetDescription.GetHashCode
@@ -5081,6 +5747,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.ShaderSetDescription.html#Veldrid_ShaderSetDescription_GetHashCode_
   commentId: Overload:Veldrid.ShaderSetDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.ShaderSetDescription.GetHashCode
   nameWithType: ShaderSetDescription.GetHashCode
 - uid: Veldrid.ShaderSetDescription.Shaders
@@ -5159,6 +5826,7 @@ references:
   name: StencilBehaviorDescription
   href: api/Veldrid.StencilBehaviorDescription.html#Veldrid_StencilBehaviorDescription__ctor_
   commentId: Overload:Veldrid.StencilBehaviorDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.StencilBehaviorDescription.StencilBehaviorDescription
   nameWithType: StencilBehaviorDescription.StencilBehaviorDescription
 - uid: Veldrid.StencilBehaviorDescription.Comparison
@@ -5183,6 +5851,7 @@ references:
   name: Equals
   href: api/Veldrid.StencilBehaviorDescription.html#Veldrid_StencilBehaviorDescription_Equals_
   commentId: Overload:Veldrid.StencilBehaviorDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.StencilBehaviorDescription.Equals
   nameWithType: StencilBehaviorDescription.Equals
 - uid: Veldrid.StencilBehaviorDescription.Fail
@@ -5201,6 +5870,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.StencilBehaviorDescription.html#Veldrid_StencilBehaviorDescription_GetHashCode_
   commentId: Overload:Veldrid.StencilBehaviorDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.StencilBehaviorDescription.GetHashCode
   nameWithType: StencilBehaviorDescription.GetHashCode
 - uid: Veldrid.StencilBehaviorDescription.Pass
@@ -5279,6 +5949,7 @@ references:
   name: Dispose
   href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Dispose_
   commentId: Overload:Veldrid.Swapchain.Dispose
+  isSpec: "True"
   fullName: Veldrid.Swapchain.Dispose
   nameWithType: Swapchain.Dispose
 - uid: Veldrid.Swapchain.Framebuffer
@@ -5291,6 +5962,7 @@ references:
   name: Framebuffer
   href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Framebuffer_
   commentId: Overload:Veldrid.Swapchain.Framebuffer
+  isSpec: "True"
   fullName: Veldrid.Swapchain.Framebuffer
   nameWithType: Swapchain.Framebuffer
 - uid: Veldrid.Swapchain.Name
@@ -5303,6 +5975,7 @@ references:
   name: Name
   href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Name_
   commentId: Overload:Veldrid.Swapchain.Name
+  isSpec: "True"
   fullName: Veldrid.Swapchain.Name
   nameWithType: Swapchain.Name
 - uid: Veldrid.Swapchain.Resize(System.UInt32,System.UInt32)
@@ -5315,6 +5988,7 @@ references:
   name: Resize
   href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Resize_
   commentId: Overload:Veldrid.Swapchain.Resize
+  isSpec: "True"
   fullName: Veldrid.Swapchain.Resize
   nameWithType: Swapchain.Resize
 - uid: Veldrid.Swapchain.SyncToVerticalBlank
@@ -5327,6 +6001,7 @@ references:
   name: SyncToVerticalBlank
   href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_SyncToVerticalBlank_
   commentId: Overload:Veldrid.Swapchain.SyncToVerticalBlank
+  isSpec: "True"
   fullName: Veldrid.Swapchain.SyncToVerticalBlank
   nameWithType: Swapchain.SyncToVerticalBlank
 - uid: Veldrid.SwapchainDescription
@@ -5348,6 +6023,7 @@ references:
   name: SwapchainDescription
   href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription__ctor_
   commentId: Overload:Veldrid.SwapchainDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.SwapchainDescription.SwapchainDescription
   nameWithType: SwapchainDescription.SwapchainDescription
 - uid: Veldrid.SwapchainDescription.DepthFormat
@@ -5366,6 +6042,7 @@ references:
   name: Equals
   href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_Equals_
   commentId: Overload:Veldrid.SwapchainDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.SwapchainDescription.Equals
   nameWithType: SwapchainDescription.Equals
 - uid: Veldrid.SwapchainDescription.GetHashCode
@@ -5378,6 +6055,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_GetHashCode_
   commentId: Overload:Veldrid.SwapchainDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.SwapchainDescription.GetHashCode
   nameWithType: SwapchainDescription.GetHashCode
 - uid: Veldrid.SwapchainDescription.Height
@@ -5410,6 +6088,19 @@ references:
   commentId: T:Veldrid.SwapchainSource
   fullName: Veldrid.SwapchainSource
   nameWithType: SwapchainSource
+- uid: Veldrid.SwapchainSource.CreateAndroidSurface(IntPtr,IntPtr)
+  name: CreateAndroidSurface(IntPtr, IntPtr)
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateAndroidSurface_IntPtr_IntPtr_
+  commentId: M:Veldrid.SwapchainSource.CreateAndroidSurface(IntPtr,IntPtr)
+  fullName: Veldrid.SwapchainSource.CreateAndroidSurface(IntPtr, IntPtr)
+  nameWithType: SwapchainSource.CreateAndroidSurface(IntPtr, IntPtr)
+- uid: Veldrid.SwapchainSource.CreateAndroidSurface*
+  name: CreateAndroidSurface
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateAndroidSurface_
+  commentId: Overload:Veldrid.SwapchainSource.CreateAndroidSurface
+  isSpec: "True"
+  fullName: Veldrid.SwapchainSource.CreateAndroidSurface
+  nameWithType: SwapchainSource.CreateAndroidSurface
 - uid: Veldrid.SwapchainSource.CreateNSWindow(IntPtr)
   name: CreateNSWindow(IntPtr)
   href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateNSWindow_IntPtr_
@@ -5420,6 +6111,7 @@ references:
   name: CreateNSWindow
   href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateNSWindow_
   commentId: Overload:Veldrid.SwapchainSource.CreateNSWindow
+  isSpec: "True"
   fullName: Veldrid.SwapchainSource.CreateNSWindow
   nameWithType: SwapchainSource.CreateNSWindow
 - uid: Veldrid.SwapchainSource.CreateUIView(IntPtr)
@@ -5432,6 +6124,7 @@ references:
   name: CreateUIView
   href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateUIView_
   commentId: Overload:Veldrid.SwapchainSource.CreateUIView
+  isSpec: "True"
   fullName: Veldrid.SwapchainSource.CreateUIView
   nameWithType: SwapchainSource.CreateUIView
 - uid: Veldrid.SwapchainSource.CreateUwp(System.Object,System.Single)
@@ -5444,6 +6137,7 @@ references:
   name: CreateUwp
   href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateUwp_
   commentId: Overload:Veldrid.SwapchainSource.CreateUwp
+  isSpec: "True"
   fullName: Veldrid.SwapchainSource.CreateUwp
   nameWithType: SwapchainSource.CreateUwp
 - uid: Veldrid.SwapchainSource.CreateWin32(IntPtr,IntPtr)
@@ -5456,6 +6150,7 @@ references:
   name: CreateWin32
   href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateWin32_
   commentId: Overload:Veldrid.SwapchainSource.CreateWin32
+  isSpec: "True"
   fullName: Veldrid.SwapchainSource.CreateWin32
   nameWithType: SwapchainSource.CreateWin32
 - uid: Veldrid.SwapchainSource.CreateXlib(IntPtr,IntPtr)
@@ -5468,6 +6163,7 @@ references:
   name: CreateXlib
   href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateXlib_
   commentId: Overload:Veldrid.SwapchainSource.CreateXlib
+  isSpec: "True"
   fullName: Veldrid.SwapchainSource.CreateXlib
   nameWithType: SwapchainSource.CreateXlib
 - uid: Veldrid.Texture
@@ -5486,6 +6182,7 @@ references:
   name: ArrayLayers
   href: api/Veldrid.Texture.html#Veldrid_Texture_ArrayLayers_
   commentId: Overload:Veldrid.Texture.ArrayLayers
+  isSpec: "True"
   fullName: Veldrid.Texture.ArrayLayers
   nameWithType: Texture.ArrayLayers
 - uid: Veldrid.Texture.CalculateSubresource(System.UInt32,System.UInt32)
@@ -5498,6 +6195,7 @@ references:
   name: CalculateSubresource
   href: api/Veldrid.Texture.html#Veldrid_Texture_CalculateSubresource_
   commentId: Overload:Veldrid.Texture.CalculateSubresource
+  isSpec: "True"
   fullName: Veldrid.Texture.CalculateSubresource
   nameWithType: Texture.CalculateSubresource
 - uid: Veldrid.Texture.Depth
@@ -5510,6 +6208,7 @@ references:
   name: Depth
   href: api/Veldrid.Texture.html#Veldrid_Texture_Depth_
   commentId: Overload:Veldrid.Texture.Depth
+  isSpec: "True"
   fullName: Veldrid.Texture.Depth
   nameWithType: Texture.Depth
 - uid: Veldrid.Texture.Dispose
@@ -5522,6 +6221,7 @@ references:
   name: Dispose
   href: api/Veldrid.Texture.html#Veldrid_Texture_Dispose_
   commentId: Overload:Veldrid.Texture.Dispose
+  isSpec: "True"
   fullName: Veldrid.Texture.Dispose
   nameWithType: Texture.Dispose
 - uid: Veldrid.Texture.Format
@@ -5534,6 +6234,7 @@ references:
   name: Format
   href: api/Veldrid.Texture.html#Veldrid_Texture_Format_
   commentId: Overload:Veldrid.Texture.Format
+  isSpec: "True"
   fullName: Veldrid.Texture.Format
   nameWithType: Texture.Format
 - uid: Veldrid.Texture.Height
@@ -5546,6 +6247,7 @@ references:
   name: Height
   href: api/Veldrid.Texture.html#Veldrid_Texture_Height_
   commentId: Overload:Veldrid.Texture.Height
+  isSpec: "True"
   fullName: Veldrid.Texture.Height
   nameWithType: Texture.Height
 - uid: Veldrid.Texture.MipLevels
@@ -5558,6 +6260,7 @@ references:
   name: MipLevels
   href: api/Veldrid.Texture.html#Veldrid_Texture_MipLevels_
   commentId: Overload:Veldrid.Texture.MipLevels
+  isSpec: "True"
   fullName: Veldrid.Texture.MipLevels
   nameWithType: Texture.MipLevels
 - uid: Veldrid.Texture.Name
@@ -5570,6 +6273,7 @@ references:
   name: Name
   href: api/Veldrid.Texture.html#Veldrid_Texture_Name_
   commentId: Overload:Veldrid.Texture.Name
+  isSpec: "True"
   fullName: Veldrid.Texture.Name
   nameWithType: Texture.Name
 - uid: Veldrid.Texture.SampleCount
@@ -5582,6 +6286,7 @@ references:
   name: SampleCount
   href: api/Veldrid.Texture.html#Veldrid_Texture_SampleCount_
   commentId: Overload:Veldrid.Texture.SampleCount
+  isSpec: "True"
   fullName: Veldrid.Texture.SampleCount
   nameWithType: Texture.SampleCount
 - uid: Veldrid.Texture.Type
@@ -5594,6 +6299,7 @@ references:
   name: Type
   href: api/Veldrid.Texture.html#Veldrid_Texture_Type_
   commentId: Overload:Veldrid.Texture.Type
+  isSpec: "True"
   fullName: Veldrid.Texture.Type
   nameWithType: Texture.Type
 - uid: Veldrid.Texture.Usage
@@ -5606,6 +6312,7 @@ references:
   name: Usage
   href: api/Veldrid.Texture.html#Veldrid_Texture_Usage_
   commentId: Overload:Veldrid.Texture.Usage
+  isSpec: "True"
   fullName: Veldrid.Texture.Usage
   nameWithType: Texture.Usage
 - uid: Veldrid.Texture.Width
@@ -5618,6 +6325,7 @@ references:
   name: Width
   href: api/Veldrid.Texture.html#Veldrid_Texture_Width_
   commentId: Overload:Veldrid.Texture.Width
+  isSpec: "True"
   fullName: Veldrid.Texture.Width
   nameWithType: Texture.Width
 - uid: Veldrid.TextureDescription
@@ -5642,6 +6350,7 @@ references:
   name: TextureDescription
   href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription__ctor_
   commentId: Overload:Veldrid.TextureDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.TextureDescription.TextureDescription
   nameWithType: TextureDescription.TextureDescription
 - uid: Veldrid.TextureDescription.ArrayLayers
@@ -5666,6 +6375,7 @@ references:
   name: Equals
   href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Equals_
   commentId: Overload:Veldrid.TextureDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.TextureDescription.Equals
   nameWithType: TextureDescription.Equals
 - uid: Veldrid.TextureDescription.Format
@@ -5684,6 +6394,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_GetHashCode_
   commentId: Overload:Veldrid.TextureDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.TextureDescription.GetHashCode
   nameWithType: TextureDescription.GetHashCode
 - uid: Veldrid.TextureDescription.Height
@@ -5714,6 +6425,7 @@ references:
   name: Texture1D
   href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Texture1D_
   commentId: Overload:Veldrid.TextureDescription.Texture1D
+  isSpec: "True"
   fullName: Veldrid.TextureDescription.Texture1D
   nameWithType: TextureDescription.Texture1D
 - uid: Veldrid.TextureDescription.Texture2D(System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage)
@@ -5732,6 +6444,7 @@ references:
   name: Texture2D
   href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Texture2D_
   commentId: Overload:Veldrid.TextureDescription.Texture2D
+  isSpec: "True"
   fullName: Veldrid.TextureDescription.Texture2D
   nameWithType: TextureDescription.Texture2D
 - uid: Veldrid.TextureDescription.Texture3D(System.UInt32,System.UInt32,System.UInt32,System.UInt32,Veldrid.PixelFormat,Veldrid.TextureUsage)
@@ -5744,6 +6457,7 @@ references:
   name: Texture3D
   href: api/Veldrid.TextureDescription.html#Veldrid_TextureDescription_Texture3D_
   commentId: Overload:Veldrid.TextureDescription.Texture3D
+  isSpec: "True"
   fullName: Veldrid.TextureDescription.Texture3D
   nameWithType: TextureDescription.Texture3D
 - uid: Veldrid.TextureDescription.Type
@@ -5888,6 +6602,7 @@ references:
   name: ArrayLayers
   href: api/Veldrid.TextureView.html#Veldrid_TextureView_ArrayLayers_
   commentId: Overload:Veldrid.TextureView.ArrayLayers
+  isSpec: "True"
   fullName: Veldrid.TextureView.ArrayLayers
   nameWithType: TextureView.ArrayLayers
 - uid: Veldrid.TextureView.BaseArrayLayer
@@ -5900,6 +6615,7 @@ references:
   name: BaseArrayLayer
   href: api/Veldrid.TextureView.html#Veldrid_TextureView_BaseArrayLayer_
   commentId: Overload:Veldrid.TextureView.BaseArrayLayer
+  isSpec: "True"
   fullName: Veldrid.TextureView.BaseArrayLayer
   nameWithType: TextureView.BaseArrayLayer
 - uid: Veldrid.TextureView.BaseMipLevel
@@ -5912,6 +6628,7 @@ references:
   name: BaseMipLevel
   href: api/Veldrid.TextureView.html#Veldrid_TextureView_BaseMipLevel_
   commentId: Overload:Veldrid.TextureView.BaseMipLevel
+  isSpec: "True"
   fullName: Veldrid.TextureView.BaseMipLevel
   nameWithType: TextureView.BaseMipLevel
 - uid: Veldrid.TextureView.Dispose
@@ -5924,6 +6641,7 @@ references:
   name: Dispose
   href: api/Veldrid.TextureView.html#Veldrid_TextureView_Dispose_
   commentId: Overload:Veldrid.TextureView.Dispose
+  isSpec: "True"
   fullName: Veldrid.TextureView.Dispose
   nameWithType: TextureView.Dispose
 - uid: Veldrid.TextureView.MipLevels
@@ -5936,6 +6654,7 @@ references:
   name: MipLevels
   href: api/Veldrid.TextureView.html#Veldrid_TextureView_MipLevels_
   commentId: Overload:Veldrid.TextureView.MipLevels
+  isSpec: "True"
   fullName: Veldrid.TextureView.MipLevels
   nameWithType: TextureView.MipLevels
 - uid: Veldrid.TextureView.Name
@@ -5948,6 +6667,7 @@ references:
   name: Name
   href: api/Veldrid.TextureView.html#Veldrid_TextureView_Name_
   commentId: Overload:Veldrid.TextureView.Name
+  isSpec: "True"
   fullName: Veldrid.TextureView.Name
   nameWithType: TextureView.Name
 - uid: Veldrid.TextureView.Target
@@ -5960,6 +6680,7 @@ references:
   name: Target
   href: api/Veldrid.TextureView.html#Veldrid_TextureView_Target_
   commentId: Overload:Veldrid.TextureView.Target
+  isSpec: "True"
   fullName: Veldrid.TextureView.Target
   nameWithType: TextureView.Target
 - uid: Veldrid.TextureViewDescription
@@ -5984,6 +6705,7 @@ references:
   name: TextureViewDescription
   href: api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription__ctor_
   commentId: Overload:Veldrid.TextureViewDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.TextureViewDescription.TextureViewDescription
   nameWithType: TextureViewDescription.TextureViewDescription
 - uid: Veldrid.TextureViewDescription.ArrayLayers
@@ -6014,6 +6736,7 @@ references:
   name: Equals
   href: api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription_Equals_
   commentId: Overload:Veldrid.TextureViewDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.TextureViewDescription.Equals
   nameWithType: TextureViewDescription.Equals
 - uid: Veldrid.TextureViewDescription.GetHashCode
@@ -6026,6 +6749,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription_GetHashCode_
   commentId: Overload:Veldrid.TextureViewDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.TextureViewDescription.GetHashCode
   nameWithType: TextureViewDescription.GetHashCode
 - uid: Veldrid.TextureViewDescription.MipLevels
@@ -6068,6 +6792,7 @@ references:
   name: VeldridException
   href: api/Veldrid.VeldridException.html#Veldrid_VeldridException__ctor_
   commentId: Overload:Veldrid.VeldridException.#ctor
+  isSpec: "True"
   fullName: Veldrid.VeldridException.VeldridException
   nameWithType: VeldridException.VeldridException
 - uid: Veldrid.VertexElementDescription
@@ -6092,6 +6817,7 @@ references:
   name: VertexElementDescription
   href: api/Veldrid.VertexElementDescription.html#Veldrid_VertexElementDescription__ctor_
   commentId: Overload:Veldrid.VertexElementDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.VertexElementDescription.VertexElementDescription
   nameWithType: VertexElementDescription.VertexElementDescription
 - uid: Veldrid.VertexElementDescription.Equals(Veldrid.VertexElementDescription)
@@ -6104,6 +6830,7 @@ references:
   name: Equals
   href: api/Veldrid.VertexElementDescription.html#Veldrid_VertexElementDescription_Equals_
   commentId: Overload:Veldrid.VertexElementDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.VertexElementDescription.Equals
   nameWithType: VertexElementDescription.Equals
 - uid: Veldrid.VertexElementDescription.Format
@@ -6122,6 +6849,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.VertexElementDescription.html#Veldrid_VertexElementDescription_GetHashCode_
   commentId: Overload:Veldrid.VertexElementDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.VertexElementDescription.GetHashCode
   nameWithType: VertexElementDescription.GetHashCode
 - uid: Veldrid.VertexElementDescription.Name
@@ -6377,6 +7105,7 @@ references:
   name: VertexLayoutDescription
   href: api/Veldrid.VertexLayoutDescription.html#Veldrid_VertexLayoutDescription__ctor_
   commentId: Overload:Veldrid.VertexLayoutDescription.#ctor
+  isSpec: "True"
   fullName: Veldrid.VertexLayoutDescription.VertexLayoutDescription
   nameWithType: VertexLayoutDescription.VertexLayoutDescription
 - uid: Veldrid.VertexLayoutDescription.Elements
@@ -6395,6 +7124,7 @@ references:
   name: Equals
   href: api/Veldrid.VertexLayoutDescription.html#Veldrid_VertexLayoutDescription_Equals_
   commentId: Overload:Veldrid.VertexLayoutDescription.Equals
+  isSpec: "True"
   fullName: Veldrid.VertexLayoutDescription.Equals
   nameWithType: VertexLayoutDescription.Equals
 - uid: Veldrid.VertexLayoutDescription.GetHashCode
@@ -6407,6 +7137,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.VertexLayoutDescription.html#Veldrid_VertexLayoutDescription_GetHashCode_
   commentId: Overload:Veldrid.VertexLayoutDescription.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.VertexLayoutDescription.GetHashCode
   nameWithType: VertexLayoutDescription.GetHashCode
 - uid: Veldrid.VertexLayoutDescription.InstanceStepRate
@@ -6437,6 +7168,7 @@ references:
   name: Viewport
   href: api/Veldrid.Viewport.html#Veldrid_Viewport__ctor_
   commentId: Overload:Veldrid.Viewport.#ctor
+  isSpec: "True"
   fullName: Veldrid.Viewport.Viewport
   nameWithType: Viewport.Viewport
 - uid: Veldrid.Viewport.Equals(Veldrid.Viewport)
@@ -6449,6 +7181,7 @@ references:
   name: Equals
   href: api/Veldrid.Viewport.html#Veldrid_Viewport_Equals_
   commentId: Overload:Veldrid.Viewport.Equals
+  isSpec: "True"
   fullName: Veldrid.Viewport.Equals
   nameWithType: Viewport.Equals
 - uid: Veldrid.Viewport.GetHashCode
@@ -6461,6 +7194,7 @@ references:
   name: GetHashCode
   href: api/Veldrid.Viewport.html#Veldrid_Viewport_GetHashCode_
   commentId: Overload:Veldrid.Viewport.GetHashCode
+  isSpec: "True"
   fullName: Veldrid.Viewport.GetHashCode
   nameWithType: Viewport.GetHashCode
 - uid: Veldrid.Viewport.Height
@@ -6521,6 +7255,7 @@ references:
   name: CreateSurface
   href: api/Veldrid.Vk.VkSurfaceSource.html#Veldrid_Vk_VkSurfaceSource_CreateSurface_
   commentId: Overload:Veldrid.Vk.VkSurfaceSource.CreateSurface
+  isSpec: "True"
   fullName: Veldrid.Vk.VkSurfaceSource.CreateSurface
   nameWithType: VkSurfaceSource.CreateSurface
 - uid: Veldrid.Vk.VkSurfaceSource.CreateWin32(IntPtr,IntPtr)
@@ -6533,6 +7268,7 @@ references:
   name: CreateWin32
   href: api/Veldrid.Vk.VkSurfaceSource.html#Veldrid_Vk_VkSurfaceSource_CreateWin32_
   commentId: Overload:Veldrid.Vk.VkSurfaceSource.CreateWin32
+  isSpec: "True"
   fullName: Veldrid.Vk.VkSurfaceSource.CreateWin32
   nameWithType: VkSurfaceSource.CreateWin32
 - uid: Veldrid.Vk.VkSurfaceSource.CreateXlib(Display*,Window)
@@ -6545,5 +7281,6 @@ references:
   name: CreateXlib
   href: api/Veldrid.Vk.VkSurfaceSource.html#Veldrid_Vk_VkSurfaceSource_CreateXlib_
   commentId: Overload:Veldrid.Vk.VkSurfaceSource.CreateXlib
+  isSpec: "True"
   fullName: Veldrid.Vk.VkSurfaceSource.CreateXlib
   nameWithType: VkSurfaceSource.CreateXlib

@@ -5,9 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Framebuffers </title>
+    <title>Android Support </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Framebuffers ">
+    <meta name="title" content="Android Support ">
     <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -66,19 +66,33 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="framebuffers">
-<h1 id="framebuffers">Framebuffers</h1>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="android-support">Android Support</h1>
 
-<p><a class="xref" href="../api/Veldrid.Framebuffer.html">Framebuffers</a> are device resources which control the set of textures that render commands draw into. Framebuffers have zero-or-more color attachments, and zero-or-one depth attachment. They are created with a <a class="xref" href="../api/Veldrid.FramebufferDescription.html">FramebufferDescription</a>.</p>
-<h2 id="target-textures">Target Textures</h2>
-<p>For a <a class="xref" href="../api/Veldrid.Texture.html">Texture</a> to be used as the color target of a Framebuffer, it must have been created with the <a class="xref" href="../api/Veldrid.TextureUsage.html">TextureUsage.RenderTarget</a> flag. Additionally, color targets must use a non-compressed <a class="xref" href="../api/Veldrid.PixelFormat.html">PixelFormat</a>.</p>
-<p>To be used as the depth target of a Framebuffer, it must have been created with the DepthStencil flag. Additionally, only Textures created using the R16_UNorm, R32_Float, D24_UNorm_S8_UInt, and D32_Float_S8_UInt <a class="xref" href="../api/Veldrid.PixelFormat.html">PixelFormats</a> are able to be used as depth targets. The latter two formats also include 8 bits of stencil buffer space.</p>
-<p>All target textures used to create a Framebuffer must have identical dimensions and multisample counts.</p>
-<h2 id="framebuffer-compatibility">Framebuffer Compatibility</h2>
-<p>Before any Draw command can be issued, there must be an active Framebuffer set using the <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_SetFramebuffer_Veldrid_Framebuffer_">CommandList.SetFramebuffer</a> method. Additionally, the current Pipeline and Framebuffer must be &quot;compatible&quot;. A Pipeline is compatible with a Framebuffer if it has the same number of outputs, and the format of those outputs all match.</p>
-<p>A Framebuffer exposes an <a class="xref" href="../api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_OutputDescription">OutputDescription</a> property, which can be used to create a graphics Pipeline object (see <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_Outputs">PipelineDescription.Outputs</a>), ensuring that its outputs are compatible.</p>
-<h2 id="multisampled-framebuffers">Multisampled Framebuffers</h2>
-<p>It is possible to create a multisampled Framebuffer by using multisampled target textures. All target textures must have the same multisample count. In order to resolve the multisampled target textures into a single-sampled texture (in order to sample or present the image, for example), the <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_ResolveTexture_Veldrid_Texture_Veldrid_Texture_">CommandList.ResolveTexture</a> method should be used.</p>
+<p>Veldrid supports the Android platform through the Vulkan and OpenGL ES backends. A small amount of setup code is needed to bootstrap your Xamarin application and allow Veldrid to render into your application view.</p>
+<h2 id="setting-up-a-graphicsdevice-on-android">Setting up a GraphicsDevice on Android</h2>
+<p>There are a few simple steps you should follow to get up and running on Android.</p>
+<ol>
+<li><p>Create a &quot;SurfaceView&quot; subclass. Veldrid works primarily with Android &quot;Surface&quot; objects. To obtain one of those, you need to inherit from <code>Android.Views.SurfaceView</code> and implement the <code>Android.Views.ISurfaceHolderCallback</code> interface. This will give you a notification when the Android Surface is actually ready to use (<code>void SurfaceCreated(ISurfaceHolder holder)</code>).</p>
+</li>
+<li><p>Create an Android <a class="xref" href="../api/Veldrid.SwapchainSource.html">SwapchainSource</a>. Inside of the &quot;SurfaceCreated&quot; callback, you should call <a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateAndroidSurface_IntPtr_IntPtr_">SwapchainSource.CreateAndroidSurface</a>. This will allow you to create an appropriate <a class="xref" href="../api/Veldrid.SwapchainDescription.html">SwapchainDescription</a> describing a Swapchain that renders into your Android view.</p>
+</li>
+<li><p>Create a GraphicsDevice. Depending on what your device supports, you can either use Vulkan or OpenGL ES. Vulkan support is still rare on current Android devices, but is becoming more common. The majority of devices support OpenGL ES 3.0+. With your SwapchainDescription from the last step, use one of the following methods to create a GraphicsDevice:</p>
+</li>
+</ol>
+<ul>
+<li><a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGLES_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_">GraphicsDevice.CreateOpenGLES()</a></li>
+<li><a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_">GraphicsDevice.CreateVulkan()</a></li>
+</ul>
+<p>Support for Vulkan can be queried using <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsBackendSupported_Veldrid_GraphicsBackend_">GraphicsDevice.IsBackendSupported</a>.</p>
+<h2 id="other-android-events">Other Android Events</h2>
+<p>You should respond to other application events that relate to the Surface&#39;s lifecycle.</p>
+<ul>
+<li><p>When your Surface is &quot;changed&quot; (<code>void SurfaceChanged(ISurfaceHolder holder, Format format, int width, int height)</code>), you need to <a class="xref" href="../api/Veldrid.Swapchain.html#Veldrid_Swapchain_Resize_System_UInt32_System_UInt32_">resize your Veldrid Swapchain</a> so that its dimensions match the Android Surface&#39;s. This event will commonly be called when the device orientation changes, or when a layout change invalidates the view&#39;s size.</p>
+</li>
+<li><p>When your Surface is destroyed (<code>void SurfaceDestroyed(ISurfaceHolder holder)</code>), it is no longer valid to use as a render target. You should detect this and take the appropriate action.</p>
+</li>
+</ul>
 </article>
           </div>
           
@@ -87,7 +101,7 @@
               <div class="contribution">
                 <ul class="nav">
                   <li>
-                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/articles/framebuffers.md/#L1" class="contribution-link">Improve this Doc</a>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/articles/android.md/#L1" class="contribution-link">Improve this Doc</a>
                   </li>
                 </ul>
               </div>

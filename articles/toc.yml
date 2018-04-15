@@ -14,6 +14,8 @@
     href: framebuffers.md
   - name: Multi-Threading in Veldrid
     href: multi-threading.md
+  - name: Android
+    href: android.md
   - name: Backend Differences
     href: backend-differences.md
 - name: Getting Started

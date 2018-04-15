@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GraphicsDevice
    ">
-    <meta name="generator" content="docfx 2.30.0.0">
+    <meta name="generator" content="docfx 2.34.0.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -138,6 +138,32 @@ This object is created with <a class="xref" href="Veldrid.SamplerDescription.htm
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.GraphicsBackend.html">GraphicsBackend</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_Features_" data-uid="Veldrid.GraphicsDevice.Features*"></a>
+  <h4 id="Veldrid_GraphicsDevice_Features" data-uid="Veldrid.GraphicsDevice.Features">Features</h4>
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Veldrid.GraphicsDeviceFeatures.html">GraphicsDeviceFeatures</a> which enumerates the optional features supported by this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract GraphicsDeviceFeatures Features { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceFeatures.html">GraphicsDeviceFeatures</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -688,7 +714,7 @@ or SwapChainBackgroundPanel contained in your application window.</p>
   
   <a id="Veldrid_GraphicsDevice_CreateOpenGL_" data-uid="Veldrid.GraphicsDevice.CreateOpenGL*"></a>
   <h4 id="Veldrid_GraphicsDevice_CreateOpenGL_Veldrid_GraphicsDeviceOptions_Veldrid_OpenGL_OpenGLPlatformInfo_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.CreateOpenGL(Veldrid.GraphicsDeviceOptions,Veldrid.OpenGL.OpenGLPlatformInfo,System.UInt32,System.UInt32)">CreateOpenGL(GraphicsDeviceOptions, OpenGLPlatformInfo, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using OpenGL, with a main Swapchain.</p>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using OpenGL or OpenGL ES, with a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -743,7 +769,60 @@ information.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
-        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the OpenGL API.</p>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the OpenGL or OpenGL ES API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_CreateOpenGLES_" data-uid="Veldrid.GraphicsDevice.CreateOpenGLES*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateOpenGLES_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_" data-uid="Veldrid.GraphicsDevice.CreateOpenGLES(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)">CreateOpenGLES(GraphicsDeviceOptions, SwapchainDescription)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using OpenGL ES, with a main Swapchain.
+This overload can only be used on iOS or Android to create a GraphicsDevice for an Android Surface or an iOS UIView.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateOpenGLES(GraphicsDeviceOptions options, SwapchainDescription swapchainDescription)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Describes several common properties of the GraphicsDevice.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.SwapchainDescription.html">SwapchainDescription</a></td>
+        <td><span class="parametername">swapchainDescription</span></td>
+        <td><p>A description of the main Swapchain to create.
+The SwapchainSource must have been created from an Android Surface or an iOS UIView.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the OpenGL or OpenGL ES API.</p>
 </td>
       </tr>
     </tbody>
@@ -947,6 +1026,187 @@ but which will no longer be in use when the device is idle.</p>
         <td><span class="parametername">disposable</span></td>
         <td><p>An object to dispose when this instance becomes idle.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_GetPixelFormatSupport_" data-uid="Veldrid.GraphicsDevice.GetPixelFormatSupport*"></a>
+  <h4 id="Veldrid_GraphicsDevice_GetPixelFormatSupport_Veldrid_PixelFormat_Veldrid_TextureType_Veldrid_TextureUsage_" data-uid="Veldrid.GraphicsDevice.GetPixelFormatSupport(Veldrid.PixelFormat,Veldrid.TextureType,Veldrid.TextureUsage)">GetPixelFormatSupport(PixelFormat, TextureType, TextureUsage)</h4>
+  <div class="markdown level1 summary"><p>Gets whether or not the given <a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a>, <a class="xref" href="Veldrid.TextureType.html">TextureType</a>, and <a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a>
+combination is supported by this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetPixelFormatSupport(PixelFormat format, TextureType type, TextureUsage usage)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The PixelFormat to query.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureType.html">TextureType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The TextureType to query.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a></td>
+        <td><span class="parametername">usage</span></td>
+        <td><p>The TextureUsage to query.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the given combination is supported; false otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_GetPixelFormatSupport_" data-uid="Veldrid.GraphicsDevice.GetPixelFormatSupport*"></a>
+  <h4 id="Veldrid_GraphicsDevice_GetPixelFormatSupport_Veldrid_PixelFormat_Veldrid_TextureType_Veldrid_TextureUsage_Veldrid_PixelFormatProperties__" data-uid="Veldrid.GraphicsDevice.GetPixelFormatSupport(Veldrid.PixelFormat,Veldrid.TextureType,Veldrid.TextureUsage,Veldrid.PixelFormatProperties@)">GetPixelFormatSupport(PixelFormat, TextureType, TextureUsage, out PixelFormatProperties)</h4>
+  <div class="markdown level1 summary"><p>Gets whether or not the given <a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a>, <a class="xref" href="Veldrid.TextureType.html">TextureType</a>, and <a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a>
+combination is supported by this instance, and also gets the device-specific properties supported by this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool GetPixelFormatSupport(PixelFormat format, TextureType type, TextureUsage usage, out PixelFormatProperties properties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The PixelFormat to query.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureType.html">TextureType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td><p>The TextureType to query.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a></td>
+        <td><span class="parametername">usage</span></td>
+        <td><p>The TextureUsage to query.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.PixelFormatProperties.html">PixelFormatProperties</a></td>
+        <td><span class="parametername">properties</span></td>
+        <td><p>If the combination is supported, then this parameter describes the limits of a Texture
+created using the given combination of attributes.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the given combination is supported; false otherwise. If the combination is supported,
+then <code data-dev-comment-type="paramref" class="paramref">properties</code> contains the limits supported by this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_GetPixelFormatSupportCore_" data-uid="Veldrid.GraphicsDevice.GetPixelFormatSupportCore*"></a>
+  <h4 id="Veldrid_GraphicsDevice_GetPixelFormatSupportCore_Veldrid_PixelFormat_Veldrid_TextureType_Veldrid_TextureUsage_Veldrid_PixelFormatProperties__" data-uid="Veldrid.GraphicsDevice.GetPixelFormatSupportCore(Veldrid.PixelFormat,Veldrid.TextureType,Veldrid.TextureUsage,Veldrid.PixelFormatProperties@)">GetPixelFormatSupportCore(PixelFormat, TextureType, TextureUsage, out PixelFormatProperties)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract bool GetPixelFormatSupportCore(PixelFormat format, TextureType type, TextureUsage usage, out PixelFormatProperties properties)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureType.html">TextureType</a></td>
+        <td><span class="parametername">type</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a></td>
+        <td><span class="parametername">usage</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.PixelFormatProperties.html">PixelFormatProperties</a></td>
+        <td><span class="parametername">properties</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1167,7 +1427,8 @@ view over that region. For Texture resources, this overload maps the first subre
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MappedResourceView&lt;T&gt; Map&lt;T&gt;(MappableResource resource, MapMode mode)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public MappedResourceView&lt;T&gt; Map&lt;T&gt;(MappableResource resource, MapMode mode)
+    where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1235,7 +1496,8 @@ view over that region.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public MappedResourceView&lt;T&gt; Map&lt;T&gt;(MappableResource resource, MapMode mode, uint subresource)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public MappedResourceView&lt;T&gt; Map&lt;T&gt;(MappableResource resource, MapMode mode, uint subresource)
+    where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1770,7 +2032,8 @@ This function must be used with a blittable value type <code data-dev-comment-ty
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, T source)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, T source)
+    where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1829,7 +2092,8 @@ This function must be used with a blittable value type <code data-dev-comment-ty
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, ref T source)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, ref T source)
+    where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1888,7 +2152,8 @@ This function must be used with a blittable value type <code data-dev-comment-ty
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, ref T source, uint sizeInBytes)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, ref T source, uint sizeInBytes)
+    where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1953,7 +2218,8 @@ This function must be used with a blittable value type <code data-dev-comment-ty
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, T[] source)where T : struct</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer&lt;T&gt;(DeviceBuffer buffer, uint bufferOffsetInBytes, T[] source)
+    where T : struct</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
