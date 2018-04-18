@@ -76,7 +76,7 @@
 <ul>
 <li>Direct3D11 and Metal: <code>[-1,1][-1,1][0,1]</code></li>
 <li>Vulkan: <code>[-1,1][-1,1][0,1]</code> NOTE: Vulkan&#39;s clip space Y axis is inverted compared to other API&#39;s.</li>
-<li>OpenGL: <code>[-1,1][-1,1][-1,1]</code></li>
+<li>OpenGL (ES): <code>[-1,1][-1,1][-1,1]</code></li>
 </ul>
 <p>The data types in the <code>System.Numerics</code> namespace follow Direct3D conventions. This means that the format of a <code>System.Numerics.Matrix4x4</code> is directly usable in the Direct3D11 and Metal backends. Other numerics libraries may match other graphics API&#39;s, depending on their intended use cases. Ideally, your application should work optimally with any of the clip space conventions listed above. There are two main approaches to dealing with these differences.</p>
 <ol>
@@ -92,7 +92,7 @@ gl_Position.y = -gl_Position.y; // Correct for Vulkan clip coordinates
 gl_Position.z = gl_Position.z * 2.0 - gl_Position.w; // Correct for OpenGL clip coordinates
 </code></pre><p>The above examples are assuming your application uses Direct3D 11 conventions. If you are starting with OpenGL conventions, for example, then you would need the &quot;opposite&quot; fix-up in the other backends.</p>
 <h2 id="opengl-framebuffer-texture-coordinates">OpenGL framebuffer texture coordinates</h2>
-<p>OpenGL, unlike other graphics API&#39;s, has its texture coordinate origin in the bottom-left corner of a texture. Other API&#39;s have this origin in the top left. This results in all texture samples being flipped in the Y axis. When sampling regular textures, there is no discernible difference, because texture data is also uploaded starting from that lower-left corner. When sampling a framebuffer attachment, however, the difference is visible, and the sampled data will appear to be flipped across the X axis. In order to reconcile this difference, there are two main options:</p>
+<p>OpenGL, unlike other graphics API&#39;s, has its texture coordinate origin in the bottom-left corner of a texture. Other API&#39;s have this origin in the top left. This results in all texture samples being flipped across the X axis. When sampling regular textures, there is no discernible difference, because texture data is also uploaded starting from that lower-left corner. When sampling a framebuffer attachment, however, the difference is visible, and the sampled data will appear to be flipped across the X axis. In order to reconcile this difference, there are two main options:</p>
 <ol>
 <li><p>In your GLSL code, flip the Y value of the relevant texture coordinates. Since shaders are API-specific, this is a logical and straightforward place to put the logic.</p>
 </li>

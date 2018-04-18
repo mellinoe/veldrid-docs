@@ -48,15 +48,17 @@ DeviceBuffers can be created for a variety of applications. The [BufferUsage](xr
 
 * Structured Buffers (BufferUsage.StructuredBufferReadOnly and BufferUsage.StructuredBufferReadWrite) are DeviceBuffers containing an array of a single data type, whose size is specified upon buffer creation. Shaders can get read-only or read-write access to these resources, depending on the needs of the technique being used.
 
+* Indirect Buffers (BufferUsage.IndirectBuffer) contain "draw" or "dispatch" information. When issuing a draw or dispatch command, instead of directly specifying the parameters (vertex count, instance count, base vertex, etc.), you can point the command at a DeviceBuffer which contains that information. This gives you greater flexibility and allows you, for example, to fill up your Indirect Buffer with a compute shader.
+
 ### Shaders
 
-[Shaders](xref:Veldrid.Shader) are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry). They are created from graphics-API-specific data chunks. Multiple shader modules are combined into a "shader set", used to construct a Pipeline. See the [Shaders and Resources overview](xref:shaders-and-resources) for more information.
+[Shaders](xref:Veldrid.Shader) are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry, compute). They are created from graphics-API-specific data chunks. Multiple shader modules are combined into a "shader set", used to construct a Pipeline. See the [Shaders and Resources overview](xref:shaders-and-resources) for more information.
 
 ### Pipelines
 
 In Veldrid, there are two types of [Pipelines](xref:Veldrid.Pipeline): graphics and compute.
 
-A graphics Pipeline is a device resource which encapsulates a large amount of information. In other graphics libraries, a Pipeline is split into several unrelated objects or function calls which can be combined in confusing and unpredictable ways. Veldrid pipelines represent the combined set of all of these pieces of information, and are immutable. This avoids a huge amount of complexity inherent in the mutable state machine paradigm of OpenGL and similar APIs. Pipeline information encompasses:
+A graphics Pipeline is a device resource which encapsulates a large amount of information. In other graphics libraries, a Pipeline is split into several unrelated objects or function calls which can be combined in confusing and unpredictable ways. Veldrid pipelines represent the combined set of all of these pieces of information, and are immutable. This avoids a huge amount of complexity inherent in the mutable state machine paradigm of OpenGL and similar APIs. Additionally, the correctness of a Pipeline is validated up-front. If you attempt to create a Pipeline from components that are not compatible, then an exception is produced before the invalid Pipeline is created. Pipeline information encompasses:
 
 * Blend state: how color values are blended into the Framebuffer.
 * Depth stencil state: How depth-stencil testing, writing, comparing are performed.
@@ -68,7 +70,7 @@ A graphics Pipeline is a device resource which encapsulates a large amount of in
 
 It is not possible to issue a draw command without binding a graphics Pipeline.
 
-A compute Pipeline is another kind of resource which encapsulates the necessary state for a compute shader dispatch. A compute Pipeline does not include any graphics-specific information, like blend state, depth stencil state, etc. The only information contained is:
+A compute Pipeline is another kind of resource which encapsulates the necessary state for a compute shader dispatch. A compute Pipeline does not include any graphics-specific information, like blend state, depth stencil state, etc. It is therefore much simpler, and only contains:
 
 * The compute shader module used
 * Resource layouts
@@ -81,6 +83,10 @@ Graphics and compute pipelines are tracked separately in a CommandList. This mea
 
 A [ResourceSet](xref:Veldrid.ResourceSet) is another fundamental device resource which is used, along with a Pipeline, for drawing commands. ResourceSets are the mechanism by which BindableResource objects ([DeviceBuffers](xref:Veldrid.DeviceBuffer), [TextureViews](xref:Veldrid.TextureView), and [Samplers](xref:Veldrid.Sampler)) are bound to a Pipeline and become accessible to shaders for use when rendering. The types and order of resources is described in a [ResourceLayout](xref:Veldrid.ResourceLayout) object, used to create both a ResourceSet and a Pipeline.
 
-### Framebuffer
+### Framebuffers
 
 A [Framebuffer](xref:Veldrid.Framebuffer) controls the set of textures that are drawn into when draw commands are executed. The application's swapchain Framebuffer is also accessible via the [GraphicsDevice.SwapchainFramebuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) property. The swapchain Framebuffer is used to present an image to the application window or view. See the [Framebuffers overview](xref:framebuffers) for more information.
+
+### Swapchains
+
+A [Swapchain](xref:Veldrid.Swapchain) is a special object which handles the actual presentation of rendered images to a visible application view. Generally, an application like a game only needs one Swapchain, but it is also possible to create multiple Swapchains in a single application. This allows you to render to multiple windows, or multiple panels in a single window (provided the UI framework supports that). See [Swapchains](xref:swapchains) for more information.

@@ -76,7 +76,8 @@
 <li>Direct3D11: <code>ShaderBytes</code> must contain HLSL bytecode.</li>
 <li>Vulkan: <code>ShaderBytes</code> must contain SPIR-V bytecode.</li>
 <li>OpenGL: <code>ShaderBytes</code> must contain ASCII-encoded GLSL text.</li>
-<li>Metal: <code>ShaderBytes</code> must contain Metal bytecode (a &quot;metallib&quot; file created using the <code>metallib</code> tool).</li>
+<li>OpenGL ES: <code>ShaderBytes</code> must contain ASCII-encoded GLSL ES text.</li>
+<li>Metal: <code>ShaderBytes</code> must contain Metal bytecode (a &quot;metallib&quot; file created using the <code>metallib</code> tool). NOTE: Metal bytecode is platform-specific -- it is compiled differently for macOS and iOS, and the two versions cannot be used interchangeably. You must provide the correct version for the platform you are targetting.</li>
 </ul>
 <h2 id="shader-resources">Shader Resources</h2>
 <p>Shader objects have a unique relationship with <a class="xref" href="../api/Veldrid.ResourceLayout.html">ResourceLayouts</a> and <a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSets</a>. When creating a Pipeline, the provided <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts">ResourceLayouts</a> must match the actual resource types that are specified in the shader code.</p>
@@ -217,9 +218,96 @@ SamplerState Sampler1 : register(s1);
 <li>NOTE: This &quot;vertex-buffer-offset&quot; is not applied to fragment stage buffer slots. If there are 5 uniform buffers (0, 1, 2, 3, 4), and buffers 3 and 4 apply to the fragment stage, then they will be placed into fragment slots 3 and 4, regardless of how many vertex buffers are used by the Pipeline.</li>
 </ul>
 </li>
-<li><p>OpenGL: Resources are matched strictly by-name. Each resource must correspond to a uniform or uniform block in the shader program, and the names must be identical. Numerical indices are ignored when matching resources to GLSL uniforms.</p>
+<li><p>OpenGL and OpenGL ES: Resources are matched strictly by-name. Each resource must correspond to a uniform or uniform block in the shader program, and the names must be identical. Numerical indices are ignored when matching resources to GLSL uniforms. Veldrid does not support the &quot;ARB_explicit_uniform_location&quot; extension, primarily because it is not supported by Apple.</p>
 </li>
 </ul>
+<h2 id="resourcebindingmodelimproved">ResourceBindingModel.Improved</h2>
+<p>Veldrid 4.2.0 introduces <a class="xref" href="../api/Veldrid.ResourceBindingModel.html">ResourceBindingModel.Improved</a>, which is an optional flag specified in <a class="xref" href="../api/Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a>, or individually in a particular graphics <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html">Pipeline</a>. The only affect this flag does is to alter the assignment of vertex buffer indices for Metal shaders. Instead of being assigned at the beginning of the buffer list (e.g. slots 0, 1, 2), they are instead assigned to the END of the buffer list. For example, if your Pipeline uses 3 uniform buffers and and two vertex buffers, the indices will be as follows:</p>
+<p><strong>ResourceBindingModel.Default</strong></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Type</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>VertexBuffer</td>
+<td>VB0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>VertexBuffer</td>
+<td>VB1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>VertexBuffer</td>
+<td>VB2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>UniformBuffer</td>
+<td>UB0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>UniformBuffer</td>
+<td>UB1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>UniformBuffer</td>
+<td>UB2</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ResourceBindingModel.Improved</strong></p>
+<table>
+<thead>
+<tr>
+<th>Element</th>
+<th>Type</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>UniformBuffer</td>
+<td>UB0</td>
+</tr>
+<tr>
+<td>1</td>
+<td>UniformBuffer</td>
+<td>UB1</td>
+</tr>
+<tr>
+<td>2</td>
+<td>UniformBuffer</td>
+<td>UB2</td>
+</tr>
+<tr>
+<td>3</td>
+<td>VertexBuffer</td>
+<td>VB0</td>
+</tr>
+<tr>
+<td>4</td>
+<td>VertexBuffer</td>
+<td>VB1</td>
+</tr>
+<tr>
+<td>5</td>
+<td>VertexBuffer</td>
+<td>VB2</td>
+</tr>
+</tbody>
+</table>
+<p>The behavior of ResourceBindingModel.Improved is desirable because it allows you to change the number of vertex buffers without affecting any of the resource indices for any other buffers. This allows you to re-use the same shader code for multiple Pipelines which use a different number of vertex buffers. It gives you the same flexibility that is available to other graphics backends, where vertex buffer binding slots are fully separate from other buffer binding slots.</p>
 </article>
           </div>
           

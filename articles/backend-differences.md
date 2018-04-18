@@ -10,7 +10,7 @@ Format: `[MinX,MaxX][MinY,MaxY][MinZ,MaxZ]`
 
 * Direct3D11 and Metal: `[-1,1][-1,1][0,1]`
 * Vulkan: `[-1,1][-1,1][0,1]` NOTE: Vulkan's clip space Y axis is inverted compared to other API's.
-* OpenGL: `[-1,1][-1,1][-1,1]`
+* OpenGL (ES): `[-1,1][-1,1][-1,1]`
 
 The data types in the `System.Numerics` namespace follow Direct3D conventions. This means that the format of a `System.Numerics.Matrix4x4` is directly usable in the Direct3D11 and Metal backends. Other numerics libraries may match other graphics API's, depending on their intended use cases. Ideally, your application should work optimally with any of the clip space conventions listed above. There are two main approaches to dealing with these differences.
 
@@ -34,7 +34,7 @@ The above examples are assuming your application uses Direct3D 11 conventions. I
 
 ## OpenGL framebuffer texture coordinates
 
-OpenGL, unlike other graphics API's, has its texture coordinate origin in the bottom-left corner of a texture. Other API's have this origin in the top left. This results in all texture samples being flipped in the Y axis. When sampling regular textures, there is no discernible difference, because texture data is also uploaded starting from that lower-left corner. When sampling a framebuffer attachment, however, the difference is visible, and the sampled data will appear to be flipped across the X axis. In order to reconcile this difference, there are two main options:
+OpenGL, unlike other graphics API's, has its texture coordinate origin in the bottom-left corner of a texture. Other API's have this origin in the top left. This results in all texture samples being flipped across the X axis. When sampling regular textures, there is no discernible difference, because texture data is also uploaded starting from that lower-left corner. When sampling a framebuffer attachment, however, the difference is visible, and the sampled data will appear to be flipped across the X axis. In order to reconcile this difference, there are two main options:
 
 1. In your GLSL code, flip the Y value of the relevant texture coordinates. Since shaders are API-specific, this is a logical and straightforward place to put the logic.
 

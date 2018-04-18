@@ -10,13 +10,13 @@ Several types of commands are available, depending on what work is being done.
 
 ## Resource Manipulation
 
-[DeviceBuffer](xref:Veldrid.DeviceBuffer) objects can be updated directly in a CommandList, using the UpdateBuffer method. When this method is called, the new data is "queued" into the CommandList, and will only be copied into the DeviceBuffer when execution reaches that point in the recorded CommandList. It is also possible to queue up multiple updates to the same DeviceBuffer in the same CommandList. However, it should be noted that there is storage and processing overhead associated with queueing buffer updates in this way, and should be used sparingly.
+[DeviceBuffer](xref:Veldrid.DeviceBuffer) objects can be updated directly in a CommandList, using the UpdateBuffer method. When this method is called, the new data is "queued" into the CommandList, and will only be copied into the DeviceBuffer when execution reaches that point in the recorded CommandList. It is also possible to queue up multiple updates to the same DeviceBuffer in the same CommandList. However, it should be noted that there is storage and processing overhead associated with queueing buffer updates in this way, and it should be used sparingly.
 
 Data can be copied between DeviceBuffers or between Texture objects, using one of the [CopyBuffer](xref:Veldrid.CommandList#Veldrid_CommandList_CopyBuffer_Veldrid_DeviceBuffer_System_UInt32_Veldrid_DeviceBuffer_System_UInt32_System_UInt32_) or [CopyTexture](xref:Veldrid.CommandList#Veldrid_CommandList_CopyTexture_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_) overloads. In order to read back data stored on the GPU, one of these methods can be used to transfer the desired information into a "staging" resource, which can be directly mapped and read from the CPU.
 
-The color, depth, and stencil targets of the active [Framebuffer](xref:Veldrid.Framebuffer) can be cleared.
+The [color](xref:Veldrid.CommandList#Veldrid_CommandList_ClearColorTarget_System_UInt32_Veldrid_RgbaFloat_), [depth, and stencil](xref:Veldrid.CommandList#Veldrid_CommandList_ClearDepthStencil_System_Single_System_Byte_) targets of the active [Framebuffer](xref:Veldrid.Framebuffer) can be cleared.
 
-Multisampled Textures can be resolved down into a regular non-multisampled Texture using the ResolveTexture method.
+Multisampled Textures can be resolved down into a regular non-multisampled Texture using the [ResolveTexture](xref:Veldrid.CommandList#Veldrid_CommandList_ResolveTexture_Veldrid_Texture_Veldrid_Texture_) method.
 
 ## State Changes
 

@@ -12,8 +12,8 @@ There are a few simple steps you should follow to get up and running on Android.
 
 3. Create a GraphicsDevice. Depending on what your device supports, you can either use Vulkan or OpenGL ES. Vulkan support is still rare on current Android devices, but is becoming more common. The majority of devices support OpenGL ES 3.0+. With your SwapchainDescription from the last step, use one of the following methods to create a GraphicsDevice:
 
-* [GraphicsDevice.CreateOpenGLES()](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_CreateOpenGLES_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_)
-* [GraphicsDevice.CreateVulkan()](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_)
+* [GraphicsDevice.CreateOpenGLES](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_CreateOpenGLES_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_)
+* [GraphicsDevice.CreateVulkan](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_)
 
 Support for Vulkan can be queried using [GraphicsDevice.IsBackendSupported](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_IsBackendSupported_Veldrid_GraphicsBackend_).
 

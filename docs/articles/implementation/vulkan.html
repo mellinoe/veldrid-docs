@@ -188,9 +188,9 @@
 </tbody>
 </table>
 <h2 id="notes">Notes</h2>
-<p>Veldrid&#39;s API is modeled after modern graphics API&#39;s like Vulkan. As a result, this backend is simple, straightforward, and has very good performance. Driver support for Vulkan remains somewhat less common than other graphics API&#39;s, but new GPUs from all major vendors support Vulkan. In time, Vulkan will likely be supported by all major systems (excluding Apple&#39;s).</p>
+<p>Veldrid&#39;s API is modeled after modern graphics API&#39;s like Vulkan. As a result, this backend is simple, straightforward, and has very good performance. Driver support for Vulkan remains somewhat less common than other graphics API&#39;s, but new GPUs from all major vendors support Vulkan. In time, Vulkan will likely be supported by all major systems.</p>
 <h3 id="memory-management">Memory Management</h3>
-<p>Memory management must be custom-handled in Vulkan. The <code>VkDeviceMemoryManager</code> allocates and reclaims all memory needed in the Vulkan backend. In general, the allocation handling is as follows:</p>
+<p>Memory management must be custom-handled in Vulkan. The <code>VkDeviceMemoryManager</code> class allocates and reclaims all memory needed in the Vulkan backend. In general, the allocation handling is as follows:</p>
 <ul>
 <li>The manager tracks several &quot;chunk allocators&quot;, one for each type of memory (the <code>memoryTypeBits</code> and <a href="https://www.khronos.org/registry/vulkan/specs/1.0/man/html/VkMemoryPropertyFlags.html">VkMemoryPropertyFlags</a> identify a &quot;type&quot; of memory).</li>
 <li>Each chunk allocator tracks a set of contiguous allocations of real physical device memory.</li>

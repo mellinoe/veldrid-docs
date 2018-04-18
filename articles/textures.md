@@ -48,10 +48,10 @@ Although [GraphicsDevice.UpdateTexture](xref:Veldrid.GraphicsDevice#Veldrid_Grap
 
 Staging Textures can be "mapped" into a CPU-visible data range. This allows you to write directly into a region specifically prepared by the GPU driver to transfer texture data. After the data has been mapped and unmapped (see [GraphicsDevice.Map](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_System_UInt32_) and [GraphicsDevice.Unmap](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_Unmap_Veldrid_MappableResource_System_UInt32_)), you should then schedule a copy using [CommandList.CopyTexture](xref:Veldrid.CommandList#Veldrid_CommandList_CopyTexture_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_Veldrid_Texture_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_).
 
-## Initial Texture Data
-
-Before a Texture is populated (using UpdateTexture, CopyTexture, or by drawing into it), its contents are undefined. It is not meaningful to copy this data back into a CPU buffer or manipulate it in any way. Some backends may default-initialize a Texture to a certain value in some cases (commonly black -- all zeroes), but this behavior cannot be relied on.
-
 ## Reading back Texture data
 
 A Staging Texture is also needed to read back texture data from the GPU. A Texture should be mapped using [MapMode.Read](xref:Veldrid.MapMode) or [MapMode.ReadWrite](xref:Veldrid.MapMode).
+
+## Initial Texture Data
+
+Before a Texture is populated (using UpdateTexture, CopyTexture, or by drawing into it), its contents are undefined. It is not meaningful to copy this data back into a CPU buffer or manipulate it in any way. Some backends may default-initialize a Texture to a certain value in some cases (commonly transparent black, or all zeroes), but this behavior cannot be relied on.

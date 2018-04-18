@@ -1,8 +1,10 @@
 # OpenGL Backend
 
-The OpenGL backend is a multi-platform backend implemented using OpenGL. It is supported on most desktop platforms, except for UWP. OpenGL 3.0 is required for an OpenGL [GraphicsDevice](xref:Veldrid.GraphicsDevice).
+The OpenGL backend is a multi-platform backend implemented using OpenGL. It is supported on most desktop platforms, except for UWP. OpenGL 3.0 or higher is required for an OpenGL [GraphicsDevice](xref:Veldrid.GraphicsDevice).
 
-To create an OpenGL GraphicsDevice, several pieces of pre-configured "context" information are needed (see [OpenGLPlatformInfo](xref:Veldrid.OpenGL.OpenGLPlatformInfo)). This information includes:
+The OpenGL ES backend is more-or-less the same as the OpenGL backend. There exist several minor differences related to how extensions are queried, and the exact names of some GL functions are different. Veldrid requires OpenGL ES 3.0 or higher to create an OpenGL ES GraphicsDevice.
+
+To create an OpenGL or OpenGL ES GraphicsDevice, several pieces of pre-configured "context" information are needed (see [OpenGLPlatformInfo](xref:Veldrid.OpenGL.OpenGLPlatformInfo)). This information includes:
 
 * The OpenGL context handle, created outside of Veldrid.
 * The "GetProcAddress" delegate, used to retrieve function pointers.
@@ -12,6 +14,7 @@ To create an OpenGL GraphicsDevice, several pieces of pre-configured "context" i
 * The "Delete Context" delegate, used to delete an OpenGL context.
 * The "SwapBuffers" delegate, used to swap the applications backbuffer.
 * The "SetSyncToVerticalBlank" delegate, used to control Vsync behavior.
+* The "SetSwapchainFramebuffer" delegate, used to set the main Swapchain Framebuffer.
 
 These functions are platform-specific, and different operating systems vary in how they implement these functions. As such, it is difficult to write portable logic which satisfies all of these pieces of information. The Veldrid.StartupUtilities library includes functionality to obtain this information portably, using SDL2.
 
@@ -38,7 +41,7 @@ These functions are platform-specific, and different operating systems vary in h
 | [Framebuffer](xref:Veldrid.Framebuffer) | [Framebuffer objects](https://www.khronos.org/opengl/wiki/Framebuffer_Object).aspx) | |
 | [ResourceLayout](xref:Veldrid.ResourceLayout) | None | The OpenGL backend uses the information from a ResourceLayout to determine which uniform locations a particular resource corresponds to, by name. |
 | [ResourceSet](xref:Veldrid.ResourceSet) | None | The OpenGL backend simply uses the individual resources contained in a ResourceSet to bind to a program. The slots are determined using information from the associated ResourceLayout. |
-| [Swapchain](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) | None (implicit) | An OpenGL swapchain is not explicitly created by the user, nor can it be directly accessed or managed. Instead, it is part of the OpenGL context created by the system.
+| [Swapchain](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) | None (implicit) | An OpenGL swapchain is not explicitly created by the user, nor can it be directly accessed or managed. Instead, it is part of the OpenGL context created by the host system.
 
 ## Notes
 
@@ -56,7 +59,7 @@ On Linux, OpenGL may be the only available backend, if Vulkan is not supported. 
 OpenGL has a very unfortunate relationship with threads. Not only can OpenGL functions not be used from multiple threads simultaneously, they must always be called from a SINGLE main thread. This means that it is not possible to simply synchronize access to a GL context between multiple threads. Only one single thread can ever use OpenGL functions. Veldrid allows many functions to be used in a free-threaded manner. All operations on a GraphicsDevice or a ResourceFactory, for example, can be used from any thread at any time. This allows you to create and update resources (DeviceBuffers and Textures) at any time, without worrying about synchronization. Modern graphics API's (even D3D11) allow this without trouble. Unfortunately, OpenGL does not support this natively. To accomodate OpenGL's limitations, the following approach is taken:
 
 * All OpenGL functions are run from a single "OpenGL worker thread". This worker thread is started when the OpenGL GraphicsDevice is created, and loops continuously until the GraphicsDevice is disposed. This thread takes sole ownership of the GL context when it starts, using the provided delegates.
-* All OpenGL resources (buffers, textures, framebuffers, shaders, etc.) are lazily-initialized. Because the real OpenGL resources must be created solely from the "OpenGL worker thread", this work is deferred until the resource is actually used in an actual OpenGL function. When the worker thread is processing a command involving a DeviceBuffer, for example, it will ensure the OpenGL buffer object is created (`glCreateBuffers`, `glNamedBufferData`, etc.) before using it. The worker thread is the only thread that ever fully initializes OpenGL resources, but any thread is permitted to create an uninitialized resource.
+* All OpenGL resources (buffers, textures, framebuffers, shaders, etc.) are lazily-initialized. Because the real OpenGL resources must be created solely from the "OpenGL worker thread", this work is deferred until the resource is first used in an OpenGL function. When the worker thread is processing a command involving a DeviceBuffer, for example, it will ensure the OpenGL buffer object is created (`glCreateBuffers`, `glNamedBufferData`, etc.) before using it. The worker thread is the only thread that ever fully initializes OpenGL resources, but any thread is permitted to create an uninitialized resource.
 * Resources that require initialization information store that information inside the lazy object until initialization occurs. For example, an OpenGL Shader stores the raw shader bytes in a shared storage buffer until the OpenGL shader object can actually be created (by the worker thread).
 * All commands recorded into an OpenGL CommandList are stored into an emulated, CPU-side list. This is done in a specialized, allocation-free, and highly optimized manner. Commands that include data to be uploaded, like `CommandList.UpdateBuffer`, instead copy the data into a shared storage buffer. When the worker thread finally executes the CommandList, this data is consumed, and the shared storage buffer is recycled.
 

@@ -75,8 +75,13 @@
 <p>To be used as the depth target of a Framebuffer, it must have been created with the DepthStencil flag. Additionally, only Textures created using the R16_UNorm, R32_Float, D24_UNorm_S8_UInt, and D32_Float_S8_UInt <a class="xref" href="../api/Veldrid.PixelFormat.html">PixelFormats</a> are able to be used as depth targets. The latter two formats also include 8 bits of stencil buffer space.</p>
 <p>All target textures used to create a Framebuffer must have identical dimensions and multisample counts.</p>
 <h2 id="framebuffer-compatibility">Framebuffer Compatibility</h2>
-<p>Before any Draw command can be issued, there must be an active Framebuffer set using the <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_SetFramebuffer_Veldrid_Framebuffer_">CommandList.SetFramebuffer</a> method. Additionally, the current Pipeline and Framebuffer must be &quot;compatible&quot;. A Pipeline is compatible with a Framebuffer if it has the same number of outputs, and the format of those outputs all match.</p>
-<p>A Framebuffer exposes an <a class="xref" href="../api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_OutputDescription">OutputDescription</a> property, which can be used to create a graphics Pipeline object (see <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_Outputs">PipelineDescription.Outputs</a>), ensuring that its outputs are compatible.</p>
+<p>Before any Draw command can be issued, there must be an active Framebuffer set using the <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_SetFramebuffer_Veldrid_Framebuffer_">CommandList.SetFramebuffer</a> method. Additionally, the current Pipeline and Framebuffer must be &quot;compatible&quot;. A Pipeline is compatible with a Framebuffer if:</p>
+<ul>
+<li>It has the same number of outputs (color and depth)</li>
+<li>The <a class="xref" href="../api/Veldrid.PixelFormat.html">format</a> of those outputs all match.</li>
+<li>The sample count of all outputs match.</li>
+</ul>
+<p>A Framebuffer exposes an <a class="xref" href="../api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_OutputDescription">OutputDescription</a> property, which can be used to create a graphics Pipeline object (see <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_Outputs">PipelineDescription.Outputs</a>) that is guaranteed to be compatible with it.</p>
 <h2 id="multisampled-framebuffers">Multisampled Framebuffers</h2>
 <p>It is possible to create a multisampled Framebuffer by using multisampled target textures. All target textures must have the same multisample count. In order to resolve the multisampled target textures into a single-sampled texture (in order to sample or present the image, for example), the <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_ResolveTexture_Veldrid_Texture_Veldrid_Texture_">CommandList.ResolveTexture</a> method should be used.</p>
 </article>

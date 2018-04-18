@@ -16,9 +16,13 @@ All target textures used to create a Framebuffer must have identical dimensions 
 
 ## Framebuffer Compatibility
 
-Before any Draw command can be issued, there must be an active Framebuffer set using the [CommandList.SetFramebuffer](xref:Veldrid.CommandList#Veldrid_CommandList_SetFramebuffer_Veldrid_Framebuffer_) method. Additionally, the current Pipeline and Framebuffer must be "compatible". A Pipeline is compatible with a Framebuffer if it has the same number of outputs, and the format of those outputs all match.
+Before any Draw command can be issued, there must be an active Framebuffer set using the [CommandList.SetFramebuffer](xref:Veldrid.CommandList#Veldrid_CommandList_SetFramebuffer_Veldrid_Framebuffer_) method. Additionally, the current Pipeline and Framebuffer must be "compatible". A Pipeline is compatible with a Framebuffer if:
 
-A Framebuffer exposes an [OutputDescription](xref:Veldrid.Framebuffer#Veldrid_Framebuffer_OutputDescription) property, which can be used to create a graphics Pipeline object (see [PipelineDescription.Outputs](xref:Veldrid.GraphicsPipelineDescription#Veldrid_GraphicsPipelineDescription_Outputs)), ensuring that its outputs are compatible.
+* It has the same number of outputs (color and depth)
+* The [format](xref:Veldrid.PixelFormat) of those outputs all match.
+* The sample count of all outputs match.
+
+A Framebuffer exposes an [OutputDescription](xref:Veldrid.Framebuffer#Veldrid_Framebuffer_OutputDescription) property, which can be used to create a graphics Pipeline object (see [PipelineDescription.Outputs](xref:Veldrid.GraphicsPipelineDescription#Veldrid_GraphicsPipelineDescription_Outputs)) that is guaranteed to be compatible with it.
 
 ## Multisampled Framebuffers
 
