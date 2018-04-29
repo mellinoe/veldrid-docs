@@ -8,7 +8,7 @@ In this section, we will set up a new project, create a Window to draw into, and
 
 ## Create a new Project
 
-This walkthrough assumes you are using the .NET Core toolchain, although the same code could be run on .NET Framework or Mono. Veldrid is a .NET Standard 2.0 library, so you will need the .NET Core 2.0 SDK, or a 
+This walkthrough assumes you are using the .NET Core toolchain, although the same code could be run on .NET Framework or Mono. Veldrid is a .NET Standard 2.0 library, so you will need the .NET Core 2.0 SDK, or a .NET Framework version that supports .NET Standard 2.0.
 
 Create a new console application by running `dotnet new console`, or by using a "New Project" dialogue in Visual Studio or other IDE. Then, add a reference to these two NuGet packages:
 
