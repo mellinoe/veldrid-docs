@@ -1,6 +1,9 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: android
+  name: Android Support
+  href: articles/android.html
 - uid: api-concepts
   name: API Concepts
   href: articles/api-concepts.html
