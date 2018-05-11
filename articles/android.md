@@ -1,3 +1,7 @@
+---
+uid: android
+---
+
 # Android Support
 
 Veldrid supports the Android platform through the Vulkan and OpenGL ES backends. A small amount of setup code is needed to bootstrap your Xamarin application and allow Veldrid to render into your application view.

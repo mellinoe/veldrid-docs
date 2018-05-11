@@ -837,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.SwapchainSource.html",
-          "hash": "ZTL+g1xOoxWlHOU7hDUU2Q=="
+          "hash": "7GboGJzNogqpHlcrTW6/Xg=="
         }
       },
       "is_incremental": true,
@@ -1080,7 +1080,7 @@
           "hash": "NR2phHwC8JhIuZafklJlyQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1281,10 +1281,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/swapchains.html",
-          "hash": "Fk7dv5XfrHgoBmRUsSg4rA=="
+          "hash": "VRxxxfyg3ofjqZ6BMkbmuw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1373,7 +1373,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "hGb7n4jRzEqzZCF5x63Y9g=="
+          "hash": "vp1DRNEL2OpSDrosEu8Liw=="
         }
       },
       "is_incremental": false,
@@ -1386,6 +1386,18 @@
         ".html": {
           "relative_path": "updates/4.2.0-beta1.html",
           "hash": "Lw8KHth8D4v10b/Zav0qdg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "updates/4.2.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "updates/4.2.0.html",
+          "hash": "5H2iw/ls+0ZXPrMp2qYThQ=="
         }
       },
       "is_incremental": true,
@@ -1436,7 +1448,7 @@
           "hash": "GKnRCeUKBAGH2ddmSYSXxQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1493,7 +1505,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/toc.html",
-          "hash": "kCUPrBNi/+cYuUObAbgong=="
+          "hash": "Qc1sUvAEqQt/p+6V3/gthQ=="
         }
       },
       "is_incremental": false,
@@ -1507,6 +1519,11 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
@@ -1518,11 +1535,6 @@
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

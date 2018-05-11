@@ -1,0 +1,175 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Veldrid 4.2.0 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Veldrid 4.2.0 ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="veldrid-420">Veldrid 4.2.0</h1>
+
+<p>Veldrid 4.2.0 has been marked stable and is now available on NuGet.org. A small number of issues were identified in 4.2.0-beta1 and have been fixed in this version. This is an exciting release and includes several widely-requested features. It also includes a large number of performance improvements and bug fixes.</p>
+<h2 id="opengl-es-support">OpenGL ES Support</h2>
+<p>A fully-featured OpenGL ES backend has been added. This backend can be used on both Android and iOS, as well as on certain desktop platforms, provided the drivers and operating system support it. It is very similar to the existing OpenGL backend, and several changes and improvements have been made to the OpenGL backend as a result of this new support.</p>
+<p>Veldrid requires at least <strong>OpenGL ES version 3.0</strong>. Some optional features, like compute shaders, require higher versions of OpenGL ES.</p>
+<h2 id="android-support">Android Support</h2>
+<p>Veldrid now supports Android through the Vulkan and OpenGL ES backends. Vulkan remains a fairly advanced feature for current Android devices, but it will become more common in the future. OpenGL ES is supported by the majority of current Android devices.</p>
+<p>A Veldrid GraphicsDevice can be created through an Android Surface or SurfaceView. Use the <a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateAndroidSurface_IntPtr_IntPtr_">SwapchainSource.CreateAndroidSurface()</a> function to create a SwapchainSource for the given application view. Then, you can use <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGLES_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_">GraphicsDevice.CreateOpenGLES()</a> or <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_">GraphicsDevice.CreateVulkan()</a>, depending on what your device supports.</p>
+<h2 id="graphicsdevice-capabilities">GraphicsDevice Capabilities</h2>
+<p>Although Veldrid aims to be as portable as possible, there are a number of places where differences between different systems and API&#39;s cannot be cleanly hidden. Additionally, all graphics API&#39;s enforce specific limitations on how the API can be used. Without knowledge of these limitations at runtime, it&#39;s difficult to write code that is guaranteed to work portably. This version of Veldrid introduces several GraphicsDevice members informing you about the limitations of the current system.</p>
+<ul>
+<li><a class="xref" href="../api/Veldrid.GraphicsDeviceFeatures.html">GraphicsDeviceFeatures</a> -- Enumerates the optional features supported by a GraphicsDevice.</li>
+<li><a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_GetPixelFormatSupport_Veldrid_PixelFormat_Veldrid_TextureType_Veldrid_TextureUsage_Veldrid_PixelFormatProperties__">bool GetPixelFormatSupport()</a> -- Queries whether the current GraphicsDevice supports the given PixelFormat.</li>
+<li><a class="xref" href="../api/Veldrid.PixelFormatProperties.html">PixelFormatProperties</a> -- Describes the limits of a Texture&#39;s dimensions and other properties if created with the given PixelFormat, TextureType, and TextureUsage flags.</li>
+</ul>
+<h1 id="change-list-cumulative-since-414">Change List (Cumulative since 4.1.4)</h1>
+<h2 id="new-features">New Features</h2>
+<ul>
+<li><p>Add support for OpenGL ES <a href="https://github.com/mellinoe/veldrid/commit/c9103d349d5c4c7318c7c04dc9c55f5471cba939">[c9103d3]</a> <a href="https://github.com/mellinoe/veldrid/commit/78eff3379fa9220268472729943373cf91fa79d0">[78eff33]</a> <a href="https://github.com/mellinoe/veldrid/commit/e41591d32325edf48dcd9aecd64e38a3828c4191">[e41591d]</a> <a href="https://github.com/mellinoe/veldrid/commit/77588d4b6c1660be09ef2d4553610738f993a498">[77588d4]</a> <a href="https://github.com/mellinoe/veldrid/commit/2edc0759d30939fb1070dd36da9767fd7428e400">[2edc075]</a> <a href="https://github.com/mellinoe/veldrid/commit/aaf1cd2312336a2fd4f6f289ffe137a81912a19d">[aaf1cd2]</a></p>
+<ul>
+<li>New GraphicsBackend member: <a class="xref" href="../api/Veldrid.GraphicsBackend.html">GraphicsBackend.OpenGLES</a></li>
+<li>New GraphicsDevice creation method: <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGLES_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_">public static GraphicsDevice CreateOpenGLES(GraphicsDeviceOptions options, SwapchainDescription swapchainDescription)</a></li>
+</ul>
+</li>
+<li><p>Add GraphicsDeviceFeatures, a class for querying specific device features. <a href="https://github.com/mellinoe/veldrid/commit/2889a1144b41a939d02df6d6c7e8842166171a01">[2889a11]</a> <a href="https://github.com/mellinoe/veldrid/commit/49d4b924eb37d4fcc49d35d57bb54dcb88912aa6">[49d4b92]</a> <a href="https://github.com/mellinoe/veldrid/commit/71166c0bbfcc9ea9d6dd3ef2df0ddaa7a6c94ced">[71166c0]</a></p>
+</li>
+<li><p>Add a query function for PixelFormat support. <a href="https://github.com/mellinoe/veldrid/commit/c5301e352fa676b10f1174332a3c571e36cad05f">[c5301e3]</a></p>
+</li>
+<li><p>Add ResourceBindingModel.Improved, with better handling of Metal buffer resources. (@tgjones) <a href="https://github.com/mellinoe/veldrid/commit/b1e35c2e11e9756d60c108fe451f07f7567cd257">[b1e35c2]</a> <a href="https://github.com/mellinoe/veldrid/commit/e52bd08801c81a652f9d1073eec5c7ed04b8be81">[e52bd08]</a> <a href="https://github.com/mellinoe/veldrid/commit/dd8adb59465f12d5cb6944394dbe34a76cdc0f26">[dd8adb5]</a> <a href="https://github.com/mellinoe/veldrid/commit/452cf45ad31b3d4e299a8ce2f9598a70af2ce278">[452cf45]</a> <a href="https://github.com/mellinoe/veldrid/commit/db293b1c45009c8f970705522a21261529c6ef90">[db293b1]</a></p>
+</li>
+<li><p>Add support for ETC2 formats. <a href="https://github.com/mellinoe/veldrid/commit/c288fe5d2185fb265d288ea25ee0848a852f6e9a">[c288fe5]</a></p>
+<ul>
+<li>New <a class="xref" href="../api/Veldrid.PixelFormat.html">PixelFormat</a> members: <code>ETC2_R8_G8_B8_UNorm</code>, <code>ETC2_R8_G8_B8_A1_UNorm</code>, <code>ETC2_R8_G8_B8_A8_UNorm</code></li>
+</ul>
+</li>
+<li><p>Make VeldridStartup.GetPlatformDefaultBackend public @tgjones <a href="https://github.com/mellinoe/veldrid/commit/f81a1b9588d87ddfad5117af57172e55f47b0865">[f81a1b9]</a></p>
+</li>
+<li><p>Allow Framebuffer attachments to target a non-zero mip level. <a href="https://github.com/mellinoe/veldrid/commit/9edc57125ee14fbc90deb5707996bd51cc60cbb2">[9edc571]</a></p>
+</li>
+<li><p>Add ability to set mouse position in Sdl2Window. <a href="https://github.com/mellinoe/veldrid/commit/6394869af0477d259922541325357f8b5303e82b">[6394869]</a></p>
+</li>
+</ul>
+<h2 id="misc-changes">Misc Changes</h2>
+<ul>
+<li>Fix the equality and hash code implementations of several Description structs. <a href="https://github.com/mellinoe/veldrid/commit/fe20ccf359ac411483276b919144bda4f6061d41">[fe20ccf]</a></li>
+<li>[D3D11] Fix a synchronization issue related to the access of shared resources. <a href="https://github.com/mellinoe/veldrid/commit/dab068ec508e72c3f4ea49fd9843ef2035b97458">[dab068e]</a></li>
+<li>Update SDL2 binaries to 2.0.8. <a href="https://github.com/mellinoe/veldrid/commit/c03e69b2540e63e745904cf390a033a8f88a30fe">[c03e69b]</a> <a href="https://github.com/mellinoe/veldrid/commit/d5122453394665e446c95b4ebed5eba93c575af4">[d512245]</a></li>
+<li>[OpenGL] Improve multisample texture extension handling. <a href="https://github.com/mellinoe/veldrid/commit/f0b94a3535ab49e943bd286b90b704ecf18f9c87">[f0b94a3]</a></li>
+<li>[Veldrid.ImageSharp] Update to ImageSharp beta0003. <a href="https://github.com/mellinoe/veldrid/commit/7128134461901d0bca31b8d32fc4583649eb44d4">[7128134]</a></li>
+<li>Add [UnmanagedFunctionPointer] to all OpenGL function definitions. This fixes an issue when using mono AOT. <a href="https://github.com/mellinoe/veldrid/commit/d41c9af83ae4baafe82aa1f63eec8556636e61f9">[d41c9af]</a></li>
+<li>[Vulkan] Fix several validation warnings and errors. <a href="https://github.com/mellinoe/veldrid/commit/31ac5837c0198c4e80f59e13837a26f55273cc0f">[31ac583]</a></li>
+<li>[Vulkan] Handle cases where VkSurfaceCapabilitiesKHR.maxImageCount is 0. <a href="https://github.com/mellinoe/veldrid/commit/3c0f9a6f2de3b5d1a0e04b7ecd151edb7591b9af">[3c0f9a6]</a></li>
+<li>[Vulkan] Detect when a Swapchain has become invalid and throw a VeldridException. <a href="https://github.com/mellinoe/veldrid/commit/66b9326e5c600c3c447f9a853846ba5e2c450089">[66b9326]</a></li>
+<li>[Vulkan] Change VkMemoryBlock into a struct. <a href="https://github.com/mellinoe/veldrid/commit/4b908fa58b6bb4ef827a1416aae17e0de72dbbdf">[4b908fa]</a></li>
+<li>Add missing depth buffer formats to the OpenGL backend (@feliwir) <a href="https://github.com/mellinoe/veldrid/commit/e525d94bda60e55fb4e4a3800458adf1be544f88">[e525d94]</a>.</li>
+<li>[Metal] Use a different &quot;drawPrimitives&quot; overload when instanceStart == 0. <a href="https://github.com/mellinoe/veldrid/commit/cb2c4a10ff2797b2611a5dbc6ef0f669679563ff">[cb2c4a1]</a></li>
+<li>Fix OpenGL context initialization with SDL2. <a href="https://github.com/mellinoe/veldrid/commit/c011b50105d36b291ae3f742ca318b0d31eda0ec">[c011b50]</a></li>
+<li>[OpenGL] Fix sampler maximum LOD parameter. <a href="https://github.com/mellinoe/veldrid/commit/25db1e07d8ee4e0b902596cc6c33dc2ec16f2d78">[25db1e0]</a></li>
+<li>[Vulkan] Fix a Veldrid validation issue when a shared Vulkan staging Texture is re-used as a different format. <a href="https://github.com/mellinoe/veldrid/commit/b1cbac39e2c29bcf2fc21f686033b93cc8745604">[b1cbac3]</a></li>
+<li>[Vulkan] Improve how shared VkCommandPools are recycled. <a href="https://github.com/mellinoe/veldrid/commit/a1ce176f2254ba4c604a8cb489d5a4bea4dd0848">[a1ce176]</a></li>
+<li>[OpenGL] Fix format mapping for some PixelFormat values when using subset TextureView&#39;s. [[ad7fc41]]</li>
+<li>[Metal] Improve the performance slightly of Texture copying. <a href="https://github.com/mellinoe/veldrid/commit/6786ed64904a70ef690120408746d6356154a800">[6786ed6]</a></li>
+<li>[OpenGL] Better extension handling for draw_elements_base_vertex. <a href="https://github.com/mellinoe/veldrid/commit/f23e6c5f8f1431ae3f9f332273a64ca38db725ec">[f23e6c5]</a></li>
+<li>Improve OpenGL uniform buffer size error message @tgjones <a href="https://github.com/mellinoe/veldrid/commit/56cdf392f9fab2bdf4413e0cdd29b51cd0903430">[56cdf39]</a> <a href="https://github.com/mellinoe/veldrid/commit/83d76193723bb52f450a535471c2d883c3d97a1b">[83d7619]</a></li>
+<li>Add extra validation for binding ResourceSets. <a href="https://github.com/mellinoe/veldrid/commit/2ed4218e024f9344df1556fd2266f46323e55ef4">[2ed4218]</a> <a href="https://github.com/mellinoe/veldrid/commit/768a605ccd2a162c8d2c0e9113ed2615dd335adb">[768a605]</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/updates/4.2.0.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

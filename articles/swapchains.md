@@ -37,7 +37,7 @@ Like other resources, it is possible to create and destroy extra Swapchains at r
 | [CreateUIView(IntPtr uiView)](xref:Veldrid.SwapchainSource#Veldrid_SwapchainSource_CreateUIView_IntPtr_) | | | ✓ | ✓ |
 | [CreateAndroidSurface(IntPtr surfaceHandle, IntPtr jniEnv)](xref:Veldrid.SwapchainSource#Veldrid_SwapchainSource_CreateAndroidSurface_IntPtr_IntPtr_) | ✓ | | | ✓ |
 
-A Swapchain can be created with or without a depth target. [SwapchainDescription.DepthFormat](xref:Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_DepthFormat) controls this. If null, no depth target will be created. If non-null, a depth target will be created with that format.
+A Swapchain can be created with or without a depth target. [SwapchainDescription.DepthFormat](xref:Veldrid.SwapchainDescription#Veldrid_SwapchainDescription_DepthFormat) controls this. If null, no depth target will be created. If non-null, a depth target will be created with that format.
 
 ## Using a Swapchain
 
