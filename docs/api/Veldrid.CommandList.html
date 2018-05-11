@@ -1812,7 +1812,9 @@ When drawing, an <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</
   <h4 id="Veldrid_CommandList_SetPipeline_Veldrid_Pipeline_" data-uid="Veldrid.CommandList.SetPipeline(Veldrid.Pipeline)">SetPipeline(Pipeline)</h4>
   <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> used for rendering.
 When drawing, the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> must be compatible with the bound <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>,
-<a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>, and <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> objects.</p>
+<a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>, and <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> objects.
+When a new Pipeline is set, the previously-bound ResourceSets on this CommandList become invalidated and must be
+re-bound.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

@@ -144,6 +144,51 @@ in the target <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Veldrid_FramebufferAttachmentDescription__ctor_" data-uid="Veldrid.FramebufferAttachmentDescription.#ctor*"></a>
+  <h4 id="Veldrid_FramebufferAttachmentDescription__ctor_Veldrid_Texture_System_UInt32_System_UInt32_" data-uid="Veldrid.FramebufferAttachmentDescription.#ctor(Veldrid.Texture,System.UInt32,System.UInt32)">FramebufferAttachmentDescription(Texture, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new FramebufferAttachmentDescription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public FramebufferAttachmentDescription(Texture target, uint arrayLayer, uint mipLevel)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">target</span></td>
+        <td><p>The target texture to render into. For color attachments, this resource must have been created
+with the <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_RenderTarget">RenderTarget</a> flag. For depth attachments, this resource must have been created
+with the <a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_DepthStencil">DepthStencil</a> flag.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">arrayLayer</span></td>
+        <td><p>The array layer to render to. This value must be less than <a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_ArrayLayers">ArrayLayers</a>
+in the target <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">mipLevel</span></td>
+        <td><p>The mip level to render to. This value must be less than <a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_MipLevels">MipLevels</a> in
+the target <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
   
@@ -156,6 +201,32 @@ in the target <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public uint ArrayLayer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_FramebufferAttachmentDescription_MipLevel" data-uid="Veldrid.FramebufferAttachmentDescription.MipLevel">MipLevel</h4>
+  <div class="markdown level1 summary"><p>The mip level to render to. This value must be less than <a class="xref" href="Veldrid.Texture.html#Veldrid_Texture_MipLevels">MipLevels</a> in the target
+<a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint MipLevel</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">

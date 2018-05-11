@@ -1825,6 +1825,12 @@ references:
   commentId: M:Veldrid.FramebufferAttachment.#ctor(Veldrid.Texture,System.UInt32)
   fullName: Veldrid.FramebufferAttachment.FramebufferAttachment(Veldrid.Texture, System.UInt32)
   nameWithType: FramebufferAttachment.FramebufferAttachment(Texture, UInt32)
+- uid: Veldrid.FramebufferAttachment.#ctor(Veldrid.Texture,System.UInt32,System.UInt32)
+  name: FramebufferAttachment(Texture, UInt32, UInt32)
+  href: api/Veldrid.FramebufferAttachment.html#Veldrid_FramebufferAttachment__ctor_Veldrid_Texture_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.FramebufferAttachment.#ctor(Veldrid.Texture,System.UInt32,System.UInt32)
+  fullName: Veldrid.FramebufferAttachment.FramebufferAttachment(Veldrid.Texture, System.UInt32, System.UInt32)
+  nameWithType: FramebufferAttachment.FramebufferAttachment(Texture, UInt32, UInt32)
 - uid: Veldrid.FramebufferAttachment.#ctor*
   name: FramebufferAttachment
   href: api/Veldrid.FramebufferAttachment.html#Veldrid_FramebufferAttachment__ctor_
@@ -1845,6 +1851,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.FramebufferAttachment.ArrayLayer
   nameWithType: FramebufferAttachment.ArrayLayer
+- uid: Veldrid.FramebufferAttachment.MipLevel
+  name: MipLevel
+  href: api/Veldrid.FramebufferAttachment.html#Veldrid_FramebufferAttachment_MipLevel
+  commentId: P:Veldrid.FramebufferAttachment.MipLevel
+  fullName: Veldrid.FramebufferAttachment.MipLevel
+  nameWithType: FramebufferAttachment.MipLevel
+- uid: Veldrid.FramebufferAttachment.MipLevel*
+  name: MipLevel
+  href: api/Veldrid.FramebufferAttachment.html#Veldrid_FramebufferAttachment_MipLevel_
+  commentId: Overload:Veldrid.FramebufferAttachment.MipLevel
+  isSpec: "True"
+  fullName: Veldrid.FramebufferAttachment.MipLevel
+  nameWithType: FramebufferAttachment.MipLevel
 - uid: Veldrid.FramebufferAttachment.Target
   name: Target
   href: api/Veldrid.FramebufferAttachment.html#Veldrid_FramebufferAttachment_Target
@@ -1870,6 +1889,12 @@ references:
   commentId: M:Veldrid.FramebufferAttachmentDescription.#ctor(Veldrid.Texture,System.UInt32)
   fullName: Veldrid.FramebufferAttachmentDescription.FramebufferAttachmentDescription(Veldrid.Texture, System.UInt32)
   nameWithType: FramebufferAttachmentDescription.FramebufferAttachmentDescription(Texture, UInt32)
+- uid: Veldrid.FramebufferAttachmentDescription.#ctor(Veldrid.Texture,System.UInt32,System.UInt32)
+  name: FramebufferAttachmentDescription(Texture, UInt32, UInt32)
+  href: api/Veldrid.FramebufferAttachmentDescription.html#Veldrid_FramebufferAttachmentDescription__ctor_Veldrid_Texture_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.FramebufferAttachmentDescription.#ctor(Veldrid.Texture,System.UInt32,System.UInt32)
+  fullName: Veldrid.FramebufferAttachmentDescription.FramebufferAttachmentDescription(Veldrid.Texture, System.UInt32, System.UInt32)
+  nameWithType: FramebufferAttachmentDescription.FramebufferAttachmentDescription(Texture, UInt32, UInt32)
 - uid: Veldrid.FramebufferAttachmentDescription.#ctor*
   name: FramebufferAttachmentDescription
   href: api/Veldrid.FramebufferAttachmentDescription.html#Veldrid_FramebufferAttachmentDescription__ctor_
@@ -1909,6 +1934,12 @@ references:
   isSpec: "True"
   fullName: Veldrid.FramebufferAttachmentDescription.GetHashCode
   nameWithType: FramebufferAttachmentDescription.GetHashCode
+- uid: Veldrid.FramebufferAttachmentDescription.MipLevel
+  name: MipLevel
+  href: api/Veldrid.FramebufferAttachmentDescription.html#Veldrid_FramebufferAttachmentDescription_MipLevel
+  commentId: F:Veldrid.FramebufferAttachmentDescription.MipLevel
+  fullName: Veldrid.FramebufferAttachmentDescription.MipLevel
+  nameWithType: FramebufferAttachmentDescription.MipLevel
 - uid: Veldrid.FramebufferAttachmentDescription.Target
   name: Target
   href: api/Veldrid.FramebufferAttachmentDescription.html#Veldrid_FramebufferAttachmentDescription_Target
@@ -2787,6 +2818,32 @@ references:
   isSpec: "True"
   fullName: Veldrid.GraphicsDeviceFeatures.DrawBaseVertex
   nameWithType: GraphicsDeviceFeatures.DrawBaseVertex
+- uid: Veldrid.GraphicsDeviceFeatures.DrawIndirect
+  name: DrawIndirect
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_DrawIndirect
+  commentId: P:Veldrid.GraphicsDeviceFeatures.DrawIndirect
+  fullName: Veldrid.GraphicsDeviceFeatures.DrawIndirect
+  nameWithType: GraphicsDeviceFeatures.DrawIndirect
+- uid: Veldrid.GraphicsDeviceFeatures.DrawIndirect*
+  name: DrawIndirect
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_DrawIndirect_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.DrawIndirect
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.DrawIndirect
+  nameWithType: GraphicsDeviceFeatures.DrawIndirect
+- uid: Veldrid.GraphicsDeviceFeatures.DrawIndirectBaseInstance
+  name: DrawIndirectBaseInstance
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_DrawIndirectBaseInstance
+  commentId: P:Veldrid.GraphicsDeviceFeatures.DrawIndirectBaseInstance
+  fullName: Veldrid.GraphicsDeviceFeatures.DrawIndirectBaseInstance
+  nameWithType: GraphicsDeviceFeatures.DrawIndirectBaseInstance
+- uid: Veldrid.GraphicsDeviceFeatures.DrawIndirectBaseInstance*
+  name: DrawIndirectBaseInstance
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_DrawIndirectBaseInstance_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.DrawIndirectBaseInstance
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.DrawIndirectBaseInstance
+  nameWithType: GraphicsDeviceFeatures.DrawIndirectBaseInstance
 - uid: Veldrid.GraphicsDeviceFeatures.FillModeWireframe
   name: FillModeWireframe
   href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_FillModeWireframe

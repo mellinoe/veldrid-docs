@@ -12,6 +12,8 @@
     href: textures.md
   - name: Framebuffers
     href: framebuffers.md
+  - name: Swapchains
+    href: swapchains.md
   - name: Multi-Threading in Veldrid
     href: multi-threading.md
   - name: Android
