@@ -28,12 +28,9 @@ Before we can issue a Draw command, we need to set a [Framebuffer](xref:Veldrid.
 
 ```C#
 _commandList.SetFramebuffer(_graphicsDevice.SwapchainFramebuffer);
-_commandList.SetFullViewports();
 ```
 
 A Framebuffer is a device resource which controls where the rendered outputs go. The [SwapchainFramebuffer](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) is the application's main Framebuffer. It can be used to draw directly into the application's view.
-
-Viewports control the target area in the Framebuffer that is actually rendered to. Pixels outside of that area are discarded. In our case, we want to render to the entire window, so we use the helper method [SetFullViewports](xref:Veldrid.CommandList#Veldrid_CommandList_SetFullViewports), which simply sets all Viewports to the full size of the Framebuffer.
 
 At the beginning of every frame, we clear the screen to black. In a static scene, this is not really necessary, but I will do it anyway for demonstration.
 
