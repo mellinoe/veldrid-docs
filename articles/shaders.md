@@ -10,11 +10,11 @@ uid: shaders-and-resources
 
 A [ShaderDescription](xref:Veldrid.ShaderDescription) takes two pieces of information. The first piece is the [stage](xref:Veldrid.ShaderStages) the shader is applicable to. The second piece of information is an API-specific byte array containing the shader code itself. The contents of this byte array depend on the specific graphics API being used (see [GraphicsDevice.BackendType](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_BackendType)).
 
-* Direct3D11: `ShaderBytes` must contain HLSL bytecode.
+* Direct3D11: `ShaderBytes` must contain HLSL bytecode or ASCII-encoded HLSL text (Shader Model 5).
 * Vulkan: `ShaderBytes` must contain SPIR-V bytecode.
 * OpenGL: `ShaderBytes` must contain ASCII-encoded GLSL text.
 * OpenGL ES: `ShaderBytes` must contain ASCII-encoded GLSL ES text.
-* Metal: `ShaderBytes` must contain Metal bytecode (a "metallib" file created using the `metallib` tool). NOTE: Metal bytecode is platform-specific -- it is compiled differently for macOS and iOS, and the two versions cannot be used interchangeably. You must provide the correct version for the platform you are targetting.
+* Metal: `ShaderBytes` must contain UTF8-encoded Metal text or Metal bytecode (a "metallib" file created using the `metallib` tool). NOTE: Metal bytecode is platform-specific -- it is compiled differently for macOS and iOS, and the two versions cannot be used interchangeably. You must provide the correct version for the platform you are targetting.
 
 ## Shader Resources
 

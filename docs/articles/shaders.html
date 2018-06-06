@@ -73,11 +73,11 @@
 <h2 id="creating-a-shader">Creating a Shader</h2>
 <p>A <a class="xref" href="../api/Veldrid.ShaderDescription.html">ShaderDescription</a> takes two pieces of information. The first piece is the <a class="xref" href="../api/Veldrid.ShaderStages.html">stage</a> the shader is applicable to. The second piece of information is an API-specific byte array containing the shader code itself. The contents of this byte array depend on the specific graphics API being used (see <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_BackendType">GraphicsDevice.BackendType</a>).</p>
 <ul>
-<li>Direct3D11: <code>ShaderBytes</code> must contain HLSL bytecode.</li>
+<li>Direct3D11: <code>ShaderBytes</code> must contain HLSL bytecode or ASCII-encoded HLSL text (Shader Model 5).</li>
 <li>Vulkan: <code>ShaderBytes</code> must contain SPIR-V bytecode.</li>
 <li>OpenGL: <code>ShaderBytes</code> must contain ASCII-encoded GLSL text.</li>
 <li>OpenGL ES: <code>ShaderBytes</code> must contain ASCII-encoded GLSL ES text.</li>
-<li>Metal: <code>ShaderBytes</code> must contain Metal bytecode (a &quot;metallib&quot; file created using the <code>metallib</code> tool). NOTE: Metal bytecode is platform-specific -- it is compiled differently for macOS and iOS, and the two versions cannot be used interchangeably. You must provide the correct version for the platform you are targetting.</li>
+<li>Metal: <code>ShaderBytes</code> must contain UTF8-encoded Metal text or Metal bytecode (a &quot;metallib&quot; file created using the <code>metallib</code> tool). NOTE: Metal bytecode is platform-specific -- it is compiled differently for macOS and iOS, and the two versions cannot be used interchangeably. You must provide the correct version for the platform you are targetting.</li>
 </ul>
 <h2 id="shader-resources">Shader Resources</h2>
 <p>Shader objects have a unique relationship with <a class="xref" href="../api/Veldrid.ResourceLayout.html">ResourceLayouts</a> and <a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSets</a>. When creating a Pipeline, the provided <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts">ResourceLayouts</a> must match the actual resource types that are specified in the shader code.</p>

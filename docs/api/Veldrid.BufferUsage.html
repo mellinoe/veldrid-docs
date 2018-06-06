@@ -94,8 +94,9 @@
     <tbody>
       <tr>
         <td id="Veldrid_BufferUsage_Dynamic">Dynamic</td>
-        <td><p>Indicates that a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> will be updated with new data very frequently. Dynamic Buffers are able to be
-mapped with <a class="xref" href="Veldrid.MapMode.html#Veldrid_MapMode_Write">Write</a>.</p>
+        <td><p>Indicates that a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> will be updated with new data very frequently. Dynamic Buffers can be
+mapped with <a class="xref" href="Veldrid.MapMode.html#Veldrid_MapMode_Write">Write</a>. This flag cannot be combined with <a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_StructuredBufferReadWrite">StructuredBufferReadWrite</a>
+or <a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_IndirectBuffer">IndirectBuffer</a>.</p>
 </td>
       </tr>
       <tr>
@@ -107,7 +108,8 @@ This flag enables the use of a Buffer in the <a class="xref" href="Veldrid.Comma
       <tr>
         <td id="Veldrid_BufferUsage_IndirectBuffer">IndirectBuffer</td>
         <td><p>Indicates that a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> can be used as the source of indirect drawing information.
-This flag enables the use of a Buffer in the *Indirect methods of <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.</p>
+This flag enables the use of a Buffer in the *Indirect methods of <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.
+This flag cannot be combined with <a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_Dynamic">Dynamic</a>.</p>
 </td>
       </tr>
       <tr>
@@ -115,19 +117,21 @@ This flag enables the use of a Buffer in the *Indirect methods of <a class="xref
         <td><p>Indicates that a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> will be used as a staging Buffer. Staging Buffers can be used to transfer data
 to-and-from the CPU using <a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_Map_Veldrid_MappableResource_Veldrid_MapMode_">Map(MappableResource, MapMode)</a>. Staging Buffers can use all
 <a class="xref" href="Veldrid.MapMode.html">MapMode</a> values.
-If this flag is present, no other flags are permitted.</p>
+This flag cannot be combined with any other flag.</p>
 </td>
       </tr>
       <tr>
         <td id="Veldrid_BufferUsage_StructuredBufferReadOnly">StructuredBufferReadOnly</td>
         <td><p>Indicates that a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> can be used as a read-only structured Buffer.
-This flag enables the use of a Buffer in a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> as a read-only structured Buffer.</p>
+This flag enables the use of a Buffer in a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> as a read-only structured Buffer.
+This flag can only be combined with <a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_Dynamic">Dynamic</a>.</p>
 </td>
       </tr>
       <tr>
         <td id="Veldrid_BufferUsage_StructuredBufferReadWrite">StructuredBufferReadWrite</td>
         <td><p>Indicates that a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> can be used as a read-write structured Buffer.
-This flag enables the use of a Buffer in a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> as a read-write structured Buffer.</p>
+This flag enables the use of a Buffer in a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> as a read-write structured Buffer.
+This flag cannot be combined with any other flag.</p>
 </td>
       </tr>
       <tr>

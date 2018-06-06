@@ -1391,6 +1391,65 @@ It is an error to call this function in succession, unless <a class="xref" href=
   </div>
   
   
+  <a id="Veldrid_CommandList_GenerateMipmaps_" data-uid="Veldrid.CommandList.GenerateMipmaps*"></a>
+  <h4 id="Veldrid_CommandList_GenerateMipmaps_Veldrid_Texture_" data-uid="Veldrid.CommandList.GenerateMipmaps(Veldrid.Texture)">GenerateMipmaps(Texture)</h4>
+  <div class="markdown level1 summary"><p>Generates mipmaps for the given <a class="xref" href="Veldrid.Texture.html">Texture</a>. The largest mipmap is used to generate all of the lower mipmap
+levels contained in the Texture. The previous contents of all lower mipmap levels are overwritten by this operation.
+The target Texture must have been created with <a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a>.<a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_GenerateMipmaps">GenerateMipmaps</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void GenerateMipmaps(Texture texture)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">texture</span></td>
+        <td><p>The <a class="xref" href="Veldrid.Texture.html">Texture</a> to generate mipmaps for. This Texture must have been created with
+<a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a>.<a class="xref" href="Veldrid.TextureUsage.html#Veldrid_TextureUsage_GenerateMipmaps">GenerateMipmaps</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_GenerateMipmapsCore_" data-uid="Veldrid.CommandList.GenerateMipmapsCore*"></a>
+  <h4 id="Veldrid_CommandList_GenerateMipmapsCore_Veldrid_Texture_" data-uid="Veldrid.CommandList.GenerateMipmapsCore(Veldrid.Texture)">GenerateMipmapsCore(Texture)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract void GenerateMipmapsCore(Texture texture)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">texture</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_CommandList_ResolveTexture_" data-uid="Veldrid.CommandList.ResolveTexture*"></a>
   <h4 id="Veldrid_CommandList_ResolveTexture_Veldrid_Texture_Veldrid_Texture_" data-uid="Veldrid.CommandList.ResolveTexture(Veldrid.Texture,Veldrid.Texture)">ResolveTexture(Texture, Texture)</h4>
   <div class="markdown level1 summary"><p>Resolves a multisampled source <a class="xref" href="Veldrid.Texture.html">Texture</a> into a non-multisampled destination <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>

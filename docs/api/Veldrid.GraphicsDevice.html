@@ -170,6 +170,61 @@ This object is created with <a class="xref" href="Veldrid.SamplerDescription.htm
   </table>
   
   
+  <a id="Veldrid_GraphicsDevice_IsDepthRangeZeroToOne_" data-uid="Veldrid.GraphicsDevice.IsDepthRangeZeroToOne*"></a>
+  <h4 id="Veldrid_GraphicsDevice_IsDepthRangeZeroToOne" data-uid="Veldrid.GraphicsDevice.IsDepthRangeZeroToOne">IsDepthRangeZeroToOne</h4>
+  <div class="markdown level1 summary"><p>Gets a value indicating whether this device&apos;s depth values range from 0 to 1.
+If false, depth values instead range from -1 to 1.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool IsDepthRangeZeroToOne { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_IsUvOriginTopLeft_" data-uid="Veldrid.GraphicsDevice.IsUvOriginTopLeft*"></a>
+  <h4 id="Veldrid_GraphicsDevice_IsUvOriginTopLeft" data-uid="Veldrid.GraphicsDevice.IsUvOriginTopLeft">IsUvOriginTopLeft</h4>
+  <div class="markdown level1 summary"><p>Gets a value identifying whether texture coordinates begin in the top left corner of a Texture.
+If true, (0, 0) refers to the top-left texel of a Texture. If false, (0, 0) refers to the bottom-left 
+texel of a Texture. This property is useful for determining how the output of a Framebuffer should be sampled.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public abstract bool IsUvOriginTopLeft { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_GraphicsDevice_LinearSampler_" data-uid="Veldrid.GraphicsDevice.LinearSampler*"></a>
   <h4 id="Veldrid_GraphicsDevice_LinearSampler" data-uid="Veldrid.GraphicsDevice.LinearSampler">LinearSampler</h4>
   <div class="markdown level1 summary"><p>Gets a simple linear-filtered <a class="xref" href="Veldrid.Sampler.html">Sampler</a> object owned by this instance.
@@ -2340,13 +2395,15 @@ which new data will be uploaded.</p>
       <tr>
         <td><span class="xref">IntPtr</span></td>
         <td><span class="parametername">source</span></td>
-        <td><p>A pointer to the start of the data to upload.</p>
+        <td><p>A pointer to the start of the data to upload. This must point to tightly-packed pixel data for
+the region specified.</p>
 </td>
       </tr>
       <tr>
         <td><span class="xref">System.UInt32</span></td>
         <td><span class="parametername">sizeInBytes</span></td>
-        <td><p>The number of bytes to upload. This value must match the total size of the texture region specified.</p>
+        <td><p>The number of bytes to upload. This value must match the total size of the texture region
+specified.</p>
 </td>
       </tr>
       <tr>
@@ -2398,6 +2455,108 @@ which new data will be uploaded.</p>
         <td><p>The array layer to update. Must be less than the total array layer count contained in the
 <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_UpdateTexture_" data-uid="Veldrid.GraphicsDevice.UpdateTexture*"></a>
+  <h4 id="Veldrid_GraphicsDevice_UpdateTexture__1_Veldrid_Texture___0___System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.UpdateTexture``1(Veldrid.Texture,``0[],System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">UpdateTexture&lt;T&gt;(Texture, T[], UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Updates a portion of a <a class="xref" href="Veldrid.Texture.html">Texture</a> resource with new data contained in an array</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void UpdateTexture&lt;T&gt;(Texture texture, T[] source, uint x, uint y, uint z, uint width, uint height, uint depth, uint mipLevel, uint arrayLayer)
+    where T : struct</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><span class="parametername">texture</span></td>
+        <td><p>The resource to update.</p>
+</td>
+      </tr>
+      <tr>
+        <td>T[]</td>
+        <td><span class="parametername">source</span></td>
+        <td><p>An array containing the data to upload. This must contain tightly-packed pixel data for the
+region specified.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">x</span></td>
+        <td><p>The minimum X value of the updated region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">y</span></td>
+        <td><p>The minimum Y value of the updated region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">z</span></td>
+        <td><p>The minimum Z value of the updated region.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The width of the updated region, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The height of the updated region, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">depth</span></td>
+        <td><p>The depth of the updated region, in texels.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">mipLevel</span></td>
+        <td><p>The mipmap level to update. Must be less than the total number of mipmaps contained in the
+<a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">arrayLayer</span></td>
+        <td><p>The array layer to update. Must be less than the total array layer count contained in the
+<a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">T</span></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

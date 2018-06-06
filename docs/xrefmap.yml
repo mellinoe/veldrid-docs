@@ -894,6 +894,32 @@ references:
   isSpec: "True"
   fullName: Veldrid.CommandList.End
   nameWithType: CommandList.End
+- uid: Veldrid.CommandList.GenerateMipmaps(Veldrid.Texture)
+  name: GenerateMipmaps(Texture)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_GenerateMipmaps_Veldrid_Texture_
+  commentId: M:Veldrid.CommandList.GenerateMipmaps(Veldrid.Texture)
+  fullName: Veldrid.CommandList.GenerateMipmaps(Veldrid.Texture)
+  nameWithType: CommandList.GenerateMipmaps(Texture)
+- uid: Veldrid.CommandList.GenerateMipmaps*
+  name: GenerateMipmaps
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_GenerateMipmaps_
+  commentId: Overload:Veldrid.CommandList.GenerateMipmaps
+  isSpec: "True"
+  fullName: Veldrid.CommandList.GenerateMipmaps
+  nameWithType: CommandList.GenerateMipmaps
+- uid: Veldrid.CommandList.GenerateMipmapsCore(Veldrid.Texture)
+  name: GenerateMipmapsCore(Texture)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_GenerateMipmapsCore_Veldrid_Texture_
+  commentId: M:Veldrid.CommandList.GenerateMipmapsCore(Veldrid.Texture)
+  fullName: Veldrid.CommandList.GenerateMipmapsCore(Veldrid.Texture)
+  nameWithType: CommandList.GenerateMipmapsCore(Texture)
+- uid: Veldrid.CommandList.GenerateMipmapsCore*
+  name: GenerateMipmapsCore
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_GenerateMipmapsCore_
+  commentId: Overload:Veldrid.CommandList.GenerateMipmapsCore
+  isSpec: "True"
+  fullName: Veldrid.CommandList.GenerateMipmapsCore
+  nameWithType: CommandList.GenerateMipmapsCore
 - uid: Veldrid.CommandList.Name
   name: Name
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_Name
@@ -2314,6 +2340,32 @@ references:
   isSpec: "True"
   fullName: Veldrid.GraphicsDevice.IsBackendSupported
   nameWithType: GraphicsDevice.IsBackendSupported
+- uid: Veldrid.GraphicsDevice.IsDepthRangeZeroToOne
+  name: IsDepthRangeZeroToOne
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsDepthRangeZeroToOne
+  commentId: P:Veldrid.GraphicsDevice.IsDepthRangeZeroToOne
+  fullName: Veldrid.GraphicsDevice.IsDepthRangeZeroToOne
+  nameWithType: GraphicsDevice.IsDepthRangeZeroToOne
+- uid: Veldrid.GraphicsDevice.IsDepthRangeZeroToOne*
+  name: IsDepthRangeZeroToOne
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsDepthRangeZeroToOne_
+  commentId: Overload:Veldrid.GraphicsDevice.IsDepthRangeZeroToOne
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDevice.IsDepthRangeZeroToOne
+  nameWithType: GraphicsDevice.IsDepthRangeZeroToOne
+- uid: Veldrid.GraphicsDevice.IsUvOriginTopLeft
+  name: IsUvOriginTopLeft
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsUvOriginTopLeft
+  commentId: P:Veldrid.GraphicsDevice.IsUvOriginTopLeft
+  fullName: Veldrid.GraphicsDevice.IsUvOriginTopLeft
+  nameWithType: GraphicsDevice.IsUvOriginTopLeft
+- uid: Veldrid.GraphicsDevice.IsUvOriginTopLeft*
+  name: IsUvOriginTopLeft
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsUvOriginTopLeft_
+  commentId: Overload:Veldrid.GraphicsDevice.IsUvOriginTopLeft
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDevice.IsUvOriginTopLeft
+  nameWithType: GraphicsDevice.IsUvOriginTopLeft
 - uid: Veldrid.GraphicsDevice.LinearSampler
   name: LinearSampler
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_LinearSampler
@@ -2665,6 +2717,15 @@ references:
   isSpec: "True"
   fullName: Veldrid.GraphicsDevice.UpdateTexture
   nameWithType: GraphicsDevice.UpdateTexture
+- uid: Veldrid.GraphicsDevice.UpdateTexture``1(Veldrid.Texture,``0[],System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  name: UpdateTexture<T>(Texture, T[], UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateTexture__1_Veldrid_Texture___0___System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.GraphicsDevice.UpdateTexture``1(Veldrid.Texture,``0[],System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
+  name.vb: UpdateTexture(Of T)(Texture, T(), UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
+  fullName: Veldrid.GraphicsDevice.UpdateTexture<T>(Veldrid.Texture, T[], System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32)
+  fullName.vb: Veldrid.GraphicsDevice.UpdateTexture(Of T)(Veldrid.Texture, T(), System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32, System.UInt32)
+  nameWithType: GraphicsDevice.UpdateTexture<T>(Texture, T[], UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
+  nameWithType.vb: GraphicsDevice.UpdateTexture(Of T)(Texture, T(), UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
 - uid: Veldrid.GraphicsDevice.UpdateTextureCore(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)
   name: UpdateTextureCore(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UpdateTextureCore_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_
@@ -2925,6 +2986,32 @@ references:
   isSpec: "True"
   fullName: Veldrid.GraphicsDeviceFeatures.SamplerLodBias
   nameWithType: GraphicsDeviceFeatures.SamplerLodBias
+- uid: Veldrid.GraphicsDeviceFeatures.StructuredBuffer
+  name: StructuredBuffer
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_StructuredBuffer
+  commentId: P:Veldrid.GraphicsDeviceFeatures.StructuredBuffer
+  fullName: Veldrid.GraphicsDeviceFeatures.StructuredBuffer
+  nameWithType: GraphicsDeviceFeatures.StructuredBuffer
+- uid: Veldrid.GraphicsDeviceFeatures.StructuredBuffer*
+  name: StructuredBuffer
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_StructuredBuffer_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.StructuredBuffer
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.StructuredBuffer
+  nameWithType: GraphicsDeviceFeatures.StructuredBuffer
+- uid: Veldrid.GraphicsDeviceFeatures.SubsetTextureView
+  name: SubsetTextureView
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_SubsetTextureView
+  commentId: P:Veldrid.GraphicsDeviceFeatures.SubsetTextureView
+  fullName: Veldrid.GraphicsDeviceFeatures.SubsetTextureView
+  nameWithType: GraphicsDeviceFeatures.SubsetTextureView
+- uid: Veldrid.GraphicsDeviceFeatures.SubsetTextureView*
+  name: SubsetTextureView
+  href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_SubsetTextureView_
+  commentId: Overload:Veldrid.GraphicsDeviceFeatures.SubsetTextureView
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDeviceFeatures.SubsetTextureView
+  nameWithType: GraphicsDeviceFeatures.SubsetTextureView
 - uid: Veldrid.GraphicsDeviceFeatures.TessellationShaders
   name: TessellationShaders
   href: api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_TessellationShaders
@@ -2981,6 +3068,15 @@ references:
   fullName.vb: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean, System.Nullable(Of Veldrid.PixelFormat), System.Boolean, Veldrid.ResourceBindingModel)
   nameWithType: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean, ResourceBindingModel)
   nameWithType.vb: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable(Of PixelFormat), Boolean, ResourceBindingModel)
+- uid: Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean,Veldrid.ResourceBindingModel,System.Boolean)
+  name: GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean, ResourceBindingModel, Boolean)
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions__ctor_System_Boolean_System_Nullable_Veldrid_PixelFormat__System_Boolean_Veldrid_ResourceBindingModel_System_Boolean_
+  commentId: M:Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean,Veldrid.ResourceBindingModel,System.Boolean)
+  name.vb: GraphicsDeviceOptions(Boolean, Nullable(Of PixelFormat), Boolean, ResourceBindingModel, Boolean)
+  fullName: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean, System.Nullable<Veldrid.PixelFormat>, System.Boolean, Veldrid.ResourceBindingModel, System.Boolean)
+  fullName.vb: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean, System.Nullable(Of Veldrid.PixelFormat), System.Boolean, Veldrid.ResourceBindingModel, System.Boolean)
+  nameWithType: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean, ResourceBindingModel, Boolean)
+  nameWithType.vb: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable(Of PixelFormat), Boolean, ResourceBindingModel, Boolean)
 - uid: Veldrid.GraphicsDeviceOptions.#ctor*
   name: GraphicsDeviceOptions
   href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions__ctor_
@@ -3000,6 +3096,12 @@ references:
   commentId: F:Veldrid.GraphicsDeviceOptions.HasMainSwapchain
   fullName: Veldrid.GraphicsDeviceOptions.HasMainSwapchain
   nameWithType: GraphicsDeviceOptions.HasMainSwapchain
+- uid: Veldrid.GraphicsDeviceOptions.PreferDepthRangeZeroToOne
+  name: PreferDepthRangeZeroToOne
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_PreferDepthRangeZeroToOne
+  commentId: F:Veldrid.GraphicsDeviceOptions.PreferDepthRangeZeroToOne
+  fullName: Veldrid.GraphicsDeviceOptions.PreferDepthRangeZeroToOne
+  nameWithType: GraphicsDeviceOptions.PreferDepthRangeZeroToOne
 - uid: Veldrid.GraphicsDeviceOptions.ResourceBindingModel
   name: ResourceBindingModel
   href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_ResourceBindingModel
@@ -5054,6 +5156,12 @@ references:
   commentId: F:Veldrid.RgbaByte.DarkRed
   fullName: Veldrid.RgbaByte.DarkRed
   nameWithType: RgbaByte.DarkRed
+- uid: Veldrid.RgbaByte.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Equals_System_Object_
+  commentId: M:Veldrid.RgbaByte.Equals(System.Object)
+  fullName: Veldrid.RgbaByte.Equals(System.Object)
+  nameWithType: RgbaByte.Equals(Object)
 - uid: Veldrid.RgbaByte.Equals(Veldrid.RgbaByte)
   name: Equals(RgbaByte)
   href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Equals_Veldrid_RgbaByte_
@@ -5104,6 +5212,32 @@ references:
   commentId: F:Veldrid.RgbaByte.LightGrey
   fullName: Veldrid.RgbaByte.LightGrey
   nameWithType: RgbaByte.LightGrey
+- uid: Veldrid.RgbaByte.op_Equality(Veldrid.RgbaByte,Veldrid.RgbaByte)
+  name: Equality(RgbaByte, RgbaByte)
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_op_Equality_Veldrid_RgbaByte_Veldrid_RgbaByte_
+  commentId: M:Veldrid.RgbaByte.op_Equality(Veldrid.RgbaByte,Veldrid.RgbaByte)
+  fullName: Veldrid.RgbaByte.Equality(Veldrid.RgbaByte, Veldrid.RgbaByte)
+  nameWithType: RgbaByte.Equality(RgbaByte, RgbaByte)
+- uid: Veldrid.RgbaByte.op_Equality*
+  name: Equality
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_op_Equality_
+  commentId: Overload:Veldrid.RgbaByte.op_Equality
+  isSpec: "True"
+  fullName: Veldrid.RgbaByte.Equality
+  nameWithType: RgbaByte.Equality
+- uid: Veldrid.RgbaByte.op_Inequality(Veldrid.RgbaByte,Veldrid.RgbaByte)
+  name: Inequality(RgbaByte, RgbaByte)
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_op_Inequality_Veldrid_RgbaByte_Veldrid_RgbaByte_
+  commentId: M:Veldrid.RgbaByte.op_Inequality(Veldrid.RgbaByte,Veldrid.RgbaByte)
+  fullName: Veldrid.RgbaByte.Inequality(Veldrid.RgbaByte, Veldrid.RgbaByte)
+  nameWithType: RgbaByte.Inequality(RgbaByte, RgbaByte)
+- uid: Veldrid.RgbaByte.op_Inequality*
+  name: Inequality
+  href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_op_Inequality_
+  commentId: Overload:Veldrid.RgbaByte.op_Inequality
+  isSpec: "True"
+  fullName: Veldrid.RgbaByte.Inequality
+  nameWithType: RgbaByte.Inequality
 - uid: Veldrid.RgbaByte.Orange
   name: Orange
   href: api/Veldrid.RgbaByte.html#Veldrid_RgbaByte_Orange
@@ -5165,6 +5299,12 @@ references:
   commentId: M:Veldrid.RgbaFloat.#ctor(System.Single,System.Single,System.Single,System.Single)
   fullName: Veldrid.RgbaFloat.RgbaFloat(System.Single, System.Single, System.Single, System.Single)
   nameWithType: RgbaFloat.RgbaFloat(Single, Single, Single, Single)
+- uid: Veldrid.RgbaFloat.#ctor(Vector4)
+  name: RgbaFloat(Vector4)
+  href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat__ctor_Vector4_
+  commentId: M:Veldrid.RgbaFloat.#ctor(Vector4)
+  fullName: Veldrid.RgbaFloat.RgbaFloat(Vector4)
+  nameWithType: RgbaFloat.RgbaFloat(Vector4)
 - uid: Veldrid.RgbaFloat.#ctor*
   name: RgbaFloat
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat__ctor_
@@ -5234,6 +5374,12 @@ references:
   commentId: F:Veldrid.RgbaFloat.DarkRed
   fullName: Veldrid.RgbaFloat.DarkRed
   nameWithType: RgbaFloat.DarkRed
+- uid: Veldrid.RgbaFloat.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_Equals_System_Object_
+  commentId: M:Veldrid.RgbaFloat.Equals(System.Object)
+  fullName: Veldrid.RgbaFloat.Equals(System.Object)
+  nameWithType: RgbaFloat.Equals(Object)
 - uid: Veldrid.RgbaFloat.Equals(Veldrid.RgbaFloat)
   name: Equals(RgbaFloat)
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_Equals_Veldrid_RgbaFloat_
@@ -5291,6 +5437,32 @@ references:
   commentId: F:Veldrid.RgbaFloat.LightGrey
   fullName: Veldrid.RgbaFloat.LightGrey
   nameWithType: RgbaFloat.LightGrey
+- uid: Veldrid.RgbaFloat.op_Equality(Veldrid.RgbaFloat,Veldrid.RgbaFloat)
+  name: Equality(RgbaFloat, RgbaFloat)
+  href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_op_Equality_Veldrid_RgbaFloat_Veldrid_RgbaFloat_
+  commentId: M:Veldrid.RgbaFloat.op_Equality(Veldrid.RgbaFloat,Veldrid.RgbaFloat)
+  fullName: Veldrid.RgbaFloat.Equality(Veldrid.RgbaFloat, Veldrid.RgbaFloat)
+  nameWithType: RgbaFloat.Equality(RgbaFloat, RgbaFloat)
+- uid: Veldrid.RgbaFloat.op_Equality*
+  name: Equality
+  href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_op_Equality_
+  commentId: Overload:Veldrid.RgbaFloat.op_Equality
+  isSpec: "True"
+  fullName: Veldrid.RgbaFloat.Equality
+  nameWithType: RgbaFloat.Equality
+- uid: Veldrid.RgbaFloat.op_Inequality(Veldrid.RgbaFloat,Veldrid.RgbaFloat)
+  name: Inequality(RgbaFloat, RgbaFloat)
+  href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_op_Inequality_Veldrid_RgbaFloat_Veldrid_RgbaFloat_
+  commentId: M:Veldrid.RgbaFloat.op_Inequality(Veldrid.RgbaFloat,Veldrid.RgbaFloat)
+  fullName: Veldrid.RgbaFloat.Inequality(Veldrid.RgbaFloat, Veldrid.RgbaFloat)
+  nameWithType: RgbaFloat.Inequality(RgbaFloat, RgbaFloat)
+- uid: Veldrid.RgbaFloat.op_Inequality*
+  name: Inequality
+  href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_op_Inequality_
+  commentId: Overload:Veldrid.RgbaFloat.op_Inequality
+  isSpec: "True"
+  fullName: Veldrid.RgbaFloat.Inequality
+  nameWithType: RgbaFloat.Inequality
 - uid: Veldrid.RgbaFloat.Orange
   name: Orange
   href: api/Veldrid.RgbaFloat.html#Veldrid_RgbaFloat_Orange
@@ -5711,6 +5883,15 @@ references:
   fullName.vb: Veldrid.ShaderDescription.ShaderDescription(Veldrid.ShaderStages, System.Byte(), System.String)
   nameWithType: ShaderDescription.ShaderDescription(ShaderStages, Byte[], String)
   nameWithType.vb: ShaderDescription.ShaderDescription(ShaderStages, Byte(), String)
+- uid: Veldrid.ShaderDescription.#ctor(Veldrid.ShaderStages,System.Byte[],System.String,System.Boolean)
+  name: ShaderDescription(ShaderStages, Byte[], String, Boolean)
+  href: api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription__ctor_Veldrid_ShaderStages_System_Byte___System_String_System_Boolean_
+  commentId: M:Veldrid.ShaderDescription.#ctor(Veldrid.ShaderStages,System.Byte[],System.String,System.Boolean)
+  name.vb: ShaderDescription(ShaderStages, Byte(), String, Boolean)
+  fullName: Veldrid.ShaderDescription.ShaderDescription(Veldrid.ShaderStages, System.Byte[], System.String, System.Boolean)
+  fullName.vb: Veldrid.ShaderDescription.ShaderDescription(Veldrid.ShaderStages, System.Byte(), System.String, System.Boolean)
+  nameWithType: ShaderDescription.ShaderDescription(ShaderStages, Byte[], String, Boolean)
+  nameWithType.vb: ShaderDescription.ShaderDescription(ShaderStages, Byte(), String, Boolean)
 - uid: Veldrid.ShaderDescription.#ctor*
   name: ShaderDescription
   href: api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription__ctor_
@@ -5718,6 +5899,12 @@ references:
   isSpec: "True"
   fullName: Veldrid.ShaderDescription.ShaderDescription
   nameWithType: ShaderDescription.ShaderDescription
+- uid: Veldrid.ShaderDescription.Debug
+  name: Debug
+  href: api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription_Debug
+  commentId: F:Veldrid.ShaderDescription.Debug
+  fullName: Veldrid.ShaderDescription.Debug
+  nameWithType: ShaderDescription.Debug
 - uid: Veldrid.ShaderDescription.EntryPoint
   name: EntryPoint
   href: api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription_EntryPoint
@@ -6622,6 +6809,12 @@ references:
   commentId: F:Veldrid.TextureUsage.DepthStencil
   fullName: Veldrid.TextureUsage.DepthStencil
   nameWithType: TextureUsage.DepthStencil
+- uid: Veldrid.TextureUsage.GenerateMipmaps
+  name: GenerateMipmaps
+  href: api/Veldrid.TextureUsage.html#Veldrid_TextureUsage_GenerateMipmaps
+  commentId: F:Veldrid.TextureUsage.GenerateMipmaps
+  fullName: Veldrid.TextureUsage.GenerateMipmaps
+  nameWithType: TextureUsage.GenerateMipmaps
 - uid: Veldrid.TextureUsage.RenderTarget
   name: RenderTarget
   href: api/Veldrid.TextureUsage.html#Veldrid_TextureUsage_RenderTarget
