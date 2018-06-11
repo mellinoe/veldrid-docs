@@ -149,6 +149,8 @@
   "Veldrid.DepthStencilStateDescription.#ctor(System.Boolean,System.Boolean,Veldrid.ComparisonKind)": "Veldrid.DepthStencilStateDescription.yml",
   "Veldrid.DepthStencilStateDescription.#ctor(System.Boolean,System.Boolean,Veldrid.ComparisonKind,System.Boolean,Veldrid.StencilBehaviorDescription,Veldrid.StencilBehaviorDescription,System.Byte,System.Byte,System.UInt32)": "Veldrid.DepthStencilStateDescription.yml",
   "Veldrid.DepthStencilStateDescription.DepthComparison": "Veldrid.DepthStencilStateDescription.yml",
+  "Veldrid.DepthStencilStateDescription.DepthOnlyGreaterEqual": "Veldrid.DepthStencilStateDescription.yml",
+  "Veldrid.DepthStencilStateDescription.DepthOnlyGreaterEqualRead": "Veldrid.DepthStencilStateDescription.yml",
   "Veldrid.DepthStencilStateDescription.DepthOnlyLessEqual": "Veldrid.DepthStencilStateDescription.yml",
   "Veldrid.DepthStencilStateDescription.DepthOnlyLessEqualRead": "Veldrid.DepthStencilStateDescription.yml",
   "Veldrid.DepthStencilStateDescription.DepthTestEnabled": "Veldrid.DepthStencilStateDescription.yml",

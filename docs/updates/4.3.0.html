@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Veldrid 4.3.0 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Veldrid 4.3.0 ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="veldrid-430">Veldrid 4.3.0</h1>
+
+<p><em>June 11, 2018</em></p>
+<p>Veldrid version 4.3.0 is now available. This update includes several features designed to improve flexibility, provide options for greater portability and ease-of-use, and improve overall performance. Thanks again to all of the contributors and users who have helped to make this release possible.</p>
+<h2 id="runtime-shader-compilation">Runtime Shader Compilation</h2>
+<p>Shaders can now be created directly from shader text, in some cases, without the need to produce bytecode offline. The HLSL backend now supports compiling HLSL code at runtime, and the Metal backend supports compiling Metal shader code at runtime. The <a class="xref" href="../articles/shaders.html">documentation page on Shaders</a> describes what is permitted to be used to create a Shader for each backend.</p>
+<h2 id="runtime-mipmap-generation">Runtime Mipmap Generation</h2>
+<p>It&#39;s now possible to generate mipmaps for a Texture at runtime. Call <a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_GenerateMipmaps_Veldrid_Texture_">CommandList.GenerateMipmaps(Texture)</a> to generate all of the lower mipmap levels for a Texture. This is primarily useful for generating mipmaps for an image rendered on the GPU, like a reflection map, but can also be used for general-purpose mipmap generation. For static assets, it&#39;s still recommended to produce mipmaps offline and simply upload the data, but this new feature provides a little more flexibility at runtime.</p>
+<h2 id="normalized-clip-space">Normalized Clip Space</h2>
+<p>Clip space differences between graphics API&#39;s can be a frustrating problem to deal with. Veldrid now includes an option to force a GraphicsDevice to use a standardized 0-&gt;1 depth range: <a class="xref" href="../api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_PreferDepthRangeZeroToOne">GraphicsDeviceOptions.PreferDepthRangeZeroToOne</a>. OpenGL is the only backend which does not natively use a 0-&gt;1 depth range, and enabling this option will force it to use that convention. Note that this options is not available in all versions of OpenGL -- notably, Apple devices do not support this functionality, and it is entirely absent in OpenGL ES. When a GraphicsDevice is created, you can use the <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsDepthRangeZeroToOne">IsDepthRangeZeroToOne</a> property to query its expected clip space range.</p>
+<h2 id="vulkan-on-macos-and-ios">Vulkan on macOS and iOS</h2>
+<p>Veldrid now allows Vulkan to be used on macOS and iOS. This functionality requires that <a href="https://github.com/KhronosGroup/MoltenVK">MoltenVK</a> be installed on the machine or bundled with the application. On these systems, a Vulkan Swapchain can target an NSWindow (macOS) or a UIView (iOS).</p>
+<h1 id="change-list">Change List</h1>
+<ul>
+<li>[D3D11] Fix a bug where the first compute shader UAV was being unnecessarily cleared. <a href="https://github.com/mellinoe/veldrid/commit/ae23cdc81cf923d4acc405eb5957772c0bc09dd6">[ae23cdc]</a></li>
+<li>Add CommandList.GenerateMipmaps. <a href="https://github.com/mellinoe/veldrid/commit/1c0c7e63f13658aeaa9eab11c43b617d3eef03ee">[1c0c7e6]</a></li>
+<li>Add an explicit TextureUsage.GenerateMipmaps flag. <a href="https://github.com/mellinoe/veldrid/commit/04f8abfda40a2fd807af2139cc77b110801ea2c1">[04f8abf]</a></li>
+<li>[D3D11] Track bound UAV buffers and un-bind them when used as a read-only resource. <a href="https://github.com/mellinoe/veldrid/commit/a8677cca3f69c38ce3d1594f7c736e2dee10b364">[a8677cc]</a></li>
+<li>Add additional enforcement of BufferUsage flag combinations. <a href="https://github.com/mellinoe/veldrid/commit/c4c8558abe07605e127909e6d8ff51dff304caff">[c4c8558]</a></li>
+<li>Add GraphicsDevice.IsUvOriginTopLeft. <a href="https://github.com/mellinoe/veldrid/commit/9ead41133f725243c15906cf6496d7ce2ed57513">[9ead411]</a> <a href="https://github.com/mellinoe/veldrid/commit/5b781a6b604378ba1a342e0f667a3eb95b6cdf57">[5b781a6]</a> <a href="https://github.com/mellinoe/veldrid/commit/7271deedf93122c6d5c85856c1338e61b72d8ddc">[7271dee]</a> <a href="https://github.com/feliwir">@feliwir</a></li>
+<li>Fix handling of BGRA in OpenGL backend. <a href="https://github.com/mellinoe/veldrid/commit/0eacf39babbc95e24419e1649042d17c90c2c08d">[0eacf39]</a></li>
+<li>[Vulkan] Add support for macOS and iOS. <a href="https://github.com/mellinoe/veldrid/commit/169911c454dc5aa21ed39e69574de1007d900354">[169911c]</a> <a href="https://github.com/mellinoe/veldrid/commit/da12b6847dd28e833c2c882f2f832302d901ffe7">[da12b68]</a> <a href="https://github.com/mellinoe/veldrid/commit/4e828503ea1d52d95d3ff1f5702fd79a71fac06e">[4e82850]</a></li>
+<li>Use stricter validation for BufferUsage combinations, and add tests for all valid combinations. <a href="https://github.com/mellinoe/veldrid/commit/13965fdfa3167f1ff5fdbd48cebfccee8739c353">[13965fd]</a></li>
+<li>Add an UpdateTexture method taking an array, and prune some Texture tests. <a href="https://github.com/mellinoe/veldrid/commit/ec8a923c3034d5fa53fcc23d80a3d07ddd46c9b5">[ec8a923]</a></li>
+<li>Add logic to automatically detect the highest-possible OpenGL context version supported by the system. <a href="https://github.com/mellinoe/veldrid/commit/1e5f34c5414da72b3fef69639452f8208f3b612a">[1e5f34c]</a> <a href="https://github.com/mellinoe/veldrid/commit/b4c844dd37cec3c3e220469dcd207a484fdda6c3">[b4c844d]</a></li>
+<li>Add GraphicsDeviceFeatures.StructuredBuffer and .SubsetTextureView. <a href="https://github.com/mellinoe/veldrid/commit/77e40fbceae3a2c54e0d8da9407523e55ae7ae9b">[77e40fb]</a></li>
+<li>[OpenGL] Remove unnecessary call to glGetError in FlushDisposables. <a href="https://github.com/mellinoe/veldrid/commit/1b3716a94d3b8d44af598a47e263f03249bd649e">[1b3716a]</a></li>
+<li>Add more thorough parameter validation for CommandList.CopyTexture. <a href="https://github.com/mellinoe/veldrid/commit/c2ab77a35bb387124115359701b07b9040e3cb68">[c2ab77a]</a></li>
+<li>[D3D11] Allow HLSL shaders to be compiled at runtime. <a href="https://github.com/mellinoe/veldrid/commit/aadc68891241a114443d93da450cf8d3668cf840">[aadc688]</a></li>
+<li>[Metal] Allow Metal shaders to be compiled at runtime. <a href="https://github.com/mellinoe/veldrid/commit/2ee77948c664a075d8d310c9e5b0fd0e167b6596">[2ee7794]</a></li>
+<li>Add SDL2 window opacity functions <a href="https://github.com/mellinoe/veldrid/commit/49829a3069b6f074a7efba23403d9383a5a51f82">[49829a3]</a> <a href="https://github.com/barrybingo">@barrybingo</a></li>
+<li>Add equality operators to RgbaFloat and RgbaByte <a href="https://github.com/mellinoe/veldrid/commit/6c15c63af691aab5b074c58d4830492c9fe42c4d">[6c15c63]</a> <a href="https://github.com/SomeAnon42">@SomeAnon42</a></li>
+<li>Override Equals(object) in RgbaFloat and RgbaByte. <a href="https://github.com/mellinoe/veldrid/commit/1d3b0116a1f743836fd96c15344b76d02368bb72">[1d3b011]</a></li>
+<li>Add support for &quot;normal&quot; 0-&gt;1 depth range in OpenGL. <a href="https://github.com/mellinoe/veldrid/commit/f538ad1ff12be89f84991a631d2e6b9319cdc467">[f538ad1]</a></li>
+<li>[Vulkan] Fix an issue where the &quot;new resource set count&quot; was not reset when a new Pipeline becomes active. <a href="https://github.com/mellinoe/veldrid/commit/114abeea4d69dc72fa35b801d1dbde816c993999">[114abee]</a></li>
+<li>Rewrite StagingMemoryPool to use unmanaged memory blocks <a href="https://github.com/mellinoe/veldrid/commit/b14c4f4be7d1c2db7791ebc4916d1d78dc42fbc4">[b14c4f4]</a> <a href="https://github.com/SomeAnon42">@SomeAnon42</a></li>
+<li>[SDL2] Update cached position on window move <a href="https://github.com/mellinoe/veldrid/commit/01c6731c31ea5415ed411fcbe15fce7c5a785b96">[01c6731]</a> <a href="https://github.com/barrybingo">@barrybingo</a></li>
+<li>Clean up how Vulkan submission fences are tracked and handled a bit. <a href="https://github.com/mellinoe/veldrid/commit/206caf6da985175b0ad00e77c289388b0bb2e04f">[206caf6]</a></li>
+<li>Add DepthStencilStateDescription.DepthOnlyGreaterEqual and DepthOnlyGreaterEqualRead. <a href="https://github.com/mellinoe/veldrid/commit/968543fbf6cdd5709a9202766f106edfda69a07a">[968543f]</a></li>
+<li>[Metal] Fix Metal handling of shaders with function constants. <a href="https://github.com/mellinoe/veldrid/commit/70e448ad16c07d859f3bbea02f348b6ce93972aa">[70e448a]</a></li>
+<li>[D3D11, OpenGL] Fix some issues related to handling of &quot;instanceStart&quot; draw parameters. <a href="https://github.com/mellinoe/veldrid/commit/5dfadbce06e15e52215e024db4bf92a028ec4604">[5dfadbc]</a></li>
+<li>OpenGL Context is now requested with ForwardCompatiblle Flag. <a href="https://github.com/mellinoe/veldrid/commit/5671577ca1d37afdaf5f84d42a71616c3a13c201">[5671577]</a> <a href="https://github.com/AlzPatz">@AlzPatz</a></li>
+<li>[OpenGL] Ensure width/height passed to OpenGL are within the Texture&#39;s dimensions. <a href="https://github.com/mellinoe/veldrid/commit/8c0f1de0db7d2f5a8ee46f75661dc6f4471c7230">[8c0f1de]</a></li>
+<li>[OpenGL] Fix a potential timing issue with OpenGL CommandList resource recycling. <a href="https://github.com/mellinoe/veldrid/commit/1a6d96ae10c8264460b6d1f0765db11ad0e66e1b">[1a6d96a]</a> <a href="https://github.com/mellinoe/veldrid/commit/16ddf075fd93889f034dec5eb48c681263b64102">[16ddf07]</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/updates/4.3.0.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

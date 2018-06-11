@@ -1494,6 +1494,18 @@ references:
   commentId: F:Veldrid.DepthStencilStateDescription.DepthComparison
   fullName: Veldrid.DepthStencilStateDescription.DepthComparison
   nameWithType: DepthStencilStateDescription.DepthComparison
+- uid: Veldrid.DepthStencilStateDescription.DepthOnlyGreaterEqual
+  name: DepthOnlyGreaterEqual
+  href: api/Veldrid.DepthStencilStateDescription.html#Veldrid_DepthStencilStateDescription_DepthOnlyGreaterEqual
+  commentId: F:Veldrid.DepthStencilStateDescription.DepthOnlyGreaterEqual
+  fullName: Veldrid.DepthStencilStateDescription.DepthOnlyGreaterEqual
+  nameWithType: DepthStencilStateDescription.DepthOnlyGreaterEqual
+- uid: Veldrid.DepthStencilStateDescription.DepthOnlyGreaterEqualRead
+  name: DepthOnlyGreaterEqualRead
+  href: api/Veldrid.DepthStencilStateDescription.html#Veldrid_DepthStencilStateDescription_DepthOnlyGreaterEqualRead
+  commentId: F:Veldrid.DepthStencilStateDescription.DepthOnlyGreaterEqualRead
+  fullName: Veldrid.DepthStencilStateDescription.DepthOnlyGreaterEqualRead
+  nameWithType: DepthStencilStateDescription.DepthOnlyGreaterEqualRead
 - uid: Veldrid.DepthStencilStateDescription.DepthOnlyLessEqual
   name: DepthOnlyLessEqual
   href: api/Veldrid.DepthStencilStateDescription.html#Veldrid_DepthStencilStateDescription_DepthOnlyLessEqual
