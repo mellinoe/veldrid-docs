@@ -145,6 +145,53 @@ other stages are optional, but if either Tessellation stage is present, then the
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Veldrid_ShaderSetDescription__ctor_" data-uid="Veldrid.ShaderSetDescription.#ctor*"></a>
+  <h4 id="Veldrid_ShaderSetDescription__ctor_Veldrid_VertexLayoutDescription___Veldrid_Shader___Veldrid_SpecializationConstant___" data-uid="Veldrid.ShaderSetDescription.#ctor(Veldrid.VertexLayoutDescription[],Veldrid.Shader[],Veldrid.SpecializationConstant[])">ShaderSetDescription(VertexLayoutDescription[], Shader[], SpecializationConstant[])</h4>
+  <div class="markdown level1 summary"><p>Constructs a new ShaderSetDescription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ShaderSetDescription(VertexLayoutDescription[] vertexLayouts, Shader[] shaders, SpecializationConstant[] specializations)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.VertexLayoutDescription.html">VertexLayoutDescription</a>[]</td>
+        <td><span class="parametername">vertexLayouts</span></td>
+        <td><p>An array of <a class="xref" href="Veldrid.VertexLayoutDescription.html">VertexLayoutDescription</a> describing the set of vertex layouts
+understood by the <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>. Each element in this array describes the input layout of a single
+<a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> to be bound when drawing.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.Shader.html">Shader</a>[]</td>
+        <td><span class="parametername">shaders</span></td>
+        <td><p>An array of <a class="xref" href="Veldrid.Shader.html">Shader</a> objects, one for each shader stage which is to be active
+in the <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>. At a minimum, every graphics Pipeline must include a Vertex and Fragment shader. All
+other stages are optional, but if either Tessellation stage is present, then the other must also be.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.SpecializationConstant.html">SpecializationConstant</a>[]</td>
+        <td><span class="parametername">specializations</span></td>
+        <td><p>An array of <a class="xref" href="Veldrid.SpecializationConstant.html">SpecializationConstant</a> used to override specialization
+constants in the created <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>. Each element in this array describes a single ID-value pair, which
+will be matched with the constants specified in each <a class="xref" href="Veldrid.Shader.html">Shader</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
   
@@ -170,6 +217,33 @@ shader. All other stages are optional, but if either Tessellation stage is prese
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.Shader.html">Shader</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_ShaderSetDescription_Specializations" data-uid="Veldrid.ShaderSetDescription.Specializations">Specializations</h4>
+  <div class="markdown level1 summary"><p>An array of <a class="xref" href="Veldrid.SpecializationConstant.html">SpecializationConstant</a> used to override specialization constants in the created
+<a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>. Each element in this array describes a single ID-value pair, which will be matched with the
+constants specified in each <a class="xref" href="Veldrid.Shader.html">Shader</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpecializationConstant[] Specializations</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.SpecializationConstant.html">SpecializationConstant</a>[]</td>
         <td></td>
       </tr>
     </tbody>

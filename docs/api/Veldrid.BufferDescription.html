@@ -184,8 +184,83 @@ structure element, and must be non-zero. For all other buffer types, this value 
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Veldrid_BufferDescription__ctor_" data-uid="Veldrid.BufferDescription.#ctor*"></a>
+  <h4 id="Veldrid_BufferDescription__ctor_System_UInt32_Veldrid_BufferUsage_System_UInt32_System_Boolean_" data-uid="Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage,System.UInt32,System.Boolean)">BufferDescription(UInt32, BufferUsage, UInt32, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Veldrid.BufferDescription.html">BufferDescription</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BufferDescription(uint sizeInBytes, BufferUsage usage, uint structureByteStride, bool rawBuffer)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">sizeInBytes</span></td>
+        <td><p>The desired capacity, in bytes.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.BufferUsage.html">BufferUsage</a></td>
+        <td><span class="parametername">usage</span></td>
+        <td><p>Indicates how the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> will be used.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">structureByteStride</span></td>
+        <td><p>For structured buffers, this value indicates the size in bytes of a single
+structure element, and must be non-zero. For all other buffer types, this value must be zero.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">rawBuffer</span></td>
+        <td><p>Indicates that this is a raw buffer. This should be combined with
+<a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_StructuredBufferReadWrite">StructuredBufferReadWrite</a>. This affects how the buffer is bound in the D3D11 backend.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Veldrid_BufferDescription_RawBuffer" data-uid="Veldrid.BufferDescription.RawBuffer">RawBuffer</h4>
+  <div class="markdown level1 summary"><p>Indicates that this is a raw buffer. This should be combined with
+<a class="xref" href="Veldrid.BufferUsage.html#Veldrid_BufferUsage_StructuredBufferReadWrite">StructuredBufferReadWrite</a>. This affects how the buffer is bound in the D3D11 backend.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool RawBuffer</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Veldrid_BufferDescription_SizeInBytes" data-uid="Veldrid.BufferDescription.SizeInBytes">SizeInBytes</h4>

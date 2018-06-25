@@ -163,6 +163,68 @@
   
   
   <a id="Veldrid_ComputePipelineDescription__ctor_" data-uid="Veldrid.ComputePipelineDescription.#ctor*"></a>
+  <h4 id="Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout_System_UInt32_System_UInt32_System_UInt32_Veldrid_SpecializationConstant___" data-uid="Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout,System.UInt32,System.UInt32,System.UInt32,Veldrid.SpecializationConstant[])">ComputePipelineDescription(Shader, ResourceLayout, UInt32, UInt32, UInt32, SpecializationConstant[])</h4>
+  <div class="markdown level1 summary"><p>Constructs a new ComputePipelineDescription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ComputePipelineDescription(Shader shaderStage, ResourceLayout resourceLayout, uint threadGroupSizeX, uint threadGroupSizeY, uint threadGroupSizeZ, SpecializationConstant[] specializations)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Shader.html">Shader</a></td>
+        <td><span class="parametername">shaderStage</span></td>
+        <td><p>The compute <a class="xref" href="Veldrid.Shader.html">Shader</a> to be used in the Pipeline. This must be a Shader with
+<a class="xref" href="Veldrid.ShaderStages.html#Veldrid_ShaderStages_Compute">Compute</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a></td>
+        <td><span class="parametername">resourceLayout</span></td>
+        <td><p>The resource layout available to the Pipeline.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">threadGroupSizeX</span></td>
+        <td><p>The X dimension of the thread group size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">threadGroupSizeY</span></td>
+        <td><p>The Y dimension of the thread group size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">threadGroupSizeZ</span></td>
+        <td><p>The Z dimension of the thread group size.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.SpecializationConstant.html">SpecializationConstant</a>[]</td>
+        <td><span class="parametername">specializations</span></td>
+        <td><p>An array of <a class="xref" href="Veldrid.SpecializationConstant.html">SpecializationConstant</a> used to override specialization
+constants in the created <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>. Each element in this array describes a single ID-value pair, which
+will be matched with the constants specified in the <a class="xref" href="Veldrid.Shader.html">Shader</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_ComputePipelineDescription__ctor_" data-uid="Veldrid.ComputePipelineDescription.#ctor*"></a>
   <h4 id="Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout___System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout[],System.UInt32,System.UInt32,System.UInt32)">ComputePipelineDescription(Shader, ResourceLayout[], UInt32, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Constructs a new ComputePipelineDescription.</p>
 </div>
@@ -263,6 +325,33 @@
     <tbody>
       <tr>
         <td><a class="xref" href="Veldrid.ResourceLayout.html">ResourceLayout</a>[]</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_ComputePipelineDescription_Specializations" data-uid="Veldrid.ComputePipelineDescription.Specializations">Specializations</h4>
+  <div class="markdown level1 summary"><p>An array of <a class="xref" href="Veldrid.SpecializationConstant.html">SpecializationConstant</a> used to override specialization constants in the created
+<a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>. Each element in this array describes a single ID-value pair, which will be matched with the
+constants specified in the <a class="xref" href="Veldrid.Shader.html">Shader</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SpecializationConstant[] Specializations</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.SpecializationConstant.html">SpecializationConstant</a>[]</td>
         <td></td>
       </tr>
     </tbody>

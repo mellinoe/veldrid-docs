@@ -449,6 +449,12 @@ references:
   commentId: M:Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage,System.UInt32)
   fullName: Veldrid.BufferDescription.BufferDescription(System.UInt32, Veldrid.BufferUsage, System.UInt32)
   nameWithType: BufferDescription.BufferDescription(UInt32, BufferUsage, UInt32)
+- uid: Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage,System.UInt32,System.Boolean)
+  name: BufferDescription(UInt32, BufferUsage, UInt32, Boolean)
+  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_System_UInt32_Veldrid_BufferUsage_System_UInt32_System_Boolean_
+  commentId: M:Veldrid.BufferDescription.#ctor(System.UInt32,Veldrid.BufferUsage,System.UInt32,System.Boolean)
+  fullName: Veldrid.BufferDescription.BufferDescription(System.UInt32, Veldrid.BufferUsage, System.UInt32, System.Boolean)
+  nameWithType: BufferDescription.BufferDescription(UInt32, BufferUsage, UInt32, Boolean)
 - uid: Veldrid.BufferDescription.#ctor*
   name: BufferDescription
   href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription__ctor_
@@ -482,6 +488,12 @@ references:
   isSpec: "True"
   fullName: Veldrid.BufferDescription.GetHashCode
   nameWithType: BufferDescription.GetHashCode
+- uid: Veldrid.BufferDescription.RawBuffer
+  name: RawBuffer
+  href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription_RawBuffer
+  commentId: F:Veldrid.BufferDescription.RawBuffer
+  fullName: Veldrid.BufferDescription.RawBuffer
+  nameWithType: BufferDescription.RawBuffer
 - uid: Veldrid.BufferDescription.SizeInBytes
   name: SizeInBytes
   href: api/Veldrid.BufferDescription.html#Veldrid_BufferDescription_SizeInBytes
@@ -1349,6 +1361,15 @@ references:
   commentId: M:Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout,System.UInt32,System.UInt32,System.UInt32)
   fullName: Veldrid.ComputePipelineDescription.ComputePipelineDescription(Veldrid.Shader, Veldrid.ResourceLayout, System.UInt32, System.UInt32, System.UInt32)
   nameWithType: ComputePipelineDescription.ComputePipelineDescription(Shader, ResourceLayout, UInt32, UInt32, UInt32)
+- uid: Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout,System.UInt32,System.UInt32,System.UInt32,Veldrid.SpecializationConstant[])
+  name: ComputePipelineDescription(Shader, ResourceLayout, UInt32, UInt32, UInt32, SpecializationConstant[])
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout_System_UInt32_System_UInt32_System_UInt32_Veldrid_SpecializationConstant___
+  commentId: M:Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout,System.UInt32,System.UInt32,System.UInt32,Veldrid.SpecializationConstant[])
+  name.vb: ComputePipelineDescription(Shader, ResourceLayout, UInt32, UInt32, UInt32, SpecializationConstant())
+  fullName: Veldrid.ComputePipelineDescription.ComputePipelineDescription(Veldrid.Shader, Veldrid.ResourceLayout, System.UInt32, System.UInt32, System.UInt32, Veldrid.SpecializationConstant[])
+  fullName.vb: Veldrid.ComputePipelineDescription.ComputePipelineDescription(Veldrid.Shader, Veldrid.ResourceLayout, System.UInt32, System.UInt32, System.UInt32, Veldrid.SpecializationConstant())
+  nameWithType: ComputePipelineDescription.ComputePipelineDescription(Shader, ResourceLayout, UInt32, UInt32, UInt32, SpecializationConstant[])
+  nameWithType.vb: ComputePipelineDescription.ComputePipelineDescription(Shader, ResourceLayout, UInt32, UInt32, UInt32, SpecializationConstant())
 - uid: Veldrid.ComputePipelineDescription.#ctor(Veldrid.Shader,Veldrid.ResourceLayout[],System.UInt32,System.UInt32,System.UInt32)
   name: ComputePipelineDescription(Shader, ResourceLayout[], UInt32, UInt32, UInt32)
   href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription__ctor_Veldrid_Shader_Veldrid_ResourceLayout___System_UInt32_System_UInt32_System_UInt32_
@@ -1403,6 +1424,12 @@ references:
   commentId: F:Veldrid.ComputePipelineDescription.ResourceLayouts
   fullName: Veldrid.ComputePipelineDescription.ResourceLayouts
   nameWithType: ComputePipelineDescription.ResourceLayouts
+- uid: Veldrid.ComputePipelineDescription.Specializations
+  name: Specializations
+  href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_Specializations
+  commentId: F:Veldrid.ComputePipelineDescription.Specializations
+  fullName: Veldrid.ComputePipelineDescription.Specializations
+  nameWithType: ComputePipelineDescription.Specializations
 - uid: Veldrid.ComputePipelineDescription.ThreadGroupSizeX
   name: ThreadGroupSizeX
   href: api/Veldrid.ComputePipelineDescription.html#Veldrid_ComputePipelineDescription_ThreadGroupSizeX
@@ -2352,6 +2379,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.GraphicsDevice.IsBackendSupported
   nameWithType: GraphicsDevice.IsBackendSupported
+- uid: Veldrid.GraphicsDevice.IsClipSpaceYInverted
+  name: IsClipSpaceYInverted
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsClipSpaceYInverted
+  commentId: P:Veldrid.GraphicsDevice.IsClipSpaceYInverted
+  fullName: Veldrid.GraphicsDevice.IsClipSpaceYInverted
+  nameWithType: GraphicsDevice.IsClipSpaceYInverted
+- uid: Veldrid.GraphicsDevice.IsClipSpaceYInverted*
+  name: IsClipSpaceYInverted
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsClipSpaceYInverted_
+  commentId: Overload:Veldrid.GraphicsDevice.IsClipSpaceYInverted
+  isSpec: "True"
+  fullName: Veldrid.GraphicsDevice.IsClipSpaceYInverted
+  nameWithType: GraphicsDevice.IsClipSpaceYInverted
 - uid: Veldrid.GraphicsDevice.IsDepthRangeZeroToOne
   name: IsDepthRangeZeroToOne
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_IsDepthRangeZeroToOne
@@ -3089,6 +3129,15 @@ references:
   fullName.vb: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean, System.Nullable(Of Veldrid.PixelFormat), System.Boolean, Veldrid.ResourceBindingModel, System.Boolean)
   nameWithType: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean, ResourceBindingModel, Boolean)
   nameWithType.vb: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable(Of PixelFormat), Boolean, ResourceBindingModel, Boolean)
+- uid: Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean,Veldrid.ResourceBindingModel,System.Boolean,System.Boolean)
+  name: GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean, ResourceBindingModel, Boolean, Boolean)
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions__ctor_System_Boolean_System_Nullable_Veldrid_PixelFormat__System_Boolean_Veldrid_ResourceBindingModel_System_Boolean_System_Boolean_
+  commentId: M:Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean,Veldrid.ResourceBindingModel,System.Boolean,System.Boolean)
+  name.vb: GraphicsDeviceOptions(Boolean, Nullable(Of PixelFormat), Boolean, ResourceBindingModel, Boolean, Boolean)
+  fullName: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean, System.Nullable<Veldrid.PixelFormat>, System.Boolean, Veldrid.ResourceBindingModel, System.Boolean, System.Boolean)
+  fullName.vb: Veldrid.GraphicsDeviceOptions.GraphicsDeviceOptions(System.Boolean, System.Nullable(Of Veldrid.PixelFormat), System.Boolean, Veldrid.ResourceBindingModel, System.Boolean, System.Boolean)
+  nameWithType: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable<PixelFormat>, Boolean, ResourceBindingModel, Boolean, Boolean)
+  nameWithType.vb: GraphicsDeviceOptions.GraphicsDeviceOptions(Boolean, Nullable(Of PixelFormat), Boolean, ResourceBindingModel, Boolean, Boolean)
 - uid: Veldrid.GraphicsDeviceOptions.#ctor*
   name: GraphicsDeviceOptions
   href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions__ctor_
@@ -3114,6 +3163,12 @@ references:
   commentId: F:Veldrid.GraphicsDeviceOptions.PreferDepthRangeZeroToOne
   fullName: Veldrid.GraphicsDeviceOptions.PreferDepthRangeZeroToOne
   nameWithType: GraphicsDeviceOptions.PreferDepthRangeZeroToOne
+- uid: Veldrid.GraphicsDeviceOptions.PreferStandardClipSpaceYDirection
+  name: PreferStandardClipSpaceYDirection
+  href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_PreferStandardClipSpaceYDirection
+  commentId: F:Veldrid.GraphicsDeviceOptions.PreferStandardClipSpaceYDirection
+  fullName: Veldrid.GraphicsDeviceOptions.PreferStandardClipSpaceYDirection
+  nameWithType: GraphicsDeviceOptions.PreferStandardClipSpaceYDirection
 - uid: Veldrid.GraphicsDeviceOptions.ResourceBindingModel
   name: ResourceBindingModel
   href: api/Veldrid.GraphicsDeviceOptions.html#Veldrid_GraphicsDeviceOptions_ResourceBindingModel
@@ -5880,6 +5935,66 @@ references:
   isSpec: "True"
   fullName: Veldrid.Shader.Stage
   nameWithType: Shader.Stage
+- uid: Veldrid.ShaderConstantType
+  name: ShaderConstantType
+  href: api/Veldrid.ShaderConstantType.html
+  commentId: T:Veldrid.ShaderConstantType
+  fullName: Veldrid.ShaderConstantType
+  nameWithType: ShaderConstantType
+- uid: Veldrid.ShaderConstantType.Bool
+  name: Bool
+  href: api/Veldrid.ShaderConstantType.html#Veldrid_ShaderConstantType_Bool
+  commentId: F:Veldrid.ShaderConstantType.Bool
+  fullName: Veldrid.ShaderConstantType.Bool
+  nameWithType: ShaderConstantType.Bool
+- uid: Veldrid.ShaderConstantType.Double
+  name: Double
+  href: api/Veldrid.ShaderConstantType.html#Veldrid_ShaderConstantType_Double
+  commentId: F:Veldrid.ShaderConstantType.Double
+  fullName: Veldrid.ShaderConstantType.Double
+  nameWithType: ShaderConstantType.Double
+- uid: Veldrid.ShaderConstantType.Float
+  name: Float
+  href: api/Veldrid.ShaderConstantType.html#Veldrid_ShaderConstantType_Float
+  commentId: F:Veldrid.ShaderConstantType.Float
+  fullName: Veldrid.ShaderConstantType.Float
+  nameWithType: ShaderConstantType.Float
+- uid: Veldrid.ShaderConstantType.Int16
+  name: Int16
+  href: api/Veldrid.ShaderConstantType.html#Veldrid_ShaderConstantType_Int16
+  commentId: F:Veldrid.ShaderConstantType.Int16
+  fullName: Veldrid.ShaderConstantType.Int16
+  nameWithType: ShaderConstantType.Int16
+- uid: Veldrid.ShaderConstantType.Int32
+  name: Int32
+  href: api/Veldrid.ShaderConstantType.html#Veldrid_ShaderConstantType_Int32
+  commentId: F:Veldrid.ShaderConstantType.Int32
+  fullName: Veldrid.ShaderConstantType.Int32
+  nameWithType: ShaderConstantType.Int32
+- uid: Veldrid.ShaderConstantType.Int64
+  name: Int64
+  href: api/Veldrid.ShaderConstantType.html#Veldrid_ShaderConstantType_Int64
+  commentId: F:Veldrid.ShaderConstantType.Int64
+  fullName: Veldrid.ShaderConstantType.Int64
+  nameWithType: ShaderConstantType.Int64
+- uid: Veldrid.ShaderConstantType.UInt16
+  name: UInt16
+  href: api/Veldrid.ShaderConstantType.html#Veldrid_ShaderConstantType_UInt16
+  commentId: F:Veldrid.ShaderConstantType.UInt16
+  fullName: Veldrid.ShaderConstantType.UInt16
+  nameWithType: ShaderConstantType.UInt16
+- uid: Veldrid.ShaderConstantType.UInt32
+  name: UInt32
+  href: api/Veldrid.ShaderConstantType.html#Veldrid_ShaderConstantType_UInt32
+  commentId: F:Veldrid.ShaderConstantType.UInt32
+  fullName: Veldrid.ShaderConstantType.UInt32
+  nameWithType: ShaderConstantType.UInt32
+- uid: Veldrid.ShaderConstantType.UInt64
+  name: UInt64
+  href: api/Veldrid.ShaderConstantType.html#Veldrid_ShaderConstantType_UInt64
+  commentId: F:Veldrid.ShaderConstantType.UInt64
+  fullName: Veldrid.ShaderConstantType.UInt64
+  nameWithType: ShaderConstantType.UInt64
 - uid: Veldrid.ShaderDescription
   name: ShaderDescription
   href: api/Veldrid.ShaderDescription.html
@@ -5976,6 +6091,15 @@ references:
   fullName.vb: Veldrid.ShaderSetDescription.ShaderSetDescription(Veldrid.VertexLayoutDescription(), Veldrid.Shader())
   nameWithType: ShaderSetDescription.ShaderSetDescription(VertexLayoutDescription[], Shader[])
   nameWithType.vb: ShaderSetDescription.ShaderSetDescription(VertexLayoutDescription(), Shader())
+- uid: Veldrid.ShaderSetDescription.#ctor(Veldrid.VertexLayoutDescription[],Veldrid.Shader[],Veldrid.SpecializationConstant[])
+  name: ShaderSetDescription(VertexLayoutDescription[], Shader[], SpecializationConstant[])
+  href: api/Veldrid.ShaderSetDescription.html#Veldrid_ShaderSetDescription__ctor_Veldrid_VertexLayoutDescription___Veldrid_Shader___Veldrid_SpecializationConstant___
+  commentId: M:Veldrid.ShaderSetDescription.#ctor(Veldrid.VertexLayoutDescription[],Veldrid.Shader[],Veldrid.SpecializationConstant[])
+  name.vb: ShaderSetDescription(VertexLayoutDescription(), Shader(), SpecializationConstant())
+  fullName: Veldrid.ShaderSetDescription.ShaderSetDescription(Veldrid.VertexLayoutDescription[], Veldrid.Shader[], Veldrid.SpecializationConstant[])
+  fullName.vb: Veldrid.ShaderSetDescription.ShaderSetDescription(Veldrid.VertexLayoutDescription(), Veldrid.Shader(), Veldrid.SpecializationConstant())
+  nameWithType: ShaderSetDescription.ShaderSetDescription(VertexLayoutDescription[], Shader[], SpecializationConstant[])
+  nameWithType.vb: ShaderSetDescription.ShaderSetDescription(VertexLayoutDescription(), Shader(), SpecializationConstant())
 - uid: Veldrid.ShaderSetDescription.#ctor*
   name: ShaderSetDescription
   href: api/Veldrid.ShaderSetDescription.html#Veldrid_ShaderSetDescription__ctor_
@@ -6015,6 +6139,12 @@ references:
   commentId: F:Veldrid.ShaderSetDescription.Shaders
   fullName: Veldrid.ShaderSetDescription.Shaders
   nameWithType: ShaderSetDescription.Shaders
+- uid: Veldrid.ShaderSetDescription.Specializations
+  name: Specializations
+  href: api/Veldrid.ShaderSetDescription.html#Veldrid_ShaderSetDescription_Specializations
+  commentId: F:Veldrid.ShaderSetDescription.Specializations
+  fullName: Veldrid.ShaderSetDescription.Specializations
+  nameWithType: ShaderSetDescription.Specializations
 - uid: Veldrid.ShaderSetDescription.VertexLayouts
   name: VertexLayouts
   href: api/Veldrid.ShaderSetDescription.html#Veldrid_ShaderSetDescription_VertexLayouts
@@ -6069,6 +6199,123 @@ references:
   commentId: F:Veldrid.ShaderStages.Vertex
   fullName: Veldrid.ShaderStages.Vertex
   nameWithType: ShaderStages.Vertex
+- uid: Veldrid.SpecializationConstant
+  name: SpecializationConstant
+  href: api/Veldrid.SpecializationConstant.html
+  commentId: T:Veldrid.SpecializationConstant
+  fullName: Veldrid.SpecializationConstant
+  nameWithType: SpecializationConstant
+- uid: Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Boolean)
+  name: SpecializationConstant(UInt32, Boolean)
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant__ctor_System_UInt32_System_Boolean_
+  commentId: M:Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Boolean)
+  fullName: Veldrid.SpecializationConstant.SpecializationConstant(System.UInt32, System.Boolean)
+  nameWithType: SpecializationConstant.SpecializationConstant(UInt32, Boolean)
+- uid: Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Double)
+  name: SpecializationConstant(UInt32, Double)
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant__ctor_System_UInt32_System_Double_
+  commentId: M:Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Double)
+  fullName: Veldrid.SpecializationConstant.SpecializationConstant(System.UInt32, System.Double)
+  nameWithType: SpecializationConstant.SpecializationConstant(UInt32, Double)
+- uid: Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Int16)
+  name: SpecializationConstant(UInt32, Int16)
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant__ctor_System_UInt32_System_Int16_
+  commentId: M:Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Int16)
+  fullName: Veldrid.SpecializationConstant.SpecializationConstant(System.UInt32, System.Int16)
+  nameWithType: SpecializationConstant.SpecializationConstant(UInt32, Int16)
+- uid: Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Int32)
+  name: SpecializationConstant(UInt32, Int32)
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant__ctor_System_UInt32_System_Int32_
+  commentId: M:Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Int32)
+  fullName: Veldrid.SpecializationConstant.SpecializationConstant(System.UInt32, System.Int32)
+  nameWithType: SpecializationConstant.SpecializationConstant(UInt32, Int32)
+- uid: Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Int64)
+  name: SpecializationConstant(UInt32, Int64)
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant__ctor_System_UInt32_System_Int64_
+  commentId: M:Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Int64)
+  fullName: Veldrid.SpecializationConstant.SpecializationConstant(System.UInt32, System.Int64)
+  nameWithType: SpecializationConstant.SpecializationConstant(UInt32, Int64)
+- uid: Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Single)
+  name: SpecializationConstant(UInt32, Single)
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant__ctor_System_UInt32_System_Single_
+  commentId: M:Veldrid.SpecializationConstant.#ctor(System.UInt32,System.Single)
+  fullName: Veldrid.SpecializationConstant.SpecializationConstant(System.UInt32, System.Single)
+  nameWithType: SpecializationConstant.SpecializationConstant(UInt32, Single)
+- uid: Veldrid.SpecializationConstant.#ctor(System.UInt32,System.UInt16)
+  name: SpecializationConstant(UInt32, UInt16)
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant__ctor_System_UInt32_System_UInt16_
+  commentId: M:Veldrid.SpecializationConstant.#ctor(System.UInt32,System.UInt16)
+  fullName: Veldrid.SpecializationConstant.SpecializationConstant(System.UInt32, System.UInt16)
+  nameWithType: SpecializationConstant.SpecializationConstant(UInt32, UInt16)
+- uid: Veldrid.SpecializationConstant.#ctor(System.UInt32,System.UInt32)
+  name: SpecializationConstant(UInt32, UInt32)
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant__ctor_System_UInt32_System_UInt32_
+  commentId: M:Veldrid.SpecializationConstant.#ctor(System.UInt32,System.UInt32)
+  fullName: Veldrid.SpecializationConstant.SpecializationConstant(System.UInt32, System.UInt32)
+  nameWithType: SpecializationConstant.SpecializationConstant(UInt32, UInt32)
+- uid: Veldrid.SpecializationConstant.#ctor(System.UInt32,System.UInt64)
+  name: SpecializationConstant(UInt32, UInt64)
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant__ctor_System_UInt32_System_UInt64_
+  commentId: M:Veldrid.SpecializationConstant.#ctor(System.UInt32,System.UInt64)
+  fullName: Veldrid.SpecializationConstant.SpecializationConstant(System.UInt32, System.UInt64)
+  nameWithType: SpecializationConstant.SpecializationConstant(UInt32, UInt64)
+- uid: Veldrid.SpecializationConstant.#ctor(System.UInt32,Veldrid.ShaderConstantType,System.UInt64)
+  name: SpecializationConstant(UInt32, ShaderConstantType, UInt64)
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant__ctor_System_UInt32_Veldrid_ShaderConstantType_System_UInt64_
+  commentId: M:Veldrid.SpecializationConstant.#ctor(System.UInt32,Veldrid.ShaderConstantType,System.UInt64)
+  fullName: Veldrid.SpecializationConstant.SpecializationConstant(System.UInt32, Veldrid.ShaderConstantType, System.UInt64)
+  nameWithType: SpecializationConstant.SpecializationConstant(UInt32, ShaderConstantType, UInt64)
+- uid: Veldrid.SpecializationConstant.#ctor*
+  name: SpecializationConstant
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant__ctor_
+  commentId: Overload:Veldrid.SpecializationConstant.#ctor
+  isSpec: "True"
+  fullName: Veldrid.SpecializationConstant.SpecializationConstant
+  nameWithType: SpecializationConstant.SpecializationConstant
+- uid: Veldrid.SpecializationConstant.Data
+  name: Data
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant_Data
+  commentId: F:Veldrid.SpecializationConstant.Data
+  fullName: Veldrid.SpecializationConstant.Data
+  nameWithType: SpecializationConstant.Data
+- uid: Veldrid.SpecializationConstant.Equals(Veldrid.SpecializationConstant)
+  name: Equals(SpecializationConstant)
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant_Equals_Veldrid_SpecializationConstant_
+  commentId: M:Veldrid.SpecializationConstant.Equals(Veldrid.SpecializationConstant)
+  fullName: Veldrid.SpecializationConstant.Equals(Veldrid.SpecializationConstant)
+  nameWithType: SpecializationConstant.Equals(SpecializationConstant)
+- uid: Veldrid.SpecializationConstant.Equals*
+  name: Equals
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant_Equals_
+  commentId: Overload:Veldrid.SpecializationConstant.Equals
+  isSpec: "True"
+  fullName: Veldrid.SpecializationConstant.Equals
+  nameWithType: SpecializationConstant.Equals
+- uid: Veldrid.SpecializationConstant.GetHashCode
+  name: GetHashCode()
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant_GetHashCode
+  commentId: M:Veldrid.SpecializationConstant.GetHashCode
+  fullName: Veldrid.SpecializationConstant.GetHashCode()
+  nameWithType: SpecializationConstant.GetHashCode()
+- uid: Veldrid.SpecializationConstant.GetHashCode*
+  name: GetHashCode
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant_GetHashCode_
+  commentId: Overload:Veldrid.SpecializationConstant.GetHashCode
+  isSpec: "True"
+  fullName: Veldrid.SpecializationConstant.GetHashCode
+  nameWithType: SpecializationConstant.GetHashCode
+- uid: Veldrid.SpecializationConstant.ID
+  name: ID
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant_ID
+  commentId: F:Veldrid.SpecializationConstant.ID
+  fullName: Veldrid.SpecializationConstant.ID
+  nameWithType: SpecializationConstant.ID
+- uid: Veldrid.SpecializationConstant.Type
+  name: Type
+  href: api/Veldrid.SpecializationConstant.html#Veldrid_SpecializationConstant_Type
+  commentId: F:Veldrid.SpecializationConstant.Type
+  fullName: Veldrid.SpecializationConstant.Type
+  nameWithType: SpecializationConstant.Type
 - uid: Veldrid.StencilBehaviorDescription
   name: StencilBehaviorDescription
   href: api/Veldrid.StencilBehaviorDescription.html
