@@ -16,6 +16,14 @@ A [ShaderDescription](xref:Veldrid.ShaderDescription) takes two pieces of inform
 * OpenGL ES: `ShaderBytes` must contain ASCII-encoded GLSL ES text.
 * Metal: `ShaderBytes` must contain UTF8-encoded Metal text or Metal bytecode (a "metallib" file created using the `metallib` tool). NOTE: Metal bytecode is platform-specific -- it is compiled differently for macOS and iOS, and the two versions cannot be used interchangeably. You must provide the correct version for the platform you are targetting.
 
+## Writing Portable Shaders
+
+In most cases, you will want to write your shader code only once, in one language, and to use some form of cross-compilation or translation to automatically generate the other shader languages. There are two recommended approaches for this. See the [Portable Shaders](xref:portable-shaders) article for more information.
+
+## Specialization Constants
+
+Veldrid 4.4.0 introduces the concept of "Specialization Constants", which are a means to enable you to write Shader with parameterized behavior that can be "specialized" when a [Pipeline](xref:Veldrid.Pipeline) is created, with low runtime overhead. See the [Specialization Constants](xref:specialization-constants) article for more information.
+
 ## Shader Resources
 
 Shader objects have a unique relationship with [ResourceLayouts](xref:Veldrid.ResourceLayout) and [ResourceSets](xref:Veldrid.ResourceSet). When creating a Pipeline, the provided [ResourceLayouts](xref:Veldrid.GraphicsPipelineDescription#Veldrid_GraphicsPipelineDescription_ResourceLayouts) must match the actual resource types that are specified in the shader code.
