@@ -73,18 +73,20 @@
 <p>A basic understanding of graphics APIs and hardware is helpful for understanding and best utilizing Veldrid, which is designed in the vein current-gen graphics APIs like Vulkan, Direct3D 12, and Metal. As a low-level library, it is powerful and flexible, but verbose -- it is best used as the robust foundation of a high-performance game engine or application framework.</p>
 <h1 id="features">Features</h1>
 <ul>
-<li>Full customization of graphics resources and pipeline state, with support for current-gen features and optimizations.<ul>
-<li>Programmable vertex, fragment, tessellation, geometry, and compute shaders.</li>
+<li>Support for modern graphics API&#39;s, including Vulkan and Metal.</li>
+<li>Full customization of graphics and compute resources and pipeline state, with support for current-gen features and optimizations.<ul>
+<li>Vertex, fragment, geometry, and tessellation shaders.</li>
+<li>Compute shaders.</li>
+<li>Support for read-write textures and buffers in shaders.</li>
 <li>Indirect drawing and compute dispatch.</li>
-<li>Simplified resource layout and binding model, including support for read-write textures and buffers.</li>
-<li>Simple, unified resource creation and update mechanisms.</li>
+<li>Configurable blend, depth-stencil, rasterizer, and vertex input state.</li>
 </ul>
 </li>
 <li>High-performance: Veldrid is built on a thin, low-cost abstraction that is close to current-gen graphics API&#39;s.</li>
-<li>Allocation-less: The core rendering loop (outside of resource creation and initialization) can be used without allocating any garbage-collected memory. If application code follows suit, then completely GC-less rendering can be achieved.</li>
+<li>Allocation-free: The core rendering loop (outside of resource creation and initialization) can be used without allocating any garbage-collected memory. Avoiding allocations is important for high-performance, low-latency rendering.</li>
 <li>.NET-friendly: Unlike native graphics API&#39;s, Veldrid was designed with .NET in mind, and integrates cleanly with regular .NET code.</li>
 <li>Multi-threaded: Veldrid objects can be used from multiple threads, with some restrictions. See <a class="xref" href="multi-threading.html">Multi-threading in Veldrid</a> for specifics.</li>
-<li>Dependency-less: With the exception of bindings for native graphics APIs, Veldrid is implemented without any third-party dependencies.</li>
+<li>Dependency-free: With the exception of bindings for native graphics APIs, Veldrid is implemented without any third-party dependencies.</li>
 </ul>
 <h1 id="getting-started">Getting Started</h1>
 <p>See <a class="xref" href="getting-started/intro.html">Getting Started</a> for a basic startup guide.</p>

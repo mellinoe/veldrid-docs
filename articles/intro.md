@@ -18,7 +18,7 @@ A basic understanding of graphics APIs and hardware is helpful for understanding
   * Indirect drawing and compute dispatch.
   * Configurable blend, depth-stencil, rasterizer, and vertex input state.
 * High-performance: Veldrid is built on a thin, low-cost abstraction that is close to current-gen graphics API's.
-* Allocation-less: The core rendering loop (outside of resource creation and initialization) can be used without allocating any garbage-collected memory. If application code follows suit, then completely GC-less rendering can be achieved.
+* Allocation-free: The core rendering loop (outside of resource creation and initialization) can be used without allocating any garbage-collected memory. Avoiding allocations is important for high-performance, low-latency rendering.
 * .NET-friendly: Unlike native graphics API's, Veldrid was designed with .NET in mind, and integrates cleanly with regular .NET code.
 * Multi-threaded: Veldrid objects can be used from multiple threads, with some restrictions. See [Multi-threading in Veldrid](xref:multi-threading) for specifics.
 * Dependency-free: With the exception of bindings for native graphics APIs, Veldrid is implemented without any third-party dependencies.
