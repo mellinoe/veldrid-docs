@@ -10,16 +10,18 @@ A basic understanding of graphics APIs and hardware is helpful for understanding
 
 # Features
 
-* Full customization of graphics resources and pipeline state, with support for current-gen features and optimizations.
-  * Programmable vertex, fragment, tessellation, geometry, and compute shaders.
+* Support for modern graphics API's, including Vulkan and Metal.
+* Full customization of graphics and compute resources and pipeline state, with support for current-gen features and optimizations.
+  * Vertex, fragment, geometry, and tessellation shaders.
+  * Compute shaders.
+  * Support for read-write textures and buffers in shaders.
   * Indirect drawing and compute dispatch.
-  * Simplified resource layout and binding model, including support for read-write textures and buffers.
-  * Simple, unified resource creation and update mechanisms.
+  * Configurable blend, depth-stencil, rasterizer, and vertex input state.
 * High-performance: Veldrid is built on a thin, low-cost abstraction that is close to current-gen graphics API's.
 * Allocation-less: The core rendering loop (outside of resource creation and initialization) can be used without allocating any garbage-collected memory. If application code follows suit, then completely GC-less rendering can be achieved.
 * .NET-friendly: Unlike native graphics API's, Veldrid was designed with .NET in mind, and integrates cleanly with regular .NET code.
 * Multi-threaded: Veldrid objects can be used from multiple threads, with some restrictions. See [Multi-threading in Veldrid](xref:multi-threading) for specifics.
-* Dependency-less: With the exception of bindings for native graphics APIs, Veldrid is implemented without any third-party dependencies.
+* Dependency-free: With the exception of bindings for native graphics APIs, Veldrid is implemented without any third-party dependencies.
 
 # Getting Started
 
