@@ -18,11 +18,11 @@ A [ShaderDescription](xref:Veldrid.ShaderDescription) takes two pieces of inform
 
 ## Writing Portable Shaders
 
-In most cases, you will want to write your shader code only once, in one language, and to use some form of cross-compilation or translation to automatically generate the other shader languages. There are two recommended approaches for this. See the [Portable Shaders](xref:portable-shaders) article for more information.
+In most cases, you will want to write your shader code only once, in one language, and to use some form of cross-compilation or translation to automatically generate the other shader languages. See the [Portable Shaders](xref:portable-shaders) article for more information.
 
 ## Specialization Constants
 
-Veldrid 4.4.0 introduces the concept of "Specialization Constants", which are a means to enable you to write Shader with parameterized behavior that can be "specialized" when a [Pipeline](xref:Veldrid.Pipeline) is created, with low runtime overhead. See the [Specialization Constants](xref:specialization-constants) article for more information.
+Veldrid 4.4.0 introduces the concept of "Specialization Constants", which enable you to create Shaders with parameterized behavior that can be "specialized" when a [Pipeline](xref:Veldrid.Pipeline) is created, with no runtime overhead. See the [Specialization Constants](xref:specialization-constants) article for more information.
 
 ## Shader Resources
 
@@ -46,7 +46,8 @@ A DeviceBuffer must be created with [BufferUsage.UniformBuffer](xref:Veldrid.Buf
 
 Uniform buffers correspond to the following:
 * HLSL: `cbuffer` blocks.
-* GLSL: uniform variables or uniform blocks.
+* GLSL: uniform blocks.
+  * NOTE: "simple" GLSL uniform variables, e.g. `uniform mat4 ProjectionMatrix;` are not supported in Veldrid. They must be wrapped in a uniform block.
 * Metal: `constant T& value` variables.
 
 ### Structured Buffer

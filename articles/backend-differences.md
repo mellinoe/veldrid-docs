@@ -39,3 +39,15 @@ OpenGL, unlike other graphics API's, has its texture coordinate origin in the bo
 1. In your GLSL code, flip the Y value of the relevant texture coordinates. Since shaders are API-specific, this is a logical and straightforward place to put the logic.
 
 2. When constructing the vertex data used in the framebuffer sampling operation, flip the Y values of your texture coordinates. For example, if you are constructing a quad onto which a framebuffer will be sampled, then the top two vertices should have a Y texture coordinate of 1, instead of 0. The bottom two vertices should have a Y texture coordinate of 0, instead of 1. And so on.
+
+## Forcing Clip Space Consistency
+
+When creating your GraphicsDevice, there are two flags that can be enabled to force all backends to use the same clip space range.
+
+* [GraphicsDeviceOptions.PreferDepthRangeZeroToOne](xref:Veldrid.GraphicsDeviceOptions#Veldrid_GraphicsDeviceOptions_PreferDepthRangeZeroToOne): Attempts to force the device to use a [0, 1] clip space Z range.
+* [GraphicsDeviceoptions.PreferStandardClipSpaceYDirection](xref:Veldrid.GraphicsDeviceOptions#Veldrid_GraphicsDeviceOptions_PreferStandardClipSpaceYDirection): Attempts to force the depth to use a standard bottom-to-top increasing clip space Y range.
+
+Not all systems support these options. Even if you have requested a certain clip space range, the created GraphicsDevice may not support it. You can use the following properties to query the actual expected clip range of a created GraphicsDevice:
+
+* [GraphicsDevice.IsDepthRangeZeroToOne](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_IsDepthRangeZeroToOne)
+* [GraphicsDevice.IsClipSpaceYInverted](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_IsClipSpaceYInverted)

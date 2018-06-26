@@ -8,6 +8,10 @@
     href: command-lists.md
   - name: Shaders and Resources
     href: shaders.md
+  - name: Shader Resource Table
+    href: shader-resource-table.md
+  - name: Writing Portable Shaders
+    href: portable-shaders.md
   - name: Textures
     href: textures.md
   - name: Framebuffers

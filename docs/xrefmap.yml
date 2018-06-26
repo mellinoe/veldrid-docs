@@ -37,9 +37,18 @@ references:
 - uid: multi-threading
   name: Multi-Threading in Veldrid
   href: articles/multi-threading.html
+- uid: portable-shaders
+  name: Writing Portable Shaders
+  href: articles/portable-shaders.html
+- uid: shader-resource-table
+  name: Shader Resource Mapping Table
+  href: articles/shader-resource-table.html
 - uid: shaders-and-resources
   name: Shaders and Resources
   href: articles/shaders.html
+- uid: specialization-constants
+  name: Specialization Constants
+  href: articles/specialization-constants.html
 - uid: swapchains
   name: Swapchains
   href: articles/swapchains.html
