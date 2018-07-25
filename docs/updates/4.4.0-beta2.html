@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Veldrid 4.4.0 Beta 2 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Veldrid 4.4.0 Beta 2 ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="veldrid-440-beta-2">Veldrid 4.4.0 Beta 2</h1>
+
+<p><em>July 25, 2018</em></p>
+<p>Veldrid version 4.4.0 beta 2 is now available. This includes a few minor bug fixes before 4.4.0 becomes stable.</p>
+<h2 id="all-changes">All Changes</h2>
+<ul>
+<li>Fix a couple new Shader-related problems <a href="https://github.com/mellinoe/veldrid/commit/3bcfb2c79a36123e79cd8c41e31ec64a260613f9">[3bcfb2c]</a></li>
+<li>[Metal] Fix disposal of MTLPipeline with no specialized functions. <a href="https://github.com/mellinoe/veldrid/commit/a632368705e86c91dbea4146ed0ebb8c3466ccfa">[a632368]</a></li>
+<li>[Vulkan] Allow VkCommandList to be disposed immediately if there&#39;s no pending submissions. <a href="https://github.com/mellinoe/veldrid/commit/85fcf6df9d0465501ebc00b6d47d141ad4f4429a">[85fcf6d]</a></li>
+<li>[Vulkan] Avoid hidden enumerator allocations. <a href="https://github.com/mellinoe/veldrid/commit/c748cdc1d04f737c9c3998bea405aee3192616c2">[c748cdc]</a> <a href="https://github.com/SomeAnon42">(@SomeAnon42)</a></li>
+<li>Use CallingConvention.StdCall for all imported OpenGL functions. <a href="https://github.com/mellinoe/veldrid/commit/5d8abd66639e94cb6be26c551086557b771a7127">[5d8abd6]</a> <a href="https://github.com/mellinoe/veldrid/issues/100">#100</a></li>
+<li>[Vulkan] Ensure FixedUtf8String is null-terminated. <a href="https://github.com/mellinoe/veldrid/commit/2fdeda327d02420c8bafc20101a51a7106a255f7">[2fdeda3]</a></li>
+<li>[Vulkan] Fix several validation errors in the new SDK. <a href="https://github.com/mellinoe/veldrid/commit/5f44a73efbe4a51851208fc57189c382f04ef473">[5f44a73]</a></li>
+<li>Bump ImGui.NET dependency to 0.4.7. <a href="https://github.com/mellinoe/veldrid/commit/28a9d74898eef358073100684983d2de56099dda">[28a9d74]</a></li>
+<li>[OpenGL] Use Unsafe.ReadUnaligned in OpenGLNoAllocCommandEntryList. <a href="https://github.com/mellinoe/veldrid/commit/c771b334f5a3925eea2d7863f5544bacd3e6deff">[c771b33]</a></li>
+<li>Make Sdl2Native.LoadFunction public. <a href="https://github.com/mellinoe/veldrid/commit/1a398fa09ee80742572c5125d6c578183538f85f">[1a398fa]</a> <a href="https://github.com/mellinoe/veldrid/issues/97">#97</a></li>
+<li>[D3D11] Don&#39;t fail Shader compilation unless result indicates failure. <a href="https://github.com/mellinoe/veldrid/commit/21644335adaaa255d45e117eceae8942eb21fbe2">[2164433]</a></li>
+<li>Ensure that Swapchain Textures have correct properties. <a href="https://github.com/mellinoe/veldrid/commit/05a4171ebda91c1eba693dfa64ae4699e6f204d2">[05a4171]</a></li>
+<li>Bump ImageSharp dependency to beta0004. <a href="https://github.com/mellinoe/veldrid/commit/f6196c302013b8674faae71e77e11bdd88559c20">[f6196c3]</a></li>
+<li>Avoid allocations when calling GetHashCode or Equals on certain structs <a href="https://github.com/mellinoe/veldrid/commit/86f5ac8577371277c165d1af4f9d86857d3ce531">[86f5ac8]</a> <a href="https://github.com/SomeAnon42">(@SomeAnon42)</a></li>
+<li>[SDL2] Add Sdl2Window.MouseDelta <a href="https://github.com/mellinoe/veldrid/commit/91f54289856b510cec73efd54a515ca210dc070d">[91f5428]</a></li>
+<li>Use CommandList.UpdateBuffer in ImGuiRenderer. <a href="https://github.com/mellinoe/veldrid/commit/6d3a66b034972d140481ecd7360a142b7e52906f">[6d3a66b]</a> <a href="https://github.com/mellinoe/veldrid/pull/73">#73</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/updates/4.4.0-beta2.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

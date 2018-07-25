@@ -1272,7 +1272,7 @@
           "hash": "NsPOLzyjOXr/o7WRCW6aHQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1424,7 +1424,7 @@
           "hash": "HUtmzqRikMfkMehWOhbfxQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1433,7 +1433,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "FFq2lO0XtdYtYBavwVrsvg=="
+          "hash": "4CwSRENVI9DHn6NfSfwXhw=="
         }
       },
       "is_incremental": false,
@@ -1501,6 +1501,18 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "updates/4.4.0-beta2.md",
+      "output": {
+        ".html": {
+          "relative_path": "updates/4.4.0-beta2.html",
+          "hash": "7+VVSjYHvW6BVvR4oC2WYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "updates/beta1.md",
       "output": {
         ".html": {
@@ -1508,7 +1520,7 @@
           "hash": "26YpWYbj7fAgTUjzSktQrQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1601,7 +1613,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/toc.html",
-          "hash": "2Rk9pJvh4NBSExG2Qg/XLg=="
+          "hash": "eVraZgQnHgGlCKsm6st8zg=="
         }
       },
       "is_incremental": false,
@@ -1625,11 +1637,11 @@
           "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
+        "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ConceptualDocumentProcessor": {
+        "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         }
