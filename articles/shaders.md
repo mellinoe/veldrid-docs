@@ -134,6 +134,8 @@ defines a uniform belonging to binding 1 (of the [ResourceLayoutElementDescripti
 
 * OpenGL and OpenGL ES: Resources are matched strictly by-name. Each resource must correspond to a uniform or uniform block in the shader program, and the names must be identical. Numerical indices are ignored when matching resources to GLSL uniforms. Veldrid does not support the "ARB_explicit_uniform_location" extension, primarily because it is not supported by Apple.
 
+  * NOTE: GLSL `sampler2D` variables are matched to a resource with [ResourceKind.TextureReadOnly](xref:Veldrid.ResourceKind). The name of the element with ResourceKind.TextureReadOnly must match the name of the `sampler2D` variable exactly. When specifying an element with ResourceKind.Sampler, the name of the element is irrelevant and unused -- the sampler in that slot will apply to the closest previous element(s) with ResourceKind.TextureReadOnly.
+
 ## ResourceBindingModel.Improved
 
 Veldrid 4.2.0 introduces [ResourceBindingModel.Improved](xref:Veldrid.ResourceBindingModel), which is an optional flag specified in [GraphicsDeviceOptions](xref:Veldrid.GraphicsDeviceOptions), or individually in a particular graphics [Pipeline](xref:Veldrid.GraphicsPipelineDescription). The only affect this flag does is to alter the assignment of vertex buffer indices for Metal shaders. Instead of being assigned at the beginning of the buffer list (e.g. slots 0, 1, 2), they are instead assigned to the END of the buffer list. For example, if your Pipeline uses 3 uniform buffers and and two vertex buffers, the indices will be as follows:
