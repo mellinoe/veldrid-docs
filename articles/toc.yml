@@ -10,6 +10,8 @@
     href: shaders.md
   - name: Shader Resource Table
     href: shader-resource-table.md
+  - name: Specialization Constants
+    href: specialization-constants.md
   - name: Writing Portable Shaders
     href: portable-shaders.md
   - name: Textures
