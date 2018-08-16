@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Veldrid 4.4.0 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Veldrid 4.4.0 ">
+    <meta name="generator" content="docfx 2.34.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="veldrid-440">Veldrid 4.4.0</h1>
+
+<p><em>August 15, 2018</em></p>
+<p>Veldrid version 4.4.0 is now stable. On top of the changes in <a href="4.4.0-beta2.html">4.4.0-beta2</a>, there are a few extra fixes, and a couple of minor feature additions.</p>
+<h2 id="vertex-layout-offsets">Vertex Layout Offsets</h2>
+<p>Several complimentary features have been added to vertex and index buffers which allow you greater flexibility in specifying and storing vertex and index information.</p>
+<ul>
+<li>CommandList.SetVertexBuffer now has an overload accepting an offset in bytes. Vertex data will be read starting from that byte offset, rather than from the beginning of the buffer.</li>
+<li>CommandList.SetIndexBuffer also has a similar overload which accepts an offset in bytes.</li>
+<li>VertexElementDescription now contains an Offset field, which gives you greater control of the specific layout of information contained in a vertex buffer. If the Offset field has its default value of 0, then the elements are considered tightly-packed, as before. If any element in a vertex layout has an explicit offset specified, then all other elements must also have an explicit offset. Additionally, the offset values must be consistent with one another, be non-overlapping, etc.</li>
+</ul>
+<h2 id="additional-compressed-texture-formats">Additional Compressed Texture Formats</h2>
+<p>Veldrid now supports BC4, BC5, and BC7 compressed texture formats. Like other BC formats, these are not available on all systems, and support for them should be queried using GraphicsDevice.GetPixelFormatSupport before they are used.</p>
+<h2 id="all-changes">All Changes</h2>
+<ul>
+<li>Fix mouse delta handling in Sdl2Window. <a href="https://github.com/mellinoe/veldrid/commit/bd88c31f1e6d750482070745c244d39600825b84">[bd88c31]</a> <a href="https://github.com/mellinoe/veldrid/commit/2967e2a6198b0dc7d33a6e16076c4e50ee05a709">[2967e2a]</a></li>
+<li>[SDL2] Add a SetMousePosition overload accepting a Vector2. <a href="https://github.com/mellinoe/veldrid/commit/640458561b140dd4ca1610a20dd8610709651c9b">[6404585]</a></li>
+<li>[D3D11] Fix an edge case with compressed texture upload. <a href="https://github.com/mellinoe/veldrid/commit/2dc986382b3749c49c87a65f0baa523219168cda">[2dc9863]</a></li>
+<li>Add support for BC4, BC5, and BC7 formats. <a href="https://github.com/mellinoe/veldrid/commit/50f4cba61e2c4bd01371f02b42d52110fcddce17">[50f4cba]</a></li>
+<li>[D3D11] Fix creation of 1x1 compressed textures. <a href="https://github.com/mellinoe/veldrid/commit/825219e392fe4c1c7f796d2c8499c4f537a716c6">[825219e]</a></li>
+<li>Add support for several buffer-offset relation features. <a href="https://github.com/mellinoe/veldrid/commit/8180b63c5aad720cefe247e2bae87538d17dbe7f">[8180b63]</a> <a href="https://github.com/mellinoe/veldrid/commit/06dce35836da703147b5c5b9fd074818d675a9bc">[06dce35]</a></li>
+<li>[D3D11] Synchronize access to D3D11ResourceCache. <a href="https://github.com/mellinoe/veldrid/commit/1d32be2b64f869c454b3b9071aafc4cf79d8b4d6">[1d32be2]</a> (<a href="https://github.com/mellinoe/veldrid/issues/110">#110</a>)</li>
+<li>[OpenGL] Use CallingConvention.Winapi for all OpenGL functions. <a href="https://github.com/mellinoe/veldrid/commit/65853b0585d17fbf799548a2fb5a9e603cf216d0">[65853b0]</a> (<a href="https://github.com/mellinoe/veldrid/issues/106">#106</a>)</li>
+<li>[Vulkan] Catch VkResult.ErrorIncompatibleDriver when enumerating extensions. <a href="https://github.com/mellinoe/veldrid/commit/d03a718b43f75d95a3862d55a31dd0ab18b0f909">[d03a718]</a></li>
+<li>[D3D11] Don&#39;t fail to create a device if the debug layers are not installed. <a href="https://github.com/mellinoe/veldrid/commit/2783812852f18c2f6950508362f93a16bacf0cc3">[2783812]</a></li>
+<li>[D3D11] Respect InstanceStepRate when creating InputLayoutCacheKey. <a href="https://github.com/mellinoe/veldrid/commit/91ff2d643a127fb9520af2e3a0d96161b10b4e7a">[91ff2d6]</a> <a href="https://github.com/SomeAnon42">@SomeAnon42</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/updates/4.4.0.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

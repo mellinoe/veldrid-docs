@@ -1835,13 +1835,55 @@ When drawing, an <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</
   </table>
   
   
+  <a id="Veldrid_CommandList_SetIndexBuffer_" data-uid="Veldrid.CommandList.SetIndexBuffer*"></a>
+  <h4 id="Veldrid_CommandList_SetIndexBuffer_Veldrid_DeviceBuffer_Veldrid_IndexFormat_System_UInt32_" data-uid="Veldrid.CommandList.SetIndexBuffer(Veldrid.DeviceBuffer,Veldrid.IndexFormat,System.UInt32)">SetIndexBuffer(DeviceBuffer, IndexFormat, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.
+When drawing, an <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> must be bound.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetIndexBuffer(DeviceBuffer buffer, IndexFormat format, uint offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.IndexFormat.html">IndexFormat</a></td>
+        <td><span class="parametername">format</span></td>
+        <td><p>The format of data in the <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset from the start of the buffer, in bytes, from which data will start to be read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_CommandList_SetIndexBufferCore_" data-uid="Veldrid.CommandList.SetIndexBufferCore*"></a>
-  <h4 id="Veldrid_CommandList_SetIndexBufferCore_Veldrid_DeviceBuffer_Veldrid_IndexFormat_" data-uid="Veldrid.CommandList.SetIndexBufferCore(Veldrid.DeviceBuffer,Veldrid.IndexFormat)">SetIndexBufferCore(DeviceBuffer, IndexFormat)</h4>
+  <h4 id="Veldrid_CommandList_SetIndexBufferCore_Veldrid_DeviceBuffer_Veldrid_IndexFormat_System_UInt32_" data-uid="Veldrid.CommandList.SetIndexBufferCore(Veldrid.DeviceBuffer,Veldrid.IndexFormat,System.UInt32)">SetIndexBufferCore(DeviceBuffer, IndexFormat, UInt32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SetIndexBufferCore(DeviceBuffer buffer, IndexFormat format)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void SetIndexBufferCore(DeviceBuffer buffer, IndexFormat format, uint offset)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1861,6 +1903,11 @@ When drawing, an <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</
       <tr>
         <td><a class="xref" href="Veldrid.IndexFormat.html">IndexFormat</a></td>
         <td><span class="parametername">format</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">offset</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -2019,13 +2066,57 @@ use them. All extra vertex buffers are simply ignored.</p>
   </table>
   
   
+  <a id="Veldrid_CommandList_SetVertexBuffer_" data-uid="Veldrid.CommandList.SetVertexBuffer*"></a>
+  <h4 id="Veldrid_CommandList_SetVertexBuffer_System_UInt32_Veldrid_DeviceBuffer_System_UInt32_" data-uid="Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.DeviceBuffer,System.UInt32)">SetVertexBuffer(UInt32, DeviceBuffer, UInt32)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> for the given index.
+When drawing, the bound <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> objects must be compatible with the bound <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.
+The given buffer must be non-null. It is not necessary to un-bind vertex buffers for Pipelines which will not
+use them. All extra vertex buffers are simply ignored.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetVertexBuffer(uint index, DeviceBuffer buffer, uint offset)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">index</span></td>
+        <td><p>The buffer slot.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
+        <td><span class="parametername">buffer</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">offset</span></td>
+        <td><p>The offset from the start of the buffer, in bytes, from which data will start to be read.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_CommandList_SetVertexBufferCore_" data-uid="Veldrid.CommandList.SetVertexBufferCore*"></a>
-  <h4 id="Veldrid_CommandList_SetVertexBufferCore_System_UInt32_Veldrid_DeviceBuffer_" data-uid="Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.DeviceBuffer)">SetVertexBufferCore(UInt32, DeviceBuffer)</h4>
+  <h4 id="Veldrid_CommandList_SetVertexBufferCore_System_UInt32_Veldrid_DeviceBuffer_System_UInt32_" data-uid="Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.DeviceBuffer,System.UInt32)">SetVertexBufferCore(UInt32, DeviceBuffer, UInt32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SetVertexBufferCore(uint index, DeviceBuffer buffer)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void SetVertexBufferCore(uint index, DeviceBuffer buffer, uint offset)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2045,6 +2136,11 @@ use them. All extra vertex buffers are simply ignored.</p>
       <tr>
         <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
         <td><span class="parametername">buffer</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">offset</span></td>
         <td></td>
       </tr>
     </tbody>

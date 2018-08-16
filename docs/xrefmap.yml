@@ -1116,6 +1116,12 @@ references:
   commentId: M:Veldrid.CommandList.SetIndexBuffer(Veldrid.DeviceBuffer,Veldrid.IndexFormat)
   fullName: Veldrid.CommandList.SetIndexBuffer(Veldrid.DeviceBuffer, Veldrid.IndexFormat)
   nameWithType: CommandList.SetIndexBuffer(DeviceBuffer, IndexFormat)
+- uid: Veldrid.CommandList.SetIndexBuffer(Veldrid.DeviceBuffer,Veldrid.IndexFormat,System.UInt32)
+  name: SetIndexBuffer(DeviceBuffer, IndexFormat, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBuffer_Veldrid_DeviceBuffer_Veldrid_IndexFormat_System_UInt32_
+  commentId: M:Veldrid.CommandList.SetIndexBuffer(Veldrid.DeviceBuffer,Veldrid.IndexFormat,System.UInt32)
+  fullName: Veldrid.CommandList.SetIndexBuffer(Veldrid.DeviceBuffer, Veldrid.IndexFormat, System.UInt32)
+  nameWithType: CommandList.SetIndexBuffer(DeviceBuffer, IndexFormat, UInt32)
 - uid: Veldrid.CommandList.SetIndexBuffer*
   name: SetIndexBuffer
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBuffer_
@@ -1123,12 +1129,12 @@ references:
   isSpec: "True"
   fullName: Veldrid.CommandList.SetIndexBuffer
   nameWithType: CommandList.SetIndexBuffer
-- uid: Veldrid.CommandList.SetIndexBufferCore(Veldrid.DeviceBuffer,Veldrid.IndexFormat)
-  name: SetIndexBufferCore(DeviceBuffer, IndexFormat)
-  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBufferCore_Veldrid_DeviceBuffer_Veldrid_IndexFormat_
-  commentId: M:Veldrid.CommandList.SetIndexBufferCore(Veldrid.DeviceBuffer,Veldrid.IndexFormat)
-  fullName: Veldrid.CommandList.SetIndexBufferCore(Veldrid.DeviceBuffer, Veldrid.IndexFormat)
-  nameWithType: CommandList.SetIndexBufferCore(DeviceBuffer, IndexFormat)
+- uid: Veldrid.CommandList.SetIndexBufferCore(Veldrid.DeviceBuffer,Veldrid.IndexFormat,System.UInt32)
+  name: SetIndexBufferCore(DeviceBuffer, IndexFormat, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBufferCore_Veldrid_DeviceBuffer_Veldrid_IndexFormat_System_UInt32_
+  commentId: M:Veldrid.CommandList.SetIndexBufferCore(Veldrid.DeviceBuffer,Veldrid.IndexFormat,System.UInt32)
+  fullName: Veldrid.CommandList.SetIndexBufferCore(Veldrid.DeviceBuffer, Veldrid.IndexFormat, System.UInt32)
+  nameWithType: CommandList.SetIndexBufferCore(DeviceBuffer, IndexFormat, UInt32)
 - uid: Veldrid.CommandList.SetIndexBufferCore*
   name: SetIndexBufferCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetIndexBufferCore_
@@ -1181,6 +1187,12 @@ references:
   commentId: M:Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.DeviceBuffer)
   fullName: Veldrid.CommandList.SetVertexBuffer(System.UInt32, Veldrid.DeviceBuffer)
   nameWithType: CommandList.SetVertexBuffer(UInt32, DeviceBuffer)
+- uid: Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.DeviceBuffer,System.UInt32)
+  name: SetVertexBuffer(UInt32, DeviceBuffer, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBuffer_System_UInt32_Veldrid_DeviceBuffer_System_UInt32_
+  commentId: M:Veldrid.CommandList.SetVertexBuffer(System.UInt32,Veldrid.DeviceBuffer,System.UInt32)
+  fullName: Veldrid.CommandList.SetVertexBuffer(System.UInt32, Veldrid.DeviceBuffer, System.UInt32)
+  nameWithType: CommandList.SetVertexBuffer(UInt32, DeviceBuffer, UInt32)
 - uid: Veldrid.CommandList.SetVertexBuffer*
   name: SetVertexBuffer
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBuffer_
@@ -1188,12 +1200,12 @@ references:
   isSpec: "True"
   fullName: Veldrid.CommandList.SetVertexBuffer
   nameWithType: CommandList.SetVertexBuffer
-- uid: Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.DeviceBuffer)
-  name: SetVertexBufferCore(UInt32, DeviceBuffer)
-  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBufferCore_System_UInt32_Veldrid_DeviceBuffer_
-  commentId: M:Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.DeviceBuffer)
-  fullName: Veldrid.CommandList.SetVertexBufferCore(System.UInt32, Veldrid.DeviceBuffer)
-  nameWithType: CommandList.SetVertexBufferCore(UInt32, DeviceBuffer)
+- uid: Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.DeviceBuffer,System.UInt32)
+  name: SetVertexBufferCore(UInt32, DeviceBuffer, UInt32)
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBufferCore_System_UInt32_Veldrid_DeviceBuffer_System_UInt32_
+  commentId: M:Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.DeviceBuffer,System.UInt32)
+  fullName: Veldrid.CommandList.SetVertexBufferCore(System.UInt32, Veldrid.DeviceBuffer, System.UInt32)
+  nameWithType: CommandList.SetVertexBufferCore(UInt32, DeviceBuffer, UInt32)
 - uid: Veldrid.CommandList.SetVertexBufferCore*
   name: SetVertexBufferCore
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_SetVertexBufferCore_
@@ -3980,6 +3992,36 @@ references:
   commentId: F:Veldrid.PixelFormat.BC3_UNorm
   fullName: Veldrid.PixelFormat.BC3_UNorm
   nameWithType: PixelFormat.BC3_UNorm
+- uid: Veldrid.PixelFormat.BC4_SNorm
+  name: BC4_SNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_BC4_SNorm
+  commentId: F:Veldrid.PixelFormat.BC4_SNorm
+  fullName: Veldrid.PixelFormat.BC4_SNorm
+  nameWithType: PixelFormat.BC4_SNorm
+- uid: Veldrid.PixelFormat.BC4_UNorm
+  name: BC4_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_BC4_UNorm
+  commentId: F:Veldrid.PixelFormat.BC4_UNorm
+  fullName: Veldrid.PixelFormat.BC4_UNorm
+  nameWithType: PixelFormat.BC4_UNorm
+- uid: Veldrid.PixelFormat.BC5_SNorm
+  name: BC5_SNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_BC5_SNorm
+  commentId: F:Veldrid.PixelFormat.BC5_SNorm
+  fullName: Veldrid.PixelFormat.BC5_SNorm
+  nameWithType: PixelFormat.BC5_SNorm
+- uid: Veldrid.PixelFormat.BC5_UNorm
+  name: BC5_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_BC5_UNorm
+  commentId: F:Veldrid.PixelFormat.BC5_UNorm
+  fullName: Veldrid.PixelFormat.BC5_UNorm
+  nameWithType: PixelFormat.BC5_UNorm
+- uid: Veldrid.PixelFormat.BC7_UNorm
+  name: BC7_UNorm
+  href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_BC7_UNorm
+  commentId: F:Veldrid.PixelFormat.BC7_UNorm
+  fullName: Veldrid.PixelFormat.BC7_UNorm
+  nameWithType: PixelFormat.BC7_UNorm
 - uid: Veldrid.PixelFormat.D24_UNorm_S8_UInt
   name: D24_UNorm_S8_UInt
   href: api/Veldrid.PixelFormat.html#Veldrid_PixelFormat_D24_UNorm_S8_UInt
@@ -7334,6 +7376,12 @@ references:
   commentId: M:Veldrid.VertexElementDescription.#ctor(System.String,Veldrid.VertexElementSemantic,Veldrid.VertexElementFormat)
   fullName: Veldrid.VertexElementDescription.VertexElementDescription(System.String, Veldrid.VertexElementSemantic, Veldrid.VertexElementFormat)
   nameWithType: VertexElementDescription.VertexElementDescription(String, VertexElementSemantic, VertexElementFormat)
+- uid: Veldrid.VertexElementDescription.#ctor(System.String,Veldrid.VertexElementSemantic,Veldrid.VertexElementFormat,System.UInt32)
+  name: VertexElementDescription(String, VertexElementSemantic, VertexElementFormat, UInt32)
+  href: api/Veldrid.VertexElementDescription.html#Veldrid_VertexElementDescription__ctor_System_String_Veldrid_VertexElementSemantic_Veldrid_VertexElementFormat_System_UInt32_
+  commentId: M:Veldrid.VertexElementDescription.#ctor(System.String,Veldrid.VertexElementSemantic,Veldrid.VertexElementFormat,System.UInt32)
+  fullName: Veldrid.VertexElementDescription.VertexElementDescription(System.String, Veldrid.VertexElementSemantic, Veldrid.VertexElementFormat, System.UInt32)
+  nameWithType: VertexElementDescription.VertexElementDescription(String, VertexElementSemantic, VertexElementFormat, UInt32)
 - uid: Veldrid.VertexElementDescription.#ctor*
   name: VertexElementDescription
   href: api/Veldrid.VertexElementDescription.html#Veldrid_VertexElementDescription__ctor_
@@ -7379,6 +7427,12 @@ references:
   commentId: F:Veldrid.VertexElementDescription.Name
   fullName: Veldrid.VertexElementDescription.Name
   nameWithType: VertexElementDescription.Name
+- uid: Veldrid.VertexElementDescription.Offset
+  name: Offset
+  href: api/Veldrid.VertexElementDescription.html#Veldrid_VertexElementDescription_Offset
+  commentId: F:Veldrid.VertexElementDescription.Offset
+  fullName: Veldrid.VertexElementDescription.Offset
+  nameWithType: VertexElementDescription.Offset
 - uid: Veldrid.VertexElementDescription.Semantic
   name: Semantic
   href: api/Veldrid.VertexElementDescription.html#Veldrid_VertexElementDescription_Semantic
