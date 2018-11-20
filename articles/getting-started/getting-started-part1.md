@@ -19,8 +19,8 @@ You can add references to these packages using the Visual Studio package manager
 
 ```XML
 <ItemGroup>
-  <PackageReference Include="Veldrid" Version="4.0.0-beta1" />
-  <PackageReference Include="Veldrid.StartupUtilities" Version="4.0.0-beta1" />
+  <PackageReference Include="Veldrid" Version="4.4.0" />
+  <PackageReference Include="Veldrid.StartupUtilities" Version="4.4.0" />
 </ItemGroup>
 ```
 
