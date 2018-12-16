@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class CommandList
    ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -97,7 +97,7 @@ See <a class="xref" href="Veldrid.CommandListDescription.html">CommandListDescri
   <div classs="implements">
     <h5>Implements</h5>
     <div><a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a></div>
-    <div><span class="xref">IDisposable</span></div>
+    <div><span class="xref">System.IDisposable</span></div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -129,81 +129,6 @@ See <a class="xref" href="Veldrid.CommandListDescription.html">CommandListDescri
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public abstract class CommandList : DeviceResource, IDisposable</code></pre>
   </div>
-  <h3 id="fields">Fields
-  </h3>
-  
-  
-  <h4 id="Veldrid_CommandList__computePipeline" data-uid="Veldrid.CommandList._computePipeline">_computePipeline</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Pipeline _computePipeline</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Veldrid_CommandList__framebuffer" data-uid="Veldrid.CommandList._framebuffer">_framebuffer</h4>
-  <div class="markdown level1 summary"><p>The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Framebuffer _framebuffer</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <h4 id="Veldrid_CommandList__graphicsPipeline" data-uid="Veldrid.CommandList._graphicsPipeline">_graphicsPipeline</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected Pipeline _graphicsPipeline</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   
@@ -287,38 +212,6 @@ The index given must be less than the number of color attachments in the active 
   </table>
   
   
-  <a id="Veldrid_CommandList_ClearColorTargetCore_" data-uid="Veldrid.CommandList.ClearColorTargetCore*"></a>
-  <h4 id="Veldrid_CommandList_ClearColorTargetCore_System_UInt32_Veldrid_RgbaFloat_" data-uid="Veldrid.CommandList.ClearColorTargetCore(System.UInt32,Veldrid.RgbaFloat)">ClearColorTargetCore(UInt32, RgbaFloat)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void ClearColorTargetCore(uint index, RgbaFloat clearColor)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.RgbaFloat.html">RgbaFloat</a></td>
-        <td><span class="parametername">clearColor</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Veldrid_CommandList_ClearDepthStencil_" data-uid="Veldrid.CommandList.ClearDepthStencil*"></a>
   <h4 id="Veldrid_CommandList_ClearDepthStencil_System_Single_" data-uid="Veldrid.CommandList.ClearDepthStencil(System.Single)">ClearDepthStencil(Single)</h4>
   <div class="markdown level1 summary"><p>Clears the depth-stencil target of the active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a>.
@@ -381,38 +274,6 @@ The active <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> must 
         <td><span class="parametername">stencil</span></td>
         <td><p>The value to clear the stencil buffer to.</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_CommandList_ClearDepthStencilCore_" data-uid="Veldrid.CommandList.ClearDepthStencilCore*"></a>
-  <h4 id="Veldrid_CommandList_ClearDepthStencilCore_System_Single_System_Byte_" data-uid="Veldrid.CommandList.ClearDepthStencilCore(System.Single,System.Byte)">ClearDepthStencilCore(Single, Byte)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void ClearDepthStencilCore(float depth, byte stencil)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Single</span></td>
-        <td><span class="parametername">depth</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Byte</span></td>
-        <td><span class="parametername">stencil</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1020,48 +881,6 @@ read. This value must be a multiple of 4.</p>
   </table>
   
   
-  <a id="Veldrid_CommandList_DrawCore_" data-uid="Veldrid.CommandList.DrawCore*"></a>
-  <h4 id="Veldrid_CommandList_DrawCore_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.CommandList.DrawCore(System.UInt32,System.UInt32,System.UInt32,System.UInt32)">DrawCore(UInt32, UInt32, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void DrawCore(uint vertexCount, uint instanceCount, uint vertexStart, uint instanceStart)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">vertexCount</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">instanceCount</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">vertexStart</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">instanceStart</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Veldrid_CommandList_DrawIndexed_" data-uid="Veldrid.CommandList.DrawIndexed*"></a>
   <h4 id="Veldrid_CommandList_DrawIndexed_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexed(System.UInt32)">DrawIndexed(UInt32)</h4>
   <div class="markdown level1 summary"><p>Draws indexed primitives from the currently-bound state in this <a class="xref" href="Veldrid.CommandList.html">CommandList</a>.</p>
@@ -1139,53 +958,6 @@ read. This value must be a multiple of 4.</p>
         <td><span class="parametername">instanceStart</span></td>
         <td><p>The starting instance value.</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_CommandList_DrawIndexedCore_" data-uid="Veldrid.CommandList.DrawIndexedCore*"></a>
-  <h4 id="Veldrid_CommandList_DrawIndexedCore_System_UInt32_System_UInt32_System_UInt32_System_Int32_System_UInt32_" data-uid="Veldrid.CommandList.DrawIndexedCore(System.UInt32,System.UInt32,System.UInt32,System.Int32,System.UInt32)">DrawIndexedCore(UInt32, UInt32, UInt32, Int32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void DrawIndexedCore(uint indexCount, uint instanceCount, uint indexStart, int vertexOffset, uint instanceStart)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">indexCount</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">instanceCount</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">indexStart</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Int32</span></td>
-        <td><span class="parametername">vertexOffset</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">instanceStart</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -1423,13 +1195,15 @@ The target Texture must have been created with <a class="xref" href="Veldrid.Tex
   </table>
   
   
-  <a id="Veldrid_CommandList_GenerateMipmapsCore_" data-uid="Veldrid.CommandList.GenerateMipmapsCore*"></a>
-  <h4 id="Veldrid_CommandList_GenerateMipmapsCore_Veldrid_Texture_" data-uid="Veldrid.CommandList.GenerateMipmapsCore(Veldrid.Texture)">GenerateMipmapsCore(Texture)</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="Veldrid_CommandList_InsertDebugMarker_" data-uid="Veldrid.CommandList.InsertDebugMarker*"></a>
+  <h4 id="Veldrid_CommandList_InsertDebugMarker_System_String_" data-uid="Veldrid.CommandList.InsertDebugMarker(System.String)">InsertDebugMarker(String)</h4>
+  <div class="markdown level1 summary"><p>Inserts a debug marker into the CommandList at the current position. This is used by graphics debuggers to identify
+points of interest in a command stream.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void GenerateMipmapsCore(Texture texture)</code></pre>
+    <pre><code class="lang-csharp hljs">public void InsertDebugMarker(string name)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1442,9 +1216,54 @@ The target Texture must have been created with <a class="xref" href="Veldrid.Tex
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
-        <td><span class="parametername">texture</span></td>
-        <td></td>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the marker. This is an opaque identifier used for display by graphics debuggers.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_PopDebugGroup_" data-uid="Veldrid.CommandList.PopDebugGroup*"></a>
+  <h4 id="Veldrid_CommandList_PopDebugGroup" data-uid="Veldrid.CommandList.PopDebugGroup">PopDebugGroup()</h4>
+  <div class="markdown level1 summary"><p>Pops the current debug group. This method must only be called after <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_PushDebugGroup_System_String_">PushDebugGroup(String)</a> has been
+called on this instance.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PopDebugGroup()</code></pre>
+  </div>
+  
+  
+  <a id="Veldrid_CommandList_PushDebugGroup_" data-uid="Veldrid.CommandList.PushDebugGroup*"></a>
+  <h4 id="Veldrid_CommandList_PushDebugGroup_System_String_" data-uid="Veldrid.CommandList.PushDebugGroup(System.String)">PushDebugGroup(String)</h4>
+  <div class="markdown level1 summary"><p>Pushes a debug group at the current position in the <a class="xref" href="Veldrid.CommandList.html">CommandList</a>. This allows subsequent commands to be
+categorized and filtered when viewed in external debugging tools. This method can be called multiple times in order
+to create nested debug groupings. Each call to PushDebugGroup must be followed by a matching call to
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_PopDebugGroup">PopDebugGroup()</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void PushDebugGroup(string name)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.String</span></td>
+        <td><span class="parametername">name</span></td>
+        <td><p>The name of the group. This is an opaque identifier used for display by graphics debuggers.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -1527,7 +1346,7 @@ The target Texture must have been created with <a class="xref" href="Veldrid.Tex
   <a id="Veldrid_CommandList_SetComputeResourceSet_" data-uid="Veldrid.CommandList.SetComputeResourceSet*"></a>
   <h4 id="Veldrid_CommandList_SetComputeResourceSet_System_UInt32_Veldrid_ResourceSet_" data-uid="Veldrid.CommandList.SetComputeResourceSet(System.UInt32,Veldrid.ResourceSet)">SetComputeResourceSet(UInt32, ResourceSet)</h4>
   <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> for the given index. This ResourceSet is only active for the compute
-Pipeline.</p>
+<a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -1560,13 +1379,112 @@ Pipeline.</p>
   </table>
   
   
+  <a id="Veldrid_CommandList_SetComputeResourceSet_" data-uid="Veldrid.CommandList.SetComputeResourceSet*"></a>
+  <h4 id="Veldrid_CommandList_SetComputeResourceSet_System_UInt32_Veldrid_ResourceSet_System_UInt32_System_UInt32__" data-uid="Veldrid.CommandList.SetComputeResourceSet(System.UInt32,Veldrid.ResourceSet,System.UInt32,System.UInt32@)">SetComputeResourceSet(UInt32, ResourceSet, UInt32, ref UInt32)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> for the given index. This ResourceSet is only active for the compute
+<a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetComputeResourceSet(uint slot, ResourceSet rs, uint dynamicOffsetsCount, ref uint dynamicOffsets)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>The resource slot.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
+        <td><span class="parametername">rs</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dynamicOffsetsCount</span></td>
+        <td><p>The number of dynamic offsets being used. This must be equal to the number of
+dynamic buffers (<a class="xref" href="Veldrid.ResourceLayoutElementOptions.html#Veldrid_ResourceLayoutElementOptions_DynamicBinding">DynamicBinding</a>) contained in the
+<a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dynamicOffsets</span></td>
+        <td><p>A reference to the first of a series of offsets which will be applied to the dynamic
+buffers contained in the <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>. These offsets are applied in the order that dynamic buffer
+elements appear in the <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>. Each of these offsets must be a multiple of either
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UniformBufferMinOffsetAlignment">UniformBufferMinOffsetAlignment</a> or
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_StructuredBufferMinOffsetAlignment">StructuredBufferMinOffsetAlignment</a>, depending on the kind of resource.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetComputeResourceSet_" data-uid="Veldrid.CommandList.SetComputeResourceSet*"></a>
+  <h4 id="Veldrid_CommandList_SetComputeResourceSet_System_UInt32_Veldrid_ResourceSet_System_UInt32___" data-uid="Veldrid.CommandList.SetComputeResourceSet(System.UInt32,Veldrid.ResourceSet,System.UInt32[])">SetComputeResourceSet(UInt32, ResourceSet, UInt32[])</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> for the given index. This ResourceSet is only active for the compute
+<a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetComputeResourceSet(uint slot, ResourceSet rs, uint[] dynamicOffsets)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>The resource slot.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
+        <td><span class="parametername">rs</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span>[]</td>
+        <td><span class="parametername">dynamicOffsets</span></td>
+        <td><p>An array containing the offsets to apply to the dynamic buffers contained in the
+<a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>. The number of elements in this array must be equal to the number of dynamic buffers
+(<a class="xref" href="Veldrid.ResourceLayoutElementOptions.html#Veldrid_ResourceLayoutElementOptions_DynamicBinding">DynamicBinding</a>) contained in the <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>. These offsets
+are applied in the order that dynamic buffer elements appear in the <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_CommandList_SetComputeResourceSetCore_" data-uid="Veldrid.CommandList.SetComputeResourceSetCore*"></a>
-  <h4 id="Veldrid_CommandList_SetComputeResourceSetCore_System_UInt32_Veldrid_ResourceSet_" data-uid="Veldrid.CommandList.SetComputeResourceSetCore(System.UInt32,Veldrid.ResourceSet)">SetComputeResourceSetCore(UInt32, ResourceSet)</h4>
+  <h4 id="Veldrid_CommandList_SetComputeResourceSetCore_System_UInt32_Veldrid_ResourceSet_System_UInt32_System_UInt32__" data-uid="Veldrid.CommandList.SetComputeResourceSetCore(System.UInt32,Veldrid.ResourceSet,System.UInt32,System.UInt32@)">SetComputeResourceSetCore(UInt32, ResourceSet, UInt32, ref UInt32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SetComputeResourceSetCore(uint slot, ResourceSet set)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void SetComputeResourceSetCore(uint slot, ResourceSet set, uint dynamicOffsetsCount, ref uint dynamicOffsets)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1586,6 +1504,16 @@ Pipeline.</p>
       <tr>
         <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
         <td><span class="parametername">set</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dynamicOffsetsCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dynamicOffsets</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1767,13 +1695,115 @@ Pipeline.</p>
   </table>
   
   
+  <a id="Veldrid_CommandList_SetGraphicsResourceSet_" data-uid="Veldrid.CommandList.SetGraphicsResourceSet*"></a>
+  <h4 id="Veldrid_CommandList_SetGraphicsResourceSet_System_UInt32_Veldrid_ResourceSet_System_UInt32_System_UInt32__" data-uid="Veldrid.CommandList.SetGraphicsResourceSet(System.UInt32,Veldrid.ResourceSet,System.UInt32,System.UInt32@)">SetGraphicsResourceSet(UInt32, ResourceSet, UInt32, ref UInt32)</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> for the given index. This ResourceSet is only active for the graphics
+Pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGraphicsResourceSet(uint slot, ResourceSet rs, uint dynamicOffsetsCount, ref uint dynamicOffsets)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>The resource slot.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
+        <td><span class="parametername">rs</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dynamicOffsetsCount</span></td>
+        <td><p>The number of dynamic offsets being used. This must be equal to the number of
+dynamic buffers (<a class="xref" href="Veldrid.ResourceLayoutElementOptions.html#Veldrid_ResourceLayoutElementOptions_DynamicBinding">DynamicBinding</a>) contained in the
+<a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dynamicOffsets</span></td>
+        <td><p>A reference to the first of a series of offsets which will be applied to the dynamic
+buffers contained in the <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>. These offsets are applied in the order that dynamic buffer
+elements appear in the <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>. Each of these offsets must be a multiple of either
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UniformBufferMinOffsetAlignment">UniformBufferMinOffsetAlignment</a> or
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_StructuredBufferMinOffsetAlignment">StructuredBufferMinOffsetAlignment</a>, depending on the kind of resource.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_CommandList_SetGraphicsResourceSet_" data-uid="Veldrid.CommandList.SetGraphicsResourceSet*"></a>
+  <h4 id="Veldrid_CommandList_SetGraphicsResourceSet_System_UInt32_Veldrid_ResourceSet_System_UInt32___" data-uid="Veldrid.CommandList.SetGraphicsResourceSet(System.UInt32,Veldrid.ResourceSet,System.UInt32[])">SetGraphicsResourceSet(UInt32, ResourceSet, UInt32[])</h4>
+  <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> for the given index. This ResourceSet is only active for the graphics
+Pipeline.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public void SetGraphicsResourceSet(uint slot, ResourceSet rs, uint[] dynamicOffsets)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">slot</span></td>
+        <td><p>The resource slot.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
+        <td><span class="parametername">rs</span></td>
+        <td><p>The new <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span>[]</td>
+        <td><span class="parametername">dynamicOffsets</span></td>
+        <td><p>An array containing the offsets to apply to the dynamic
+buffers contained in the <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>. The number of elements in this array must be equal to the number
+of dynamic buffers (<a class="xref" href="Veldrid.ResourceLayoutElementOptions.html#Veldrid_ResourceLayoutElementOptions_DynamicBinding">DynamicBinding</a>) contained in the
+<a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>. These offsets are applied in the order that dynamic buffer
+elements appear in the <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a>. Each of these offsets must be a multiple of either
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_UniformBufferMinOffsetAlignment">UniformBufferMinOffsetAlignment</a> or
+<a class="xref" href="Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_StructuredBufferMinOffsetAlignment">StructuredBufferMinOffsetAlignment</a>, depending on the kind of resource.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_CommandList_SetGraphicsResourceSetCore_" data-uid="Veldrid.CommandList.SetGraphicsResourceSetCore*"></a>
-  <h4 id="Veldrid_CommandList_SetGraphicsResourceSetCore_System_UInt32_Veldrid_ResourceSet_" data-uid="Veldrid.CommandList.SetGraphicsResourceSetCore(System.UInt32,Veldrid.ResourceSet)">SetGraphicsResourceSetCore(UInt32, ResourceSet)</h4>
+  <h4 id="Veldrid_CommandList_SetGraphicsResourceSetCore_System_UInt32_Veldrid_ResourceSet_System_UInt32_System_UInt32__" data-uid="Veldrid.CommandList.SetGraphicsResourceSetCore(System.UInt32,Veldrid.ResourceSet,System.UInt32,System.UInt32@)">SetGraphicsResourceSetCore(UInt32, ResourceSet, UInt32, ref UInt32)</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SetGraphicsResourceSetCore(uint slot, ResourceSet rs)</code></pre>
+    <pre><code class="lang-csharp hljs">protected abstract void SetGraphicsResourceSetCore(uint slot, ResourceSet rs, uint dynamicOffsetsCount, ref uint dynamicOffsets)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -1793,6 +1823,16 @@ Pipeline.</p>
       <tr>
         <td><a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a></td>
         <td><span class="parametername">rs</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dynamicOffsetsCount</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">dynamicOffsets</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -1877,43 +1917,6 @@ When drawing, an <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</
   </table>
   
   
-  <a id="Veldrid_CommandList_SetIndexBufferCore_" data-uid="Veldrid.CommandList.SetIndexBufferCore*"></a>
-  <h4 id="Veldrid_CommandList_SetIndexBufferCore_Veldrid_DeviceBuffer_Veldrid_IndexFormat_System_UInt32_" data-uid="Veldrid.CommandList.SetIndexBufferCore(Veldrid.DeviceBuffer,Veldrid.IndexFormat,System.UInt32)">SetIndexBufferCore(DeviceBuffer, IndexFormat, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SetIndexBufferCore(DeviceBuffer buffer, IndexFormat format, uint offset)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
-        <td><span class="parametername">buffer</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.IndexFormat.html">IndexFormat</a></td>
-        <td><span class="parametername">format</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">offset</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Veldrid_CommandList_SetPipeline_" data-uid="Veldrid.CommandList.SetPipeline*"></a>
   <h4 id="Veldrid_CommandList_SetPipeline_Veldrid_Pipeline_" data-uid="Veldrid.CommandList.SetPipeline(Veldrid.Pipeline)">SetPipeline(Pipeline)</h4>
   <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> used for rendering.
@@ -1942,33 +1945,6 @@ re-bound.</p>
         <td><span class="parametername">pipeline</span></td>
         <td><p>The new <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> object.</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_CommandList_SetPipelineCore_" data-uid="Veldrid.CommandList.SetPipelineCore*"></a>
-  <h4 id="Veldrid_CommandList_SetPipelineCore_Veldrid_Pipeline_" data-uid="Veldrid.CommandList.SetPipelineCore(Veldrid.Pipeline)">SetPipelineCore(Pipeline)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SetPipelineCore(Pipeline pipeline)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.Pipeline.html">Pipeline</a></td>
-        <td><span class="parametername">pipeline</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -2110,43 +2086,6 @@ use them. All extra vertex buffers are simply ignored.</p>
   </table>
   
   
-  <a id="Veldrid_CommandList_SetVertexBufferCore_" data-uid="Veldrid.CommandList.SetVertexBufferCore*"></a>
-  <h4 id="Veldrid_CommandList_SetVertexBufferCore_System_UInt32_Veldrid_DeviceBuffer_System_UInt32_" data-uid="Veldrid.CommandList.SetVertexBufferCore(System.UInt32,Veldrid.DeviceBuffer,System.UInt32)">SetVertexBufferCore(UInt32, DeviceBuffer, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SetVertexBufferCore(uint index, DeviceBuffer buffer, uint offset)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">index</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
-        <td><span class="parametername">buffer</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">offset</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Veldrid_CommandList_SetViewport_" data-uid="Veldrid.CommandList.SetViewport*"></a>
   <h4 id="Veldrid_CommandList_SetViewport_System_UInt32_Veldrid_Viewport_" data-uid="Veldrid.CommandList.SetViewport(System.UInt32,Veldrid.Viewport)">SetViewport(UInt32, Viewport)</h4>
   <div class="markdown level1 summary"><p>Sets the active <a class="xref" href="Veldrid.Viewport.html">Viewport</a> at the given index.
@@ -2220,13 +2159,13 @@ The index given must be less than the number of color attachments in the active 
   
   
   <a id="Veldrid_CommandList_UpdateBuffer_" data-uid="Veldrid.CommandList.UpdateBuffer*"></a>
-  <h4 id="Veldrid_CommandList_UpdateBuffer_Veldrid_DeviceBuffer_System_UInt32_IntPtr_System_UInt32_" data-uid="Veldrid.CommandList.UpdateBuffer(Veldrid.DeviceBuffer,System.UInt32,IntPtr,System.UInt32)">UpdateBuffer(DeviceBuffer, UInt32, IntPtr, UInt32)</h4>
+  <h4 id="Veldrid_CommandList_UpdateBuffer_Veldrid_DeviceBuffer_System_UInt32_System_IntPtr_System_UInt32_" data-uid="Veldrid.CommandList.UpdateBuffer(Veldrid.DeviceBuffer,System.UInt32,System.IntPtr,System.UInt32)">UpdateBuffer(DeviceBuffer, UInt32, IntPtr, UInt32)</h4>
   <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public abstract void UpdateBuffer(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)</code></pre>
+    <pre><code class="lang-csharp hljs">public void UpdateBuffer(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -2252,7 +2191,7 @@ which new data will be uploaded.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">source</span></td>
         <td><p>A pointer to the start of the data to upload.</p>
 </td>
@@ -2516,7 +2455,7 @@ which new data will be uploaded.</p>
       <a class="xref" href="Veldrid.DeviceResource.html">DeviceResource</a>
   </div>
   <div>
-      <span class="xref">IDisposable</span>
+      <span class="xref">System.IDisposable</span>
   </div>
 </article>
           </div>

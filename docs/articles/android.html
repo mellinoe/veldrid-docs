@@ -8,7 +8,7 @@
     <title>Android Support </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Android Support ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -75,7 +75,7 @@
 <ol>
 <li><p>Create a &quot;SurfaceView&quot; subclass. Veldrid works primarily with Android &quot;Surface&quot; objects. To obtain one of those, you need to inherit from <code>Android.Views.SurfaceView</code> and implement the <code>Android.Views.ISurfaceHolderCallback</code> interface. This will give you a notification when the Android Surface is actually ready to use (<code>void SurfaceCreated(ISurfaceHolder holder)</code>).</p>
 </li>
-<li><p>Create an Android <a class="xref" href="../api/Veldrid.SwapchainSource.html">SwapchainSource</a>. Inside of the &quot;SurfaceCreated&quot; callback, you should call <a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateAndroidSurface_IntPtr_IntPtr_">SwapchainSource.CreateAndroidSurface</a>. This will allow you to create an appropriate <a class="xref" href="../api/Veldrid.SwapchainDescription.html">SwapchainDescription</a> describing a Swapchain that renders into your Android view.</p>
+<li><p>Create an Android <a class="xref" href="../api/Veldrid.SwapchainSource.html">SwapchainSource</a>. Inside of the &quot;SurfaceCreated&quot; callback, you should call <a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateAndroidSurface_System_IntPtr_System_IntPtr_">SwapchainSource.CreateAndroidSurface</a>. This will allow you to create an appropriate <a class="xref" href="../api/Veldrid.SwapchainDescription.html">SwapchainDescription</a> describing a Swapchain that renders into your Android view.</p>
 </li>
 <li><p>Create a GraphicsDevice. Depending on what your device supports, you can either use Vulkan or OpenGL ES. Vulkan support is still rare on current Android devices, but is becoming more common. The majority of devices support OpenGL ES 3.0+. With your SwapchainDescription from the last step, use one of the following methods to create a GraphicsDevice:</p>
 </li>

@@ -8,7 +8,7 @@
     <title>Veldrid 4.2.0-beta1 </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Veldrid 4.2.0-beta1 ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -75,7 +75,7 @@
 <p>Veldrid requires at least <strong>OpenGL ES version 3.0</strong>. Some optional features, like compute shaders, require higher versions of OpenGL ES.</p>
 <h2 id="android-support">Android Support</h2>
 <p>Veldrid now supports Android through the Vulkan and OpenGL ES backends. Vulkan remains a fairly advanced feature for current Android devices, but it will become more common in the future. OpenGL ES is supported by the majority of current Android devices.</p>
-<p>A Veldrid GraphicsDevice can be created through an Android Surface or SurfaceView. Use the <a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateAndroidSurface_IntPtr_IntPtr_">SwapchainSource.CreateAndroidSurface()</a> function to create a SwapchainSource for the given application view. Then, you can use <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGLES_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_">GraphicsDevice.CreateOpenGLES()</a> or <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_">GraphicsDevice.CreateVulkan()</a>, depending on what your device supports.</p>
+<p>A Veldrid GraphicsDevice can be created through an Android Surface or SurfaceView. Use the <a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateAndroidSurface_System_IntPtr_System_IntPtr_">SwapchainSource.CreateAndroidSurface()</a> function to create a SwapchainSource for the given application view. Then, you can use <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateOpenGLES_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_">GraphicsDevice.CreateOpenGLES()</a> or <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_">GraphicsDevice.CreateVulkan()</a>, depending on what your device supports.</p>
 <h2 id="graphicsdevice-capabilities">GraphicsDevice Capabilities</h2>
 <p>Although Veldrid aims to be as portable as possible, there are a number of places where differences between different systems and API&#39;s cannot be cleanly hidden. Additionally, all graphics API&#39;s enforce specific limitations on how the API can be used. Without knowledge of these limitations at runtime, it&#39;s difficult to write code that is guaranteed to work portably. This version of Veldrid introduces several GraphicsDevice members informing you about the limitations of the current system.</p>
 <ul>

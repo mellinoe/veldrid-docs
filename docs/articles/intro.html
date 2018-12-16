@@ -8,7 +8,7 @@
     <title>Introduction </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Introduction ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -69,31 +69,35 @@
             <article class="content wrap" id="_content" data-uid="intro">
 <h1 id="introduction">Introduction</h1>
 
-<p>Veldrid is a low-level graphics library for .NET. It can be used to create high-performance 2D and 3D games, simulations, tools, and other graphical applications. Unlike most other .NET graphics libraries, Veldrid is designed to be portable, meaning it is not tied to any particular operating system or native graphics API. With Direct3D, Vulkan, Metal, OpenGL, and OpenGL ES backends, applications built with Veldrid can run on all desktop and mobile platforms without modification.</p>
-<p>A basic understanding of graphics APIs and hardware is helpful for understanding and best utilizing Veldrid, which is designed in the vein current-gen graphics APIs like Vulkan, Direct3D 12, and Metal. As a low-level library, it is powerful and flexible, but verbose -- it is best used as the robust foundation of a high-performance game engine or application framework.</p>
+<p>Veldrid is a low-level graphics library for .NET. It can be used to create high-performance 2D and 3D games, simulations, tools, and other graphical applications. Unlike most other .NET graphics libraries, Veldrid is designed to be portable, meaning it is not tied to any particular operating system or native graphics API. With Vulkan, Direct3D, Metal, OpenGL, and OpenGL ES backends, applications built with Veldrid can run on all desktop and mobile platforms without modification.</p>
 <h1 id="features">Features</h1>
 <ul>
-<li>Support for modern graphics API&#39;s, including Vulkan and Metal.</li>
-<li>Full customization of graphics and compute resources and pipeline state, with support for current-gen features and optimizations.<ul>
-<li>Vertex, fragment, geometry, and tessellation shaders.</li>
-<li>Compute shaders.</li>
-<li>Support for read-write textures and buffers in shaders.</li>
-<li>Indirect drawing and compute dispatch.</li>
-<li>Configurable blend, depth-stencil, rasterizer, and vertex input state.</li>
+<li>Modern GPU functionality:<ul>
+<li>Programmable vertex, geometry, tessellation, and fragment shaders</li>
+<li>Programmable compute shaders</li>
+<li>Full control over the graphics pipeline: blend state, depth-stencil state, rasterizer state, shaders and shader specialization, resource access, and more</li>
+<li>Modern buffer features, including vertex, index, uniform, structured, and indirect buffers, read-write shader access, and more</li>
+<li>Modern <a class="xref" href="textures.html">texture</a> features, including 3D textures, array textures, multisampling, texture views, multi-output <a class="xref" href="framebuffers.html">Framebuffers</a>, read-write shader access, a variety of standard, compressed and packed <a class="xref" href="../api/Veldrid.PixelFormat.html">pixel formats</a>, and more</li>
+<li>Multiple <a class="xref" href="swapchains.html">Swapchains</a>, with support for runtime creation and destruction</li>
+<li>Much more</li>
 </ul>
 </li>
-<li>High-performance: Veldrid is built on a thin, low-cost abstraction that is close to current-gen graphics API&#39;s.</li>
+<li>Targets modern graphics APIs, including Vulkan and Metal.</li>
+<li>Cross-platform: Windows, macOS, Linux, Android, iOS.</li>
+<li>Portable Shaders: First-class support for SPIR-V bytecode allows you to write your shaders once for all platforms.</li>
+<li>Virtual Reality: Supports both OpenVR and Oculus using a simple, portable API.</li>
+<li>High-performance: Built on a thin, low-cost abstraction that is close to current-gen graphics API&#39;s.</li>
+<li>Multi-threaded: Most Veldrid objects can be used from multiple threads simultaneously, allowing you to split your work as you see fit. See <a class="xref" href="multi-threading.html">Multi-threading in Veldrid</a> for specifics.</li>
 <li>Allocation-free: The core rendering loop (outside of resource creation and initialization) can be used without allocating any garbage-collected memory. Avoiding allocations is important for high-performance, low-latency rendering.</li>
+<li>Headless: Can be used without any application window or view, to perform GPU-accelerated operations in the background.</li>
 <li>.NET-friendly: Unlike native graphics API&#39;s, Veldrid was designed with .NET in mind, and integrates cleanly with regular .NET code.</li>
-<li>Multi-threaded: Veldrid objects can be used from multiple threads, with some restrictions. See <a class="xref" href="multi-threading.html">Multi-threading in Veldrid</a> for specifics.</li>
-<li>Dependency-free: With the exception of bindings for native graphics APIs, Veldrid is implemented without any third-party dependencies.</li>
 </ul>
 <h1 id="getting-started">Getting Started</h1>
 <p>See <a class="xref" href="getting-started/intro.html">Getting Started</a> for a basic startup guide.</p>
 <h1 id="api-concepts">API Concepts</h1>
 <p>See <a class="xref" href="api-concepts.html">API Concepts</a> for an overview of the common object types in Veldrid.</p>
 <h1 id="samples">Samples</h1>
-<p>See the <a href="https://github.com/mellinoe/veldrid-samples">Veldrid Samples</a> repository for a growing set of demo applications build using Veldrid.</p>
+<p>See the <a href="https://github.com/mellinoe/veldrid-samples">Veldrid Samples</a> repository for a growing set of demo applications built using Veldrid.</p>
 <p>Additionally, <a href="https://github.com/mellinoe/veldrid/tree/master/src/NeoDemo">NeoDemo</a> is a sample application being built in tandem with Veldrid, and which uses a large chunk of the available features.</p>
 <h1 id="nuget-packages">NuGet Packages</h1>
 <p>Pre-release packages are available from MyGet: <a href="https://www.myget.org/feed/mellinoe/package/nuget/Veldrid">https://www.myget.org/feed/mellinoe/package/nuget/Veldrid</a>.</p>

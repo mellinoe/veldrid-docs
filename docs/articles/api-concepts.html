@@ -8,7 +8,7 @@
     <title>API Concepts </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="API Concepts ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -103,7 +103,7 @@
 </li>
 </ul>
 <h3 id="shaders">Shaders</h3>
-<p><a class="xref" href="../api/Veldrid.Shader.html">Shaders</a> are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry, compute). They are created from graphics-API-specific data chunks. Multiple shader modules are combined into a &quot;shader set&quot;, used to construct a Pipeline. See the <a class="xref" href="shaders.html">Shaders and Resources overview</a> for more information.</p>
+<p><a class="xref" href="../api/Veldrid.Shader.html">Shaders</a> are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry, <a class="xref" href="compute-shaders.html">compute</a>). They are created from graphics-API-specific data chunks. Multiple shader modules are combined into a &quot;shader set&quot;, used to construct a Pipeline. See the <a class="xref" href="shaders.html">Shaders and Resources overview</a> and the <a class="xref" href="compute-shaders.html">compute shaders overview</a> for more information.</p>
 <h3 id="pipelines">Pipelines</h3>
 <p>In Veldrid, there are two types of <a class="xref" href="../api/Veldrid.Pipeline.html">Pipelines</a>: graphics and compute.</p>
 <p>A graphics Pipeline is a device resource which encapsulates a large amount of information. In other graphics libraries, a Pipeline is split into several unrelated objects or function calls which can be combined in confusing and unpredictable ways. Veldrid pipelines represent the combined set of all of these pieces of information, and are immutable. This avoids a huge amount of complexity inherent in the mutable state machine paradigm of OpenGL and similar APIs. Additionally, the correctness of a Pipeline is validated up-front. If you attempt to create a Pipeline from components that are not compatible, then an exception is produced before the invalid Pipeline is created. Pipeline information encompasses:</p>

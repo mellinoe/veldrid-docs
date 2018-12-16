@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GraphicsDevice
    ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -81,6 +81,34 @@
     <div class="level0"><span class="xref">System.Object</span></div>
     <div class="level1"><span class="xref">GraphicsDevice</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">System.IDisposable</span></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">System.Object.ToString()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetHashCode()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.GetType()</span>
+    </div>
+    <div>
+      <span class="xref">System.Object.MemberwiseClone()</span>
+    </div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
   <h6><strong>Assembly</strong>: cs.temp.dll.dll</h6>
   <h5 id="Veldrid_GraphicsDevice_syntax">Syntax</h5>
@@ -94,7 +122,8 @@
   <a id="Veldrid_GraphicsDevice_Aniso4xSampler_" data-uid="Veldrid.GraphicsDevice.Aniso4xSampler*"></a>
   <h4 id="Veldrid_GraphicsDevice_Aniso4xSampler" data-uid="Veldrid.GraphicsDevice.Aniso4xSampler">Aniso4xSampler</h4>
   <div class="markdown level1 summary"><p>Gets a simple 4x anisotropic-filtered <a class="xref" href="Veldrid.Sampler.html">Sampler</a> object owned by this instance.
-This object is created with <a class="xref" href="Veldrid.SamplerDescription.html#Veldrid_SamplerDescription_Aniso4x">Aniso4x</a>.</p>
+This object is created with <a class="xref" href="Veldrid.SamplerDescription.html#Veldrid_SamplerDescription_Aniso4x">Aniso4x</a>.
+This property can only be used when <a class="xref" href="Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_SamplerAnisotropy">SamplerAnisotropy</a> is supported.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -359,6 +388,34 @@ This object is created with <a class="xref" href="Veldrid.SamplerDescription.htm
   </table>
   
   
+  <a id="Veldrid_GraphicsDevice_StructuredBufferMinOffsetAlignment_" data-uid="Veldrid.GraphicsDevice.StructuredBufferMinOffsetAlignment*"></a>
+  <h4 id="Veldrid_GraphicsDevice_StructuredBufferMinOffsetAlignment" data-uid="Veldrid.GraphicsDevice.StructuredBufferMinOffsetAlignment">StructuredBufferMinOffsetAlignment</h4>
+  <div class="markdown level1 summary"><p>The required alignment, in bytes, for structured buffer offsets. <a class="xref" href="Veldrid.DeviceBufferRange.html#Veldrid_DeviceBufferRange_Offset">Offset</a> must be a
+multiple of this value. When binding a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> to a <a class="xref" href="Veldrid.CommandList.html">CommandList</a> with an overload
+accepting dynamic offsets, each offset must be a multiple of this value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint StructuredBufferMinOffsetAlignment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_GraphicsDevice_SwapchainFramebuffer_" data-uid="Veldrid.GraphicsDevice.SwapchainFramebuffer*"></a>
   <h4 id="Veldrid_GraphicsDevice_SwapchainFramebuffer" data-uid="Veldrid.GraphicsDevice.SwapchainFramebuffer">SwapchainFramebuffer</h4>
   <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Veldrid.Framebuffer.html">Framebuffer</a> object representing the render targets of the main swapchain.
@@ -414,6 +471,34 @@ This property cannot be set if this GraphicsDevice was created without a main Sw
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_UniformBufferMinOffsetAlignment_" data-uid="Veldrid.GraphicsDevice.UniformBufferMinOffsetAlignment*"></a>
+  <h4 id="Veldrid_GraphicsDevice_UniformBufferMinOffsetAlignment" data-uid="Veldrid.GraphicsDevice.UniformBufferMinOffsetAlignment">UniformBufferMinOffsetAlignment</h4>
+  <div class="markdown level1 summary"><p>The required alignment, in bytes, for uniform buffer offsets. <a class="xref" href="Veldrid.DeviceBufferRange.html#Veldrid_DeviceBufferRange_Offset">Offset</a> must be a
+multiple of this value. When binding a <a class="xref" href="Veldrid.ResourceSet.html">ResourceSet</a> to a <a class="xref" href="Veldrid.CommandList.html">CommandList</a> with an overload
+accepting dynamic offsets, each offset must be a multiple of this value.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public uint UniformBufferMinOffsetAlignment { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
   
@@ -464,7 +549,7 @@ This property cannot be set if this GraphicsDevice was created without a main Sw
   
   
   <a id="Veldrid_GraphicsDevice_CreateD3D11_" data-uid="Veldrid.GraphicsDevice.CreateD3D11*"></a>
-  <h4 id="Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_IntPtr_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,IntPtr,System.UInt32,System.UInt32)">CreateD3D11(GraphicsDeviceOptions, IntPtr, UInt32, UInt32)</h4>
+  <h4 id="Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_System_IntPtr_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,System.IntPtr,System.UInt32,System.UInt32)">CreateD3D11(GraphicsDeviceOptions, IntPtr, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Direct3D 11, with a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -489,7 +574,7 @@ This property cannot be set if this GraphicsDevice was created without a main Sw
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">hwnd</span></td>
         <td><p>The Win32 window handle to render into.</p>
 </td>
@@ -693,7 +778,7 @@ or SwapChainBackgroundPanel contained in your application window.</p>
   
   
   <a id="Veldrid_GraphicsDevice_CreateMetal_" data-uid="Veldrid.GraphicsDevice.CreateMetal*"></a>
-  <h4 id="Veldrid_GraphicsDevice_CreateMetal_Veldrid_GraphicsDeviceOptions_IntPtr_" data-uid="Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions,IntPtr)">CreateMetal(GraphicsDeviceOptions, IntPtr)</h4>
+  <h4 id="Veldrid_GraphicsDevice_CreateMetal_Veldrid_GraphicsDeviceOptions_System_IntPtr_" data-uid="Veldrid.GraphicsDevice.CreateMetal(Veldrid.GraphicsDeviceOptions,System.IntPtr)">CreateMetal(GraphicsDeviceOptions, IntPtr)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Metal, with a main Swapchain.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -718,7 +803,7 @@ or SwapChainBackgroundPanel contained in your application window.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">nsWindow</span></td>
         <td><p>A pointer to an NSWindow object, which will be used to create the Metal device&apos;s swapchain.</p>
 </td>
@@ -1008,6 +1093,63 @@ The SwapchainSource must have been created from an Android Surface or an iOS UIV
   
   
   <a id="Veldrid_GraphicsDevice_CreateVulkan_" data-uid="Veldrid.GraphicsDevice.CreateVulkan*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_Veldrid_VulkanDeviceOptions_" data-uid="Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription,Veldrid.VulkanDeviceOptions)">CreateVulkan(GraphicsDeviceOptions, SwapchainDescription, VulkanDeviceOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Vulkan, with a main Swapchain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateVulkan(GraphicsDeviceOptions options, SwapchainDescription swapchainDescription, VulkanDeviceOptions vkOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Describes several common properties of the GraphicsDevice.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.SwapchainDescription.html">SwapchainDescription</a></td>
+        <td><span class="parametername">swapchainDescription</span></td>
+        <td><p>A description of the main Swapchain to create.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.VulkanDeviceOptions.html">VulkanDeviceOptions</a></td>
+        <td><span class="parametername">vkOptions</span></td>
+        <td><p>The Vulkan-specific options used to create the device.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the Vulkan API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_CreateVulkan_" data-uid="Veldrid.GraphicsDevice.CreateVulkan*"></a>
   <h4 id="Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_Vk_VkSurfaceSource_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions,Veldrid.Vk.VkSurfaceSource,System.UInt32,System.UInt32)">CreateVulkan(GraphicsDeviceOptions, VkSurfaceSource, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Vulkan, with a main Swapchain.</p>
 </div>
@@ -1070,6 +1212,57 @@ The SwapchainSource must have been created from an Android Surface or an iOS UIV
   </table>
   
   
+  <a id="Veldrid_GraphicsDevice_CreateVulkan_" data-uid="Veldrid.GraphicsDevice.CreateVulkan*"></a>
+  <h4 id="Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_VulkanDeviceOptions_" data-uid="Veldrid.GraphicsDevice.CreateVulkan(Veldrid.GraphicsDeviceOptions,Veldrid.VulkanDeviceOptions)">CreateVulkan(GraphicsDeviceOptions, VulkanDeviceOptions)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using Vulkan.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static GraphicsDevice CreateVulkan(GraphicsDeviceOptions options, VulkanDeviceOptions vkOptions)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a></td>
+        <td><span class="parametername">options</span></td>
+        <td><p>Describes several common properties of the GraphicsDevice.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.VulkanDeviceOptions.html">VulkanDeviceOptions</a></td>
+        <td><span class="parametername">vkOptions</span></td>
+        <td><p>The Vulkan-specific options used to create the device.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.GraphicsDevice.html">GraphicsDevice</a> using the Vulkan API.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_GraphicsDevice_Dispose_" data-uid="Veldrid.GraphicsDevice.Dispose*"></a>
   <h4 id="Veldrid_GraphicsDevice_Dispose" data-uid="Veldrid.GraphicsDevice.Dispose">Dispose()</h4>
   <div class="markdown level1 summary"><p>Frees unmanaged resources controlled by this device.
@@ -1083,7 +1276,7 @@ All created child resources must be Disposed prior to calling this method.</p>
   
   
   <a id="Veldrid_GraphicsDevice_DisposeWhenIdle_" data-uid="Veldrid.GraphicsDevice.DisposeWhenIdle*"></a>
-  <h4 id="Veldrid_GraphicsDevice_DisposeWhenIdle_IDisposable_" data-uid="Veldrid.GraphicsDevice.DisposeWhenIdle(IDisposable)">DisposeWhenIdle(IDisposable)</h4>
+  <h4 id="Veldrid_GraphicsDevice_DisposeWhenIdle_System_IDisposable_" data-uid="Veldrid.GraphicsDevice.DisposeWhenIdle(System.IDisposable)">DisposeWhenIdle(IDisposable)</h4>
   <div class="markdown level1 summary"><p>Adds the given object to a deferred disposal list, which will be processed when this GraphicsDevice becomes idle.
 This method can be used to safely dispose a device resource which may be in use at the time this method is called,
 but which will no longer be in use when the device is idle.</p>
@@ -1104,9 +1297,157 @@ but which will no longer be in use when the device is idle.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IDisposable</span></td>
+        <td><span class="xref">System.IDisposable</span></td>
         <td><span class="parametername">disposable</span></td>
         <td><p>An object to dispose when this instance becomes idle.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_GetD3D11Info_" data-uid="Veldrid.GraphicsDevice.GetD3D11Info*"></a>
+  <h4 id="Veldrid_GraphicsDevice_GetD3D11Info" data-uid="Veldrid.GraphicsDevice.GetD3D11Info">GetD3D11Info()</h4>
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Veldrid.BackendInfoD3D11.html">BackendInfoD3D11</a> for this instance. This method will only succeed if this is a D3D11
+GraphicsDevice. Otherwise, this method will throw an exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BackendInfoD3D11 GetD3D11Info()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.BackendInfoD3D11.html">BackendInfoD3D11</a></td>
+        <td><p>The <a class="xref" href="Veldrid.BackendInfoD3D11.html">BackendInfoD3D11</a> for this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_GetD3D11Info_" data-uid="Veldrid.GraphicsDevice.GetD3D11Info*"></a>
+  <h4 id="Veldrid_GraphicsDevice_GetD3D11Info_Veldrid_BackendInfoD3D11__" data-uid="Veldrid.GraphicsDevice.GetD3D11Info(Veldrid.BackendInfoD3D11@)">GetD3D11Info(out BackendInfoD3D11)</h4>
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="Veldrid.BackendInfoD3D11.html">BackendInfoD3D11</a> for this instance. This method will only succeed if this is a D3D11
+GraphicsDevice.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool GetD3D11Info(out BackendInfoD3D11 info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.BackendInfoD3D11.html">BackendInfoD3D11</a></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>If successful, this will contain the <a class="xref" href="Veldrid.BackendInfoD3D11.html">BackendInfoD3D11</a> for this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if this is a D3D11 GraphicsDevice and the operation was successful. False otherwise.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_GetOpenGLInfo_" data-uid="Veldrid.GraphicsDevice.GetOpenGLInfo*"></a>
+  <h4 id="Veldrid_GraphicsDevice_GetOpenGLInfo" data-uid="Veldrid.GraphicsDevice.GetOpenGLInfo">GetOpenGLInfo()</h4>
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Veldrid.BackendInfoOpenGL.html">BackendInfoOpenGL</a> for this instance. This method will only succeed if this is an OpenGL
+GraphicsDevice. Otherwise, this method will throw an exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BackendInfoOpenGL GetOpenGLInfo()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.BackendInfoOpenGL.html">BackendInfoOpenGL</a></td>
+        <td><p>The <a class="xref" href="Veldrid.BackendInfoOpenGL.html">BackendInfoOpenGL</a> for this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_GetOpenGLInfo_" data-uid="Veldrid.GraphicsDevice.GetOpenGLInfo*"></a>
+  <h4 id="Veldrid_GraphicsDevice_GetOpenGLInfo_Veldrid_BackendInfoOpenGL__" data-uid="Veldrid.GraphicsDevice.GetOpenGLInfo(Veldrid.BackendInfoOpenGL@)">GetOpenGLInfo(out BackendInfoOpenGL)</h4>
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="Veldrid.BackendInfoOpenGL.html">BackendInfoOpenGL</a> for this instance. This method will only succeed if this is an OpenGL
+GraphicsDevice.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool GetOpenGLInfo(out BackendInfoOpenGL info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.BackendInfoOpenGL.html">BackendInfoOpenGL</a></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>If successful, this will contain the <a class="xref" href="Veldrid.BackendInfoOpenGL.html">BackendInfoOpenGL</a> for this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if this is an OpenGL GraphicsDevice and the operation was successful. False otherwise.</p>
 </td>
       </tr>
     </tbody>
@@ -1237,63 +1578,6 @@ then <code data-dev-comment-type="paramref" class="paramref">properties</code> c
   </table>
   
   
-  <a id="Veldrid_GraphicsDevice_GetPixelFormatSupportCore_" data-uid="Veldrid.GraphicsDevice.GetPixelFormatSupportCore*"></a>
-  <h4 id="Veldrid_GraphicsDevice_GetPixelFormatSupportCore_Veldrid_PixelFormat_Veldrid_TextureType_Veldrid_TextureUsage_Veldrid_PixelFormatProperties__" data-uid="Veldrid.GraphicsDevice.GetPixelFormatSupportCore(Veldrid.PixelFormat,Veldrid.TextureType,Veldrid.TextureUsage,Veldrid.PixelFormatProperties@)">GetPixelFormatSupportCore(PixelFormat, TextureType, TextureUsage, out PixelFormatProperties)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract bool GetPixelFormatSupportCore(PixelFormat format, TextureType type, TextureUsage usage, out PixelFormatProperties properties)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a></td>
-        <td><span class="parametername">format</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.TextureType.html">TextureType</a></td>
-        <td><span class="parametername">type</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.TextureUsage.html">TextureUsage</a></td>
-        <td><span class="parametername">usage</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.PixelFormatProperties.html">PixelFormatProperties</a></td>
-        <td><span class="parametername">properties</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Veldrid_GraphicsDevice_GetSampleCountLimit_" data-uid="Veldrid.GraphicsDevice.GetSampleCountLimit*"></a>
   <h4 id="Veldrid_GraphicsDevice_GetSampleCountLimit_Veldrid_PixelFormat_System_Boolean_" data-uid="Veldrid.GraphicsDevice.GetSampleCountLimit(Veldrid.PixelFormat,System.Boolean)">GetSampleCountLimit(PixelFormat, Boolean)</h4>
   <div class="markdown level1 summary"><p>Gets the maximum sample count supported by the given <a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a>.</p>
@@ -1340,6 +1624,80 @@ then <code data-dev-comment-type="paramref" class="paramref">properties</code> c
         <td><a class="xref" href="Veldrid.TextureSampleCount.html">TextureSampleCount</a></td>
         <td><p>A <a class="xref" href="Veldrid.TextureSampleCount.html">TextureSampleCount</a> value representing the maximum count that a <a class="xref" href="Veldrid.Texture.html">Texture</a> of that
 format can be created with.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_GetVulkanInfo_" data-uid="Veldrid.GraphicsDevice.GetVulkanInfo*"></a>
+  <h4 id="Veldrid_GraphicsDevice_GetVulkanInfo" data-uid="Veldrid.GraphicsDevice.GetVulkanInfo">GetVulkanInfo()</h4>
+  <div class="markdown level1 summary"><p>Gets a <a class="xref" href="Veldrid.BackendInfoVulkan.html">BackendInfoVulkan</a> for this instance. This method will only succeed if this is a Vulkan
+GraphicsDevice. Otherwise, this method will throw an exception.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BackendInfoVulkan GetVulkanInfo()</code></pre>
+  </div>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.BackendInfoVulkan.html">BackendInfoVulkan</a></td>
+        <td><p>The <a class="xref" href="Veldrid.BackendInfoVulkan.html">BackendInfoVulkan</a> for this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_GetVulkanInfo_" data-uid="Veldrid.GraphicsDevice.GetVulkanInfo*"></a>
+  <h4 id="Veldrid_GraphicsDevice_GetVulkanInfo_Veldrid_BackendInfoVulkan__" data-uid="Veldrid.GraphicsDevice.GetVulkanInfo(Veldrid.BackendInfoVulkan@)">GetVulkanInfo(out BackendInfoVulkan)</h4>
+  <div class="markdown level1 summary"><p>Tries to get a <a class="xref" href="Veldrid.BackendInfoVulkan.html">BackendInfoVulkan</a> for this instance. This method will only succeed if this is a Vulkan
+GraphicsDevice.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual bool GetVulkanInfo(out BackendInfoVulkan info)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.BackendInfoVulkan.html">BackendInfoVulkan</a></td>
+        <td><span class="parametername">info</span></td>
+        <td><p>If successful, this will contain the <a class="xref" href="Veldrid.BackendInfoVulkan.html">BackendInfoVulkan</a> for this instance.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if this is a Vulkan GraphicsDevice and the operation was successful. False otherwise.</p>
 </td>
       </tr>
     </tbody>
@@ -1859,38 +2217,6 @@ execution.</p>
   </table>
   
   
-  <a id="Veldrid_GraphicsDevice_SubmitCommandsCore_" data-uid="Veldrid.GraphicsDevice.SubmitCommandsCore*"></a>
-  <h4 id="Veldrid_GraphicsDevice_SubmitCommandsCore_Veldrid_CommandList_Veldrid_Fence_" data-uid="Veldrid.GraphicsDevice.SubmitCommandsCore(Veldrid.CommandList,Veldrid.Fence)">SubmitCommandsCore(CommandList, Fence)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SubmitCommandsCore(CommandList commandList, Fence fence)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.CommandList.html">CommandList</a></td>
-        <td><span class="parametername">commandList</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
-        <td><span class="parametername">fence</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Veldrid_GraphicsDevice_SwapBuffers_" data-uid="Veldrid.GraphicsDevice.SwapBuffers*"></a>
   <h4 id="Veldrid_GraphicsDevice_SwapBuffers" data-uid="Veldrid.GraphicsDevice.SwapBuffers">SwapBuffers()</h4>
   <div class="markdown level1 summary"><p>Swaps the buffers of the main swapchain and presents the rendered image to the screen.
@@ -1928,33 +2254,6 @@ This method can only be called if this GraphicsDevice was created with a main Sw
         <td><span class="parametername">swapchain</span></td>
         <td><p>The <a class="xref" href="Veldrid.Swapchain.html">Swapchain</a> to swap and present.</p>
 </td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
-  <a id="Veldrid_GraphicsDevice_SwapBuffersCore_" data-uid="Veldrid.GraphicsDevice.SwapBuffersCore*"></a>
-  <h4 id="Veldrid_GraphicsDevice_SwapBuffersCore_Veldrid_Swapchain_" data-uid="Veldrid.GraphicsDevice.SwapBuffersCore(Veldrid.Swapchain)">SwapBuffersCore(Swapchain)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void SwapBuffersCore(Swapchain swapchain)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.Swapchain.html">Swapchain</a></td>
-        <td><span class="parametername">swapchain</span></td>
-        <td></td>
       </tr>
     </tbody>
   </table>
@@ -2059,7 +2358,7 @@ For <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> resources,
   
   
   <a id="Veldrid_GraphicsDevice_UpdateBuffer_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer*"></a>
-  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer_Veldrid_DeviceBuffer_System_UInt32_IntPtr_System_UInt32_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer(Veldrid.DeviceBuffer,System.UInt32,IntPtr,System.UInt32)">UpdateBuffer(DeviceBuffer, UInt32, IntPtr, UInt32)</h4>
+  <h4 id="Veldrid_GraphicsDevice_UpdateBuffer_Veldrid_DeviceBuffer_System_UInt32_System_IntPtr_System_UInt32_" data-uid="Veldrid.GraphicsDevice.UpdateBuffer(Veldrid.DeviceBuffer,System.UInt32,System.IntPtr,System.UInt32)">UpdateBuffer(DeviceBuffer, UInt32, IntPtr, UInt32)</h4>
   <div class="markdown level1 summary"><p>Updates a <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> region with new data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -2091,7 +2390,7 @@ which new data will be uploaded.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">source</span></td>
         <td><p>A pointer to the start of the data to upload.</p>
 </td>
@@ -2352,50 +2651,8 @@ which new data will be uploaded.</p>
   </table>
   
   
-  <a id="Veldrid_GraphicsDevice_UpdateBufferCore_" data-uid="Veldrid.GraphicsDevice.UpdateBufferCore*"></a>
-  <h4 id="Veldrid_GraphicsDevice_UpdateBufferCore_Veldrid_DeviceBuffer_System_UInt32_IntPtr_System_UInt32_" data-uid="Veldrid.GraphicsDevice.UpdateBufferCore(Veldrid.DeviceBuffer,System.UInt32,IntPtr,System.UInt32)">UpdateBufferCore(DeviceBuffer, UInt32, IntPtr, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void UpdateBufferCore(DeviceBuffer buffer, uint bufferOffsetInBytes, IntPtr source, uint sizeInBytes)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a></td>
-        <td><span class="parametername">buffer</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">bufferOffsetInBytes</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">IntPtr</span></td>
-        <td><span class="parametername">source</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">sizeInBytes</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Veldrid_GraphicsDevice_UpdateTexture_" data-uid="Veldrid.GraphicsDevice.UpdateTexture*"></a>
-  <h4 id="Veldrid_GraphicsDevice_UpdateTexture_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.UpdateTexture(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">UpdateTexture(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</h4>
+  <h4 id="Veldrid_GraphicsDevice_UpdateTexture_Veldrid_Texture_System_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.UpdateTexture(Veldrid.Texture,System.IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">UpdateTexture(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</h4>
   <div class="markdown level1 summary"><p>Updates a portion of a <a class="xref" href="Veldrid.Texture.html">Texture</a> resource with new data.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -2420,7 +2677,7 @@ which new data will be uploaded.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">source</span></td>
         <td><p>A pointer to the start of the data to upload. This must point to tightly-packed pixel data for
 the region specified.</p>
@@ -2589,83 +2846,6 @@ region specified.</p>
   </table>
   
   
-  <a id="Veldrid_GraphicsDevice_UpdateTextureCore_" data-uid="Veldrid.GraphicsDevice.UpdateTextureCore*"></a>
-  <h4 id="Veldrid_GraphicsDevice_UpdateTextureCore_Veldrid_Texture_IntPtr_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_System_UInt32_" data-uid="Veldrid.GraphicsDevice.UpdateTextureCore(Veldrid.Texture,IntPtr,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.UInt32)">UpdateTextureCore(Texture, IntPtr, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32, UInt32)</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void UpdateTextureCore(Texture texture, IntPtr source, uint sizeInBytes, uint x, uint y, uint z, uint width, uint height, uint depth, uint mipLevel, uint arrayLayer)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
-        <td><span class="parametername">texture</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">IntPtr</span></td>
-        <td><span class="parametername">source</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">sizeInBytes</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">x</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">y</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">z</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">width</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">height</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">depth</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">mipLevel</span></td>
-        <td></td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.UInt32</span></td>
-        <td><span class="parametername">arrayLayer</span></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Veldrid_GraphicsDevice_WaitForFence_" data-uid="Veldrid.GraphicsDevice.WaitForFence*"></a>
   <h4 id="Veldrid_GraphicsDevice_WaitForFence_Veldrid_Fence_" data-uid="Veldrid.GraphicsDevice.WaitForFence(Veldrid.Fence)">WaitForFence(Fence)</h4>
   <div class="markdown level1 summary"><p>Blocks the calling thread until the given <a class="xref" href="Veldrid.Fence.html">Fence</a> becomes signaled.</p>
@@ -2689,6 +2869,58 @@ region specified.</p>
         <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
         <td><span class="parametername">fence</span></td>
         <td><p>The <a class="xref" href="Veldrid.Fence.html">Fence</a> instance to wait on.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_WaitForFence_" data-uid="Veldrid.GraphicsDevice.WaitForFence*"></a>
+  <h4 id="Veldrid_GraphicsDevice_WaitForFence_Veldrid_Fence_System_TimeSpan_" data-uid="Veldrid.GraphicsDevice.WaitForFence(Veldrid.Fence,System.TimeSpan)">WaitForFence(Fence, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Blocks the calling thread until the given <a class="xref" href="Veldrid.Fence.html">Fence</a> becomes signaled, or until a time greater than the
+given TimeSpan has elapsed.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WaitForFence(Fence fence, TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
+        <td><span class="parametername">fence</span></td>
+        <td><p>The <a class="xref" href="Veldrid.Fence.html">Fence</a> instance to wait on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>A TimeSpan indicating the maximum time to wait on the Fence.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the Fence was signaled. False if the timeout was reached instead.</p>
 </td>
       </tr>
     </tbody>
@@ -2747,58 +2979,6 @@ given TimeSpan has elapsed.</p>
   </table>
   
   
-  <a id="Veldrid_GraphicsDevice_WaitForFence_" data-uid="Veldrid.GraphicsDevice.WaitForFence*"></a>
-  <h4 id="Veldrid_GraphicsDevice_WaitForFence_Veldrid_Fence_TimeSpan_" data-uid="Veldrid.GraphicsDevice.WaitForFence(Veldrid.Fence,TimeSpan)">WaitForFence(Fence, TimeSpan)</h4>
-  <div class="markdown level1 summary"><p>Blocks the calling thread until the given <a class="xref" href="Veldrid.Fence.html">Fence</a> becomes signaled, or until a time greater than the
-given TimeSpan has elapsed.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool WaitForFence(Fence fence, TimeSpan timeout)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.Fence.html">Fence</a></td>
-        <td><span class="parametername">fence</span></td>
-        <td><p>The <a class="xref" href="Veldrid.Fence.html">Fence</a> instance to wait on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>A TimeSpan indicating the maximum time to wait on the Fence.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if the Fence was signaled. False if the timeout was reached instead.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Veldrid_GraphicsDevice_WaitForFences_" data-uid="Veldrid.GraphicsDevice.WaitForFences*"></a>
   <h4 id="Veldrid_GraphicsDevice_WaitForFences_Veldrid_Fence___System_Boolean_" data-uid="Veldrid.GraphicsDevice.WaitForFences(Veldrid.Fence[],System.Boolean)">WaitForFences(Fence[], Boolean)</h4>
   <div class="markdown level1 summary"><p>Blocks the calling thread until one or all of the given <a class="xref" href="Veldrid.Fence.html">Fence</a> instances have become signaled.</p>
@@ -2829,6 +3009,65 @@ given TimeSpan has elapsed.</p>
         <td><span class="parametername">waitAll</span></td>
         <td><p>If true, then this method blocks until all of the given Fences become signaled.
 If false, then this method only waits until one of the Fences become signaled.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDevice_WaitForFences_" data-uid="Veldrid.GraphicsDevice.WaitForFences*"></a>
+  <h4 id="Veldrid_GraphicsDevice_WaitForFences_Veldrid_Fence___System_Boolean_System_TimeSpan_" data-uid="Veldrid.GraphicsDevice.WaitForFences(Veldrid.Fence[],System.Boolean,System.TimeSpan)">WaitForFences(Fence[], Boolean, TimeSpan)</h4>
+  <div class="markdown level1 summary"><p>Blocks the calling thread until one or all of the given <a class="xref" href="Veldrid.Fence.html">Fence</a> instances have become signaled,
+or until the given timeout has been reached.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool WaitForFences(Fence[] fences, bool waitAll, TimeSpan timeout)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Fence.html">Fence</a>[]</td>
+        <td><span class="parametername">fences</span></td>
+        <td><p>An array of <a class="xref" href="Veldrid.Fence.html">Fence</a> objects to wait on.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">waitAll</span></td>
+        <td><p>If true, then this method blocks until all of the given Fences become signaled.
+If false, then this method only waits until one of the Fences become signaled.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.TimeSpan</span></td>
+        <td><span class="parametername">timeout</span></td>
+        <td><p>A TimeSpan indicating the maximum time to wait on the Fences.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><p>True if the Fence was signaled. False if the timeout was reached instead.</p>
 </td>
       </tr>
     </tbody>
@@ -2894,65 +3133,6 @@ If false, then this method only waits until one of the Fences become signaled.</
   </table>
   
   
-  <a id="Veldrid_GraphicsDevice_WaitForFences_" data-uid="Veldrid.GraphicsDevice.WaitForFences*"></a>
-  <h4 id="Veldrid_GraphicsDevice_WaitForFences_Veldrid_Fence___System_Boolean_TimeSpan_" data-uid="Veldrid.GraphicsDevice.WaitForFences(Veldrid.Fence[],System.Boolean,TimeSpan)">WaitForFences(Fence[], Boolean, TimeSpan)</h4>
-  <div class="markdown level1 summary"><p>Blocks the calling thread until one or all of the given <a class="xref" href="Veldrid.Fence.html">Fence</a> instances have become signaled,
-or until the given timeout has been reached.</p>
-</div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool WaitForFences(Fence[] fences, bool waitAll, TimeSpan timeout)</code></pre>
-  </div>
-  <h5 class="parameters">Parameters</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="Veldrid.Fence.html">Fence</a>[]</td>
-        <td><span class="parametername">fences</span></td>
-        <td><p>An array of <a class="xref" href="Veldrid.Fence.html">Fence</a> objects to wait on.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><span class="parametername">waitAll</span></td>
-        <td><p>If true, then this method blocks until all of the given Fences become signaled.
-If false, then this method only waits until one of the Fences become signaled.</p>
-</td>
-      </tr>
-      <tr>
-        <td><span class="xref">TimeSpan</span></td>
-        <td><span class="parametername">timeout</span></td>
-        <td><p>A TimeSpan indicating the maximum time to wait on the Fences.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  <h5 class="returns">Returns</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><span class="xref">System.Boolean</span></td>
-        <td><p>True if the Fence was signaled. False if the timeout was reached instead.</p>
-</td>
-      </tr>
-    </tbody>
-  </table>
-  
-  
   <a id="Veldrid_GraphicsDevice_WaitForIdle_" data-uid="Veldrid.GraphicsDevice.WaitForIdle*"></a>
   <h4 id="Veldrid_GraphicsDevice_WaitForIdle" data-uid="Veldrid.GraphicsDevice.WaitForIdle">WaitForIdle()</h4>
   <div class="markdown level1 summary"><p>A blocking method that returns when all submitted <a class="xref" href="Veldrid.CommandList.html">CommandList</a> objects have fully completed.</p>
@@ -2962,15 +3142,9 @@ If false, then this method only waits until one of the Fences become signaled.</
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void WaitForIdle()</code></pre>
   </div>
-  
-  
-  <a id="Veldrid_GraphicsDevice_WaitForIdleCore_" data-uid="Veldrid.GraphicsDevice.WaitForIdleCore*"></a>
-  <h4 id="Veldrid_GraphicsDevice_WaitForIdleCore" data-uid="Veldrid.GraphicsDevice.WaitForIdleCore">WaitForIdleCore()</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected abstract void WaitForIdleCore()</code></pre>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">System.IDisposable</span>
   </div>
 </article>
           </div>

@@ -8,7 +8,7 @@
     <title>Shaders and Resources </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Shaders and Resources ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -69,29 +69,29 @@
             <article class="content wrap" id="_content" data-uid="shaders-and-resources">
 <h1 id="shaders-and-resources">Shaders and Resources</h1>
 
-<p><a class="xref" href="../api/Veldrid.Shader.html">Shaders</a> are a fundamental device resource in Veldrid. Each Shader object represents a single shader module created from specialized shader code. Shader objects are combined into shader sets which are one input into a <a class="xref" href="../api/Veldrid.Pipeline.html">Pipeline</a>. Shaders can read from several other device resources while executing.</p>
+<p><a class="xref" href="../api/Veldrid.Shader.html">Shaders</a> are a fundamental device resource in Veldrid. Each Shader object represents a single shader module created from specialized shader code. Shader objects are combined into shader sets which are one input into a <a class="xref" href="../api/Veldrid.Pipeline.html">Pipeline</a>. Shaders can read from and write to several other kinds of device resources while executing.</p>
 <h2 id="creating-a-shader">Creating a Shader</h2>
 <p>A <a class="xref" href="../api/Veldrid.ShaderDescription.html">ShaderDescription</a> takes two pieces of information. The first piece is the <a class="xref" href="../api/Veldrid.ShaderStages.html">stage</a> the shader is applicable to. The second piece of information is an API-specific byte array containing the shader code itself. The contents of this byte array depend on the specific graphics API being used (see <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_BackendType">GraphicsDevice.BackendType</a>).</p>
 <ul>
-<li>Direct3D11: <code>ShaderBytes</code> must contain HLSL bytecode or ASCII-encoded HLSL text (Shader Model 5).</li>
-<li>Vulkan: <code>ShaderBytes</code> must contain SPIR-V bytecode.</li>
-<li>OpenGL: <code>ShaderBytes</code> must contain ASCII-encoded GLSL text.</li>
-<li>OpenGL ES: <code>ShaderBytes</code> must contain ASCII-encoded GLSL ES text.</li>
-<li>Metal: <code>ShaderBytes</code> must contain UTF8-encoded Metal text or Metal bytecode (a &quot;metallib&quot; file created using the <code>metallib</code> tool). NOTE: Metal bytecode is platform-specific -- it is compiled differently for macOS and iOS, and the two versions cannot be used interchangeably. You must provide the correct version for the platform you are targetting.</li>
+<li>Direct3D11: <a class="xref" href="../api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription_ShaderBytes">ShaderBytes</a> must contain HLSL bytecode or ASCII-encoded HLSL text (Shader Model 5).</li>
+<li>Vulkan: <a class="xref" href="../api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription_ShaderBytes">ShaderBytes</a> must contain SPIR-V bytecode.</li>
+<li>OpenGL: <a class="xref" href="../api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription_ShaderBytes">ShaderBytes</a> must contain ASCII-encoded GLSL text.</li>
+<li>OpenGL ES: <a class="xref" href="../api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription_ShaderBytes">ShaderBytes</a> must contain ASCII-encoded GLSL ES text.</li>
+<li>Metal: <a class="xref" href="../api/Veldrid.ShaderDescription.html#Veldrid_ShaderDescription_ShaderBytes">ShaderBytes</a> must contain UTF8-encoded Metal text or Metal bytecode (a &quot;metallib&quot; file created using the <code>metallib</code> tool). NOTE: Metal bytecode is platform-specific -- it is compiled differently for macOS and iOS, and the two versions cannot be used interchangeably. You must provide the correct version for the platform you are targetting, or provide UTF8 Metal code to be compiled on-device at runtime.</li>
 </ul>
 <h2 id="writing-portable-shaders">Writing Portable Shaders</h2>
-<p>In most cases, you will want to write your shader code only once, in one language, and to use some form of cross-compilation or translation to automatically generate the other shader languages. See the <a class="xref" href="portable-shaders.html">Portable Shaders</a> article for more information.</p>
+<p>In most cases, you will want to write your shader code only once, in a single language, and to use some form of cross-compilation or translation to automatically generate the other shader languages. The <a href="https://github.com/mellinoe/veldrid-spirv">Veldrid.SPIRV</a> library provides support for using SPIR-V bytecode in all Veldrid backends using <a href="https://github.com/KhronosGroup/SPIRV-Cross">SPIRV-Cross</a>, and is the recommended portable shader solution. See the <a class="xref" href="portable-shaders.html">Portable Shaders</a> article for more options and information.</p>
 <h2 id="specialization-constants">Specialization Constants</h2>
 <p>Veldrid 4.4.0 introduces the concept of &quot;Specialization Constants&quot;, which enable you to create Shaders with parameterized behavior that can be &quot;specialized&quot; when a <a class="xref" href="../api/Veldrid.Pipeline.html">Pipeline</a> is created, with no runtime overhead. See the <a class="xref" href="specialization-constants.html">Specialization Constants</a> article for more information.</p>
 <h2 id="shader-resources">Shader Resources</h2>
 <p>Shader objects have a unique relationship with <a class="xref" href="../api/Veldrid.ResourceLayout.html">ResourceLayouts</a> and <a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSets</a>. When creating a Pipeline, the provided <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts">ResourceLayouts</a> must match the actual resource types that are specified in the shader code.</p>
-<p>ResourceLayouts merely define the layout of resources expected by a set of shaders. When draw commands are executed, the actual shader resources (DeviceBuffers, TextureViews, and Samplers) are determined based on the CommandList&#39;s currently-bound <a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSets</a>.</p>
-<p>ResourceLayouts themselves contain a set of one-or-more resource elements. Additionally, multiple ResourceLayout objects can be used to define the inputs of a shader set. When this is done, each ResourceLayout must be matched by a corresponding ResourceSet containing the appropriate resource types. ResourceSet objects are bound to a particular slot. The slot corresponds to the index of the matching ResourceLayout given in the <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts">ResourceLayouts</a> field of the <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html">GraphicsPipelineDescription</a> or <a class="xref" href="../api/Veldrid.ComputePipelineDescription.html">ComputePipelineDescription</a>.</p>
-<p>Generally, it is advisable to group resources into sets and layouts which are common or shared. For example, it is a good idea to group the camera&#39;s view and projection matrix, and other scene-level information, into a single ResourceLayout and shared ResourceSet. This allows many objects to be rendered using the same bound ResourceSet. Specific object Pipelines can utilize extra ResourceLayouts and ResourceSets to accomodate their specific rendering requirements while still utilizing shared resources when it makes sense. Changing ResourceSets can be a costly operation, so re-using them as much as possible can help performance.</p>
+<p>ResourceLayouts merely define the layout of resources expected by a set of shaders. When draw commands are executed, the actual shader resources (DeviceBuffers, TextureViews, and Samplers) are determined based on the <a class="xref" href="command-lists.html">CommandList&#39;s</a> currently-bound <a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSets</a>.</p>
+<p>Each ResourceLayout contains a set of one-or-more resource elements. Additionally, multiple ResourceLayout objects can be used to define the inputs of a shader set. When this is done, each ResourceLayout must be matched by a corresponding ResourceSet containing the appropriate resource types. ResourceSet objects are bound to a particular slot on a <a class="xref" href="command-lists.html">CommandList</a>. The slot corresponds to the index of the matching ResourceLayout given in the <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts">ResourceLayouts</a> array of the <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html">GraphicsPipelineDescription</a> or <a class="xref" href="../api/Veldrid.ComputePipelineDescription.html">ComputePipelineDescription</a>.</p>
+<p>Generally, it is advisable to group resources into sets and layouts which are common or shared. For example, it is a good idea to group the camera&#39;s view and projection matrix, and other scene-level information, into a single ResourceLayout and shared ResourceSet. This allows many objects to be rendered using the same bound ResourceSet. Specific object Pipelines can utilize extra ResourceLayouts and ResourceSets to accomodate their specific rendering requirements while still utilizing shared resources when it makes sense. Changing ResourceSets can be a costly operation, so re-using them as much as possible can help avoid unnecessary work for the GPU and result in improved performance.</p>
 <h2 id="types-of-resources">Types of Resources</h2>
-<p>There are many types of shader resources available in Veldrid.</p>
+<p>There are many types of shader resources available in Veldrid. There is some overlap between different types of resources, and many techniques can be accomplished using several different combinations of resources. There are a variety of tradeoffs that make some resource types better for certain applications than others. For example, some types of resources have smaller storage limits but are faster to access. Some resources have unlimited storage limits, but can be slower to access. Some resources can be both read to and written from, but are generally slower to access and can only be used in certain Shader stages. Understanding the characteristics of each kind of resource is important to achieving optimal performance using Veldrid.</p>
 <h3 id="uniform-buffer">Uniform Buffer</h3>
-<p>A uniform <a class="xref" href="../api/Veldrid.DeviceBuffer.html">DeviceBuffer</a> is a resource used to store a small-to-medium amount of data for a shader to access. Uniform buffers are commonly used to store per-object transformations, camera transformations and properties, and other information.</p>
+<p>A uniform <a class="xref" href="../api/Veldrid.DeviceBuffer.html">DeviceBuffer</a> is a resource used to store a small-to-medium amount of data for a shader to access. Uniform buffers are commonly used to store per-object transformations, camera transformations and properties, and other miscellaneous information. Uniform buffers are very fast to access.</p>
 <p>A DeviceBuffer must be created with <a class="xref" href="../api/Veldrid.BufferUsage.html">BufferUsage.UniformBuffer</a> to be used as a uniform buffer.</p>
 <p>Uniform buffers correspond to the following:</p>
 <ul>
@@ -103,18 +103,23 @@
 <li>Metal: <code>constant T&amp; value</code> variables.</li>
 </ul>
 <h3 id="structured-buffer">Structured Buffer</h3>
-<p>A structured buffer is another kind of DeviceBuffer resource available to shaders. Like uniform buffers, they can be used to store arbitrary data, but are generally much larger. Structured buffers are used to store a large amount of a single kind of value (a &quot;structure&quot;). The size of the structure that is stored must be designated upon DeviceBuffer creation (see <a class="xref" href="../api/Veldrid.BufferDescription.html#Veldrid_BufferDescription_StructureByteStride">BufferDescription.StructureByteStride</a>).</p>
+<p>A structured buffer is another kind of DeviceBuffer resource available to shaders. Like uniform buffers, they can be used to store arbitrary data, but are generally much larger. Structured buffers are used to store a large number of a single kind of value (a &quot;structure&quot;). The size of the structure that is stored must be designated upon DeviceBuffer creation (see <a class="xref" href="../api/Veldrid.BufferDescription.html#Veldrid_BufferDescription_StructureByteStride">BufferDescription.StructureByteStride</a>).</p>
 <p>Structured buffers may be read-only or read-write. Read-write buffers can be written to in the fragment and compute stages, allowing arbitrary data to be output by shaders. Read-only structured buffers must be created with the <a class="xref" href="../api/Veldrid.BufferUsage.html">BufferUsage.StructuredBufferReadOnly</a> flag, and read-write structured buffers must be created with the <a class="xref" href="../api/Veldrid.BufferUsage.html">BufferUsage.StructuredBufferReadWrite</a> flag.</p>
+<p>Structured buffers have a much larger size limit than uniform buffers (generally, the size is unlimited), but are slightly slower to access.</p>
 <p>Structured buffers correspond to the following:</p>
 <ul>
 <li>HLSL: <code>StructuredBuffer&lt;T&gt;</code> or <code>RWStructuredBuffer&lt;T&gt;</code> objects.</li>
 <li>GLSL: <code>readonly</code> or normal &quot;buffer blocks&quot;.</li>
 <li>Metal: <code>device T* value</code> variables.</li>
 </ul>
+<h3 id="devicebufferrange">DeviceBufferRange</h3>
+<p>A <a class="xref" href="../api/Veldrid.DeviceBufferRange.html">DeviceBufferRange</a> is a simple wrapper struct that describes a range of a <a class="xref" href="../api/Veldrid.DeviceBuffer.html">DeviceBuffer</a>. When included in a ResourceSet, a DeviceBufferRange makes only a subset of the DeviceBuffer available to be read from or written to by the shader. This is useful when you want to store multiple distinct blocks in a DeviceBuffer and use each in different draw calls, or if you want a compute shader invocation to only fill in a small portion of a buffer.</p>
 <h3 id="textureview">TextureView</h3>
 <p>A <a class="xref" href="../api/Veldrid.TextureView.html">TextureView</a> is a resource which gives a shader read-only or read-write access to a <a class="xref" href="../api/Veldrid.Texture.html">Texture</a>. A TextureView allows a subset of the Texture object&#39;s dimensions to be accessible, enabling a single slice of an array texture to be read from or written to, for example.</p>
+<p>It is also possible to bind a <a class="xref" href="../api/Veldrid.Texture.html">Texture</a> directly into a slot expecting a TextureView. Doing this is functionally equivalent to binding a TextureView that covers the Texture&#39;s full range of mip levels and array layers, with the same PixelFormat.</p>
 <p>Read-only TextureView objects must have a <a class="xref" href="../api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription_Target">Target</a> that was created with the <a class="xref" href="../api/Veldrid.TextureUsage.html">TextureUsage.Sampled</a> flag. Read-write TextureViews must target a Texture created with the <a class="xref" href="../api/Veldrid.TextureUsage.html">TextureUsage.Storage</a> flag.</p>
-<p>Read-only TextureViews correspond to the following:</p>
+<p>TextureViews can have a different <a class="xref" href="../api/Veldrid.PixelFormat.html">PixelFormat</a> from the Texture they target, with some restrictions. This allows you to reinterpret Texture data between different storage types (UNorm, SNorm, UInt, SInt, Float). For views over uncompressed Textures, the overall size and number of components in the view&#39;s format must be equal to the underlying Texture&#39;s format. For views over compressed Textures, it is only possible to use the underlying Texture&#39;s exact PixelFormat or its sRGB/non-sRGB counterpart.</p>
+<p>Read-only TextureViews correspond to the following types in various shader languages:</p>
 <ul>
 <li>HLSL: &quot;Texture&quot; objects (<code>Texture2D</code>, <code>Texture2DArray</code>, <code>TextureCube</code>, etc.).</li>
 <li>GLSL (OpenGL): &quot;sampler&quot; objects (<code>sampler2D</code>, <code>sampler2DArray</code>, <code>samplerCube</code>, etc.).</li>
@@ -124,20 +129,23 @@
 <p>Read-write TextureViews correspond to the following:</p>
 <ul>
 <li>HLSL: <code>RWTexture&lt;T&gt;</code>.</li>
-<li>GLSL: uniform image variables.</li>
-<li>Metal: &quot;texture&quot; objects with <code>access::read_write</code>.</li>
+<li>GLSL: uniform <code>image</code> variables.</li>
+<li>Metal: &quot;texture&quot; objects (<code>texture2d&lt;T&gt;</code>, <code>texture2d_ms&lt;T&gt;</code>, etc.) with <code>access::read_write</code>.</li>
 </ul>
 <h3 id="sampler">Sampler</h3>
 <p>A <a class="xref" href="../api/Veldrid.Sampler.html">Sampler</a> is a resource which controls how TextureViews are sampled. See <a class="xref" href="../api/Veldrid.SamplerDescription.html">SamplerDescription</a> for the set of properties governing their behavior.</p>
-<p>Several shared Samplers are available as properties on <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a>. These can be used when a common type of Sampler is needed and you don&#39;t want to manage the lifetime of a shared Sampler.</p>
-<p>There is an important caveat regarding OpenGL support for Sampler objects and how they can be bound to a Pipeline. Before Vulkan, GLSL did not allow Sampler object state to be separated from Textures. GLSL &quot;sampler&quot; objects encapsulate both, and the GL objects must be bound to a shared set of texture units. TextureViews and Samplers are separated in Veldrid, and these objects must be bound separately to a Pipeline. This means it is not possible to represent Veldrid&#39;s abstraction fully in the OpenGL backend: when a Sampler object appears in a ResourceLayout list, it applies to all of the TextureView objects before it (until the previous Sampler in the list). This means that if you need to sample the same TextureView with two different Samplers, then you need to declare two TextureViews with two Samplers in your ResourceLayout.</p>
+<p>Several shared Samplers are available as properties on <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a>. These can be used when a common type of Sampler is needed and you don&#39;t want to manage the lifetime of a shared Sampler yourself.</p>
+<p>Anisotropic filtering, while very common, is not supported on all <a class="xref" href="../api/Veldrid.GraphicsDevice.html">GraphicsDevice</a> instances. <a class="xref" href="../api/Veldrid.GraphicsDeviceFeatures.html#Veldrid_GraphicsDeviceFeatures_SamplerAnisotropy">GraphicsDeviceFeatures.SamplerAnisotropy</a> indicates whether anisotropic filtering is supported.</p>
+<p>There is an important caveat regarding OpenGL support for Sampler objects and how they can be bound to a Pipeline. Before Vulkan, GLSL did not allow Sampler object state to be separated from Textures. GLSL &quot;sampler&quot; objects encapsulate both, and the GL objects must be bound to a shared set of texture units. TextureViews and Samplers are separated in Veldrid, and these objects must be bound separately to a Pipeline. This means it is not possible to represent Veldrid&#39;s abstraction fully in the OpenGL backend. When a Sampler object appears in a ResourceLayout list, it applies to all of the TextureView objects before it (until the previous Sampler in the list). This means that if you need to sample the same TextureView with two different Samplers, then you need to declare two TextureViews with two Samplers in your ResourceLayout.</p>
 <h2 id="mapping-hlslglsl-resources-to-resourcelayouts">Mapping HLSL/GLSL resources to ResourceLayouts</h2>
 <p>The layout system is convention-based, and relies on shader code being authored in a particular way for resource slots to match.</p>
 <ul>
-<li><p>Vulkan: ResourceLayouts match very closely with regular Vulkan conventions. In a Vulkan shader, a uniform&#39;s &quot;set&quot; layout specifies the ResourceLayout index in the overall <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts">ResourceLayouts</a> array. The &quot;binding&quot; layout specifies the specific resource within that ResourceLayout identified by the &quot;set&quot;. For example:</p>
-<pre><code>layout(set = 0, binding = 1) uniform View
-</code></pre><p>defines a uniform belonging to binding 1 (of the <a class="xref" href="../api/Veldrid.ResourceLayoutDescription.html#Veldrid_ResourceLayoutDescription_Elements">ResourceLayoutElementDescription</a> array), of set 0 (of the <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts">ResourceLayouts</a> array).</p>
-</li>
+<li>Vulkan/SPIR-V: ResourceLayouts match very closely with regular Vulkan and SPIR-V conventions. In a Vulkan shader, a uniform&#39;s &quot;set&quot; layout specifies the ResourceLayout index in the overall <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts">ResourceLayouts</a> array. The &quot;binding&quot; layout specifies the specific resource within that ResourceLayout identified by the &quot;set&quot;. For example:
+<code>layout(set = 0, binding = 1) uniform View</code>
+defines a uniform belonging to binding 1 (of the <a class="xref" href="../api/Veldrid.ResourceLayoutDescription.html#Veldrid_ResourceLayoutDescription_Elements">ResourceLayoutElementDescription</a> array), of set 0 (of the <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts">ResourceLayouts</a> array).</li>
+</ul>
+<p>GLSL is used in the example above, but the same principle applies to any SPIR-V source language. When compiling HLSL shaders to SPIR-V for use with Veldrid, the <code>[[vk::binding(&lt;binding&gt;, &lt;set&gt;)]]</code> attribute should be used to declare the resource set and binding for each resource. It is important to note that in this attribute, the binding index appears first, and the set index appears second.</p>
+<ul>
 <li><p>Direct3D 11: Resources are assigned HLSL registers based on their positions in the <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html#Veldrid_GraphicsPipelineDescription_ResourceLayouts">ResourceLayouts</a> array first, and then by their position in the <a class="xref" href="../api/Veldrid.ResourceLayoutDescription.html#Veldrid_ResourceLayoutDescription_Elements">ResourceLayoutElementDescriptions</a> array. Each resource type (texture, sampler, uniform) is assigned an increasing integer value for its register number. For example, given these two ResourceLayouts:</p>
 <p>  <strong>Layout 0</strong></p>
 <table>
@@ -232,7 +240,7 @@ SamplerState Sampler1 : register(s1);
 </li>
 </ul>
 <h2 id="resourcebindingmodelimproved">ResourceBindingModel.Improved</h2>
-<p>Veldrid 4.2.0 introduces <a class="xref" href="../api/Veldrid.ResourceBindingModel.html">ResourceBindingModel.Improved</a>, which is an optional flag specified in <a class="xref" href="../api/Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a>, or individually in a particular graphics <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html">Pipeline</a>. The only affect this flag does is to alter the assignment of vertex buffer indices for Metal shaders. Instead of being assigned at the beginning of the buffer list (e.g. slots 0, 1, 2), they are instead assigned to the END of the buffer list. For example, if your Pipeline uses 3 uniform buffers and and two vertex buffers, the indices will be as follows:</p>
+<p>Veldrid 4.2.0 introduces <a class="xref" href="../api/Veldrid.ResourceBindingModel.html">ResourceBindingModel.Improved</a>, which is an optional flag specified in <a class="xref" href="../api/Veldrid.GraphicsDeviceOptions.html">GraphicsDeviceOptions</a>, or individually in a particular graphics <a class="xref" href="../api/Veldrid.GraphicsPipelineDescription.html">Pipeline</a>. The only affect this flag has is to alter the assignment of vertex buffer indices for Metal shaders. Instead of being assigned at the beginning of the buffer list (e.g. slots 0, 1, 2), they are instead assigned to the END of the buffer list. For example, if your Pipeline uses 3 uniform buffers and and two vertex buffers, the indices will be as follows:</p>
 <p><strong>ResourceBindingModel.Default</strong></p>
 <table>
 <thead>

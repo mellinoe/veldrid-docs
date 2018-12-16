@@ -12,7 +12,7 @@ There are a few simple steps you should follow to get up and running on Android.
 
 1. Create a "SurfaceView" subclass. Veldrid works primarily with Android "Surface" objects. To obtain one of those, you need to inherit from `Android.Views.SurfaceView` and implement the `Android.Views.ISurfaceHolderCallback` interface. This will give you a notification when the Android Surface is actually ready to use (`void SurfaceCreated(ISurfaceHolder holder)`).
 
-2. Create an Android [SwapchainSource](xref:Veldrid.SwapchainSource). Inside of the "SurfaceCreated" callback, you should call [SwapchainSource.CreateAndroidSurface](xref:Veldrid.SwapchainSource#Veldrid_SwapchainSource_CreateAndroidSurface_IntPtr_IntPtr_). This will allow you to create an appropriate [SwapchainDescription](xref:Veldrid.SwapchainDescription) describing a Swapchain that renders into your Android view.
+2. Create an Android [SwapchainSource](xref:Veldrid.SwapchainSource). Inside of the "SurfaceCreated" callback, you should call [SwapchainSource.CreateAndroidSurface](xref:Veldrid.SwapchainSource#Veldrid_SwapchainSource_CreateAndroidSurface_System_IntPtr_System_IntPtr_). This will allow you to create an appropriate [SwapchainDescription](xref:Veldrid.SwapchainDescription) describing a Swapchain that renders into your Android view.
 
 3. Create a GraphicsDevice. Depending on what your device supports, you can either use Vulkan or OpenGL ES. Vulkan support is still rare on current Android devices, but is becoming more common. The majority of devices support OpenGL ES 3.0+. With your SwapchainDescription from the last step, use one of the following methods to create a GraphicsDevice:
 

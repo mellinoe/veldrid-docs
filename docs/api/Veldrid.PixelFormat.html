@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum PixelFormat
    ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -77,7 +77,7 @@
 Each name is a compound identifier, where each component denotes a name and a number of bits used to store that
 component. The final component identifies the storage type of each component. &quot;Float&quot; identifies a signed, floating-point
 type, UNorm identifies an unsigned integer type which is normalized, meaning it occupies the full space of the integer
-type.</p>
+type. The SRgb suffix for normalized integer formats indicates that the RGB components are stored in sRGB format.</p>
 </div>
   <div class="markdown level0 conceptual"></div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Veldrid.html">Veldrid</a></h6>
@@ -102,8 +102,20 @@ type.</p>
 </td>
       </tr>
       <tr>
+        <td id="Veldrid_PixelFormat_B8_G8_R8_A8_UNorm_SRgb">B8_G8_R8_A8_UNorm_SRgb</td>
+        <td><p>BGRA component order. Each component is an 8-bit unsigned normalized integer.
+This is an sRGB format.</p>
+</td>
+      </tr>
+      <tr>
         <td id="Veldrid_PixelFormat_BC1_Rgb_UNorm">BC1_Rgb_UNorm</td>
         <td><p>BC1 block compressed format with no alpha.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_BC1_Rgb_UNorm_SRgb">BC1_Rgb_UNorm_SRgb</td>
+        <td><p>BC1 block compressed format with no alpha.
+This is an sRGB format.</p>
 </td>
       </tr>
       <tr>
@@ -112,13 +124,31 @@ type.</p>
 </td>
       </tr>
       <tr>
+        <td id="Veldrid_PixelFormat_BC1_Rgba_UNorm_SRgb">BC1_Rgba_UNorm_SRgb</td>
+        <td><p>BC1 block compressed format with a single-bit alpha channel.
+This is an sRGB format.</p>
+</td>
+      </tr>
+      <tr>
         <td id="Veldrid_PixelFormat_BC2_UNorm">BC2_UNorm</td>
         <td><p>BC2 block compressed format.</p>
 </td>
       </tr>
       <tr>
+        <td id="Veldrid_PixelFormat_BC2_UNorm_SRgb">BC2_UNorm_SRgb</td>
+        <td><p>BC2 block compressed format.
+This is an sRGB format.</p>
+</td>
+      </tr>
+      <tr>
         <td id="Veldrid_PixelFormat_BC3_UNorm">BC3_UNorm</td>
         <td><p>BC3 block compressed format.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_BC3_UNorm_SRgb">BC3_UNorm_SRgb</td>
+        <td><p>BC3 block compressed format.
+This is an sRGB format.</p>
 </td>
       </tr>
       <tr>
@@ -144,6 +174,12 @@ type.</p>
       <tr>
         <td id="Veldrid_PixelFormat_BC7_UNorm">BC7_UNorm</td>
         <td><p>BC7 block compressed format.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_BC7_UNorm_SRgb">BC7_UNorm_SRgb</td>
+        <td><p>BC7 block compressed format.
+This is an sRGB format.</p>
 </td>
       </tr>
       <tr>
@@ -332,6 +368,12 @@ and the 10-bit B component occupies bits 22..31. Each value is an unsigned float
       <tr>
         <td id="Veldrid_PixelFormat_R8_G8_B8_A8_UNorm">R8_G8_B8_A8_UNorm</td>
         <td><p>RGBA component order. Each component is an 8-bit unsigned normalized integer.</p>
+</td>
+      </tr>
+      <tr>
+        <td id="Veldrid_PixelFormat_R8_G8_B8_A8_UNorm_SRgb">R8_G8_B8_A8_UNorm_SRgb</td>
+        <td><p>RGBA component order. Each component is an 8-bit unsigned normalized integer.
+This is an sRGB format.</p>
 </td>
       </tr>
       <tr>

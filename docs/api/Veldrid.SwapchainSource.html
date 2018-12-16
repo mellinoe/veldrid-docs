@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class SwapchainSource
    ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -118,7 +118,7 @@ A SwapchainSource is used to describe a Swapchain (see <a class="xref" href="Vel
   
   
   <a id="Veldrid_SwapchainSource_CreateAndroidSurface_" data-uid="Veldrid.SwapchainSource.CreateAndroidSurface*"></a>
-  <h4 id="Veldrid_SwapchainSource_CreateAndroidSurface_IntPtr_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateAndroidSurface(IntPtr,IntPtr)">CreateAndroidSurface(IntPtr, IntPtr)</h4>
+  <h4 id="Veldrid_SwapchainSource_CreateAndroidSurface_System_IntPtr_System_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateAndroidSurface(System.IntPtr,System.IntPtr)">CreateAndroidSurface(IntPtr, IntPtr)</h4>
   <div class="markdown level1 summary"><p>Creates a new SwapchainSource for the given Android Surface.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -137,13 +137,13 @@ A SwapchainSource is used to describe a Swapchain (see <a class="xref" href="Vel
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">surfaceHandle</span></td>
         <td><p>The handle of the Android Surface.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">jniEnv</span></td>
         <td><p>The Java Native Interface Environment handle.</p>
 </td>
@@ -169,8 +169,53 @@ A SwapchainSource is used to describe a Swapchain (see <a class="xref" href="Vel
   </table>
   
   
+  <a id="Veldrid_SwapchainSource_CreateNSView_" data-uid="Veldrid.SwapchainSource.CreateNSView*"></a>
+  <h4 id="Veldrid_SwapchainSource_CreateNSView_System_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateNSView(System.IntPtr)">CreateNSView(IntPtr)</h4>
+  <div class="markdown level1 summary"><p>Creates a new SwapchainSource for the given NSView.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SwapchainSource CreateNSView(IntPtr nsView)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IntPtr</span></td>
+        <td><span class="parametername">nsView</span></td>
+        <td><p>A pointer to an NSView.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.SwapchainSource.html">SwapchainSource</a></td>
+        <td><p>A new SwapchainSource which can be used to create a Metal <a class="xref" href="Veldrid.Swapchain.html">Swapchain</a> for the given NSView.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_SwapchainSource_CreateNSWindow_" data-uid="Veldrid.SwapchainSource.CreateNSWindow*"></a>
-  <h4 id="Veldrid_SwapchainSource_CreateNSWindow_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateNSWindow(IntPtr)">CreateNSWindow(IntPtr)</h4>
+  <h4 id="Veldrid_SwapchainSource_CreateNSWindow_System_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateNSWindow(System.IntPtr)">CreateNSWindow(IntPtr)</h4>
   <div class="markdown level1 summary"><p>Creates a new SwapchainSource for the given NSWindow.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -189,7 +234,7 @@ A SwapchainSource is used to describe a Swapchain (see <a class="xref" href="Vel
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">nsWindow</span></td>
         <td><p>A pointer to an NSWindow.</p>
 </td>
@@ -215,7 +260,7 @@ A SwapchainSource is used to describe a Swapchain (see <a class="xref" href="Vel
   
   
   <a id="Veldrid_SwapchainSource_CreateUIView_" data-uid="Veldrid.SwapchainSource.CreateUIView*"></a>
-  <h4 id="Veldrid_SwapchainSource_CreateUIView_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateUIView(IntPtr)">CreateUIView(IntPtr)</h4>
+  <h4 id="Veldrid_SwapchainSource_CreateUIView_System_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateUIView(System.IntPtr)">CreateUIView(IntPtr)</h4>
   <div class="markdown level1 summary"><p>Creates a new SwapchainSource for the given UIView.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -234,7 +279,7 @@ A SwapchainSource is used to describe a Swapchain (see <a class="xref" href="Vel
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">uiView</span></td>
         <td><p>The UIView&apos;s native handle.</p>
 </td>
@@ -314,7 +359,7 @@ or SwapChainBackgroundPanel contained in your application window.</p>
   
   
   <a id="Veldrid_SwapchainSource_CreateWin32_" data-uid="Veldrid.SwapchainSource.CreateWin32*"></a>
-  <h4 id="Veldrid_SwapchainSource_CreateWin32_IntPtr_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateWin32(IntPtr,IntPtr)">CreateWin32(IntPtr, IntPtr)</h4>
+  <h4 id="Veldrid_SwapchainSource_CreateWin32_System_IntPtr_System_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateWin32(System.IntPtr,System.IntPtr)">CreateWin32(IntPtr, IntPtr)</h4>
   <div class="markdown level1 summary"><p>Creates a new SwapchainSource for a Win32 window.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -333,13 +378,13 @@ or SwapChainBackgroundPanel contained in your application window.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">hwnd</span></td>
         <td><p>The Win32 window handle.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">hinstance</span></td>
         <td><p>The Win32 instance handle.</p>
 </td>
@@ -365,7 +410,7 @@ or SwapChainBackgroundPanel contained in your application window.</p>
   
   
   <a id="Veldrid_SwapchainSource_CreateXlib_" data-uid="Veldrid.SwapchainSource.CreateXlib*"></a>
-  <h4 id="Veldrid_SwapchainSource_CreateXlib_IntPtr_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateXlib(IntPtr,IntPtr)">CreateXlib(IntPtr, IntPtr)</h4>
+  <h4 id="Veldrid_SwapchainSource_CreateXlib_System_IntPtr_System_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateXlib(System.IntPtr,System.IntPtr)">CreateXlib(IntPtr, IntPtr)</h4>
   <div class="markdown level1 summary"><p>Creates a new SwapchainSource from the given Xlib information.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
@@ -384,13 +429,13 @@ or SwapChainBackgroundPanel contained in your application window.</p>
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">display</span></td>
         <td><p>An Xlib Display.</p>
 </td>
       </tr>
       <tr>
-        <td><span class="xref">IntPtr</span></td>
+        <td><span class="xref">System.IntPtr</span></td>
         <td><span class="parametername">window</span></td>
         <td><p>An Xlib Window.</p>
 </td>

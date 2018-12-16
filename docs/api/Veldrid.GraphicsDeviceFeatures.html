@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class GraphicsDeviceFeatures
    ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -113,6 +113,61 @@
   </div>
   <h3 id="properties">Properties
   </h3>
+  
+  
+  <a id="Veldrid_GraphicsDeviceFeatures_BufferRangeBinding_" data-uid="Veldrid.GraphicsDeviceFeatures.BufferRangeBinding*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_BufferRangeBinding" data-uid="Veldrid.GraphicsDeviceFeatures.BufferRangeBinding">BufferRangeBinding</h4>
+  <div class="markdown level1 summary"><p>Indicates whether uniform and structured buffers can be bound with an offset and a size. If false, buffer resources
+must be bound with their full range.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool BufferRangeBinding { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_GraphicsDeviceFeatures_CommandListDebugMarkers_" data-uid="Veldrid.GraphicsDeviceFeatures.CommandListDebugMarkers*"></a>
+  <h4 id="Veldrid_GraphicsDeviceFeatures_CommandListDebugMarkers" data-uid="Veldrid.GraphicsDeviceFeatures.CommandListDebugMarkers">CommandListDebugMarkers</h4>
+  <div class="markdown level1 summary"><p>Indicates whether <a class="xref" href="Veldrid.CommandList.html">CommandList</a> instances created with this device support the
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_PushDebugGroup_System_String_">PushDebugGroup(String)</a>, <a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_PopDebugGroup">PopDebugGroup()</a>, and
+<a class="xref" href="Veldrid.CommandList.html#Veldrid_CommandList_InsertDebugMarker_System_String_">InsertDebugMarker(String)</a> methods. If not, these methods will have no effect.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool CommandListDebugMarkers { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <a id="Veldrid_GraphicsDeviceFeatures_ComputeShader_" data-uid="Veldrid.GraphicsDeviceFeatures.ComputeShader*"></a>
@@ -466,7 +521,7 @@ If false, it is an error to attempt to use a non-zero bias value.</p>
   <a id="Veldrid_GraphicsDeviceFeatures_SubsetTextureView_" data-uid="Veldrid.GraphicsDeviceFeatures.SubsetTextureView*"></a>
   <h4 id="Veldrid_GraphicsDeviceFeatures_SubsetTextureView" data-uid="Veldrid.GraphicsDeviceFeatures.SubsetTextureView">SubsetTextureView</h4>
   <div class="markdown level1 summary"><p>Indicates whether a <a class="xref" href="Veldrid.TextureView.html">TextureView</a> can be created which does not view the full set of mip levels and array
-layers contained in its target Texture.</p>
+layers contained in its target Texture, or uses a different <a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a> from the underlying Texture.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>

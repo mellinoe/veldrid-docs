@@ -5,11 +5,47 @@
   "files": [
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.BackendInfoD3D11.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.BackendInfoD3D11.html",
+          "hash": "npuJF1wU822bUZWHGiOsSg=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.BackendInfoOpenGL.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.BackendInfoOpenGL.html",
+          "hash": "Kn5x1SIuGQt1bLSzKXxi3A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.BackendInfoVulkan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.BackendInfoVulkan.html",
+          "hash": "I9NtNOKfQvxuvRkMvyJxcQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veldrid.BindableResource.yml",
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.BindableResource.html",
-          "hash": "OWdKsDv5dXiWGhJWmOzeJg=="
+          "hash": "nBojsLFi1rBc6Xrl/uzEIg=="
         }
       },
       "is_incremental": true,
@@ -21,7 +57,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.BlendAttachmentDescription.html",
-          "hash": "94B/Bm7anil0oC5gNH8dWA=="
+          "hash": "db06P4GeaxAmYk1praFH3g=="
         }
       },
       "is_incremental": true,
@@ -33,7 +69,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.BlendFactor.html",
-          "hash": "ptgeDbY8IEnkcGCPJOHrMQ=="
+          "hash": "fgXA15gNS8pVdQav6twWfw=="
         }
       },
       "is_incremental": true,
@@ -45,7 +81,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.BlendFunction.html",
-          "hash": "UazS3R/K3ROIs3zeIf8W4w=="
+          "hash": "GF5iRo2FOXr/GzvWAGxeew=="
         }
       },
       "is_incremental": true,
@@ -57,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.BlendStateDescription.html",
-          "hash": "SvKpdrmWan7WLim0V9sn7w=="
+          "hash": "kuh/1umYhrE6qd6NeNza8A=="
         }
       },
       "is_incremental": true,
@@ -69,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Buffer.html",
-          "hash": "MqoyWmqFtcmxKZtS3zXuBg=="
+          "hash": "4IAZnrakc+2537ohhASzfQ=="
         }
       },
       "is_incremental": true,
@@ -81,7 +117,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.BufferDescription.html",
-          "hash": "S1UpEoEXMDX7noFEvUCncQ=="
+          "hash": "kBk4vRIE0ShCcVQAUcuRvw=="
         }
       },
       "is_incremental": true,
@@ -93,7 +129,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.BufferUsage.html",
-          "hash": "KbixTPF15rqY6ZgIbpWs9w=="
+          "hash": "mfQeHVy/uTeE18MBiwxf8Q=="
         }
       },
       "is_incremental": true,
@@ -105,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.CommandList.html",
-          "hash": "6GMsAde8Y1/+8eladhvWJg=="
+          "hash": "Ns9OAhVJQwC4VTWLr0Wa0g=="
         }
       },
       "is_incremental": true,
@@ -117,7 +153,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.CommandListDescription.html",
-          "hash": "AZNQy1p6CVCxLICc3z7+cg=="
+          "hash": "nX92MzDb7iWgwWjgxBsQzg=="
         }
       },
       "is_incremental": true,
@@ -129,7 +165,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ComparisonKind.html",
-          "hash": "AgW43fetlgDUUENtQvQOjg=="
+          "hash": "Yb3SzCWPxrvOAxA6VptyAw=="
         }
       },
       "is_incremental": true,
@@ -141,7 +177,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ComputePipelineDescription.html",
-          "hash": "brRXx5ssqIEEECio9D+jXQ=="
+          "hash": "0x8y9e0LoqQoPecftsNo/Q=="
         }
       },
       "is_incremental": true,
@@ -153,7 +189,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.CubeFace.html",
-          "hash": "JpiJPX8m4WRz7F768Crn8g=="
+          "hash": "lOYm0ODN7s24kOYlDf2Ydw=="
         }
       },
       "is_incremental": true,
@@ -165,7 +201,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.DepthStencilStateDescription.html",
-          "hash": "n0CHmZCzbq00QvsTzjNZeA=="
+          "hash": "EFNPM9GFEFtrBCLXHGEqYg=="
         }
       },
       "is_incremental": true,
@@ -177,7 +213,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.DeviceBuffer.html",
-          "hash": "ykyRk3BFcq+VEUL5vdQkiQ=="
+          "hash": "EVoB1dkAEqug5PlDqjFR5A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.DeviceBufferRange.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.DeviceBufferRange.html",
+          "hash": "vBqACoEY6njKLOrDDI4Evw=="
         }
       },
       "is_incremental": true,
@@ -189,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.DeviceResource.html",
-          "hash": "zPtUaPjAOYxGQqwVRpvZhw=="
+          "hash": "meenWA8ia6oXi/H60KbZyg=="
         }
       },
       "is_incremental": true,
@@ -201,7 +249,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.FaceCullMode.html",
-          "hash": "W4TOl17SIKZd+cUexiIy5w=="
+          "hash": "C0ALrsIGSZghhfdc6Ok5ww=="
         }
       },
       "is_incremental": true,
@@ -213,7 +261,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Fence.html",
-          "hash": "99sK5u0h/HJIjN9YCH9qLA=="
+          "hash": "9ehH113a8tfAQbE66JRmbg=="
         }
       },
       "is_incremental": true,
@@ -225,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Framebuffer.html",
-          "hash": "f1wK997eHzRT5hLBHIKdWw=="
+          "hash": "dcV01JYk/QeWt4pN+pxlbQ=="
         }
       },
       "is_incremental": true,
@@ -237,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.FramebufferAttachment.html",
-          "hash": "3UkBYhiAaIQgBxxHuHixBg=="
+          "hash": "N1MtyPHo7fnQkGSHvrXgug=="
         }
       },
       "is_incremental": true,
@@ -249,7 +297,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.FramebufferAttachmentDescription.html",
-          "hash": "Tu/Ri7kNQ5/u4xq54SoCdw=="
+          "hash": "cL1sritCOuqYrdSAL5/6Eg=="
         }
       },
       "is_incremental": true,
@@ -261,7 +309,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.FramebufferDescription.html",
-          "hash": "gT09zr3FgxyBHfgnXxnW0A=="
+          "hash": "PSo+/oCJsVPDmQoA/1QE5Q=="
         }
       },
       "is_incremental": true,
@@ -273,7 +321,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.FrontFace.html",
-          "hash": "t0vYV50h1lsHoQVbFW3LwQ=="
+          "hash": "zGglPmjH29BVztDbbKbXhg=="
         }
       },
       "is_incremental": true,
@@ -285,7 +333,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.GraphicsBackend.html",
-          "hash": "6Hdz3vwI8A1joLyaljcnXQ=="
+          "hash": "/8uImlRmvnySGz+K1X2aTA=="
         }
       },
       "is_incremental": true,
@@ -297,7 +345,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.GraphicsDevice.html",
-          "hash": "BNLbOUWrOx758GmyEDbSEg=="
+          "hash": "+GTl4R592hJKG2H0/DGrKg=="
         }
       },
       "is_incremental": true,
@@ -309,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.GraphicsDeviceFeatures.html",
-          "hash": "1/XYSqGU1rS8Kwl+uBjZpg=="
+          "hash": "6psXVkFM9j+ETK8k1vmO3g=="
         }
       },
       "is_incremental": true,
@@ -321,7 +369,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.GraphicsDeviceOptions.html",
-          "hash": "YDhfc+8Y2TzGC6bI+zXa+w=="
+          "hash": "9xEYo0nTDWBEj6k9BX2B4w=="
         }
       },
       "is_incremental": true,
@@ -333,7 +381,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.GraphicsPipelineDescription.html",
-          "hash": "lfqVxRQRGbN4HjA2cWBx/g=="
+          "hash": "jlJecY+XP50e7ZGSDYoC5w=="
         }
       },
       "is_incremental": true,
@@ -345,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.IndexFormat.html",
-          "hash": "pAMS5zNo7L9lA7qqTt2Jhw=="
+          "hash": "p4UbKItzQ2fqlr35lf5XWQ=="
         }
       },
       "is_incremental": true,
@@ -357,7 +405,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.IndirectDispatchArguments.html",
-          "hash": "BSn+3mJ5bEZfYeY661hhnQ=="
+          "hash": "u5boS/dhtWau6p0d9wcCeA=="
         }
       },
       "is_incremental": true,
@@ -369,7 +417,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.IndirectDrawArguments.html",
-          "hash": "Br3jB9s2dMKNYDiyjCM/4g=="
+          "hash": "6P2OPhHqn4gRf0US5i23Kw=="
         }
       },
       "is_incremental": true,
@@ -381,7 +429,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.IndirectDrawIndexedArguments.html",
-          "hash": "+q1a/2as07Zk6nLjs4pliw=="
+          "hash": "p5MBLT9RVuxx1IG5JAW/pQ=="
         }
       },
       "is_incremental": true,
@@ -393,7 +441,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.MapMode.html",
-          "hash": "oHuvX1V356Lm/WQLPK/Z8g=="
+          "hash": "aM33zeR+LGDq2kIHG81qQA=="
         }
       },
       "is_incremental": true,
@@ -405,7 +453,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.MappableResource.html",
-          "hash": "9d1GDNNyc9t82sb1gIwy7w=="
+          "hash": "2Nudpo22UDfU+VUI0K6TIQ=="
         }
       },
       "is_incremental": true,
@@ -417,7 +465,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.MappedResource.html",
-          "hash": "bQVuPlgtSm5BlnKt4+C+GA=="
+          "hash": "jZJ2zSlM2axwizkCFCBGNw=="
         }
       },
       "is_incremental": true,
@@ -429,7 +477,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.MappedResourceView-1.html",
-          "hash": "0WIes3wQQ30mKivP58s7CA=="
+          "hash": "F081CrRtHXlji9CPEmsTFg=="
         }
       },
       "is_incremental": true,
@@ -441,7 +489,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.OpenGL.OpenGLPlatformInfo.html",
-          "hash": "uctPgi9vDXeOnoNlhs/wBw=="
+          "hash": "LC1CZQhxCjDPPbPe04phRw=="
         }
       },
       "is_incremental": true,
@@ -453,7 +501,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.OpenGL.html",
-          "hash": "o8Q4+1E6dmkQyCUCaDPxQA=="
+          "hash": "VndyhwGaVqDAnPS1vc21/g=="
         }
       },
       "is_incremental": true,
@@ -465,7 +513,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.OutputAttachmentDescription.html",
-          "hash": "sq8aoiGrxn803OyD4ru4cw=="
+          "hash": "yFXD9oT8UWRlWJiVpGO83Q=="
         }
       },
       "is_incremental": true,
@@ -477,7 +525,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.OutputDescription.html",
-          "hash": "S072+JAu1kYCWGU9pQAV5A=="
+          "hash": "dj0B8GgG4FZ3x4fK5ldfTA=="
         }
       },
       "is_incremental": true,
@@ -489,7 +537,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Pipeline.html",
-          "hash": "i7WTAkGYKrrN53f+TE+kJw=="
+          "hash": "zih4v7/H12maQJ/Zud8kyQ=="
         }
       },
       "is_incremental": true,
@@ -501,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.PixelFormat.html",
-          "hash": "pG3SKBGcaJuPa0MxSfq3Aw=="
+          "hash": "nkNWo9kOYRQSewSbSTn3kQ=="
         }
       },
       "is_incremental": true,
@@ -513,7 +561,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.PixelFormatProperties.html",
-          "hash": "9iaeeybfExC54wGkGNajLQ=="
+          "hash": "WgvzlTxmUCkQqjplUJKC0w=="
         }
       },
       "is_incremental": true,
@@ -525,7 +573,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.PolygonFillMode.html",
-          "hash": "mkJzf7s3JwMwO0QtymowoQ=="
+          "hash": "d3GgPDt+6QlRk/oyEKamlA=="
         }
       },
       "is_incremental": true,
@@ -537,7 +585,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.PrimitiveTopology.html",
-          "hash": "KOtmQz4/mjIaLslByrfFTw=="
+          "hash": "cQdp9F0xHLucaze86oVBsQ=="
         }
       },
       "is_incremental": true,
@@ -549,7 +597,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.RasterizerStateDescription.html",
-          "hash": "pZQv1TodIEcQewrI6UYiSw=="
+          "hash": "IzuOgflDp0aTTWHrQHSiJg=="
         }
       },
       "is_incremental": true,
@@ -561,7 +609,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ResourceBindingModel.html",
-          "hash": "yCAwA8CXDjlFoeLFGaSDvg=="
+          "hash": "rfiLOxO1oxMX7Ro8brtlXQ=="
         }
       },
       "is_incremental": true,
@@ -573,7 +621,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ResourceFactory.html",
-          "hash": "cNhcv3ZDL6nN+i50g7lmQw=="
+          "hash": "573MKhHBawyR50plKSNakQ=="
         }
       },
       "is_incremental": true,
@@ -585,7 +633,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ResourceKind.html",
-          "hash": "dQeLHlwEgiyV4+Brho+uAw=="
+          "hash": "bi5XyAmJtjzs6p3amBbBpw=="
         }
       },
       "is_incremental": true,
@@ -597,7 +645,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ResourceLayout.html",
-          "hash": "U75BF9piLavKvwb9eCZwww=="
+          "hash": "aHrEm1l3tpv8ZX+kVtu4NQ=="
         }
       },
       "is_incremental": true,
@@ -609,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ResourceLayoutDescription.html",
-          "hash": "UWrTv1iYU3YTz8FoSBVCgg=="
+          "hash": "AAIzVPBkhugmUC5vYsENoA=="
         }
       },
       "is_incremental": true,
@@ -621,7 +669,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ResourceLayoutElementDescription.html",
-          "hash": "DcoEsphjtfxESJ7zyNhedw=="
+          "hash": "CCqAEg07iUneyWaoWQU07w=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.ResourceLayoutElementOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.ResourceLayoutElementOptions.html",
+          "hash": "y1gFKrhqXBXDWDV8XPTG7Q=="
         }
       },
       "is_incremental": true,
@@ -633,7 +693,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ResourceSet.html",
-          "hash": "xlf8RPwQ3m/QjXpa7424Ew=="
+          "hash": "yebgq9n6cRQx9XTeLPjj/Q=="
         }
       },
       "is_incremental": true,
@@ -645,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ResourceSetDescription.html",
-          "hash": "ksJGsXItDb+m1S0Lrw7Cog=="
+          "hash": "Z6cHwDdBl1qqupmnQcT6PQ=="
         }
       },
       "is_incremental": true,
@@ -657,7 +717,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.RgbaByte.html",
-          "hash": "ThSWoYLJ3EQyFs3D9NMoDw=="
+          "hash": "CMIzqT/DaCbC/84mj2uPQQ=="
         }
       },
       "is_incremental": true,
@@ -669,7 +729,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.RgbaFloat.html",
-          "hash": "rDf3VzBcbSs87kbjPIsBxw=="
+          "hash": "9KThfGTXj451f6fekRhqig=="
         }
       },
       "is_incremental": true,
@@ -681,7 +741,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Sampler.html",
-          "hash": "u2zu0NSsRI4ngB7k471Ibw=="
+          "hash": "CV4uQ5UKRtAE6a3Era4plA=="
         }
       },
       "is_incremental": true,
@@ -693,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.SamplerAddressMode.html",
-          "hash": "TQamLqwbyJUMLYm1WkGmeQ=="
+          "hash": "KWf0gbujsbqU/krXMdg8hQ=="
         }
       },
       "is_incremental": true,
@@ -705,7 +765,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.SamplerBorderColor.html",
-          "hash": "L4YjPPcm1Qh5TkzFaSYBeA=="
+          "hash": "NwaDIEYXh6vRrKWa6jpQ7w=="
         }
       },
       "is_incremental": true,
@@ -717,7 +777,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.SamplerDescription.html",
-          "hash": "o8PKEgwTTtJy/WVI/ezunA=="
+          "hash": "ncXCtrAq1t/phjbENJiXsw=="
         }
       },
       "is_incremental": true,
@@ -729,7 +789,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.SamplerFilter.html",
-          "hash": "0iWd+rfdlaXjsdS7SIf/eQ=="
+          "hash": "FT6gQrJO22JXgqC9qES0nA=="
         }
       },
       "is_incremental": true,
@@ -741,7 +801,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Shader.html",
-          "hash": "W8aFFS/df/+hVdEIgaEEdg=="
+          "hash": "Z5kUC6vjVtWy3LPIbuAkOg=="
         }
       },
       "is_incremental": true,
@@ -753,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ShaderConstantType.html",
-          "hash": "TRyyXBvfoN9tMovQaytexA=="
+          "hash": "/wgo0vgvnT1B18xhVCEHPw=="
         }
       },
       "is_incremental": true,
@@ -765,7 +825,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ShaderDescription.html",
-          "hash": "9rK0om/dnBCLohwleLfeJw=="
+          "hash": "hF6Kuctxkp0qj+FL6Udp5Q=="
         }
       },
       "is_incremental": true,
@@ -777,7 +837,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ShaderSetDescription.html",
-          "hash": "nXJ319LOi8DxBJGitbA4XA=="
+          "hash": "fIFC/8SUwWIRSApUva+1DQ=="
         }
       },
       "is_incremental": true,
@@ -789,7 +849,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ShaderStages.html",
-          "hash": "IMI+8/dXNosvKyWRYIZfGw=="
+          "hash": "WGNcsJiq+wfze1ZbUcr9AQ=="
         }
       },
       "is_incremental": true,
@@ -801,7 +861,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.SpecializationConstant.html",
-          "hash": "UFM6lBtsqhh0ZlQ7KzBWgQ=="
+          "hash": "bYchFmWUgj8HPRwz2sVBAA=="
         }
       },
       "is_incremental": true,
@@ -813,7 +873,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.StencilBehaviorDescription.html",
-          "hash": "XrCnfSlFOr5KEzHFT3IHmQ=="
+          "hash": "/179xvRsDdrbYksad3R7jA=="
         }
       },
       "is_incremental": true,
@@ -825,7 +885,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.StencilOperation.html",
-          "hash": "4BI4CxEkgVj3BSO0+ZKaEQ=="
+          "hash": "PBhXRiSLXGenUqjOjLUuiw=="
         }
       },
       "is_incremental": true,
@@ -837,7 +897,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Swapchain.html",
-          "hash": "fxDadt0iNaBSiv4MevpFNg=="
+          "hash": "XAF5TrvCYLuP7S/knycxpQ=="
         }
       },
       "is_incremental": true,
@@ -849,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.SwapchainDescription.html",
-          "hash": "N6t2s6kP9BAIlErkJqL/hQ=="
+          "hash": "GzojzG4gxFlBRIFqTsARoQ=="
         }
       },
       "is_incremental": true,
@@ -861,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.SwapchainSource.html",
-          "hash": "7GboGJzNogqpHlcrTW6/Xg=="
+          "hash": "u+fRH04HhFoyw+4EHgFwag=="
         }
       },
       "is_incremental": true,
@@ -873,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Texture.html",
-          "hash": "vtwr8VRAuOefD2YPuBw68A=="
+          "hash": "JV+MdwKUkB6xRU9l0zF4pw=="
         }
       },
       "is_incremental": true,
@@ -885,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.TextureDescription.html",
-          "hash": "QTmRq3gxkMQ6B1vf83r3eg=="
+          "hash": "e7CdbXcLOYAlBEUgj8VizQ=="
         }
       },
       "is_incremental": true,
@@ -897,7 +957,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.TextureSampleCount.html",
-          "hash": "gX9bPxvJ531VZlAarFwGcw=="
+          "hash": "pI55ToDvJWwt2VVNFz+ACQ=="
         }
       },
       "is_incremental": true,
@@ -909,7 +969,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.TextureType.html",
-          "hash": "lUQ6DeUFVWR3LUdWIGBGQw=="
+          "hash": "Qtu/AvqDbiUPQySqXhUOBQ=="
         }
       },
       "is_incremental": true,
@@ -921,7 +981,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.TextureUsage.html",
-          "hash": "ngYY3kGIMkX0VMlJFNnkzg=="
+          "hash": "px5ZIO6rziVU283jd0dylg=="
         }
       },
       "is_incremental": true,
@@ -933,7 +993,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.TextureView.html",
-          "hash": "ovwzl4lOc/tpj+rXK3taVg=="
+          "hash": "+suhlY3EcPMCeAYW3MDEUw=="
         }
       },
       "is_incremental": true,
@@ -945,7 +1005,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.TextureViewDescription.html",
-          "hash": "A+9hjp5E4nYcc4ncknTOGw=="
+          "hash": "Yz7qEEcOwa5Wv4Vhlapc6A=="
         }
       },
       "is_incremental": true,
@@ -957,7 +1017,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.VeldridException.html",
-          "hash": "nLVOFn4RK24/tcjBazIW5A=="
+          "hash": "ZRWQLYIiGsPeDTEr3rHO5Q=="
         }
       },
       "is_incremental": true,
@@ -969,7 +1029,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.VertexElementDescription.html",
-          "hash": "Us4LYLhPMRQv7vftpi7WZw=="
+          "hash": "i6Xv767ebMVfVmyx81DJRA=="
         }
       },
       "is_incremental": true,
@@ -981,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.VertexElementFormat.html",
-          "hash": "/Ktm6GzaCoZsKgcQQXCz0g=="
+          "hash": "IWx6AoWYZy8CikSjvf3GXg=="
         }
       },
       "is_incremental": true,
@@ -993,7 +1053,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.VertexElementSemantic.html",
-          "hash": "KOutDkJdehG5zlDGbOqWIw=="
+          "hash": "jprGVl2CXPoHNZPry/VzlQ=="
         }
       },
       "is_incremental": true,
@@ -1005,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.VertexLayoutDescription.html",
-          "hash": "gatNjs5uaXGcjIn5PerkNQ=="
+          "hash": "AeCAFG2zHamReB2lqnY2yQ=="
         }
       },
       "is_incremental": true,
@@ -1017,7 +1077,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Viewport.html",
-          "hash": "rDfmSTcCbJpmyi8ZlUliMw=="
+          "hash": "L7bjVOjz7S35YYEcExxpKg=="
         }
       },
       "is_incremental": true,
@@ -1029,7 +1089,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Vk.VkSurfaceSource.html",
-          "hash": "oNw1HkD0iE84i6jl24ILAw=="
+          "hash": "VRU+ugH3c3GVwMdrPVEYOQ=="
         }
       },
       "is_incremental": true,
@@ -1041,7 +1101,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Vk.html",
-          "hash": "nvyFAYe/ugEb+4Whb9ZT6A=="
+          "hash": "fcZv3knl6iFBro/v0ET3iQ=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.VulkanDeviceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.VulkanDeviceOptions.html",
+          "hash": "FzZXjAdU+Yirvb8t+FealA=="
         }
       },
       "is_incremental": true,
@@ -1053,7 +1125,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.html",
-          "hash": "W5f93cseVZxDWulxNH19hw=="
+          "hash": "np9vkkCme2p9R+FBH2n2hg=="
         }
       },
       "is_incremental": true,
@@ -1065,7 +1137,7 @@
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "vsVhWYG5uo+7QW1alYqybQ=="
+          "hash": "BRmnSK1QMYtzkWdRQkg9Mg=="
         }
       },
       "is_incremental": true,
@@ -1077,7 +1149,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "wWlMH62o2tPV4c/Ckw1K9w=="
+          "hash": "QM2bYe0DFiWwTQLMNTLpdQ=="
         }
       },
       "is_incremental": false,
@@ -1089,10 +1161,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/android.html",
-          "hash": "mUevLuM6jdrDZEauv7L0Vg=="
+          "hash": "0Qt7Qp/BzgB45UFJIU2Rog=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1101,10 +1173,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/api-concepts.html",
-          "hash": "NR2phHwC8JhIuZafklJlyQ=="
+          "hash": "TBJ9FulDBhOKsHNulhytHg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1113,10 +1185,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/backend-differences.html",
-          "hash": "TsEvUJzPrdvRqKTW6NqqGQ=="
+          "hash": "ut5vUNP4v8B6j9lIPsDYBw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1125,10 +1197,22 @@
       "output": {
         ".html": {
           "relative_path": "articles/command-lists.html",
-          "hash": "sNkOcC+zwYBTdVPnPZh7vA=="
+          "hash": "afF6rnPaSaZ5jeXqCYrN2g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/compute-shaders.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/compute-shaders.html",
+          "hash": "nS0roImypQ3OV2dkHNimDg=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1137,10 +1221,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/framebuffers.html",
-          "hash": "XKLB2pRI7ML7kHOi/RS1lw=="
+          "hash": "SNr4EpjeEisKKMuZaaZdLw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1149,10 +1233,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/getting-started-part1.html",
-          "hash": "5cwo1O6zvkdSLgeD+j6jPQ=="
+          "hash": "Z7ERIXIXIlU7/nMZuit55A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1161,10 +1245,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/getting-started-part2.html",
-          "hash": "pWd3lLffMfDBv/KJoJgxBQ=="
+          "hash": "qxfMSUnMn6rV+SnZLfNU9Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1173,10 +1257,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/getting-started-part3.html",
-          "hash": "hITjKEPiF80DZWtmh3u6ag=="
+          "hash": "/04O7pABLtEeq8Y6+G6V7g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1185,10 +1269,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/intro.html",
-          "hash": "BoLZ2RWFYfHCsHEYXWPebg=="
+          "hash": "L6kKXMS5/+RGyFVMWF4rMA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1197,10 +1281,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/implementation/d3d11.html",
-          "hash": "ye0vGBGg7613oWZxjeMXMw=="
+          "hash": "/89xpf9XlCHDsGmkrITw5g=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1209,10 +1293,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/implementation/metal.html",
-          "hash": "+n/kzD/wTq/g+vMut7C0Eg=="
+          "hash": "f5xaZoDcpJA6EztjDrPSZA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1221,10 +1305,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/implementation/opengl.html",
-          "hash": "yTZ/ciQE2ENE79sTD3PbMQ=="
+          "hash": "Pi41ZWnd4e0Z76cpUAh0qA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1233,10 +1317,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/implementation/overview.html",
-          "hash": "DHVhltmpEEvULHz4ld8xNA=="
+          "hash": "KxsJTZx94Qgw66DSY+uU2Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1245,10 +1329,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/implementation/public-interface.html",
-          "hash": "ybjHpnqoXnt0mpuiw5zKdA=="
+          "hash": "ab3lHVhsTc+vbqLPjx3lmw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1257,10 +1341,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/implementation/vulkan.html",
-          "hash": "5MorqxykG5RUn7YJ+YsFsg=="
+          "hash": "86ihgBOG0nc0kwJshSy1gg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1269,10 +1353,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/intro.html",
-          "hash": "NsPOLzyjOXr/o7WRCW6aHQ=="
+          "hash": "Kb3U9CsZWru8/qm9xrCMrw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1281,10 +1365,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/multi-threading.html",
-          "hash": "Kj6BdZFdvd1N4VrIvbaP6g=="
+          "hash": "7SP3tj27RtmPNRb5GiqA4Q=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1293,10 +1377,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/portable-shaders.html",
-          "hash": "E4JLERXtEyMmNqHYz/XP6A=="
+          "hash": "XB/wVwZYKoYx+4ZLroxU+A=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1305,10 +1389,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/shader-resource-table.html",
-          "hash": "uSZm959pgIrpYq6Dju2SdA=="
+          "hash": "4TB8ZTxFtC2ETAAO/LwWEQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1317,10 +1401,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/shaders.html",
-          "hash": "4ZjYfwLtf2eQjeNocKBmLQ=="
+          "hash": "UXEIuo+OZxTajc+SLK7Q3w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1329,10 +1413,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/specialization-constants.html",
-          "hash": "TPPJ+Gjyb5fn179C5Y7zkA=="
+          "hash": "vRSxrm0BHXDCELpLGjwZWQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1341,10 +1425,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/swapchains.html",
-          "hash": "VRxxxfyg3ofjqZ6BMkbmuw=="
+          "hash": "bqFpC5tOnHCjZxV6crVUuQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1353,10 +1437,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/textures.html",
-          "hash": "fNI4MsSbsNzeNTRjHzzLHQ=="
+          "hash": "mQr1Y8KgdLfO4arUiT49yQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1365,7 +1449,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "AoYJoYiia1QfpyCBkNzKCQ=="
+          "hash": "XjR/WkAo0LE4HLEaxF/L3w=="
         }
       },
       "is_incremental": false,
@@ -1377,6 +1461,17 @@
       "output": {
         "resource": {
           "relative_path": "images/copy-to-output.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "images/debug-groups.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/debug-groups.png"
         }
       },
       "is_incremental": false,
@@ -1416,12 +1511,23 @@
       "version": ""
     },
     {
+      "type": "Resource",
+      "source_relative_path": "images/vr-support.png",
+      "output": {
+        "resource": {
+          "relative_path": "images/vr-support.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "index.md",
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "HUtmzqRikMfkMehWOhbfxQ=="
+          "hash": "DkFnpuWBQityncZ9U1FSJQ=="
         }
       },
       "is_incremental": true,
@@ -1433,7 +1539,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "MuwLVUsMqmuqqyw5LsSIMw=="
+          "hash": "TzAgLxh+/fGONbN/Z2EFrA=="
         }
       },
       "is_incremental": false,
@@ -1445,7 +1551,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/4.2.0-beta1.html",
-          "hash": "Lw8KHth8D4v10b/Zav0qdg=="
+          "hash": "5rUHlCKqWoHluunHIt+EYQ=="
         }
       },
       "is_incremental": true,
@@ -1457,7 +1563,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/4.2.0.html",
-          "hash": "OBuGDwKP8LG6scrR7nmI5A=="
+          "hash": "I+xNYo5JG84QKpXPiFvNTw=="
         }
       },
       "is_incremental": true,
@@ -1469,7 +1575,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/4.3.0.html",
-          "hash": "m3sYqMccszyckEA5++YT4A=="
+          "hash": "WKnTG4q3LXttwxOAgK6W1Q=="
         }
       },
       "is_incremental": true,
@@ -1481,7 +1587,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/4.3.3.html",
-          "hash": "SLzRKOFdxnRGETtXMia4dA=="
+          "hash": "Jm25d2mDMn6kgiQOImmIiA=="
         }
       },
       "is_incremental": true,
@@ -1493,7 +1599,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/4.4.0-beta1.html",
-          "hash": "eJQwEfOAAs4Oa3v7ZOnF8Q=="
+          "hash": "P3mANip6XuSyJCY5ctZwHw=="
         }
       },
       "is_incremental": true,
@@ -1505,7 +1611,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/4.4.0-beta2.html",
-          "hash": "7+VVSjYHvW6BVvR4oC2WYA=="
+          "hash": "PD3DPxstSE3q9kHMvw46Yg=="
         }
       },
       "is_incremental": true,
@@ -1517,10 +1623,22 @@
       "output": {
         ".html": {
           "relative_path": "updates/4.4.0.html",
-          "hash": "Rli9RiO9sH/fIYaNi1JTpA=="
+          "hash": "BkiRYvxssyGG5qIrinhVlA=="
         }
       },
       "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "updates/4.5.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "updates/4.5.0.html",
+          "hash": "n1eaR/J/ypQ/x9MFqGpzLQ=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1529,7 +1647,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/beta1.html",
-          "hash": "26YpWYbj7fAgTUjzSktQrQ=="
+          "hash": "GqgqcnXEMxl7zgMjVAdEHw=="
         }
       },
       "is_incremental": true,
@@ -1541,7 +1659,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/beta2.html",
-          "hash": "TXdwqa/bkl8mmwXs4HpHVA=="
+          "hash": "3w8/0efuQd900fkQxnLLpw=="
         }
       },
       "is_incremental": true,
@@ -1553,7 +1671,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/stable-4.0.0.html",
-          "hash": "L+UjvN4m6Cwt5XlVNQmxcw=="
+          "hash": "0V4n2psUt7tGXVkHWH1kZA=="
         }
       },
       "is_incremental": true,
@@ -1565,7 +1683,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/stable-4.1.0.html",
-          "hash": "GKnRCeUKBAGH2ddmSYSXxQ=="
+          "hash": "xD2GGTtYIifwpvqsfBxJqg=="
         }
       },
       "is_incremental": true,
@@ -1577,7 +1695,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/stable-4.1.1.html",
-          "hash": "PhzxnsAuIp9G8sYJiVQHNg=="
+          "hash": "FUDDFfIO91b21LgGDAhFbA=="
         }
       },
       "is_incremental": true,
@@ -1589,7 +1707,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/stable-4.1.2.html",
-          "hash": "d5HTjGEl9/f8ixTBn5p0SA=="
+          "hash": "sev2aXZzkAKyls7h9HiD6A=="
         }
       },
       "is_incremental": true,
@@ -1601,7 +1719,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/stable-4.1.3.html",
-          "hash": "UGIGqvJu/fQxt6bMRnH2bg=="
+          "hash": "8v96ArvLWza80jAqX/Ko6A=="
         }
       },
       "is_incremental": true,
@@ -1613,7 +1731,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/stable-4.1.4.html",
-          "hash": "Y9cbCQUhJl7n7fe+qU0szw=="
+          "hash": "hG3kiTtw/IOrvmc/IkcG9w=="
         }
       },
       "is_incremental": true,
@@ -1625,7 +1743,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/toc.html",
-          "hash": "aNu9gadMedReTzv/BQOHVA=="
+          "hash": "t4aVzTYPTaygT5X/DEbZtg=="
         }
       },
       "is_incremental": false,
@@ -1639,9 +1757,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
         "TocDocumentProcessor": {
           "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
@@ -1650,11 +1773,6 @@
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": true,
-          "incrementalPhase": "build"
-        },
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot suppport incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }

@@ -8,7 +8,7 @@
     <title>Swapchains </title>
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Swapchains ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -20,7 +20,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -70,12 +70,17 @@
 <h1 id="swapchains">Swapchains</h1>
 
 <p>A <a class="xref" href="../api/Veldrid.Swapchain.html">Swapchain</a> is a special kind of resource that provides the ability to present rendered images to an application view or surface. If you want the display any rendered images in Veldrid, you need a Swapchain.</p>
+<h2 id="using-a-swapchain">Using a Swapchain</h2>
+<p>There are three main operations on a Swapchain: Rendering to it, presenting it, and resizing it.</p>
+<p>Rendering to a Swapchain is accomplished by using its <a class="xref" href="../api/Veldrid.Swapchain.html#Veldrid_Swapchain_Framebuffer">Framebuffer</a> property. Bind this object using a <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a>, and then issue draw commands. A Swapchain&#39;s Framebuffer behaves the same as any other Framebuffer in Veldrid.</p>
+<p>Presenting a Swapchain is accomplished by calling <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffers_Veldrid_Swapchain_">GraphicDevice.SwapBuffers(Swapchain)</a>. This should be called after the relevant drawing commands have been submitted.</p>
+<p>Resizing a Swapchain is accomplished by calling <a class="xref" href="../api/Veldrid.Swapchain.html#Veldrid_Swapchain_Resize_System_UInt32_System_UInt32_">Resize(UInt32, UInt32)</a>. This should generally be done as a response to a &quot;Resized&quot; event issued by whatever windowing or UI framework you are using. If the Swapchain is not resized when the application view changes, then your presented image will appear distorted.</p>
 <h2 id="the-main-swapchain">The Main Swapchain</h2>
 <p>Veldrid has the notion of a &quot;main Swapchain&quot; (see <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MainSwapchain">GraphicsDevice.MainSwapchain</a>), which is the Swapchain created along with the GraphicsDevice itself. The main Swapchain is only created when certain GraphicsDevice.Create overloads are used:</p>
 <ul>
 <li>Overloads accepting a <a class="xref" href="../api/Veldrid.SwapchainDescription.html">SwapchainDescription</a></li>
 <li>Overloads accepting platform-specific window information, for example:<ul>
-<li><a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_IntPtr_System_UInt32_System_UInt32_">GraphicsDevice.CreateD3D11(GraphicsDeviceOptions, IntPtr, UInt32, UInt32)</a></li>
+<li><a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_System_IntPtr_System_UInt32_System_UInt32_">GraphicsDevice.CreateD3D11(GraphicsDeviceOptions, IntPtr, UInt32, UInt32)</a></li>
 <li><a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateVulkan_Veldrid_GraphicsDeviceOptions_Veldrid_Vk_VkSurfaceSource_System_UInt32_System_UInt32_">GraphicsDevice.CreateVulkan(GraphicsDeviceOptions, VkSurfaceSource, UInt32, UInt32)</a></li>
 </ul>
 </li>
@@ -89,7 +94,7 @@
 </ul>
 <p>NOTE: Calling any of the above members is equivalent to accessing the same member on <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_MainSwapchain">GraphicsDevice.MainSwapchain</a>. There is no functional difference.</p>
 <h2 id="creating-swapchains">Creating Swapchains</h2>
-<p>Like other resources, it is possible to create and destroy extra Swapchains at runtime, using a <a class="xref" href="../api/Veldrid.ResourceFactory.html">ResourceFactory</a> and a <a class="xref" href="../api/Veldrid.SwapchainDescription.html">SwapchainDescription</a>. Constructing a SwapchainDescription requires a <a class="xref" href="../api/Veldrid.SwapchainSource.html">SwapchainSource</a>, which is a special kind of Veldrid object representing a renderable surface that the application controls. Since this component interacts with the OS and its windowing system, it is platform-specific and created in a different way to other Veldrid objects. There are a variety of factory methods which allow you to create a SwapchainSource for a particular kind of operating system and UI framework. Due to platform limitations, each kind of SwapchainSource can only be used to create a Swapchain for a limited set of GraphicsDevice types.</p>
+<p>Like other resources, it is possible to create and destroy extra Swapchains at runtime, using a <a class="xref" href="../api/Veldrid.ResourceFactory.html">ResourceFactory</a> and a <a class="xref" href="../api/Veldrid.SwapchainDescription.html">SwapchainDescription</a>. Constructing a SwapchainDescription requires a <a class="xref" href="../api/Veldrid.SwapchainSource.html">SwapchainSource</a>, which is a special kind of Veldrid object representing a renderable surface that the application controls. Since this component interacts with the OS and its windowing system, it is platform-specific and created in a special way. There are a variety of static factory methods which allow you to create a SwapchainSource for a particular kind of operating system and UI framework. Due to platform limitations, each kind of SwapchainSource can only be used to create a Swapchain for a limited set of GraphicsDevice types.</p>
 <table>
 <thead>
 <tr>
@@ -102,7 +107,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateWin32_IntPtr_IntPtr_">CreateWin32(IntPtr hwnd, IntPtr hinstance)</a></td>
+<td><a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateWin32_System_IntPtr_System_IntPtr_">CreateWin32(IntPtr hwnd, IntPtr hinstance)</a></td>
 <td>✓</td>
 <td>✓</td>
 <td></td>
@@ -116,28 +121,35 @@
 <td></td>
 </tr>
 <tr>
-<td><a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateXlib_IntPtr_IntPtr_">CreateXlib(IntPtr display, IntPtr window)</a></td>
+<td><a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateXlib_System_IntPtr_System_IntPtr_">CreateXlib(IntPtr display, IntPtr window)</a></td>
 <td>✓</td>
 <td></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
-<td><a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateNSWindow_IntPtr_">CreateNSWindow(IntPtr nsWindow)</a></td>
+<td><a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateNSWindow_System_IntPtr_">CreateNSWindow(IntPtr nsWindow)</a></td>
+<td>✓*</td>
+<td></td>
+<td>✓</td>
+<td></td>
+</tr>
+<tr>
+<td><a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateNSView_System_IntPtr_">CreateNSView(IntPtr nsWindow)</a></td>
 <td></td>
 <td></td>
 <td>✓</td>
 <td></td>
 </tr>
 <tr>
-<td><a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateUIView_IntPtr_">CreateUIView(IntPtr uiView)</a></td>
-<td></td>
+<td><a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateUIView_System_IntPtr_">CreateUIView(IntPtr uiView)</a></td>
+<td>✓*</td>
 <td></td>
 <td>✓</td>
 <td>✓</td>
 </tr>
 <tr>
-<td><a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateAndroidSurface_IntPtr_IntPtr_">CreateAndroidSurface(IntPtr surfaceHandle, IntPtr jniEnv)</a></td>
+<td><a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateAndroidSurface_System_IntPtr_System_IntPtr_">CreateAndroidSurface(IntPtr surfaceHandle, IntPtr jniEnv)</a></td>
 <td>✓</td>
 <td></td>
 <td></td>
@@ -145,12 +157,8 @@
 </tr>
 </tbody>
 </table>
+<p><em> * Vulkan support on macOS and iOS requires <a href="https://github.com/KhronosGroup/MoltenVK">MoltenVK</a>. </em></p>
 <p>A Swapchain can be created with or without a depth target. <a class="xref" href="../api/Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_DepthFormat">SwapchainDescription.DepthFormat</a> controls this. If null, no depth target will be created. If non-null, a depth target will be created with that format.</p>
-<h2 id="using-a-swapchain">Using a Swapchain</h2>
-<p>There are three main operations on a Swapchain: Rendering to it, presenting it, and resizing it.</p>
-<p>Rendering to a Swapchain is accomplished by using its <a class="xref" href="../api/Veldrid.Swapchain.html#Veldrid_Swapchain_Framebuffer">Framebuffer</a> property. Bind this object using a <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a>, and then issue draw commands. A Swapchain&#39;s Framebuffer behaves the same as any other Framebuffer in Veldrid.</p>
-<p>Presenting a Swapchain is accomplished by calling <a class="xref" href="../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapBuffers_Veldrid_Swapchain_">GraphicDevice.SwapBuffers(Swapchain)</a>. This should be called after the relevant drawing commands have been submitted.</p>
-<p>Resizing a Swapchain is accomplished by calling <a class="xref" href="../api/Veldrid.Swapchain.html#Veldrid_Swapchain_Resize_System_UInt32_System_UInt32_">Resize(UInt32, UInt32)</a>. This should generally be done as a response to a &quot;Resized&quot; event issued by whatever windowing or UI framework you are using. If the Swapchain is not resized when the application view changes, then your presented image will appear distorted.</p>
 <h2 id="opengl">OpenGL</h2>
 <p>The OpenGL and OpenGL ES backends do not support multiple Swapchains. This is due to fundamental part of the design of OpenGL, and support cannot be synthesized or emulated efficently. Note that it is also not possible to create an OpenGL or OpenGL ES GraphicsDevice without a main Swapchain.</p>
 </article>

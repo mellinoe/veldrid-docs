@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct GraphicsDeviceOptions
    ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -350,6 +350,79 @@ is preferred. For Vulkan, this is not the default, and is not available on all s
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Veldrid_GraphicsDeviceOptions__ctor_" data-uid="Veldrid.GraphicsDeviceOptions.#ctor*"></a>
+  <h4 id="Veldrid_GraphicsDeviceOptions__ctor_System_Boolean_System_Nullable_Veldrid_PixelFormat__System_Boolean_Veldrid_ResourceBindingModel_System_Boolean_System_Boolean_System_Boolean_" data-uid="Veldrid.GraphicsDeviceOptions.#ctor(System.Boolean,System.Nullable{Veldrid.PixelFormat},System.Boolean,Veldrid.ResourceBindingModel,System.Boolean,System.Boolean,System.Boolean)">GraphicsDeviceOptions(Boolean, Nullable&lt;PixelFormat&gt;, Boolean, ResourceBindingModel, Boolean, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new GraphicsDeviceOptions for a device with a main Swapchain.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public GraphicsDeviceOptions(bool debug, PixelFormat? swapchainDepthFormat, bool syncToVerticalBlank, ResourceBindingModel resourceBindingModel, bool preferDepthRangeZeroToOne, bool preferStandardClipSpaceYDirection, bool swapchainSrgbFormat)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">debug</span></td>
+        <td><p>Indicates whether the GraphicsDevice will enable debug features, provided they are supported by
+the host system.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a>&gt;</td>
+        <td><span class="parametername">swapchainDepthFormat</span></td>
+        <td><p>An optional <a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a> to be used for the depth buffer of the
+swapchain. If this value is null, then no depth buffer will be present on the swapchain.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">syncToVerticalBlank</span></td>
+        <td><p>Indicates whether the main Swapchain will be synchronized to the window system&apos;s
+vertical refresh rate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.ResourceBindingModel.html">ResourceBindingModel</a></td>
+        <td><span class="parametername">resourceBindingModel</span></td>
+        <td><p>Specifies which model the rendering backend should use for binding resources.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">preferDepthRangeZeroToOne</span></td>
+        <td><p>Indicates whether a 0-to-1 depth range mapping is preferred. For OpenGL,
+this is not the default, and is not available on all systems.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">preferStandardClipSpaceYDirection</span></td>
+        <td><p>Indicates whether a bottom-to-top-increasing clip space Y direction
+is preferred. For Vulkan, this is not the default, and is not available on all systems.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">swapchainSrgbFormat</span></td>
+        <td><p>Indicates whether the main Swapchain should use an sRGB format. This value is only
+used in cases where the properties of the main SwapChain are not explicitly specified with a
+<a class="xref" href="Veldrid.SwapchainDescription.html">SwapchainDescription</a>. If they are, then the value of <a class="xref" href="Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_ColorSrgb">ColorSrgb</a> will
+supercede the value specified here.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
   
@@ -503,6 +576,33 @@ no depth buffer will be present on the swapchain.</p>
     <tbody>
       <tr>
         <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <h4 id="Veldrid_GraphicsDeviceOptions_SwapchainSrgbFormat" data-uid="Veldrid.GraphicsDeviceOptions.SwapchainSrgbFormat">SwapchainSrgbFormat</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the main Swapchain should use an sRGB format. This value is only used in cases where the properties
+of the main SwapChain are not explicitly specified with a <a class="xref" href="Veldrid.SwapchainDescription.html">SwapchainDescription</a>. If they are, then the
+value of <a class="xref" href="Veldrid.SwapchainDescription.html#Veldrid_SwapchainDescription_ColorSrgb">ColorSrgb</a> will supercede the value specified here.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool SwapchainSrgbFormat</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
         <td></td>
       </tr>
     </tbody>

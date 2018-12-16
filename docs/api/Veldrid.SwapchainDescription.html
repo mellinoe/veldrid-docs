@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Struct SwapchainDescription
    ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -78,7 +78,7 @@
   <div class="markdown level0 conceptual"></div>
   <div classs="implements">
     <h5>Implements</h5>
-    <div><span class="xref">IEquatable</span>&lt;<a class="xref" href="Veldrid.SwapchainDescription.html">SwapchainDescription</a>&gt;</div>
+    <div><span class="xref">System.IEquatable</span>&lt;<a class="xref" href="Veldrid.SwapchainDescription.html">SwapchainDescription</a>&gt;</div>
   </div>
   <div class="inheritedMembers">
     <h5>Inherited Members</h5>
@@ -163,8 +163,96 @@ system&apos;s vertical refresh rate.</p>
       </tr>
     </tbody>
   </table>
+  
+  
+  <a id="Veldrid_SwapchainDescription__ctor_" data-uid="Veldrid.SwapchainDescription.#ctor*"></a>
+  <h4 id="Veldrid_SwapchainDescription__ctor_Veldrid_SwapchainSource_System_UInt32_System_UInt32_System_Nullable_Veldrid_PixelFormat__System_Boolean_System_Boolean_" data-uid="Veldrid.SwapchainDescription.#ctor(Veldrid.SwapchainSource,System.UInt32,System.UInt32,System.Nullable{Veldrid.PixelFormat},System.Boolean,System.Boolean)">SwapchainDescription(SwapchainSource, UInt32, UInt32, Nullable&lt;PixelFormat&gt;, Boolean, Boolean)</h4>
+  <div class="markdown level1 summary"><p>Constructs a new SwapchainDescription.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public SwapchainDescription(SwapchainSource source, uint width, uint height, PixelFormat? depthFormat, bool syncToVerticalBlank, bool colorSrgb)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.SwapchainSource.html">SwapchainSource</a></td>
+        <td><span class="parametername">source</span></td>
+        <td><p>The <a class="xref" href="Veldrid.SwapchainSource.html">SwapchainSource</a> which will be used as the target of rendering operations.
+This is a window-system-specific object which differs by platform.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">width</span></td>
+        <td><p>The initial width of the Swapchain surface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.UInt32</span></td>
+        <td><span class="parametername">height</span></td>
+        <td><p>The initial height of the Swapchain surface.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Nullable</span>&lt;<a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a>&gt;</td>
+        <td><span class="parametername">depthFormat</span></td>
+        <td><p>The optional format of the depth target of the Swapchain&apos;s Framebuffer.
+If non-null, this must be a valid depth Texture format.
+If null, then no depth target will be created.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">syncToVerticalBlank</span></td>
+        <td><p>Indicates whether presentation of the Swapchain will be synchronized to the window
+system&apos;s vertical refresh rate.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">colorSrgb</span></td>
+        <td><p>Indicates whether the color target of the Swapchain will use an sRGB PixelFormat.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Veldrid_SwapchainDescription_ColorSrgb" data-uid="Veldrid.SwapchainDescription.ColorSrgb">ColorSrgb</h4>
+  <div class="markdown level1 summary"><p>Indicates whether the color target of the Swapchain will use an sRGB PixelFormat.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool ColorSrgb</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Veldrid_SwapchainDescription_DepthFormat" data-uid="Veldrid.SwapchainDescription.DepthFormat">DepthFormat</h4>
@@ -371,7 +459,7 @@ This is a window-system-specific object which differs by platform.</p>
   <div><span class="xref">System.ValueType.GetHashCode()</span></div>
   <h3 id="implements">Implements</h3>
   <div>
-      <span class="xref">IEquatable&lt;&gt;</span>
+      <span class="xref">System.IEquatable&lt;T&gt;</span>
   </div>
 </article>
           </div>

@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Enum ResourceKind
    ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -99,27 +99,33 @@
       </tr>
       <tr>
         <td id="Veldrid_ResourceKind_StructuredBufferReadOnly">StructuredBufferReadOnly</td>
-        <td><p>A <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> accessed as a read-only storage buffer.</p>
+        <td><p>A <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> accessed as a read-only storage buffer. A subset of a buffer can be bound using a
+<a class="xref" href="Veldrid.DeviceBufferRange.html">DeviceBufferRange</a>.</p>
 </td>
       </tr>
       <tr>
         <td id="Veldrid_ResourceKind_StructuredBufferReadWrite">StructuredBufferReadWrite</td>
-        <td><p>A <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> accessed as a read-write storage buffer.</p>
+        <td><p>A <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> accessed as a read-write storage buffer. A subset of a buffer can be bound using a
+<a class="xref" href="Veldrid.DeviceBufferRange.html">DeviceBufferRange</a>.</p>
 </td>
       </tr>
       <tr>
         <td id="Veldrid_ResourceKind_TextureReadOnly">TextureReadOnly</td>
-        <td><p>A read-only <a class="xref" href="Veldrid.Texture.html">Texture</a>, accessed through a <a class="xref" href="Veldrid.TextureView.html">TextureView</a>.</p>
+        <td><p>A read-only <a class="xref" href="Veldrid.Texture.html">Texture</a>, accessed through a Texture or <a class="xref" href="Veldrid.TextureView.html">TextureView</a>.
+<remarks>Binding a <a class="xref" href="Veldrid.Texture.html">Texture</a> to a resource slot expecting a TextureReadWrite is equivalent to binding a
+<a class="xref" href="Veldrid.TextureView.html">TextureView</a> that covers the full mip and array layer range, with the original Texture&apos;s
+<a class="xref" href="Veldrid.PixelFormat.html">PixelFormat</a>.</remarks></p>
 </td>
       </tr>
       <tr>
         <td id="Veldrid_ResourceKind_TextureReadWrite">TextureReadWrite</td>
-        <td><p>A read-write <a class="xref" href="Veldrid.Texture.html">Texture</a>, accessed through a <a class="xref" href="Veldrid.TextureView.html">TextureView</a>.</p>
+        <td><p>A read-write <a class="xref" href="Veldrid.Texture.html">Texture</a>, accessed through a Texture or <a class="xref" href="Veldrid.TextureView.html">TextureView</a>.</p>
 </td>
       </tr>
       <tr>
         <td id="Veldrid_ResourceKind_UniformBuffer">UniformBuffer</td>
-        <td><p>A <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> accessed as a uniform buffer.</p>
+        <td><p>A <a class="xref" href="Veldrid.DeviceBuffer.html">DeviceBuffer</a> accessed as a uniform buffer. A subset of a buffer can be bound using a
+<a class="xref" href="Veldrid.DeviceBufferRange.html">DeviceBufferRange</a>.</p>
 </td>
       </tr>
     </tbody>

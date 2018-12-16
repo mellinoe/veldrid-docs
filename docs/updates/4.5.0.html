@@ -1,0 +1,259 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Veldrid 4.5.0 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Veldrid 4.5.0 ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="4.5.0">
+<h1 id="veldrid-450">Veldrid 4.5.0</h1>
+
+<p><em>2018-12-15</em></p>
+<p>Veldrid 4.5.0 is now available for download. This is the largest release to date, and includes many exciting new features. A big thanks to everyone who has contributed to this release!</p>
+<h2 id="virtual-reality-support">Virtual Reality Support</h2>
+<p>A new add-on library, Veldrid.VirtualReality, provides the ability to render into VR headsets with a simple, portable API. Both OpenVR and Oculus are supported, and VR setup can be accomplished in just a few lines of code. All Veldrid backends are supported. Once a <code>VRContext</code> is created, rendering is performed as normal into a <code>Framebuffer</code> object for each eye, which are automatically created and managed by Veldrid. The library also includes support for updating and retrieving the HMD&#39;s current pose.</p>
+<p><img src="../images/vr-support.png" alt="Image"></p>
+<h2 id="improved-spir-v-support">Improved SPIR-V Support</h2>
+<p><a href="https://mellinoe.github.io/graphics/2018/06/25/veldrid-spirv.html">Veldrid.SPIRV</a> now supports all desktop and mobile platforms, including iOS and Android. On Android, both arm64-v8a and armeabi-v7a ABIs are supported. The <a href="https://www.nuget.org/packages/veldrid.spirv">latest NuGet package</a> includes build-time support which automatically bundles all required native components with your application.</p>
+<h2 id="srgb-textures">sRGB Textures</h2>
+<p>Several sRGB pixel formats are now supported. In addition, it is possible to create a Swapchain which is backed by an sRGB-encoded Texture. When rendering to a Framebuffer backed by an sRGB Texture, automatic conversion from linear to sRGB space will be done. When sampling from a sRGB-encoded Texture, the reverse transformation (sRGB to linear) will occur automatically.</p>
+<p>See the new SRgb-suffixed members in <a class="xref" href="../api/Veldrid.PixelFormat.html">PixelFormat</a> for the full set of supported sRGB formats.</p>
+<h2 id="commandlist-debug-groups">CommandList Debug Groups</h2>
+<p>Several utility methods have been added to CommandList which allow nested &quot;debug groups&quot; to be pushed and popped into the command stream, and for individual debug markers to be inserted.</p>
+<ul>
+<li><a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_PushDebugGroup_System_String_">void CommandList.PushDebugGroup(string name)</a></li>
+<li><a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_PopDebugGroup">void CommandList.PopDebugGroup()</a></li>
+<li><a class="xref" href="../api/Veldrid.CommandList.html#Veldrid_CommandList_InsertDebugMarker_System_String_">void CommandList.InsertDebugMarker(string name)</a></li>
+</ul>
+<p>These groups and markers can be visualized in graphics debuggers like RenderDoc, which helps distinguish different portions of a frame capture.</p>
+<pre><code class="lang-C#">commandList.PushDebugGroup(&quot;Left Eye&quot;);
+RenderEye(VREye.Left);
+commandList.PopDebugGroup();
+
+commandList.PushDebugGroup(&quot;Right Eye&quot;);
+RenderEye(VREye.Right);
+commandList.PopDebugGroup();
+</code></pre><p><img src="../images/debug-groups.png" alt="Image"></p>
+<p><em>Shown above: a <a href="https://renderdoc.org/">RenderDoc</a> frame capture, with collapsible sections for each debug group.</em></p>
+<h2 id="native-backend-access">Native Backend Access</h2>
+<p>In order to integrate with Virtual Reality SDKs, limited support for retrieving backend-specific information has been added. These new features should be used sparingly when no fully-portable option is available. See the following new types for more information:</p>
+<ul>
+<li><a class="xref" href="../api/Veldrid.BackendInfoVulkan.html">Veldrid.BackendInfoVulkan</a></li>
+<li><a class="xref" href="../api/Veldrid.BackendInfoD3D11.html">Veldrid.BackendInfoD3D11</a></li>
+<li><a class="xref" href="../api/Veldrid.BackendInfoOpenGL.html">Veldrid.BackendInfoOpenGL</a></li>
+</ul>
+<h2 id="devicebufferrange-and-dynamic-buffer-resources">DeviceBufferRange and dynamic buffer resources</h2>
+<p><a class="xref" href="../api/Veldrid.DeviceBufferRange.html">DeviceBufferRange</a> is a new <a class="xref" href="../api/Veldrid.BindableResource.html">BindableResource</a> type which allows a portion of a <a class="xref" href="../api/Veldrid.DeviceBuffer.html">DeviceBuffer</a> to be made available to a shader, rather than its full range.</p>
+<p>Support for &quot;dynamic&quot; buffer resources has also been added. This feature allows you to choose a dynamic offset for a DeviceBuffer or DeviceBufferRange when it is bound to a <a class="xref" href="../api/Veldrid.CommandList.html">CommandList</a>. This allows you to store multiple distinct ranges of data without needing to manage multiple DeviceBuffers.</p>
+<ul>
+<li>See the documentation for <a class="xref" href="../api/Veldrid.DeviceBufferRange.html">DeviceBufferRange</a> and <a class="xref" href="../api/Veldrid.ResourceLayoutElementOptions.html">ResourceLayoutElementOptions.DynamicBinding</a> for more information on these features.</li>
+</ul>
+<h2 id="source-link">Source Link</h2>
+<p><a href="https://docs.microsoft.com/en-us/dotnet/standard/library-guidance/sourcelink">Source Link</a> has been enabled in the NuGet packages. It is now possible to step through Veldrid sources using Visual Studio or any other debugger supporing Source Link.</p>
+<h2 id="miscellaneous-additions">Miscellaneous Additions</h2>
+<ul>
+<li>Added ImageSharpCubemapTexture, a helper class for creating cubemap Textures using ImageSharp. <a href="https://github.com/geoeo">@geoeo</a></li>
+<li>Support for 16-bit float vertex formats.<ul>
+<li><a class="xref" href="../api/Veldrid.VertexElementFormat.html">VertexElementFormat.Half1</a>, <a class="xref" href="../api/Veldrid.VertexElementFormat.html">VertexElementFormat.Half2</a>, <a class="xref" href="../api/Veldrid.VertexElementFormat.html">VertexElementFormat.Half4</a></li>
+</ul>
+</li>
+<li><a class="xref" href="../api/Veldrid.Texture.html">Texture</a> now implements the <a class="xref" href="../api/Veldrid.BindableResource.html">BindableResource</a> interface, meaning it can be included directly into a <a class="xref" href="../api/Veldrid.ResourceSet.html">ResourceSet</a> without the need to create a <a class="xref" href="../api/Veldrid.TextureView.html">TextureView</a>. Doing this is functionally equivalent to binding a TextureView that covers the full range of mip levels and array layers in the Texture.</li>
+<li><a class="xref" href="../api/Veldrid.TextureViewDescription.html">TextureViewDescription</a> now includes a <a class="xref" href="../api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription_Format">PixelFormat Format</a> field, which can be used to control how the pixel data is interpreted through the <a class="xref" href="../api/Veldrid.TextureView.html">TextureView</a>. The format of a TextureView is allowed to be:<ul>
+<li>The same <a class="xref" href="../api/Veldrid.PixelFormat.html">PixelFormat</a> as its <a class="xref" href="../api/Veldrid.TextureViewDescription.html#Veldrid_TextureViewDescription_Target">Target Texture</a>.</li>
+<li>The matching sRGB or non-sRGB counterpart to its Target Texture.</li>
+<li>For uncompressed Textures, a different PixelFormat with the same data size and number of components.</li>
+</ul>
+</li>
+<li>Add Sdl2Window.Resizable and Sdl2Window.BorderVisible. Expose SDL_WINDOWPOS_CENTERED, SDL_GetClipboardText, and SDL_SetClipboardText.</li>
+<li>Better support for deploying the SDL2 native binary to mono projects when using Veldrid.SDL2.</li>
+<li>Allow creating a Metal Swapchain for an NSView directly. This allows you to embed a Veldrid view (or multiple views) into standard macOS UI applications. See <a class="xref" href="../api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateNSView_System_IntPtr_">SwapchainSource.CreateNSView(IntPtr)</a>.</li>
+</ul>
+<h2 id="all-changes">All Changes</h2>
+<ul>
+<li>[OpenGL] Improve compatibility in &quot;roundabout&quot; texture copy code path. <a href="https://github.com/mellinoe/veldrid/commit/507bade760f42ae63fb5785459c32c803ecb64bb">[507bade]</a></li>
+<li>[OpenGLES] Replace usage of glGetTexImage with glReadPixels. <a href="https://github.com/mellinoe/veldrid/commit/fc865cec7d17f5e4203c49772c6884b1ede169a3">[fc865ce]</a></li>
+<li>Only create GraphicsDevice.Aniso4xSampler if supported. <a href="https://github.com/mellinoe/veldrid/commit/7f18acfea88970f0375fd3a636928adfcff6d4a8">[7f18acf]</a></li>
+<li>Fix D3D11CommandList.GenerateMipmaps on non-sampled/storage textures. <a href="https://github.com/mellinoe/veldrid/commit/6bdcf6de1c9112ae577ad2f2fca59c6c0393e545">[6bdcf6d]</a></li>
+<li>Add support for rendering into Virtual Reality headsets. <a href="https://github.com/mellinoe/veldrid/commit/ca9a963100702004f20c3e0a293287dc46bc9e40">[ca9a963]</a></li>
+<li>[Vulkan] Fix a potential thread timing issue related to Vulkan command buffer tracking. <a href="https://github.com/mellinoe/veldrid/commit/2c0c4e8a61af2ac55a1e3dd9a99862031ba7dc31">[2c0c4e8]</a></li>
+<li>[Vulkan] Enable shaderStorageImageMultisample if available. <a href="https://github.com/mellinoe/veldrid/commit/0d3721088059e4217e561fc41cba9dabec39ebcf">[0d37210]</a></li>
+<li>[SDL2] Do not throw a TypeInitializationException if some SDL2 functions cannot be loaded. <a href="https://github.com/mellinoe/veldrid/commit/0ceea20b2492107a376ed7fdc87e2be20ee7eff9">[0ceea20]</a></li>
+<li>[OpenGL] Set Thread.IsBackground to true for the OpenGL execution thread. <a href="https://github.com/mellinoe/veldrid/commit/2df19eaa2ff50a05e9d9ac8f7057e1a7f9c9fd77">[2df19ea]</a></li>
+<li>[SDL2] Add Sdl2Window.Resizable and .BorderVisible. <a href="https://github.com/mellinoe/veldrid/commit/90896fbd6d7ffcc1e28d80ffa008e1ac776dac50">[90896fb]</a></li>
+<li>[SDL2] Add an MSBuild config file for mono targets. <a href="https://github.com/mellinoe/veldrid/commit/75af565e2375fe59aa5afd1cede28a55e5708ff4">[75af565]</a></li>
+<li>[Metal] Add support for creating a Metal Swapchain from an NSView. <a href="https://github.com/mellinoe/veldrid/commit/e170e90cb808229551fd78a9d87ee788c0de6662">[e170e90]</a></li>
+<li>Implement BindableResource on Texture directly. <a href="https://github.com/mellinoe/veldrid/commit/044d542b2b9968ca853cb054bebdbc6c78775805">[044d542]</a></li>
+<li>Allow TextureViews to use a different PixelFormat from their target. <a href="https://github.com/mellinoe/veldrid/commit/080ed1cc64fe4588a94b671a2b0e48c273d83f53">[080ed1c]</a></li>
+<li>Fix typo that prevented creating a TextureView for anything other than the first array layer in a Texture2D <a href="https://github.com/mellinoe/veldrid/commit/274e443ba926e638e54e968c1db7daffe2bdc90c">[274e443]</a> (<a href="https://github.com/tgjones">@tgjones</a>)</li>
+<li>Allow non-multiple-of-four-sized texture to be updated with multiple-of-four mipmap data <a href="https://github.com/mellinoe/veldrid/commit/64b79bd8987811182f48330594b44dfa2663bb98">[64b79bd]</a> (<a href="https://github.com/tgjones">@tgjones</a>)</li>
+<li>[OpenGL] Detect GLES 3.2 support for GL_OES_draw_elements_base_vertex. <a href="https://github.com/mellinoe/veldrid/commit/d1e1caca468bf2d9be72f54dfcd941789fc41ae1">[d1e1cac]</a></li>
+<li>Add additional compressed sRGB formats. <a href="https://github.com/mellinoe/veldrid/commit/9efcc8afbb99da761b35ea7c5477be4d1c137712">[9efcc8a]</a></li>
+<li>[D3D11] Disable alt-enter fullscreen behavior in Win32. <a href="https://github.com/mellinoe/veldrid/commit/700d2dedbf3432142bfbc7cd67718cbffafe3c9e">[700d2de]</a></li>
+<li>[Metal] Hook into MTLCommandBuffer&#39;s completion callback using Objective C blocks. <a href="https://github.com/mellinoe/veldrid/commit/1995973f282f22b27fc59615a99d81184142ec6f">[1995973]</a></li>
+<li>Add additional texture layout transitions in VkCommandList.cs. <a href="https://github.com/mellinoe/veldrid/commit/c8a12cb8930115188f632793976dd6bba61f2689">[c8a12cb]</a></li>
+<li>[OpenGL] Fix an error in SSBO index calculation. <a href="https://github.com/mellinoe/veldrid/commit/768ea32384ff4d7b8b9c42e90b6281b09fe0b602">[768ea32]</a></li>
+<li>Add XML docs for new dynamic buffer overloads on CommandList, and add array overloads. <a href="https://github.com/mellinoe/veldrid/commit/c705ef65b49ea171a3ec13f828504aa968a31d77">[c705ef6]</a></li>
+<li>Add back some validation for dynamic buffers, and fix Vulkan descriptor allocation. <a href="https://github.com/mellinoe/veldrid/commit/355dd278913de11909784a147c45a99f2c4ad842">[355dd27]</a></li>
+<li>Allow buffers to have a dynamic offset when bound to a CommandList. <a href="https://github.com/mellinoe/veldrid/commit/3e8949663df5d59d42e6aa0b1a970220e97fc3b4">[3e89496]</a></li>
+<li>Allow uniform buffers to be bound with an offset+size. <a href="https://github.com/mellinoe/veldrid/commit/33a054555ac3148576413d4919b0728bdd9d9a93">[33a0545]</a></li>
+<li>[ImGui] Remove unnecessary allocation in ImGuiRenderer.cs. <a href="https://github.com/mellinoe/veldrid/commit/3540206320090bfba0239db813bcfda5e3cb97df">[3540206]</a></li>
+<li>Add three debug utility methods to CommandList. <a href="https://github.com/mellinoe/veldrid/commit/8145d9f0e8bd48f296282758a370d77c05ddaaf5">[8145d9f]</a></li>
+<li>UIView Swapchains now scale with the screen&#39;s &quot;nativeScale&quot; property. <a href="https://github.com/mellinoe/veldrid/commit/14461b007cc9061d786823fbd60d22f3aefa7df6">[14461b0]</a></li>
+<li>[OpenGL] Ensure that SwapchainDescription values override GraphicsDeviceOption ones. <a href="https://github.com/mellinoe/veldrid/commit/fc7cf9ef835e63e2d46ac71a014aa7dcd0b449b9">[fc7cf9e]</a></li>
+<li>[Metal] Fix a couple of issues with texture copies with non-zero origins. <a href="https://github.com/mellinoe/veldrid/commit/74e25c87354632a7d027cfd83c367c1ad1235559">[74e25c8]</a></li>
+<li>[OpenGL] Fix some unimplemented code paths involving compressed array texture copies and mapping. <a href="https://github.com/mellinoe/veldrid/commit/36772e19950cdc7f0f283174c638195dfcfb394d">[36772e1]</a></li>
+<li>[Vulkan] Fix some logic related to regular-&gt;staging texture copies with non-zero copy origins. <a href="https://github.com/mellinoe/veldrid/commit/147c0fbe29592bf9b751c1acca7a27738e49bdc0">[147c0fb]</a></li>
+<li>Add support for sRGB PixelFormats.<ul>
+<li>Refactor some things about sRGB a little bit to better support legacy OpenGL behavior. <a href="https://github.com/mellinoe/veldrid/commit/5ba6c7242e52e633ca3aae60423a9d39fe289cbf">[5ba6c72]</a></li>
+<li>Add stream constructor to ImageSharpTexture (#130) <a href="https://github.com/mellinoe/veldrid/commit/b13734472e46ae7ad0ab2fd65cb70fe3f70e418b">[b137344]</a> (<a href="https://github.com/feliwir">@feliwir</a>)</li>
+<li>Recompile imgui-vertex.metal. <a href="https://github.com/mellinoe/veldrid/commit/5b5adbaab86030f3ef54b68ef31f794e76a15391">[5b5adba]</a></li>
+<li>[ImGui] Make sure alpha channel is transferred over in new sRGB-aware ImGui shaders. <a href="https://github.com/mellinoe/veldrid/commit/485a1d26d56f497c820956f7e80203d0fa2f7a74">[485a1d2]</a></li>
+<li>[ImGui] Ensure that brief mouse presses are captured. <a href="https://github.com/mellinoe/veldrid/commit/25692463cafa5820904701144518c8a2e2dea4de">[2569246]</a></li>
+<li>[Metal] Support SyncToVerticalBlank on macOS 10.13+. <a href="https://github.com/mellinoe/veldrid/commit/31cd6bc3af2462eaeae7af82e3627dcc5861509b">[31cd6bc]</a></li>
+<li>[OpenGL] On macOS, always consider the backbuffer sRGB. <a href="https://github.com/mellinoe/veldrid/commit/8b0a73ceed8fceef68ba6409ec10e8ebbb1ad0a1">[8b0a73c]</a></li>
+<li>[Metal] Compile new ImGui Metal shader. <a href="https://github.com/mellinoe/veldrid/commit/9b611a159ebfd62ffa547e8f30817358fe1629ab">[9b611a1]</a></li>
+<li>[Demo] Output linear pixels in the demo&#39;s UI renderer. <a href="https://github.com/mellinoe/veldrid/commit/df79cc8e00dbdc8a17e5331387550d9ab885c1f6">[df79cc8]</a></li>
+<li>[ImGui] Allow ImGuiRenderer to output both linear and sRGB pixel data. <a href="https://github.com/mellinoe/veldrid/commit/13a1a8957bcf9ea3fd4d0f492a6361685c42eccb">[13a1a89]</a></li>
+<li>[ImageSharp] Add an option to ImageSharpTexture to treat images as sRGB. <a href="https://github.com/mellinoe/veldrid/commit/c425edfa8a0b45b36bec652992afb494e52b5368">[c425edf]</a></li>
+<li>Add support for VertexElementFormat.Half1/2/4. <a href="https://github.com/mellinoe/veldrid/commit/5880aef7997321425386a270fdaac1f4dbf419ac">[5880aef]</a></li>
+<li>[Demo] Fix how shader sets were being cached with respect to different SpecializationConstants. <a href="https://github.com/mellinoe/veldrid/commit/65ee9b4a006258ab8379f9b1a15c5021e21907bb">[65ee9b4]</a></li>
+<li>[Demo] Allow switching back and forth between sRGB swapchain format. <a href="https://github.com/mellinoe/veldrid/commit/c75b1a352e1a377fbf94444a58c0fbe4ba0ae24d">[c75b1a3]</a></li>
+<li>[OpenGL] Explicitly set the SDL attribute for sRGB to false unless it is enabled. <a href="https://github.com/mellinoe/veldrid/commit/0f751416152cdbdc5aec5ae398ecca6e0bd1edee">[0f75141]</a></li>
+<li>[Demo] Additional demo changes to accomodate sRGB. <a href="https://github.com/mellinoe/veldrid/commit/698a2dd06ccccfc408f8130bf890b680cef6b7a3">[698a2dd]</a></li>
+<li>[OpenGL] Do a roundabout query process for determining whether the backbuffer is sRGB. <a href="https://github.com/mellinoe/veldrid/commit/15e4764811678a80bfa32ec6b4a07533149ac669">[15e4764]</a></li>
+<li>Implement sRGB support on Metal. <a href="https://github.com/mellinoe/veldrid/commit/c0363ddb8ae6e7a64129fb86a5a6a7652efe4324">[c0363dd]</a></li>
+<li>More sRGB work. <a href="https://github.com/mellinoe/veldrid/commit/ccccb4e789b4b586a75196f998fcd9c12c4192b3">[ccccb4e]</a></li>
+<li>Add sRGB PixelFormat support. <a href="https://github.com/mellinoe/veldrid/commit/c2a433e2404ce48bca86d3ec24452d32182ea1ce">[c2a433e]</a></li>
+</ul>
+</li>
+<li>[D3D11] Fix an issue with how vertex bindings were flushed in some cases. <a href="https://github.com/mellinoe/veldrid/commit/7f8f9a967c7524af36eb2b6a32b5e1feae1a96bd">[7f8f9a9]</a></li>
+<li>Expose VeldridStartup.SetSDLGLContextAttributes. <a href="https://github.com/mellinoe/veldrid/commit/df2f1313885e30cac0be776699b2576d0f6bbc19">[df2f131]</a> (<a href="https://github.com/AridTag">AridTag</a>)</li>
+<li>[SDL2] Add SDL_Get/SetClipboardText. <a href="https://github.com/mellinoe/veldrid/commit/28c91f04db043ef5acf3da66f28a97095ed2750c">[28c91f0]</a></li>
+<li>[Vulkan] Re-acquire swapchain after recreating it due to vsync change. <a href="https://github.com/mellinoe/veldrid/commit/b082a87d126b66ad7587b99b405262172e5dc86c">[b082a87]</a></li>
+<li>[Vulkan] Add the submission fence to the list after call to vkQueueSubmit. <a href="https://github.com/mellinoe/veldrid/commit/ccea463ffd02f8d845aa76bb49486ba15cc562cc">[ccea463]</a></li>
+<li>[Vulkan] Use a ConcurrentQueue for reusable VkFence collection. <a href="https://github.com/mellinoe/veldrid/commit/391738b3698c4f79914d985b1aad5b3a219d3d58">[391738b]</a></li>
+<li>Give Veldrid.ImGui its own independent version.json file. Bump it to 5.0.65. <a href="https://github.com/mellinoe/veldrid/commit/cf43cedec003df213c4696589d012adab20ea813">[cf43ced]</a></li>
+<li>Update Veldrid.ImGui to latest autogen&#39;d ImGui.NET package. <a href="https://github.com/mellinoe/veldrid/commit/fac9317ffe2605f6c7b09cabc30f32fb2dac7311">[fac9317]</a></li>
+<li>Expose Sdl2Native.SDL_WINDOWPOS_CENTERED. <a href="https://github.com/mellinoe/veldrid/commit/a9df038927e10b6597d770b9781fb0517370014d">[a9df038]</a></li>
+<li>[Vulkan] Sort freed memory blocks and combine contiguous blocks. <a href="https://github.com/mellinoe/veldrid/commit/59b3a3034f4ff29dc329c2986cf8cc02676c2efe">[59b3a30]</a></li>
+<li>[Vulkan] Fix an issue with how the &quot;new ResourceSet count&quot; variables were tracked. <a href="https://github.com/mellinoe/veldrid/commit/7f0aa5b1c307d648cf7fda93a813610571787a63">[7f0aa5b]</a></li>
+<li>[Vulkan] Insert a memory barrier after calling vkCmdCopyBuffer. <a href="https://github.com/mellinoe/veldrid/commit/1acc3e3bdc8b5593548ea8592139272e39d59826">[1acc3e3]</a></li>
+<li>[Vulkan] Allow allocations larger than 256 MB (64 MB dynamic). <a href="https://github.com/mellinoe/veldrid/commit/1edc419eccb7324420da203b5b466f8995220c91">[1edc419]</a></li>
+<li>[Vulkan] Vulak is only supported when at least one VkPhysicalDevice exists. <a href="https://github.com/mellinoe/veldrid/commit/bfae1ac81fb38826da980fe49d84ab45ef20e28b">[bfae1ac]</a></li>
+<li>[Vulkan] Fix some ordering issues with how fences and staging resources were tracked. <a href="https://github.com/mellinoe/veldrid/commit/54f578ae2bf3973ff55bf2c1006775203d1fc8f0">[54f578a]</a></li>
+<li>[Vulkan] Fix handling of swapchain resize when window is minimized. <a href="https://github.com/mellinoe/veldrid/commit/7e3142f82b62d1ce3641d89417102ba57fe67e55">[7e3142f]</a></li>
+<li>[D3D11] Instead of relying on D3D11.1, use the officially-prescribed UpdateSubresource workaround in D3D11CommandList.UpdateBuffer. <a href="https://github.com/mellinoe/veldrid/commit/12da221dfd4acb12df507708a4c2f9f304b4cfcb">[12da221]</a></li>
+<li>[ImageSharp] Use CreateTextureViaUpdate instead of CreateTextureViaStaging. <a href="https://github.com/mellinoe/veldrid/commit/e8e6084ca875b0f7608cfbdb5a5b1397eb171965">[e8e6084]</a></li>
+<li>[OpenGL] Stop tracking CommandLists when their reference count reaches 0. <a href="https://github.com/mellinoe/veldrid/commit/2fa370090c006bbde9b9534223f2fcfec489bcb5">[2fa3700]</a></li>
+<li>Change all backends to skip CommandList.UpdateBuffer if the size is 0. <a href="https://github.com/mellinoe/veldrid/commit/fd28642ae084b808b119b5c9d32af0a4b7d4f8b0">[fd28642]</a></li>
+<li>[Metal] Fix CommandList.CopyTexture for small compressed texture regions. <a href="https://github.com/mellinoe/veldrid/commit/516b269524647caadc5252cda9379e0c8c31c5db">[516b269]</a></li>
+<li>[Metal] Fix CommandList.UpdateTexture with 0 size. <a href="https://github.com/mellinoe/veldrid/commit/b573b767ba185bc683403b824244de4b30d08156">[b573b76]</a></li>
+<li>Fix CommandList.CopyBuffer with a copy size of 0 bytes. <a href="https://github.com/mellinoe/veldrid/commit/182651a5806217ca7098ef4b1a41d585d9df2640">[182651a]</a></li>
+<li>Fix swapped doc comments for BlendFactor.One and Zero. <a href="https://github.com/mellinoe/veldrid/commit/a7c6382697aeddec1d0ca359c033c87e50379c86">[a7c6382]</a></li>
+<li>Skybox.cs: Used new cubemap texture class to remove unsafe code (#115) <a href="https://github.com/mellinoe/veldrid/commit/6205e883eb9d4032fb3af36aac59eef563a9e73d">[6205e88]</a> <a href="https://github.com/geoeo">@geoeo</a></li>
+<li>Free the GCHandle used in UpdateTexture(T[]). <a href="https://github.com/mellinoe/veldrid/commit/171a33ad236e2bfaa8c4f0725c04167229c77932">[171a33a]</a></li>
+<li>On macOS, return false for IsBackendSupported(GraphicsBackend.OpenGLES). <a href="https://github.com/mellinoe/veldrid/commit/46ce154a0ebdded4fccee7ff93dec4c31352b5d8">[46ce154]</a></li>
+<li>[Metal] Track support for individual sample count values. <a href="https://github.com/mellinoe/veldrid/commit/8c1a90a0c9e8be580ada4bd788aa039cba1c42a8">[8c1a90a]</a></li>
+<li>[Vulkan] Fix some edge case issues around how Vulkan Framebuffer state is tracked. <a href="https://github.com/mellinoe/veldrid/commit/9f2772c8aec278ae7532c82b9b3c309047519d08">[9f2772c]</a></li>
+<li>Update to ImageSharp beta5 and remove obsolete methods <a href="https://github.com/mellinoe/veldrid/commit/fac61cdf2913df5b3d8d308f3fe6bd17c02f5535">[fac61cd]</a> (<a href="https://github.com/JimBobSquarePants">JimBobSquarePants</a>)</li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/updates/4.5.0.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

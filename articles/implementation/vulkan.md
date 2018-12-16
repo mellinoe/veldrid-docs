@@ -4,7 +4,7 @@ The Vulkan backend is a multi-platform backend implemented using the Vulkan API.
 
 Vulkan [GraphicsDevices](xref:Veldrid.GraphicsDevice) are created from a [VkSurfaceSource](xref:Veldrid.Vk.VkSurfaceSource), which is a platform-specific object used to create a Vulkan surface (VkSurfaceKHR). The following helper functions are available:
 
-* [CreateWin32](xref:Veldrid.Vk.VkSurfaceSource#Veldrid_Vk_VkSurfaceSource_CreateWin32_IntPtr_IntPtr_): Creates a VkSurfaceSource for the given Win32 instance and window handle.
+* [CreateWin32](xref:Veldrid.Vk.VkSurfaceSource#Veldrid_Vk_VkSurfaceSource_CreateWin32_System_IntPtr_System_IntPtr_): Creates a VkSurfaceSource for the given Win32 instance and window handle.
 * [CreateXlib](xref:Veldrid.Vk.VkSurfaceSource#Veldrid_Vk_VkSurfaceSource_CreateXlib_Display__Window_): Creates a VkSurfaceSource for the given Xlib display and window.
 
 ## API Concept Map

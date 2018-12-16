@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width">
     <meta name="title" content="Class ResourceFactory
    ">
-    <meta name="generator" content="docfx 2.34.0.0">
+    <meta name="generator" content="docfx 2.40.4.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
     <link rel="stylesheet" href="../styles/docfx.vendor.css">
@@ -22,7 +22,7 @@
     
     
   </head>
-  <body data-spy="scroll" data-target="#affix">
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
     <div id="wrapper">
       <header>
         
@@ -1339,6 +1339,130 @@
   
   
   <a id="Veldrid_ResourceFactory_CreateTexture_" data-uid="Veldrid.ResourceFactory.CreateTexture*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateTexture_System_UInt64_Veldrid_TextureDescription_" data-uid="Veldrid.ResourceFactory.CreateTexture(System.UInt64,Veldrid.TextureDescription)">CreateTexture(UInt64, TextureDescription)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Texture.html">Texture</a> from an existing native texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture CreateTexture(ulong nativeTexture, TextureDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">nativeTexture</span></td>
+        <td><p>A backend-specific handle identifying an existing native texture. See remarks.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The properties of the existing Texture.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.Texture.html">Texture</a> wrapping the existing native texture.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Veldrid_ResourceFactory_CreateTexture_System_UInt64_Veldrid_TextureDescription__remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The nativeTexture parameter is backend-specific, and the type of data passed in depends on which graphics API is
+being used.
+When using the Vulkan backend, nativeTexture must be a valid VkImage handle.
+When using the Metal backend, nativeTexture must be a valid MTLTexture pointer.
+When using the D3D11 backend, nativeTexture must be a valid pointer to an ID3D11Texture1D, ID3D11Texture2D, or
+ID3D11Texture3D.
+When using the OpenGL backend, nativeTexture must be a valid OpenGL texture name.
+The properties of the Texture will be determined from the <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a> passed in. These
+properties must match the true properties of the existing native texture.</p>
+</div>
+  
+  
+  <a id="Veldrid_ResourceFactory_CreateTexture_" data-uid="Veldrid.ResourceFactory.CreateTexture*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateTexture_System_UInt64_Veldrid_TextureDescription__" data-uid="Veldrid.ResourceFactory.CreateTexture(System.UInt64,Veldrid.TextureDescription@)">CreateTexture(UInt64, ref TextureDescription)</h4>
+  <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Texture.html">Texture</a> from an existing native texture.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Texture CreateTexture(ulong nativeTexture, ref TextureDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">nativeTexture</span></td>
+        <td><p>A backend-specific handle identifying an existing native texture. See remarks.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td><p>The properties of the existing Texture.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td><p>A new <a class="xref" href="Veldrid.Texture.html">Texture</a> wrapping the existing native texture.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 id="Veldrid_ResourceFactory_CreateTexture_System_UInt64_Veldrid_TextureDescription___remarks">Remarks</h5>
+  <div class="markdown level1 remarks"><p>The nativeTexture parameter is backend-specific, and the type of data passed in depends on which graphics API is
+being used.
+When using the Vulkan backend, nativeTexture must be a valid VkImage handle.
+When using the Metal backend, nativeTexture must be a valid MTLTexture pointer.
+When using the D3D11 backend, nativeTexture must be a valid pointer to an ID3D11Texture1D, ID3D11Texture2D, or
+ID3D11Texture3D.
+When using the OpenGL backend, nativeTexture must be a valid OpenGL texture name.
+The properties of the Texture will be determined from the <a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a> passed in. These
+properties must match the true properties of the existing native texture.</p>
+</div>
+  
+  
+  <a id="Veldrid_ResourceFactory_CreateTexture_" data-uid="Veldrid.ResourceFactory.CreateTexture*"></a>
   <h4 id="Veldrid_ResourceFactory_CreateTexture_Veldrid_TextureDescription_" data-uid="Veldrid.ResourceFactory.CreateTexture(Veldrid.TextureDescription)">CreateTexture(TextureDescription)</h4>
   <div class="markdown level1 summary"><p>Creates a new <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
 </div>
@@ -1423,6 +1547,53 @@
         <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
         <td><p>A new <a class="xref" href="Veldrid.Texture.html">Texture</a>.</p>
 </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_ResourceFactory_CreateTextureCore_" data-uid="Veldrid.ResourceFactory.CreateTextureCore*"></a>
+  <h4 id="Veldrid_ResourceFactory_CreateTextureCore_System_UInt64_Veldrid_TextureDescription__" data-uid="Veldrid.ResourceFactory.CreateTextureCore(System.UInt64,Veldrid.TextureDescription@)">CreateTextureCore(UInt64, ref TextureDescription)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected abstract Texture CreateTextureCore(ulong nativeTexture, ref TextureDescription description)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.UInt64</span></td>
+        <td><span class="parametername">nativeTexture</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.TextureDescription.html">TextureDescription</a></td>
+        <td><span class="parametername">description</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.Texture.html">Texture</a></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

@@ -52,7 +52,7 @@ DeviceBuffers can be created for a variety of applications. The [BufferUsage](xr
 
 ### Shaders
 
-[Shaders](xref:Veldrid.Shader) are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry, compute). They are created from graphics-API-specific data chunks. Multiple shader modules are combined into a "shader set", used to construct a Pipeline. See the [Shaders and Resources overview](xref:shaders-and-resources) for more information.
+[Shaders](xref:Veldrid.Shader) are a device resource which represent a single shader module, for a single shader stage (vertex, fragment, tesselation, geometry, [compute](xref:compute-shaders)). They are created from graphics-API-specific data chunks. Multiple shader modules are combined into a "shader set", used to construct a Pipeline. See the [Shaders and Resources overview](xref:shaders-and-resources) and the [compute shaders overview](xref:compute-shaders) for more information.
 
 ### Pipelines
 
