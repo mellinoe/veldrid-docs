@@ -76,11 +76,13 @@
 <ul>
 <li>Veldrid: the core package containing all of the important graphics functionality.</li>
 <li>Veldrid.StartupUtilities: a utility package that makes it easy to set up an application using SDL2.</li>
+<li>Veldrid.SPIRV: a utility package that provides runtime shader compilation and translation.</li>
 </ul>
 <p>You can add references to these packages using the Visual Studio package manager, or you can add the following lines directly into your .csproj.</p>
 <pre><code class="lang-XML">&lt;ItemGroup&gt;
-  &lt;PackageReference Include=&quot;Veldrid&quot; Version=&quot;4.0.0-beta1&quot; /&gt;
-  &lt;PackageReference Include=&quot;Veldrid.StartupUtilities&quot; Version=&quot;4.0.0-beta1&quot; /&gt;
+  &lt;PackageReference Include=&quot;Veldrid&quot; Version=&quot;4.5.0&quot; /&gt;
+  &lt;PackageReference Include=&quot;Veldrid.StartupUtilities&quot; Version=&quot;4.5.0&quot; /&gt;
+  &lt;PackageReference Include=&quot;Veldrid.SPIRV&quot; Version=&quot;1.0.7&quot; /&gt;
 &lt;/ItemGroup&gt;
 </code></pre><h2 id="creating-a-window">Creating a Window</h2>
 <p>Veldrid itself does not care what framework or library you use to manage your window or render view -- it is flexible enough to work with many different systems. The <code>VeldridStartup</code> static class (from Veldrid.StartupUtilities) includes a number of helper functions intended to make Window and GraphicsDevice creation easier for common scenarios, and it will be used here.</p>

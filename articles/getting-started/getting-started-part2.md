@@ -12,8 +12,7 @@ It's time to create some Veldrid objects which we will need to render our multi-
 private static CommandList _commandList;
 private static DeviceBuffer _vertexBuffer;
 private static DeviceBuffer _indexBuffer;
-private static Shader _vertexShader;
-private static Shader _fragmentShader;
+private static Shader[] _shaders;
 private static Pipeline _pipeline;
 ```
 
@@ -92,52 +91,59 @@ To create a Pipeline later on, we need to know the layout of the vertex buffer t
 
 ```C#
 VertexLayoutDescription vertexLayout = new VertexLayoutDescription(
-    new VertexElementDescription("Position", VertexElementSemantic.Position, VertexElementFormat.Float2),
-    new VertexElementDescription("Color", VertexElementSemantic.Color, VertexElementFormat.Float4));
+    new VertexElementDescription("Position", VertexElementSemantic.TextureCoordinate, VertexElementFormat.Float2),
+    new VertexElementDescription("Color", VertexElementSemantic.TextureCoordinate, VertexElementFormat.Float4));
 ```
 
 Our vertex data has only two elements: a 2-float position, and a 4-float color.
 
-To create a Pipeline, we also need a set of shaders. Shader code is a bit outside of the scope of this tutorial, so I have provided some pre-written shaders which can be used to draw our multi-colored quad. Copy [these files](https://github.com/mellinoe/veldrid-samples/tree/master/src/GettingStarted/Shaders) into your project and set them to "Copy to Output" upon build. In Visual Studio, you can do this by selecting all of the files and applying these options:
-
-![Copy To Output](../../images/copy-to-output.png)
-
-Shaders for all graphics backends are included. To load our [Veldrid.Shader](xref:Veldrid.Shader) objects, we will use a helper function which simply selects the appropriate file from the "Shaders" subdirectory and loads it into a Shader. For simplicity, the filename is assumed to be the name of the shader stage (vertex or fragment). Put this method into the `Program` class:
+To create a Pipeline, we also need a set of shaders. For simplicity, we will store our shaders in strings directly in the application. Declare these new strings with your other fields:
 
 ```C#
-private static Shader LoadShader(ShaderStages stage)
+        private const string VertexCode = @"
+#version 450
+
+layout(location = 0) in vec2 Position;
+layout(location = 1) in vec4 Color;
+
+layout(location = 0) out vec4 fsin_Color;
+
+void main()
 {
-    string extension = null;
-    switch (_graphicsDevice.BackendType)
-    {
-        case GraphicsBackend.Direct3D11:
-            extension = "hlsl.bytes";
-            break;
-        case GraphicsBackend.Vulkan:
-            extension = "spv";
-            break;
-        case GraphicsBackend.OpenGL:
-            extension = "glsl";
-            break;
-        case GraphicsBackend.Metal:
-            extension = "metallib";
-            break;
-        default: throw new System.InvalidOperationException();
-    }
+    gl_Position = vec4(Position, 0, 1);
+    fsin_Color = Color;
+}";
 
-    string entryPoint = stage == ShaderStages.Vertex ? "VS" : "FS";
-    string path = Path.Combine(System.AppContext.BaseDirectory, "Shaders", $"{stage.ToString()}.{extension}");
-    byte[] shaderBytes = File.ReadAllBytes(path);
-    return _graphicsDevice.ResourceFactory.CreateShader(new ShaderDescription(stage, shaderBytes, entryPoint));
-}
+        private const string FragmentCode = @"
+#version 450
+
+layout(location = 0) in vec4 fsin_Color;
+layout(location = 0) out vec4 fsout_Color;
+
+void main()
+{
+    fsout_Color = fsin_Color;
+}";
 ```
 
-Next, we load our vertex and fragment shaders using the helper method.
+Notice that the vertex shader has two "in" variables, a `vec2` and a `vec4`. These correspond to the two `VertexElementDescription` items we defined just before.
+
+The shaders above are written in GLSL, but other shading languages can also be used with Veldrid. When you created your project, you added a reference to the Veldrid.SPIRV package. This is a helper library which allows you to load shaders from text, compiling and translating them into the form needed at runtime. To create the `Shader` instances that we need for our Pipeline, we do the following:
 
 ```C#
-_vertexShader = LoadShader(ShaderStages.Vertex);
-_fragmentShader = LoadShader(ShaderStages.Fragment);
+ShaderDescription vertexShaderDesc = new ShaderDescription(
+    ShaderStages.Vertex,
+    Encoding.UTF8.GetBytes(VertexCode),
+    "main");
+ShaderDescription fragmentShaderDesc = new ShaderDescription(
+    ShaderStages.Fragment,
+    Encoding.UTF8.GetBytes(FragmentCode),
+    "main");
+
+_shaders = factory.CreateFromSpirv(vertexShaderDesc, fragmentShaderDesc);
 ```
+
+`CreateFromSpirv` is an extension method defined in the `Veldrid.SPIRV` namespace, so make sure there is a `using` statement at the top of your file for that namespace.
 
 ### Pipeline
 
@@ -217,10 +223,11 @@ We have successfully created all of the device resources that we need. In the ne
 Here is what our application should look like at the end of this section:
 
 ```C#
-using System.IO;
 using System.Numerics;
+using System.Text;
 using Veldrid;
 using Veldrid.Sdl2;
+using Veldrid.SPIRV;
 using Veldrid.StartupUtilities;
 
 namespace GettingStarted
@@ -231,9 +238,33 @@ namespace GettingStarted
         private static CommandList _commandList;
         private static DeviceBuffer _vertexBuffer;
         private static DeviceBuffer _indexBuffer;
-        private static Shader _vertexShader;
-        private static Shader _fragmentShader;
+        private static Shader[] _shaders;
         private static Pipeline _pipeline;
+
+        private const string VertexCode = @"
+#version 450
+
+layout(location = 0) in vec2 Position;
+layout(location = 1) in vec4 Color;
+
+layout(location = 0) out vec4 fsin_Color;
+
+void main()
+{
+    gl_Position = vec4(Position, 0, 1);
+    fsin_Color = Color;
+}";
+
+        private const string FragmentCode = @"
+#version 450
+
+layout(location = 0) in vec4 fsin_Color;
+layout(location = 0) out vec4 fsout_Color;
+
+void main()
+{
+    fsout_Color = fsin_Color;
+}";
 
         static void Main()
         {
@@ -278,11 +309,19 @@ namespace GettingStarted
             _graphicsDevice.UpdateBuffer(_indexBuffer, 0, quadIndices);
 
             VertexLayoutDescription vertexLayout = new VertexLayoutDescription(
-                new VertexElementDescription("Position", VertexElementSemantic.Position, VertexElementFormat.Float2),
-                new VertexElementDescription("Color", VertexElementSemantic.Color, VertexElementFormat.Float4));
+                new VertexElementDescription("Position", VertexElementSemantic.TextureCoordinate, VertexElementFormat.Float2),
+                new VertexElementDescription("Color", VertexElementSemantic.TextureCoordinate, VertexElementFormat.Float4));
 
-            _vertexShader = LoadShader(ShaderStages.Vertex);
-            _fragmentShader = LoadShader(ShaderStages.Fragment);
+            ShaderDescription vertexShaderDesc = new ShaderDescription(
+                ShaderStages.Vertex,
+                Encoding.UTF8.GetBytes(VertexCode),
+                "main");
+            ShaderDescription fragmentShaderDesc = new ShaderDescription(
+                ShaderStages.Fragment,
+                Encoding.UTF8.GetBytes(FragmentCode),
+                "main");
+
+            _shaders = factory.CreateFromSpirv(vertexShaderDesc, fragmentShaderDesc);
 
             GraphicsPipelineDescription pipelineDescription = new GraphicsPipelineDescription();
             pipelineDescription.BlendState = BlendStateDescription.SingleOverrideBlend;
@@ -304,35 +343,12 @@ namespace GettingStarted
 
             pipelineDescription.ShaderSet = new ShaderSetDescription(
                 vertexLayouts: new VertexLayoutDescription[] { vertexLayout },
-                shaders: new Shader[] { _vertexShader, _fragmentShader });
+                shaders: _shaders);
 
             pipelineDescription.Outputs = _graphicsDevice.SwapchainFramebuffer.OutputDescription;
             _pipeline = factory.CreateGraphicsPipeline(pipelineDescription);
 
             _commandList = factory.CreateCommandList();
-        }
-
-        private static Shader LoadShader(ShaderStages stage)
-        {
-            string extension = null;
-            switch (_graphicsDevice.BackendType)
-            {
-                case GraphicsBackend.Direct3D11:
-                    extension = "hlsl.bytes";
-                    break;
-                case GraphicsBackend.Vulkan:
-                    extension = "spv";
-                    break;
-                case GraphicsBackend.OpenGL:
-                    extension = "glsl";
-                    break;
-                default: throw new System.InvalidOperationException();
-            }
-
-            string entryPoint = stage == ShaderStages.Vertex ? "VS" : "FS";
-            string path = Path.Combine(System.AppContext.BaseDirectory, "Shaders", $"{stage.ToString()}.{extension}");
-            byte[] shaderBytes = File.ReadAllBytes(path);
-            return _graphicsDevice.ResourceFactory.CreateShader(new ShaderDescription(stage, shaderBytes, entryPoint));
         }
     }
 

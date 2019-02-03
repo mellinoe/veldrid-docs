@@ -14,13 +14,15 @@ Create a new console application by running `dotnet new console`, or by using a 
 
 * Veldrid: the core package containing all of the important graphics functionality.
 * Veldrid.StartupUtilities: a utility package that makes it easy to set up an application using SDL2.
+* Veldrid.SPIRV: a utility package that provides runtime shader compilation and translation.
 
 You can add references to these packages using the Visual Studio package manager, or you can add the following lines directly into your .csproj.
 
 ```XML
 <ItemGroup>
-  <PackageReference Include="Veldrid" Version="4.0.0-beta1" />
-  <PackageReference Include="Veldrid.StartupUtilities" Version="4.0.0-beta1" />
+  <PackageReference Include="Veldrid" Version="4.5.0" />
+  <PackageReference Include="Veldrid.StartupUtilities" Version="4.5.0" />
+  <PackageReference Include="Veldrid.SPIRV" Version="1.0.7" />
 </ItemGroup>
 ```
 
