@@ -191,7 +191,7 @@ Our shaders do not read from any resources, so we use an empty array here.
 ```C#
 pipelineDescription.ShaderSet = new ShaderSetDescription(
     vertexLayouts: new VertexLayoutDescription[] { vertexLayout },
-    shaders: new Shader[] { _vertexShader, _fragmentShader });
+    shaders: _shaders);
 ```
 
 We're passing in our previously-created shader stages and vertex layout here. This controls which shaders are used for rendering when the Pipeline is active.
