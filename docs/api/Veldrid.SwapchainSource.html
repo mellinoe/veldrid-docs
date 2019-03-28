@@ -358,6 +358,57 @@ or SwapChainBackgroundPanel contained in your application window.</p>
   </table>
   
   
+  <a id="Veldrid_SwapchainSource_CreateWayland_" data-uid="Veldrid.SwapchainSource.CreateWayland*"></a>
+  <h4 id="Veldrid_SwapchainSource_CreateWayland_System_IntPtr_System_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateWayland(System.IntPtr,System.IntPtr)">CreateWayland(IntPtr, IntPtr)</h4>
+  <div class="markdown level1 summary"><p>Creates a new SwapchainSource from the given Wayland information.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static SwapchainSource CreateWayland(IntPtr display, IntPtr surface)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.IntPtr</span></td>
+        <td><span class="parametername">display</span></td>
+        <td><p>The Wayland display proxy.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.IntPtr</span></td>
+        <td><span class="parametername">surface</span></td>
+        <td><p>The Wayland surface proxy to map.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.SwapchainSource.html">SwapchainSource</a></td>
+        <td><p>A new SwapchainSource which can be used to create a <a class="xref" href="Veldrid.Swapchain.html">Swapchain</a> for the given Wayland surface.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
   <a id="Veldrid_SwapchainSource_CreateWin32_" data-uid="Veldrid.SwapchainSource.CreateWin32*"></a>
   <h4 id="Veldrid_SwapchainSource_CreateWin32_System_IntPtr_System_IntPtr_" data-uid="Veldrid.SwapchainSource.CreateWin32(System.IntPtr,System.IntPtr)">CreateWin32(IntPtr, IntPtr)</h4>
   <div class="markdown level1 summary"><p>Creates a new SwapchainSource for a Win32 window.</p>

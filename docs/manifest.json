@@ -921,7 +921,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.SwapchainSource.html",
-          "hash": "u+fRH04HhFoyw+4EHgFwag=="
+          "hash": "Ya7CORFdoV54o38jlzJKPg=="
         }
       },
       "is_incremental": true,
@@ -933,7 +933,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Texture.html",
-          "hash": "JV+MdwKUkB6xRU9l0zF4pw=="
+          "hash": "3mjMnqOPRtgwcLuvxs39Gg=="
         }
       },
       "is_incremental": true,
@@ -1539,7 +1539,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "TzAgLxh+/fGONbN/Z2EFrA=="
+          "hash": "EUh2IwMfnB7+jlWCS28dUA=="
         }
       },
       "is_incremental": false,
@@ -1636,6 +1636,18 @@
         ".html": {
           "relative_path": "updates/4.5.0.html",
           "hash": "WB/85i2T83X/yYnPMJD15A=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "updates/4.6.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "updates/4.6.0.html",
+          "hash": "bRShMfxOknGNx2cVvyg++w=="
         }
       },
       "is_incremental": true,
@@ -1743,7 +1755,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/toc.html",
-          "hash": "t4aVzTYPTaygT5X/DEbZtg=="
+          "hash": "YqrCPUmBbqQZads3of8mQA=="
         }
       },
       "is_incremental": false,
@@ -1757,14 +1769,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

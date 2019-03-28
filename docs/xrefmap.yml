@@ -4,6 +4,9 @@ references:
 - uid: 4.5.0
   name: Veldrid 4.5.0
   href: updates/4.5.0.html
+- uid: 4.6.0
+  name: Veldrid 4.6.0
+  href: updates/4.6.0.html
 - uid: android
   name: Android Support
   href: articles/android.html
@@ -7100,6 +7103,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.SwapchainSource.CreateUwp
   nameWithType: SwapchainSource.CreateUwp
+- uid: Veldrid.SwapchainSource.CreateWayland(System.IntPtr,System.IntPtr)
+  name: CreateWayland(IntPtr, IntPtr)
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateWayland_System_IntPtr_System_IntPtr_
+  commentId: M:Veldrid.SwapchainSource.CreateWayland(System.IntPtr,System.IntPtr)
+  fullName: Veldrid.SwapchainSource.CreateWayland(System.IntPtr, System.IntPtr)
+  nameWithType: SwapchainSource.CreateWayland(IntPtr, IntPtr)
+- uid: Veldrid.SwapchainSource.CreateWayland*
+  name: CreateWayland
+  href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateWayland_
+  commentId: Overload:Veldrid.SwapchainSource.CreateWayland
+  isSpec: "True"
+  fullName: Veldrid.SwapchainSource.CreateWayland
+  nameWithType: SwapchainSource.CreateWayland
 - uid: Veldrid.SwapchainSource.CreateWin32(System.IntPtr,System.IntPtr)
   name: CreateWin32(IntPtr, IntPtr)
   href: api/Veldrid.SwapchainSource.html#Veldrid_SwapchainSource_CreateWin32_System_IntPtr_System_IntPtr_

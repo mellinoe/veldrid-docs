@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Veldrid 4.6.0 </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Veldrid 4.6.0 ">
+    <meta name="generator" content="docfx 2.40.4.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="4.6.0">
+<h1 id="veldrid-460">Veldrid 4.6.0</h1>
+
+<p><em>2019-03-27</em></p>
+<p>Veldrid 4.6.0 is now available for download. This is a small release with a few minor features, bug fixes, and quality-of-life improvements.</p>
+<p>Veldrid can be installed from <a href="https://www.nuget.org/packages/Veldrid/">NuGet</a>, and the source is available on <a href="https://github.com/mellinoe/veldrid">GitHub</a>.</p>
+<h2 id="renderdoc-support">RenderDoc Support</h2>
+<p>A new library, Veldrid.RenderDoc, has been added to aid in debugging with <a href="https://renderdoc.org/">RenderDoc</a>.</p>
+<p>See <a href="https://mellinoe.dev/graphics/2019/01/23/renderdoc-integration-in-veldrid.html">this post</a> for more information about the new feature and how to use it.</p>
+<h2 id="better-sdl2-input-handling">Better SDL2 Input Handling</h2>
+<p>An extensible SDL2 event handling system has been added, and the existing SDL_Window-based events have been migrated on top of it. The Sdl2Events static class now acts as a registry for custom user callbacks, and can be used without any SDL2 window. This can be used to track gamepad events and state.</p>
+<pre><code class="lang-C#">public static class Sdl2Events
+{
+    public static void Subscribe(SDLEventHandler processor);
+    public static void Unsubscribe(SDLEventHandler processor);
+    public static void ProcessEvents();
+}
+</code></pre><p>NeoDemo now contains basic gamepad controls, using a basic system built on top of the Sdl2Events class. See Sdl2ControllerTracker.cs in the NeoDemo project for more information.</p>
+<h2 id="internal-reference-counting-for-vulkan-resources">Internal Reference Counting for Vulkan Resources</h2>
+<p>Previously, the lifetime of resources in the Vulkan backen was more difficult to manage compared to others. Internally, the Vulkan backend now reference counts the resources that it allocates, and is able to ensure that resources stay alive until they are no longer referenced by anything, including in-progress CommandList submissions.</p>
+<p>In practice, this means that you can now treat the lifetime of Vulkan resources the same as you would when using any other backend. It is safe to Dispose of a resource whose usage is still pending on the GPU, and Veldrid will wait to destroy it until it is safe to do so. Although there is a small amount of overhead to this internal tracking, it allows the Vulkan backend to behave identically to other backends.</p>
+<h2 id="all-changes">All Changes</h2>
+<ul>
+<li>Improve GetPlatformDefaultBackend logic for macOS. <a href="https://github.com/mellinoe/veldrid/commit/729ae642f0e5920a0f6b1586c421a0ed2f8ae87f">[729ae64]</a></li>
+<li>Add reference counting to Vulkan resources. <a href="https://github.com/mellinoe/veldrid/commit/2f9edaaae8153e27abc295c594cfc865c1cb1a8c">[2f9edaa]</a> <a href="https://github.com/mellinoe/veldrid/commit/0be2107806d3f3543132fdfdead2443fee1713a3">[0be2107]</a></li>
+<li>[OpenGL] 1D Texture fixes for macOS codepaths. <a href="https://github.com/mellinoe/veldrid/commit/4fe446160ea0f0150c6b5742d0925c073a66c9d1">[4fe4461]</a></li>
+<li>[Vulkan] Allow textures to be sampled from without uploading any data. <a href="https://github.com/mellinoe/veldrid/commit/b0f5f8e2224f026c5a8f73d29a9754510f996f36">[b0f5f8e]</a></li>
+<li>[OpenGL] Additional 1D Texture fixes. <a href="https://github.com/mellinoe/veldrid/commit/0e930c68f317b478a4574aad72aa6ad38c9eab07">[0e930c6]</a></li>
+<li>Fix warnings in new Sdl2.GameController code. <a href="https://github.com/mellinoe/veldrid/commit/43926ddeafb008adc430bea79e9334b3fbc870a8">[43926dd]</a></li>
+<li>[Vulkan] Ensure cubemap TextureViews are created with the correct VkImageViewType. <a href="https://github.com/mellinoe/veldrid/commit/632cca37f64505b9572b6c5cd761a96f3cb923e1">[632cca3]</a></li>
+<li>Fix osx-x64 runtime detection in mono build targets for Veldrid.SDL2. <a href="https://github.com/mellinoe/veldrid/commit/2d8d315d05831f07f6d5d065b0bd06af27ea8032">[2d8d315]</a></li>
+<li>[OpenGL] Additional fixes for 1D Textures. <a href="https://github.com/mellinoe/veldrid/commit/988bd6a8cb775d1d6264119c8bb1fb854b831b8d">[988bd6a]</a></li>
+<li>[D3D11, Vulkan] Handle 1D textures correctly when creating a TextureView <a href="https://github.com/mellinoe/veldrid/commit/b623c6d638526a30726a1a8c9dc337f6b3269004">[b623c6d]</a> <a href="https://github.com/SomeAnon42">(@SomeAnon42)</a></li>
+<li>Fix typo in D3D11Swapchain <a href="https://github.com/mellinoe/veldrid/pull/160">(#160)</a> <a href="https://github.com/mellinoe/veldrid/commit/7f8a440b6873dfa2b78adf938ed51502e8706cdd">[7f8a440]</a> <a href="https://github.com/lweb20">(@lweb20)</a></li>
+<li>Fix variable naming in ImGuiRenderer. <a href="https://github.com/mellinoe/veldrid/commit/6829bc7b716a7e55d362bb678507e49fcf4ef379">[6829bc7]</a></li>
+<li>[ImGui] Add RemoveImGuiBinding for removing cached image bindings. <a href="https://github.com/mellinoe/veldrid/commit/481e28225109150493ed78064bd19612fc211641">[481e282]</a></li>
+<li>[Metal] Fix Textures being bound as TextureViews for compute Pipelines. <a href="https://github.com/mellinoe/veldrid/commit/a0a6541af48b234abb01be08de8abadf3bc74027">[a0a6541]</a></li>
+<li>[Metal] Fix a race condition in GD.WaitIdle. <a href="https://github.com/mellinoe/veldrid/commit/ea055f119a6359f0a473faa5cf4d0b5c0a1573eb">[ea055f1]</a></li>
+<li>Add wrappers for most SDL_GameController functions. <a href="https://github.com/mellinoe/veldrid/commit/9275fe7153c416f9ea24b17143bb821a6331bd28">[9275fe7]</a></li>
+<li>More flexible SDL2 event handling. <a href="https://github.com/mellinoe/veldrid/commit/576976879d136b001b87f56d18821c64c230b90f">[5769768]</a> <a href="https://github.com/mellinoe/veldrid/commit/45a671e9790122d2b679f3dc7593bee2ca18fe36">[45a671e]</a></li>
+<li>[ImGui] Remove explicit font TextureView. <a href="https://github.com/mellinoe/veldrid/commit/fc7ae297c994aaef5c6a4c5b9ecb9ee5d34d1d76">[fc7ae29]</a></li>
+<li>[ImGui] Dispose previous font-related resources before creating new ones. <a href="https://github.com/mellinoe/veldrid/commit/ab92127987a9ef74738578231e78542faa380120">[ab92127]</a></li>
+<li>Allow ImGuiRenderer&#39;s font texture to be recreated after startup. <a href="https://github.com/mellinoe/veldrid/commit/db2eab0bdcf64f03de664bb7253f01ad81d4b7ee">[db2eab0]</a></li>
+<li>[Vulkan] Respect Shader.EntryPoint when creating a Pipeline. <a href="https://github.com/mellinoe/veldrid/commit/a9f011e2136d650aa9fa6310d71e3c912bd7195a">[a9f011e]</a></li>
+<li>[D3D11] Set the DebugName of new ID3D11CommandLists. <a href="https://github.com/mellinoe/veldrid/commit/cb3cb9bcc35b55d2d81145a107e64b80e1378384">[cb3cb9b]</a></li>
+<li>[Vulkan] Fix an issue with image layout transitions. <a href="https://github.com/mellinoe/veldrid/commit/bb3fc6a626f724974f6312149978c87905af2063">[bb3fc6a]</a></li>
+<li>Add a Veldrid.RenderDoc, a helper library for controlling RenderDoc. <a href="https://github.com/mellinoe/veldrid/commit/f19fba3361adc7e43a8b38ee3794492c6c56cfed">[f19fba3]</a> <a href="https://github.com/mellinoe/veldrid/commit/be08c241b505b9af3752a0b20df6c4e5fc4c5f55">[be08c24]</a></li>
+<li>Fix build failure on Ubuntu 18.04 <a href="https://github.com/mellinoe/veldrid/commit/cd17cfbef4a681760f033f7ea8814f821b28316c">[cd17cfb]</a> <a href="https://github.com/jsutlovic">(@jsutlovic)</a></li>
+<li>Fix swapped right/middle mouse button detection in ImGuiRenderer. <a href="https://github.com/mellinoe/veldrid/commit/13d8a2c582bbbe4f3b4dc78d252aaca5848630a8">[13d8a2c]</a></li>
+<li>[ImGui] Embed missing legacy GLSL shaders. <a href="https://github.com/mellinoe/veldrid/commit/8b3ab08cf16d7d6bebd82b42f9f5e7d2e26d33b1">[8b3ab08]</a></li>
+<li>[Vulkan] Add support for Wayland swapchains and improve Vulkan surface extension handling. <a href="https://github.com/jjagg">(@jjagg)</a> <a href="https://github.com/mellinoe/veldrid/commit/a1861fc5589e5d1188e5032496378b93fee84f57">[a1861fc]</a> <a href="https://github.com/mellinoe/veldrid/commit/0f04a3d896f95207ad46420bd2d41228ff174767">[0f04a3d]</a> <a href="https://github.com/mellinoe/veldrid/commit/9ca0b2879107d0b479b956d1e091842baaf177e9">[9ca0b28]</a></li>
+<li>Added: method to load images from streams <a href="https://github.com/mellinoe/veldrid/commit/f75915caa500644536601ec4720d9b1f3663043e">[f75915c]</a> <a href="https://github.com/equinox2k">(@equinox2k)</a></li>
+<li>Add missing cat model file for the VR sample project. <a href="https://github.com/mellinoe/veldrid/commit/651856e99296fa183a96f9c0abab1c4415f4061f">[651856e]</a></li>
+<li>[D3D11] Fix creation of R11_G11_B10 textures. <a href="https://github.com/mellinoe/veldrid/commit/8c61ce0c9d44bc163cc719eae08b4bf6c4e6f291">[8c61ce0]</a></li>
+</ul>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/mellinoe/veldrid-docs/blob/master/updates/4.6.0.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+             
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

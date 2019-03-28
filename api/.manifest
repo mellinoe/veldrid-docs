@@ -793,6 +793,7 @@
   "Veldrid.SwapchainSource.CreateNSWindow(System.IntPtr)": "Veldrid.SwapchainSource.yml",
   "Veldrid.SwapchainSource.CreateUIView(System.IntPtr)": "Veldrid.SwapchainSource.yml",
   "Veldrid.SwapchainSource.CreateUwp(System.Object,System.Single)": "Veldrid.SwapchainSource.yml",
+  "Veldrid.SwapchainSource.CreateWayland(System.IntPtr,System.IntPtr)": "Veldrid.SwapchainSource.yml",
   "Veldrid.SwapchainSource.CreateWin32(System.IntPtr,System.IntPtr)": "Veldrid.SwapchainSource.yml",
   "Veldrid.SwapchainSource.CreateXlib(System.IntPtr,System.IntPtr)": "Veldrid.SwapchainSource.yml",
   "Veldrid.Texture": "Veldrid.Texture.yml",
