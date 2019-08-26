@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "E:/projects/veldrid-docs",
+  "source_base_path": "D:/projects/veldrid-docs",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -1530,7 +1530,7 @@
           "hash": "DkFnpuWBQityncZ9U1FSJQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1539,7 +1539,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "EUh2IwMfnB7+jlWCS28dUA=="
+          "hash": "ALaVxpT05Dfmi+xdgtlP7A=="
         }
       },
       "is_incremental": false,
@@ -1554,7 +1554,7 @@
           "hash": "5rUHlCKqWoHluunHIt+EYQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1566,7 +1566,7 @@
           "hash": "I+xNYo5JG84QKpXPiFvNTw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1578,7 +1578,7 @@
           "hash": "WKnTG4q3LXttwxOAgK6W1Q=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1590,7 +1590,7 @@
           "hash": "Jm25d2mDMn6kgiQOImmIiA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1602,7 +1602,7 @@
           "hash": "P3mANip6XuSyJCY5ctZwHw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1614,7 +1614,7 @@
           "hash": "PD3DPxstSE3q9kHMvw46Yg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1626,7 +1626,7 @@
           "hash": "BkiRYvxssyGG5qIrinhVlA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1638,7 +1638,7 @@
           "hash": "WB/85i2T83X/yYnPMJD15A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1650,7 +1650,19 @@
           "hash": "bRShMfxOknGNx2cVvyg++w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "updates/4.7.0.md",
+      "output": {
+        ".html": {
+          "relative_path": "updates/4.7.0.html",
+          "hash": "12M7+Ifw3c9eLSgCAdHu0g=="
+        }
+      },
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1662,7 +1674,7 @@
           "hash": "GqgqcnXEMxl7zgMjVAdEHw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1674,7 +1686,7 @@
           "hash": "3w8/0efuQd900fkQxnLLpw=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1686,7 +1698,7 @@
           "hash": "0V4n2psUt7tGXVkHWH1kZA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1698,7 +1710,7 @@
           "hash": "xD2GGTtYIifwpvqsfBxJqg=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1710,7 +1722,7 @@
           "hash": "FUDDFfIO91b21LgGDAhFbA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1722,7 +1734,7 @@
           "hash": "sev2aXZzkAKyls7h9HiD6A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1734,7 +1746,7 @@
           "hash": "8v96ArvLWza80jAqX/Ko6A=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1746,7 +1758,7 @@
           "hash": "hG3kiTtw/IOrvmc/IkcG9w=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1755,7 +1767,7 @@
       "output": {
         ".html": {
           "relative_path": "updates/toc.html",
-          "hash": "YqrCPUmBbqQZads3of8mQA=="
+          "hash": "QZhUBRe9y3TaQTd9u8g5VQ=="
         }
       },
       "is_incremental": false,
@@ -1769,22 +1781,22 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {
           "can_incremental": true,
           "incrementalPhase": "build"
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": true,
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         }
       }
