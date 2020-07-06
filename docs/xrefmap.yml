@@ -10,6 +10,9 @@ references:
 - uid: 4.7.0
   name: Veldrid 4.7.0
   href: updates/4.7.0.html
+- uid: 4.8.0
+  name: Veldrid 4.8.0
+  href: updates/4.8.0.html
 - uid: android
   name: Android Support
   href: articles/android.html
