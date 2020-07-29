@@ -86,8 +86,8 @@ In that method, we will simply dispose of everything we have created, ending wit
 private static void DisposeResources()
 {
     _pipeline.Dispose();
-    _vertexShader.Dispose();
-    _fragmentShader.Dispose();
+    _shaders[0].Dispose();
+    _shaders[1].Dispose();
     _commandList.Dispose();
     _vertexBuffer.Dispose();
     _indexBuffer.Dispose();
