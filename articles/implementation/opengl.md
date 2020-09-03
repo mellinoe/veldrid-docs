@@ -37,8 +37,8 @@ These functions are platform-specific, and different operating systems vary in h
 | [PrimitiveTopology](xref:Veldrid.PrimitiveTopology) | `GL_LINES`, `GL_POINTS`, `GL_TRIANGLES`, etc. | |
 | [Vertex Layouts](xref:Veldrid.VertexLayoutDescription) | `glEnableVertexAttribArray`, `glVertexAttrib*Pointer`, `glVertexAttribDivisor` | A single, global VAO is bound during initialization, and vertex attributes are updated into it as needed. |
 | [Shader](xref:Veldrid.Shader) | [Shader objects](https://www.khronos.org/opengl/wiki/Shader) | |
-| [ShaderSetDescription](xref:Veldrid.ShaderSetDescription) | [Program objects](https://www.khronos.org/opengl/wiki/GLSL_Object#Program_objects). | |
-| [Framebuffer](xref:Veldrid.Framebuffer) | [Framebuffer objects](https://www.khronos.org/opengl/wiki/Framebuffer_Object).aspx) | |
+| [ShaderSetDescription](xref:Veldrid.ShaderSetDescription) | [Program objects](https://www.khronos.org/opengl/wiki/GLSL_Object#Program_objects) | |
+| [Framebuffer](xref:Veldrid.Framebuffer) | [Framebuffer objects](https://www.khronos.org/opengl/wiki/Framebuffer_Object) | |
 | [ResourceLayout](xref:Veldrid.ResourceLayout) | None | The OpenGL backend uses the information from a ResourceLayout to determine which uniform locations a particular resource corresponds to, by name. |
 | [ResourceSet](xref:Veldrid.ResourceSet) | None | The OpenGL backend simply uses the individual resources contained in a ResourceSet to bind to a program. The slots are determined using information from the associated ResourceLayout. |
 | [Swapchain](xref:Veldrid.GraphicsDevice#Veldrid_GraphicsDevice_SwapchainFramebuffer) | None (implicit) | An OpenGL swapchain is not explicitly created by the user, nor can it be directly accessed or managed. Instead, it is part of the OpenGL context created by the host system.
