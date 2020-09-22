@@ -8,9 +8,9 @@ In this section, we will set up a new project, create a Window to draw into, and
 
 ## Create a new Project
 
-This walkthrough assumes you are using the .NET Core toolchain, although the same code could be run on .NET Framework or Mono. Veldrid is a .NET Standard 2.0 library, so you will need the .NET Core 2.0 SDK, or a 
+This walkthrough assumes you are using the .NET Core toolchain, although the same code could be run on .NET Framework or Mono. Veldrid is a .NET Standard 2.0 library, so you will need the .NET Core 2.0 SDK.
 
-Create a new console application by running `dotnet new console`, or by using a "New Project" dialogue in Visual Studio or other IDE. Then, add a reference to these two NuGet packages:
+Create a new console application by running `dotnet new console`, or by using a "New Project" dialogue in Visual Studio or other IDE. Then, add a reference to these three NuGet packages:
 
 * Veldrid: the core package containing all of the important graphics functionality.
 * Veldrid.StartupUtilities: a utility package that makes it easy to set up an application using SDL2.
@@ -28,7 +28,7 @@ You can add references to these packages using the Visual Studio package manager
 
 ## Creating a Window
 
-Veldrid itself does not care what framework or library you use to manage your window or render view -- it is flexible enough to work with many different systems. The `VeldridStartup` static class (from Veldrid.StartupUtilities) includes a number of helper functions intended to make Window and GraphicsDevice creation easier for common scenarios, and it will be used here.
+Veldrid itself does not care what framework or library you use to manage your window or render view -- it is flexible enough to work with many different systems. The `VeldridStartup` static class (from Veldrid.StartupUtilities) includes helper functions intended to make Window and GraphicsDevice creation easier for common scenarios, and it will be used here.
 
 First, we will create a Window. Inside the `Main()` method, let's add some code.
 
