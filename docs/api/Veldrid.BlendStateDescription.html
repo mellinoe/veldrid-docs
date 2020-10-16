@@ -109,6 +109,48 @@
   
   
   <a id="Veldrid_BlendStateDescription__ctor_" data-uid="Veldrid.BlendStateDescription.#ctor*"></a>
+  <h4 id="Veldrid_BlendStateDescription__ctor_Veldrid_RgbaFloat_System_Boolean_Veldrid_BlendAttachmentDescription___" data-uid="Veldrid.BlendStateDescription.#ctor(Veldrid.RgbaFloat,System.Boolean,Veldrid.BlendAttachmentDescription[])">BlendStateDescription(RgbaFloat, Boolean, BlendAttachmentDescription[])</h4>
+  <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Veldrid.BlendStateDescription.html">BlendStateDescription</a>,</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public BlendStateDescription(RgbaFloat blendFactor, bool alphaToCoverageEnabled, params BlendAttachmentDescription[] attachmentStates)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Veldrid.RgbaFloat.html">RgbaFloat</a></td>
+        <td><span class="parametername">blendFactor</span></td>
+        <td><p>The constant blend color.</p>
+</td>
+      </tr>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td><span class="parametername">alphaToCoverageEnabled</span></td>
+        <td><p>Enables alpha-to-coverage, which causes a fragment&apos;s alpha value to be
+used when determining multi-sample coverage.</p>
+</td>
+      </tr>
+      <tr>
+        <td><a class="xref" href="Veldrid.BlendAttachmentDescription.html">BlendAttachmentDescription</a>[]</td>
+        <td><span class="parametername">attachmentStates</span></td>
+        <td><p>The blend attachment states.</p>
+</td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+  <a id="Veldrid_BlendStateDescription__ctor_" data-uid="Veldrid.BlendStateDescription.#ctor*"></a>
   <h4 id="Veldrid_BlendStateDescription__ctor_Veldrid_RgbaFloat_Veldrid_BlendAttachmentDescription___" data-uid="Veldrid.BlendStateDescription.#ctor(Veldrid.RgbaFloat,Veldrid.BlendAttachmentDescription[])">BlendStateDescription(RgbaFloat, BlendAttachmentDescription[])</h4>
   <div class="markdown level1 summary"><p>Constructs a new <a class="xref" href="Veldrid.BlendStateDescription.html">BlendStateDescription</a>,</p>
 </div>
@@ -143,6 +185,31 @@
   </table>
   <h3 id="fields">Fields
   </h3>
+  
+  
+  <h4 id="Veldrid_BlendStateDescription_AlphaToCoverageEnabled" data-uid="Veldrid.BlendStateDescription.AlphaToCoverageEnabled">AlphaToCoverageEnabled</h4>
+  <div class="markdown level1 summary"><p>Enables alpha-to-coverage, which causes a fragment&apos;s alpha value to be used when determining multi-sample coverage.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool AlphaToCoverageEnabled</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">System.Boolean</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   
   
   <h4 id="Veldrid_BlendStateDescription_AttachmentStates" data-uid="Veldrid.BlendStateDescription.AttachmentStates">AttachmentStates</h4>

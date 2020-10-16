@@ -9,7 +9,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.BackendInfoD3D11.html",
-          "hash": "npuJF1wU822bUZWHGiOsSg=="
+          "hash": "P0aoguTmwCxI+2akGrnNug=="
         }
       },
       "is_incremental": true,
@@ -21,7 +21,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.BackendInfoOpenGL.html",
-          "hash": "Kn5x1SIuGQt1bLSzKXxi3A=="
+          "hash": "t1U4vOQNc3JsATYn225hsw=="
         }
       },
       "is_incremental": true,
@@ -93,7 +93,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.BlendStateDescription.html",
-          "hash": "kuh/1umYhrE6qd6NeNza8A=="
+          "hash": "/pdtzW9S2/Rs+U2huxGJ5Q=="
         }
       },
       "is_incremental": true,
@@ -141,7 +141,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.CommandList.html",
-          "hash": "Ns9OAhVJQwC4VTWLr0Wa0g=="
+          "hash": "x7mxBVu03H/VxaUsHhDNbQ=="
         }
       },
       "is_incremental": true,
@@ -197,6 +197,18 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/Veldrid.D3D11DeviceOptions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Veldrid.D3D11DeviceOptions.html",
+          "hash": "73asxqQDHHIuDdy2EpsY1Q=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/Veldrid.DepthStencilStateDescription.yml",
       "output": {
         ".html": {
@@ -213,7 +225,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.DeviceBuffer.html",
-          "hash": "EVoB1dkAEqug5PlDqjFR5A=="
+          "hash": "pkPHQMjuPxkrgEQuMzaViw=="
         }
       },
       "is_incremental": true,
@@ -261,7 +273,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Fence.html",
-          "hash": "9ehH113a8tfAQbE66JRmbg=="
+          "hash": "Bz3S2b4cs2ClQMiuwKalaA=="
         }
       },
       "is_incremental": true,
@@ -273,7 +285,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Framebuffer.html",
-          "hash": "dcV01JYk/QeWt4pN+pxlbQ=="
+          "hash": "HBS64E6EVpQWFGeZp6vBWA=="
         }
       },
       "is_incremental": true,
@@ -345,7 +357,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.GraphicsDevice.html",
-          "hash": "+GTl4R592hJKG2H0/DGrKg=="
+          "hash": "tb7HZkgUgHW+Tagd5BnWVA=="
         }
       },
       "is_incremental": true,
@@ -381,7 +393,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.GraphicsPipelineDescription.html",
-          "hash": "jlJecY+XP50e7ZGSDYoC5w=="
+          "hash": "x/04hyWAwH1vLaPx2GFKJw=="
         }
       },
       "is_incremental": true,
@@ -537,7 +549,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Pipeline.html",
-          "hash": "zih4v7/H12maQJ/Zud8kyQ=="
+          "hash": "RKnqU9nega8IMNEDOa+3RQ=="
         }
       },
       "is_incremental": true,
@@ -645,7 +657,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ResourceLayout.html",
-          "hash": "aHrEm1l3tpv8ZX+kVtu4NQ=="
+          "hash": "QXL+sTIu3tnz4tLXiBrQBw=="
         }
       },
       "is_incremental": true,
@@ -693,7 +705,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.ResourceSet.html",
-          "hash": "yebgq9n6cRQx9XTeLPjj/Q=="
+          "hash": "HgPT/4RAlm3aZh5QUzujlw=="
         }
       },
       "is_incremental": true,
@@ -741,7 +753,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Sampler.html",
-          "hash": "CV4uQ5UKRtAE6a3Era4plA=="
+          "hash": "FnkzG3vSQ0I40rVjUTnprQ=="
         }
       },
       "is_incremental": true,
@@ -777,7 +789,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.SamplerDescription.html",
-          "hash": "ncXCtrAq1t/phjbENJiXsw=="
+          "hash": "pwdF4YeI/hEzCMNnTg4KiQ=="
         }
       },
       "is_incremental": true,
@@ -801,7 +813,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Shader.html",
-          "hash": "Z5kUC6vjVtWy3LPIbuAkOg=="
+          "hash": "ZvUTGVYNgANZLcBBQ607+w=="
         }
       },
       "is_incremental": true,
@@ -897,7 +909,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Swapchain.html",
-          "hash": "XAF5TrvCYLuP7S/knycxpQ=="
+          "hash": "BO3tSL1yy8lB/gCljFJHXQ=="
         }
       },
       "is_incremental": true,
@@ -933,7 +945,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.Texture.html",
-          "hash": "3mjMnqOPRtgwcLuvxs39Gg=="
+          "hash": "EbMHhK+cEM3IILulv0biUw=="
         }
       },
       "is_incremental": true,
@@ -993,7 +1005,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.TextureView.html",
-          "hash": "+suhlY3EcPMCeAYW3MDEUw=="
+          "hash": "RLZEGtEr26OR/zSqY1p+Hg=="
         }
       },
       "is_incremental": true,
@@ -1029,7 +1041,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.VertexElementDescription.html",
-          "hash": "i6Xv767ebMVfVmyx81DJRA=="
+          "hash": "tw6k/pblv+yQihgosH/HZQ=="
         }
       },
       "is_incremental": true,
@@ -1053,7 +1065,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.VertexElementSemantic.html",
-          "hash": "jprGVl2CXPoHNZPry/VzlQ=="
+          "hash": "T2/UL7N2an1egoxTSIPdeQ=="
         }
       },
       "is_incremental": true,
@@ -1125,7 +1137,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Veldrid.html",
-          "hash": "np9vkkCme2p9R+FBH2n2hg=="
+          "hash": "GcP2XYXGKHzzKjGAz0ED1A=="
         }
       },
       "is_incremental": true,
@@ -1149,7 +1161,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "QM2bYe0DFiWwTQLMNTLpdQ=="
+          "hash": "6Tckkb+vejKCtkz2RQvVTg=="
         }
       },
       "is_incremental": false,
@@ -1674,7 +1686,7 @@
           "hash": "nqdag7PpdGngha/ugNlZjA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -1793,14 +1805,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "TocDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

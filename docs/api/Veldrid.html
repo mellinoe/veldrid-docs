@@ -186,6 +186,9 @@ See <a class="xref" href="Veldrid.TextureViewDescription.html">TextureViewDescri
       <h4><a class="xref" href="Veldrid.ComputePipelineDescription.html">ComputePipelineDescription</a></h4>
       <section><p>Describes a compute <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a>, for creation using a <a class="xref" href="Veldrid.ResourceFactory.html">ResourceFactory</a>.</p>
 </section>
+      <h4><a class="xref" href="Veldrid.D3D11DeviceOptions.html">D3D11DeviceOptions</a></h4>
+      <section><p>A structure describing Direct3D11-specific device creation options.</p>
+</section>
       <h4><a class="xref" href="Veldrid.DepthStencilStateDescription.html">DepthStencilStateDescription</a></h4>
       <section><p>A <a class="xref" href="Veldrid.Pipeline.html">Pipeline</a> component describing the properties of the depth stencil state.</p>
 </section>
@@ -390,7 +393,10 @@ defined in API-specific shader code.</p>
       <section><p>The format of an individual vertex element.</p>
 </section>
       <h4><a class="xref" href="Veldrid.VertexElementSemantic.html">VertexElementSemantic</a></h4>
-      <section><p>The type of a vertex element, describing how the element is interpreted.</p>
+      <section><p>The type of a vertex element, describing how the element is interpreted.
+NOTE: This enumeration is only meaningful for the Direct3D 11 backend.
+When using Veldrid.SPIRV to cross-compile a vertex shader to HLSL, all vertex elements will
+use <a class="xref" href="Veldrid.VertexElementSemantic.html#Veldrid_VertexElementSemantic_TextureCoordinate">TextureCoordinate</a>.</p>
 </section>
 </article>
           </div>

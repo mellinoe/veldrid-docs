@@ -82,6 +82,19 @@ references:
   commentId: T:Veldrid.BackendInfoD3D11
   fullName: Veldrid.BackendInfoD3D11
   nameWithType: BackendInfoD3D11
+- uid: Veldrid.BackendInfoD3D11.Adapter
+  name: Adapter
+  href: api/Veldrid.BackendInfoD3D11.html#Veldrid_BackendInfoD3D11_Adapter
+  commentId: P:Veldrid.BackendInfoD3D11.Adapter
+  fullName: Veldrid.BackendInfoD3D11.Adapter
+  nameWithType: BackendInfoD3D11.Adapter
+- uid: Veldrid.BackendInfoD3D11.Adapter*
+  name: Adapter
+  href: api/Veldrid.BackendInfoD3D11.html#Veldrid_BackendInfoD3D11_Adapter_
+  commentId: Overload:Veldrid.BackendInfoD3D11.Adapter
+  isSpec: "True"
+  fullName: Veldrid.BackendInfoD3D11.Adapter
+  nameWithType: BackendInfoD3D11.Adapter
 - uid: Veldrid.BackendInfoD3D11.Device
   name: Device
   href: api/Veldrid.BackendInfoD3D11.html#Veldrid_BackendInfoD3D11_Device
@@ -153,6 +166,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.BackendInfoOpenGL.GetTextureName
   nameWithType: BackendInfoOpenGL.GetTextureName
+- uid: Veldrid.BackendInfoOpenGL.SetTextureTarget(Veldrid.Texture,System.UInt32)
+  name: SetTextureTarget(Texture, UInt32)
+  href: api/Veldrid.BackendInfoOpenGL.html#Veldrid_BackendInfoOpenGL_SetTextureTarget_Veldrid_Texture_System_UInt32_
+  commentId: M:Veldrid.BackendInfoOpenGL.SetTextureTarget(Veldrid.Texture,System.UInt32)
+  fullName: Veldrid.BackendInfoOpenGL.SetTextureTarget(Veldrid.Texture, System.UInt32)
+  nameWithType: BackendInfoOpenGL.SetTextureTarget(Texture, UInt32)
+- uid: Veldrid.BackendInfoOpenGL.SetTextureTarget*
+  name: SetTextureTarget
+  href: api/Veldrid.BackendInfoOpenGL.html#Veldrid_BackendInfoOpenGL_SetTextureTarget_
+  commentId: Overload:Veldrid.BackendInfoOpenGL.SetTextureTarget
+  isSpec: "True"
+  fullName: Veldrid.BackendInfoOpenGL.SetTextureTarget
+  nameWithType: BackendInfoOpenGL.SetTextureTarget
 - uid: Veldrid.BackendInfoVulkan
   name: BackendInfoVulkan
   href: api/Veldrid.BackendInfoVulkan.html
@@ -500,6 +526,15 @@ references:
   commentId: T:Veldrid.BlendStateDescription
   fullName: Veldrid.BlendStateDescription
   nameWithType: BlendStateDescription
+- uid: Veldrid.BlendStateDescription.#ctor(Veldrid.RgbaFloat,System.Boolean,Veldrid.BlendAttachmentDescription[])
+  name: BlendStateDescription(RgbaFloat, Boolean, BlendAttachmentDescription[])
+  href: api/Veldrid.BlendStateDescription.html#Veldrid_BlendStateDescription__ctor_Veldrid_RgbaFloat_System_Boolean_Veldrid_BlendAttachmentDescription___
+  commentId: M:Veldrid.BlendStateDescription.#ctor(Veldrid.RgbaFloat,System.Boolean,Veldrid.BlendAttachmentDescription[])
+  name.vb: BlendStateDescription(RgbaFloat, Boolean, BlendAttachmentDescription())
+  fullName: Veldrid.BlendStateDescription.BlendStateDescription(Veldrid.RgbaFloat, System.Boolean, Veldrid.BlendAttachmentDescription[])
+  fullName.vb: Veldrid.BlendStateDescription.BlendStateDescription(Veldrid.RgbaFloat, System.Boolean, Veldrid.BlendAttachmentDescription())
+  nameWithType: BlendStateDescription.BlendStateDescription(RgbaFloat, Boolean, BlendAttachmentDescription[])
+  nameWithType.vb: BlendStateDescription.BlendStateDescription(RgbaFloat, Boolean, BlendAttachmentDescription())
 - uid: Veldrid.BlendStateDescription.#ctor(Veldrid.RgbaFloat,Veldrid.BlendAttachmentDescription[])
   name: BlendStateDescription(RgbaFloat, BlendAttachmentDescription[])
   href: api/Veldrid.BlendStateDescription.html#Veldrid_BlendStateDescription__ctor_Veldrid_RgbaFloat_Veldrid_BlendAttachmentDescription___
@@ -516,6 +551,12 @@ references:
   isSpec: "True"
   fullName: Veldrid.BlendStateDescription.BlendStateDescription
   nameWithType: BlendStateDescription.BlendStateDescription
+- uid: Veldrid.BlendStateDescription.AlphaToCoverageEnabled
+  name: AlphaToCoverageEnabled
+  href: api/Veldrid.BlendStateDescription.html#Veldrid_BlendStateDescription_AlphaToCoverageEnabled
+  commentId: F:Veldrid.BlendStateDescription.AlphaToCoverageEnabled
+  fullName: Veldrid.BlendStateDescription.AlphaToCoverageEnabled
+  nameWithType: BlendStateDescription.AlphaToCoverageEnabled
 - uid: Veldrid.BlendStateDescription.AttachmentStates
   name: AttachmentStates
   href: api/Veldrid.BlendStateDescription.html#Veldrid_BlendStateDescription_AttachmentStates
@@ -1073,6 +1114,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.CommandList.InsertDebugMarker
   nameWithType: CommandList.InsertDebugMarker
+- uid: Veldrid.CommandList.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_IsDisposed
+  commentId: P:Veldrid.CommandList.IsDisposed
+  fullName: Veldrid.CommandList.IsDisposed
+  nameWithType: CommandList.IsDisposed
+- uid: Veldrid.CommandList.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.CommandList.html#Veldrid_CommandList_IsDisposed_
+  commentId: Overload:Veldrid.CommandList.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.CommandList.IsDisposed
+  nameWithType: CommandList.IsDisposed
 - uid: Veldrid.CommandList.Name
   name: Name
   href: api/Veldrid.CommandList.html#Veldrid_CommandList_Name
@@ -1672,6 +1726,24 @@ references:
   commentId: F:Veldrid.CubeFace.PositiveZ
   fullName: Veldrid.CubeFace.PositiveZ
   nameWithType: CubeFace.PositiveZ
+- uid: Veldrid.D3D11DeviceOptions
+  name: D3D11DeviceOptions
+  href: api/Veldrid.D3D11DeviceOptions.html
+  commentId: T:Veldrid.D3D11DeviceOptions
+  fullName: Veldrid.D3D11DeviceOptions
+  nameWithType: D3D11DeviceOptions
+- uid: Veldrid.D3D11DeviceOptions.AdapterPtr
+  name: AdapterPtr
+  href: api/Veldrid.D3D11DeviceOptions.html#Veldrid_D3D11DeviceOptions_AdapterPtr
+  commentId: F:Veldrid.D3D11DeviceOptions.AdapterPtr
+  fullName: Veldrid.D3D11DeviceOptions.AdapterPtr
+  nameWithType: D3D11DeviceOptions.AdapterPtr
+- uid: Veldrid.D3D11DeviceOptions.DeviceCreationFlags
+  name: DeviceCreationFlags
+  href: api/Veldrid.D3D11DeviceOptions.html#Veldrid_D3D11DeviceOptions_DeviceCreationFlags
+  commentId: F:Veldrid.D3D11DeviceOptions.DeviceCreationFlags
+  fullName: Veldrid.D3D11DeviceOptions.DeviceCreationFlags
+  nameWithType: D3D11DeviceOptions.DeviceCreationFlags
 - uid: Veldrid.DepthStencilStateDescription
   name: DepthStencilStateDescription
   href: api/Veldrid.DepthStencilStateDescription.html
@@ -1826,6 +1898,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.DeviceBuffer.Dispose
   nameWithType: DeviceBuffer.Dispose
+- uid: Veldrid.DeviceBuffer.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.DeviceBuffer.html#Veldrid_DeviceBuffer_IsDisposed
+  commentId: P:Veldrid.DeviceBuffer.IsDisposed
+  fullName: Veldrid.DeviceBuffer.IsDisposed
+  nameWithType: DeviceBuffer.IsDisposed
+- uid: Veldrid.DeviceBuffer.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.DeviceBuffer.html#Veldrid_DeviceBuffer_IsDisposed_
+  commentId: Overload:Veldrid.DeviceBuffer.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.DeviceBuffer.IsDisposed
+  nameWithType: DeviceBuffer.IsDisposed
 - uid: Veldrid.DeviceBuffer.Name
   name: Name
   href: api/Veldrid.DeviceBuffer.html#Veldrid_DeviceBuffer_Name
@@ -1990,6 +2075,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.Fence.Dispose
   nameWithType: Fence.Dispose
+- uid: Veldrid.Fence.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.Fence.html#Veldrid_Fence_IsDisposed
+  commentId: P:Veldrid.Fence.IsDisposed
+  fullName: Veldrid.Fence.IsDisposed
+  nameWithType: Fence.IsDisposed
+- uid: Veldrid.Fence.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.Fence.html#Veldrid_Fence_IsDisposed_
+  commentId: Overload:Veldrid.Fence.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.Fence.IsDisposed
+  nameWithType: Fence.IsDisposed
 - uid: Veldrid.Fence.Name
   name: Name
   href: api/Veldrid.Fence.html#Veldrid_Fence_Name
@@ -2087,6 +2185,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.Framebuffer.Height
   nameWithType: Framebuffer.Height
+- uid: Veldrid.Framebuffer.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_IsDisposed
+  commentId: P:Veldrid.Framebuffer.IsDisposed
+  fullName: Veldrid.Framebuffer.IsDisposed
+  nameWithType: Framebuffer.IsDisposed
+- uid: Veldrid.Framebuffer.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_IsDisposed_
+  commentId: Overload:Veldrid.Framebuffer.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.Framebuffer.IsDisposed
+  nameWithType: Framebuffer.IsDisposed
 - uid: Veldrid.Framebuffer.Name
   name: Name
   href: api/Veldrid.Framebuffer.html#Veldrid_Framebuffer_Name
@@ -2432,6 +2543,18 @@ references:
   commentId: M:Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,System.Object,System.Double,System.Double,System.Single)
   fullName: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions, System.Object, System.Double, System.Double, System.Single)
   nameWithType: GraphicsDevice.CreateD3D11(GraphicsDeviceOptions, Object, Double, Double, Single)
+- uid: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,Veldrid.D3D11DeviceOptions)
+  name: CreateD3D11(GraphicsDeviceOptions, D3D11DeviceOptions)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_Veldrid_D3D11DeviceOptions_
+  commentId: M:Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,Veldrid.D3D11DeviceOptions)
+  fullName: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions, Veldrid.D3D11DeviceOptions)
+  nameWithType: GraphicsDevice.CreateD3D11(GraphicsDeviceOptions, D3D11DeviceOptions)
+- uid: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,Veldrid.D3D11DeviceOptions,Veldrid.SwapchainDescription)
+  name: CreateD3D11(GraphicsDeviceOptions, D3D11DeviceOptions, SwapchainDescription)
+  href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_Veldrid_D3D11DeviceOptions_Veldrid_SwapchainDescription_
+  commentId: M:Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,Veldrid.D3D11DeviceOptions,Veldrid.SwapchainDescription)
+  fullName: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions, Veldrid.D3D11DeviceOptions, Veldrid.SwapchainDescription)
+  nameWithType: GraphicsDevice.CreateD3D11(GraphicsDeviceOptions, D3D11DeviceOptions, SwapchainDescription)
 - uid: Veldrid.GraphicsDevice.CreateD3D11(Veldrid.GraphicsDeviceOptions,Veldrid.SwapchainDescription)
   name: CreateD3D11(GraphicsDeviceOptions, SwapchainDescription)
   href: api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_CreateD3D11_Veldrid_GraphicsDeviceOptions_Veldrid_SwapchainDescription_
@@ -4231,6 +4354,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.Pipeline.IsComputePipeline
   nameWithType: Pipeline.IsComputePipeline
+- uid: Veldrid.Pipeline.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.Pipeline.html#Veldrid_Pipeline_IsDisposed
+  commentId: P:Veldrid.Pipeline.IsDisposed
+  fullName: Veldrid.Pipeline.IsDisposed
+  nameWithType: Pipeline.IsDisposed
+- uid: Veldrid.Pipeline.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.Pipeline.html#Veldrid_Pipeline_IsDisposed_
+  commentId: Overload:Veldrid.Pipeline.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.Pipeline.IsDisposed
+  nameWithType: Pipeline.IsDisposed
 - uid: Veldrid.Pipeline.Name
   name: Name
   href: api/Veldrid.Pipeline.html#Veldrid_Pipeline_Name
@@ -5339,6 +5475,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.ResourceLayout.Dispose
   nameWithType: ResourceLayout.Dispose
+- uid: Veldrid.ResourceLayout.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.ResourceLayout.html#Veldrid_ResourceLayout_IsDisposed
+  commentId: P:Veldrid.ResourceLayout.IsDisposed
+  fullName: Veldrid.ResourceLayout.IsDisposed
+  nameWithType: ResourceLayout.IsDisposed
+- uid: Veldrid.ResourceLayout.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.ResourceLayout.html#Veldrid_ResourceLayout_IsDisposed_
+  commentId: Overload:Veldrid.ResourceLayout.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.ResourceLayout.IsDisposed
+  nameWithType: ResourceLayout.IsDisposed
 - uid: Veldrid.ResourceLayout.Name
   name: Name
   href: api/Veldrid.ResourceLayout.html#Veldrid_ResourceLayout_Name
@@ -5518,6 +5667,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.ResourceSet.Dispose
   nameWithType: ResourceSet.Dispose
+- uid: Veldrid.ResourceSet.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.ResourceSet.html#Veldrid_ResourceSet_IsDisposed
+  commentId: P:Veldrid.ResourceSet.IsDisposed
+  fullName: Veldrid.ResourceSet.IsDisposed
+  nameWithType: ResourceSet.IsDisposed
+- uid: Veldrid.ResourceSet.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.ResourceSet.html#Veldrid_ResourceSet_IsDisposed_
+  commentId: Overload:Veldrid.ResourceSet.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.ResourceSet.IsDisposed
+  nameWithType: ResourceSet.IsDisposed
 - uid: Veldrid.ResourceSet.Name
   name: Name
   href: api/Veldrid.ResourceSet.html#Veldrid_ResourceSet_Name
@@ -6059,6 +6221,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.Sampler.Dispose
   nameWithType: Sampler.Dispose
+- uid: Veldrid.Sampler.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.Sampler.html#Veldrid_Sampler_IsDisposed
+  commentId: P:Veldrid.Sampler.IsDisposed
+  fullName: Veldrid.Sampler.IsDisposed
+  nameWithType: Sampler.IsDisposed
+- uid: Veldrid.Sampler.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.Sampler.html#Veldrid_Sampler_IsDisposed_
+  commentId: Overload:Veldrid.Sampler.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.Sampler.IsDisposed
+  nameWithType: Sampler.IsDisposed
 - uid: Veldrid.Sampler.Name
   name: Name
   href: api/Veldrid.Sampler.html#Veldrid_Sampler_Name
@@ -6344,6 +6519,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.Shader.EntryPoint
   nameWithType: Shader.EntryPoint
+- uid: Veldrid.Shader.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.Shader.html#Veldrid_Shader_IsDisposed
+  commentId: P:Veldrid.Shader.IsDisposed
+  fullName: Veldrid.Shader.IsDisposed
+  nameWithType: Shader.IsDisposed
+- uid: Veldrid.Shader.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.Shader.html#Veldrid_Shader_IsDisposed_
+  commentId: Overload:Veldrid.Shader.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.Shader.IsDisposed
+  nameWithType: Shader.IsDisposed
 - uid: Veldrid.Shader.Name
   name: Name
   href: api/Veldrid.Shader.html#Veldrid_Shader_Name
@@ -6906,6 +7094,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.Swapchain.Framebuffer
   nameWithType: Swapchain.Framebuffer
+- uid: Veldrid.Swapchain.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_IsDisposed
+  commentId: P:Veldrid.Swapchain.IsDisposed
+  fullName: Veldrid.Swapchain.IsDisposed
+  nameWithType: Swapchain.IsDisposed
+- uid: Veldrid.Swapchain.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_IsDisposed_
+  commentId: Overload:Veldrid.Swapchain.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.Swapchain.IsDisposed
+  nameWithType: Swapchain.IsDisposed
 - uid: Veldrid.Swapchain.Name
   name: Name
   href: api/Veldrid.Swapchain.html#Veldrid_Swapchain_Name
@@ -7232,6 +7433,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.Texture.Height
   nameWithType: Texture.Height
+- uid: Veldrid.Texture.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.Texture.html#Veldrid_Texture_IsDisposed
+  commentId: P:Veldrid.Texture.IsDisposed
+  fullName: Veldrid.Texture.IsDisposed
+  nameWithType: Texture.IsDisposed
+- uid: Veldrid.Texture.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.Texture.html#Veldrid_Texture_IsDisposed_
+  commentId: Overload:Veldrid.Texture.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.Texture.IsDisposed
+  nameWithType: Texture.IsDisposed
 - uid: Veldrid.Texture.MipLevels
   name: MipLevels
   href: api/Veldrid.Texture.html#Veldrid_Texture_MipLevels
@@ -7645,6 +7859,19 @@ references:
   isSpec: "True"
   fullName: Veldrid.TextureView.Format
   nameWithType: TextureView.Format
+- uid: Veldrid.TextureView.IsDisposed
+  name: IsDisposed
+  href: api/Veldrid.TextureView.html#Veldrid_TextureView_IsDisposed
+  commentId: P:Veldrid.TextureView.IsDisposed
+  fullName: Veldrid.TextureView.IsDisposed
+  nameWithType: TextureView.IsDisposed
+- uid: Veldrid.TextureView.IsDisposed*
+  name: IsDisposed
+  href: api/Veldrid.TextureView.html#Veldrid_TextureView_IsDisposed_
+  commentId: Overload:Veldrid.TextureView.IsDisposed
+  isSpec: "True"
+  fullName: Veldrid.TextureView.IsDisposed
+  nameWithType: TextureView.IsDisposed
 - uid: Veldrid.TextureView.MipLevels
   name: MipLevels
   href: api/Veldrid.TextureView.html#Veldrid_TextureView_MipLevels
