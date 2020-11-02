@@ -24,7 +24,7 @@ The first thing we need to do is call Begin() on our CommandList. Before command
 _commandList.Begin();
 ```
 
-Before we can issue a Draw command, we need to set a [Framebuffer](xref:Veldrid.Framebuffer) and [Viewport](xref:Veldrid.Viewport).
+Before we can issue a Draw command, we need to set a [Framebuffer](xref:Veldrid.Framebuffer).
 
 ```C#
 _commandList.SetFramebuffer(_graphicsDevice.SwapchainFramebuffer);

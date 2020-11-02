@@ -1245,10 +1245,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/getting-started-part1.html",
-          "hash": "807jmmvnrY5LRjkctr8Yew=="
+          "hash": "8rTVSXcZJJGexLi9Bv6WYQ=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1257,7 +1257,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/getting-started-part2.html",
-          "hash": "Ah8kZMirZaWhf3vu7w0qPA=="
+          "hash": "qYUuXN73dTnN6iBqoMpuiA=="
         }
       },
       "is_incremental": true,
@@ -1269,7 +1269,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/getting-started/getting-started-part3.html",
-          "hash": "/04O7pABLtEeq8Y6+G6V7g=="
+          "hash": "Xn3QIf8Enk/HKzR5hSXVdw=="
         }
       },
       "is_incremental": true,
@@ -1284,7 +1284,7 @@
           "hash": "L6kKXMS5/+RGyFVMWF4rMA=="
         }
       },
-      "is_incremental": true,
+      "is_incremental": false,
       "version": ""
     },
     {
@@ -1805,14 +1805,14 @@
         "incrementalPhase": "build"
       },
       "processors": {
-        "ResourceDocumentProcessor": {
-          "can_incremental": false,
-          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
-          "incrementalPhase": "build"
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build"
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build"
         },
         "ConceptualDocumentProcessor": {

@@ -56,10 +56,10 @@ Let's create an array of these, representing the four corners of our multi-color
 ```C#
 VertexPositionColor[] quadVertices =
 {
-    new VertexPositionColor(new Vector2(-.75f, .75f), RgbaFloat.Red),
-    new VertexPositionColor(new Vector2(.75f, .75f), RgbaFloat.Green),
-    new VertexPositionColor(new Vector2(-.75f, -.75f), RgbaFloat.Blue),
-    new VertexPositionColor(new Vector2(.75f, -.75f), RgbaFloat.Yellow)
+    new VertexPositionColor(new Vector2(-0.75f, 0.75f), RgbaFloat.Red),
+    new VertexPositionColor(new Vector2(0.75f, 0.75f), RgbaFloat.Green),
+    new VertexPositionColor(new Vector2(-0.75f, -0.75f), RgbaFloat.Blue),
+    new VertexPositionColor(new Vector2(0.75f, -0.75f), RgbaFloat.Yellow)
 };
 ```
 
@@ -85,7 +85,7 @@ _graphicsDevice.UpdateBuffer(_vertexBuffer, 0, quadVertices);
 _graphicsDevice.UpdateBuffer(_indexBuffer, 0, quadIndices);
 ```
 
-`_vertexBuffer` and `_indexBuffer` now contain all of the data from our arrays.
+`_vertexBuffer` and `_indexBuffer` now contain all of the data from our arrays, and are accessible to the GPU.
 
 To create a Pipeline later on, we need to know the layout of the vertex buffer that will be used. Let's create the [VertexLayoutDescription](xref:Veldrid.VertexLayoutDescription) now.
 
@@ -147,7 +147,7 @@ _shaders = factory.CreateFromSpirv(vertexShaderDesc, fragmentShaderDesc);
 
 ### Pipeline
 
-Another object we need is a [Pipeline](xref:Veldrid.Pipeline). There are two types of Pipelines in Veldrid: graphics and compute. In this tutorial, we are going to be creating a graphics Pipeline. This is an object which encapsulates all of the necessary graphics state for drawing primitives. One piece of information is the set of shaders that will be used -- we have that already. There are several other pieces of information we need.
+Another object we need is a [Pipeline](xref:Veldrid.Pipeline). There are two types of Pipelines in Veldrid: graphics and compute. In this tutorial, we are going to be creating a graphics Pipeline. This is an object which encapsulates all of the necessary graphics state for drawing primitives, like triangle strips. One piece of information is the set of shaders that will be used -- we have that already. There are several other pieces of information we need.
 
 ```C#
 GraphicsPipelineDescription pipelineDescription = new GraphicsPipelineDescription();
@@ -191,7 +191,7 @@ Our shaders do not read from any resources, so we use an empty array here.
 ```C#
 pipelineDescription.ShaderSet = new ShaderSetDescription(
     vertexLayouts: new VertexLayoutDescription[] { vertexLayout },
-    shaders: new Shader[] { _vertexShader, _fragmentShader });
+    shaders: _shaders);
 ```
 
 We're passing in our previously-created shader stages and vertex layout here. This controls which shaders are used for rendering when the Pipeline is active.
@@ -218,7 +218,7 @@ _commandList = factory.CreateCommandList();
 
 We have successfully created all of the device resources that we need. In the next section, we will draw our quad, and then do some cleanup.
 
-[Next: Part 3](xref:getting-started-part3)
+## [Next: Part 3](xref:getting-started-part3)
 
 Here is what our application should look like at the end of this section:
 
@@ -294,10 +294,10 @@ void main()
 
             VertexPositionColor[] quadVertices =
             {
-                new VertexPositionColor(new Vector2(-.75f, .75f), RgbaFloat.Red),
-                new VertexPositionColor(new Vector2(.75f, .75f), RgbaFloat.Green),
-                new VertexPositionColor(new Vector2(-.75f, -.75f), RgbaFloat.Blue),
-                new VertexPositionColor(new Vector2(.75f, -.75f), RgbaFloat.Yellow)
+                new VertexPositionColor(new Vector2(-0.75f, 0.75f), RgbaFloat.Red),
+                new VertexPositionColor(new Vector2(0.75f, 0.75f), RgbaFloat.Green),
+                new VertexPositionColor(new Vector2(-0.75f, -0.75f), RgbaFloat.Blue),
+                new VertexPositionColor(new Vector2(0.75f, -0.75f), RgbaFloat.Yellow)
             };
 
             ushort[] quadIndices = { 0, 1, 2, 3 };

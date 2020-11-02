@@ -8,7 +8,7 @@ In this section, we will set up a new project, create a Window to draw into, and
 
 ## Create a new Project
 
-This walkthrough assumes you are using the .NET Core toolchain, although the same code could be run on .NET Framework or Mono. Veldrid is a .NET Standard 2.0 library, so you will need the .NET Core 2.0 SDK, or a 
+This walkthrough assumes you are using the .NET Core toolchain, although the same code could be run on .NET Framework or Mono. Veldrid is a .NET Standard 2.0 library, so you will a version of the SDK supporting .NET Core 2.0 or higher.
 
 Create a new console application by running `dotnet new console`, or by using a "New Project" dialogue in Visual Studio or other IDE. Then, add a reference to these two NuGet packages:
 
@@ -20,9 +20,9 @@ You can add references to these packages using the Visual Studio package manager
 
 ```XML
 <ItemGroup>
-  <PackageReference Include="Veldrid" Version="4.5.0" />
-  <PackageReference Include="Veldrid.StartupUtilities" Version="4.5.0" />
-  <PackageReference Include="Veldrid.SPIRV" Version="1.0.7" />
+  <PackageReference Include="Veldrid" Version="4.8.0" />
+  <PackageReference Include="Veldrid.StartupUtilities" Version="4.8.0" />
+  <PackageReference Include="Veldrid.SPIRV" Version="1.0.13" />
 </ItemGroup>
 ```
 
@@ -44,12 +44,17 @@ WindowCreateInfo windowCI = new WindowCreateInfo()
 Sdl2Window window = VeldridStartup.CreateWindow(ref windowCI);
 ```
 
-Behind the scenes, the StartupUtilities package is using [SDL2](https://www.libsdl.org/) to create and manage windows for us. The Sdl2Window class is a simple wrapper which lets you do common things like resize the window, respond to user input, etc.
+Behind the scenes, the StartupUtilities package is using [SDL2](https://www.libsdl.org/) to create and manage windows for us. The Sdl2Window class is a simple wrapper which lets you do common things like resize the window and respond to user input.
 
-Next, we will create a GraphicsDevice attached to our window, which will let us issue graphics commands. Create a new [GraphicsDevice](xref:Veldrid.GraphicsDevice) field called `_graphicsDevice`. We will use another `VeldridStartup` helper method to create it:
+Next, we will create a GraphicsDevice attached to our window, which will let us issue graphics commands. Create a new [GraphicsDevice](xref:Veldrid.GraphicsDevice) field called `_graphicsDevice`. We want to create this device with a couple of common options enabled. We will use another `VeldridStartup` helper method to create it:
 
 ```C#
-_graphicsDevice = VeldridStartup.CreateGraphicsDevice(window);
+GraphicsDeviceOptions options = new GraphicsDeviceOptions
+{
+    PreferStandardClipSpaceYDirection = true,
+    PreferDepthRangeZeroToOne = true
+};
+_graphicsDevice = VeldridStartup.CreateGraphicsDevice(window, options);
 ```
 
 Next, let's add in a very basic application loop that keeps the window running. At the bottom of `Main()`:
@@ -65,7 +70,7 @@ If we run this code, we will not see anything terribly interesting. A blank wind
 
 In the next section, we will create some Veldrid graphics resources which we will need to render a basic multi-colored quad. In the third section, we will draw the quad and perform resource and application cleanup.
 
-[Next: Part 2](xref:getting-started-part2)
+## [Next: Part 2](xref:getting-started-part2)
 
 Here is what our application should look like at the end of this section:
 
@@ -92,7 +97,12 @@ namespace GettingStarted
             };
             Sdl2Window window = VeldridStartup.CreateWindow(ref windowCI);
 
-            _graphicsDevice = VeldridStartup.CreateGraphicsDevice(window);
+            GraphicsDeviceOptions options = new GraphicsDeviceOptions
+            {
+                PreferStandardClipSpaceYDirection = true,
+                PreferDepthRangeZeroToOne = true
+            };
+            _graphicsDevice = VeldridStartup.CreateGraphicsDevice(window, options);
 
             while (window.Exists)
             {

@@ -79,7 +79,7 @@
 </code></pre><p>The Draw() method will include all of our per-frame commands for drawing our multi-colored quad using the resources we created in the last section.</p>
 <p>The first thing we need to do is call Begin() on our CommandList. Before commands can be recorded into a CommandList, this method must be called.</p>
 <pre><code class="lang-C#">_commandList.Begin();
-</code></pre><p>Before we can issue a Draw command, we need to set a <a class="xref" href="../../api/Veldrid.Framebuffer.html">Framebuffer</a> and <a class="xref" href="../../api/Veldrid.Viewport.html">Viewport</a>.</p>
+</code></pre><p>Before we can issue a Draw command, we need to set a <a class="xref" href="../../api/Veldrid.Framebuffer.html">Framebuffer</a>.</p>
 <pre><code class="lang-C#">_commandList.SetFramebuffer(_graphicsDevice.SwapchainFramebuffer);
 </code></pre><p>A Framebuffer is a device resource which controls where the rendered outputs go. The <a class="xref" href="../../api/Veldrid.GraphicsDevice.html#Veldrid_GraphicsDevice_SwapchainFramebuffer">SwapchainFramebuffer</a> is the application&#39;s main Framebuffer. It can be used to draw directly into the application&#39;s view.</p>
 <p>At the beginning of every frame, we clear the screen to black. In a static scene, this is not really necessary, but I will do it anyway for demonstration.</p>
